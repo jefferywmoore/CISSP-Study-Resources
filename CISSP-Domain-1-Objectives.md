@@ -1,4 +1,4 @@
-[Domain 1](#domain1-top) Security and Risk Management
+[Domain 1](#domain1-top) **Security and Risk Management**
 
 [1.1](#1.1) Understand, adhere to, and promote professional ethics
 As a CISSP, you must understand and follow the (ISC)² code of ethics, as well as your organization’s own code.
@@ -27,19 +27,38 @@ for ways to enhance the existing organizational ethics. Some organizations might
 others, so be sure to familiarize yourself with your organization’s ethics and guidelines.
 
 [1.2](#1.2) Understand and apply security concepts
-- Confidentiality:
-  - Concept of measures used to ensure the protection of the secrecy of data, objects, and resources.
-  - Goal: prevent or minimize unauthorized access to data.
-  - Confidentiality protections prevent disclosure while protecting authorized access.
-  - Preserving authorized restrictions on information access and disclosure, including the means for protecting personal privacy and prioprietary information.
-  - Sensitive data, including personally identifiable information (PII) must be kept confidential. Confidentiality is different from secrecy.
-  - Preserving confidentiality means protecting an asset or data, even if it's not a secret.
-  - Countermeasures:
-    - encryption
-    - access control
-    - authentication
-    - data classification
-    - training
-- Integrity:
-  - 
+- **Confidentiality**:
+  - Concept of measures used to ensure the protection of the secrecy of data, objects, and resources
+  - Confidentiality protections prevent disclosure while protecting authorized access
+  - Preserving authorized restrictions on information access and disclosure, including the means for protecting personal privacy and prioprietary information
+  - Sensitive data, including personally identifiable information (PII) must be kept confidential. Confidentiality is different from secrecy
+  - Preserving confidentiality means protecting an asset or data, even if it's not a secret
+  
+- **Integrity**:
+  - Concept of protecting the reliability and correctness of data. Integrity protection prevents unauthorized alternations of data
+  - Preventing unauthorized subjects from making modifications
+  - Preventing authorized subjects from making unauthorized modifications, such as mistakes
+  - Maintaining the internal and external consistency of objects
+
+- **Availability**:
+  - Authorized subjects are granted timely and uninterrupted access to objects
+  - To ensure high availability of services and data, use techniques like failover clustering, site resiliency,
+automatic failover, load balancing, redundancy of hardware and software components, and fault tolerance
+
+- **Authenticity**: Authenticity involves ensuring a transmission, message
+or sender is legitimate. See the NIST glossary for examples: https://csrc.nist.gov/glossary/term/authenticity
+
+- **Nonrepudiation**: 
+  - ensures that the subject of activity or who caused an event cannot deny that the event occurred
+  - Nonrepudiation is made possible through identification, authentication, authorization, accountability, and auditing
+
+- **AAA Services**:
+  - Identification: claiming to be an identity when attempting to access a secured area or system.
+  - Authentication: proving that you are that claimed identity.
+  - Authorization: defining the permissions (i.e. allow/grant and/or deny) of a resource and object access for a specific identity or subject
+  - Auditing: recording a log of the events and activities related to the system and subjects
+  - Accounting: (aka accountability) is reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
+ 
+ [1.3](#1.3) **Evaluate and apply security governance principles**
+ 
 
