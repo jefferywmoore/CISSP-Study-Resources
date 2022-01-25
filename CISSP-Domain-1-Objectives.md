@@ -35,7 +35,7 @@ others, so be sure to familiarize yourself with your organization’s ethics and
   - Preserving confidentiality means protecting an asset or data, even if it's not a secret
   
 - **Integrity**:
-  - Concept of protecting the reliability and correctness of data. Integrity protection prevents unauthorized alternations of data
+  - Concept of protecting the reliability and correctness of data. Integrity protection prevents unauthorized alterations of data
   - Preventing unauthorized subjects from making modifications
   - Preventing authorized subjects from making unauthorized modifications, such as mistakes
   - Maintaining the internal and external consistency of objects
@@ -45,16 +45,15 @@ others, so be sure to familiarize yourself with your organization’s ethics and
   - To ensure high availability of services and data, use techniques like failover clustering, site resiliency,
 automatic failover, load balancing, redundancy of hardware and software components, and fault tolerance
 
-- **Authenticity**: Authenticity involves ensuring a transmission, message
-or sender is legitimate. See the NIST glossary for examples: https://csrc.nist.gov/glossary/term/authenticity
+- **Authenticity**: ensuring a transmission, message or sender is legitimate. See the NIST glossary for examples: https://csrc.nist.gov/glossary/term/authenticity
 
 - **Nonrepudiation**: 
   - ensures that the subject of activity or who caused an event cannot deny that the event occurred
   - Nonrepudiation is made possible through identification, authentication, authorization, accountability, and auditing
 
 - **AAA Services**:
-  - Identification: claiming to be an identity when attempting to access a secured area or system.
-  - Authentication: proving that you are that claimed identity.
+  - Identification: claiming to be an identity when attempting to access a secured area or system
+  - Authentication: proving that you are that claimed identity
   - Authorization: defining the permissions (i.e. allow/grant and/or deny) of a resource and object access for a specific identity or subject
   - Auditing: recording a log of the events and activities related to the system and subjects
   - Accounting: (aka accountability) is reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
@@ -70,4 +69,42 @@ or sender is legitimate. See the NIST glossary for examples: https://csrc.nist.g
   - **Strategic Plan**: a strategic plan is a long-term plan (useful for 5 years). It defines the organization's security purpose. A strategic plan should include risk assessment.
   - **Tactical Plan**: mid-term plan (1 year or less) developed to provide more details on accomplishing the goals set forth in the strategic plan
   - **Operational Plan**: a short-term, highly detailed plan based on strategic or tactical plans
-  - 
+  - All of these — strategy, goals, missions, and objectives — flow down, with each one supporting the others.
+Objectives are the closest to the ground and represent small efforts to help you achieve a mission. Missions
+represent a collection of objectives, and one or more missions leads to goals. When you reach your goals, you are
+achieving the strategy
+  - A security framework must closely tie to mission and objectives,enabling the business to complete its objectives and advance the mission while securing the environment based on risk tolerance
+- **Organizational Processes**
+  -  Security governance should address every aspect of an organization, including organizational processes of acquisitions, divestitures, and governance
+  -  Be aware of the risks in acquisitions (since the state of the IT environment to be integrated is unknown, due diligence is key) and divestitures (how to split the IT infrastructure and what to do with identities and credentials)
+  -  Understand the value of governance committees (vendor governance, project governance, architecture governance, etc.)
+  -  Executives,managers and appointed individuals meet to review architecture, projects and incidents (security or otherwise),and provide approvals for new strategies or directions. The goal is a fresh set of eyes, often eyes that are not purely focused on information security
+  - When evaluating a third-party for your security integration, consider the following:
+    - on-site assement
+    - document exchange and review
+    - process/policy review
+    - third-party audit
+
+- **Organizational Roles and Responsibilities**
+  -  Senior Manager: has a responsibility to keep the business running and to maximize profits and shareholder value
+  - Security Professional: has the functional responsibility for security, including writing the security policy and implementing it
+  - Asset Owner: responsible for classifying information for placement or protection within the security solution
+  - Custodian: responsible for the task of implementing the proscribed protection defined by the security policy and senior management
+  - Auditor: responsible for reviewing and verifying that the security policy is properly implemented
+
+- **Security control frameworks**
+  - A control framework helps ensure that your organization is covering all the bases around securing the environment. There are many frameworks to choose from, such as:
+    -  Control Objectives for Information Technology (COBIT)
+    -  ISO 27000 series (27000, 27001, 27002, etc.). 
+    -  NIST CyberSecurity Framework (CSF)
+      - designed for commerical orgs and critical infrastructure, consisting of five functions:
+        - identify
+        - protect
+        - detect
+        - respond
+        - recovery    
+  - These frameworks fall into four categories:
+    - Preventative: security issues and violations through strategies such as policies and security awareness training
+    - Deterrent: Discouraging malicious activities using access controls or technologies such as firewalls,intrusion detection systems and motion-activated cameras
+    - Detective: Uncovering unauthorized activity in your environment
+    - Corrective: Getting your environment back to where it was prior to a security incident 
