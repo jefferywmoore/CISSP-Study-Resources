@@ -61,4 +61,13 @@ or sender is legitimate. See the NIST glossary for examples: https://csrc.nist.g
  
  [1.3](#1.3) **Evaluate and apply security governance principles**
  
-
+- **Security governance**: the collection of practices related to supporting, evaluating, defining, and directing the security efforts of an organization. 
+  - security governance is the implementation of a security solution and a management method that are tightly interconnected
+  - There are numerous security frameworks and governance guidelines, including the National Institute of Standards and Technology (NIST) SP 800-53 and NIST SP 800-100
+- **The security function**: the aspect of operating a business that focuses on the task of evaluating and improving security over time. To manage security, an org must implement proper and sufficient security governance
+  - the act of performing a risk assessment to drive the security policy is the clearest and most direct example of management of the security function
+- **Alignment of Security Function to Business Strategy, Goals, Mission, and Objectives**
+  - **Strategic Plan**: a strategic plan is a long-term plan (useful for 5 years). It defines the organization's security purpose. A strategic plan should include risk assessment.
+  - **Tactical Plan**: mid-term plan (1 year or less) developed to provide more details on accomplishing the goals set forth in the strategic plan
+  - **Operational Plan**: a short-term, highly detailed plan based on strategic or tactical plans
+  - 
