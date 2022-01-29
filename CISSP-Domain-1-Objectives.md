@@ -95,6 +95,14 @@ achieving the strategy
 - **Security control frameworks**
   - A control framework helps ensure that your organization is covering all the bases around securing the environment. There are many frameworks to choose from, such as:
     -  Control Objectives for Information Technology (COBIT)
+      - COBIT is a documented set of best IT security practices by ISACA
+      - Six key principles:
+        - Provide stakeholder value
+        - Holistic approach
+        - Dynamic governance system
+        - Governance distinct from management
+        - Tailored to enterprise needs
+        - End-to-end governance system   
     -  ISO 27000 series (27000, 27001, 27002, etc.). 
     -  NIST CyberSecurity Framework (CSF)
       - designed for commerical orgs and critical infrastructure, consisting of five functions:
@@ -103,8 +111,13 @@ achieving the strategy
         - detect
         - respond
         - recovery    
-  - These frameworks fall into four categories:
-    - Preventative: security issues and violations through strategies such as policies and security awareness training
-    - Deterrent: Discouraging malicious activities using access controls or technologies such as firewalls,intrusion detection systems and motion-activated cameras
-    - Detective: Uncovering unauthorized activity in your environment
-    - Corrective: Getting your environment back to where it was prior to a security incident 
+  - Due care/due diligence
+    - Due diligence is establishing a plan, policy, and process to protect the interests of the organization. Due diligence is about understanding your security governance principles (policies and procedures) and the risks to your organization. Due diligence often involves gathering information through discovery, risk assessments and review of existing documentation; developing a formalized security structure containing a security policy, standards, baselines guidlines, and procedures; documentation to establish written policies; and disseminating the information to the organization
+    - Due care is practicing the individual activities that maintain the due diligence effort. Due care is about your legal responsibility within the law or within organizational policies to implement your organization’s controls, follow security policies, do the right thing and make reasonable choices
+    - Security documentation is the security policy
+    - After establishing a framework for governance, security awareness training should be implemented, including all new hires, who complete the security awareness training as they come on board, and existing employees who should recertify regularly (typically yearly).
+
+[1.4](#1.4) **Determine compliance and other requirements**
+
+
+ 
