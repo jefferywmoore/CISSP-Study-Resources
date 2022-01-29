@@ -118,6 +118,30 @@ achieving the strategy
     - After establishing a framework for governance, security awareness training should be implemented, including all new hires, who complete the security awareness training as they come on board, and existing employees who should recertify regularly (typically yearly).
 
 [1.4](#1.4) **Determine compliance and other requirements**
+- Understand the difference between criminal, civil, and administrative law.
+  - Criminal law: protects society against acts that violate the basic principles we believe in. Violations of criminal law are prosectued by federal and state governments
+  - Civil law: provides the framework for the transaction of business between people and organizations. Violations of civil law are brought to the court and argued by the two affected parties
+  - Administrative law is used by government agencies to effectively carry out their day-to-day business
+- Compliance: Organizations may find themselves subject to a wide variety of laws, and regulations imposed by regulatory agencies or contractual obligation
+  -  Payment Card Industry Data Security Standard (PCI DSS) - governs the security of credit card information and is enforced through the terms of a merchant agreement between a business that accpets CC payments, and the bank that processes the business' transactions
+  -  Sarbanes-Oxley (SOX) - financial systems may be audited to ensure security controls are sufficient to ensure compliance with SOX
+  -  Gramm-Leach-Bliley Act (GLBA) - affects banks, insurance companies, and credit providers; included a number of limitations on the types of information that could be exchanged even among subsidiaries of the same corp, and required financial institutions to provide written privacy policies to all their customers
+  -  Health Insurance Portability and Accountability Act (HIPAA) - privacy and security regulations requiring strict security measures for hospitals, physicians, insurance companies, and other organizations that process or store private medical information about individuals; also clearly defines the rights of individuals who are the subject of medical records and requires organizations that maintain such records to disclose these rights in writing
+  -  Federal Information Security Management Act (FISMA), requires federal agencies to implement an information security program that covers the agency's operations and contractors
+  -  Computer Fraud and Abuse Act (CFAA) (as amended) protects computers used by the government or in interstate commerce from a variety of abuses
+  -  Electronic Communications Privacy Act (ECPA) makes it a crime to invade the electronic privacy of an individual
+  -  Digital Millennium Copyright Act prohibits the circumvention of copyright protection mechanisms placed in digital media and limits the liability of internet service providers for the activities of their users
+-  Privacy requirements
+  -  European Union's General Data Protection Regulation (GDPR) - replaced Data Protection Directive (DPD), purpose is to provide a single, harmonized law that covers data throughout the EU
+    - Lawfulness, fairness, and transparency
+    - Purpose Limitation
+    - Data Minimization
+    - Accuracy
+    - Storage Limitation
+    - Security
+    - Accountability
+  - California Consumer Privacy Act (CCPA)
+  - Be familiar with the EU Data Protection Directive. Be familiar with the requirements around healthcare
+data, credit card data and other PII data as it relates to various countries and their laws and regulations
 
-
- 
+[1.5](#1.5) **Understand legal and regulatory issues that pertain to information security in a holistic context**
