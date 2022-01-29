@@ -132,7 +132,7 @@ achieving the strategy
   -  Electronic Communications Privacy Act (ECPA) makes it a crime to invade the electronic privacy of an individual
   -  Digital Millennium Copyright Act prohibits the circumvention of copyright protection mechanisms placed in digital media and limits the liability of internet service providers for the activities of their users
 -  Privacy requirements
-  -  European Union's General Data Protection Regulation (GDPR) - replaced Data Protection Directive (DPD), purpose is to provide a single, harmonized law that covers data throughout the EU
+  - European Union's General Data Protection Regulation (GDPR) - replaced Data Protection Directive (DPD), purpose is to provide a single, harmonized law that covers data throughout the EU
     - Lawfulness, fairness, and transparency
     - Purpose Limitation
     - Data Minimization
@@ -145,3 +145,36 @@ achieving the strategy
 data, credit card data and other PII data as it relates to various countries and their laws and regulations
 
 [1.5](#1.5) **Understand legal and regulatory issues that pertain to information security in a holistic context**
+  - Cybercrime and data breaches:
+    - Understand the notification requirements placed on organizations that experience a data breach
+    - California's SB 1386 implemented the first statewide requiremnt to notify individuals of a breach of their personnel information; all other states eventually followed suit with similar laws
+    - Currently, federal law only requires notification of individuals when a HIPAA-covered entity breaches their protected health information
+    - Before an organization expands to other countries, perform due diligence to understand legal systems and what changes might be required to the way that data is handled and secured
+    - In particular, be familiar with:
+      - Council of Europe Convention on Cybercrime, a treaty signed by many countries that establishes standards for cybercrime policy 
+      - laws about data breaches, including notification requirements. 
+      - In the US, the Health Information Technology for Economic and Clinical Health (HITECH) Act requires notification of a data breach in some cases, such as when the personal health information was not protected as required by the Health Insurance Portability and Accountability Act (HIPAA) law 
+      - The Gramm-Leach-Bliley Act (GLBA) applies to insurance and financial organizations; it requires notification to federal regulators, law enforcement agencies and customers when a data breach occurs. 
+      - Certain states also impose their own requirements concerning data breaches 
+      - the EU and other countries have their own requirements, for instance, the GDPR has very strict data breach notification requirements: A data breach must be reported to the competent supervisory authority within 72 hours of its discovery
+      - Some countries do not have any reporting requirements
+  - Licensing and intellectual property (IP) requirements
+    - Trademarks:words, slogans, and logos used to identify a company and its products or services
+    - Patents:A temporary monopoly for producing a specific item such as a toy, which must be novel and unique to qualify for a patent
+      - Utility: protect the intellectual property rights of inventors
+      - Design: cover the appearance of an invention and last for 15 years. They don't protect the idea of an invention only its form, and are generally seen as weaker
+      - Software: area of on-going controversy; Google vs Oracle; given to rise of "patent trolls"
+    - Copyright: exclusive use of artistic, musical or literary works which prevents unauthorized duplication, distribution or modification
+    - Licensing: a contract between the software producer and the consumer which limits the use and/or distribution of the software
+    - Trade Secrets: intellectual property that is critical to a business, and significant damage would result if it were disclosed to competitors or the public
+  - Import / Export controls:
+    -  Every country has laws around the import and export of hardware and software. For example, the US has restrictions around the export of cryptographic technology, and Russia requires a license to import encryption technologies manufactured outside the country
+  -  Transborder data flow: 
+    - Organizations should adhere to origin country-specific laws and regulations, regardless of where data resides
+    - Also be aware of applicable laws where data is stored and systems are used
+  - Privacy:
+    -  Many laws include privacy protections for personal data. The EU’s General Data Protection Regulation (GDPR) has strong privacy rules that apply to any organization anywhere that stores or processes the personal data of EU residents; these individuals must be told how their data is collected and used, and they must be able to opt out. 
+    -  The privacy guidelines of the Organization for Economic Co-operation and Development (OECD) require organizations to avoid unjustified obstacles to trans-border data flow, set limits to personal data collection, protect personal data with reasonable security and more. 
+    -  The EU-US Privacy Shield (formerly the EU-US Safe Harbor agreement) controls data flow from the EU to the United States. The EU has more stringent privacy protections and without the Privacy Shield, personal data flow from the EU to the United States would not be allowed
+
+[1.6](#1.6) **Understand requirements for investigation types (i.e. administrative, criminal, civil, regulatory, industry standards)**
