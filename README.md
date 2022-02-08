@@ -1,5 +1,5 @@
-## CISSP
-CISSP Study Material and Resources
+## CISSP Study Resources
+Material and Resources pursing CISSP Certification (Updated Feb. 2022)
 
 This is my compilation of resources, study materials, notes, and advice I have gathered, working towards certification.
 No compilation is exhaustive, but my goal is to put together information that will be useful and encouraging to others undertaking this effort.
@@ -60,5 +60,5 @@ Test Process:
 - Head over to the Certstation for support and communion with fellow travelers: https://discord.gg/certstation
 
 ## My Study Guides
-- Work in progress!
+- CISSP Domain 1: https://jefferywmoore/CISSP-Study-Resources/CISSP-Domain-1-Objectives.md
 
