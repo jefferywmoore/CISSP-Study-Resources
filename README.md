@@ -61,8 +61,13 @@ Test Process:
 
 Note: these are my notes and resources I've found helpful in my study so far. You are advised to do your own analysis to determine what will be helpful to you in your study. There are no guarantees, implied or othewise that these notes are complete or will meet your needs to pass the CISSP certification.
 
-## My Study Guides
+## My Study Guides By Domain (these are still in incubation!)
 - [CISSP Domain 1](CISSP-Domain-1-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-1-Objectives.md)
-- CISSP Domain 2: https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-2-Objectives.md
-- CISSP Domain 3: https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md
+- [CISSP Domain 2](CISSP-Domain-2-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-2-Objectives.md)
+- [CISSP Domain 3](CISSP-Domain-3-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md)
+- [CISSP Domain 4](CISSP-Domain-4-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-4-Objectives.md)
+- [CISSP Domain 5](CISSP-Domain-5-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-5-Objectives.md)
+- [CISSP Domain 6](CISSP-Domain-6-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-6-Objectives.md)
+- [CISSP Domain 7](CISSP-Domain-7-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-7-Objectives.md)
+- [CISSP Domain 8](CISSP-Domain-8-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-8-Objectives.md)
 
