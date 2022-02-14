@@ -179,10 +179,56 @@ data, credit card data and other PII data as it relates to various countries and
 
 [1.6](#1.6) **Understand requirements for investigation types (i.e. administrative, criminal, civil, regulatory, industry standards)**
 An investigation will vary based on the type of incident being investigated. As an example, for a financial services company, a financial system compromise might cause a regulatory investigation. A system breach or website compromise might cause a criminal investigation. Each type of investigation has special considerations:
-- Administrative: An administrative investigation has a primary purpose of providing the appropriate authorities with incident information. Thereafter, the authorities will determine the proper action, if any. Administrative investigations are often tied to HR scenarios, such as when a manager has been accused of improprieties
-- Criminal: A criminal investigation occurs when a crime has been committed and you are working with a law enforcement agency to convict the alleged perpetrator. In such a case, it is common to gather evidence for a court of law, and to share the evidence with the defense. Therefore, you need to gather and handle the information using methods that ensure the evidence can be used in court. Remember that in a criminal case, a suspect must be proven guilty beyond a reasonable doubt. This is more difficult than showing a preponderance of evidence, which is often the standard in a civil case.
-- Civil: In a civil case, one person or entity sues another. For example, one company might sue another for a trademark violation. A civil case is typically about monetary damages, and doesn't involve criminality. In a civil case, a preponderance of evidence is required to secure a victory. This differs from criminal cases, where a suspect is innocent until proven guilty beyond a reasonable doubt
-- Industry Standards: An industry standards investigation is intended to determine whether an organization is adhering to a specific industry standard or set of standards, such as logging and auditing failed logon attempts. Because industry standards represent well-understood and widely implemented best practices, many organizations try to adhere to them even when they are not required to do so in order to improve security, and reduce operational and other risks
-- Regulatory: A regulatory investigation is conducted by a regulatory body, such as the Securities and Exchange Commission (SEC) or Financial Industry Regulatory Authority (FINRA), against an organization suspected of an infraction. In such cases, the organization is required to comply with the investigation, for example, by not hiding or destroying evidence.
+- **Administrative**: An administrative investigation has a primary purpose of providing the appropriate authorities with incident information. Thereafter, the authorities will determine the proper action, if any. Administrative investigations are often tied to HR scenarios, such as when a manager has been accused of improprieties
+- **Criminal**: A criminal investigation occurs when a crime has been committed and you are working with a law enforcement agency to convict the alleged perpetrator. In such a case, it is common to gather evidence for a court of law, and to share the evidence with the defense. Therefore, you need to gather and handle the information using methods that ensure the evidence can be used in court. Remember that in a criminal case, a suspect must be proven guilty beyond a reasonable doubt. This is more difficult than showing a preponderance of evidence, which is often the standard in a civil case.
+- **Civil**: In a civil case, one person or entity sues another. For example, one company might sue another for a trademark violation. A civil case is typically about monetary damages, and doesn't involve criminality. In a civil case, a preponderance of evidence is required to secure a victory. This differs from criminal cases, where a suspect is innocent until proven guilty beyond a reasonable doubt
+- **Industry Standards**: An industry standards investigation is intended to determine whether an organization is adhering to a specific industry standard or set of standards, such as logging and auditing failed logon attempts. Because industry standards represent well-understood and widely implemented best practices, many organizations try to adhere to them even when they are not required to do so in order to improve security, and reduce operational and other risks
+- **Regulatory**: A regulatory investigation is conducted by a regulatory body, such as the Securities and Exchange Commission (SEC) or Financial Industry Regulatory Authority (FINRA), against an organization suspected of an infraction. In such cases, the organization is required to comply with the investigation, for example, by not hiding or destroying evidence.
 
 [1.7](#1.7) **Develop, document, and implement security policy, standards, procedures and guidelines**
+The top tier of a formalized hierarchically organization security documentation is the security policy. A security policy is a document that defines the scope of security needed by the organization, and discusses the assets that require protection and the extent to which security solutions should go to provide the necessary protections. It defines the strategic security objectives, vision, and goals and outlines the security framework of the organization.
+**Acceptable User Policy**: the AUP is a commonly produced document that exists as part of the overall  security documentation infrastructure. This policy defines a level of acceptable performance and expectation of behavior and activity. Failure to comply with the policy may result in job action warnings, penalties, or termination.
+
+Security Standards, Baselines and Guidelines
+
+Once the main security policies are set, the remaining security docuemntation can be crafted from these policies. 
+- **Policies**: these are high-level documents, usually written by the management team. Policies are mandatory. A policy might will provide requirements, but not the steps for implementation
+- **Standards**: more descriptive than policies, standards define compulsary requirements for the homogenous use of hardware, software, technology, and security controls, uniformly implemented throughout the organization
+- **Baseline**: defines a minimum level of security that every system throughout the organization must meet. Baselines are usually system specific and refer to industry / government standards. As an example, a baseline for  server builds would be a list of configuration areas that should be applied to every server that is built. A Group Policy object (GPO) in a Windows network is sometimes used to comply with standards. Configuration management solutions can also help you establish baselines and spot configurations that are not in alignment
+- **Guideline**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users. Guidelines are flexible, and can be customized for unique systems or conditions. They state which security mechanism should be deployed instead of prescribing a specific product or control. They are not complusory
+- **Procedure** (or Standard Operating Procedure or SOP): detailed, step-by-step how-to doc that describes the exact actions necessary to implement a specific security mechanism, control, or solution
+
+[1.8](#1.8) **Identiy, analyze, and prioritize business continuity (BC) requirements**
+
+Business Continuity Planning (BCP) involves assessing the risk to organizational processes and creating policies, plans, and procedures to minimize the impact those risks might have on the organization if they were to occur.
+
+BCP is used to maintain the continuous operation of a business in the event of an emergency, with a goal to implement a combination policies, procedures, and processes
+Business continuity requires a lot of planning and preparation. Actual implementation of business continuity processes occurs quite infrequently. The primary facets of business continuity are resilience (within a data center and between sites or data centers), recovery (if a service becomes unavailable, you need to recover it as soon as possible), and contingency (a last resort in case resilience and recovery prove ineffective)
+
+BCP vs DR: 
+
+- BCP activities are typically strategically focused at a high level and center themselves on business processes and operations.
+- DR plans tend to be more tactical and describe technical activities such as recovery sites, backups, and fault tolerance.
+
+The overall goal of BCP is to provide a quick, calm, and efficient response in the event of an emergency and to enhance a company's ability to recover from a distruptive event promptly.
+
+The BCP process has four main steps:
+
+- **Project scope and planning**: Developing the project scope and plan starts with gaining support of the management team, making a business case (cost/benefit analysis, regulatory or compliance reasons,etc.) and gaining approval to move forward. Next, you need to form a team with representatives from the business as well as IT. Then you are ready to begin developing the plan. Start with a business continuity policy statement, then conduct a business impact analysis (see next item), and then develop the remaining components: preventive controls, relocation, the actual continuity plan, testing, training and maintenance)
+- **Business impact analysis (BIA)**:Identify the systems and services that the business relies on and assess the impacts that a disruption or outage would cause, including the impacts on business processes like accounts receivable and sales. You also need to figure out which systems and services you need to get things running again (think foundational IT services such as the network and directory, which many other systems rely on). Finally, prioritize the order in which critical systems and services are recovered or brought back online. As part of the BIA, establish the **recovery time objectives** (RTOs) (how long it takes to recover), the **recovery point objectives** (RPOs) (the maximum tolerable data loss), and **maximum tolerable downtime** (MTD), along with the costs of downtime and recovery
+- **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that you must protect against interruption. The next phase of BCP development, continuity planning, focuses on developing and implementing a continuity strategy to minimize the impact realized risks might have on protected assets.
+
+There are two primary subtasks involved in continuity planning:
+
+  - Strategy development
+  - Provisions and processes
+  - Approval and implementation
+
+The goal of this process is to create a **continuity of operations plan** (COOP), which focuses on how an organization will carry out critical business functions beginning shortly after a disruption occurs and extending up to one month of sustained operations.
+
+The top priority of BCP and DRP is people. Primarily to get people out of harm's way, and then address IT recovery and restoration issues.
+
+[1.9](#1.9) **Contribute to and enforce personnel security policies and procedures**
+
+
+
