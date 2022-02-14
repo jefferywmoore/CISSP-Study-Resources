@@ -59,6 +59,8 @@ Test Process:
 - Understand Bloom's Taxonomy (https://www.bloomstaxonomy.net/) - a framework used by educators and exam creators to guide learning or exam objectives. Cross-reference words used in the exam objectives with the framework to understand the specific meaning, and to guide the level of study required to master.
 - Head over to the Certstation for support and communion with fellow travelers: https://discord.gg/certstation
 
+Note: these are my notes and resources I've found helpful in my study so far. You are advised to do your own analysis to determine what will be helpful to you in your study. There are no guarantees, implied or othewise that these notes are complete or will meet your needs to pass the CISSP certification.
+
 ## My Study Guides
-- CISSP Domain 1: https://jefferywmoore/CISSP-Study-Resources/CISSP-Domain-1-Objectives.md
+- CISSP Domain 1: https://github.com/jefferywmoore/CISSP-Study-Resources/CISSP-Domain-1-Objectives.md
 
