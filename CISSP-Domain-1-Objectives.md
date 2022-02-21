@@ -340,8 +340,47 @@ should be contacted.
       - **Monitor** the system and associated controls on an on-going basis to include assessing control effectiveness, documenting changes to the system and environment of operation, conducting risk assessments and impact analysis, and reporting the security and privacy posture of the system.
 
 [1.11](#1.11) **Understand and apply threat modeling concepts and methodologies**
+- **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed. It can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed. Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat. 
+- Microsoft uses the **Security Development Lifecycle** (SDL) with the motto: "Secure by design, secure by default, secure in deployment and communication." It has two objectives:
+  - Reduce the number of security-related design and coding defects
+  - Reduce the severity of any remaining defects
+- A defensive approach to threat modeling takes place during the early stages of development; the method is based on predicting threats and designing in specific defenses during the coding and crafting process. Security solutions are more cost effective in this phase than later. This concept should be considered a proactive approach to threat management
+- Microsoft developed the STRIDE threat model:
+  - Spoofing: an attack with the goal of gaining access to a target system through the use of falsified identity
+  - Tampering: any action resulting in unauthorized changes or manipulation of data, whether in transit or in storage
+  - Repudiation: the ability of a user or attacker to deny having performed an action or activity by maintaining plausible deniability
+  - Information Disclosure: the revelation or distribution of private, confidential, or controlled information to external or unauthorized entities
+  - Denial of Service (DoS): an attack that attempts to prevent authorized use of a resource. This can be done through flaw exploitation, connection overloading, or traffic flooding
+  - Elevation of privilege: an attack where a limited user account is transformed into an account with greater privileges, powers, and access
+- Process for Attack Simulation and Threat Analysis (PASTA) is a seven-stage threat modeling methodology. The seven steps of PASTA:
+  - Stage I: Definition of the Objectives (DO) for the Analysis of Risk.
+  - Stage II: Definition of the Technical Scope (DTS)
+  - Stage III: Application Decomposition and Analysis (ADA)
+  - Stage IV: Threat Analysis (TA)
+  - Stage V: Weakness and Vulnerability Analysis (WVA)
+  - Stage VI: Attack Modeling and Simulation (AMS)
+  - Stage VII: Risk Analysis and Management (RAM)
+- Each stage of PASTA has a specific list of objectives to achieve and deliverables to produce in order to complete the stage.
+- Visual, Agile, and Simple Threat (VAST) is a threat modeling concept that integrates threat and risk management into an Agile programming environment on a scalable basis
+- Part of the job of the security team is to identify threats, using different methods:
+   - Focus on attackers: this is a useful method in specific situations. For example, suppose that a developer’s employment is terminated. After extracting data from the developer’s computer, a determination is made that the person was disgruntled and angry. Understanding this situation as a possible threat, allows mitigation steps to be taken
+   - Focus on assets: an organization’s most valuable assets are likely to be targeted by attackers
+   - Focus on software: organizations that develop applications in house, and can be viewed as part of the threat landscape. The goal isn’t to identify every possible attack, but instead to focus on the big picture, identifying risks and attack vectors
+- Understanding threats to the organization allow the documentation of potential attack vectors. Diagramming can be used to list various technologies under threat.
 
 [1.12](#1.12) **Apply Supply Chain Risk Management (SRM) concepts**
+- Risks associated with hardware, software, and services
+  - **Supply Chain Risk Management** (SCRM) is the means to ensure that all of the vendors or links in the supply chain are reliable, trustworthy, reputable organizations that disclose their practices and security requirements to their business partners (not necessarily to the public)
+  - Each link in the chain should be responsible and accountable to the next link in the chain. Each handoff is properly organized, documented, managed, and audited. The goal of a secure supply chain is to ensure that the finished product is of sufficient quality, meets performance and operational goals, and provides stated security mechanisms, and that at no point in the process was any element counterfeited or subject to unauthorized or malicious manipulation or sabotage.
+- The supply chain can be a threat vector, where materials, software, hardware, or data is being obtained from a supposedly trusted source but the supply chain behind the source could have been compromised and asset poisoned or modified
+- Third-party assessment and monitoring
+  - Before doing business with another company, an organization needs to perform due-dilligence, and third-party assessments can help gather information and perform the assessment. 
+  - An on-site assessment is useful to gain information about physical security and operations. During the document review, your goal is to thoroughly review all the architecture, designs, implementations, policies, procedures, etc. A good understanding of the current state of the environment, especially to understand any shortcomings or compliance issues prior to integrating the IT infrastructures. The level of access and depth of information obtained is usually proportional to how closely the companies will work together. 
+- Minimum security requirements
+  - As part of assessment, the minimum security requirements must be established. In some cases, the minimum security requirements are your company’s security requirements. In other cases, new minimum security requirements need to be established. In such scenarios, the minimum security requirements should have a defined period
+- Service-level requirements
+  - A final area to review involves service level agreements (SLAs). Companies have SLAs for internal operations (such as how long it takes for the helpdesk to respond to a new ticket), for customers (such as the availability of a public-facing service) and for partner organizations (such as how much support a vendor
+provides a partner). All the SLAs should be reviewed. A company sometimes has an SLA standard that should be applied, when possible, to the service level agreements as part of working with another company. This can sometimes take time, as the acquiring company might have to support established SLAs until they expire or are up for renewal 
 
 [1.13](#1.13) **Establish and maintain a security awareness, education, and training program**
 - Methods and techniques to present awareness and training
