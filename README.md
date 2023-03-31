@@ -1,5 +1,5 @@
 ## CISSP Study Resources
-Material and Resources pursing CISSP Certification (Updated Feb. 2022)
+Material and Resources pursing CISSP Certification (Updated March. 2023)
 
 This is my compilation of resources, study materials, notes, and advice I have gathered, working towards certification.
 No compilation is exhaustive, but my goal is to put together information that will be useful and encouraging to others undertaking this effort.
@@ -15,7 +15,7 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/jefferywmoore/
 
 # Overview
 There is a ton of information on the CISSP exam available, including from (ISC)², associated & third-party instructors and authors, as well as guides put together by those in preparation.
-Many have noted that the most appropriate frame of reference is that of a of a manager, and not a technician. Approach the material as if you are a risk manager. Try to understand the process, and why any technology would be used. As Lance puts it (https://github.com/1337-Xtreme/awesome-CISSP-CCSP) try to answer these questions for basic topics:
+Many have noted that the most appropriate frame of reference is that of a of a manager, and not a technician. Try to understand the process, and why any technology would be used. As Lance puts it (https://github.com/1337-Xtreme/awesome-CISSP-CCSP) try to answer these questions for basic topics:
 - Why technology is needed?
 - What is the process for making a pro or con decision?
 - When would it be needed, and under what circumstances?
@@ -24,7 +24,7 @@ Many have noted that the most appropriate frame of reference is that of a of a m
 - Who will be auditing usage? Internal vs external and why?
 - Who will create relevant policies for it?
 - Who implements it, and what are the steps in doing so?
-- What are the risks, and who evaluates,quanitifies,and accepts (or rejects) them?
+- What are the risks, and who evaluates,quantifies,and accepts (or rejects) them?
 - What are the implications for architecture, for structure, for costs?
 - What are the privacy ramifications?
 
@@ -35,7 +35,7 @@ Test Process:
 - Read the question and answers twice: skim the question and answers,then go back and read through the question carefully. Argue with each of the answers. Does an answer meet all requirements in the question? Are any other answers more efficient for time and cost?
 - If you have no idea what the answer is, you can generally eliminate at least two answers by thinking about the language used in the question. For instance, the question could be asking for a technology, and two of the answers are about process.
 - The first priority for any incident is saving human life.
-- Think before you Act: 
+- Think before you act: 
   - Understand business objectives
   - Review current security state
   - Interview stakeholders
@@ -44,7 +44,7 @@ Test Process:
   - Analyze impact/exposure/alternatives
   - Verify/confirm reports
 
-- Take practice tests (see references below), and time yourself. You should get comfortable with the process, and this test's proclivities (e.g. you can't skip and go back to a question, so answer and move on).
+- Take practice tests (see references below), and time yourself. You should get comfortable with the process, and the test's proclivities (e.g. you can't skip and go back to a question, so answer and move on).
 - Candidates must have a minimum of five years cumulative paid work experience in two or more of the eight domains of the CISSP CBK. Earning a four-year college degree or regional equivalent or an additional credential from the (ISC)² approved list will satisfy one year of the required experience. Education credit will only satisfy one year of experience. Pursue associate if you have less than that.
 - The test is 3 hours, 100-150 multiple choice questions, 70% required to pass. All domains 10-15% of score.
 - You can pass and complete or fail in first 100 questions. If you go beyond 100, you are somewhere in between.
