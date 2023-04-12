@@ -132,8 +132,30 @@ Be aware of the common security capabilities of interfaces:
 - Encryption/decryption: when communications are encrypted, a client and server can communicate without exposing information to the network; when an interface doesn’t provide such a capability, use IPsec or another encrypted transport mechanism
 - Signing: used for non-repudiation; In a high-security environment,both encrypt and sign all communications if possible
 
+**Fault tolerance**: capability used to enhance availability. In the event of an attack (e.g. DoS), or system failure, fault tolerance helps keep a system up and running
+
 
 [3.5](#3.5) Assess and mitigate the vulnerabilities of security architectures, designs and solution elements
+
+This objective relates to identifying vulnerabilities and corresponding mitigating contols and solutions. The key is understanding the types of vulnerabilities commonly present in different environments, and their mitigation options
+
+- Client-based systems
+- Server-based systems
+- Database systems
+- Cryptographic systems
+- Industrial control systems (ICS)
+- Cloud-based systems
+- Distributed systems
+- Internet of things (IoT)
+- Microservices
+- Containerization
+- Serverless
+- Embedded systems
+- High-performance computing (HPC) systems
+- Edge computing systems
+- Virtualized systems
+
+
 
 [3.6](#3.6) Select and determine cryptographic solutions
 

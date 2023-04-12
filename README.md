@@ -6,7 +6,7 @@ No compilation is exhaustive, but my goal is to put together information that wi
 
 Feel free to share this repo or any of the resources if you find them useful.
 Tell me about mistakes or improvements you think should be made!
-Connect with me on LinkedIn: https://www.linkedin.com/in/jefferywmoore/
+Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/)
 
 # Table of contents
 - [Overview](#overview) of CISSP exam and content
@@ -15,7 +15,7 @@ Connect with me on LinkedIn: https://www.linkedin.com/in/jefferywmoore/
 
 # Overview
 There is a ton of information on the CISSP exam available, including from (ISC)², associated & third-party instructors and authors, as well as guides put together by those in preparation.
-Many have noted that the most appropriate frame of reference is that of a of a manager, and not a technician. Try to understand the process, and why any technology would be used. As Lance puts it (https://github.com/1337-Xtreme/awesome-CISSP-CCSP) try to answer these questions for basic topics:
+Many have noted that the most appropriate frame of reference is that of a of a manager, and not a technician. Try to understand the process, and why any technology would be used. As [Lance puts it](https://github.com/1337-Xtreme/awesome-CISSP-CCSP), try to answer these questions for basic topics:
 - Why technology is needed?
 - What is the process for making a pro or con decision?
 - When would it be needed, and under what circumstances?
@@ -52,22 +52,22 @@ Test Process:
 ## Reference Material
 - Certified Information Systems Security Professional, Official Study Guide (using Ninth Edition) - this is the baseline text and from what I've seen,usually the starting point for study
 - CISSP Official Practice Tests (I have third edition)
-- This course has been highly recommended by several people: CISSP Overview by Kelly Handerhan https://app.cybrary.it/immersive/12270505/activity/61891 (I have yet to take it!)
+- This course has been highly recommended by several people: [CISSP Overview by Kelly Handerhan](https://app.cybrary.it/immersive/12270505/activity/61891) (Note: I have yet to take it!)
 - Thor Teaches:
-  - CISSP study plan (2021) https://thorteaches.com/wp-content/uploads/2021/01/ThorTeaches-CISSP-study-plan-2021.pdf
-  - Daily CISSP Questions: https://thorteaches.com/free-daily-cissp-questions/
-- Understand Bloom's Taxonomy (https://www.bloomstaxonomy.net/) - a framework used by educators and exam creators to guide learning or exam objectives. Cross-reference words used in the exam objectives with the framework to understand the specific meaning, and to guide the level of study required to master.
-- Head over to the Certstation for support and communion with fellow travelers: https://discord.gg/certstation
+  - [CISSP study plan (2021)](https://thorteaches.com/wp-content/uploads/2021/01/ThorTeaches-CISSP-study-plan-2021.pdf)
+  - [Daily CISSP Questions](https://thorteaches.com/free-daily-cissp-questions/)
+- [Understand Bloom's Taxonomy](https://www.bloomstaxonomy.net/) - a framework used by educators and exam creators to guide learning or exam objectives. Cross-reference words used in the exam objectives with the framework to understand the specific meaning, and to guide the level of study required to master.
+- Head over to the [Certstation](https://discord.gg/certstation) for support and communion with fellow travelers 
 
 Note: these are my notes and resources I've found helpful in my study so far. You are advised to do your own analysis to determine what will be helpful to you in your study. There are no guarantees, implied or othewise that these notes are complete or will meet your needs to pass the CISSP certification.
 
 ## My Study Guides By Domain (these are still in incubation!)
-- [CISSP Domain 1](CISSP-Domain-1-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-1-Objectives.md)
-- [CISSP Domain 2](CISSP-Domain-2-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-2-Objectives.md)
-- [CISSP Domain 3](CISSP-Domain-3-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md)
-- [CISSP Domain 4](CISSP-Domain-4-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-4-Objectives.md)
-- [CISSP Domain 5](CISSP-Domain-5-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-5-Objectives.md)
-- [CISSP Domain 6](CISSP-Domain-6-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-6-Objectives.md)
-- [CISSP Domain 7](CISSP-Domain-7-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-7-Objectives.md)
-- [CISSP Domain 8](CISSP-Domain-8-Objectives.md) (https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-8-Objectives.md)
+- [Domain 1](CISSP-Domain-1-Objectives.md)
+- [Domain 2](CISSP-Domain-2-Objectives.md)
+- [Domain 3](CISSP-Domain-3-Objectives.md) 
+- [Domain 4](CISSP-Domain-4-Objectives.md) 
+- [Domain 5](CISSP-Domain-5-Objectives.md) 
+- [Domain 6](CISSP-Domain-6-Objectives.md)
+- [Domain 7](CISSP-Domain-7-Objectives.md)
+- [Domain 8](CISSP-Domain-8-Objectives.md)
 
