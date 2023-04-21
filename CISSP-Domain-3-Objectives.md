@@ -139,10 +139,27 @@ Be aware of the common security capabilities of interfaces:
 
 This objective relates to identifying vulnerabilities and corresponding mitigating contols and solutions. The key is understanding the types of vulnerabilities commonly present in different environments, and their mitigation options
 
-- Client-based systems
-- Server-based systems
-- Database systems
-- Cryptographic systems
+- Client-based systems: client computers are the most attacked entry point
+    - Compromised client computers can be used to launch other attacks
+    - Productivity software and browsers are constant targets
+    - Even patched client computers are at risk due to phishing and social engineering vectors
+    - Mitigation: run a full suite of security software, including anti-virus/malware, anti-spyware, and host-based firewall
+- Server-based systems:
+    - Data Flow Control: movement of data between processes, between devices, across a network, or over a communications channel
+    - Management of data flow seeks to minimize latency/delays, keep traffic confidential (i.e. using encryption), not overload traffic (i.e. load balancer), and can be provided by network devices/applications & services
+    - While attackers may initially target client computers, servers are often the goal
+    - Mitigation: regular patching, deploying hardened server OS images for builds, and use host-based firewalls
+- Database systems: databases often store a company's most sensitive data (e.g. proprietary, CC info, PHI, and PII)
+    - Attackers may use inference or aggregation to obtain confidential information
+    - **Aggregation attack**: process whereby SQL provides a number of functions that combine records from one or more tables to produce potentially useful info
+    - **Inference attack** involves combining several pieces of nonsensitive info to gain access to information that should be classified at a higher level; inference makes use of the human mind’s deductive capacity rather than the raw mathematical ability of modern database platforms
+
+- Cryptographic systems: the goal of a well-implemented cryptographic system is to make compromise too time-consuming and/or expensive. Each component has vulnerabilities:
+    - Software: used to encrypt/decrypt data, can be a standalone app, command-line, built into the OS or called via API. Like any software, there are likely bugs/issues, so regular patching is important
+    - Keys: dictate how encryption is applied through an algorithm. A key should remain secret, otherwise the security of the encrypted data is at risk. Key length is an important consideration; longer keys discourage brute-force attacks; a 256-bit key is typically minimum recommendation for symmetric encryption, and 2048-bit key typically the minimum for asymmetric. Always base the length on your requirements and sensitivity of the data being handled
+    - Algorithms: choose algorithms (or ciphers) with a large **key space** (a key space represents all possible permutations of a key) and a large random **key value** (key value is used by an algorithm for the encryption process). Algorithms themselves are not secret, but instead well-known. You can research their history, how they work and find extensive details about them
+
+
 - Industrial control systems (ICS)
 - Cloud-based systems
 - Distributed systems

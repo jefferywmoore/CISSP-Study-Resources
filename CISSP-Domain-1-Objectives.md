@@ -425,3 +425,6 @@ should be contacted.
     - Threats are complex, so training needs to be relevant and interesting to be effective. This means updating training materials and changing out the ways which security is tested and measured. If you always use the same phishing test campaign or send it from the same account on the same day, it isn’t effective. The same applies to other materials. Instead of relying on long and detailed security documentation for training and awareness, consider using internal social media tools, videos and interactive campaigns
   - Program effectiveness evaluation 
     - Time and money must be allocated for evaluating the company’s security awareness and training. The company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email link. Is the awareness and training bringing that number clicks down over time? If not, re-evaluation may be needed
+
+Also see my articles on risk and risk management [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1)
+and [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2).
