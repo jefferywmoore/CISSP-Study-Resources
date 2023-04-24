@@ -17,8 +17,9 @@ You may find this domain to be more technical than others, and if you have exper
 - **Keep it simple**: AKA keep it simple, stupid (KISS), this concept is the encouragement to avoid overcomplicating the environment, organization, or product design
 - **Zero Trust**: "assume breach"; a security concept and alternative the traditional (castle/moat) approach where nothing is automatically trusted. Instead each request for activity or access is assumed to be from an unknown and untrusted location until otherwise verified; 
     - Goal is to have every access request authenticated, authorized, and encrypted prior to access being granted to an asset or resource
+    - See my article on an [Overview of Zero Trust Basics](https://blog.balancedsec.com/p/an-overview-of-zero-trust-basics)
 - **Privacy by design (PbD)**: a guideline to integrate privacy protections into products during the earliest design phase rather than tacking it on at the end of development; 
-    - Same overall concept as "security by design" or "integrated security" where security is an element of design and architecture of a product starting at initiation and continuing through the software development lifecycle (SDLC).
+    - Same overall concept as "security by design" or "integrated security" where security is an element of design and architecture of a product starting at initiation and continuing through the software development lifecycle (SDLC)
     - There are 7 recognized principles to achieve privacy by design:
         - Proactive, preventative: think ahead and design for things that you anticipate might happen
         - Default setting: make private by default, e.g. social media app shouldn't share user data with everybody by default
@@ -30,7 +31,7 @@ You may find this domain to be more technical than others, and if you have exper
 
 - **Trust but verify**: based on a Russian proverb, and no longer sufficient; it's the traditional approach of trusting subjects and devices within a company's security perimeter automatically, leaving an org vulnerable to insider attacks and providing intruders the ability to easily perform lateral movement
 - **Shared responsibility**: the security design principle that indicates that organizations do not operate in isolation
-    - Everyone in an organization has some level of security responsibility; 
+    - Everyone in an organization has some level of security responsibility
     - the job of the CISO and security team is to establish & maintain security
     - The job of regular employees to perform their tasks within the confines of security
     - The job of the auditor is to monitor the environment for violations
@@ -41,7 +42,7 @@ You may find this domain to be more technical than others, and if you have exper
 
 Security models: 
 - Intended to provide an explicit set of rules that a computer can follow to implement the fundamental security concepts, processes, and procedures of a security policy 
-- Provide a way for a designer to map abstract statements into a security policy prescribing the algorithms and data structures necessary to build  hardware and software
+- Provide a way for a designer to map abstract statements into a security policy prescribing the algorithms and data structures necessary to build hardware and software
 - Enable people to access only the data classified for their clearance level
 - **Bell-LaPadula**: Model was established in 1973. The goal is to ensure that information is exposed only to those with the right level of classification
     - Focuse is on confidentiality 
@@ -114,7 +115,7 @@ Security capabilities of information systems include memory protection, virtuali
 A computing device is likely running multiple applications and services simultaneously, each
 occupying a segment of memory. The goal of memory protection is to prevent one application or service from impacting another. There are two primary memory protection methods:
 -  Process isolation: OS provides separate memory spaces for each processes instructions and data, and prevents one process from impacting another
-- Hardware segmentation: forces separation via physical hardward controls rather than logical processes; in this type of segmentation, the operating system maps processes to dedicated memory locations.
+- Hardware segmentation: forces separation via physical hardward controls rather than logical processes; in this type of segmentation, the operating system maps processes to dedicated memory locations
 
 **Virtualization**: technology used to host one or more operating systems within the memory of a single host, or to run applications that are not compatible with the host OS. The goal is to protect the hypervisor and ensure that compromising one VM doesn't affect others on that host
 
@@ -127,10 +128,10 @@ with a client computer or server. A TPM enhances the capabilities of a computer 
 User interface: a constrained UI can be used in an application to restrict what users can do or see based on their privileges
 - e.g. dimming/graying out capabilities for users without the correct privilege
 
-An interface is also the method by which two or more systems communicate. 
+An interface is also the method by which two or more systems communicate
 Be aware of the common security capabilities of interfaces:
 - Encryption/decryption: when communications are encrypted, a client and server can communicate without exposing information to the network; when an interface doesn’t provide such a capability, use IPsec or another encrypted transport mechanism
-- Signing: used for non-repudiation; In a high-security environment,both encrypt and sign all communications if possible
+- Signing: used for non-repudiation; in a high-security environment, both encrypt and sign all communications if possible
 
 **Fault tolerance**: capability used to enhance availability. In the event of an attack (e.g. DoS), or system failure, fault tolerance helps keep a system up and running
 
@@ -155,13 +156,52 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - **Inference attack** involves combining several pieces of nonsensitive info to gain access to information that should be classified at a higher level; inference makes use of the human mind’s deductive capacity rather than the raw mathematical ability of modern database platforms
 
 - Cryptographic systems: the goal of a well-implemented cryptographic system is to make compromise too time-consuming and/or expensive. Each component has vulnerabilities:
+    - **Kerckhoff's Principle** (AKA Kerckhoff's assumption): a cryptographic system should be secure even if everything about the system, except the key, is public knowledge
     - Software: used to encrypt/decrypt data, can be a standalone app, command-line, built into the OS or called via API. Like any software, there are likely bugs/issues, so regular patching is important
-    - Keys: dictate how encryption is applied through an algorithm. A key should remain secret, otherwise the security of the encrypted data is at risk. Key length is an important consideration; longer keys discourage brute-force attacks; a 256-bit key is typically minimum recommendation for symmetric encryption, and 2048-bit key typically the minimum for asymmetric. Always base the length on your requirements and sensitivity of the data being handled
-    - Algorithms: choose algorithms (or ciphers) with a large **key space** (a key space represents all possible permutations of a key) and a large random **key value** (key value is used by an algorithm for the encryption process). Algorithms themselves are not secret, but instead well-known. You can research their history, how they work and find extensive details about them
+    - Keys: dictate how encryption is applied through an algorithm. A key should remain secret, otherwise the security of the encrypted data is at risk. Key length is an important consideration; longer keys discourage brute-force attacks; a 256-bit key is typically minimum recommendation for symmetric encryption, and 2048-bit key typically the minimum for asymmetric 
+        - **Key space**:represents all possible permutations of a key
+        - Key space best practices: 
+            - use as long of a key as possible (your goal is to outpace projected increase in cryptanalytic capability during the time the data must be kept safe) 
+            - always store secret keys securely, and if you must transmit them over a network, do so in a manner that protects them from unauthorized disclosure 
+            - select the key using an approach that has as much randomness as possible, taking advantage of the entire key space 
+            - destroy keys securely, when no longer needed
+    Always base the length on your requirements and sensitivity of the data being handled
+    - Algorithms: choose algorithms (or ciphers) with a large key space and a large random **key value** (key value is used by an algorithm for the encryption process). Algorithms themselves are not secret, but instead well-known with extensive public details about history and how they function
 
+- **Industrial control systems (ICS)**: ICS is a form of computer-management device that controls industrial processes and machines, also known as operational technology (OT)
+    - **Supervisory control and data acquisition (SCADA)**: systems used to control
+physical devices such as those found in an electrical power plant or factory. SCADA systems are well suited for distributed environments, such as those spanning continents 
+    - Some SCADA systems still rely on legacy or
+proprietary communications, which put them at risk, especially as attackers gain knowledge of such systems and their vulnerabilities
+    - SCADA risk mitigations:
+        - isolate networks 
+        - limit access physically and logically 
+        - restrict code to only essential apps 
+        - log all activity
 
-- Industrial control systems (ICS)
-- Cloud-based systems
+- Cloud-based systems:
+    - **Cloud computing**: on-demand access to computing resources available from almost anywhere
+    - Cloud's primary challenge: resources are outside the org’s direct control, making it more difficult to manage risk
+    - Orgs should formally define requirements to store and process data stored in the cloud
+    - Focus your efforts on areas that you can control, such as the network entry and exit points (i.e. firewalls and similar security solutions)
+    - All sensitive data should be encrypted, both for network communication and data-at-rest
+    - Use centralized identity access and management system, with multifactor authentication
+    - Customers shouldn’t use encryption controlled by the vendor, eliminating risks to vendor-based insider threats, and supporting destruction using **cryptographic erase**: methods that permanently remove the cryptographic keys
+    -Capture diagnostic and security data from the cloud-based systems and store in your security information and event management system
+    - Ensure that your cloud configuration matches or exceeds your on-premises security requirements
+    - Understand cloud vendor's security strategy
+    - Cloud shared responsibility:
+        - Software as a Service (SaaS):
+            - the vendor is responsible for all maintenance of the SaaS services
+        - Platform as a Service (PaaS):
+            - customers deploy apps that they’ve created or acquired, manage their apps, and modify config settings on the host
+            - the vendor is responsible for maintenance of the host and the underlying cloud infrastructure
+        - Infrastructure as a Service (IaaS): 
+            - IaaS models provide basic computing resources to customers
+            - customers install OSs and apps and perform required maintenance
+            - the vendor maintains cloud-based infra, ensuring that customers have access to leased systems
+        
+
 - Distributed systems
 - Internet of things (IoT)
 - Microservices
