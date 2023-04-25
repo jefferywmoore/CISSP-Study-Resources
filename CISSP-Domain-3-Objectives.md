@@ -187,9 +187,9 @@ proprietary communications, which put them at risk, especially as attackers gain
     - All sensitive data should be encrypted, both for network communication and data-at-rest
     - Use centralized identity access and management system, with multifactor authentication
     - Customers shouldn’t use encryption controlled by the vendor, eliminating risks to vendor-based insider threats, and supporting destruction using **cryptographic erase**: methods that permanently remove the cryptographic keys
-    -Capture diagnostic and security data from the cloud-based systems and store in your security information and event management system
-    - Ensure that your cloud configuration matches or exceeds your on-premises security requirements
-    - Understand cloud vendor's security strategy
+    -Capture diagnostic and security data from cloud-based systems and store in your security information and event management (SIEM) system
+    - Ensure that your cloud configuration matches or exceeds your on-premise security requirements
+    - Understand the cloud vendor's security strategy
     - Cloud shared responsibility:
         - Software as a Service (SaaS):
             - the vendor is responsible for all maintenance of the SaaS services
@@ -202,9 +202,44 @@ proprietary communications, which put them at risk, especially as attackers gain
             - the vendor maintains cloud-based infra, ensuring that customers have access to leased systems
         
 
-- Distributed systems
+- Distributed systems:
+    - A **Distributed System** or **distributed computing environment (DCE)** is a collection of individual systems that work together to support a resource or provide a service 
+    - DCEs are designed to support communication and coordination among their members in order to achieve a common function, goal, or operation 
+    - Most DCEs have duplicate or concurrent components, are asynchronous, and allow for fail-soft or independent failure of components
+    - A DCE is described as concurrent computing, parallel computing, and distributed computing 
+    - DCE solutions are implemented as client-server, three-tier, multi-tier, and peer-to-peer
+    - In distributed systems, integrity is sometimes a concern because data and software are spread across various systems, often in different locations
+    - Client/server model network is AKA a distributed system or distributed architecture 
+        - thus, security must be addressed everywhere instead of at a single centralized host 
+        - processing and storage are distributed on multiple clients and servers, and all must be secured 
+        - network links must be secured and protected
+
 - Internet of things (IoT)
+    - The **Internet of Things (IoT)** is a class of smart devices that are internet-connected in order to provide automation, remote control, or AI processing to appliances or devices 
+    - An IoT device is almost always a separate and distinct hardware device that is used on its own or in conjunction with an existing system
+    - IoT security concerns often relate to access and encryption 
+    - IoT is often not designed with security as a core concept, resulting in security breachs; once an attacker has remote access to the device they may be able to pivot
+    - Specific IoT remediation:
+        - Deploy a distinct network for IoT equipment, kept separate and isolated (known as **three dumb routers**) 
+        - Keep systems patched 
+        - Limit physical and logical access 
+        - Monitor activity 
+        - Implement firewalls and filtering 
+        - Never assume IoT defaults are good enough, evaluate settings and config options, and make changes to optimize security while supporting business function
+        - Disable remote management and enable secure communication only (such as over HTTPS)
+        - Review IoT vendor to understand their history with reported vulnerabilities, response time to vulnerabilities and their overall approach to security
+        - Not all IoT devices are suitable for enterprise networks
+
 - Microservices
+    - Microservices are a feature of web-based solutions and derivative of SOA 
+    - A microservice is simply one element, feature, capability, business logic, or function of a web application that can be called upon or used by other web applications
+    - Microservices are usually small and focused on a single operation, designed with few dependencies, and are based on fast short-term development cycles (similar to Agile)
+    - Securing microservices concepts you'll find familiar: 
+        - using HTTPS only 
+        - encrypt everything possible and use routine scanning
+        - closely aligned with microservices is the concept of shifting left, or addressing security earlier in the SDLC; also integrating it into the CI/CD pipeline 
+        - consider the software supplychain or dependencies of libries used, when addressing updates and patching
+
 - Containerization
 - Serverless
 - Embedded systems
