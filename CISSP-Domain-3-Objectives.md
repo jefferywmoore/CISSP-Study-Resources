@@ -140,7 +140,7 @@ Be aware of the common security capabilities of interfaces:
 
 This objective relates to identifying vulnerabilities and corresponding mitigating contols and solutions. The key is understanding the types of vulnerabilities commonly present in different environments, and their mitigation options
 
-- Client-based systems: client computers are the most attacked entry point
+- **Client-based systems**: client computers are the most attacked entry point
     - Compromised client computers can be used to launch other attacks
     - Productivity software and browsers are constant targets
     - Even patched client computers are at risk due to phishing and social engineering vectors
@@ -150,47 +150,50 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - Management of data flow seeks to minimize latency/delays, keep traffic confidential (i.e. using encryption), not overload traffic (i.e. load balancer), and can be provided by network devices/applications & services
     - While attackers may initially target client computers, servers are often the goal
     - Mitigation: regular patching, deploying hardened server OS images for builds, and use host-based firewalls
-- Database systems: databases often store a company's most sensitive data (e.g. proprietary, CC info, PHI, and PII)
+- **Database systems**: databases often store a company's most sensitive data (e.g. proprietary, CC info, PHI, and PII)
     - Attackers may use inference or aggregation to obtain confidential information
     - **Aggregation attack**: process whereby SQL provides a number of functions that combine records from one or more tables to produce potentially useful info
-    - **Inference attack** involves combining several pieces of nonsensitive info to gain access to information that should be classified at a higher level; inference makes use of the human mind’s deductive capacity rather than the raw mathematical ability of modern database platforms
+    - **Inference attack** involves combining several pieces of nonsensitive info to gain access to that which should be classified at a higher level; inference makes use of the human mind’s deductive capacity rather than the raw mathematical ability of database platforms
 
-- Cryptographic systems: the goal of a well-implemented cryptographic system is to make compromise too time-consuming and/or expensive. Each component has vulnerabilities:
+- **Cryptographic systems**: the goal of a well-implemented cryptographic system is to make compromise too time-consuming and/or expensive. Each component has vulnerabilities:
     - **Kerckhoff's Principle** (AKA Kerckhoff's assumption): a cryptographic system should be secure even if everything about the system, except the key, is public knowledge
-    - Software: used to encrypt/decrypt data, can be a standalone app, command-line, built into the OS or called via API. Like any software, there are likely bugs/issues, so regular patching is important
-    - Keys: dictate how encryption is applied through an algorithm. A key should remain secret, otherwise the security of the encrypted data is at risk. Key length is an important consideration; longer keys discourage brute-force attacks; a 256-bit key is typically minimum recommendation for symmetric encryption, and 2048-bit key typically the minimum for asymmetric 
+    - Software: used to encrypt/decrypt data; can be a standalone app, command-line, built into the OS or called via API. Like any software, there are likely bugs/issues, so regular patching is important
+    - Keys: dictate how encryption is applied through an algorithm. A key should remain secret, otherwise the security of the encrypted data is at risk  
         - **Key space**:represents all possible permutations of a key
         - Key space best practices: 
-            - use as long of a key as possible (your goal is to outpace projected increase in cryptanalytic capability during the time the data must be kept safe) 
+            - key length is an important consideration; use as long of a key as possible (your goal is to outpace projected increase in cryptanalytic capability during the time the data must be kept safe); longer keys discourage brute-force attacks
+                - a 256-bit key is typically minimum recommendation for symmetric encryption
+                - 2048-bit key typically the minimum for asymmetric
             - always store secret keys securely, and if you must transmit them over a network, do so in a manner that protects them from unauthorized disclosure 
             - select the key using an approach that has as much randomness as possible, taking advantage of the entire key space 
             - destroy keys securely, when no longer needed
-    Always base the length on your requirements and sensitivity of the data being handled
-    - Algorithms: choose algorithms (or ciphers) with a large key space and a large random **key value** (key value is used by an algorithm for the encryption process). Algorithms themselves are not secret, but instead well-known with extensive public details about history and how they function
+    Always base key length on your requirements and sensitivity of the data being handled
+    - Algorithms: choose algorithms (or ciphers) with a large key space and a large random **key value** (key value is used by an algorithm for the encryption process) 
+        - Algorithms themselves are not secret, but instead well-known with extensive public details about history and how they function
 
 - **Industrial control systems (ICS)**: ICS is a form of computer-management device that controls industrial processes and machines, also known as operational technology (OT)
     - **Supervisory control and data acquisition (SCADA)**: systems used to control
 physical devices such as those found in an electrical power plant or factory. SCADA systems are well suited for distributed environments, such as those spanning continents 
-    - Some SCADA systems still rely on legacy or
-proprietary communications, which put them at risk, especially as attackers gain knowledge of such systems and their vulnerabilities
+    - Some SCADA systems still rely on legacy or proprietary communications, which put them at risk, especially as attackers gain knowledge of such systems and their vulnerabilities
     - SCADA risk mitigations:
         - isolate networks 
         - limit access physically and logically 
         - restrict code to only essential apps 
         - log all activity
 
-- Cloud-based systems:
-    - **Cloud computing**: on-demand access to computing resources available from almost anywhere
+- **Cloud-based systems**: on-demand access to computing resources available from almost anywhere
     - Cloud's primary challenge: resources are outside the org’s direct control, making it more difficult to manage risk
     - Orgs should formally define requirements to store and process data stored in the cloud
     - Focus your efforts on areas that you can control, such as the network entry and exit points (i.e. firewalls and similar security solutions)
     - All sensitive data should be encrypted, both for network communication and data-at-rest
     - Use centralized identity access and management system, with multifactor authentication
-    - Customers shouldn’t use encryption controlled by the vendor, eliminating risks to vendor-based insider threats, and supporting destruction using **cryptographic erase**: methods that permanently remove the cryptographic keys
-    -Capture diagnostic and security data from cloud-based systems and store in your security information and event management (SIEM) system
+    - Customers shouldn’t use encryption controlled by the vendor, eliminating risks to vendor-based insider threats, and supporting destruction using  
+        - **cryptographic erase**: methods that permanently remove the cryptographic keys
+
+    - Capture diagnostic and security data from cloud-based systems and store in your security information and event management (SIEM) system
     - Ensure that your cloud configuration matches or exceeds your on-premise security requirements
     - Understand the cloud vendor's security strategy
-    - Cloud shared responsibility:
+    - Cloud shared responsibility by model:
         - Software as a Service (SaaS):
             - the vendor is responsible for all maintenance of the SaaS services
         - Platform as a Service (PaaS):
@@ -202,24 +205,23 @@ proprietary communications, which put them at risk, especially as attackers gain
             - the vendor maintains cloud-based infra, ensuring that customers have access to leased systems
         
 
-- Distributed systems:
-    - A **Distributed System** or **distributed computing environment (DCE)** is a collection of individual systems that work together to support a resource or provide a service 
+- **Distributed systems** **distributed computing environment (DCE)**: a collection of individual systems that work together to support a resource or provide a service 
     - DCEs are designed to support communication and coordination among their members in order to achieve a common function, goal, or operation 
     - Most DCEs have duplicate or concurrent components, are asynchronous, and allow for fail-soft or independent failure of components
-    - A DCE is described as concurrent computing, parallel computing, and distributed computing 
+    - DCE is AKA concurrent computing, parallel computing, and distributed computing 
     - DCE solutions are implemented as client-server, three-tier, multi-tier, and peer-to-peer
-    - In distributed systems, integrity is sometimes a concern because data and software are spread across various systems, often in different locations
-    - Client/server model network is AKA a distributed system or distributed architecture 
-        - thus, security must be addressed everywhere instead of at a single centralized host 
-        - processing and storage are distributed on multiple clients and servers, and all must be secured 
-        - network links must be secured and protected
+    - Securing distributed systems:
+        - in distributed systems, integrity is sometimes a concern because data and software are spread across various systems, often in different locations
+        - Client/server model network is AKA a distributed system or distributed architecture 
+            - security must be addressed everywhere instead of at a single centralized host 
+            - processing and storage are distributed on multiple clients and servers, and all must be secured 
+            - network links must be secured and protected
 
-- Internet of things (IoT)
-    - The **Internet of Things (IoT)** is a class of smart devices that are internet-connected in order to provide automation, remote control, or AI processing to appliances or devices 
-    - An IoT device is almost always a separate and distinct hardware device that is used on its own or in conjunction with an existing system
+- **Internet of things (IoT)**: a class of smart devices that are internet-connected in order to provide automation, remote control, or AI processing to appliances or devices 
+    - An IoT device is almost always a separate/distinct hardware that is used on its own or in conjunction with an existing system
     - IoT security concerns often relate to access and encryption 
-    - IoT is often not designed with security as a core concept, resulting in security breachs; once an attacker has remote access to the device they may be able to pivot
-    - Specific IoT remediation:
+    - IoT is often not designed with security as a core concept, resulting in security breaches; once an attacker has remote access to the device they may be able to pivot
+    - Securing IoT:
         - Deploy a distinct network for IoT equipment, kept separate and isolated (known as **three dumb routers**) 
         - Keep systems patched 
         - Limit physical and logical access 
@@ -230,22 +232,73 @@ proprietary communications, which put them at risk, especially as attackers gain
         - Review IoT vendor to understand their history with reported vulnerabilities, response time to vulnerabilities and their overall approach to security
         - Not all IoT devices are suitable for enterprise networks
 
-- Microservices
-    - Microservices are a feature of web-based solutions and derivative of SOA 
+- **Microservices**: a feature of web-based solutions and derivative of SOA 
     - A microservice is simply one element, feature, capability, business logic, or function of a web application that can be called upon or used by other web applications
     - Microservices are usually small and focused on a single operation, designed with few dependencies, and are based on fast short-term development cycles (similar to Agile)
-    - Securing microservices concepts you'll find familiar: 
+    - Securing microservices: 
         - using HTTPS only 
         - encrypt everything possible and use routine scanning
         - closely aligned with microservices is the concept of shifting left, or addressing security earlier in the SDLC; also integrating it into the CI/CD pipeline 
         - consider the software supplychain or dependencies of libries used, when addressing updates and patching
 
-- Containerization
-- Serverless
-- Embedded systems
-- High-performance computing (HPC) systems
-- Edge computing systems
-- Virtualized systems
+- **Containerization**: AKA OS virtualization is based on the concept of eliminating the duplication of OS elements in a virtual machine; instead each application is placed into a container that includes only the actual resources needed to support the enclosed application, and the common or shared OS elements are then part of the hypervisor
+    - Containerization is able to provide 10 to 100 x more application density per physical server compared to traditional virtualization
+    - Vendors often have security benchmarks and hardening guidelines to follow to enhance container security
+    - Securing containers: 
+        - container challenges include the lack of isolation compared to a traditional infrastructure of physical servers and VMs
+        - scan container images to reveal software with vulnerabilities
+        - secure your registries: use access controls to limit who can publish images, or even access the registry; require images to be signed
+        - harden container deployment including the OS of the underlying host, using firewalls, and VPC rules, and use limited access accounts
+        - reduce the attack surface by minimizing the number of components in each container, and update and scan them frequently 
+
+
+- **Serverless architecture** (AKA **function as a service (FaaS)**): a cloud computing concept where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the CSP
+    - Applications developed on serverless architecture are similar to microservices, and each function is created to operate independently and automonomously
+    - A serverless model, as in other CSP models, is a shared security model,and your organization and the CSP share security responsibility
+
+- **Embedded systems**: any form of computing component added to an existing mechanical or electrical system for the purpose of providing automation, remote control, and/or monitoring; usually including a limited set of specific functions
+    - Embedded systems can be a security risk because they are generally static, with admins having no way to update or address security vulnerabilities (or vendors are slow to patch)
+    - Embedded systems focus on minimizing cost and extraneous features
+    - Embedded systems are often in control of/associated with physical systems, and can have real-world impact
+    - Securing embedded systems:
+        - ebedded systems should be isolated from the internet, and from a private production network to minimize exposure to remote exploitation, remote control, and malware
+        - use secure boot feature and physically protecting the hardware
+
+- **High-performance computing (HPC)** systems: platforms designed to perform complex calculations/data manipulation at extremely high speeds (e.g. super computers or MPP); often used by large orgs, universities, or gov agencies
+    - An HPC solution is composed of three main elements: 
+        - compute resources 
+        - network capabilities 
+        - storage capacity
+    - HPCs often implement real-time OS (RTOS)
+    - HPC systems are often rented, leased or shared, which can limit the effectiveness of firewalls and invalidate air gap solutions
+    - Securing HPC systems:
+        - deploy head nodes and route all outside traffic through them, isolating parts of a system 
+        - "fingerprint" HPC systems to undersatnd use, and detect anomalous behavior
+- **Edge computing**: philosophy of network design where data and compute resources are located as close as possible, at or near the network edge, to optimize bandwidth use while minimizing latency
+    - Securing edge computing:
+        - this technology creates additional network edges that result in increased levels of complexity
+        - visibility, control, and correlation requires a Zero Trust access-based approach to address security on the LAN edge, WAN edge and cloud edge, as well as network management
+        - edge-based computing devices,especially IoT devices, are often produced with limited security forethought
+        - devices on your network, no matter where they reside, need to be configured, managed, and patched using a consistent policy and enforcement strategy
+        - use intelligence from side-channel signals that can pick up hardware trojans and malicious firmware
+        - attend to physical security 
+        - deploy IDS on the network side to monitor for malicious traffic
+        - in many scenarios, you are an edge customer, and likely will need to rely on a vendor for some of the security and vulnerability remediation
+- **Virtualized systems**: used to host one or more OSs within the memory of a single host computer, or to run apps not compatible with the host OS
+    - Securing virtualized systems:
+        - the primary component in virtualization is a hypervisor which manages the VMs, virtual data storage, virtual network components
+        - the hypervisor represents an additional attack surface
+        - in virtualized environments, you need to protect both the VMs and the physical infrastructure/hypervisor
+        - hypervisor admin accounts/credentials and service accounts are targets because they often provide access to VMs and their data; these accounts should be protected
+        - virtual hosts should be hardened; to protect the host, avoid using it for anything other than hosting virtualized elements
+        - virtualized systems should be security tested via vulnerability assessment and penetration testing
+        - virtualization doesn't lessen the security management requirements of an OS, patch management is still required
+        - be aware of VM Sprawl and Shadow IT
+        - **VM escape**: occurs when software within a guest OS is able to breach the isolation protection provided by the hypervisor
+        - VM escape minimizaton:
+            - keep highly sensitive systems and data on separate physical machines
+            - keep all hypervisor software current with vendor-released patches
+            - monitor attack, exposure and abuse indexes for new threats to virtual machines (which might be better protected). Often, virtualization administrators have access to all virtual
 
 
 

@@ -243,17 +243,17 @@ The BCP process has four main steps:
   - **recovery time objectives (RTO)** (how long it takes to recover), 
   - **recovery point objectives (RPO)** (the maximum tolerable data loss), and 
   - **maximum tolerable downtime (MTD)**, along with the costs of downtime and recovery
-- **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that you must protect against interruption. The next phase of BCP development, continuity planning, focuses on developing and implementing a continuity strategy to minimize the impact realized risks might have on protected assets
+- **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that need to be protected against interruption. The next phase of BCP development, continuity planning, focuses on the development and implementation of a continuity strategy to minimize the impact realized risks might have on protected assets
 
-There are two primary subtasks involved in continuity planning:
+  - There are two primary subtasks involved in continuity planning:
 
-  - Strategy development
-  - Provisions and processes
-  - Approval and implementation
+    - Strategy development
+    - Provisions and processes
+  - The goal of this process is to create a **continuity of operations plan** (COOP), which focuses on how an org will carry out critical business functions starting shortly after a disruption occurs and extending up to one month of sustained operations
 
-- **Approval and implementation**
-
-The goal of this process is to create a **continuity of operations plan** (COOP), which focuses on how an organization will carry out critical business functions beginning shortly after a disruption occurs and extending up to one month of sustained operations.
+- **Approval and implementation**:
+  - BCP plan now needs sr. management buy-in (should be endorsed by the org's top exec)
+  - BCP team should create an implementation schedule, and all personnel involed should receive training on the plan
 
 The top priority of BCP and DRP is people. **Always prioritize people's safety.** Get people out of harm's way, and then address IT recovery and restoration issues
 
