@@ -301,11 +301,126 @@ physical devices such as those found in an electrical power plant or factory. SC
             - monitor attack, exposure and abuse indexes for new threats to virtual machines (which might be better protected). Often, virtualization administrators have access to all virtual
 
 
-
 [3.6](#3.6) Select and determine cryptographic solutions
+
+- Cryptographic lifecycle (e.g., keys, algorithm selection)
+    - Keep **Moore’s Law** in mind (processing capabilities of state-of-the-art microprocessors double about every 2 years), and have appropriate governance controls in place to ensure that algorithms, protocols, and key lengths selected are sufficient to preserve the integrity of the cryptosystems for as long as necessary to keep secret information safe
+    - Specify the cryptographic algorithms (such as AES, 3DES, and RSA) acceptable for use in an organization.
+    - Identify the acceptable key lengths for use with each algorithm based on the sensitivity of the information transmitted
+    - Enumerate the secure transaction protocols (such as TLS) that may be used
+    - As computing power goes up, the strength of cryptographic algorithms goes down. Keep in mind the effective life of a certificate or certificate template, and of cryptographic systems 
+    - Beyond brute force, you have other issues to consider, such as the discovery of a bug or an issue with an algorithm or system
+    - NIST defines the following terms that are commonly used to describe algorithms and key lengths: 
+        - approved (a specific algorithm is specified as a NIST recommendation or FIPS recommendation), 
+        - acceptable (algorithm + key length is safe today), 
+        - deprecated (algorithm and key length is OK to use, but brings some risk), 
+        - restricted (use of the algorithm and/or key length is deprecated and should be avoided), 
+        - legacy (the algorithm and/or key length is outdated and should be avoided when possible), and 
+        - disallowed (algorithm and/or key length is no longer allowed for the indicated use)
+
+- Cryptographic methods (e.g., symmetric, asymmetric, elliptic curves, quantum)
+    - **Symmetric** encryption: uses the same key for encryption and decryption
+        - symmetric encryption uses a shared secret key available to all users of the cryptosystem 
+        - symmetric encryption is faster than asymmetric encryption because smaller keys can be used for the same level of protection
+        - downside is that users or systems must find a way to securely share the key and hope the key is used only for the specified communication
+        - primarily employed to perform bulk encryption and provides only for the security service of confidentiality 
+        -"same" is a synonym for symmetric 
+        - "different" is a synonym for asymmetric 
+        - total number of keys required to completely connect n parties using symmetric cryptography is given by this formula: 
+            - **(n(n - 1)) / 2**
+    - **Asymmetric** encryption: uses different keys for encryption and decryption
+        - Asymmetric (AKA public key, since one key of a pair is available to anybody) algorithms provide convenient key exchange mechanisms and are scalable to very large numbers of users (addressing the two most significant challenges for users of symmetric cryptosystems) - Asymmetric cryptosystems avoid the challenge of sharing the same secret key between users, by using pairs of public and private keys to allow secure communication without the overhead of complex key distribution
+        - Besides the public key, there is a private key that should remain private and protected
+        - While asymmetric encryption is slower, it is best suited for sharing between two or more parties 
+        - Most common asymmetric cryptosystems in use today:    
+            - Rivest-Shamir-Adleman (RSA) 
+            - Diffie-Hellman 
+            - ElGamal
+            - Eliptical Curve Cryptography (EEC)
+        
+
+- **Public Key Infrastructure (PKI)**: a foundational technology for applying cryptography
+    - A PKI issues certificates to computing devices and users, enabling them to apply cryptography (for example, to send encrypted email messages, encrypt websites or use IPsec to encrypt data communications)
+    - Many vendors provide PKI services
+    - You can run a PKI privately and solely for your own org, you can acquire certificates from a trusted third-party provider, or you can do both (which is common) 
+    - A PKI is made up of 
+        - **certification authorities (CAs)**: servers that provide one or more PKI functions, such as providing policies or issuing certificates 
+        - certificates: issued to other certification authorities or to devices and users 
+        - policies and procedures: such as how the PKI is secured, and 
+        - templates: a predefined configuration for specific uses, such as a web server template 
+    - There are other components and concepts you should know for the exam:
+        - A PKI can have multiple tiers:    
+            - single tier means you have one or more servers that perform all the functions of a PKI. 
+            - two tiers means you often have an offline root CA (a server that issues certificates to the issuing CAs but remains offline most of the time) in one tier, and issuing CAs (the servers that issue certificates to computing devices and users) in the other tier
+            - servers in the second tier are often referred to as intermediate CAs or subordinate CAs. 
+            - three tier means you can have CAs that are responsible only for issuing policies (and they represent the second tier in a three-tier hierarchy)
+                - in such a scenario, the policy CAs should also remain offline and be brought online only as needed
+        - Generally, the more tiers, the more security (but proper configuration is critical)
+            - the more tiers you have, the more complex and costly the PKI is to build and maintain
+        - A PKI should have a certificate policy and a certificate practice statement (CSP)
+            - a certificate policy documents how your org handles items like requestor identities, the uses of certificates and storage of private keys. 
+            - a CSP documents the security configuration of your PKI and is usually available to the public.
+        - Besides issuing certificates, a PKI has other duties: 
+            - a PKI needs to be able to provide certificate revocation information to clients
+            - if an administrator revokes a certificate that has been issued, clients must be able to get that information from your PKI
+            - storage of private keys and information about issued certificates (can be stored in a database or a directory)
+
+
+- Key management practices
+
+- Digital signatures and digital certificates
+
+- Non-repudiation
+
+- Integrity (e.g., hashing)
 
 [3.7](#3.7) Understand methods of cryptanalytic attacks
 
+- Brute force
+
+- Ciphertext only
+
+- Known plaintext
+
+- Frequency analysis
+
+- Chosen ciphertext
+
+- Implementation attacks
+
+- Side-channel
+
+- Fault injection
+
+- Timing
+
+- Man-in-the-middle (MITM)
+
+- Pass the hash
+
+- Kerberos exploitation
+
+- Ransomware
+
 [3.8](#3.8) Apply security principles to site and facility design
 
+
 [3.9](#3.9) Design site and facility security controls
+
+- Wiring closets/intermediate distribution facilities
+
+- Server rooms/data centers
+
+- Media storage facilities
+
+- Evidence storage
+
+- Restricted and work area security
+
+- Utilities and heating, ventilation, and air conditioning (HVAC)
+
+- Environmental issues
+
+- Fire prevention, detection and suppression
+
+- Power (e.g., redundant, backup)
