@@ -426,5 +426,8 @@ should be contacted.
   - Program effectiveness evaluation 
     - Time and money must be allocated for evaluating the company’s security awareness and training. The company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email link. Is the awareness and training bringing that number clicks down over time? If not, re-evaluation may be needed
 
-Also see my articles on risk and risk management [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1)
-and [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2).
+Also see my articles on risk management: 
+- [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1)  introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
+- Since the primary goal of risk management is to identify potential threats against an organizaton's assets, and bring those risks into alignment with an organization's risk appetite, in [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2), we cover the threat assessment -- a process of examining and evaluating cyber threat sources with potential system vulnerabilities.We look at how a risk assessment helps drive our understanding of risk by pairing assets and their associated potential threats, ranking them by criticality. We also discussed quantitative analytic tools to help provide specific numbers for various potential risks, losses, and costs
+- In the [third installment](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-3), we review the outcome of the risk assessment process, looking at total risk, allowing us to determine our response to each risk/threat pair and perform a cost/benefit review of a particular safeguard or control.
+ We also look at the categories and types of controls and the idea of layering them to provide several different types of protection mechanisms. We also review the important step of reporting out our risk analysis and recommended responses, noting differences in requirements for messaging by group.

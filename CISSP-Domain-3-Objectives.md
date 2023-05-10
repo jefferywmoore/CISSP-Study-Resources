@@ -339,10 +339,9 @@ physical devices such as those found in an electrical power plant or factory. SC
             - Eliptical Curve Cryptography (EEC)
         
 
-- **Public Key Infrastructure (PKI)**: a foundational technology for applying cryptography
+- **Public Key Infrastructure (PKI)**: hierarchy of trust relationships permitting the combination of asymmetric and symmetric cryptography along with hashing and digital certificates (giving us hybrid cryptography) 
     - A PKI issues certificates to computing devices and users, enabling them to apply cryptography (for example, to send encrypted email messages, encrypt websites or use IPsec to encrypt data communications)
-    - Many vendors provide PKI services
-    - You can run a PKI privately and solely for your own org, you can acquire certificates from a trusted third-party provider, or you can do both (which is common) 
+    - Many vendors provide PKI services; you can run a PKI privately and solely for your own org, you can acquire certificates from a trusted third-party provider, or you can do both (which is common) 
     - A PKI is made up of 
         - **certification authorities (CAs)**: servers that provide one or more PKI functions, such as providing policies or issuing certificates 
         - certificates: issued to other certification authorities or to devices and users 
@@ -358,15 +357,38 @@ physical devices such as those found in an electrical power plant or factory. SC
         - Generally, the more tiers, the more security (but proper configuration is critical)
             - the more tiers you have, the more complex and costly the PKI is to build and maintain
         - A PKI should have a certificate policy and a certificate practice statement (CSP)
-            - a certificate policy documents how your org handles items like requestor identities, the uses of certificates and storage of private keys. 
-            - a CSP documents the security configuration of your PKI and is usually available to the public.
+            - certificate policy: documents how your org handles items like requestor identities, the uses of certificates and storage of private keys 
+            - CSP: documents the security configuration of your PKI and is usually available to the public
         - Besides issuing certificates, a PKI has other duties: 
             - a PKI needs to be able to provide certificate revocation information to clients
             - if an administrator revokes a certificate that has been issued, clients must be able to get that information from your PKI
             - storage of private keys and information about issued certificates (can be stored in a database or a directory)
+        - PKI uses LDAP when integrating digital certificates into transmissions 
 
-
-- Key management practices
+- **Key management practices** include safeguards surrounding the creation, distribution, storage, destruction, recovery, and escrow of secret keys
+    - Cryptography can be used as a security mechanism to provide confidentiality, integrity, and availability only if keys are not compromised
+    - Three main methods are used to exchange secret keys: 
+        - offline distribution
+        - public key encryption, and 
+        - the Diffie-Hellman key exchange algorithm
+    - Key management can be difficult with symmetric encryption but is much simpler with asymmetric encryption
+    - There are several tasks related to key management:
+        - Key creation and distribution: **key distribution**: the process of sending a key to a user or system; it must be secure and it must be stored in a secure way on the computing device
+        - Keys are stored before and after distribution; when distributed to a user, it can't hang out on a user's desktop
+        - Keys shouldn't be in cleartext outside the crypography device
+        - Key distribution and maintenance should be automated (and hidden from the user)
+        - Keys should be backed up!
+        - **Key escrow**: process or entity that can recover lost or corrupted cryptographic keys
+            - **multiparty key recovery**: when two or more entities are required to reconstruct or recover a key
+            - **m of n control**: you designate a group of (n) people as recovery agents, but only need subset (m) of them for key recovery
+            - **split custody**: enables two or more people to share access to a key (e.g. for example, two people each hold half the password to the key)
+        - Key rotation: rotate keys (retire old keys, implement new) to reduce the risks of a compromised key having access
+        - Key states:
+            - suspension: temporary hold
+            - revocation: permanently revoked
+            - expiration
+            - destruction
+        - see NIST 800-57, Part 1
 
 - Digital signatures and digital certificates
 
