@@ -431,38 +431,89 @@ physical devices such as those found in an electrical power plant or factory. SC
 - **Known plaintext**:in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes
 
 - **Frequency analysis**:an attack where the characteristics of a language are used to defeat substitution ciphers
-    - for example in English, the letter "E" is the most common, so the most common letter in an encrypted cyphertext could be a substitution for "E"
-    - other examples might include letters that appear twice in sequence, as well as the most common words used in a language 
+    - For example in English, the letter "E" is the most common, so the most common letter in an encrypted cyphertext could be a substitution for "E"
+    - Other examples might include letters that appear twice in sequence, as well as the most common words used in a language 
 
 - **Chosen ciphertext**: in a chosen ciphertext attack, the attacker has access to one or more ciphertexts and their plaintexts; i.e. the attacker has the ability to decrypt chosen portions of the ciphertext message, and use the decrypted portion to discover the key
     - **Differential cryptanalysis**, a type of chosen plaintext attack, is a general form of cryptanalysis applicable primarily to block ciphers, but also to stream ciphers and cryptographic hash functions; in the broadest sense, it is the study of how differences in information input can affect the resultant difference at the output 
     advanced methods such as differential cryptanalysis are types of chosen plaintext attacks;
         - as an example, an attacker may try to get the receiver to decrypt modified ciphertext, looking for that modification to cause a predictable change to the plaintext
 
-- Implementation attacks
+- **Implementation attack**: attempts to exploit weaknesses in the implementation of a cryptography system
+    - Focuses on exploiting the software code, not just errors or flaws but the methodology employed to program the encryption system
+    - In this type of attack, attackers look for weaknesses in the implementation, such as a software bug or outdated firmware
 
-- Side-channel
+- **Side-channel**: these attacks seek to use the way computer systems generate characteristic footprints of activity, such as changes in processor utilization, power consumption, or electromagnetic radiation to monitor system activity and retrieve information that is actively being encrypted
+    - Similar to an implementation attack, side-channel attacks look for weaknesses outside of the core cryptography functions themselves
+    - A side-channel attack could target a computer’s CPU, or attempt to gain key information about the environment during encryption or decryption by looking for electromagnetic emissions or the amount of execution time required during decryption. 
+    - Side-channel characteristics information are often combined together to try to break down the cryptography
+    - Timing attack is an example
 
-- Fault injection
+- **Fault-Injection**: the attacker attempts to compromise the integrity of a cryptographic device by causing some type of external fault 
+    - For example, using high-voltage electricity, high or low temperature, or other factors to cause a malfunction that undermines the security of the device
 
-- Timing
+- **Timing**: timing attacks are an example of a side-channel attack where the attacker measures precisely how long cryptographic operations take to complete, gaining information about the cryptographic process that may be used to undermine its security
 
-- Man-in-the-middle (MITM)
+- **Man-in-the-middle (MITM) (AKA on-path)**: in this attack a malicious individual sits between two communicating parties and intercepts all communications (including the setup of the cryptographic session) 
+    - Attacker responds to the originator's initialization requests and sets up a secure session with the originator 
+    - Attacker then establishes a second secure session with the intended recipient using a different key and posing as the originator 
+    - Attacker can then "sit in the middle" of the communication and read all traffic as it passes between the two parties
 
-- Pass the hash
+- **Pass the hash (PtH)**: a technique where an attacker captures a password hash (as opposed to the password characters) and then simply passes it through for authentication and potentially lateral access to other networked systems 
+    - The threat actor doesn’t need to decrypt the hash to obtain a plain text password
+    - PtH attacks exploit the authentication protocol, as the passwords hash remains static for every session until the password is rotated
+    - Attackers commonly obtain hashes by scraping a system’s active memory and other techniques
 
-- Kerberos exploitation
+- Kerberos exploitation:
+    - **Overpass the Hash**: alternative to the PtH attack, used when NTLM is disabled on the network (AKA pass the key) 
+    - **Pass the Ticket**:in this attack, attackers attempt to harvest tickets held in the lsass.exe process 
+    - **Silver Ticket**: a silver ticket uses the captured NTLM hash of a service account to create a ticket-granting service (TGS) ticket (the silver ticket grants the attacker all the privileges granted to the service account) 
+    - **Golden Ticket**: if an attacker obtains the hash of the Kerberos service account (KRBTGT), they can create tickets at will within Active Directory (this provides so much power it is referred to as having a golden ticket) 
+    - **Kerberos Brute-Force**: attackers use the Python script kerbrute.py on Linux, and Rubeus on Windows systems; tools can guess usernames and passwords 
+    - **ASREPRoast**: ASREPRoast identifies users that don’t have Kerberos preauthentication enabled 
+    - **Kerberoasting**: kerberoasting collects encrypted ticket-granting service (TGS) tickets
 
-- Ransomware
+- **Ransomware**: a type of malware that weaponizes cryptography 
+    - using many of the same techniques as other types of malware, ransomware gens an encryption key, and encrypts critical files 
+    - this encryption renders the data inaccessible to the authorized user or anyone else other than the malware author - often threatning to publically release sensitive data if ransome is not paid - 2020 study, 56% of orgs suffered a ransomeware attack, 27% of orgs who reported an attack chose to pay, on average ~$1.1m 
+    - seek legal advice prior to engaging with ransomware authors
 
 [3.8](#3.8) Apply security principles to site and facility design
+- **Secure facility plan**: outlines the security needs of your organization and emphasizes methods or mechanisms to employ to provide security, developed through risk assessment and critical path analysis
+    - **critical path analysis (CPA)**: a systematic effort to identify relationships between mission-critical applications, processes, and operations and all the necessary supporting components
+    - During CPA, evaluate potential **technology convergence**: the tendency for various technologies, solutions, utilities, and systems to evolve and merge over time, which can result in a single point of failure
+    - A secure facility plan is based on a layered defense model
+    - Site selection should take into account cost, location, and size (but security should always take precedence), that the building can withstand local extreme weather events, vulnerable entry points, and exterior objects that could conceal break-ins
+- Facility Design: 
+    - the top priority of security should always be the protection of the life and safety of personnel
+    - in the US, follow the guidelines and requirements from Occupational Safety and Health Administration (OSHA), and Environmental Protection Agency (EPA)
+    -  **Crime Prevention Through Environmental Design (CPTED)**: a well-established school of thought on "secure architecture"
+        - core principle of CPTED is that the design of the physical environment can be managed/manipulated, and crafted with intention in order to create behavioral effects or changes in people present in those areas that result in reduction of crime as well as a reduction of the fear of crime
+        - CPTED stresses three main principles:
+            - **natural access control**: the subtle guidance of those entering and leaving a building
+                - make the entrance point obvious
+                - create internal security zones
+                - areas of the same access level should be open, but restricted/closed areas should seem more difficult to access
+            - **natural surveillance**: any means to make criminals feel uneasy through increased opportunities to be observed
+                - walkways/stairways are open, open areas around entrances
+                - areas should be well lit
+            - **natural territorial**: reinforcement: attempt to make the area feel like an inclusive, caring community
+    - Overall goal is to deter unauthorized people from gaining access to a location (or a secure portion), prevent unauthorized personnel from hiding inside or around the location, and prevent unauthorized from committing crime
+    - There are several smaller activities tied to site and facility design, such as upkeep and maintenance: if property is run down, unkempt or appears to be in disrepair, it gives attackers the impression that they can act with impunity on the property
 
 
 [3.9](#3.9) Design site and facility security controls
+- Note that alghough the topics in this section cover mostly interior spaces, physical security is applicable to both interior and exterior of a facility
 
-- Wiring closets/intermediate distribution facilities
+- **Wiring closets/intermediate distribution facilities (IDF)**: A wiring closet  or IDF is typically the smallest room that holds IT
+hardware
+    - Wiring closet is AKA premises wire distribution room, main distribution frame (MDF), intermediate distribution frame (IDF), and telecommunications room, and it is referred to as an IDF in (ISC)^2 CISSP objective 3.9.1
+    - Usually includes telephony and network devices, alarm systems, circuit breaker panels, punch-down blocks, WAPs, video/security
+    - May include a small number of servers 
+    - Access to the wiring closest/IDF should be restricted to authorized personnel responsible for managing the IT hardware - Use door access control (i.e. electronic badge system or electronic combination lock) 
+    - From a layout perspective, wiring closets should be accessible only in private areas of the building interiors; people must pass through a visitor center and a controlled doorway prior to be able to enter a wiring closet
 
-- Server rooms/data centers
+- Server rooms/data centers:
 
 - Media storage facilities
 
