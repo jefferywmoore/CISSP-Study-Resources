@@ -513,18 +513,97 @@ hardware
     - Access to the wiring closest/IDF should be restricted to authorized personnel responsible for managing the IT hardware - Use door access control (i.e. electronic badge system or electronic combination lock) 
     - From a layout perspective, wiring closets should be accessible only in private areas of the building interiors; people must pass through a visitor center and a controlled doorway prior to be able to enter a wiring closet
 
-- Server rooms/data centers:
+- **Server rooms/data centers**: server rooms, data centers, communication rooms, server vaults, and IT closets are enclosed, restricted, and protected rooms where mission critical servers and networks are housed
+    - A server room is a bigger version of a wiring closet, much smaller than a data center
+    - A server room typically houses network equipment, backup infrastructure and servers (more archaic versions include telephony equipment)
+    - Server rooms should be designed to support optimal operation of IT infrastructure and to block unauthorirzed human access or intervention
+    - Server rooms should be located at the core of the building (avoid ground floor, top floor, or in the basement)
+    - Server rooms should have a single entrance (and an emergency exit)
+    - Server room should block unauthorized access, and entries and exits should be logged
+    - Datacenters are usually more protected than server rooms, and can include guards and mantraps
+    - Datacenters can be single-tenant or multitenant
 
-- Media storage facilities
+- **Media storage facilities**:often store backup tapes and other media, and should be protected just like a server room
+    - Depending on requirements a cabinet or safe could suffice
+    - New blank media, and media that is reused (e.g. thumb drives, flash memory cards, portable hard drives) should be protected against theft and data remnant recovery
+    - Other recommendations:
+        - employ a media librarian or custodian
+        - use check-in/check-out process for media tracking
+        - run a secure drive sanitization or zeroization when media is returned
+    - Note: a safe is a movable secured container that's not integrated into a building's construction; a vault is a permanent safe integrated into construction
 
-- Evidence storage
+- **Evidence storage**: as cybercrime events continue to increase, it is import to retain logs, audit trails, and other records of digital events; the evidence storage exists to preserve chain of custody
+    - A key part of incident response is to gather evidence to perform root cause analysis
+    - An evidence storage room should be protected like a server room or media storage facility
+    - An evidence storage room can contain physical evidence (such as a smartphone) or digital evidence (such as a database)
 
-- Restricted and work area security
+- **Restricted and work area security**: covers the design and configuration of internal security, including work and visitor areas
+    - Includes areas that contain assets of higher value/importance which should have more restricted access
+    - Restricted work areas are used for sensitive operations, such as network/security ops 
+    - Protection should be similar to a server room, but video surveillance is typically limited to entry and exit points
 
 - Utilities and heating, ventilation, and air conditioning (HVAC)
+    - Power management in ascending order: surge protectors, power/power-line conditioner, uninterruptible power supply (UPS), generators
+    - Types of UPS:
+        - double conversion: functions by taking power from the wall outlet, storing it in a battery, pulling power out of the battery and feeding that power to the device/devices
+        - line-interactive: has a surge protector, battery charger/inverter and voltage regulator positioned between the grid power source and the equipment (battery is not in line under normal conditions)
+    - Commercial power problem types:
+        - **fault**: momentary loss of power
+        - **blackout**: complete loss of power
+        - **sag**: momentary low voltage
+        - **brownout**: prolonged low voltage
+        - **spike**: momentary high voltage
+        - **surge**: prolonged high voltage
+        - **inrush**: initial surge of power associated with connecting to a power source
+    - Think through types of physical controls for HVAC:
+        - restrict duct space continuity to controlled areas
+        - use separate and redundant HVAC systems for computer equipment
+    - Datacenter: 
+        - should be on different power circuits from occupied areas
+        - common to use a backup generator
+
 
 - Environmental issues
+    - Environmental monitoring is the process of measuring and evaluating the quality of the environment within a given structure (e.g. temperature, humidity, dust, smoke), using things like chemical, biological, radiological, and microbiological detectors
+    - Halon starves a fire of oxygen by disrupting the chemical reaction of combustion, but degrades into toxic gases at 900 degrees Fahrenheit, and is not environmentally friendly
+    - If water-based sprinklers are used for fire suppression, damage to electronic equipment is likely; automate the shutoff of electricity prior to sprinkler trigger
+    - Other environmental issues include earthquakes, power outages, tornados and wind
+    - Secondary facilities should be located far enough away from the primary to ensure they won't be damaged by the same event
 
 - Fire prevention, detection and suppression
+    - Protecting personnel from harm should always be the most important goal of any security or protection system!
+    - In addition to protecting people, fire detection and suppression is designed to keep asset damage caused by fire, smoke, heat, and suppression materials to a minimum
+    - **Fire triangle**: three represent fuel, heat, and oxygen; the center of the triangle represents the chemical reaction among these three elements
+        - if you can remove any one of the four items from the fire triangle, the fire can be extinguished
+    - Fire suppression mediums:
+        - water suppresses temperature
+        - soda acid and other dry powders suppress the fuel supply
+        - carbon dioxide (CO2) suppresses the oxygen supply
+        - halon substitutes and other nonflammable gases interfere with the chemistry of combustion and/or suppress the oxygen supply
+    - Fire stages:
+        - **Stage 1**: incipient stage: at this stage, there is only air ionization and no smoke
+        - **Stage 2**: smoke stage: smoke is visible from the point of ignition
+        - **Stage 3**: flame stage: this is when a flame can be seen with the naked eye
+        - **Stage 4**: heat stage: at stage 4, there is an intense heat buildup and everything in the area burns
+    - Fire extinguisher classes:
+        - **Class A**: common combustibles
+        - **Class B**: liquids
+        - **Class C**: electrical
+        - **Class D**: metal
+        - **Class K**: cooking material (oil/grease)
+    - Four main types of suppression:
+        - **wet pipe system**: (AKA closed head system): is always filled with water. water discharges immediately when suppression is triggered
+        - **dry pipe system**: contains compressed inert gas
+        - **preaction system**: a variation of the dry pipe system that uses a two-stage detection and release mechanism
+        - **deluge system**: uses larger pipes and delivers larger volume of water
+    - Note: Most sprinkler heads feature a glass bulb filled with a glycerin-based liquid; this liquid expands when it comes in contact with air heated to between 135 and 165 degrees; when the liquid expands, it shatters its glass confines and the sprinkler head activates
 
 - Power (e.g., redundant, backup)
+    - Consider designing power to provide for high availability
+    - Most power systems have to be tested at regular intervals
+    - As part of the design, mandate redundant power systems to accommodate testing, upgrades and other maintenance 
+    - Additionally, test failover to a redundant power system and ensure it is fully functional
+    - The International Electrical Testing Association (NETA) has developed standards around testing power systems
+    - Battery backup/fail-over power (including UPS/generators):
+        - this is a system that collects power into a battery but can switch over to pulling power from the battery when the power grid fails
+        - generally, this type of system was implemented to supply power to an entire building rather than just one or a few devices
