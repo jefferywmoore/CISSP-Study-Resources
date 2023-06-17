@@ -1,5 +1,5 @@
 ## CISSP Study Resources
-Material and Resources pursing CISSP Certification (Updated March. 2023)
+Material and Resources pursing CISSP Certification (Updated June 2023)
 
 This is my compilation of resources, study materials, notes, and advice I have gathered, working towards certification.
 No compilation is exhaustive, but my goal is to put together information that will be useful and encouraging to others undertaking this effort.
