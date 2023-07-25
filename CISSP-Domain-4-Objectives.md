@@ -12,7 +12,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 | 7     | Application     | Application |Data               | L7 firewall                                | HTTP/s, DNS, DHCP, FTP,S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, RIP, SIP, S/MIME etc. |
 | 6     | Presentation    | Application |Data               | L7 firewall                                | All the above                                                |
 | 5     | Session         | Application| Data               | L7 firewall                                | All the above                                                |
-| 4     | Transport       | Transport (host-to-host) | Segments           | L4 firewall                                | TCP (connection oriented), UDP (connectionless oriented)     |
+| 4     | Transport       | Transport (host-to-host) | Segments           | L4 firewall                                | TCP (connection oriented), UDP (connectionless)     |
 | 3     | Network         | Internet/IP | Packets            | Router, Multiplayer Switch, Router         | IPv4, IPv6, IPSec, OSPF, EIGRP                               |
 | 2     | Data Link       | Network Access | Frames             | Switch, Bridge, NIC, Wireless Access Point | MAC, ARP Ethernet 802.3 (Wired), CDP, LLDP, HDLC, PPP, DSL, L2TP, IEEE 802.11 (Wireless), SONET/SDH |
 | 1     | Physical        | Network Access | Bits               | All the above                              | Electrical signal (copper wire), Light signal (optical fibre), Radio signal (air) |
@@ -84,7 +84,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
     
 - Data Link Layer (2)
     - Responsible for formatting a packet for transmission
-    - adds the source and destination hardware addresses to the frame
+    - Adds the source and destination hardware addresses to the frame
     - Media Access Control (MAC)(hardware-based) address/AKA NIC address
         - MAC address is a 6-byte (48-bit) binary address written in hex
             - first 6b/48-bits: Organizationally Unique Identifier (OUI) - denotes manufacturer
@@ -103,7 +103,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
             - used in token ring and FDDI networks
         - **bus**: all devices are connected to a single cable (backbone) terminated on both ends
     - Know commonly used twisted-pair cable categories
-    - Know Cable types & characteristics
+    - Know cable types & characteristics
 
 
 ### TCP/IP layers
@@ -112,18 +112,18 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - Transport Layer: defines protocols for setting up the level of transmission service for applications; this layer is responsible for the reliable transmission of data and the error-free delivery of packets
 - Application Layer: defines protocols for node-to-node application communication and provides services to the application software running on a computer
 
-Secure protocols
+### Secure protocols
 
-- **Kerberos**: standards-based network authentication protocol, used in many products (most notably Microsoft Active Directory (Active Directory Domain Services or AD DS)     
+- **Kerberos**: standards-based network authentication protocol, used in many products (most notably Microsoft Active Directory Domain Services or AD DS)     
     - Kerberos is mostly used on
 LANs for organization-wide authentication, single sign-on (SSO) and authorization
 
 - SSL and TLS: data protection used for protecting website transactions (e.g. banking, ecommerce)
-    - SSL and TLS both offer data encryption, integrity and authentication. 
-    - TLS has suplanted SSL (the original protocol, considered a legacy/insecure) 
+    - SSL and TLS both offer data encryption, integrity and authentication 
+    - TLS has suplanted SSL (the original protocol, considered legacy/insecure) 
     - TLS was initially introduced in 1999 but didn’t gain widespread use until years later
     - The original versions of TLS (1.0 and 1.1) are considered deprecated and organizations should be relying on TLS 1.2 or TLS 1.3
-- **SFTP**: a version of FTP that includes encryption and is used for transferring files between two devices (often a client / server).
+- **SFTP**: a version of FTP that includes encryption and is used for transferring files between two devices (often a client / server)
 - **SSH**: remote management protocol, which operates over TCP/IP
     - all communications are encrypted
     - primarily used by IT administrators to manage devices such as servers and network devices
@@ -132,24 +132,86 @@ office locations) together
     - widely used in virtual private networks (VPNs)
     - IPSec provides encryption, authentication and data integrity
 
-Micro-Segmentation
-- Software-defined networks:
-- Virtual extensible local area network (VXLAN):
-- Encapsulation:
-- Software-defined wide area network (SD-WAN):
+### Micro-Segmentation
+- **Software-defined networks (SDN)**:
+    - SDN is effectively network virtualization, and separates the infrastructure layer (aka the data or forwarding plane) - hardware and hardware-based settings, from the control layer - network services of data transmission management
+        - NOTE: the **control plane**: uses protocols to decide where to send traffic, and the **data plane**: includes rules that decide whether traffic will be forwarded
+    - typically ABAC-based
+    - an SDN solution provides the option to handle traffic routing using simpler network devices that accept instructions from the SDN controller
+    - SDN offers a network design that is directly programmable from a central location, is flexible, vendor neutral, and based on open standards
+    - Allows org to mix/match hardware
+- **Virtual extensible local area network (VXLAN)**:
+    - an encapsulation protocol that enables VLANs to be stretched across subnets and geographic distances
+    - Typically restricted to layer 2
+    - Allows up to 16 million virtual networks (VLAN liit is 4096)
+    - VXLAN can be used as a means to implement microsegmentation without limiting segments to local entities only
+    - Defined in RFC 7348
 
-Wireless Networks
+- Encapsulation:
+    - the OSI model represents a protocol stack, or a layered collection of multiple protocols, and communication between protocol layers occurs via encapsulation and deencapsulation (defined above)
+
+- **Software-defined wide area network (SD-WAN)**:an evolution of SDN that can be used to manage the connectivity and control services between distant data centers, remote locations, and cloud services over WAN links
+
+### Wireless Networks
 - Li-Fi:
 - Wi-Fi:
-    - Wired Equivalent Privacy (WEP):
+    - **Wired Equivalent Privacy (WEP)**:
+        - WEP is defined by the original IEEE 802.11 standard
+        - WEP uses a predefined shared Rivest Cipher 4 (RC4) secret key for both authenitcation (SKA) and encryption
+        - Shared key is static
+        - WEP is weak from RC4 flaws 
     - Wi-Fi Protected Access II: (WPA2):
+        - IEEE 802.11i or Wi-Fi Protected Access 2 (WPA2) replaced WEP and WPA
+        - Uses AES-CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol
     - Frequency table:
-- Zigbee:
-- Satellite:
+    
+| Amendment | Wi-Fi Alliance | Speed | Frequency |
+|-----|---------------| -------------------|------------|
+| 802.11    |   --   | 2 Mbps |2.4 GHz               |
+| 802.11a   |  Wi-Fi 2    | 54 Mbps |2.4 GHz               |
+| 802.11b   |  Wi-Fi 1    | 11 Mbps |2.4 GHz               |
+| 802.11g   |  Wi-Fi 3    | 54 Mbps |2.4 GHz               |
+| 802.11n   |  Wi-Fi 4    | 200+ Mbps |2.4 GHz               |
+| 802.11ac   | Wi-Fi 5    | 1 Gbps |2.4 GHz               |
+| 802.11ax   | Wi-Fi 6/Wi-Fi 6E     | 9.5 Gbps |2.4 GHz               |
 
-Cellular Networks
+- **Zigbee**: IoT equipment communications concept based on Bluetooth
+    - Low power/low throughput
+    - Requires close proximity
+    - Encrypted using 128-bit symmetric algorithm
+- **Satellite**: primarily uses radio waves between terrestrial locations and an orbiting artificial satellite
+    - Supports telephone, tv, radio, internet, military communications
+    - 3 primary orbits:
+        - LEO: low Earth orbit (160-2k km)
+            - have stronger signals
+            - multiple devices needed to maintain coverage (e.g. Starlink)
+        - MEO: medium Earth orbit (2k-35768 km)
+            - above a terrestrial location longer than LEO
+            - higher orbit, additional delay/weaker signal
+        - GEO: geostationary orbit (35768 km)
+            - maintain a fixed position above a terrestrial location, and ground stations can use fixed antennas
+            - larger transmissino footprint than MEO, but higher latency
 
-Content Distribution Network (CDN)
+### Cellular Networks
+- A cellular network or a wireless network is the primary communications technology used by many mobile devices
+- Cells are primary transceiver (cell site/tower)
+- Generally encrypted between mobile device and transmission tower; plaintext over wire; use encryption like TLS/VPN
+- 4G
+    - 4G allows for mobile devices to achieve 100 Mbps, and stationary devices can reach 1 Gbps
+    - LTE and WiMAX are common transmission systems
+- 5G
+    - 5G uses higher frequencies than previous tech, allowing for higher transmission speeds — up to 10 Gbps, but at reduced distances
+    - Orgs need to enforce secsurity requirements on 5G
+- Security issues with wireless:
+    - provider network (voice or data) is not necessarily secure
+    - your cell phone can be intercepted
+    - provider's towers can be simulated to conduct man-in-the-middle/on-path attack
+    - using cell connectivity to access the internet or your office network creates a potential bridge, provider attackers with another avenue
+
+**Content Distribution Network (CDN)**: a collection of resource services deployed in numerous data centers across the internet in order to provide low latency, high performance, and high availability of the hosted content
+- CDNs provide multimedia performance quality through the concept of distributed data hosts, geographically distributed, closer to groups of customers
+- Provides geographic and logical load balancing; lower-latency and higher-quality throughput
+- Client-based CDN is often referred to as P2P (peer-to-peer)
 
 [4.2](#4.2) Secure network components
 
