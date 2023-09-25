@@ -70,7 +70,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
             - Intermediate System to Intermediate System (IS-IS)
         - interior vs exterior:
             - interior routing protocols ("myopic") make next hop decisions based only on info related to the next immediate hop
-            - exterior routing protocols ("far-sighted")make hop decisions based on the entire remaining path (i.e.) vector
+            - exterior routing protocols ("far-sighted") make hop decisions based on the entire remaining path (i.e.) vector
             - **Border Gateway Protocol (BGP)**: an exterior/path vector protocol
     - Routed protocols include Internetwork Package Exchange (IPX) and Internet Protocol (IP)
      - IP is part of the TCP/IP (Transmission Control Protocol/Internet Protocol) suite
@@ -85,7 +85,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - Data Link Layer (2)
     - Responsible for formatting a packet for transmission
     - Adds the source and destination hardware addresses to the frame
-    - Media Access Control (MAC)(hardware-based) address/AKA NIC address
+    - Media Access Control (MAC) - (hardware-based) address/AKA NIC address
         - MAC address is a 6-byte (48-bit) binary address written in hex
             - first 6b/48-bits: Organizationally Unique Identifier (OUI) - denotes manufacturer
             - last 3b/24-bits: unique to that interface
@@ -143,26 +143,26 @@ office locations) together
 - **Virtual extensible local area network (VXLAN)**:
     - an encapsulation protocol that enables VLANs to be stretched across subnets and geographic distances
     - Typically restricted to layer 2
-    - Allows up to 16 million virtual networks (VLAN liit is 4096)
+    - Allows up to 16 million virtual networks (VLAN limit is 4096)
     - VXLAN can be used as a means to implement microsegmentation without limiting segments to local entities only
     - Defined in RFC 7348
 
 - Encapsulation:
     - the OSI model represents a protocol stack, or a layered collection of multiple protocols, and communication between protocol layers occurs via encapsulation and deencapsulation (defined above)
 
-- **Software-defined wide area network (SD-WAN)**:an evolution of SDN that can be used to manage the connectivity and control services between distant data centers, remote locations, and cloud services over WAN links
+- **Software-defined wide area network (SD-WAN)**: an evolution of SDN that can be used to manage the connectivity and control services between distant data centers, remote locations, and cloud services over WAN links
 
 ### Wireless Networks
-- Li-Fi:
+- Li-Fi: **light fidelity (Li-Fi)**: a form of wireless communication technology that relies on light to transmit data, with theorectical speeds up to 224Gbits/sec
 - Wi-Fi:
     - **Wired Equivalent Privacy (WEP)**:
         - WEP is defined by the original IEEE 802.11 standard
         - WEP uses a predefined shared Rivest Cipher 4 (RC4) secret key for both authenitcation (SKA) and encryption
         - Shared key is static
         - WEP is weak from RC4 flaws 
-    - Wi-Fi Protected Access II: (WPA2):
-        - IEEE 802.11i or Wi-Fi Protected Access 2 (WPA2) replaced WEP and WPA
-        - Uses AES-CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol
+    - Wi-Fi Protected Access II (WPA2):
+        - IEEE 802.11i WPA2 replaced WEP and WPA
+        - Uses AES-CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol)
     - Frequency table:
     
 | Amendment | Wi-Fi Alliance | Speed | Frequency |
@@ -190,7 +190,7 @@ office locations) together
             - higher orbit, additional delay/weaker signal
         - GEO: geostationary orbit (35768 km)
             - maintain a fixed position above a terrestrial location, and ground stations can use fixed antennas
-            - larger transmissino footprint than MEO, but higher latency
+            - larger transmission footprint than MEO, but higher latency
 
 ### Cellular Networks
 - A cellular network or a wireless network is the primary communications technology used by many mobile devices
@@ -201,7 +201,7 @@ office locations) together
     - LTE and WiMAX are common transmission systems
 - 5G
     - 5G uses higher frequencies than previous tech, allowing for higher transmission speeds — up to 10 Gbps, but at reduced distances
-    - Orgs need to enforce secsurity requirements on 5G
+    - Orgs need to enforce security requirements on 5G
 - Security issues with wireless:
     - provider network (voice or data) is not necessarily secure
     - your cell phone can be intercepted
@@ -215,4 +215,98 @@ office locations) together
 
 [4.2](#4.2) Secure network components
 
+The components of a network make up the backbone of the logical infrastructure for an organization. These components
+are often critical to day-to-day operations, and an outage or security issue can be very costly
+
+Here are issues to pay attention to:
+- Operation of hardware (e.g. redundant power, warranty, support)
+    - Modems are a type of Channel Service Unit/Data Service Unit (CSU/DSU) typically used for converting analog signals into digital; the CSU handles communication to the provider network, the DSU handles communication with the internal digital equipment (in most cases, a router)
+        - Modems typically operate at Layer 2 
+        - Routers operate at Layer 3, and make the connection from a modem available to multiple devices in a network, including switches, access points and endpoint devices 
+        - Switches are typically connected to a router to enable multiple devices to use the connection
+        - Switches help provide internal connectivity, as well as create separate broadcast domains when configured with VLANs 
+        - Switches typically operate at Layer 2 of the OSI model, but many switches can operate at both Layer 2 and Layer 3
+        - Access points can be configured in the network topology to provide wireless access using one of the protocols and encryption algorithms
+    - Redundant power: most home equipment use a single power supply, if that supply fails, the device loses power
+        - redundant power is typically used with components such as servers, routers, and firewalls
+        - redundant power is usually paired with other types of redundancies to provide high availability
+- Transmission Media: come in many forms, not just cables
+    - Includes wireless, LiFi, Bluetooth, Zigbee, satellites
+    - Most common cause of network failure (i.e. violations of availability) are cable failures or misconfigurations
+    - Wired transmission media can typically be described in three categories: coaxial, Ethernet
+    - Coaxial is typically used with cable modem installations to provide connectivity to an ISP, and requires a modem to convert the analog signals to digital
+        - fairly resistent to EMI
+        - longer lengths than twisted pair
+        - requires segment terminators
+        - two main types:
+            - **thinnet (10Base2)**: used to connect systems to backbond trunks of thicknet cabling (185m, 10Mbps)
+            - **thicknet (10Base5)**: can span 500 meters and provide up to 10Mbps
+    - Ethernet can be used to describe many mediums, it is typically associated with Category 5/6 unshielded twisted-pair (UTP) or shielded twisted pair (STP), and can be plenum-rated
+    - Fiber typically comes in two options: single-mode or multi-mode
+        - Single-mode is typically used for long-distance communication, over several kilometers or miles
+        - Multi-mode fiber is typically used for faster transmission, but with a distance limit depending on the desired speed
+        - Fiber is most often used in the datacenter for backend components
+
+    | Category | Throughput | Notes |
+    |----------|------------|--------|
+    | Cat 1    |   1 Mbps   |        |
+    | Cat 2    |   4 Mbps   |        |
+    | Cat 3    |   10 Mbps  |        |
+    | Cat 4    |   16 Mbps  |        |
+    | Cat 5    |   100 Mbps |        |
+    | Cat 5e   |   1 Gbps   |        |
+    | Cat 6    |   1 Gbps   |        |
+    | Cat 6a   |   10 Gbps  |        |
+    | Cat 7    |   10 Gbps  |        |
+    | Cat 8    |   40 Gbps  |        |
+
+
+- Network Access Control (NAC) devices
+    - NAC is the concept of controlling access to an environment through strict adherence to and enforcement of security policy
+    - NAC is meant to be an automated detection and response system that can react in real time to ensure that all monitored systems are patched/updated and have current security configurations, as well as keep unauthorized devices out of the network
+    - NAC goals:
+        - prevent/reduce known attacks directly and zero-day indirectly
+        - enforce security policy throughout the network
+        - use identities to perform access control
+    - NAC can be implemented with a preadmission or postadmission philosophy:
+        - **preadmission philosohpy**: requires a system to meet all current security requirements (such as patch application and malware scanner updates) before it is allowed to communicate with the network
+        - **postadmission philosophy**: allows and denies access based on user activity, which is based on a predefined authorization matrix
+    - Agent-based NAC:
+        - Installed on each management system, checks config files regularly, and can quarantine for non-compliance
+        - Dissolvable:usually written in a web/mobile language and is executed on each local machine when the specific management web page is accessed (such as captive portal);
+        - Permanent: installed on the monitored system as a persistent background service
+    - Just as you need to control physical access to equipment and wiring, you need to use logical controls to protect a network; there are a variety of devices that provide this type of protection, including:
+        - Stateful and stateless firewalls can perform inspection of the network packets and use rules, signatures and patterns to determine whether the packet should be delivered
+            - reasons for dropping a packet could include addresses that don’t exist on the network, ports or addresses that are blocked, or the content of the packet (e.g malicious packets blocked by administrative policy)
+        - Intrusion detection and prevention devices which monitor the network for unusual network traffic and MAC or IP address spoofing, and then either alert on or actively stop this type of traffic
+        - Proxy/reverse proxies: 
+            - proxy servers can be used to proxy internet-bound traffic,instead of letting clients talk directly
+            - reverse proxies are often deployed to a perimeter network; they proxy communication from the internet to an internal host, such as a web server
+            - like a firewall, a reverse proxy can use rules and policies to block certain types of communication
+- Endpoint security: each individual device must maintain local security
+    - Any weakness in a network, whether border, server, or client-based presents a risk to all elements of the organization
+    - Client/Server model is a distributed architecture, which means that security must be addressed everywhere instead of at a single centralized host
+    - Processing, storage on clients and servers, network links, communication equipment all must be secured
+    - Clients must be subjected to policies that impose safeguards on their content and users’ activities including:
+        - email
+        - upload/download policies and screening
+        - subject to robust access controls (e.g. MFA)
+        - file encryption
+        - screen savers
+        - isolated processes for user/supervisor modes
+        - local files should be backed up
+        - protection domains/network segments
+        - security awareness training
+        - desktop env should be included in org DR
+        - EDR/MDR should be considered
+
+
+
 [4.3](#4.3) Implement secure communication channels according to design
+- Voice
+- Multimedia collaboration
+- Remote access
+- Data communications
+- Virtualized networks
+- Third-party connectivity
+
