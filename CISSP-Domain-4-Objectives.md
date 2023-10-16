@@ -157,7 +157,7 @@ office locations) together
 - Wi-Fi:
     - **Wired Equivalent Privacy (WEP)**:
         - WEP is defined by the original IEEE 802.11 standard
-        - WEP uses a predefined shared Rivest Cipher 4 (RC4) secret key for both authenitcation (SKA) and encryption
+        - WEP uses a predefined shared Rivest Cipher 4 (RC4) secret key for both authentication (SKA) and encryption
         - Shared key is static
         - WEP is weak from RC4 flaws 
     - Wi-Fi Protected Access II (WPA2):
@@ -233,7 +233,7 @@ Here are issues to pay attention to:
 - Transmission Media: come in many forms, not just cables
     - Includes wireless, LiFi, Bluetooth, Zigbee, satellites
     - Most common cause of network failure (i.e. violations of availability) are cable failures or misconfigurations
-    - Wired transmission media can typically be described in three categories: coaxial, Ethernet
+    - Wired transmission media can typically be described in three categories: coaxial, Ethernet, fiber
     - Coaxial is typically used with cable modem installations to provide connectivity to an ISP, and requires a modem to convert the analog signals to digital
         - fairly resistent to EMI
         - longer lengths than twisted pair
@@ -300,13 +300,53 @@ Here are issues to pay attention to:
         - desktop env should be included in org DR
         - EDR/MDR should be considered
 
-
-
 [4.3](#4.3) Implement secure communication channels according to design
+- Protocols that provide security services for application-specific communication channels are called secure communication protocols
 - Voice
+    - as more organizations switch to VoIP, protocols like SIP become more common, and introducing additional management, either via dedicated voice VLANs, or by establishing quality of service (QoS) levels to ensure voice traffic priority
+    - web-based voice apps can be more difficult to manage, causing additional unplanned bandwidth consumption
+
 - Multimedia collaboration
+    - there are a variety of new technologies that allow instant organizational collaboration, including smartboards, and products that enhance on-site, hybrid, or virutal meetings
+    - mobile communication apps are a huge market, and will continue to grow, increasing the complexity of mobile security
 - Remote access
+    - 4 main types of remote access:
+        - **service specific**: gives users the ability to remotely connect to and manipulate or interact with a single service (e.g. email)
+        - **remote-control**: grants a remote user the ability to fully control another system that is physically distant
+        - **remote node operation**: AKA remote client connecting directly to a LAN
+        - **screen scraping**: refers to 1) remote control, remote access, or remote desktop services or 2) technology that allows an automated tool to interact with a human interface
+    - VPN: virtual private network is a traditional remote access technology
+    - WAP (local env treats as remote access)
+    - VDI(virtual desktop infrastructure) / VMI (virtual mobile interface)
+    - jumpbox: a jump server/jumpbox is a remote access system deployed to make accessing a specific system or network easier or more secure
+        - often deployed in extranets, screened subnets, or cloud networks where a standard direct link or private channel is not available
+    - RDS (Remote Desktop Service) such as RD, Teamviewer, VNC etc can provide in-office experience while remote
+    - using cloud-based desktop solutions such as Amazon Workspaces, Amazon AppStream, V2 Cloud, and Microsoft Azure
+    - security must be considered to provide protection for your private network against remote access complications:
+        - stringent auth before granting access
+        - grant permission only for specific need
+        - remote comm protected via encryption
+    - create a remote access security policy, addressing:
+        - remote connectivity technology
+        - transmission protectio
+        - authentication protection
+        - remote user assistance
 - Data communications
+    - whether workers are physically in an office or working remotely, communication between devices should be encrypted to prevent any unauthorized device or person from openly reading the contents of packets as they are sent across a network
+    - corporate networks can be segmented into multiple VLANs to separate different types of resources
+    - communications should be encrypted using TLS or IPSec
 - Virtualized networks
+    - allow adopting of things like software-defined networks, VLANs, virtual switches, virtual SANs, guest operating systems, port isolation etc
+    - many organizations are moving to the cloud, and not continuing to build out local or on-site server infrastructure
+    - however, organizations still use hypervisors to virtualize servers and desktops for increased density and reliability
+        - to host multiple servers on a single hypervisor, the Ethernet and storage networks must also be virtualized 
+        - VMware vSphere and Microsoft Hyper-V both use virtual network and storage switches to allow communication between virtual machines and the physical network; guest operating systems running in the VMs use a synthetic network or storage adapter, which is relayed to the physical adapter on the host
+        - software-defined networking on the hypervisor can control the VLANs, port isolation, bandwidth and other aspects just as if it was a physical port
 - Third-party connectivity
+    - any time an org’s network is connected directly to another entity’s network, their local threats and risks affect each other
+        - **memorandum of understanding (MOU)** (MOU = letter of intent) or **memorandum of agreement (MOA)**: an expression of agreement or aligned intent, will, or purpose between two entities
+        - **interconnection security agreement (ISA)**: a formal declaration of the security stance, risk, and technical requirements of a link between two organizations’ IT infrastructures
+    - remote workers are another form of third-party connectivity
+    - vendors (like IT auditing firms) may need to connect to your network, and attackers are routinely looking for creative ways to gain organizational access -- third-party connectivity is one option
+    - as organizations evaluate third-party connectivity, they need to look carefully at the principle of least privilege and at methods of monitoring use and misuse
 
