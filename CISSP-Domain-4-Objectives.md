@@ -9,7 +9,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 
 | Layer | OSI model layer | TCP/IP model | PDU | Devices | Protocols | 
 |-----|---------------| -------------------|------------| ----------------|-----------|
-| 7     | Application     | Application |Data               | L7 firewall                                | HTTP/s, DNS, DHCP, FTP,S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, RIP, SIP, S/MIME etc. |
+| 7     | Application     | Application |Data               | L7 firewall                                | HTTP/s, DNS, DHCP, FTP, S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, RIP, SIP, S/MIME etc. |
 | 6     | Presentation    | Application |Data               | L7 firewall                                | All the above                                                |
 | 5     | Session         | Application| Data               | L7 firewall                                | All the above                                                |
 | 4     | Transport       | Transport (host-to-host) | Segments           | L4 firewall                                | TCP (connection oriented), UDP (connectionless)     |
@@ -273,14 +273,14 @@ Here are issues to pay attention to:
         - **postadmission philosophy**: allows and denies access based on user activity, which is based on a predefined authorization matrix
     - Agent-based NAC:
         - Installed on each management system, checks config files regularly, and can quarantine for non-compliance
-        - Dissolvable:usually written in a web/mobile language and is executed on each local machine when the specific management web page is accessed (such as captive portal);
+        - Dissolvable: usually written in a web/mobile language and is executed on each local machine when the specific management web page is accessed (such as captive portal);
         - Permanent: installed on the monitored system as a persistent background service
     - Just as you need to control physical access to equipment and wiring, you need to use logical controls to protect a network; there are a variety of devices that provide this type of protection, including:
         - Stateful and stateless firewalls can perform inspection of the network packets and use rules, signatures and patterns to determine whether the packet should be delivered
             - reasons for dropping a packet could include addresses that don’t exist on the network, ports or addresses that are blocked, or the content of the packet (e.g malicious packets blocked by administrative policy)
         - Intrusion detection and prevention devices which monitor the network for unusual network traffic and MAC or IP address spoofing, and then either alert on or actively stop this type of traffic
         - Proxy/reverse proxies: 
-            - proxy servers can be used to proxy internet-bound traffic,instead of letting clients talk directly
+            - proxy servers can be used to proxy internet-bound traffic, instead of letting clients talk directly
             - reverse proxies are often deployed to a perimeter network; they proxy communication from the internet to an internal host, such as a web server
             - like a firewall, a reverse proxy can use rules and policies to block certain types of communication
 - Endpoint security: each individual device must maintain local security

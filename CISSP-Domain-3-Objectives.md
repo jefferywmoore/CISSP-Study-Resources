@@ -4,7 +4,7 @@ You may find this domain to be more technical than others, and if you have exper
 
 [3.1](#3.1) Research, implement, and manage engineering processes using secure design principles
 
-- **Threat modeling**: a security process where potential threats are identified, categorized, and analyzed. It can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed
+- **Threat modeling**: a security process where potential threats are identified, categorized, and analyzed. It can be performed as a proactive measure during design and development or as a reactive measure once a product has been deployed
     - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat
 - **Least privilege**: states that subjects are granted only the privileges necessary to perform assigned work tasks and no more; this concept extends to data and systems
     - Limiting and controlling privileges based on this concept protects confidentiality and data integrity
@@ -15,7 +15,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Separation of duties (SoD)**: separation of duties (SoD) and responsibilities ensures that no single person has total control over a critical function or system;  SoD is a process to minimize opportunities for misuse of data or environment damage. 
     - e.g. one person sells tickets, another collects tickets and restricts access to ticket holders in a movie theater
 - **Keep it simple**: AKA keep it simple, stupid (KISS), this concept is the encouragement to avoid overcomplicating the environment, organization, or product design
-- **Zero Trust**: "assume breach"; a security concept and alternative the traditional (castle/moat) approach where nothing is automatically trusted. Instead each request for activity or access is assumed to be from an unknown and untrusted location until otherwise verified; 
+- **Zero Trust**: "assume breach"; a security concept and alternative to the traditional (castle/moat) approach where nothing is automatically trusted. Instead each request for activity or access is assumed to be from an unknown and untrusted location until otherwise verified; 
     - Goal is to have every access request authenticated, authorized, and encrypted prior to access being granted to an asset or resource
     - See my article on an [Overview of Zero Trust Basics](https://blog.balancedsec.com/p/an-overview-of-zero-trust-basics)
 - **Privacy by design (PbD)**: a guideline to integrate privacy protections into products during the earliest design phase rather than tacking it on at the end of development; 
@@ -46,24 +46,27 @@ Security models:
 - Enable people to access only the data classified for their clearance level
 - **Bell-LaPadula**: Model was established in 1973. The goal is to ensure that information is exposed only to those with the right level of classification
     - Focuse is on confidentiality 
-    - Simple property: No read-up 
-    - Star (*) property: No write-down (AKA confinement property)
+    - Simple property (No read-up): A subject (user/process) with a certain security clearance (level) can read data at the same or lower security level.
+    - Star (*) property (No write-down): A subject with a certain security clearance can write (modify) data only at the same or higher security level. Information cannot flow downward, from higher to lower security levels. (AKA confinement property)
     - Discretionary Security Property: uses an access matrix (need to know in order to access)
     - Doesn't address covert channels
 - **Biba**: Released in 1977, this model was created to supplement Bell-LaPadula 
     - Focus is on integrity 
-    - “No read down” (for example, users with a Top Secret clearance can’t read data classified as Secret)
-    - “No write up” (for example, a user with a Secret clearance can’t write data to files classified as Top Secret)
+    - No read down: A subject at a higher integrity level (e.g., I-H) cannot read data from an object at a lower integrity level (e.g., I-L) to prevent high-integrity subjects from being influenced by potentially compromised or low-integrity data.
+    - No write up: A subject at a lower integrity level (e.g., I-L) cannot write to an object at a higher integrity level (e.g., I-H) to prevent the contamination of high-integrity data by low-integrity sources.
     - By combining it with Bell-LaPadula, you get both confidentiality and integrity
 - **Take-Grant**: 
     - The take-grant model employs a directed graph to dictate how rights can be passed from one subject to another, or from a subject to an object
     - Four rules: 
-        - take 
-        - grant 
+        - take: one entity takes a token from another entity. If entity A takes a token from entity B, A gains the access rights represented by that token, and B loses those rights. 
+        - grant: one entity gives a token to another entity. If entity A grants a token to entity B, B gains the access rights represented by the token, and A loses those rights.
         - create 
         - remove
-- **Clark-Wilson**:
+- **Clark-Wilson**: focuses on maintaining data integrity through well-formed transactions, separation of duties, the use of Access Control Triples, certification processes, and user-defined transactions, making it a robust framework for information security.
     - Designed to protect integrity using the access control triplet
+        - Constrained Data Items (CDIs): These are the data items that need to be protected.
+        - Transformation Procedures (TPs): These are the methods or rules used to transform CDIs.
+        - Integrity Verification Procedures (IVPs): These procedures ensure that the transformation has been done correctly and the data maintains its integrity.
     - A program interface is used to limit what is done by a subject; if the focus of an intermediary program between subject and object is to protect integrity, then it is an implementation of the Clark-Wilson model
 - **Brewer and Nash Model**:
     - AKA "ethical wall", and "cone of silence"
@@ -106,7 +109,7 @@ Be familiar with the **Common Criteria (CC)** for Information Technology Securit
         - EAL5: semi-formally designed and tested
         - EAL6: semi-formally verified, designed, and tested
         - EAL7: formally verified, designed, and tested
-- **Authorization to Operate (ATO)**: official auth to use specific IT systems to perform tasks/accept identified risks
+- **Authorization to Operate (ATO)**: official auth to use specific IT systems to perform tasks or accept identified risks
 
 [3.4](#3.4) Understand security capabilities of Information Systems (IS) (e.g. memory protection, Trusted Platform Model (TPM), encryption/decryption)
 
@@ -128,7 +131,7 @@ with a client computer or server. A TPM enhances the capabilities of a computer 
 User interface: a constrained UI can be used in an application to restrict what users can do or see based on their privileges
 - e.g. dimming/graying out capabilities for users without the correct privilege
 
-An interface is also the method by which two or more systems communicate
+An interface is also the method by which two or more systems communicate  
 Be aware of the common security capabilities of interfaces:
 - Encryption/decryption: when communications are encrypted, a client and server can communicate without exposing information to the network; when an interface doesn’t provide such a capability, use IPsec or another encrypted transport mechanism
 - Signing: used for non-repudiation; in a high-security environment, both encrypt and sign all communications if possible
@@ -136,7 +139,7 @@ Be aware of the common security capabilities of interfaces:
 **Fault tolerance**: capability used to enhance availability. In the event of an attack (e.g. DoS), or system failure, fault tolerance helps keep a system up and running
 
 
-[3.5](#3.5) Assess and mitigate the vulnerabilities of security architectures, designs and solution elements
+[3.5](#3.5) Assess and mitigate the vulnerabilities of security architectures, designs, and solution elements
 
 This objective relates to identifying vulnerabilities and corresponding mitigating contols and solutions. The key is understanding the types of vulnerabilities commonly present in different environments, and their mitigation options
 
@@ -159,7 +162,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - **Kerckhoff's Principle** (AKA Kerckhoff's assumption): a cryptographic system should be secure even if everything about the system, except the key, is public knowledge
     - Software: used to encrypt/decrypt data; can be a standalone app, command-line, built into the OS or called via API. Like any software, there are likely bugs/issues, so regular patching is important
     - Keys: dictate how encryption is applied through an algorithm. A key should remain secret, otherwise the security of the encrypted data is at risk  
-        - **Key space**:represents all possible permutations of a key
+        - **Key space**: represents all possible permutations of a key
         - Key space best practices: 
             - key length is an important consideration; use as long of a key as possible (your goal is to outpace projected increase in cryptanalytic capability during the time the data must be kept safe); longer keys discourage brute-force attacks
                 - a 256-bit key is typically minimum recommendation for symmetric encryption
@@ -170,10 +173,10 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     Always base key length on your requirements and sensitivity of the data being handled
     - Algorithms: choose algorithms (or ciphers) with a large key space and a large random **key value** (key value is used by an algorithm for the encryption process) 
         - Algorithms themselves are not secret, but instead well-known with extensive public details about history and how they function
+        - Do not use algorithms or implementations with known vulnerabilities or that have been depricated (DES, RC4, etc).
 
 - **Industrial control systems (ICS)**: ICS is a form of computer-management device that controls industrial processes and machines, also known as operational technology (OT)
-    - **Supervisory control and data acquisition (SCADA)**: systems used to control
-physical devices such as those found in an electrical power plant or factory. SCADA systems are well suited for distributed environments, such as those spanning continents 
+    - **Supervisory control and data acquisition (SCADA)**: systems used to control physical devices such as those found in an electrical power plants or factories. SCADA systems are well suited for distributed environments, such as those spanning continents 
     - Some SCADA systems still rely on legacy or proprietary communications, which put them at risk, especially as attackers gain knowledge of such systems and their vulnerabilities
     - SCADA risk mitigations:
         - isolate networks 
@@ -232,11 +235,11 @@ physical devices such as those found in an electrical power plant or factory. SC
         - Review IoT vendor to understand their history with reported vulnerabilities, response time to vulnerabilities and their overall approach to security
         - Not all IoT devices are suitable for enterprise networks
 
-- **Microservices**: a feature of web-based solutions and derivative of SOA 
+- **Microservices**: a feature of web-based solutions and derivative of Service-Oriented Architecture (SOA)
     - A microservice is simply one element, feature, capability, business logic, or function of a web application that can be called upon or used by other web applications
     - Microservices are usually small and focused on a single operation, designed with few dependencies, and are based on fast short-term development cycles (similar to Agile)
     - Securing microservices: 
-        - using HTTPS only 
+        - using encrypted inter-service communication only (HTTPS, gRPC w/TLS, etc.)
         - encrypt everything possible and use routine scanning
         - closely aligned with microservices is the concept of shifting left, or addressing security earlier in the SDLC; also integrating it into the CI/CD pipeline 
         - consider the software supplychain or dependencies of libries used, when addressing updates and patching
@@ -252,9 +255,9 @@ physical devices such as those found in an electrical power plant or factory. SC
         - reduce the attack surface by minimizing the number of components in each container, and update and scan them frequently 
 
 
-- **Serverless architecture** (AKA **function as a service (FaaS)**): a cloud computing concept where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the CSP
+- **Serverless architecture** (AKA **function as a service (FaaS)**): a cloud computing concept where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the Cloud Service Provider (CSP)
     - Applications developed on serverless architecture are similar to microservices, and each function is created to operate independently and automonomously
-    - A serverless model, as in other CSP models, is a shared security model,and your organization and the CSP share security responsibility
+    - A serverless model, as in other CSP models, is a shared security model, and your organization and the CSP share security responsibility
 
 - **Embedded systems**: any form of computing component added to an existing mechanical or electrical system for the purpose of providing automation, remote control, and/or monitoring; usually including a limited set of specific functions
     - Embedded systems can be a security risk because they are generally static, with admins having no way to update or address security vulnerabilities (or vendors are slow to patch)
@@ -278,7 +281,7 @@ physical devices such as those found in an electrical power plant or factory. SC
     - Securing edge computing:
         - this technology creates additional network edges that result in increased levels of complexity
         - visibility, control, and correlation requires a Zero Trust access-based approach to address security on the LAN edge, WAN edge and cloud edge, as well as network management
-        - edge-based computing devices,especially IoT devices, are often produced with limited security forethought
+        - edge-based computing devices, especially IoT devices, are often produced with limited security forethought
         - devices on your network, no matter where they reside, need to be configured, managed, and patched using a consistent policy and enforcement strategy
         - use intelligence from side-channel signals that can pick up hardware trojans and malicious firmware
         - attend to physical security 
@@ -298,7 +301,7 @@ physical devices such as those found in an electrical power plant or factory. SC
         - VM escape minimizaton:
             - keep highly sensitive systems and data on separate physical machines
             - keep all hypervisor software current with vendor-released patches
-            - monitor attack, exposure and abuse indexes for new threats to virtual machines (which might be better protected). Often, virtualization administrators have access to all virtual
+            - monitor attack, exposure and abuse indexes for new threats to virtual machines (which might be better protected). Often, virtualization administrators have access to all virtual machines.
 
 
 [3.6](#3.6) Select and determine cryptographic solutions
@@ -424,13 +427,13 @@ physical devices such as those found in an electrical power plant or factory. SC
 - **Brute force**: an attack that attempts every possible valid combination for a key or password
     - They involve using massive amounts of processing power to methodically guess the key used to secure cryptographic communications
 
-- **Ciphertext only**:an attack where you only have the encrypted ciphertext message at your disposal (not the plaintext)
+- **Ciphertext only**: an attack where you only have the encrypted ciphertext message at your disposal (not the plaintext)
     - If you have enough ciphertext samples, the idea is that you can decrypt the target ciphertext based on the ciphertext samples
     - One technique proves helpful against simple ciphers is frequency analysis (counting the number of times each letter appears in the ciphertext)
 
-- **Known plaintext**:in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes
+- **Known plaintext**: in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes
 
-- **Frequency analysis**:an attack where the characteristics of a language are used to defeat substitution ciphers
+- **Frequency analysis**: an attack where the characteristics of a language are used to defeat substitution ciphers
     - For example in English, the letter "E" is the most common, so the most common letter in an encrypted cyphertext could be a substitution for "E"
     - Other examples might include letters that appear twice in sequence, as well as the most common words used in a language 
 
@@ -466,7 +469,7 @@ physical devices such as those found in an electrical power plant or factory. SC
 
 - Kerberos exploitation:
     - **Overpass the Hash**: alternative to the PtH attack, used when NTLM is disabled on the network (AKA pass the key) 
-    - **Pass the Ticket**:in this attack, attackers attempt to harvest tickets held in the lsass.exe process 
+    - **Pass the Ticket**: in this attack, attackers attempt to harvest tickets held in the lsass.exe process 
     - **Silver Ticket**: a silver ticket uses the captured NTLM hash of a service account to create a ticket-granting service (TGS) ticket (the silver ticket grants the attacker all the privileges granted to the service account) 
     - **Golden Ticket**: if an attacker obtains the hash of the Kerberos service account (KRBTGT), they can create tickets at will within Active Directory (this provides so much power it is referred to as having a golden ticket) 
     - **Kerberos Brute-Force**: attackers use the Python script kerbrute.py on Linux, and Rubeus on Windows systems; tools can guess usernames and passwords 
@@ -510,7 +513,7 @@ hardware
     - Wiring closet is AKA premises wire distribution room, main distribution frame (MDF), intermediate distribution frame (IDF), and telecommunications room, and it is referred to as an IDF in (ISC)^2 CISSP objective 3.9.1
     - Usually includes telephony and network devices, alarm systems, circuit breaker panels, punch-down blocks, WAPs, video/security
     - May include a small number of servers 
-    - Access to the wiring closest/IDF should be restricted to authorized personnel responsible for managing the IT hardware - Use door access control (i.e. electronic badge system or electronic combination lock) 
+    - Access to the wiring closets/IDF should be restricted to authorized personnel responsible for managing the IT hardware - Use door access control (i.e. electronic badge system or electronic combination lock) 
     - From a layout perspective, wiring closets should be accessible only in private areas of the building interiors; people must pass through a visitor center and a controlled doorway prior to be able to enter a wiring closet
 
 - **Server rooms/data centers**: server rooms, data centers, communication rooms, server vaults, and IT closets are enclosed, restricted, and protected rooms where mission critical servers and networks are housed
@@ -523,7 +526,7 @@ hardware
     - Datacenters are usually more protected than server rooms, and can include guards and mantraps
     - Datacenters can be single-tenant or multitenant
 
-- **Media storage facilities**:often store backup tapes and other media, and should be protected just like a server room
+- **Media storage facilities**: often store backup tapes and other media, and should be protected just like a server room
     - Depending on requirements a cabinet or safe could suffice
     - New blank media, and media that is reused (e.g. thumb drives, flash memory cards, portable hard drives) should be protected against theft and data remnant recovery
     - Other recommendations:
