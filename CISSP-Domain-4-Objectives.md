@@ -298,7 +298,7 @@ Here are issues to pay attention to:
         - protection domains/network segments
         - security awareness training
         - desktop env should be included in org DR
-        - EDR/MDR should be considered
+        - Endpoint Detection and Response (EDR)/Managed Detection and Response (MDR) should be considered
 
 [4.3](#4.3) Implement secure communication channels according to design
 - Protocols that provide security services for application-specific communication channels are called secure communication protocols
@@ -315,12 +315,13 @@ Here are issues to pay attention to:
         - **remote-control**: grants a remote user the ability to fully control another system that is physically distant
         - **remote node operation**: AKA remote client connecting directly to a LAN
         - **screen scraping**: refers to 1) remote control, remote access, or remote desktop services or 2) technology that allows an automated tool to interact with a human interface
-    - VPN: virtual private network is a traditional remote access technology
-    - WAP (local env treats as remote access)
-    - VDI(virtual desktop infrastructure) / VMI (virtual mobile interface)
-    - jumpbox: a jump server/jumpbox is a remote access system deployed to make accessing a specific system or network easier or more secure
+    - Virtual Private Network (VPN): virtual private network is a traditional remote access technology
+    - Web Application Proxy (WAP): provides secure remote access and single sign-on.
+    - Virtual Desktop Infrastructure (VDI): centralizes desktop environments on remote servers, allowing users to access virtual desktops
+    - Virtual Mobile Interface (VMI): allows organizations to host mobile apps and data on a centralized server and deliver them to mobile devices over a network.
+    - Jumpbox: a jump server/jumpbox is a remote access system deployed to make accessing a specific system or network easier or more secure
         - often deployed in extranets, screened subnets, or cloud networks where a standard direct link or private channel is not available
-    - RDS (Remote Desktop Service) such as RD, Teamviewer, VNC etc can provide in-office experience while remote
+    - Remote Desktop Service (RDS) such as RD, Teamviewer, VNC etc can provide in-office experience while remote
     - using cloud-based desktop solutions such as Amazon Workspaces, Amazon AppStream, V2 Cloud, and Microsoft Azure
     - security must be considered to provide protection for your private network against remote access complications:
         - stringent auth before granting access
@@ -328,7 +329,7 @@ Here are issues to pay attention to:
         - remote comm protected via encryption
     - create a remote access security policy, addressing:
         - remote connectivity technology
-        - transmission protectio
+        - transmission protection
         - authentication protection
         - remote user assistance
 - Data communications
