@@ -24,7 +24,7 @@ Many have noted that the most appropriate frame of reference is that of a of a m
 - Who will be auditing usage? Internal vs external and why?
 - Who will create relevant policies for it?
 - Who implements it, and what are the steps in doing so?
-- What are the risks, and who evaluates,quantifies,and accepts (or rejects) them?
+- What are the risks, and who evaluates, quantifies, and accepts (or rejects) them?
 - What are the implications for architecture, for structure, for costs?
 - What are the privacy ramifications?
 
@@ -32,7 +32,7 @@ Focus on understanding the topics, and the analysis process.
 You have to analyze scope, time, and cost for most questions. Your goal is to reduce risk.
 
 Test Process:
-- Read the question and answers twice: skim the question and answers,then go back and read through the question carefully. Argue with each of the answers. Does an answer meet all requirements in the question? Are any other answers more efficient for time and cost?
+- Read the question and answers twice: skim the question and answers, then go back and read through the question carefully. Argue with each of the answers. Does an answer meet all requirements in the question? Are any other answers more efficient for time and cost?
 - If you have no idea what the answer is, you can generally eliminate at least two answers by thinking about the language used in the question. For instance, the question could be asking for a technology, and two of the answers are about process.
 - The first priority for any incident is saving human life.
 - Think before you act: 
@@ -50,7 +50,7 @@ Test Process:
 - You can pass and complete or fail in first 100 questions. If you go beyond 100, you are somewhere in between.
 
 ## Reference Material
-- Certified Information Systems Security Professional, Official Study Guide (using Ninth Edition) - this is the baseline text and from what I've seen,usually the starting point for study
+- Certified Information Systems Security Professional, Official Study Guide (using Ninth Edition) - this is the baseline text and from what I've seen, usually the starting point for study
 - CISSP Official Practice Tests (I have third edition)
 - This course has been highly recommended by several people: [CISSP Overview by Kelly Handerhan](https://app.cybrary.it/immersive/12270505/activity/61891) (Note: I have yet to take it!)
 - Thor Teaches:

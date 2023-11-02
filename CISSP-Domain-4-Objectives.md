@@ -9,7 +9,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 
 | Layer | OSI model layer | TCP/IP model | PDU | Devices | Protocols | 
 |-----|---------------| -------------------|------------| ----------------|-----------|
-| 7     | Application     | Application |Data               | L7 firewall                                | HTTP/s, DNS, DHCP, FTP,S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, RIP, SIP, S/MIME etc. |
+| 7     | Application     | Application |Data               | L7 firewall                                | HTTP/s, DNS, DHCP, FTP, S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, RIP, SIP, S/MIME etc. |
 | 6     | Presentation    | Application |Data               | L7 firewall                                | All the above                                                |
 | 5     | Session         | Application| Data               | L7 firewall                                | All the above                                                |
 | 4     | Transport       | Transport (host-to-host) | Segments           | L4 firewall                                | TCP (connection oriented), UDP (connectionless)     |
@@ -273,14 +273,14 @@ Here are issues to pay attention to:
         - **postadmission philosophy**: allows and denies access based on user activity, which is based on a predefined authorization matrix
     - Agent-based NAC:
         - Installed on each management system, checks config files regularly, and can quarantine for non-compliance
-        - Dissolvable:usually written in a web/mobile language and is executed on each local machine when the specific management web page is accessed (such as captive portal);
+        - Dissolvable: usually written in a web/mobile language and is executed on each local machine when the specific management web page is accessed (such as captive portal);
         - Permanent: installed on the monitored system as a persistent background service
     - Just as you need to control physical access to equipment and wiring, you need to use logical controls to protect a network; there are a variety of devices that provide this type of protection, including:
         - Stateful and stateless firewalls can perform inspection of the network packets and use rules, signatures and patterns to determine whether the packet should be delivered
             - reasons for dropping a packet could include addresses that don’t exist on the network, ports or addresses that are blocked, or the content of the packet (e.g malicious packets blocked by administrative policy)
         - Intrusion detection and prevention devices which monitor the network for unusual network traffic and MAC or IP address spoofing, and then either alert on or actively stop this type of traffic
         - Proxy/reverse proxies: 
-            - proxy servers can be used to proxy internet-bound traffic,instead of letting clients talk directly
+            - proxy servers can be used to proxy internet-bound traffic, instead of letting clients talk directly
             - reverse proxies are often deployed to a perimeter network; they proxy communication from the internet to an internal host, such as a web server
             - like a firewall, a reverse proxy can use rules and policies to block certain types of communication
 - Endpoint security: each individual device must maintain local security
@@ -298,7 +298,7 @@ Here are issues to pay attention to:
         - protection domains/network segments
         - security awareness training
         - desktop env should be included in org DR
-        - EDR/MDR should be considered
+        - Endpoint Detection and Response (EDR)/Managed Detection and Response (MDR) should be considered
 
 [4.3](#4.3) Implement secure communication channels according to design
 - Protocols that provide security services for application-specific communication channels are called secure communication protocols
@@ -315,12 +315,13 @@ Here are issues to pay attention to:
         - **remote-control**: grants a remote user the ability to fully control another system that is physically distant
         - **remote node operation**: AKA remote client connecting directly to a LAN
         - **screen scraping**: refers to 1) remote control, remote access, or remote desktop services or 2) technology that allows an automated tool to interact with a human interface
-    - VPN: virtual private network is a traditional remote access technology
-    - WAP (local env treats as remote access)
-    - VDI(virtual desktop infrastructure) / VMI (virtual mobile interface)
-    - jumpbox: a jump server/jumpbox is a remote access system deployed to make accessing a specific system or network easier or more secure
+    - Virtual Private Network (VPN): virtual private network is a traditional remote access technology
+    - Web Application Proxy (WAP): provides secure remote access and single sign-on.
+    - Virtual Desktop Infrastructure (VDI): centralizes desktop environments on remote servers, allowing users to access virtual desktops
+    - Virtual Mobile Interface (VMI): allows organizations to host mobile apps and data on a centralized server and deliver them to mobile devices over a network.
+    - Jumpbox: a jump server/jumpbox is a remote access system deployed to make accessing a specific system or network easier or more secure
         - often deployed in extranets, screened subnets, or cloud networks where a standard direct link or private channel is not available
-    - RDS (Remote Desktop Service) such as RD, Teamviewer, VNC etc can provide in-office experience while remote
+    - Remote Desktop Service (RDS) such as RD, Teamviewer, VNC etc can provide in-office experience while remote
     - using cloud-based desktop solutions such as Amazon Workspaces, Amazon AppStream, V2 Cloud, and Microsoft Azure
     - security must be considered to provide protection for your private network against remote access complications:
         - stringent auth before granting access
@@ -328,7 +329,7 @@ Here are issues to pay attention to:
         - remote comm protected via encryption
     - create a remote access security policy, addressing:
         - remote connectivity technology
-        - transmission protectio
+        - transmission protection
         - authentication protection
         - remote user assistance
 - Data communications
