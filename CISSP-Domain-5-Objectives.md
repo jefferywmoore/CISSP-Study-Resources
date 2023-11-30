@@ -43,11 +43,37 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
             - difficult to maintain consistency
             - changes made to any individual access control point needs to be repeated at others
     - With ubiquitious mobile computing and anywhere, anytime access (to apps & data), identity is the "new perimeter"
-
 - 5.2.2 Single/Multi-Factor Authentication (MFA)
+    - **Single-factor authentication**: any authentication using only one proof of identity
+    - **Two-factor authentication (2FA)**: requires two different proofs of identity
+    - **Multifactor authentication (MFA)**: any authentication using two or more factors
+        - multifactor auth must use multiple types or factors, such as something you know and something you have
+        - note: requiring users to enter a password and a PIN is NOT multifactor (both are something you know)
+    - Two-factor methods:
+        - **Hash Message Authentication Code (HMAC)**: includes a hash function used by the HMAC-based One-Time Password (HOTP) standard to create onetime passwords
+        - **Time-based One-Time Password (TOTP)**: similar to HOTP, but uses a timestamp and remains valid for a certain time frame (e.g. 30 or 60 seconds)
+            - e.g. phone-based authenticator app, where your phone is mimicking a hardware TOTP token (combined with userid/password is considered two-factor or two-step authentication)
+        - **Email challenge**: popular method, used by websites, sending the user an email with a PIN
+        - Short Message Service (SMS) to send users a text with a PIN is another 2-factor method; note that NIST SP 800-63B points out vulnerabilities, and deprecates use of SMS as a two-factor method for federal agencies
 - 5.2.3 Accountability
+    - Two important security elements in an access control system are authorization and accountability
+        - **Authorization**: subjects are granted access to objects based on proven identities
+        - **Accountability**: users and other subjects can be held accountable for their actions when auditing is implemented
+    - **Auditing**: tracks subjects and records when they access objects, creating an audit trail in one or more audit logs
+    - Auditing provides accountability
 - 5.2.4 Session management
+    - Session management is important to use with any type of authentication system to prevent unauthorized access
+    - Desktop/laptops: recommendation to use screensavers, although modern OSs have timeout/lock features
+    - Secure online sessions should terminate after a timeout period
+    - The Open Web Application Security Project (OWASP) publishes “cheat sheets” that provide app developer’s specific recommendations
 - 5.2.5 Registration, proofing, and establishment of identity
+    - Within an organization, new employees prove their identity with appropriate documentation during the hiring process
+        - in-person identity proofing includes things like passport, DL, birth cert etc
+    - Online orgs often use knowledge-based authentication (KBA) for identity-proofing of someone new (e.g. a new customer creating a new bank/savings account)
+        - example questions include past vehicle purchases, amount of mortgage payment, previous addresses, DL numbers
+        - they then query authoritative information (e.g. credit bureaus or gov agencies) for matches
+    - Cognitive Passwords: security questions that are gathered during account creation, which are later used as questions for authentication (e.g. name of pet, color of first car etc)
+        - one of the flaws associated with cognitive passwords is that the information is often available on social media sites or general internet searches
 - 5.2.6 Federated Identity Management (FIM)
     - Federated Identity Management (FIM) systems (a form of SSO) are often used by cloud-based apps
     - A federated identity links a user’s identity in one system with multiple identity management systems
@@ -62,6 +88,11 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - Cloud-based federation typically uses a third-party service to share federated identities
     - Federated identity management systems can be hosted on-premises, in the cloud, or in a combination of the two as a hybrid system
 - 5.2.7 Credential management systems
+    - **Credential management systems**: provide storage space for usernames and password
+        - e.g. web browsers that remember usernames and passwords for visited sites
+    - The World Wide Web Consortium (W3C) published the Credential Management Level 1 API as a working draft in January 2019, which many browsers have adopted
+    - Some federated identity management solutions use the Credential Management API, allowing web apps to implement SSO using a federated identity provider
+        - e.g. using your Google or Facebook account to sign into Zoom
 - 5.2.8 Singe Sign On (SSO)
     - **Single Sign-On (SSO)**: a centralized access control technique allowing a subject to be authenticated once on a system and access multiple resources without authenticating again
     - Advantages of using SSO include:
@@ -72,8 +103,10 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - Within an organization, a central access control system, such as a directory service, is often used for SSO
         - **directory service**: a centralized database that includes information about subjects and objects, including authentication data
         - many directory services are based on the Lightweight Directory Access Protocol (LDAP)
-        
 - 5.2.9 Just-In_time (JIT)
+    - Federated identity solutions that support just-in-time (JIT) provisioning automatically create the relationship between two entities so that new users can access resources
+    - A JIT solution creates the connection without any administrative intervention
+    - JIT systems commonly use SAML to exchange required data
 
 [5.3](#5.3) Federated Identity with a third-party service (OSG-9 Chpt 13)
 
