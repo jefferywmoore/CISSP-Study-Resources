@@ -109,9 +109,50 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - JIT systems commonly use SAML to exchange required data
 
 [5.3](#5.3) Federated Identity with a third-party service (OSG-9 Chpt 13)
+- 5.3.1 On-premise
+    - Federated identity management can be hosted on-premise, and typically provides an organization with the most control
+- 5.3.2 Cloud
+    - Cloud-based apps used federated identify management (FIM) systems, which are a form of SSO
+    - Cloud-based federation typically uses a third-party service to hsare federated identities (e.g. training sites use federated SSO systems)
+        - commonly matching the user's internal login ID with a federated identify
+- 5.3.3 Hybrid
+    - A hybrid federation is a combination of a cloud-based solution and an on-premise solution
 
 [5.4](#5.4) Implement and manage authorization mechanisms (OSG-9 Chpt 14)
+- 5.4.1 Role Based Access Control (RBAC)
+    - A key characteristic of the Role-Based Access Control (RBAC) model is the use of roles or groups
+    - Instead of assigning permissions directly to users, user accounts are placed in roles and administrators assign privileges to the roles (typically defined by job function)
+        - if the user account is in a role, the user has all privileges assigned to the role
+    - MS Windows OS uses this model with groups
+- 5.4.2 Rule Based access control
+    - A key characteristic of the Rule-Based access control model is that it applies global rules to all subjects
+        - e.g. firewalls uses rules that allow or block traffic to all users equally
+    - Rules within the rule-based access control model are sometimes referred to as restrictions or filters
+- 5.4.3 Mandatory Access Control (MAC)
+    - A key characteristic of the Mandatory Access Control (MAC) model is the use of labels applied to both subjects and objects
+        - e.g. a label of top secret grants access to top-secret documents
+    - When documented in a table, the MAC model sometimes resembles a lattice (i.e. climbing rosebush framework), so it is referred to as a lattice-based model
+- 5.4.4 Discretionary Access Control (DAC)
+    - A key characteristic of the Discretionary Access Control (DAC) model is that every object has an owner, and the owner can grant or deny access to any other subjects
+        - e.g. you create a file and are the owner, and can grant permissions to that file
+    - New Technology File System (NTFS) used in Windows, uses the DAC model
+- 5.4.5 Attribute Based Access Control (ABAC)
+    - A key characteristic of the Attribute-Based Access Control (ABAC) model is its use of rules that can include multiple attributes
+        - this allows it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally
+        - many software-defined networks (SDNs) use the ABAC model
+    - ABAC allows administrators to create rules within a policy using plain language statements such as “Allow Managers to access the WAN using a mobile device”
+- 5.4.6 Risk based access control
+    - Risk-based access control model grants access after evaluating risk; evaluating the environment and the situation and making risk-based decisions using policies embeded within software
+    - Using machine learning, making predictive conclusions about current activity based on past activity
 
 [5.5](#5.5) Manage the identity and access provisioning lifecycle (OSG-9 Chpts 13,14)
+- 5.5.1 Account accesss review
+- 5.5.2 Provisioning and deprovisioning
+- 5.5.3 Role definition
+- 5.5.4 Privilege escalation (e.g. managed service accounts, use of usdo, minimizing its use)
 
 [5.6](#5.6) Implement authentication systems (OSG-9 Chpt 14)
+- 5.6.1 OpenID Connect (OIDC) / Open Authorization (Oauth)
+- 5.6.2 Security Assertion Markup Language (SAML)
+- 5.6.3 Kerberos
+- 5.6.4 Remote Authentication Dial-in User Service (RADIUS) / Terminal Access Controller Access Control System Plus (TACACS+)
