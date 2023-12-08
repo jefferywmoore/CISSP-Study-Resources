@@ -143,16 +143,129 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - ABAC allows administrators to create rules within a policy using plain language statements such as “Allow Managers to access the WAN using a mobile device”
 - 5.4.6 Risk based access control
     - Risk-based access control model grants access after evaluating risk; evaluating the environment and the situation and making risk-based decisions using policies embeded within software
-    - Using machine learning, making predictive conclusions about current activity based on past activity
+        - Using machine learning, making predictive conclusions about current activity based on past activity
 
 [5.5](#5.5) Manage the identity and access provisioning lifecycle (OSG-9 Chpts 13,14)
 - 5.5.1 Account accesss review
+    - Administrators need to periodically review user, system and service accounts to ensure they meet security policies and that they don’t have excessive privileges
+    - Be careful in using the local system account as an application service account; although it allows the app to run without creating a special service account, it usually grants the app more access than it needs
+    - You can use scripts to run periodically and check for unused accounts, and check priveleged group membership, removing unauthorized accounts
+    - Guard against two access control issues:
+        - excessive privilege: occurs when users have more privileges than assigned work tasks dictate; these privileges should be revoked
+        - creeping privileges (AKA privilege creep): user accounts accumulating additional privileges over time as job roles and assigned tasks change
 - 5.5.2 Provisioning and deprovisioning
+    - Identity and access provisioning lifecycle refers to the creation, management, and deletion of accounts
+        - this lifecycle is important because without properly defined and maintained user accounts, a system is unable to establish accurate identity, perform authentication, provide authorization, and track accountability
+    - Provisioning/Onboarding
+        - proper user account creation, or provisioning, ensures that personnel follow specific procedures when creating accounts
+            - new-user account creation is AKA enrollment or registration
+        - **automated provisioning**: information is provided to an app, that then creates the accounts via pre-defined rules (assigning to appropriate groups based on roles)
+            - automated provisioning systems create accounts consistently
+        - provisioning also includes issuing hardware, tokens, smartcards etc to employees
+        - it’s important to keep accurate records when issuing hardware to employees
+        - after provisioning, an org can follow up with onboarding processes, including:
+            - the employee reads and signs the acceptable use policy (AUP)
+            - explaining security best practices (like infected emails)
+            - reviewing the mobile device policy
+            - ensuring the employee’s computer is operational, and they can log in
+            - configure a password manager
+            - explaining how to access help desk
+            - show to access, share and save resources
+    - Deprovisioning/Offboarding
+        - Deprovisioning/offboarding occurs when an employee leaves the organization or is transferred to a different department
+        - **Account revocation**: deleting an account is the easiest way to deprovision
+            - an employee's account is usually first disabled
+            - supervisors can then review the user’s data and determine if anything is needed
+            - note: if terminated employee retains access to a user account after the exit interview, the risk for sabatage is very high
+        - Deprovisioning includes collecting any hardware issued to an employee such as laptops, mobile devices and auth tokens
 - 5.5.3 Role definition
+    - Employee responsibilities can change in the form of transfers to a different role, or into a newly created role
+        - for new roles, it’s important to define the role and the privileges needed by the employees in that role
+    - Roles and associated groups need to be defined in terms of privileges
 - 5.5.4 Privilege escalation (e.g. managed service accounts, use of usdo, minimizing its use)
+    - Privilege escalation refers to any situation that gives users more privileges than they should have
+    - Attackers use privilege escalation techniques to gain elevated privileges
+    - **Horizontal privilege escalation**: gives an attacker similar privileges as the first compromised user, but from other accounts
+    - **Vertical privilege escalation**: provides an attacker with significantly greater privileges
+        - e.g. after compromising a regular user’s account an attacker can use vertical privilege escalation techniques to gain administrator privileges on the user’s computer
+        - the attacker can then use horizontal privilege escalation techniques to access other computers in the network
+        - this horizontal privilege escalation throughout the network is AKA **lateral movement**
 
 [5.6](#5.6) Implement authentication systems (OSG-9 Chpt 14)
 - 5.6.1 OpenID Connect (OIDC) / Open Authorization (Oauth)
+    - OAuth is an open framework used for authentication and authorization protocols 
+    - The most common protocol built on OAuth is OpenID Connect (OIDC) 
+    - OAuth 2.0 is often used for delegated access to applications, e.g. a mobile game that automatically finds all of your new friends from a social media app is likely using OAuth 2.0
+    - Conversely, if you sign into a new mobile game using a social media account (instead of creating a user account just for the game), that process might use OIDC
+    - **OpenID Connect (OIDC)**: an authentication layer using the OAuth 2.0 authorization framework, maintained by the OpenID Foundation, providing both authentication and authorization
+    - OIDC uses JSON (JavaScript Object Notation) Web Tokens (JWT) -- AKA ID token
+    - OAuth and OIDC are used with many web-based applications to share information without sharing credentials
+        - OAuth provides authorization
+        - OIDC uses the OAuth framework for authorization and builds on the OpenID technologies for authentication
+
 - 5.6.2 Security Assertion Markup Language (SAML)
+    - Security Assertion Markup Language (SAML): an open XML-based standard commonly used to exchange authentication and authorization (AA) information between federated orgs
+    - SAML provides SSO capabilities for browser access
+    - SAML is a popular SSO standard on the internet - used to exchange authentication and authorization (AA) information
+    - Organization for the Advancement of Structure Information Standards (OASIS) maintains it
+    - SAML 2 spec utilizes three entities:
+        - Principal or User Agent
+        - Service Provider (SP): providing the service a user is interested in using
+        - Identity Provider (IdP): a third-party that holds the user authentication and authorization info
+    - IdP can send three types of XML messages known as assertions:
+        - Authentication Assertion: provides proof that the user agent provided the proper credentials, identifies the identification method, and identifies the time the user agent logged on
+        - Authorization Assertion: indicates whether the user agent is authorized to access the requested service; if denied, includes why
+        - Attribute Assertion: attributes can be any information about the user agent
 - 5.6.3 Kerberos
+    - Kerberos is a network authentication protocol widely used in corporate and private networks and found in many LDAP and directory services solutions such as Microsoft Active Directory
+    - It provides single sign-on and uses cryptography to strengthen the authentication process
+    - The purpose of Kerberos is authentication; Kerberos offers a single sign-on solution for users and protects logon credentials
+    - Ticket authentication is a mechanism that employs a third-party entity to prove identification and provide authentication - Kerberos is a well-known ticket system
+    - After users authenticate and prove their identity, Kerberos uses their proven identity to issue tickets, and user accounts present these tickets when accessing resources
+    - Kerberos version 5 relies on symmetric-key cryptography (AKA secret-key cryptography) using the Advanced Encryption Standard (AES) symmetric encryption protocol
+    - Kerberos provides confidentiality and integrity for authentication traffic using end-to-end security and helps protect against eavesdropping and replay attacks
+    - Kerberos elements:
+        - **Key Distribution Center (KDC)**: the trusted third party that provides authentication services
+        - **Kerberos Authentication Server**: hosts the functions of the KDC:
+            - **ticket-granting service (TGS)**: provides proof that a subject has authenticated through a KDC and is authorized to request tickets to access other objects
+                - a TGT is encrypted and includes a symmetric key, an expiration time, and user’s IP address
+                - subjects present the TGT when requesting tickets to access objects
+            - **authentication service (AS)**: verifies or rejects the authenticity and timeliness of tickets. Often referred to as the KDC
+        - **ticket (AKA service ticket (ST))**: an encrypted message that provides proof that a subject is authorized to access an object
+        - **Kerberos Principal**: typically a user but can be any entity that can request a ticket
+        - **Kerberos realm**: a logical area (such as a domain or network) ruled by Kerberos
+    - Kerberos login process:
+        - user types a username/password into the client
+        - client encrypts the username with AES for transmission to the KDC
+        - the KDC verifies the username against a db of known credentials
+        - the KDC generates a symmetric key that will be used by the client and the Kerberos server
+            - it encrypts this with a hash of the user’s password
+            - the KDC also generates an encrypted timestamped TGT
+        - the KDC then transmits the encrypted symmetric key and the encrypted timestamped TGT to the client
+        - the client installs the TGT for use until it expires
+            - the client also decrypts the symmetric key using a hash of the user’s password
+            - NOTE: the client’s password is never transmitted over the network, but it is verified
+                - the server encrypts a symmetric key using a hash of the user’s password, and it can only be decrypted with a hash of the user’s password
+                - as long as the user enters the correct password, this step works
+    - When a client wants to access an object (like a hosted resource), it must request a ticket through the Kerberos server, in the following steps:
+        - the client sends its TGT back to the KDC with a request for access to the resource
+        - the KDC verifies that the TGT is valid, and checks its access control matrix to verify user privileges for the requested resource
+        - the KDC generates a service ticket and sends it to the client
+        - the client sends the ticket to the server or service hosting the resource
+        - the server or service hosting the resource verifies the validity of the ticket with the KDC
+        - once identity and authorization are verified, Kerberos activity is complete
+            - the server or service host then opens a session with the client and begins communication or data transmission
 - 5.6.4 Remote Authentication Dial-in User Service (RADIUS) / Terminal Access Controller Access Control System Plus (TACACS+)
+    - Remote Authentication Dial-in User Service (RADIUS): centralizes authentication for remote access connections, such as VPNs or dial-up access
+        - a user can connect to any network access server, which then passes on the user’s credentials to the RADIUS server to verify authentication and authorization and to track accounting
+        - in this context, the network access server is the RADIUS client, and a RADIUS server acts as an authentication server
+        - the RADIUS server also provides AAA services for multiple remote access servers
+        - RADIUS uses the User Datagram Protocol (UDP) by default and encrypts only the password’s exchange
+        - RADIUS using Transport Layer Security (TLS) over TCP (port 2083) is defined by RFC 6614 
+        - RADIUS uses UDP port 1812 for RADIUS messages and UDP port 1813 for RADIUS Accounting messages
+        - RADIUS encrypts only the password’s exchange by default
+        - it is possible to use RADIUS/TLS to encrypt the entire session
+    - Cisco developed Terminal Access Control Access Control System Plus (TACACS+) and released it as an open standard
+        - provides improvements over the earlier version and over RADIUS, it separates authentication, authorization, and accounting into separate processes, which can be hosted on three different servers
+        - additionally, TACACS+ encrypts all of the authentication information, not just the password, as RADIUS does
+        - TACACS+ uses TCP port 49, providing a higher level of reliability for the packet transmissions
