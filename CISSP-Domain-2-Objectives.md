@@ -172,5 +172,21 @@ Note that Entities that must comply with the EU GDPR, use additional data protec
   - Example: a web server uses a certificate to encrypt data being viewed by a user, or IPsec encrypting a communication session. There are many options. The most important point is to use encryption whenever possible, including for internal-only web apps
   - DLP solutions are useful for data in transit, scanning data on the wire, and stopping the transmission/transfer, based on the DLP rules set (e.g. outbound data that contains numbers matching a social security number pattern, a DLP rule can be used to block that traffic)
 
-
-
+## Key Terms
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
+- **XXX:** 
