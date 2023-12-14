@@ -351,3 +351,93 @@ Here are issues to pay attention to:
     - vendors (like IT auditing firms) may need to connect to your network, and attackers are routinely looking for creative ways to gain organizational access -- third-party connectivity is one option
     - as organizations evaluate third-party connectivity, they need to look carefully at the principle of least privilege and at methods of monitoring use and misuse
 
+
+## Key Terms
+- **Acknowledgment (ACK):** An acknowledgment of a signal being received.
+- **Address Resolution Protocol (ARP):** Used at the Media Access Control (MAC) layer to provide for direct communication between two devices within the same LAN segment.
+- **Advanced Persistent Threat (APT):** An adversary with sophisticated levels of expertise and significant resources who is able to use multiple different attack vectors (e.g. cyber, physical, and deception) to achieve its objectives. Its objectives are typically to establish and extend footholds within the IT infrastructure of organizations in order to continually exfiltrate information and/or to undermine or impede critical aspects of a mission, program or organization, or place itself in a position to do so in the future. Moreover, the APT pursues its objectives repeatedly over an extended period of time, adapting to a defender's efforts to resist it, and with determination to maintain the level of interaction needed to execute its objectives.
+- **Application Programming Interface (API):** Mobile code mechanisms that provide ways for applications to share data, methods, or functions over a network. Usually implemented either in XML or JavaScript Object Notation (JSON). A reference to a software access point or library function with a well-defined syntax and well-defined functionality.
+- **Bandwidth:** The amount of information transmitted over a period of time. A process consisting of learning or education could necessitate higher bandwidth than a quick status update, which would require a lower bandwidth.
+- **Bit:** Most essential representation of data (zero or one) at layer 1 or the OSI 7-Layer Model.
+- **Frame:** Data represented at layer 2 of the OSI 7-Layer Model.
+- **Packet:** Representation of data at layer 3 of the OSI 7-Layer Model.
+- **Segment (data):** Data representation (or datagram name) at Layer 4 of the OSI 7-Layer Model. 
+- **Internet Protocol (IPv4):** The dominant protocol that operates at layer 3 of the OSI 7-Layer Model. IP is responsible for addressing packets so that they can be transmitted from the source to the destination hosts.
+- **Bluetooth (Wireless Personal Area Network IEEE 802.15):** Bluetooth wireless technology is an open standard for short-range RF communication used primarily to establish wireless personal area networks (WPANs). It has been integrated into many types of business and consumer devices.
+- **Bound Network(s):** Network in which devices are connected at layer 1 by means of physical cables, wires, or fiver. Often referred to as wired networks, Ethernet networks, or by wiring or cable standard used, (e.g. fiber network, Cat 5 or Cat 6 network). See also Unbound (wireless) Network(s).
+- **Unbound (Wireless) Network(s):** Network in which physical layer interconnections are done using radio, light or other means not confined to wires, cables or fibers. Devices on unbound networks may or may not be mobile. See also Bound Network(s).
+- **Boundary Routers:** Primarily advertise routes that external hosts can use to reach internal ones.
+- **Bridges:** A device that creates a single aggregate network from separate network segments. Using the OSI model, this device aggregates networks at layer 2.
+- **Carrier Sense Multiple Access with Collision Avoidance (CSMA/CA):** A method of flow control in a network. To prevent more than one station from accessing the network simultaneously, the sending station announces its intent to send, and other stations wait until the sending station announces its completion.
+- **Carrier Sense Multiple Access with Collision Detection (CSMA/CD):** A method of flow control in a network. If more than one station accesses the network simultaneously, the other stations detect the event and subsequently attempt retransmission.
+- **Cellular Network:** A radio network distributed over land areas called cells, each served by at least one fixed-location transceiver, known as a cell site or base station.
+- **Circuit-Switched Network:** A network that establishes a dedicated circuit between endpoints.
+- **Code-Division Multiple Access (CDMA):** Every call's data is encoded with a unique key, then the calls are all transmitted at once.
+- **Concentrators:** Multiplex connected devices into one signal to be transmitted on a network.
+- **Content Distribution Network (CDN):** A large, distributed system of servers deployed in multiple data centers, which moves content to achieve QoS and availability requirements.
+- **Control Plane:** Control of network functionality and programmability is directly made to devices at this layer. OpenFlow was the original framework/protocol specified to interface with devices through southbound interfaces.
+- **Converged Protocols:** A protocol that combines (or converges) standard protocols (such as TCP/IP) with proprietary or other non-standard protocols. These can sometimes provide greatly enhanced functionality and security to meet the needs of specific situations or industries. Adopting them can also complicate enterprise-wide security engineering efforts by requiring additional specialist knowledge and skills to manage and secure.
+- **Domain Name Service (DNS):** This acronym can be applied to three interrelated elements: a service, a physical server, and a network protocol.
+- **Driver (Device Driver):** Software layer that provides an interface for accessing the functions of hardware devices. Typically used by the OS.
+- **Dynamic Host Configuration Protocol (DHCP):** An industry standard protocol used to dynamically assign IP addresses to network devices.
+- **Registered Ports:** Ports 1024-49151. These ports typically accompany non-system applications associated with vendors and developers.
+- **Dynamic or Private Ports:** Ports 49152-65535. Whenever a service is requested that is associated with well-known or registered ports, those services will respond with a dynamic port.
+- **East-West Data Flow (or Traffic):** Network data traffic that flows laterally across a set of internal systems, networks or subnetworks within an IT architecture. These can be flows within a data center or between geographically disperse locations. Contrast with north-south data flows, in which northbound data is leaving the organization and southbound is entering it. Within SDNs, east-west data flow is within a data plane, control plane or application plane. North-south data flows, in SDN terms, is data flowing up and down the stack of data/control/application planes.
+- **North-South Network Data Flow (or Traffic):** Data flowing either from the organization to external destinations (northbound) or into the organization from external sources (southbound). In SDN terms, data flowing up (northbound) or down (southbound) the stack of data/control/applications planes.
+- **Fiber Distributed Data Interface (FDDI):** A LAN standard, defined by ANSI X3T9.5, specifying a 100Mbps token-passing network using fiber-optic cable, with transmission distances of up to two kilometers.
+- **Fibre Channel over Ethernet (FCoE):** A lightweight encapsulation protocol that lacks the reliable data transport of the TCP layer.
+- **File Transfer Protocol (FTP):** The Internet protocol (and program) used to transfer files between hosts.
+- **Hypertext Transfer Protocol (HTTP):** A communication protocol used to connect to servers on the World Wide Web. Its primary function is to establish a connection with a web server and transmit HTML pages to the client browser. The protocol used to transport hypertext files across the Internet.
+- **Firewalls:** Devices that enforce administrative security policies by filtering incoming traffic based on a set of rules.
+- **Firmware:** Computer programs and data stored in hardware typically in read-only memory (ROM) or programmable read-only memory (PROM), such that the programs and data cannot be dynamically written or modified during execution of the programs.
+- **Gateway Device:** A firewall or other device sitting at the edge of a network to regulate traffic and enforce rules.
+- **Internet Control Message Protocol (ICMP):** An IP network protocol standardized by the IETF through RFC 792 to determine if a particular service or host is available.
+- **Internet Group Management Protocol (IGMP):** Used to manage multicasting groups that are  a set of hosts anywhere on a network that are listening for a transmission.
+- **Internet of Things (IoT):** A virtual network made up of small, dedicated-use devices that are typically designed as small form factor, embedded hardware with a limited functionality OS. They may interface with the physical world and tend to be pervasively deployed where they exist.
+- **Internet Protocol (IPv6):** A modernization of IPv4 that includes a much larger address field: IPv6 addresses are 128 bits that support 2128 hosts.
+- **Internetworking:** Two different sets of servers and communications elements using network protocol stacks to communicate with each other and coordinate their activities with each other.
+- **Intrusion Detection System (IDS):** A security service that monitors and analyzes network or system events for the purpose of finding and providing real-time or near real-time warning of attempts to access system resources in an unauthorized manner.
+- **Intrusion Prevention Systems (IPS):** Uses available information to determine if an attack is underway and sends alerts but also blocks the attack from reaching its intended target.
+- **Kill Chain, Cyber Kill Chain:** A generalized attack model consisting of actions on the objective and six broad, overlapping sets of operational activities: reconnaissance, weaponization, delivery, exploitation, installation, command and control. APT actors often combine these operations in complex ways to achieve their goals; such attacks may span over many months. For defenders, the kill chain model highlights the temporary gain in security that can result by improved systems and organizational hardening across any or all of these areas.
+- **Lightweight Directory Access Protocol (LDAP):** Authentication is specified as simple (basic), simple using SSL/TLS, or Simple Authentication and Security Layer (SASL).
+- **Logical Link Control (LLC):** One of two sub-layers that together make up the data link layer-- layer 2 of the OSI 7-Layer Model.
+- **Man-in-the-Middle (MITM):** A form of active attack in which the attacker inserts themselves into the physical or logical communications flow between two parties and masquerades to each as the other, falsifying or altering the data exchanged as the attacker chooses to. Also known as MITM. Man (machine)-in-the-browser (MITB) attacks focus on layer 7 vulnerabilities to masquerade as client to the server and as server to the client.
+- **Media Access Control (MAC):** The 48-bit hex number assigned to all network cards. The first 24 bits are assigned to the card manufacturer with the remaining bits being a unique value (address) for that card.
+- **Microsegmented Networks, Microsegmentation:** Part of a zero trust strategy that breaks LANs into very small, highly localized zones using firewalls or similar technologies. At the limit, this places a firewall at every connection point.
+- **Modem:** Provides modulation and demodulation of binary data into analog signals for transmission through telephone, cable, fiber, or other signaling systems.
+- **Multiprotocol Label Switching (MPLS):** A WAN protocol that operates at both layer 2 and layer 3 (OSI) and does label switching.
+- **Network Function Virtualization (NFV):** Alternately referred to as virtual network function. The objective of NFV is to decouple functions, such as firewall management, intrusion detection, NAT and name service resolution , away from specific hardware implementation and move them into software solutions. NFV's focus is to optimize distinct network services.
+- **Network Management:** Monitors network performance and identifies attacks and failures. Mechanisms include components that enable network administrators to monitor and restrict resource access.
+- **Open Shortest Path First (OSPF):** An interior gateway routing protocol developed for IP networks based on the shortest path first or link-state algorithm.
+- **OSI Layer 1:** Physical Layer
+- **OSI Layer 2:** Data Link Layer
+- **OSI Layer 3:** Network Layer
+- **OSI Layer 4:** Transport Layer
+- **OSI Layer 5:** Session Layer
+- **OSI Layer 6:** Presentation Layer
+- **OSI Layer 7:** Application Layer
+- **Packet Loss:** Degradation of VoIP or other streaming data caused by lost packets. A technique called packet loss concealment (PLC) is used in VoIP communications to mask the effect of dropped packets.
+- **Packet-Switched Networks:** Networks that do not use a dedicated connection between endpoints.
+- **Point-to-Point Protocol (PPP):** Provides a standard method for transporting multiprotocol datagrams over point-to-point links.
+- **Port Address Translation (PAT):** An extension to network address translation (NAT) to translate all addresses to one routable IP address and translate the source port number in the packet to a unique value.
+- **Quality of Service (QoS):** Refers to the capability of a network to provide better service to selected network traffic over various technologies, including frame relay, ATM, Ethernet and 802.1 networks, SONET, and IP-routed networks that may use any or all of these underlying technologies.
+- **Remote Procedure Call (RPC):** A protocol that enables one system to execute instructions on other hosts across a network infrastructure.
+- **Root of Trust (RoT):** Hardware-based mechanisms that guarantee the integrity of the hardware prior to loading the OS of a computer.
+- **Segment (network):** A portion of a larger network, usually isolated by firewalls or routers at either end from other portions of the network. See also Microsegmented Networks, Microsegmentation.
+- **Simple Network Management Protocol (SNMP):** An IP protocol for collecting and organizing information about managed devices on IP networks. It can be used to determine the "health" of networking devices including routers, switches, servers, workstations, printers, and modem racks.
+- **Smurf:** ICMP echo request sent to the network broadcast address of a spoofed victim causing all nodes to respond to the victim with an echo reply.
+- **Software-Defined Networking (SDN):** Any of a broad range of techniques that enable network management, routing, forwarding, and control functions to be directed by software. This is generally done by abstracting the control and management planes from the data plane and its forwarding functions.
+- **Software-Defined Wide Area Network (SD-WAN):** An extension of the SDN practices to connect to entities spread across the Internet to support WAN architecture especially related to cloud migration.
+- **Teardrop Attack:** Exploits the reassembly of fragmented IP packets in the fragment offset field that indicates the starting position, or offset, of the data contained in a fragmented packet relative to the data of the original unfragmented packet.
+- **Terminal Emulation Protocol (Telnet):** A command-line protocol designed to give command-line access from one host to another.
+- **Transmission Control Protocol (TCP):** The major transport protocol in the Internet suite of protocols providing reliable, connection-oriented, full-duplex streams.
+- **Transmission Control Protocol over Internet Protocol (TCP/IP):** The name of the IETF's four-layer networking model, and its protocol stack.
+- **Transmission Control Protocol over Internet Protocol (TCP/IP) Model:** Internetworking protocol model created by the IETF, which specifies four layers of functionality: link layer (physical communications), Internet layer (network-to-network communication), transport layer (basic channels for connections and connectionless exchange of data between hosts) and application layer, where other protocols and user applications programs make use of network services.
+- **Trusted Platform Module (TPM):** A tamper-resistant integrated circuit built into some computer motherboards that can perform cryptographic operations (including key generation) and protect small amounts of sensitive information, such as passwords and cryptographic keys.
+- **Virtual Local Area Networks (VLANs):** Allow network administrators to use switches to create software-based LAN segments that can be defined based on factors other than physical location.
+- **Voice over Internet Protocol (VoIP):** A set of technologies that enables voice to be sent over a packet network.
+- **Web Application Firewall (WAF):** A software-based firewall, which monitors and filters exchanges between an applications program and a host. WAFs usually involve inspection and filtering of HTTP and HTTPS conversations.
+- **Wi-Fi (Wireless LAN IEEE 803.11x):** Primarily associated with computer networking, Wi-Fi uses the IEEE 802.11x specification to create a wireless LAN either public or private.
+- **WiMAX (Broadband Wireless Access IEEE 802.16):** A well-known example of wireless broadband. WiMAX can potentially deliver data rates of more than 30 Mbps.
+- **Zero Trust Model / Architecture:** Replaces trust, but verify as security design principle by asserting that all activities attempted, by all users or entities, must be subject to control, authentication, authorization, and management at the most granular level possible. NIST and others have proposed zero trust architectures as guidance frameworks for organizations to use as the combine microsegmentation, access control, behavior modeling, and threat intelligence (among other techniques) in moving toward a zero trust implementation.
+
