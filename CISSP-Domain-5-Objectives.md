@@ -374,3 +374,31 @@ The identity and access provisioning lifecycle is the process of creating, manag
 - **Account lockout policies:** Account lockout policies can help to protect against brute-force attacks by locking accounts that are unsuccessfully logged into too many times.
 - **Session management:** Session management is the process of creating, tracking, and terminating user sessions. It is important to implement secure session management practices to prevent session hijacking and other attacks.
 - **Authentication auditing:** Authentication auditing is the process of logging and reviewing authentication events. Authentication auditing can help to detect and investigate unauthorized access attempts.
+
+
+## Key Terms
+- **Access Control System:** Means to ensure that access to assets is authorized and restricted based on business and security requirements related to logical and physical systems.
+- **Access Control Tokens:** The system decides if access is to be granted of denied based upon the validity of the token for the point where it is read based on time, date, day, holiday or other condition used for controlling validation.
+- **Accounting:** Access control process which records information about all attempts by all identities to access and resources of the system. See also authentication, authorization.
+- **Attribute-based Access Control (ABAC):** This is an access control paradigm whereby access rights are granted to users with policies that combine attributes together.
+- **Authentication:** Access control process that validates the identity being claimed by a user or entity is known to the system, by comparing one or more factors of identification. Factors typically include something the user is (e.g. fingerprint), something they have (e.g. hardware token), and something they know (e.g. password). Single-factor (SFA) authenticates with only one of these; multi-factor (MFA) uses two or more.
+- **Authorization:** The process of defining the specific resources a user needs and determining the type of access to those resources the user may have.
+- **Crossover Error Rate (CER):** This is the point at which the false acceptance (Type 2) error rate equals the false rejection (Type 1) error rate, for a given sensor used in a given system and context. This is only the optimal point of operation if the potential impacts of both types of errors are equivalent.
+- **Data Custodian, Custodian:** The individual who manages permissions and access on a day-to-day basis based on instructions from the data owner. Responsible for protecting an asset that has value, while in the custodian's possession.
+- **Data Owner / Data Controller:** The individual or entity who is responsible to classify, categorize and permit access to the data. The data owner is the one who is best familiar with the importance of the data to the business.
+- **Data Processor:** Any entity, working on behalf or at the direction of the data controller, that processes personally identifiable information (PII).
+- **Discretionary Access Control (DAC):** Access control in which the system owner decides who gets access.
+- **Ethical Wall:** The separation of information, assets or job functions to establish and enforce need to know boundaries or prevent conflict of interest situations from arising. The use of administrative, physical and/or logical controls to establish, maintain and monitor such separations. Also known as a compartment.
+- **False Acceptance Rate (FAR or Type 2):** Incorrectly authenticating a claimed identity as legitimate and recognized, and granting access on that basis.
+- **False Rejection Rate (FRR or Type 1):** Incorrectly denying authentication to a legitimate identity and thus denying it access.
+- **Granularity of Controls:** Level of abstraction or detail at which a security function can be configured or tuned for performance and sensitivity purposes.
+- **Identity-as-a-Service (IDaaS):** Cloud-based services that broker IAM functions to target systems on customers' premises and/or in the cloud.
+- **Identity Proofing:** The process of collecting and verifying information about a person for the purpose of proving that a person who has requested an account, a credential or other special privilege is indeed who the claim to be and establishing a reliable relationship that can be trusted electronically between the individual and said credential for purposes of electronic authentication.
+- **Logical Access Control System:** Automated systems that authorize or deny access to and use of and information system and its assets to an individual user, based on verification that the identity presented matches that which was previously approved.
+- **Mandatory Access Controls (MAC):** Access control that requires the system itself to manage access controls in accordance with the organization's security policies.
+- **Multi-factor Authentication (MFA):** Ensures that a user is who they claim to be. The more factors used to determine a person's identity, the greater the trust of authenticity.
+- **Open Authorization (OAuth):** The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing the third-party application to obtain access on its own behalf.
+- **Privilege Creep:** The unnecessary accumulation of access privileges by a user, typically due to failing to remove privileges when they are no longer needed.
+- **Self-Service Identity Management:** Elements of the identity management life-cycle and provisioning process, which the end user (the identity in question) can initiate or perform with little or no interaction or assistance from administrators. Examples include password resets, postal address updates or changes to challenge questions and answers.
+- **Single-Factor Authentication (SFA):** Involves the use of simply one of the three available factors solely to carry out the authentication process being requested.
+- **Whaling Attack:** Phishing attacks that attempt to trick highly placed officials or private individuals with sizable assets into authorizing large fund wire transfers to previously unknown entities.
