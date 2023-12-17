@@ -404,3 +404,23 @@ The following is an example of a security assessment and testing strategy for a 
 - **Recommendations for improvement:** The audit report should also include recommendations for improving the organization's security posture. The recommendations should be specific and measurable.
 - **Management response:** The audit report should also include the management's response to the audit findings and recommendations.
 
+
+## Key Terms
+- **Artifact:** A piece of evidence, such as text or a reference to a resource, that is submitted to support a response to a question.
+- **Assessment:** The testing or evaluation of the controls in an information system or an organization to determine the extent to which the controls are implemented correctly, operating as intended and producing the desired outcome with respect to meeting the security or privacy requirements for the system or the organization.
+- **Audit/Auditing:** The process of reviewing a system for compliance against a standard or baseline. Examples include audits of security controls, configuration baselines and financial records. Can be formal and independent, or informal using internal staff.
+- **Chaos Engineering:** The discipline of experimenting on a software system in production in order to build confidence in the system's capability to withstand turbulent and unexpected conditions.
+- **Compliance Calendar:** A calendar that tracks an organization's audits, assessment, required filings, their due dates and related details.
+- **Compliance Tests:** An evaluation that provides assurance an organization's controls are being applied in accordance with management policies and procedures.
+- **Ethical Penetration Testing, Penetration Testing:** A security testing and assessment method in which testers actively attempt to circumvent or defeat the security features of a system. Ethical penetration testing is constrained, typically by contracts, to stay within specified rules of engagement (RoE).
+- **Examination:** The process of reviewing, inspecting, observing, studying, or analyzing one or more assessment objects (i.e. specifications, mechanisms, or activities). The purpose of the examine method is to facilitate assessor understanding, achieve clarification, or obtain evidence.
+- **Finding(s):** Assessment results produced by the application of an assessment procedure to a security control or control enhancement to achieve an assessment objective.
+- **Interview(s):** As a systems assessment technique, the process of holding discussions with individuals or groups of individuals within an organization to facilitate assessor understanding, achieve clarification or obtain evidence.
+- **Judgment Sampling:** Also called purposive sampling or authoritative sampling, it is a non-probability sampling technique in which the sample members are chosen only on the basis of the researcher's knowledge and judgment.
+- **Misuse Case Testing:** Testing strategy and technique from the point of view of an actor hostile to the system, using deliberately chosen sets of actions, which could lead to systems integrity failures, malfunctions or other security or safety compromises.
+- **Plan of Action and Milestones (POA&M):** A document that identifies tasks needing to be accomplished. It details resources required to accomplish the elements of the plan, any milestones for meeting the tasks and scheduled milestone completion dates.
+- **Rules of Engagement (RoE):** A set of rules, constraints, boundaries or conditions that establish limits on what participants in an activity may or may not do. Ethical penetration testing, for example, uses RoE to define the scope of the testing to be done and to establish liability limitations for both the testers and the sponsoring organization or systems owners.
+- **Statistical Sampling:** Statistical sampling is the process of selecting subsets of examples from a population with the objective of estimating properties of the total population.
+- **Substantive Test:** The testing technique used by an auditor to obtain the audit evidence in order to support auditor opinion.
+- **Testing:** The process of exercising one or more assessment objects (i.e. activities or mechanisms) under specified conditions to compare actual with expected behavior.
+- **Trust Services Criteria (TSC):** The criteria used by an auditor when evaluating the suitability of the design and operating effectiveness of controls relevant to the security, availability or processing integrity of information and systems, or the confidentiality or privacy of the information process by the entity.
