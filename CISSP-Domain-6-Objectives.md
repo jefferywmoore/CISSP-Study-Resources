@@ -71,14 +71,88 @@
         - web application vulnerability scans
         - database vulnerability scans
 - 6.2.2 Penetration testing
+    - Penetration tests goes beyond vulnerability testing techniques because it actually attempts to exploit systems
+    - NIST defines the penetration testing process as consisting of four phases:
+    - **planning**: includes agreement on the scope of the test and the rules of engagement
+        - ensures that both the testing team and management are in agreement about the nature of the test and that it is explicitly authorized
+    - **information gathering and discovery**: uses manual and automated tools to collect information about the target environment
+        - basic reconnaissance (website mapping)
+        - network discovery
+        - testers probe for system weaknesses using network, web and db vuln scans
+    - **attack**: seeks to use manual and automated exploit tools to attempt to defeat system security
+        - step where pen testing goes beyond vuln scanning as vuln scans don’t attempt to actually exploit detected vulns
+    - **reporting**: summarizes the results of the pen testing and makes recommendations for improvements to system security
+    - tests are normally categorized into three groups:
+        - **white-box penetration test**:
+            - provides the attackers with **detailed information** about the systems they target
+            - this bypasses many of the reconnaissance steps that normally precede attacks, shortening the time of the attack and increasing the likelihood that it will find security flaws
+            - these tests are sometimes called "**known environment**" tests
+        - **gray-box penetration test**:
+            - AKA **partial knowledge tests**, these are sometimes chosen to balance the advantages and disadvantages of white- and black-box penetration tests
+            - this is particularly common when black-box results are desired but costs or time constraints mean that some knowledge is needed to complete the testing
+            - these tests are sometimes called "**partially known environment**" tests
+        - **black-box penetration test**:
+            - does not provide attackers with any information prior to the attack
+            - this simulates an external attacker trying to gain access to information about the business and technical environment before engaging in an attack
+            - these tests are sometimes called "**unknown environment**" tests
 - 6.2.3 Log reviews
+    - **Security Information and Event Management (SIEM)**: packages that collect information using the syslog functionality present in many devices, operating systems, and applications
+    - Admins may choose to deploy logging policies through Windows Group Policy Objects (GPOs)
+    - Logging systems should also make use of the Network Time Protocol (NTP) to ensure that clocks are synchronized on systems sending log entries to the SIEM as well as the SIEM itself, ensuring info from multiple sources have a consistent timeline
+    - Information security managers should also periodically conduct log reviews, particularly for sensitive functions, to ensure that privileged users are not abusing their privileges
+    - Network flow (NetFlow) logs are particularly useful when investigating security incidents
 - 6.2.4 Synthetic transactions
+    - **Synthetic transactions**: scripted transactions with known expected results
+    - Dynamic testing may include the use of synthetic transactions to verify system performance; synthetic transactions are run against code and compare out to expected state
 - 6.2.5 Code review and testing
+    - Code review and testing is "one of the most critical components of a software testing program"
+    - These procedures provide third-party reviews of the work performed by developers before moving code into a production environment, possibly discovering security, performance, or reliability flaws in apps before they go live and negatively impact business operations
+    - In code review, AKA peer review, developers other than the one who wrote the code review it for defects
+    - Fagan inspections: the most formal code review process follows a rigorous review and testing process with six steps:
+        1) planning
+        2) overview
+        3) preparation
+        4) inspection
+        5) rework
+        6) follow-up
+    - **Static application security testing (SAST)**: evaluates the security of software without running it by analyzing either the source code or the compiled application
+    - **Dynamic application security testing (DAST)**: evaluates the security of software in a runtime environment and is often the only option for organizations deploying applications written by someone else
 - 6.2.6 Misuse case testing
+    - **Misuse case testing**: AKA abuse case testing - used by software testers to evaluate the vulnerability of their software to known risks
+    - In misuse case testing, testers first enumerate the known misuse cases, then attempt to exploit those use cases with manual or automated attack techniques
 - 6.2.7 Test coverage analysis
+    - A test coverage analysis is used to estimate the degree of testing conducted against new software
+    - **Test coverage** = number of use cases tested / total number of use cases
+        - requires enumerating possible use cases (which is a difficult task), and anyone using test coverage calcs to understand the process used to develop the input values
+    - Five common criteria used for test coverage analysis:
+        - **branch coverage**: has every IF statement been executed under all IF and ELSE conditions?
+        - **condition coverage**: has every logical test in the code been executed under all sets of inputs?
+        - **functional coverage**: has every function in the code been called and returned results?
+        - **loop coverage**: has every loop in the code been executed under conditions that cause code execution multiple times, only once, and not at all?
+        - **statement coverage**: has every line of code been executed during the test?
 - 6.2.8 Interface testing
+    - Interface testing assesses the performance of modules against the interface specs to ensure that they will work together properly when all the development efforts are complete
+    - Three types of interfaces should be tested:
+        - application programming interfaces (APIs): offer a standardized way for code modules to interact and may be exposed to the outside world through web services
+            - should test APIs to ensure they enforce all security requirements
+        - user interfaces (UIs): examples include graphical user interfaces (GUIs) and command-line interfaces
+            - UIs provide end users with the ability to interact with the software, and tests should include reviews of all UIs
+        - physical interfaces: exist in some apps that manipulate machinery, logic controllers, or other objects
+            - software testers should pay careful attention to physical interfaces because of the potential consequences if they fail
 - 6.2.9 Breach attack simulations
+    - Breach and attack simulation (BAS) platforms seek to automate some aspects of penetration testing
+    - The BAS platform is not actually waging attacks, but conducting automated testing of security controls to identify deficencies
+    - Designed to inject threat indicators onto systems and networks in an effort to trigger other security controls (e.g. place a suspicious file on a server)
+        - detection and prevention controls should immediately detect and/or block this traffic as potentially malicious
+    - See:
+        - OWASP Web Security Testing Guide
+        - OSSTMM (Open Source Security Testing Methodology Manual)
+        - NIST 800-115
+        - FedRAMP Penetration Test Guidance
+        - PCI DSS Information Supplemental on Penetration Testing
 - 6.2.10 Compliance checks
+    - Orgs should create and maintain compliance plans documenting each of their regulatory obligations and map those to the specific security controls designed to satisfy each objective
+    - Compliance checks are an important part of security testing and assessment programs for regulated firms: these checks verify that all of the controls listed in a compliance plan are functioning properly and are effectively meeting regulatory requirements
 
 [6.3](#6.3) Collect security process data (e.g. technical and administrative) (OSG-9 Chpts 15,18)
 - 6.3.1 Account management
