@@ -356,17 +356,22 @@ should be contacted.
       - **Integrated**: Risk management operations are integrated into business processes, metrics are used to gather effectiveness data, and risk is considered an element in business strategy decisions
       - **Optimized**: Risk management focuses on achieving objectives rather than just reacting to external threats; increased strategic planning is geared toward business success rather than just avoiding incidents; and lessons learned are re-integrated into the risk management process.
   - Risk Frameworks
-    - A risk framework is a guide or recipe for how risk is to be accessed, resolved, and monitored. NIST established the **Risk Management Framework** (RMF) and the **Cybersecurity Framework** (CSF).The CSF is designed for critical infrastructure and commercial organizations, whereas the RMF establishes manditory requirements for federal agencies
-    - The RMF, defined by NIST in SP 800-37 Rev 2, establishes manditory security requirements for federal agencies
-    - There are other risk frameworks, such as the British Standard BS 31100. Be familiar with frameworks and their goals
-    - The **RMF 7 steps**, and has **six cyclical phases**:
-      - **Prepare** to execute the RMF from an organization- and system-level perspective by establishing a context and priorities for managing security and privacy risk
-      - **Categorize** the system and the information processed, stored, and transmitted by the system based on an analysis of the impact of loss
-      - **Select** an initial set of controls for the system and tailor the controls as needed to reduce risk to an acceptable level based on an assessment of risk
-      - **Implement** the controls and describe how the controls are employed within the system and its environment of operation
-      - **Assess** the controls to determine if the controls are implemented correctly, operating as intended, and producing the desired outcomes with respect to satisfying the security and privacy requirements
-      - **Authorize** the system or common controls based on a determination that the risk to organizational operations and assets, individuals, and other organizations, and the nation is acceptable.
-      - **Monitor** the system and associated controls on an on-going basis to include assessing control effectiveness, documenting changes to the system and environment of operation, conducting risk assessments and impact analysis, and reporting the security and privacy posture of the system
+    - A risk framework is a guide or recipe for how risk is to be accessed, resolved, and monitored 
+    - NIST established the **Risk Management Framework** (RMF) and the **Cybersecurity Framework** (CSF).The CSF is a set of guidelines for mitigating organizational cybersecurity risks, based on existing standards, guidelines, and practices
+    - The RMF is intended as a risk management process to identify and respond to threats, and is defined in three core, interrelated Special Publications: 
+      - SP 800-37 Rev 2, Risk Management Framework for Information Systems and Organizations
+      - SP 800-39, Managing Information Security Risk
+      - SP 800-30 Rev 1, Guide for Conducting Risk Assessments
+      - The **RMF 7 steps**, and has **six cyclical phases**:
+        - **Prepare** to execute the RMF from an organization and system-level perspective by establishing a context and priorities for managing security and privacy risk
+        - **Categorize** the system and the information processed, stored, and transmitted by the system based on an analysis of the impact of loss
+        - **Select** an initial set of controls for the system and tailor the controls as needed to reduce risk to an acceptable level based on an assessment of risk
+        - **Implement** the controls and describe how the controls are employed within the system and its environment of operation
+        - **Assess** the controls to determine if the controls are implemented correctly, operating as intended, and producing the desired outcomes with respect to satisfying the security and privacy requirements
+        - **Authorize** the system or common controls based on a determination that the risk to organizational operations and assets, individuals, and other organizations, and the nation is acceptable.
+        - **Monitor** the system and associated controls on an on-going basis to include assessing control effectiveness, documenting changes to the system and environment of operation, conducting risk assessments and impact analysis, and reporting the security and privacy posture of the system
+    - See my overview article, [The NIST Risk Management Framework](https://blog.balancedsec.com/p/the-nist-risk-management-framework)
+  - There are other risk frameworks, such as the British Standard BS 31100. Be familiar with frameworks and their goals
 
 [1.11](#1.11) **Understand and apply threat modeling concepts and methodologies**
 - **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed. It can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed. Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat 

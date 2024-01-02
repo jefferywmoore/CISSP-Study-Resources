@@ -156,7 +156,16 @@
 
 [6.3](#6.3) Collect security process data (e.g. technical and administrative) (OSG-9 Chpts 15,18)
 - 6.3.1 Account management
+    - Preferred attacker techniques for obtaining privilege user access include:    
+        - compromising an existing privileged account: mitigated through use of strong authentication (strong passwords and multifactor), and by admins use of privileged accounts only for specific tasks
+        - privelege escalation of a regular account or creation of a new account: these approaches can be mitigated by paying attention to the creation, modification, and use of user accounts
 - 6.3.2 Management review and approval
+    - Account management reviews ensure that users only retain authorized permissions and that unauthorized modifications do not occur
+    - Full review of accounts: time-consuming to review all, and often done only for highly privileged accounts
+    - Organizations that don’t have time to conduct a full review process may use sampling, but only if sampling is truely random
+    - Adding accounts: should be a well-defined process, and users should sign AUP
+    - Adding, removing, and modifying accounts and permissions should be carefully controlled and documented
+    - Accounts that are no longer needed should be suspended
 - 6.3.3 Key performance and risk indicators
 - 6.3.4 Backup verification data
 - 6.3.5 Training and awareness
