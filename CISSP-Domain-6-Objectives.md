@@ -70,6 +70,7 @@
         - network vulnerability scans
         - web application vulnerability scans
         - database vulnerability scans
+
 - 6.2.2 Penetration testing
     - Penetration tests goes beyond vulnerability testing techniques because it actually attempts to exploit systems
     - NIST defines the penetration testing process as consisting of four phases:
@@ -95,15 +96,18 @@
             - does not provide attackers with any information prior to the attack
             - this simulates an external attacker trying to gain access to information about the business and technical environment before engaging in an attack
             - these tests are sometimes called "**unknown environment**" tests
+
 - 6.2.3 Log reviews
     - **Security Information and Event Management (SIEM)**: packages that collect information using the syslog functionality present in many devices, operating systems, and applications
     - Admins may choose to deploy logging policies through Windows Group Policy Objects (GPOs)
     - Logging systems should also make use of the Network Time Protocol (NTP) to ensure that clocks are synchronized on systems sending log entries to the SIEM as well as the SIEM itself, ensuring info from multiple sources have a consistent timeline
     - Information security managers should also periodically conduct log reviews, particularly for sensitive functions, to ensure that privileged users are not abusing their privileges
     - Network flow (NetFlow) logs are particularly useful when investigating security incidents
+
 - 6.2.4 Synthetic transactions
     - **Synthetic transactions**: scripted transactions with known expected results
     - Dynamic testing may include the use of synthetic transactions to verify system performance; synthetic transactions are run against code and compare out to expected state
+
 - 6.2.5 Code review and testing
     - Code review and testing is "one of the most critical components of a software testing program"
     - These procedures provide third-party reviews of the work performed by developers before moving code into a production environment, possibly discovering security, performance, or reliability flaws in apps before they go live and negatively impact business operations
@@ -117,9 +121,11 @@
         6) follow-up
     - **Static application security testing (SAST)**: evaluates the security of software without running it by analyzing either the source code or the compiled application
     - **Dynamic application security testing (DAST)**: evaluates the security of software in a runtime environment and is often the only option for organizations deploying applications written by someone else
+
 - 6.2.6 Misuse case testing
     - **Misuse case testing**: AKA abuse case testing - used by software testers to evaluate the vulnerability of their software to known risks
     - In misuse case testing, testers first enumerate the known misuse cases, then attempt to exploit those use cases with manual or automated attack techniques
+
 - 6.2.7 Test coverage analysis
     - A test coverage analysis is used to estimate the degree of testing conducted against new software
     - **Test coverage** = number of use cases tested / total number of use cases
@@ -130,6 +136,7 @@
         - **functional coverage**: has every function in the code been called and returned results?
         - **loop coverage**: has every loop in the code been executed under conditions that cause code execution multiple times, only once, and not at all?
         - **statement coverage**: has every line of code been executed during the test?
+
 - 6.2.8 Interface testing
     - Interface testing assesses the performance of modules against the interface specs to ensure that they will work together properly when all the development efforts are complete
     - Three types of interfaces should be tested:
@@ -139,6 +146,7 @@
             - UIs provide end users with the ability to interact with the software, and tests should include reviews of all UIs
         - physical interfaces: exist in some apps that manipulate machinery, logic controllers, or other objects
             - software testers should pay careful attention to physical interfaces because of the potential consequences if they fail
+
 - 6.2.9 Breach attack simulations
     - Breach and attack simulation (BAS) platforms seek to automate some aspects of penetration testing
     - The BAS platform is not actually waging attacks, but conducting automated testing of security controls to identify deficencies
@@ -150,6 +158,7 @@
         - NIST 800-115
         - FedRAMP Penetration Test Guidance
         - PCI DSS Information Supplemental on Penetration Testing
+
 - 6.2.10 Compliance checks
     - Orgs should create and maintain compliance plans documenting each of their regulatory obligations and map those to the specific security controls designed to satisfy each objective
     - Compliance checks are an important part of security testing and assessment programs for regulated firms: these checks verify that all of the controls listed in a compliance plan are functioning properly and are effectively meeting regulatory requirements
@@ -159,6 +168,7 @@
     - Preferred attacker techniques for obtaining privilege user access include:    
         - compromising an existing privileged account: mitigated through use of strong authentication (strong passwords and multifactor), and by admins use of privileged accounts only for specific tasks
         - privelege escalation of a regular account or creation of a new account: these approaches can be mitigated by paying attention to the creation, modification, and use of user accounts
+
 - 6.3.2 Management review and approval
     - Account management reviews ensure that users only retain authorized permissions and that unauthorized modifications do not occur
     - Full review of accounts: time-consuming to review all, and often done only for highly privileged accounts
@@ -166,17 +176,92 @@
     - Adding accounts: should be a well-defined process, and users should sign AUP
     - Adding, removing, and modifying accounts and permissions should be carefully controlled and documented
     - Accounts that are no longer needed should be suspended
+    - ISO 9000 standards use a Plan-Do-Check-Act loop
+        - plan: foundation of everything in the ISMS, determines goals and drives policies
+        - do: security operations
+        - check: security assessment and testing (this objective)
+        - act: formally do the management review
+
 - 6.3.3 Key performance and risk indicators
+    - Key Performance Indicator (KPIs) are measures that provide significance of showing the performance an ISMS compared to stated goals
+    - Choose the factors that can show the state of security
+    - Define baselines for some (or better yet all) of the factors
+    - Develop a plan for periodically capturing factor values (use automation!)
+    - Analyze and interpret the data and report the results
+    - Key metrics or KPIs that should be monitored by security managers may vary from org to org, but could include:
+        - number of open vulns
+        - time to resolve vulns
+        - vulnerability/defect recurrence
+        - number of compromised accounts
+        - number of software flaws detected in pre-production scanning
+        - repeat audit findings
+        - user attempts to visit known malicious sites
+    - Develop a dashboard of metrics and track them
+
 - 6.3.4 Backup verification data
+    - Managers should periodically inspect the results of backups to verify that the process functions effectively and meets the organization’s data protection needs
+        - this might include reviewing logs, inspecting hash values, or requesting an actual restore of a system or file
+
 - 6.3.5 Training and awareness
+    - Training and awareness programs play a crucial role in preparing an organization’s workforce to support information security programs
+    - They educate employees about current threats and advise them on best practices for protecting information and systems under their care from attacks
+    - Program should begin with initial training designed to provide foundation knowledge to employees who are joining the org or moving to a new role; the initial training should be tailored to an individual’s role
+    - Training and awareness should continue to take place throughout the year, reminding employees of their responsibilities and updating them on changes to the organization’s operating environment and threat landscape
+    - Use phishing simulations to evaluate the effectiveness of their security awareness programs
+
 - 6.3.6 Disaster Recover (DR) and Business Continuity (BC)
+    - **Business Continuity (BC)**: the processes used by an organization to ensure, holistically, that its vital business processes remain unaffected or can be quickly restored following a serious incident
+    - **Disaster Recovery (DR)**: is a subset of BC, that focuses on restoring information systems after a disaster
+    - These processes need to be periodically accessed, and regular testing of disaster recovery and business continuity controls provide organizations with the assurance they are effectively protected against disruptions to business ops
+    - Protection of life is of the utmost importance and should be dealt with first before attempting to save material things
 
 [6.4](#6.4) Analyze test output and generate report (OSG-9 Chpt 15)
+- Step 1: review and understand the data
+    - The goal of the analysis process is to proceed logically from facts to actionable info
+    - A list of vulns and policy exceptions is of little value to business leaders unless it's used in context, so once all results have been analyzed, you're ready to start writing the official report
+- Step 2: determine the business impact of those facts
+    - Ask "so what?"
+- Step 3: determine what is actionable
+    - The analysis process leads to valuable results only if they are actionable
+
 - 6.4.1 Remediation
+    - Rather than software defects, most vulnerabilities in average orgs come from misconfigured systems, inadequate policies, unsound business processes, or unaware staff
+    - Vuln remediation should include all stakeholders, not just IT 
+
 - 6.4.2 Exception handling
+    - **Exception handling**: the process of handling unexpected activity, since software should never depend on users behaving properly
+        - "expect the unexpected", gracefully handle invalid input and improperly sequenced activity etc 
+    - Sometimes vulns can't be patched in a timely manner (e.g. medical devices needing re-accreditation) and the solution is to implement compensitory controls, document the excpetion and decision, and revisit
+        - **compensitory controls**:measures taken to address any weaknesses of existing controls or to compensate for the inability to meet specific security requirements due to various different constraints
+        - e.g. micro-segmentation of device, access restrictions, monitoring etc
+    - Exception handling may be required due to system crash as the result of patching (requiring roll-back)
+
 - 6.4.3 Ethical disclosure
+    - While conducting security testing, cybersecurity pros may discover previously undiscovered vulns (perhaps implementing compensating controls to correct) that they may be unable to correct
+    - **Ethical disclosure**: the idea that security pros who detect a vuln have a responsibility to report it to the vendor, providing them with enough time to patch or remediate
+        - the disclosure should be made privately to the vendor providing reasonable amount of time to correct
+        - if the vuln is not corrected, then public disclosure of the vuln is warrented, such that other professionals can make informed decisions about future use of the product(s)
 
 [6.5](#6.5) Conduct or facilitate security audits (OSG-9 Chpt 15)
 - 6.5.1 Internal
+    - Having an internal team conduct security audits has several advantages:
+        - understanding of the internal environment reduces time
+        - an internal team can delve into all parts of systems, because they have insider knowledge
+        - internal auditors can be more agile in adapting to changing needs, rescheduling failed assessment components quickly
+    - Disadvantages of using an internal team to conduct security audits:
+        - the team may have limited exposure to new/other methodologies (e.g. the team may have depth but not breadth of experience and knowledge)
+        - potential conflicts of interest (e.g. reluctance to throw other teams under the bus and accurately report their findings)
+        - audit team members may start with an agenda (say to secure funding) and overstate faults, or have interpersonal motives
+
 - 6.5.2 External
+    - An external audit (sometimes called a second-party audit) is one conducted by (or on behalf of) a business partner
+    - External audits are tied to contracts; by definition, an external audit should be scoped to include only the contractual obligations of an organization
+    
 - 6.5.3 Third-party
+    - Third-party audits are often needed to demonstrate compliance with some government regulation or industry standard
+    - Advantages of having a third-party audit an organization:
+        - they likely have breadth of experience auditing many types of systems, across many types of organizations
+        - they are not affected by internal dynamics or org politics
+    - Disadvantage of using a third-party auditor:
+        - cost: third-party auditors are going to be much more costly than internal teams; this means that the organization is likely to conduct audits as frequently
+        - internal resources are still required to assist or accompany auditors, to answer questions and guide
