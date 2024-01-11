@@ -1,6 +1,6 @@
 [Domain 6](#domain6-top) **Security Assessment and Testing**
 
-- Security assessment and testing program are an important mechanism for validating the on-going effectiveness of security controls
+- Security assessment and testing programs are an important mechanism for validating the on-going effectiveness of security controls
     - they include a variety of tools, such as vulnerability assessments, penetration tests, software testing, audits, and other control validation
 - Every org should have a security assessment and testing program defined and operational
 - **Security assessments**: comprehensive reviews of the security of a system, application, or other tested environment
@@ -29,7 +29,7 @@
 - 6.1.3 Third-party
     - Third-party audits are conducted by, or on behalf of, another org
     - In the case of a third-party audit, the org initiating the audit generally selects the auditors and designs the scope of the audit
-    - The statement on Standards for Attestation Engagements document 18 (SSAE 18), titled Reporting on Controls, provides a common standard to be used by auditors performing assessments of service orgs with the intent of allowing the org to conduct external assessments, instead of multiple third-party assessments, and then sharing the resulting report with customers and potential customers
+    - The statement on **Standards for Attestation Engagements document 18 (SSAE 18)**, titled Reporting on Controls, provides a common standard to be used by auditors performing assessments of service orgs with the intent of allowing the org to conduct external assessments, instead of multiple third-party assessments, and then sharing the resulting report with customers and potential customers
         - outside of the US, similar engagements are conducted under the International Standard for Attestation Engagements (ISAE) 3402, Assurance Reports on Controls at a Service Organization
     - SSAE 18 and ISAE 3402 engagements are commonly referred to as a service organization controls (SOC) audits
     - Three forms of SOC audits:
@@ -49,7 +49,7 @@
         - Type II reports are considered much more reliable than Type I reports (Type I reports simply take the service orgs word that the controls are implemented as described)
 
 [6.2](#6.2) Conduct security control testing (OSG-9 Chpt 15)
-- Security control testing can include testing of the physical facility, logical systems and applications. Here are the common testing methods:
+- Security control testing can include testing of the physical facility, logical systems and applications; common testing methods:
 - 6.2.1 Vulnerability assessment
     - **Vulnerabilities**: weaknesses in systems and security controls that might be exploited by a threat
     - Vulnerability assessments: examining systems for these weaknesses
@@ -112,7 +112,7 @@
     - Code review and testing is "one of the most critical components of a software testing program"
     - These procedures provide third-party reviews of the work performed by developers before moving code into a production environment, possibly discovering security, performance, or reliability flaws in apps before they go live and negatively impact business operations
     - In code review, AKA peer review, developers other than the one who wrote the code review it for defects
-    - Fagan inspections: the most formal code review process follows a rigorous review and testing process with six steps:
+    - **Fagan inspections**: the most formal code review process follows six steps:
         1) planning
         2) overview
         3) preparation
@@ -148,7 +148,7 @@
             - software testers should pay careful attention to physical interfaces because of the potential consequences if they fail
 
 - 6.2.9 Breach attack simulations
-    - Breach and attack simulation (BAS) platforms seek to automate some aspects of penetration testing
+    - **Breach and attack simulation (BAS)**: platforms that seek to automate some aspects of penetration testing
     - The BAS platform is not actually waging attacks, but conducting automated testing of security controls to identify deficencies
     - Designed to inject threat indicators onto systems and networks in an effort to trigger other security controls (e.g. place a suspicious file on a server)
         - detection and prevention controls should immediately detect and/or block this traffic as potentially malicious
@@ -183,7 +183,7 @@
         - act: formally do the management review
 
 - 6.3.3 Key performance and risk indicators
-    - Key Performance Indicator (KPIs) are measures that provide significance of showing the performance an ISMS compared to stated goals
+    - **Key Performance Indicator (KPIs)**: measures that provide significance of showing the performance an ISMS compared to stated goals
     - Choose the factors that can show the state of security
     - Define baselines for some (or better yet all) of the factors
     - Develop a plan for periodically capturing factor values (use automation!)
@@ -256,7 +256,7 @@
 - 6.5.2 External
     - An external audit (sometimes called a second-party audit) is one conducted by (or on behalf of) a business partner
     - External audits are tied to contracts; by definition, an external audit should be scoped to include only the contractual obligations of an organization
-    
+
 - 6.5.3 Third-party
     - Third-party audits are often needed to demonstrate compliance with some government regulation or industry standard
     - Advantages of having a third-party audit an organization:
