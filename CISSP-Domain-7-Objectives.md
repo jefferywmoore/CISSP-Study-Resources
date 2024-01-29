@@ -1,6 +1,37 @@
 [Domain 7](#domain7-top) **Security Operations**
 
 [7.1](#7.1) Understand and comply with investigations (OSG-9 Chpt 19)
+- **Investigation**: a formal inquiry and systematic process that involves gathering information to determine the cause of a security incident or violation
+- Investigators must be able to conduct reliable investigations that will hold up in court; securing the scene is an essential and critical part of every investigation
+    - securing the scene might include any/all of the following:
+        - sealing off access to the area or crime scene
+        - taking images of the scene
+        - documenting evidence
+        - ensuring evidence (e.g. computers, mobile devices, portable drives etc) is not contacted, tampered with, or destroyed 
+    - general principles:
+        - identify and secure the scene
+        - protect evidence -- proper collection of evidence preserves its integrity and the chain of custody
+        - identification and examination of the evidence
+        - further analysis of the most compelling evidence
+        - final reporting of findings
+    
+- **Locard exchange principle**: whenever a crime is commited something is taken, and something is left behind
+- The purpose of an investigation is to:
+    - identify the root cause of the incident
+    - prevent future occurrences
+    - mitigate the impact of the incident on the organization
+- Types of investigations:
+    - **administrative**: an investigation that is focused on policy violations
+    - **criminal**: conducted by law enforcement, this type of investigation tries to determine if there is cause to believe (beyond a reasonable doubt) that someone committed a crime
+        - the goal is to gather evidence that can be used to convict in court
+        - the job of a security professional is to preserve evidence, ensure law enforcement has been contacted, and assist as necessary
+    - **civil**: non-criminal investigation for matters such as contract disputes
+        - the goal of a civil investigation is to gather evidence that can be used to support a legal claim in court, and is typically triggered from an imminent or on-going lawsuit
+        - the level of proof is much lower for a civil compared to a criminal investigation
+    - **regulatory**: investigation initiated by a government regulator when there is reason to believe an organization is not in compliance
+        -  this type of investigation varies significantly in scope and could look like any of the other three types of investigation depending on the severity of the allegations
+        - as with criminal investigations, it is key to preserve evidence, and assist the regulator’s investigators
+
 - 7.1.1 Evidence collection and handling
     - Evidence collection is complex, should be done by professionals, and can be thrown out of court if incorrectly handled
     - It’s important to preserve original evidence
@@ -23,15 +54,87 @@
         - collection 
         - acquisition
         - preservation
+    - Types of evidence:
+        - **primary evidence**:
+            - most reliable and used at trial
+            - original documents (e.g. legal contracts), no copies or duplicates
+        - **secondary evidence**:
+            - less powerful and reliable than primary evidence (e.g. copies of originals, witness oral evidence etc)
+            - if primary evidence is available secondary of the same content is not valid
+        - **real evidence**: this type of evidence includes physical objects, such as computers, hard drives, and other storage devices, that can be brought into a court of law
+        - **direct evidence**: this type of evidence is based on the observations of a witness or expert opinion and can be used to prove a fact at hand (with backup evidence support)
+        - **circumstantial evidence**: this type of evidence is based on inference and can be used to support a conclusion, but not prove it
+        - **corroborative evidence**: this type of evidence is used to support other evidence and can be used to strengthen a case
+        - **hearsay evidence**: type of evidence that is based on statements made by someone outside of court and is generally not admissible
+        - **best evidence rule**: states that the original evidence should be presented in court, rather than a copy or other secondary evidence
+    - It is important to note that evidence should be collected and handled in a forensically sound manner to ensure that it is admissible in court and to avoid any legal issues
+    - The chain of custody: focuses on having control of the evidence -- who collected and handled what evidence, when, and where
+        - think about establishing the chain of custody as:
+            - tag, 
+            - bag, and 
+            - carry the evidence
+    - Five rules of evidence: five evidence characteristics providing the best chance of surviving legal and other scrutiny:
+        - **authentic**: evidence is not fabricated or planted, and can be proven through crime scene photos, or bit-for-bit copies of storage
+        - **accurate**: evidence that has integrity (not been modified)
+        - **complete**: evidence must be complete, and all parts available and shared, whether they support the case or not
+        - **convincing**: evidence must be easy to understand, and convey integrity
+        - **admissible**: evidence must be accepted as part of a case
 
 - 7.1.2 Reporting and documentation
-- 7.1.3 Investiative techniques
+    - Each investigation should result in a final report that documents the goals of the investigation, the procedures followed, the evidence collected, and the final results
+    - Preparing formal documentation prepares for potential legal action, and even internal investigations can become part of employment disputes
+    - Identify in advance a single point of contact who will act as your liasion with law enforcement, providing a go-to person with a single perspective, potentially improving the working relationship
+    - Participate in the FBI’s InfraGard program
+
+- 7.1.3 Investigative techniques
+    - Whether in response to a crime or incident, an organizational policy breach, troubleshooting a system or network issue etc, digital forensic methodologies can assist in finding answers, solving problems, and in some cases, help in successfully prosecuting crimes
+    - The forensic investigation process should include the following:
+        - identification and securing of a crime scene
+        - proper collection of evidence that preserves its integrity and the chain of custody
+        - examination of all evidence
+        - further analysis of the most compelling evidence
+        - final reporting
+    - Sources of information and evidence:
+        - oral/written statements: given to police, investigators, or as testimony in court by people who witness a crime or who may have pertient information
+        - written documents: checks, printed contracts, handrwitten letters/notes
+        - computer systems: components, local/portable storage, memory etc
+        - visual/audio: visual and audio evidence pertient to a security investigation could include photographs, video, taped recordings, and surveillance footage from security cameras
+    - Several investigative techniques can be used when conducting analysis:
+        -  media analysis: examining the bits on a hard drive that are intact dispite not having an index
+        - software analysis: focuses on an applications and malware, determining how it works and what it's trying to do, with a goal of attribution
+
 - 7.1.4 Digital forensics tools, tactics, and procedures
+    - Digital forensics: the scientific examination and analysis of data from storage media so that the information can be used as part of an investigation to identify the culprit or the root cause of an incident
+    - **Live evidence**: data stored in a running system e.g. random access memory (RAM), cache, and buffers
+    - Examining a live system can change the state of the evidence 
+        - small changes like interacting with the keyboard, mouse, loading/unloading programs, or of course powering off the system, can change or eliminate live evidence
+    - Whenever a forensic investigation of a storage drive is conducted, two identical bit-for-bit copies of the original drive should be created first
+    - **eDiscovery**: the process of identifying, collecting, and producing electronic evidence in legal proceedings
+
 - 7.1.5 Artifacts (e.g. computer, network, mobile device)
+    - Forensic artifacts: remnants of a system or network breach/attempted breach, which and may or may not be relevant to an investigation or response
+    - Artifacts can be found in numerous places, including:
+        - computer systems
+        - web browsers
+        - mobile devices
+        - hard drives, flash drives
 
 [7.2](#7.2) Conduct logging and monitoring activities (OSG-9 Chpts 17,21)
+
 - 7.2.1 Intrusion detection and prevention
 - 7.2.2 Security Information and Event Management (SIEM)
+    - Security Information and Event Management (SIEM): systems that ingest logs from multiple sources, compile and analyze log entries, and report relevant information
+        - SIEM systems are complex and require expertise to install and tune
+        - require a properly trained team that understands how to read and interpret info, and escalation procedures to follow when a legitimate alert is raised
+        - SIEM systems represent technology, process, and people, and each is important to overall effectiveness
+        - a SIEM includes significant intelligence functionality, allowing large amounts of logged events and analysis and correlation of the same to occur very quickly
+    - SIEM capabilities include:
+        - Aggregation
+        - Normalization
+        - Correlation
+        - Secure storage
+        - Analysis
+        - Reporting
 - 7.2.3 Continuous monitoring
 - 7.2.4 Egress monitoring
 - 7.2.5 Log management
