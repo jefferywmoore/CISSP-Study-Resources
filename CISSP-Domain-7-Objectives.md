@@ -122,6 +122,12 @@
 [7.2](#7.2) Conduct logging and monitoring activities (OSG-9 Chpts 17,21)
 
 - 7.2.1 Intrusion detection and prevention
+    - **Intrusion**: occurs when an attacker can bypass or thwart security mechanisms and access an organization’s resources
+    - **Intrusion detection**: a specific form of monitoring events, usually in real time, to detect abnormal activity indicating a potential incident or intrusion
+    - **Intrusion Detection System (IDS)**: automates the inspection of logs and real-time system events to detect intrusion attempts and system failures
+        - an IDS is intended as part of a defense-in-depth security plan
+    - **Intrusion Prevention Systems (IPS)**: includes detection capabilities, you’ll also see them referred to as intrusion detection and prevention systems (IDPSs)
+    - NIST SP 800-94 Guide to Intrusion Detection and Prevention Systems provides comprehensive coverage of both IDS and IPS
 - 7.2.2 Security Information and Event Management (SIEM)
     - Security Information and Event Management (SIEM): systems that ingest logs from multiple sources, compile and analyze log entries, and report relevant information
         - SIEM systems are complex and require expertise to install and tune
@@ -136,19 +142,104 @@
         - Analysis
         - Reporting
 - 7.2.3 Continuous monitoring
+    - After a SIEM is set up, configured, tuned, and running, it must be routinely updated and continuously monitored to function effectively
+    - Effective continuous monitoring encompasses technology, processes, and people
+    - Continuous monitoring steps are:
+        - Define
+        - Establish
+        - Implement
+        - Analyze/report
+        - Respond
+        - Review/update
+    - **monitoring**: the process of reviewing information logs, looking for something specific
+        - necessary to detect malicious actions by subjects as well as attempted intrusions and system failures
+        - can help reconstruct events, provide evidence for prosecution, and create reports for analysis
+        - continuous monitoring ensures that all events are recorded and can be investigated later if necessary
+    - **log analysis**: a detailed and systematic form of monitoring where logged info is analyzed for trends and patterns as well as abnormal, unauthorized, illegal, and policy-violating activities
+        - log analysis isn’t necessarily in response to an incident, it’s a periodic task
+    
 - 7.2.4 Egress monitoring
+    - It’s important to monitor traffic exiting as well as entering a network, and **Egress monitoring** refers to monitoring outgoing traffic to detect unauthorized data transfer outside the org (AKA data exfiltration)
+    - Common methods used to detect or prevent data exfiltration are data loss prevention (DLP) techniques and monitoring for steganography
 - 7.2.5 Log management
+    - **Log management**: refers to all the methods used to collect, process, and protect log entries (see SIEM definition above)
+    - **rollover logging**: allows admins to set a maximum log size, when the log reaches that max, the system begins overwriting the oldest events in the log
 - 7.2.6 Threat intelligence (e.g. threat feeds, threat hunting)
+    - **Threat intelligence**: an umbrella term encompassing threat research and analysis and emerging threat trends; gathering data on potential threats, including various sources to get timely info on current threats
+    - **Kill chain**: military model (used for both offense and defense):
+        - find/identify a target through reconnaissance
+        - get the target’s location
+        - track the target’s movement
+        - select a weapon to use on the target
+        - engage the target with the selected weapon
+        - evaluate the effectiveness of the attack
+    - Orgs have adapted this model for cybersecurity: Lockheed Martin created the **Cyber Kill Chain** framework including seven ordered stages of an attack:
+        - reconnaissance: attackers gather info on the target
+        - weaponize: attackers identify an exploit that the target is vulnerable to, along with methods to send the exploit
+        - delivery: attackers send the weapon to the target via phishing attacks, malicious email attachments, compromised websites, or other common social engineering methods
+        - exploitation: the weapon exploits a vulnerability on the target system
+        - installation: code that exploits the vulnerability then installs malware with a backdoor allowing attacker remote access
+        - command and control: attackers maintain a command and control system, which controls the target and other compromised systems
+        - actions on objectives: attackers execute their original goals such as theft of money, or data, destruction of assets, or installing additional malicious code (eg. ransomware)
+    
 - 7.2.7 use and Entity Behavior Analytics (UEBA)
+    - **UEBA (aka UBA)**: focuses on the analysis of user and entity behavior; analysis engines are typically included with SIEM solutions or may be added via subscription
+    - **Behavior-based detection**: AKA statistical intrusion, anomaly, and heuristics-based detection, starts by creating a baseline of normal activities and events; once enough baseline data has been accumulated to determine normal activity, it can detect abnormal activity (that may indicate a malicious intrusion or event)
+    - Behavior-based IDSs use the baseline, activity statistics, and heuristic evaluation techniques to compare current activity against previous activity to detect potentially malicious events
 
 [7.3](#7.3) Perform Configuration Management (CM) (e.g. provisioning, baselining, automation) (OSG-9 Chpt 16)
+- **Configuration Management (CM)**: the process of identifying, controlling, and verifying the configuration of systems and components throughout their lifecycle
+    - CM is an integral part of secure provisioning and relates to the proper configuration of a device at the time of deployment
+    - CM helps ensure that systems are deployed in a secure, consistent state and that they stay in a secure, consistent state throughout their lifecycle
+- **Provisioning** refers to installing and configuring the operating system and needed apps on new systems
+    - new systems should be configured to reduce vulnerabilities introduced via default configurations; the key is to harden a system based on intended useage
+- **Hardening a system**: makes it more secure than the default configuration and includes the following:
+    - disable all unused services
+    - close all unused logical ports
+    - remove all unused apps
+    - change default passwords
+- **Baseline**: in the context of configuration management, it is the starting point or starting config for a system
+    - an easy way to think of a baseline is as a list of services; an OS baseline identifies all the settings to harden specific systems
+    - many organizations use images to deploy baselines; baseline images improve the security of systems by ensuring that desired security settings are always configured correctly
+    - baseline images improve the security of systems by ensuring that desired security settings are always configured correctly; they also reduce the amount of time required to deploy and maintain systems, reducing overall maintenance costs
+- Automation: it's typical to create a baseline, and then use automated methods to add additional apps, features, or settings for specific groups of computers
+    - note that admins can use create/modify group policy settings to create domain-level standardization or to make security-related Windows registry changes
 
 [7.4](#7.4) Apply foundational security operations concepts (OSG-9 Chpt 16)
+- Security operations encompasses the day-to-day tasks, practices, and processes involved in securing and maintaining the operational integrity of an organization's information systems and assets; it includes security monitoring, incident response, and security awareness and training
+- The primary purpose of security operations practices is to safeguard assets such as information, systems, devices, facilities, and apps, and helping organizations to detect, prevent, and respond to security threats
+- Implementing common security operations concepts, along with performing periodic security audits and reviews, demonstrates a level of due care and due diligence
+
 - 7.4.1 Need-to-know/least privilege
+    - **Need-to-know principle**: imposes the requirement to grant users access only to data or resources they need to perform assigned work tasks
+    - **Least privilege principle**: states that subjects are granted only the privileges necessary to perform assigned work tasks and no more
+        - privilege in this context includes both permissions to data and rights to perform systems tasks
+        - limiting and controlling privileges based on this concept protects confidentiality and data integrity
+        - principle relies on the assumption that all users have a well-defined job description that personnel understand
+        - least privilege is typically focused on ensuring that user privileges are restricted, but it also applies to apps or processes (e.g. if an app or service is compromised, the attacker can assume the service account’s privileges)
 - 7.4.2 Separation of Duties (SoD) and responsibilities
+    - **Separation of Duties (SoD)**: ensures that no single person has total control over a critical function or system
+        - SoD policies help reduce fraud by requiring collusion between two or more people to perform unauthorized activity
+        - example of how SoD can be enforced, is by dividing the security or admin capabilities and functions among multiple trusted individuals
+    - **Two-person control**: (AKA two-man rule) requires the approval of two individuals for critical tasks
+        - using two-person controls within an org ensures peer review and reduces the likelihood of collusion and fraud
+        - ex: privilege access management (PAM) solutions that create special admin accounts for emergency use only; perhaps a password is split in half so that two people need to enter the password to log on
+    - **Split knowledge**: combines the concepts of separation of duties and two-person control into a single solution; the info or privilege required to perform an operation is divided among two or more users, ensuring that no single person has sufficient privileges to compromise the security of the environment
+
 - 7.4.3 Privilege account management
+    - **Privileged Account Management (PAM)**: solutions that restrict access to privileged accounts or detect when accounts use any elevated privileges (e.g. admin accounts)
+        - Microsoft domains, this includes local admin accounts, Domain and Enterprise Admins groups
+        - Linux includes root or sudo accounts
+    - PAM solutions should monitor actions taken by privileged accounts, new user accounts, new routes to a router table, altering config of a firewall, accessing system log and audit files
+    - Principles such as least privilege and separation of duties help prevent security policy violations, and monitoring helps to deter and detect any violations that occur despite the use of preventive controls
+
 - 7.4.4 Job rotation
+    - **Job rotation**: (AKA rotation of duties) means that employees rotate through jobs or rotate job responsibilities with other employees
+        - using job rotation as a security control provides peer review, reduces fraud, and enables cross-training
+        - job rotation policy can act as both a deterrent and a detection mechanism
 - 7.4.5 Service Level Agreements (SLA)
+    - **Service Level Agreement (SLA)**: an agreement between an organization and an outside entity, such as a vendor, where the SLA stipulates performance expectations and often includes penalties if the vendor doesn’t meet these expectations
+    - **Memoradum of Understanding (MOU)**: documents the intention of two entities to work together toward a common goal
 
 [7.5](#7.5) Apply resource protection (OSG-9 Chpt 16)
 - 7.5.1 Media management
