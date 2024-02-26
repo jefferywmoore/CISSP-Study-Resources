@@ -186,6 +186,8 @@
     - **UEBA (aka UBA)**: focuses on the analysis of user and entity behavior; analysis engines are typically included with SIEM solutions or may be added via subscription
     - **Behavior-based detection**: AKA statistical intrusion, anomaly, and heuristics-based detection, starts by creating a baseline of normal activities and events; once enough baseline data has been accumulated to determine normal activity, it can detect abnormal activity (that may indicate a malicious intrusion or event)
     - Behavior-based IDSs use the baseline, activity statistics, and heuristic evaluation techniques to compare current activity against previous activity to detect potentially malicious events
+    - **Static code scanning techniques**: the scanner scans code in files, similar to white box testing
+    - **Dynamic techniques**: the scanner runs executable files in a sandbox to observe their behavior.
 
 [7.3](#7.3) Perform Configuration Management (CM) (e.g. provisioning, baselining, automation) (OSG-9 Chpt 16)
 - **Configuration Management (CM)**: the process of identifying, controlling, and verifying the configuration of systems and components throughout their lifecycle
@@ -225,14 +227,14 @@
         - using two-person controls within an org ensures peer review and reduces the likelihood of collusion and fraud
         - ex: privilege access management (PAM) solutions that create special admin accounts for emergency use only; perhaps a password is split in half so that two people need to enter the password to log on
     - **Split knowledge**: combines the concepts of separation of duties and two-person control into a single solution; the info or privilege required to perform an operation is divided among two or more users, ensuring that no single person has sufficient privileges to compromise the security of the environment
+    - Principles such as least privilege and separation of duties help prevent security policy violations, and monitoring helps to deter and detect any violations that occur despite the use of preventive controls
 
 - 7.4.3 Privilege account management
     - **Privileged Account Management (PAM)**: solutions that restrict access to privileged accounts or detect when accounts use any elevated privileges (e.g. admin accounts)
         - Microsoft domains, this includes local admin accounts, Domain and Enterprise Admins groups
         - Linux includes root or sudo accounts
     - PAM solutions should monitor actions taken by privileged accounts, new user accounts, new routes to a router table, altering config of a firewall, accessing system log and audit files
-    - Principles such as least privilege and separation of duties help prevent security policy violations, and monitoring helps to deter and detect any violations that occur despite the use of preventive controls
-
+    
 - 7.4.4 Job rotation
     - **Job rotation**: (AKA rotation of duties) means that employees rotate through jobs or rotate job responsibilities with other employees
         - using job rotation as a security control provides peer review, reduces fraud, and enables cross-training
@@ -242,38 +244,287 @@
     - **Memoradum of Understanding (MOU)**: documents the intention of two entities to work together toward a common goal
 
 [7.5](#7.5) Apply resource protection (OSG-9 Chpt 16)
+- Media management should consider all types of media as well as short- and long-term needs and evaluate:
+    - Confidentiality
+    - Access speeds
+    - Portability
+    - Durability
+    - Media format
+    - Data format
+- For the test, data storage media should include any of the following:
+    - Paper
+    - Microforms (microfilm and microfiche)
+    - Magnetic (HD, disks, and tapes)
+    - Flash memory (SSD and memory cards)
+    - Optical (CD and DVD)
+ - Mean Time Between Failure (MTBF) is an important criterion when evaluating storage media, especially where valuable or sensitive information is concerned
+ - Media management includes the protection of the media itself, which typically involves policies and procedures, access control mechanisms, labeling and marking, storage, transport, sanitization, use, and end-of-life
 - 7.5.1 Media management
+    - **Media management**: refers to the steps taken to protect media (i.e. anything that can hold data) and the data stored on that media; includes mostt portable devices (e.g. smart phones, memory/flash cards etc)
+    - As above, OSG-9 also refers to tape media, as well as “hard-copy data”
 - 7.5.2 Media protection techniques
+    - If media includes sensitive info, it should be stored in a secure location with strict access controls to prevent loss due to unauthorized access
+        - any location used to store media should have temperature and humidity controls to prevent losses due to corruption
+    - Media management can also include technical controls to restrict device access from computer systems
+    - When media is marked, handled, and stored properly, it helps prevent unauthorized disclosure (loss of confidentiality), unauthorized modification (loss of integrity), and unauthorized destruction (loss of availability)
 
 [7.6](#7.6) Conduct incident management (OSG-9 Chpt 17)
+- Incident response is the process to detect and respond to incidents and to reduce the impact when incidents occur; it attempts to keep a business operating or restore operations as quickly as possible in the wake of an incident
+- Incident management is usually conducted by an Incident Response Team (IRT), which comprises individuals with the required expertise and experience to manage security incidents; the IRT is accountable for implementing the incident response plan, which is a written record that defines the processes to be followed during each stage of the incident response cycle
+
+- The main goals of incident response:
+    - Provide an effective and efficient response to reduce impact to the organization
+    - Maintain or restore business continuity
+    - Defend against future attacks
+
+- An important distinction needs to be made to know when an incident response process should be initiated: events take place continually, and the vast majority are insignificant; however, events that lead to some type of adversity can be deemed incidents, and those incidents should trigger an org's incident response process steps:
+    - **Preparation**: includes developing the IR process, assigning IR team members, and everything related to what happens when an incident is identified; preparation is critical, and will anticipate the steps to follow
+    - **Analysis:** Gathering and analyzing information about the incident to determine its scope, impact, and root cause (e.g., by interviewing witnesses, collecting and analyzing evidence, and reviewing system logs).
+    - **Containment:** Limiting the impact of the incident and preventing further damage (e.g., by isolating affected systems, changing passwords, and implementing security controls).
+    - **Eradication:** Removing the cause of the incident (e.g., by removing malware, patching vulnerabilities, and disabling compromised accounts).
+    - **Recovery:** Restoring systems and data to their normal state (e.g., by restoring from backups, rebuilding systems, and re-enabling compromised accounts).
+    - **Lessons Learned:** Documenting the incident and learning from it to improve future responses (e.g., by identifying areas where the incident response process can be improved and by sharing lessons learned with other organizations)
+
+- The following steps (Detection, Response, Migtation, Reporting, Recovery, Remediation, and Lessons Learned) are on the exam
 - 7.6.1 Detection
+    - **Detection:** the identification of potential security incidents via monitoring and analyzing security logs, threat intelligence, or incident reports; as above, understanding the distinction between an event and an incident, the goal of detection is to identify an adverse event (an incident) and begin dealing with it
+    - Common methods to detect incidents:
+        - intrusion detection and prevention systems
+        - antimalware
+        - automated tools that scan audit logs looking for predefined events
+        - end users sometimes detect irregular activity and contact support
+    - Note: receiving an alert or complaint doesn’t always mean an incident has occurred
 - 7.6.2 Response
+    - After detecting and verifying an incident, the next step is activate an Incident Response (IR) or CSIRT team 
+    - An IR team is AKA computer incident response team (CIRT) or computer security incident response team (CSIRT)
+    - Among the first steps taken by the IR Team will be an impact assessment to determine the scale of the incident, how long the impact might be experienced, who else might need to be involved etc.
+    - The IR team typicall investigate the incident, assess the damage, collect evidence, report the incident, perform recovery procedures, and participate in the remediation and lessons learned stages, helping with root cause analysis
+    - its important to protect all data as evidence during an investigation, and computers should not be turned off
+
 - 7.6.3 Mitigation
+    - **Migitation**: attempt to contain an incident; in addition to conducting an impact assessment, the IR Team will attempt to minimize or contain the damage or impact from the incident
+    - The IR Team's job at this point is not to fix the problem; it's simply to try and prevent further damage
+    - Note this may involve disconnecting a computer from the network; sometimes responders take steps to mitigate the incident, but without letting the attacker know that the attack has been detected
+
 - 7.6.4 Reporting
+    - Reporting occurs throughout the incident response process 
+    - Once an incident is mitigated, formal reporting occurs because numerous stakeholders often need to understand what has happened
+    - Jurisdictions may have specific laws governing the protection of personally identifiable information (PII), and must report if it's been exposed
+    - Additionally, some third-party standards, such as the Payment Card Industry Data Security Standard (PCI DSS), require orgs to report certain security incidents to law enforcement
+
 - 7.6.5 Recovery
+    - At this point, the goal is to start returning to normal
+    - Recovery is the next step, returning a system to a fully functioning state
+    - The most secure method of restoring a system after an incident is completely rebuilding the system from scratch, including restoring all data from the most recent backup
+        - effective configuration and change management will provide the necessary documentation to ensure the rebuilt systems are configured properly
+    - According to the OGS, you should check these areas as part of recovery:
+        - access control lists (ACLs), including firewall or router rules
+        - services and protocols, ensuring the unneeded services and protocols are disabled or removed
+        - patches
+        - user accounts, ensuring they have changed from default configs
+        - known compromises have been reversed
+
 - 7.6.6 Remediation
+    - Remediation stage: personnel look at the incident, identify what allowed it to occur, and then implement methods to prevent it from happening again
+    - Remediation includes performing a root cause analysis (which examines the incident to determine what allowed it to happen), and if  the root cause analysis identifies a vulnerability that can be mitigated, this stage will recommend a change
+
 - 7.6.7 Lessons Learned
+    - Lessons learned stage: an all-encompassing view of the situation related to an incident, where personnel, including the IR team and other key stakeholders, examine the incident and the response to see if there are any lessons to be learned
+        - the output of this stage can be fed back to the detection stage of incident management
+    - It's common for the IR team to create a report when they complete a lessons learned review
+        - based on the findings, the team may recommend changes to procedures, the addition of security controls, or even changes to policies
+        - management will decide what recommendations to implement and is responsible for the remaining risk for any recommendations they reject
+
+- NOTE: Incident management DOES NOT include a counterattack against the attacker
+
+- Incident Response Summary:
+
+    | Step | Stage | Action/Goal |  
+    |--------|---------------| -----------|
+    | Preparation|||
+    | Detection  | Triage||
+    | Response | Triage| activate IR team |
+    | Mitigation  | Investigate| containment|
+    | Reporting  | Investigate||
+    | Recovery | Recovery | return to normal|
+    | Remediation  | Recovery| prevention|
+    | Lessons Learned | Recovery| improve process|
+
 
 [7.7](#7.7) Operate and maintain detective and preventative measures (OSG-9 Chpts 11,17)
-- 7.7.1 Firewalls (e.g. next generation, web application, network)
-- 7.7.2 Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)
-- 7.7.3 Whitelisting/blacklisting
-- 7.7.4 Third-party provided security services
-- 7.7.5 Sandboxing
-- 7.7.6 Honeypots/honeynets
-- 7.7.7 Anti-malware
-- 7.7.8 Machine learning and Artificial Intelligence (AI) based tools
 
+- As noted in Domain 1, a preventive or preventative control is deployed to thwart or stop unwanted or unauthorized activity from occurring
+    - Examples:
+        - fences
+        - locks
+        - biometrics
+        - separation of duties policies
+        - job rotation policies
+        - data classification
+        - access control methods
+        - encryption
+        - smart cards
+        - callback procedures
+        - security policies
+        - security awareness training
+        - antivirus software
+        - firewalls
+        - intrusion prevention systems
+- A detective control is deployed to discover or detect unwanted or unauthorized activity; detective controls operate after the fact
+    - Examples:
+        - security guards
+        - motion detectors
+        - recording and reviewing of events captured by security cameras
+        - job rotation policies
+        - mandatory vacation policies
+        - audit trails
+        - honeypots or honeynets
+        - intrusion detection systems
+        - violation reports
+        - supervision and reviews of users
+        - incident investigations
+- Some preventative measures:
+    - Keep systems and applications up to date
+    - Remove or disable unneeded services and protocols
+    - Use intrusion detection and prevention systems
+    - Use up-to-date antimalware software
+    - Use firewalls
+    - Implement configuration and system management processes
+    
+- 7.7.1 Firewalls (e.g. next generation, web application, network)
+    - Firewalls are preventive and technical controls
+    - Types of firewalls:
+        - application gateway firewall: filters traffic based on specific application requirements
+        - circuit-level gateway firewall: designed to provide connection security to internal and external computers in a network's session layer, they filter traffic based on the communications circuit; they do not engage in packet filtering based on packet contents
+        - third-generation firewalls: (AKA stateful inspection firewalls and dynamic packet filtering firewalls) filter traffic based on its state within a stream of traffic
+        - app firewalls: control traffic going to or from a specific app or service
+            - e.g. a web application firewall (WAF) inspects traffic going to a web server and can block malicious traffic such as SQL injection attacks and cross-site scripting (XSS) attacks
+        - next-generation firewall (NGFW): functions as a unified threat management (UTM) device and combines several capabilities, including traditional functions such as packet filtering and stateful inspection, and can also perform packet inspection allowing identification and blocking of malicious traffic
+
+- 7.7.2 Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)
+    - Intrusion Detection Systems (IDSs) and Intrusion Prevention Systems (IPSs) are two methods organizations typically implement to detect and prevent attacks
+    - **Intrusion detection**: a specific form of monitoring events, usually in real time, to detect abnormal activity indicating a potential incident or intrusion
+        - Intrusion Detection System (IDS) automates the inspection of logs and real-time system events to detect intrusion attempts and system failures
+        - IDSs are an effective method of detecting many DoS and DDoS attacks
+        - an IDS actively watches for suspicious activity by monitoring network traffic and inspecting logs
+        - an IDS is intended as part of a defense-in-depth security plan
+        - **knowledge-based detection**: AKA signature-based or pattern-matching detection, the most common method used by an IDS
+        - **behavior-based detection**: AKA statistical intrusion, anomaly, and heuristics-based detection; behavior-based IDSs use baseline, activity stats, and heuristic eval techniques to compare current activity against previous activity to detect potentially malicious events
+    - An IPS includes detection capabilities, you’ll see them referred to as intrusion detection and prevention systems (IDPSs)
+        - an IPS includes all the capabilities of an IDS but can also take additional steps to stop or prevent intrusions
+    - IDS/IPS should be deployed at strategic network locations to monitor traffic, such as at the perimeters, or between network segments, and should be configured to alert for specific types of scans and traffic patterns
+    - See NIST SP 800-94
+
+- 7.7.3 Whitelisting/blacklisting
+    - Method used to control which applications run and which applications can’t is allow list and deny list (AKA whitelists and blacklists)
+    - **Allow list**:: identifies a list of apps authorized to run on a system and blocks all other apps
+    - **Deny list**: identifies a list of apps that are not authorized to run on a system
+    - Allow and deny lists use for applications help to prevent malware infections
+    - Important to note: a system would only use one list, either allow or deny
+    - Apple iOS running on iPhones/iPads is an example of an extreme version of an allow list; users are only able to install apps from the App Store
+- 7.7.4 Third-party provided security services
+    - Some orgs outsource security services such as auditing and penetration testing to third party security services
+    - Some outside compliance entities (e.g. PCI DSS) require orgs to ensure that service providers comply
+    - OSG also mentions that some SaaS vendors provide security services via the cloud (e.g. next-gen firewalls, UTM devices, and email gateways for spam and malware filtering)
+- 7.7.5 Sandboxing
+    - **Sandboxing**: refers to a security technique where a separate, secure environment is created to run and analyze untested or untrusted programs or code without risking harm to the host device or network; this isolated environment, known as a sandbox, effectively contains the execution of the code, allowing it to run and behave as if it were in a normal computing environment, but without the ability to affect the host system or access critical resources and data 
+    - Sandboxing provides a security boundary for applications and prevents the app from interacting with other apps
+- 7.7.6 Honeypots/honeynets
+    - **Honeypots**: individual computers created as a trap or a decoy for intruders or insider threats
+    - **Honeynet**: two or more networked honeypots used together to simulate a network
+    - They look and act like legit systems, but they do not host data of any real value for an attacker; admins often configure honeypots with vulnerabilities to tempt intruders into attacking them
+    - In addition to keeping the attacker away from a production environment, the honeypot allows administrators to observe an attacker’s activity without compromising the live environment
+- 7.7.7 Anti-malware
+    - Malware is malicious software that negatively impacts a system
+    - The most important protection against malicious code is the use of antimalware software with up-to-date signature files and heuristic capabilities
+        - multi-pronged approach with antimalware software on each system in addition to filtering internet content helps protect systems from infections
+        - following the principle of least privilege, ensuring users do not have admin permissions on systems won’t be able to install apps that may be malicious
+    
+    - These are the characteristics of each malware type:
+        - virus: the defining characteristic is that it's a piece of malware that has to be triggered in some way by the user
+        - worm: malware that can self-propagate and spread through a network or a series of systems on its own by exploiting a vulnerability in those systems
+        - companion: helper software -- it's not malicious on its own; it could be something like a wrapper that accompanies the actual malware
+        - macro: associated with Microsoft Office products, and is created using a straightforward programming language to automate tasks; macros can be programmed to be malicious and harmful
+        - multipartite: means the malware spreads in different ways; (e.g. Stuxnet)
+        - polymorphic: malware that can change aspects of itself as it replicates to evade detection (e.g. file name, file size, code structure etc)
+        - trojan: A Trojan horse is malware that looks harmless or desirable but contains malicious code; trojans are often found in easily downloadable software
+        - botnet: many infected systems that have been harnessed together and act in unison
+        - boot sector infectors: pieces of malware that can install themselves in the boot sector of a drive
+        - hoaxes/pranks: not actually software, they're usually part of social engineering—via email or other means—that intends harm (hoaxes) or a joke (pranks)
+        - logic bomb: code that will execute based on some triggering event
+        - stealth: malware that uses various active techniques to avoid detection
+        - ransomware: type of malware that typically encrypts a system or a network of systems, effectively locking users out, and then demands a ransom payment (usually in the form of a digital currency) to gain access to the decryption key
+        - rootkit: Similar to stealth malware, a rootkit attempts to mask its presence on a system; typically includes a collection of malware tools that an attacker can utilize according to specific goals
+        - zero-day: is any type of malware that's never been seen in the wild before, and the vendor of the impacted product is unaware (or hasn't issued a patch), as are security companies that create anti-malware software intended to protect systems
+
+- 7.7.8 Machine learning and Artificial Intelligence (AI) based tools
+    - **AI**: gives machines the ability to do things that a human can do better or allows a machine to perform tasks that we previously thought required human intelligence
+    - **Machine Learning**: a subset of AI and refers to a system that can improve automatically through experience
+        - a ML system starts with a set of rules or guidelines
+        - an AI system starts with nothing and progressively learns the rules, creating its own algorithms as it learns the rules and applies ML techniques based on these rules
+    - Behavior-based detection is one way ML and AI can apply to cybersecurity
+        - an admin relates a baseline of normal activities and traffic on a network; the baseline in this case is similar to a set of rules given to a ML system
+        - during normal operations, it detects anomalies and reports them; if the detection is a false positive, the ML system learns
+    - An AI system starts without a baseline, monitors traffic and slowly creates its own baseline based on the traffic it observes
+        - as it creates the baseline it also looks for anomalies
+        - an AI system also relies on feedback from admins to learn if alarms are valid or false positives
 [7.8](#7.8) Implement and support patch and vulnerability management (OSG-9 Chpt 16)
+    - Patch and vulnerability management processes work together to help protect an org against emerging threats; patch management ensures that appropriate patches are applied, and vuln management helps verify that systems are not vulnerable to known threats
+    - **Patch**: (AKA updates, quick or hot fixes) a blanket term for any type of code written to correct bug or vulnerability or to improve existing software performance
+        - in the context of security, admins are primarily concerned with security patches, which are patches that affect a system’s vulns
+    - An effective patch management program ensures that systems are kept up to date with current patches
+    - **Patch Tuesday**: several big-tech orgs (e.g. Microsoft, Adobe, Oracle etc) regularly release patches on the second Tuesday of every month
+    - There are three methods for determining patch levels:
+        - agent: update software (agent) installed on devices
+        - agentless: remotely connect to each device
+        - passive: monitor traffic to infer patch levels
+    - Deploying patches can be done manually or automatically
+    - Common steps within an effective program:
+        - evaluate patches: determine if they apply to your systems
+        - test patches: test patches on an isolated, non-production system to determine if the patch causes any unwanted side effects
+        - approve the patches: after successful testing, patches are approved for deployment; it’s common to use Change Management as part of the approval process
+        - deploy the patches: after testing and approval, deploy the patches; many orgs use automated methods to deploy patches, via third-party or the software vendor
+        - verify that patches are deployed: regularly test and audit systems to ensure they remain patched
+    - **Vulnerability Management**: regularly identifying vulns, evaluating them, and taking steps to mitigate risks associated with them 
+        - it isn’t possible to eliminate risks, and it isn’t possible to eliminate all vulnerabilities
+        - a vuln managment program helps ensure that an org is regularly evaluating vulns and mitigating those that represent the greatest risk
+        - one of the most common vulnerabilities within an org is an unpatched system, and so a vuln management program will often work in conjunction with a patch management program
 
 [7.9](#7.9) Understand and participate in change management processes (OSG-9 Chpt 16)
+- **Change management**: ensures that the costs and benefits of changes are analyzed and changes are made in a controlled manner to reduce risks
+    - Change management processes allow various IT experts to review proposed changes for unintended consequences before implementing
+    - Change management controls provide a process to control, document, track, and audit all system changes
+- The change management process includes multiple steps that build upon each other:
+    - Change request: a change request can come from any part of an org and pertain to almost any topic; companies typically use some type of change management software
+    - Assess impact: after a change request is made, however small the request might be, the impact of the potential change must be assessed
+    - Approval/reject: based on the requested change and related impact assessment, common sense plays a big part in the approval process
+    - Build and test: after approval, any change should be developed and tested, ideally in a test environment
+    - Schedule/notification: prior to implementing any change, key stakeholders should be notified
+    - Implement: after testing and notification of stakeholders, the change should be implemented; it's important to have a roll-back plan, allowing personnel to undo the change
+    - Validation: once implemented, senior management and stakeholders should again be notified to validate the change
+    - Document the change: documentation should take place at each step; it's critical to ensure all documentation is complete and to identify the version and baseline related to a given change
+- When a change management process is enforced, it creates documentation for all changes to a system, providing a trail of info if personnel need to reverse the change, or make the same change on other systems
+- Change management control is a mandatory element for some security assurance requirements (SARs) in the ISO Common Criteria
 
 [7.10](#7.10) Implement recovery strategies (OSG-9 Chpt 18)
+- **Recovery strategy**: a plan for restoring critical business components, systems, and operations following a disruption
+- **Disaster recovery (DR)**: set of practices that enables an organization to minimize loss of, and restore, mission-critical technology infrastructure after a catastrophic incident 
+- **Business continuity (BC)**: set of practices that enables an organization to continue performing its critical functions through and after any disruptive event
 - 7.10.1 Backup storage strategies
 - 7.10.2 Recovery site strategies
 - 7.10.3 Multiple processing sites
 - 7.10.4 System resilience, High Availability (HA), Quality of Service (QoS), and fault tolerance
-
+    - **System resilience**: the ability of a system to maintain an acceptable level of service during an adverse event
+     - **High Availability (HA)**: the use of redundant technology components to allow a system to quickly recover from a failure after experiencing a brief disruption
+     - **Quality of Service (QoS)**: controls protect the availability of data networks under load
+        - many factors contribute to the quality of the end-user experience and QoS attempts to manage all of these factors to create an experience that meets business requirements
+        - factors contributing to QoS:
+            - bandwidth: the network capacity available to carry communications
+            - latency: the time it takes a packet to travel from source to destination
+            - packet loss: some packets may be lost between source and destination, requiring re-transmission
+            - interference: electrical noise, faulty equipment, and other factors may corrupt the contents of packets
+    - **fault tolerance**: the ability of a system to suffer a fault but continue to operate
+   
 [7.11](#7.11) Implement Disaster Recovery (DR) processes (OSG-9 Chpt 18)
 - 7.11.1 Response
 - 7.11.2 Personnel
