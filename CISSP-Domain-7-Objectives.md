@@ -353,7 +353,7 @@
 
 [7.7](#7.7) Operate and maintain detective and preventative measures (OSG-9 Chpts 11,17)
 
-- As noted in Domain 1, a preventive or preventative control is deployed to thwart or stop unwanted or unauthorized activity from occurring
+- As noted in [Domain 1](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-1-Objectives.md#1.10), a preventive or preventative control is deployed to thwart or stop unwanted or unauthorized activity from occurring
     - Examples:
         - fences
         - locks
@@ -468,27 +468,29 @@
     - An AI system starts without a baseline, monitors traffic and slowly creates its own baseline based on the traffic it observes
         - as it creates the baseline it also looks for anomalies
         - an AI system also relies on feedback from admins to learn if alarms are valid or false positives
+
 [7.8](#7.8) Implement and support patch and vulnerability management (OSG-9 Chpt 16)
-    - Patch and vulnerability management processes work together to help protect an org against emerging threats; patch management ensures that appropriate patches are applied, and vuln management helps verify that systems are not vulnerable to known threats
-    - **Patch**: (AKA updates, quick or hot fixes) a blanket term for any type of code written to correct bug or vulnerability or to improve existing software performance
-        - in the context of security, admins are primarily concerned with security patches, which are patches that affect a system’s vulns
-    - An effective patch management program ensures that systems are kept up to date with current patches
-    - **Patch Tuesday**: several big-tech orgs (e.g. Microsoft, Adobe, Oracle etc) regularly release patches on the second Tuesday of every month
-    - There are three methods for determining patch levels:
-        - agent: update software (agent) installed on devices
-        - agentless: remotely connect to each device
-        - passive: monitor traffic to infer patch levels
-    - Deploying patches can be done manually or automatically
-    - Common steps within an effective program:
-        - evaluate patches: determine if they apply to your systems
-        - test patches: test patches on an isolated, non-production system to determine if the patch causes any unwanted side effects
-        - approve the patches: after successful testing, patches are approved for deployment; it’s common to use Change Management as part of the approval process
-        - deploy the patches: after testing and approval, deploy the patches; many orgs use automated methods to deploy patches, via third-party or the software vendor
-        - verify that patches are deployed: regularly test and audit systems to ensure they remain patched
-    - **Vulnerability Management**: regularly identifying vulns, evaluating them, and taking steps to mitigate risks associated with them 
-        - it isn’t possible to eliminate risks, and it isn’t possible to eliminate all vulnerabilities
-        - a vuln managment program helps ensure that an org is regularly evaluating vulns and mitigating those that represent the greatest risk
-        - one of the most common vulnerabilities within an org is an unpatched system, and so a vuln management program will often work in conjunction with a patch management program
+
+- Patch and vulnerability management processes work together to help protect an org against emerging threats; patch management ensures that appropriate patches are applied, and vuln management helps verify that systems are not vulnerable to known threats
+- **Patch**: (AKA updates, quick or hot fixes) a blanket term for any type of code written to correct bug or vulnerability or to improve existing software performance
+    - in the context of security, admins are primarily concerned with security patches, which are patches that affect a system’s vulns
+- An effective patch management program ensures that systems are kept up to date with current patches
+- **Patch Tuesday**: several big-tech orgs (e.g. Microsoft, Adobe, Oracle etc) regularly release patches on the second Tuesday of every month
+- There are three methods for determining patch levels:
+    - agent: update software (agent) installed on devices
+    - agentless: remotely connect to each device
+    - passive: monitor traffic to infer patch levels
+- Deploying patches can be done manually or automatically
+- Common steps within an effective program:
+    - evaluate patches: determine if they apply to your systems
+    - test patches: test patches on an isolated, non-production system to determine if the patch causes any unwanted side effects
+    - approve the patches: after successful testing, patches are approved for deployment; it’s common to use Change Management as part of the approval process
+    - deploy the patches: after testing and approval, deploy the patches; many orgs use automated methods to deploy patches, via third-party or the software vendor
+    - verify that patches are deployed: regularly test and audit systems to ensure they remain patched
+- **Vulnerability Management**: regularly identifying vulns, evaluating them, and taking steps to mitigate risks associated with them 
+    - it isn’t possible to eliminate risks, and it isn’t possible to eliminate all vulnerabilities
+    - a vuln managment program helps ensure that an org is regularly evaluating vulns and mitigating those that represent the greatest risk
+    - one of the most common vulnerabilities within an org is an unpatched system, and so a vuln management program will often work in conjunction with a patch management program
 
 [7.9](#7.9) Understand and participate in change management processes (OSG-9 Chpt 16)
 - **Change management**: ensures that the costs and benefits of changes are analyzed and changes are made in a controlled manner to reduce risks
@@ -511,11 +513,95 @@
 - **Disaster recovery (DR)**: set of practices that enables an organization to minimize loss of, and restore, mission-critical technology infrastructure after a catastrophic incident 
 - **Business continuity (BC)**: set of practices that enables an organization to continue performing its critical functions through and after any disruptive event
 - 7.10.1 Backup storage strategies
+    - Backup strategies are driven by org goals and objectives and usually focus on backup and restore time as well as storage needs
+    - **Archive bit**: technical detail (metadata) that indicates the status of a backup relative to a given backup strategy
+        - 0 = no changes to the file or no backup required
+        - 1 = file has been modified or backup required
+    - Different backup strategies deal with the archive bit differently; Incremental and differential backup strategies don't treat the archive bit in the same manner
+        - once a full backup is complete, the archive bit on every file is reset, turned off, or set to 0
+    - Three types of backups:
+        - **Full backup**: store a complete copy of the data contained on the protected device; full backups duplicate every file on the system regardless of the setting of the archive bit
+        - **Incremental backup**: changes since the last incremental backup
+            - only files that have the archive bit turned on, enabled, or set to 1 are duplicated
+            - once an incremental backup is complete, the archive bit on all duplicated files is reset, turned off, or set to 0
+        - **Differential backup**: changes since the last full backup
+            - only files that have the archive bit turned on, enabled, or set to 1 are duplicated
+            - unlike full and incremental backups, the differential backup process does not change the archive bit
+        - the most important difference between incremental and differential backups is the time needed to restore data in the event of an emergency
+            - a combination of full and differential backups will require only two backups to be restored: the most recent full backup and the most recent differential backup
+            - a combination of full backups with incremental backups will require restoration of the most recent full backups as well as all incremental backups performed since that full backup
+            - differential backups don’t take as long to restore, but they take longer to create than incremental
+    - Backup storage best practices include keeping copies of the media in at least one offsite location to provide redundancy should the primary location be unavailable, incapacitated, or destroyed; common strategy is to store backups in a cloud service that is itself geographically redundant
+    - Two commmon backup strategies:
+        1) full backup on Monday night, then run differential backups every other night of the week
+            - if a failure occurs Saturday morning, restore Monday’s full backup and then restore only Friday’s differential backup
+        2) full backup on Monday night, then run incremental backups every other night of the week
+            - if a failure occurs Saturday morning, restore Monday’s full backup and then restore each incremental backup in the original chronological order
+
+
+    | Feature    | Full Backup  | Incremental Backup | Differential Backup |
+    |---------------|------------------|-----------------------|--------------|
+    | **Description**  | A complete copy of all selected data  | Only backs up data that has changed since the last backup (regardless of type) | Backs up all changes made since the last full backup |
+    | **Storage Space**     | Requires the most storage space                     | Requires the least storage space                    | Requires more space than incremental but less than full |
+    | **Backup Speed**      | Slowest, as it copies all data                      | Fastest, as it only copies changed data since the last backup | Faster than full but slower than incremental, as it copies all changes since the last full backup |
+    | **Recovery Speed**    | Fastest, as all data is in one place                | Slowest, as it may require multiple incremental backups to restore to a specific point | Faster than incremental since it requires the last full backup and the last differential backup |
+    | **Complexity**        | Simplest, with no dependency on previous backups    | Complex, as it depends on a chain of backups from the last full backup to the most recent incremental backup | Less complex than incremental, requires the last full backup and the last differential backup for restoration |
+    | **Best Use Case**     | When backup time and storage space are not issues Ideal for less frequent backups | Suitable for environments where daily changes are minimal and quick backups are necessary | Ideal for environments where storage space is a concern but restoration time needs to be relatively quick |
+
+
+    - Three main techniques used to create offsite copies of DB content: electronic vaulting, remote journaling, and remote mirroring
+        - **electronic vaulting**: where database backups are moved to a remote site using bulk transfers
+        - **remote journaling**: data transfers are performed in a more expeditious manner; remote journaling is similar to electronic vaulting in that transaction logs transferred to the remote site are not applied to a live database server but are maintained in a backup device
+        - **remote mirroring**: the most advanced db backup solution, and the most expensive, with remote mirroring, a live db server is maintained at the backup site; the remote server receives copies of the db modifications at the same time they are applied to the production server at the primary site
 - 7.10.2 Recovery site strategies
+    - Non-disaster: service disruption with significant but limited impact
+    - Disaster: event that causes an entire site to be unusable for a day or longer (usually requires alternate processing facility)
+    - Catastrophe: major disruption that destroys the facility altogether
+    - For disasters and catastrophes, an org has 3 basic options:
+        - use a dedicated site that the org owns/operates
+        - lease a commercial facility (hot, warm, cold site)
+        - enter into a formal agreement with another facility/org
+    - When a disaster interrupts a business, a disaster recovery plan should kick in nearly automatically and begin providing support for recovery operations
+        -in addition to improving your response capabilities, purchasing insurance can reduce the impact of financial losses
+    - Recovery site strategies consider multiple elements of an organization, such as people, data, infrastructure, and cost, as well as factors like availability and location
+    - When designing a disaster recovery plan, it’s important to keep your goal in mind — the restoration of workgroups to the point that they can resume their activities in their usual work locations
+        - sometimes it's best to develop separate recovery facilities for different work groups
+    - To recover your business operations with the greatest possible efficiency, you should engineer the disaster recovery plan so that those business units with the highest priority are recovered first
+    
 - 7.10.3 Multiple processing sites
+    - One of the most important elements of the disaster recovery plan is the selection of alternate processing sites to be used when the primary sites are unavailable
+        - **cold sites**: standby facilities large enough to handle the processing load of an organization and equipped with appropriate electrical and environmental support systems
+            - a cold site has NO COMPUTING FACILITIES (hardware or software) preinstalled
+            - a cold site has no active broadband comm links
+            - advantages:
+                - a cold site is the LEAST EXPENSIVE OPTION and perhaps the most practical
+            - disadvantages:
+                - tremendous lag to activate the site, often measured in weeks, which can yield a false sense of security
+                - difficult to test
+        - **warm sites**: a warm site is better than a cold site because, in addition to the shell of a building, basic equipment is installed
+            - a warm site contains the data links and preconfigured equipment necessary to begin restoring operations, but no usable data for information
+            - unlike hot sites, however, warm sites do not typically contain copies of the client’s data
+            - activation of a warm site typically takes at least 12 hours from the time a disaster is declared
+        - **hot sites**: a backup facility that is maintained in constant working order, with a full complement of servers, workstations, and comm links
+            - a hot site is usually a subscription service
+            - the data on the primary site servers is periodically or continuously replicated to corresponding servers at the hot site, ensuring that the hot site has up-to-date data
+            - advantages:
+                - unsurpassed level of disaster recovery protection
+            - disadvanages:
+                - extremely costly, likely doubling an org’s budget for hardware, software and services, and requires the use of additional employees to maintain the site
+                - has (by definition) copies of all production data, and therefore increases your attack surface
+        - **Mobile sites**: non-mainstream alternatives to traditional recovery sites; usually configured as cold or warm sites, if your DR plan depends on a workgroup recovery strategy, mobile sites are an excellent way to implement that approach
+        - Cloud computing: many orgs now turn to cloud computing as their preferred disaster recovery option
+            - some companies that maintain their own datacenters may choose to use these IaaS options as backup service providers
+    - Note: A hot site is a subscription service, while a redundant site, in contrast, is a site owned and maintained by the org (and a redudant site may be "hot" in terms of capabilities)
+        - the exam differentiates between a hot site (a subscription service) and a redundant site (owned by the organization)
+
 - 7.10.4 System resilience, High Availability (HA), Quality of Service (QoS), and fault tolerance
     - **System resilience**: the ability of a system to maintain an acceptable level of service during an adverse event
      - **High Availability (HA)**: the use of redundant technology components to allow a system to quickly recover from a failure after experiencing a brief disruption
+        - **Clustering**: refers to a group of systems working together to handle workloads; often seen in the context of web servers that use a load balancer to manage incoming traffic, and distributes requests to multiple web servers (the cluster)
+        - **Redundancy**: unlike a cluster, where all members work together, redundancy typically involves a primary and secondary system; the primary system does all the work, and the secondary system is in standby mode unless the primary system fails, at which time activity can fail over to the secondary
+        - Both clustering and redundancy include high availability as a by-product of their configuration
      - **Quality of Service (QoS)**: controls protect the availability of data networks under load
         - many factors contribute to the quality of the end-user experience and QoS attempts to manage all of these factors to create an experience that meets business requirements
         - factors contributing to QoS:
@@ -523,18 +609,82 @@
             - latency: the time it takes a packet to travel from source to destination
             - packet loss: some packets may be lost between source and destination, requiring re-transmission
             - interference: electrical noise, faulty equipment, and other factors may corrupt the contents of packets
-    - **fault tolerance**: the ability of a system to suffer a fault but continue to operate
+    - **Fault tolerance**: the ability of a system to suffer a fault but continue to operate
+    - **Redundant array of independent disks (RAID)**: refers to multiple drives being used in unison in a system to achieve greater speed or availability; the most well-known RAID levels are:
+        - RAID 0—Striping: provides significant speed, writing and reading advantages
+        - RAID 1—Mirroring: uses redundancy to provide reliable availability of data
+        - RAID 10—Mirroring and Striping: requires a minimum of four drives and provides the benefits of striping (speed) and mirroring (availability) in one solution; this type of RAID is typically one of the most expensive
+        - RAID 5—Parity Protection: requires a minimum of three drives and provides a cost-effective balance between RAID 0 and RAID 1; RAID 5 utilizes a parity bit, computed from an XOR operation, for purposes of storing and restoring data
+
+
+
+    | Backup Method | Cost Implications                                                          | Time Implications for RPO                      |
+    |---------------|----------------------------------------------------------------------------|-----------------------------------------------|
+    | Incremental   | Lower cost due to reduced storage requirements as only changes are backed up | Longer recovery time as it requires the last full backup plus all subsequent incremental backups until the RPO |
+    | Differential  | Moderate cost; more storage is needed than incremental, but less than full, as it stores all changes since the last full backup | Faster recovery than incremental as it requires the last full backup and the last differential backup up to the RPO |
+    | Replication   | Higher cost due to the need for a duplicate environment ready to take over at any time; continuous data replication can also increase bandwidth costs | Minimal recovery time as the data is continuously updated, allowing for near-instant recovery up to the latest point before failure |
+    | Clustering    | Highest cost because it involves multiple servers (cluster) working together to provide high availability and redundancy | Minimal recovery time as the system is designed for immediate failover without data loss, ensuring the RPO can be met instantaneously |
+
+
+    | Site Recovery Method | Cost Implications                                                                 | Time Implications for RTO                         |
+    |----------------------|-----------------------------------------------------------------------------------|---------------------------------------------------|
+    | Cold Site            | Lowest cost option; facilities and infrastructure are available, but equipment and data need to be set up post-disaster | Longest recovery time as systems and data must be configured and restored from backups Suitable for non-critical applications with more flexible RTOs |
+    | Warm Site            | Moderate cost; a compromise between cold and hot sites, includes some pre-installed hardware and connectivity that can be quickly activated | Faster recovery than a cold site as the infrastructure is partially ready, but data and systems might still need updates to be fully operational |
+    | Hot Site             | High cost; a duplicate of the original site with full computer systems and near-real-time replication of data and ready to take over operations immediately | Minimal recovery time, designed for seamless takeover with data and systems up-to-date, allowing for critical operations to continue with little to no downtime |
+    | Redundant Site       | Highest cost; essentially operates as an active-active configuration where both sites are running simultaneously, fully mirroring each other | Instantaneous recovery, as the redundant site is already running in parallel with the primary site, ensuring no interruption in service |
+
+
    
 [7.11](#7.11) Implement Disaster Recovery (DR) processes (OSG-9 Chpt 18)
+
+- **Business Continuity Management (BCM)**: the process and function by which an organization is responsible for creating, maintaining, and testing BCP and DRP plans
+- **Business Continuity Planning (BCP)**: focuses on the survival of the business processes when something unexpected impacts it
+- **Disaster Recovery Planning (DRP)**: focuses on the recovery of vital technology infrastructure and systems
+    - BCM, BCP, and DRP are ultimately used to achieve the same goal: the continuity of the business and its critical and essential functions, processes, and services
+- The key BCP/DRP steps are:
+    - Develop contingency planning policy
+    - Conduct BIA
+    - Identify controls
+    - Create contingency strategies
+    - Develop contingency plan
+    - Ensure testing, training, and exercises
+    - Maintenance
+
+- Four key measurements for BCP and DRP procedures:
+    - RPO (recovery point objective): max tolerable data loss measured in time
+    - RTO (recovery time objective): max tolerable time to recover systems to a defined service level
+    - WRT (work recovery time): max time available to verify system and data integrity as part of the resumption of normal ops
+    - MTD (max tollerable downtime): max time-critical system, function, or process can be disrupted before unacceptable/irrecoverable consequences to the business
+
 - 7.11.1 Response
+    - A disaster recovery plan should contain simple yet comprehensive instructions for essential personnel to follow immediately upon recognizing that a disaster is in progress or imminent
+    - Emergency-response plans are often put together in a form of checklists provided to responders; arrange the checklist tasks in order of priority, with the most important task first!
+    - The response plan should include clear criteria for activation of the disaster recovery plan, define who has the authority to declare a disaster, and then discuss notification procedures
 - 7.11.2 Personnel
+    - A disaster recovery plan should contain a list of personnel to contact in the event of a disaster
+        - usually includes key members of the DRP team as well as critical personnel
+    - Businesses need to make sure employees are trained on DR procedures and that they have the necessary resources to implement the DR plan
+	- Key activities involved in preparing people and procedures for DR include:
+		- develop DR training programs
+		- conduct regular DR drills
+		- provid eemployees with necessary resources and tools to implement the DR plan
+		- communicate the DR plan to all employees
 - 7.11.3 Communications
+    - Ensure that response checklists provide first responders with a clear plan to protect life and property and ensure the continuity of operations
+        - the notification checklist should be supplied to all personnel who might respond to a disaster
 - 7.11.4 Assessment
 - 7.11.5 Restoration
 - 7.11.6 Training and awareness
 - 7.11.7 Lessons learned
 
 [7.12](#7.12) Test Disaster Recovery Plans (DRP) (OSG-9 Chpt 18)
+- Every DR plan must be tested on a periodic basis to ensure that the plan’s provisions are viable and that it meets an org’s changing needs
+- the five main test types:
+    - checklist tests
+    - structured walk-throughs
+    - simulation tests
+    - parallel tests
+    - full-interruption tests
 - 7.12.1 Read-through/tabletop
 - 7.12.2 Walkthrough
 - 7.12.3 Simulation
