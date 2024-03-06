@@ -673,9 +673,41 @@
     - Ensure that response checklists provide first responders with a clear plan to protect life and property and ensure the continuity of operations
         - the notification checklist should be supplied to all personnel who might respond to a disaster
 - 7.11.4 Assessment
+    - When the DR team arrives on site, one of their first tasks is to assess the situation
+        - this normally occurs in a rolling fashion, with the first responders performing a simple assessment to triage the situation and get the disaster response under way
+        - as the incident progresses more detailed assessments will take place to gauge effectiveness, and prioritize the assignment of resources
+    
 - 7.11.5 Restoration
+    - Note that recovery and restoration are separate concepts
+    - **Restoration**: bringing a business facility and environment back to a workable state
+    - **Recovery**: bringing business operations and processes back to a working state
+    - System recovery includes the restoration of all affected files and services actively in use on the system at the time of the failure or crash
+    - When designing a disaster recovery plan, it’s important to keep your goal in mind — the restoration of workgroups to the point that they can resume their activities in their usual work locations
+
 - 7.11.6 Training and awareness
+    - As with a business continuity plan, it is essential that you provide training to all personnel who will be involved in the disaster recovery effort
+    - When designing a training plan consider the following:
+        - orientation training for all new employees
+        - initial training for employees taking on a new DR role for the first time
+        - detailed refresher training for DR team members
+        - brief awareness refreshers for all other employees
 - 7.11.7 Lessons learned
+    - A lessons learned session should be conducted at the conclusion of any disaster recovery operation or other security incident
+    - The lessons learned process is designed to provide everyone involved with the incident response effort an opportunity to reflect on their individual roles and the teams overall response
+    - Time is of the essence in conducting a lesson learned, before memories fade
+    - Usually a lessons learned session is led by trained facilitators
+    - NIST SP 800-61 offers a series of questions to use in the lessons learned process:
+        - exactly what happened and at what times?
+        - how well did staff and management perform in dealing with the incident?
+        - were documented procedures followed?
+        - were the procedures adequate?
+        - were any steps or actions taken that might have inhibited the recovery?
+        - what would the staff and management do differently the next time a similar incident occurs?
+        - how could information sharing with other organizations have been improved?
+        - what corrective actions can prevent similar incidents in the future?
+        - what precursors or indicators should be watched for in the future to detect similar incidents?
+        - what additional tools or resources are needed to detect, analyze, and mitigate future incidents?
+    - The team leader to document the lessons learned in a report that includes suggested process improvement actions
 
 [7.12](#7.12) Test Disaster Recovery Plans (DRP) (OSG-9 Chpt 18)
 - Every DR plan must be tested on a periodic basis to ensure that the plan’s provisions are viable and that it meets an org’s changing needs
@@ -686,19 +718,79 @@
     - parallel tests
     - full-interruption tests
 - 7.12.1 Read-through/tabletop
+    - **Read-through test**: one of the simplest to conduct, but also one of the most critical; copies of a DR plan are distributed to the members of the DR team for review, accomplishing three goals:
+        - ensure that key personnel are aware of their responsibilities and have that knowledge refreshed periodically
+        - provide individuals with an opportunity to review and update plans, remvoving obsolete info
+        - helps identify situations in which key personnel have left the company and the DR responsibility needs to be re-assigned (note that DR responsibilities should be included in job descriptions)
 - 7.12.2 Walkthrough
+    - **Structured walk-through**: AKA tabletop exercise, takes testing one step further, where members of the DR team gather in a large conference room and role-play a disaster scenario
+        - the team refers to their copies of the DR plan and discuss the appropriate responses to that particular type of disaster
 - 7.12.3 Simulation
+    - **Simulation tests**: similar to the structured walk-throughs, where team members are presented with a scenario and asked to develop an appropriate response
+        - unlike read-throughs and walk-throughs, some of these response measures are then tested
+        - this may involve the interruption of noncritical business activities and the use of some operational personnel
+
 - 7.12.4 Parallel
+    - **Parallel tests**: represent the next level, and involve relocating personnel to the alternate recovery site and implementing site activation procedures
+        - the relocated employees perform their DR responsibilities just as they would for an actual disaster
+        - operations at the main facility are not interrupted
+
 - 7.12.5 Full interruption
+    - **Full-interruption tests**: operate like parallel tests, but involve actually shutting down operations at the primary site and shifting them to the recovery site
+        - these tests involve a significant risk (shutting down the primary site, transfer recovery ops, followed by the reverse) and therefore are extremely difficult to arrange (management resistance to these tests are likely)
 
 [7.13](#7.13) Particpate in Business Continuity (BC) planning and exercises (OSG-9 Chpt 3)
 
+- Business continuity planning addresses how to keep an org in business after a major disruption takes place
+    - It's important to note that the scope is much broader than that of DR
+    - A security leader will likely be involved, but not necessarily lead the BCP effort
+- The BCP life cycle includes:
+    - Developing the BC concept
+    - Assessing the current environment
+    - Implementing continuity strategies, plans, and solutions
+    - Training the staff
+    - Testing, exercising, and maintaining the plans and solutions
+
 [7.14](#7.14) Implement and manage physical security (OSG-9 Chpt 10)
+- Physical access control mechanisms deployed to control, monitor and manage access to a facility
+    - Sections, divisions, or areas within a site should be clearly designated as public, private, or restricted with appropriate sinage
 - 7.14.1 Perimeter security controls
+    - A fence is a perimeter-defining device and can consist of:
+        - stripes painted on the ground
+        - chain link fences
+        - barbed wire
+        - concrete walls
+        - invisible perimeters using laser, motion, or heat detection
+    - **Perimeter intrusion detection and assessment system (PIDAS)**: an advanced form of fencing that has two or three fences used in concert to optimize security
+    - **Gate**: controlled exit and entry point in a fence or wall
+    - **turnstile**: form of gate that prevents more than one person at a time from gaining entry and often restricts movement in one direction
+    - **access control vestibule**: (AKA mantrap) a double set of doors that is often protected by a guard or other physical layout preventing piggybacking and can trap individuals at the discretion of security personnel
+    - **Security bollards**: a key element of physical security, which prevent vehicles from ramming access points and entrances
+    - **Barricades**: in addition to fencing, are used to control both foot traffic and vehicles
+    - Lighting is the most commonly used form of perimeter security control providing the security benefit of deterrence (primary purpose is to discourage casual intruders, trespassers etc)
+    - All physical security controls ultimately rely on personnel to intervene and stop actual intrusions and attacks
 - 7.14.2 Internal security controls
+    - In all circumstances and under all conditions, the most important aspect of security is protecting people
+    - If a facility is designed with restricted areas to control physical security, a mechanism to handle visitors is required
+    - **Visitor logs**: manual (or automated) list of nonemployee entries or access to a facility/location
+        - physical access logs can establish context for interpretation of logical logs
+    - Locks: designed to prevent access without proper authorization; a lock is a crude form of an identification and authorization mechanism
 
 [7.15](#7.15) Address personnel safety and security concerns (OSG-9 Chpt 16)
 - 7.15.1 Travel
+    - Training personnel on safe practices while traveling can increase their safety and prevent security incidents:
+        - sensitive data: devices traveling with the employee shouldn’t contain sensitive data
+        - malware and monitoring devices: possibilities include physical devices being installed in a hotel room of a foreign country
+        - free wi-fi: sounds appealing but can be a used to capture a user's traffic
+        - VPNs: employers should have access to VPNs that they can use to create secure connections
+
 - 7.15.2 Security training and awareness
+    - Orgs should add personnel saftey and security topics to their training and awareness program and help ensure that personnel are aware of duress systems, travel best practices, emergency management plans, and general safety and security best practices
+    - Training programs should stress the importance of protecting people
 - 7.15.3 Emergency management
+    - Emergency management plans and practices help an organization address personnel safety and security after a disaster
+    - Safety of personnel should be a primary consideration during any disaster
 - 7.15.4 Duress
+    - An example of a duress system is a button that sends a distress call
+    - Duress systems are useful when personnel are working alone
+    - If a duress system is activated accidentally code word(s) can be used to assure responding personnel it was an accident, or omit the word(s) keying an actual response
