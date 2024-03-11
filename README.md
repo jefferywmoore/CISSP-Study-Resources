@@ -1,7 +1,7 @@
 ## CISSP Study Resources
-Material and Resources pursing CISSP Certification (updated July 2023)
+Material and Resources pursing CISSP Certification
 
-This is my compilation of resources, study materials, notes, and advice I have gathered, working towards certification.
+This is my collection of resources, study materials, notes, and advice I have gathered, working towards certification.
 No compilation is exhaustive, but my goal is to put together information that will be useful and encouraging to others undertaking this effort.
 
 Feel free to share this repo or any of the resources if you find them useful.
@@ -15,7 +15,7 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/)
 
 # Overview
 There is a ton of information on the CISSP exam available, including from (ISC)², associated & third-party instructors and authors, as well as guides put together by those in preparation.
-Many have noted that the most appropriate frame of reference is that of a of a manager, and not a technician. Try to understand the process, and why any technology would be used. As [Lance puts it](https://github.com/1337-Xtreme/awesome-CISSP-CCSP), try to answer these questions for basic topics:
+Many have noted that the most appropriate frame of reference is that of a manager, and not a technician. Try to understand the process, and why any technology would be used. As [Lance puts it](https://github.com/1337-Xtreme/awesome-CISSP-CCSP), try to answer these questions for basic topics:
 - Why technology is needed?
 - What is the process for making a pro or con decision?
 - When would it be needed, and under what circumstances?

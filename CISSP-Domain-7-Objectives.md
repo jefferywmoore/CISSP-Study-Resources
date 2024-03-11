@@ -182,7 +182,7 @@
         - command and control: attackers maintain a command and control system, which controls the target and other compromised systems
         - actions on objectives: attackers execute their original goals such as theft of money, or data, destruction of assets, or installing additional malicious code (eg. ransomware)
     
-- 7.2.7 use and Entity Behavior Analytics (UEBA)
+- 7.2.7 User and Entity Behavior Analytics (UEBA)
     - **UEBA (aka UBA)**: focuses on the analysis of user and entity behavior; analysis engines are typically included with SIEM solutions or may be added via subscription
     - **Behavior-based detection**: AKA statistical intrusion, anomaly, and heuristics-based detection, starts by creating a baseline of normal activities and events; once enough baseline data has been accumulated to determine normal activity, it can detect abnormal activity (that may indicate a malicious intrusion or event)
     - Behavior-based IDSs use the baseline, activity statistics, and heuristic evaluation techniques to compare current activity against previous activity to detect potentially malicious events
@@ -711,7 +711,7 @@
 
 [7.12](#7.12) Test Disaster Recovery Plans (DRP) (OSG-9 Chpt 18)
 - Every DR plan must be tested on a periodic basis to ensure that the plan’s provisions are viable and that it meets an org’s changing needs
-- the five main test types:
+- Five main test types:
     - checklist tests
     - structured walk-throughs
     - simulation tests
