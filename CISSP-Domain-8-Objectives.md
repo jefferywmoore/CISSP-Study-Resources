@@ -36,11 +36,12 @@
             - **Scrum**: a management framework that teams use to self-organize and work towards a common goal; it describes a set of meetings, tools, and roles for efficient project delivery, allowing teams to self-manage, learn from experience, and adapt to change; named from the daily team meetings, called scrums
             - **Kanban**: a visual system used to manage and keep track of work as it moves through a process; the word kanban is Japanese and roughly translated means "card you can see"; Kanban teams focus on reducing the time a project (or user story) takes from start to finish, using a kanban board and continuously improving their flow of work
             - **Rapid Application Development (RAD)**: an agile software development approach that focuses more on ongoing software projects and user feedback and less on following a strict plan, emphasizing rapid prototyping over planning
-            - **Rational Unified Process (RUP)**: an agile software development methodology that splits the project life cycle into four phases:    
-                    - inception: which defines the scope of the project and develop business case
-                    - elaboration: Plan project, specify features, and baseline the architecture 
-                    - construction: Building the product
-                    - transition: providing the product to its users 
+            - **Rational Unified Process (RUP)**: an agile software development methodology that splits the project life cycle into four phases:
+
+                - inception: which defines the scope of the project and develop business case
+                - elaboration: Plan project, specify features, and baseline the architecture 
+                - construction: Building the product
+                - transition: providing the product to its users 
                 - During each of the phases, all six core development disciplines take place: business modeling, requirements, analysis and design, implementation, testing, and deployment
             - **Agile Unified Process (AUP)**: a simplified version of the rational unified process, it describes a simple, easy to understand approach to developing business application software using agile techniques and concepts yet still remaining true to the RUP
             - **Dynamic Systems Development Model (DSDM)**: an agile project delivery framework, initially used as a software development method; key principles:
