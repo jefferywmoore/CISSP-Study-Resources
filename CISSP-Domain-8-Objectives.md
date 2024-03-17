@@ -262,12 +262,65 @@
 
 [8.4](#8.4) Assess security impact of acquired software (OSG-9 Chpts 16,20)
 - 8.4.1 Commercial-off-the-shelf (COTS)
+    - Most widely used commercial-off-the-shelf (COTS) software products have had security researchers (both benign and malicious) tested 
+        - researching discovered vulnerabilities and exploits can help us understand how seriously the vendor takes security
+        - for niche products, you should research vendor certifications, such as ISO/IEC 27034 Application Security
+        - other than secure coding certification, you can look for overall information security management system (ISMS) certifications such as ISO/IEC 27001 and FedRAMP (which are difficult to obtain, and how the vendor is serious about security)
+    - If you can talk with a vendor, look for processes like defensive programming, which is a software development best practice that means as code is developed or reviewed, they are constantly looking for opportunities for things to go badly
+        - e.g. treating all input routines as untrusted until proven otherwise
+ 
 - 8.4.2 Open source
+    - Open source is typically released with licensing allowing code access and inspection so devs can look for security issues
+        - typically, however, this means that there is no sevice or support that comes with the software and requires in-house support for configuration, and security testing
+        - it also means that both open-source devs as well as adversaries are able to review the code for vulns 
+        - the greatest risk of open-source software is relying on outdated versions -- especially true of shared libraries 
+        - an org should develop processes to ensure that all open-source software is periodically updated, likely in a way that differs from the process for updating COTS
+
 - 8.4.3 Third-party
+    - **Third-party software**: (AKA outsourced software) is software made specifically for an org by a third party
+        - third-party software is not considered COTS, since the software is custom or customized
+        - third-party software may rely on open-source software, but since it's customized, it may have different or additional vulns
+        - it's best practice to use a third-party to do an external audit and security assessment; this should be built into the vendor's contract, with passing the audit conditional for finalizing software purchase
 - 8.4.4 Managed services (e.g. Software as a Service (SaaS), Infrastructure as a Service (IaaS), Platform as a Service (PaaS))
+    - As orgs continue to migrate to the cloud (SaaS, IaaS, PaaS), they should increase the security assessment of those services
+    - The top reasons for cloud breaches continues to be misconfigurations, lack of visibility into access settings, and poor access controls
+        - cloud service providers have tools to help mitigate these issues, and orgs should consider bringing in third-party experts to help if they don't have the internal expertise
 
 [8.5](#8.5) Define and apply secure coding guidelines and standards (OSG-9 Chpts 20,21)
 - 8.5.1 Security weaknesses and vulnerabilities at the source-code level
+    - A source code vulnerability is a code defect providing a threat actor with an opportunity to compromise the security of a software system
+        - source code vulns are caused by design or implementation flaws
+        - design flaw: if dev did everything correctly, there would still be a vulnerability
+        - implementation flaw: dev incorrectly implemented part of a good design
+    - the OWASP top 10 vulnerabilities for 2021:
+        - Broken access control
+        - Cryptographic failures
+        - Injection
+        - Insecure design
+        - Security misconfiguration
+        - Vulnerable and outdated components
+        - Identification and authentication failures
+        - Software and data integrity failures
+        - Security logging and monitoring failures
+        - Server Side Request Forgery (SSRF)
+
 - 8.5.2 Security of Application Programming Interfaces (APIs)
+     - **Application Programming Interface (API)**: specifies the manner in which a software component interacts with other components
+        - API's reduce the effort of providing secure component interactions by providing easy implementation for security controls 
+        - API's reduce code maintenance by encouraging software resue, and keeping the location of changes in one place
+        - **Parameter validation**: ensuring that any API parameter is checked against being malformed, invalid, or malicious helps ensure API secure use; validation confirms that the parameter values being received by an app are within defined limits before they are processed by the system
+
 - 8.5.3 Security coding practices
+    - Secure coding practices can be summarized as standards and guidelines
+        - standards: mandatory activities, actions, or rules
+        - guidelines: recommended actions or ops guidelines that provide flexibility for unforeseen circumstances
+        - orgs greatly reduce source code vulns by enforcing secure coding standards and maintaining coding guidelines that reflect best practices
+    - To be considered a standard, coding practice must meet the following:
+        - reducees the risk of a particular type of vuln 
+        - enforceable across all of an org's software development efforts
+        - verifiably implemented
+    - Note: secure coding standards, rigorously applied, is the best way to reduce source code vulns; coding standards ensures devs always do certain things in a certain way, while avoiding others
+    - Software-Defined Security: builds on SDN, and is essentially a model where security functions akin to firewalls, IDS/IPS, and network segmentation are implemented in software
+    - Secure coding guidelines are recommended practices that tend to be less specific than standards
+        - e.g. consistently formatted code comments, or keeping code funtions short/tight
 - 8.5.4 Software-defined security
