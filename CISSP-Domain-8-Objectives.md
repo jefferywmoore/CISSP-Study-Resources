@@ -320,7 +320,12 @@
         - enforceable across all of an org's software development efforts
         - verifiably implemented
     - Note: secure coding standards, rigorously applied, is the best way to reduce source code vulns; coding standards ensures devs always do certain things in a certain way, while avoiding others
-    - Software-Defined Security: builds on SDN, and is essentially a model where security functions akin to firewalls, IDS/IPS, and network segmentation are implemented in software
     - Secure coding guidelines are recommended practices that tend to be less specific than standards
-        - e.g. consistently formatted code comments, or keeping code funtions short/tight
+            - e.g. consistently formatted code comments, or keeping code funtions short/tight
+    
 - 8.5.4 Software-defined security
+    - **Software-defined security (SDS or SDSec)**: a security model in which security functions such as firewalling, IDS/IPS, and network segmentation are implemented in software within an SDN environment 
+        - one of the advantages of this approach is that sensors (for systems like IDS/IPS) can be dynamically repositioned depending on the threat
+        - SDS provides a decoupling from physical devices, because it abstracts security functions into software that can run on any compatible physical or virtual infrastructure, critical for supporting cloud services dynamic scaling and virtualized data centers
+    - DevSecOps supports the concept of software-defined security, where security controls are actively managed into the CI/CD pipeline
+        
