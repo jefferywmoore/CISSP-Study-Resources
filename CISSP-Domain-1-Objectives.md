@@ -446,21 +446,21 @@
     - **Defined**: a common or standardized risk framework is adopted organization-wide
     - **Integrated**: risk management operations are integrated into business processes, metrics are used to gather effectiveness data, and risk is considered an element in business strategy decisions
     - **Optimized**: risk management focuses on achieving objectives rather than just reacting to external threats; increased strategic planning is geared toward business success rather than just avoiding incidents; and lessons learned are re-integrated into the risk management process
-  - 1.10.10 Risk frameworks
-    - A risk framework is a guide or recipe for how risk is to be accessed, resolved, and monitored 
-    - NIST established the **Risk Management Framework** (RMF) and the **Cybersecurity Framework** (CSF): the CSF is a set of guidelines for mitigating organizational cybersecurity risks, based on existing standards, guidelines, and practices
-    - The RMF is intended as a risk management process to identify and respond to threats, and is defined in three core, interrelated Special Publications: 
-      - SP 800-37 Rev 2, Risk Management Framework for Information Systems and Organizations
-      - SP 800-39, Managing Information Security Risk
-      - SP 800-30 Rev 1, Guide for Conducting Risk Assessments
-      - The **RMF 7 steps**, and has **six cyclical phases**:
-        - **Prepare** to execute the RMF from an organization and system-level perspective by establishing a context and priorities for managing security and privacy risk
-        - **Categorize** the system and the information processed, stored, and transmitted by the system based on an analysis of the impact of loss
-        - **Select** an initial set of controls for the system and tailor the controls as needed to reduce risk to an acceptable level based on an assessment of risk
-        - **Implement** the controls and describe how the controls are employed within the system and its environment of operation
-        - **Assess** the controls to determine if the controls are implemented correctly, operating as intended, and producing the desired outcomes with respect to satisfying the security and privacy requirements
-        - **Authorize** the system or common controls based on a determination that the risk to organizational operations and assets, individuals, and other organizations, and the nation is acceptable
-        - **Monitor** the system and associated controls on an on-going basis to include assessing control effectiveness, documenting changes to the system and environment of operation, conducting risk assessments and impact analysis, and reporting the security and privacy posture of the system
+- 1.10.10 Risk frameworks
+  - A risk framework is a guide or recipe for how risk is to be accessed, resolved, and monitored 
+  - NIST established the **Risk Management Framework** (RMF) and the **Cybersecurity Framework** (CSF): the CSF is a set of guidelines for mitigating organizational cybersecurity risks, based on existing standards, guidelines, and practices
+  - The RMF is intended as a risk management process to identify and respond to threats, and is defined in three core, interrelated Special Publications: 
+    - SP 800-37 Rev 2, Risk Management Framework for Information Systems and Organizations
+    - SP 800-39, Managing Information Security Risk
+    - SP 800-30 Rev 1, Guide for Conducting Risk Assessments
+    - The **RMF 7 steps**, and has **six cyclical phases**:
+      - **Prepare** to execute the RMF from an organization and system-level perspective by establishing a context and priorities for managing security and privacy risk
+      - **Categorize** the system and the information processed, stored, and transmitted by the system based on an analysis of the impact of loss
+      - **Select** an initial set of controls for the system and tailor the controls as needed to reduce risk to an acceptable level based on an assessment of risk
+      - **Implement** the controls and describe how the controls are employed within the system and its environment of operation
+      - **Assess** the controls to determine if the controls are implemented correctly, operating as intended, and producing the desired outcomes with respect to satisfying the security and privacy requirements
+      - **Authorize** the system or common controls based on a determination that the risk to organizational operations and assets, individuals, and other organizations, and the nation is acceptable
+      - **Monitor** the system and associated controls on an on-going basis to include assessing control effectiveness, documenting changes to the system and environment of operation, conducting risk assessments and impact analysis, and reporting the security and privacy posture of the system
     - See my overview article, [The NIST Risk Management Framework](https://blog.balancedsec.com/p/the-nist-risk-management-framework)
   - There are other risk frameworks, such as the British Standard BS 31100 -- be familiar with frameworks and their goals
 
@@ -540,12 +540,12 @@
     - Gamification: legacy training and education are typically based on reading and then answering multiple-choice questions to prove knowledge; gamification aims to make training and education more fun and engaging by packing educational material into a game
       - gamification has enabled organizations to get more out of the typical employee training
   
-  - 1.13.2 Periodic content reviews
-    - Threats are complex, so training needs to be relevant and interesting to be effective; this means updating training materials and changing out the ways which security is tested and measured 
-      - if you always use the same phishing test campaign or send it from the same account on the same day, it isn’t effective, and the same applies to other materials. 
-      - instead of relying on long/detailed security documentation for training and awareness, consider using internal social media tools, videos and interactive campaigns
-  - 1.13.2 Program effectiveness evaluation 
-    - Time and money must be allocated for evaluating the company’s security awareness and training; the company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email links
+- 1.13.2 Periodic content reviews
+  - Threats are complex, so training needs to be relevant and interesting to be effective; this means updating training materials and changing out the ways which security is tested and measured 
+    - if you always use the same phishing test campaign or send it from the same account on the same day, it isn’t effective, and the same applies to other materials. 
+    - instead of relying on long/detailed security documentation for training and awareness, consider using internal social media tools, videos and interactive campaigns
+- 1.13.2 Program effectiveness evaluation 
+  - Time and money must be allocated for evaluating the company’s security awareness and training; the company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email links
 
 Also see my articles on risk management: 
 - [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1)  introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
