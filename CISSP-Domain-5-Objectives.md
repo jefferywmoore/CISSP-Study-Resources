@@ -8,6 +8,17 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - The three primary authentication factors are something you know, something you have, and something you are
 - Single sign-on (SSO) technologies allow users to authenticate once and access any resources in a network or the cloud, without authenticating again
 - Federated Identity Management (FIM) systems link user identities in one system with other systems to implement SSO
+- **Access Control System**: ensuring access to assets is authorized and restricted based on business and security requirements
+- **Access Control Token**: based on the parameters like time, date, day etc a token defines access validity to a system
+- **Crossover Error Rate**: point at which false acceptance (Type 2) error rate equals the false rejection (Type 1) error rate for a given sensor, in a given system and context; it is the optimal point of operation if the potential impacts of both types of errors are equivalent
+- **FRR**: False Rejection Rate (Type 1) incorrectly denying authentication to a legit identity and therefore denying access
+- **FAR**: False Acceptance Rate (Type 2) incorrectly authenticating a claimed identity as legit, recognizing and granting access on that basis
+- **Ethical Wall**: the use of administrative, phyiscal/logical controls to establih/enforce separation of information, assets or job functions for need-to-know boundaries or prevent conflict of interest situations; AKA compartmentalization
+- **Granularity of controls**: level of abstraction or detail which in a security function can be configured or tuned for performance and sensitivity
+- **IDaaS**: cloud-based service that broker IAM functions to target systems on customers' premise and/or in the cloud
+- **Identity proofing**: process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person
+- **Self-service identity management**: elemnts of the identity management lifecycle which the end-user (identity in question) can initiate or perform on their own (e.g. password reset, changes to challenge questions etc)
+- **Whaling attack**: phishing attacks targeting highly-placed officials/private individuals with sizeable assets authorizing large fund wire transfers
 
 [5.1](#5.1) Control physical and logical access to assets (OSG-9 Chpt 13)
 - Controlling access to assets (tangible: things you can touch, or nontangible: info and data) is a central theme of security
@@ -20,7 +31,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - Understand what assets you have, and how to protect them
     - **physical security controls**: such as perimeter security and environmental controls
         - control access and the environment
-    - **logical access controls**: technical controls used to protect access to information, systems, devices, and applications
+    - **logical access controls**: automated systems that auth or deny access based on verification that identify presented matches that which was previously approved; technical controls used to protect access to information, systems, devices, and applications
         - includes authentication, authorization, and permissions
         - permissions help ensure only authorized entities can access data
         - logical controls restrict access to config settings on systems/networks to only authed individuals
@@ -129,18 +140,21 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
         - e.g. firewalls uses rules that allow or block traffic to all users equally
     - Rules within the rule-based access control model are sometimes referred to as restrictions or filters
 - 5.4.3 Mandatory Access Control (MAC)
-    - A key characteristic of the Mandatory Access Control (MAC) model is the use of labels applied to both subjects and objects
+    - **Mandatory Access Control (MAC)**: access control that requires the system itself to manage access controls in accordance with the org's security policies
+    - A key characteristic of the MAC model is the use of labels applied to both subjects and objects
         - e.g. a label of top secret grants access to top-secret documents
     - When documented in a table, the MAC model sometimes resembles a lattice (i.e. climbing rosebush framework), so it is referred to as a lattice-based model
 - 5.4.4 Discretionary Access Control (DAC)
-    - A key characteristic of the Discretionary Access Control (DAC) model is that every object has an owner, and the owner can grant or deny access to any other subjects
+    - **Discretionary Access Control (DAC)**: access control model in which the system owner decides who gets access
+    - A key characteristic of the DAC model is that every object has an owner, and the owner can grant or deny access to any other subjects
         - e.g. you create a file and are the owner, and can grant permissions to that file
     - New Technology File System (NTFS) used in Windows, uses the DAC model
 - 5.4.5 Attribute Based Access Control (ABAC)
-    - A key characteristic of the Attribute-Based Access Control (ABAC) model is its use of rules that can include multiple attributes
+    - **Attribute-Based Access Control (ABAC)**: an access control paradigm where access rights are granted to users with policies that combine attributes together
+    - A key characteristic of the ABAC model is its use of rules that can include multiple attributes
         - this allows it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally
         - many software-defined networks (SDNs) use the ABAC model
-    - ABAC allows administrators to create rules within a policy using plain language statements such as “Allow Managers to access the WAN using a mobile device”
+    - ABAC allows administrators to create rules within a policy using plain language statements such as "Allow Managers to access the WAN using a mobile device"
 - 5.4.6 Risk based access control
     - Risk-based access control model grants access after evaluating risk; evaluating the environment and the situation and making risk-based decisions using policies embeded within software
         - Using machine learning, making predictive conclusions about current activity based on past activity
@@ -193,6 +207,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 [5.6](#5.6) Implement authentication systems (OSG-9 Chpt 14)
 - 5.6.1 OpenID Connect (OIDC) / Open Authorization (Oauth)
+    - OAuth 2.0 authorization framework enables third-party apps to obtain limited access to an HTTP service, either on behalf of a resource owner (by orchestrating an approval interaction), or by allowing third-party applications to obtain access on its own behalf
     - OAuth is an open framework used for authentication and authorization protocols 
     - The most common protocol built on OAuth is OpenID Connect (OIDC) 
     - OAuth 2.0 is often used for delegated access to applications, e.g. a mobile game that automatically finds all of your new friends from a social media app is likely using OAuth 2.0

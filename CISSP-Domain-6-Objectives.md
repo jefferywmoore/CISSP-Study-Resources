@@ -12,6 +12,24 @@
     - the audit strategy should be assessed and tested regularly to ensure that the organization is not doing a disservice to itself with the current strategy
     - there are three types of audit strategies: internal, external, and third-party
 
+- **Artifact**: piece of evidence such as text, or a reference to a resource which is submitted in response to a question
+- **Assessment**: testing or evaluation of controls to understand which are implemented correctly, operating as intended and producing the desired outcome in meeting the security or privacy requirements of a system or org
+- **Audit**: process of reviewing a system for compliance against a standard or baseline (e.g. audit of security controls, baselines, financial records) can be formal and independent, or informal/internal
+- **Chaos Engineering**: discipline of experiments on a software system in production to build confidence in the system's capabilities to withstand turbulent/unexpected conditions
+- **Compliance Calendar**: tracks an org's audits, assessments, required filings, due dates and related
+- **Compliance Tests**: an evaluation that determines if an org's controls are being applied according to management policies and procedures
+- **Penetration Testing/Ethical Penentration Testing**: security testing and assessment where testers actively attempt to circumvent/defaut a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
+- **Examination**: process of reviewing/inspecting/observing/studying/analyzing specs/mechanisms/activities to understand, clarify, or obtain evidence
+- **Findings**: results created by the application of an assessment procedure
+- **Judgement Sampling**: AKA purposive or authoritative sampling, a non-probability sampling technique where members are chosen only on the basis of the researcher's knowledge and judgement
+- **Misue Case Testing**: testing strategy from a hostile actor's point of view, attempting to lead to integrity failures, malfunctions, or other security or safety compromises
+- **Plan of Action and Milestones (POA&M)**: a document indentifying tasks to be accomplished, including details, resources, milestones, and completion target dates
+- **RoE**: Rules of Engagement, set of rules/constraints/boundaries that establish limits of participant activity; in ethical pen testing, an RoE defines the scope of testing, and to establish liabilty limits for both testers and the sponsoring org or system owners
+- **Statistical Sampling**: process of selecting subsets of examples from a population with the objective of estimating properties of the total population
+- **Substantive Test**: testing technique used by an auditor to obtain the audit evidence in order to support the auditor's opinion
+- **Testing**: process of exersizing one or more assessment objects (activities or mechanisms) under specified conditions to compare actual to expected behaior
+- **Trust Services Criteria (TSC)**: used by an auditor when evaluating the suitability of the design and operating effectiveness of controls relevant to the security, availabiliity, or processing integrity of information and systems or the confidentiality or privacy of the info processed by the entity
+
 [6.1](#6.1) Design and validate assessment, test, and audit strategies (OSG-9 Chpt 15)
 - 6.1.1 Internal
     - An organization’s security staff can perform security tests and assessments, and the results are meant for internal use only, designed to evaluate controls with an eye toward finding potential improvements

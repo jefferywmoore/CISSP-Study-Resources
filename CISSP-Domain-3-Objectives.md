@@ -1,6 +1,38 @@
 [Domain 3](#domain3-top) **Security Architecture and Engineering**
 
 You may find this domain to be more technical than others, and if you have experience woring in a security engineering role you likely have an advantage. If not, allocate extra time to this domain to ensure you have a good understanding of the topics
+- **Algorithm**: a mathmatical function that is used in the encryption and decryption process; can be simply or very complex; also defined as a set of instructions by which encryption and decryption is done
+- **Block Mode Encryption**: using fixed-length sequences of input plaintext symbols as the unit of encryption
+- **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
+- **Collision**: occurs when a hash function generates the same output for different inputs
+- **Cryptanalysis**: study of techniques for attempting to defeat cryptographic techniques and generally information security services
+- **Cryptographic Hash function**: process or function that transforms an input plaintext into a unique value called a hash (or hash value); note that they do not use cryptographic algorithms, as hashes are one-way functions where it's infeasible to determine the plaintext; Message digests are an example of cryptographic hash
+- **Cryptography**: study of/application of methods to ssecure the meaning and content of messages, files etc by disguise, obscuration, or other transformations
+- **Cryptosystem**: complete set of hardware, software, communictions elements and procedures that allow parties to communicate, store or use info protected by cryptographic means; includes algroithm, key, and key management functions
+- **Cryptovariables(s)**: parameters associated with a particular cryptogrphic algorithm; e.g. block size, key length and number of iterations
+- **Decoding**: the reverse process from encoding, converting the encoded message back to plaintext format
+- **Decryption**: the reverse process from encryption
+- **Encoding**: action of changing a message or set of info into another format through the use of code; unlike encryption, encoded info can still be read by anyone with knowledge of the encoding process
+- **Encryption**: process and act of converting the message from plaintext to ciphertext (AKA enciphering)
+- **Frequency analysis**: form of cryptanalys that uses frequency of occurrence of letters, words or symbols in the plaintext as a way of reducing the search space
+- **Hybrid encryption system**: a system that uses both symmetric and asymmetric encryption
+- **Key**: the input that controls the operation of the cryptographic algorthm, determining the behavior of the algorithm and permis the reliable encyrption and decryption of the message
+- **Key pair**: matching set of one public and one private key
+- **Key escrow**: process by which keys (asymmetric or symmetric) are placed in a trusted storage agent's custody, for later retrieval
+- **Key generation**: the process of creating a new encryption/decryption key
+- **Key recovery**: process of reconstructing an encryption key from the cyphertext alone; if there is a workable key recovery system, it means the algorithm is not secure
+- **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password
+- **One-time pad**: series of randomly generated symmetric encryption keys, each one to be used only once by the sender and recipient
+- **Out-of-band**: transmitting or sharing control information (e.g. encryption keys and crypto variables) by means of a separate and distinct communications path, channel, or system
+- **Plaintext**: message or data in its readable form, not turned into a secret
+- **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
+- **Session key**: a symmetric encryption key generated for one-time use; usually requires a key encapsulation approach to eliminate key management issues
+- **Stream mode encryption**: system using a process that treats the input plaintext as a continuous flow of symbols, encrypting one symbol at a time; usually uses a streaming key, using part of the key as a one-time key for each symbol's encryption
+- **Substitution cipher**: encryption/decription process using subsitution
+- **Symmetric encryption**: process that uses the same key (or a simple transformation of it) for both encryption/decryption
+- **Transposition cypher**: encryption/decription process using transposition
+- **VESDA**: very early smoke detection process (air sensing device brand name)
+- **Work factor**: amount of effort necessary to break a cryptographic system, measured in elapsed time
 
 [3.1](#3.1) Research, implement, and manage engineering processes using secure design principles (OSG-9 Chpts 1,8,9,16)
 
@@ -23,7 +55,8 @@ You may find this domain to be more technical than others, and if you have exper
 - 3.1.7 Keep it simple
     - **Keep it simple**: AKA keep it simple, stupid (KISS), this concept is the encouragement to avoid overcomplicating the environment, organization, or product design
     3.1.8 Zero Trust
-    - **Zero Trust**: "assume breach"; a security concept and alternative the traditional (castle/moat) approach where nothing is automatically trusted. Instead each request for activity or access is assumed to be from an unknown and untrusted location until otherwise verified
+    - **Zero Trust**: "assume breach"; a security concept and alternative of the traditional (castle/moat) approach where nothing is automatically trusted; instead each request for activity or access is assumed to be from an unknown and untrusted location until otherwise verified
+        - replaces trust but verify as a security design principle by asserting that all activities by all users/entities must be subject to control, authentication, authorization, and management at the most granular level possible
         - Goal is to have every access request authenticated, authorized, and encrypted prior to access being granted to an asset or resource
         - See my article on an [Overview of Zero Trust Basics](https://blog.balancedsec.com/p/an-overview-of-zero-trust-basics)
 - 3.1.9 Privacy by design
@@ -127,6 +160,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Virtualization**: technology used to host one or more operating systems within the memory of a single host, or to run applications that are not compatible with the host OS; the goal is to protect the hypervisor and ensure that compromising one VM doesn't affect others on that host
 
 - **Trusted Platform Module (TPM)**: a cryptographic chip that is sometimes included with a client computer or server; a TPM enhances the capabilities of a computer by offering hardware-based cryptographic operations
+    - TPM is a tamper-resistant integrated circuit built into some motherboards that can perform cryptographic operations (including key gen) and protect small amoutns of sensitive info, like passwords and cryptographic keys
     - Many security products and encryption solutions require a TPM
     - TPM is both a specification for a cryptoprocessor chip on a motherboard and the general name for implementation of the specification
     - A TPM is an example of a **hardware security module (HSM)**: a cryptoprocessor used to manage and store digital encryption keys, accelerate crypto operations, support faster digital signatures, and improve authentication
@@ -334,9 +368,12 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - "different" is a synonym for asymmetric 
         - total number of keys required to completely connect n parties using symmetric cryptography is given by this formula: 
             - **(n(n - 1)) / 2**
-    - **Asymmetric** encryption: uses different keys for encryption and decryption
-        - Asymmetric (AKA public key, since one key of a pair is available to anybody) algorithms provide convenient key exchange mechanisms and are scalable to very large numbers of users (addressing the two most significant challenges for users of symmetric cryptosystems) - Asymmetric cryptosystems avoid the challenge of sharing the same secret key between users, by using pairs of public and private keys to allow secure communication without the overhead of complex key distribution
+    - **Asymmetric** encryption: process that uses different keys for encryption and decryption, and in which the decryption key is computationally not possible to determine given the encryption key itself
+        - Asymmetric (AKA public key, since one key of a pair is available to anybody) algorithms provide convenient key exchange mechanisms and are scalable to very large numbers of users (addressing the two most significant challenges for users of symmetric cryptosystems) 
+        - Asymmetric cryptosystems avoid the challenge of sharing the same secret key between users, by using pairs of public and private keys to allow secure communication without the overhead of complex key distribution
+        - **Public key**: one part of the matching key pair, which can be shared or published
         - Besides the public key, there is a private key that should remain private and protected
+        - Private key secrecy and integrity of an asymmetric encryption process are entirely dependent upon protecting the value of the private key
         - While asymmetric encryption is slower, it is best suited for sharing between two or more parties 
         - Most common asymmetric cryptosystems in use today:    
             - Rivest-Shamir-Adleman (RSA) 
@@ -402,7 +439,9 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - Digitally signed messages assure the recipient that the message was not altered while in transit; protecting against both malicious modification (third party altering message meaning), and unintentional modification (faults in the communication process) 
         - Digital signature process does not provide confidentiality in and of itself (only ensures integrity, authentication, and nonrepudiation) 
 - 3.6.6 Digital Non-repudiation
-    - Here non-repudiation refers to methods ensuring certainty about data origins
+    - Here non-repudiation refers to methods ensuring certainty about data origins; in general, the inability to deny
+    - Non-repudiation of origin: sender cannot deny having sent a particular message
+    - Non-repudiation of delivery: receiver cannot say they have received a different message (other than what they actually received)
     - Most common method of non-repudiation is digital signatures
     - Digital signatures rely on certificates
     - If a digital signature was verified with the public key of the sender, then we know that it was created using the sender's private key 
@@ -490,7 +529,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 - Facility Design: 
     - The top priority of security should always be the protection of the life and safety of personnel
     - In the US, follow the guidelines and requirements from Occupational Safety and Health Administration (OSHA), and Environmental Protection Agency (EPA)
-    -  **Crime Prevention Through Environmental Design (CPTED)**: a well-established school of thought on "secure architecture"
+    -  **Crime Prevention Through Environmental Design (CPTED)**: a well-established school of thought on "secure architecture" - an archiectural approach to building and space design that emphasizes passive features to reduce the likelihood of criminal activity
         - core principle of CPTED is that the design of the physical environment can be managed/manipulated, and crafted with intention in order to create behavioral effects or changes in people present in those areas that result in reduction of crime as well as a reduction of the fear of crime
         - CPTED stresses three main principles:
             - **natural access control**: the subtle guidance of those entering and leaving a building

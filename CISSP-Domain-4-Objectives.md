@@ -2,6 +2,52 @@
 
 Networking can be one of the more complex exam topics; if you have a networking background, you likely won’t find this domain difficult-- if not, spend extra time in this section and consider diving deeper into topics that are fuzzy
 
+- **ACK**: an acknoledment of a signal being received
+- **ARP**: used at the Media Access Control (MAC) layer to provide for direct communication between two devices within the same LAN segment
+- **APT**: Advanced Persistent Threat
+- **API**: Application Programming Interface; code mechanisms that provide ways for apps to share data, emthods, or functions over a network (usually implemented in XML or JavaScript Object Notation (JSON))
+- **Bandwidth**: amount of information transmitted over a period of time; can be applied to moving bits over a medium, or human processes like learning or education
+- **Bluetooth**: wireless personal area network, IEEE 802.15; an open standard for short-range RF communication used primarily with wireless personal area networks (WPANs)
+- **Bound networks**: AKA wired/Ethernet networks, where devices are connected by physical cables
+- **Boundary routers**: they advertise routes that external hosts can use to reach internal hosts
+- **Bridge**: device that aggregates separate network segments into a single network segment, operating at OSI layer 2
+- **CSMA/CA**: Carrier Sense Multiple Access with Collission Avoidance is a method of network flow control
+- **CSMA/CD**: Carrier Sense Multiple Access with Colliion Detection is a method of network flow control, where if > 1 station accesses the network at the same time, other stations detect and re-try their transmission
+- **Circuit-switched network**: network that uses a dedicated circuit between endpoints
+- **CDMA**: Code-Division Multiple Access: a method of encoding several sources of data so they can all be transmitted over a single RF carrier by one transmitter, or by using a single RF carrier frequency with multiple transmitters; the data from each call is encoded with a unique key, and calls are transmitted at once
+- **Concentrator**: provides communication capability between many low-speed, usually asynchronous channels and one or more high-speed, usually synchronous channels. Usually different speeds, codes, and protocols can be accommodated on the low-speed side; multiplexed into one signal
+- **CDN**: Content Distribution Network is a large distributed system of servers deploye in multiple data centers, with a goal of Quality of Service (QoS) and availability requirements
+- **Control plane**: part of a network that controls how data packets are forwarded — meaning how data is sent from one place to another; e.g. the process of creating a routing table is considered part of the control plane; control of network functionality and programmability is directly made to devices at this layer
+- **Northbound/Southbound interface**: A northbound interface lets a specific component communicate with a higher-level component in the same network; a southbound interface is the opposite — enabling a specific component to communicate with a lower-level component
+- **East/West traffic**: network traffic that is within a data, control, or application plane; within a data center or between geo dispersed locations
+- **North/South traffic**: in SDN terms, data flowing up (northbound) and down (southbound) the stack of data/control/application planes; data flowing from the organization to external distinations (northbound), or into the org from external sources (southbound)
+- **Converged protocol**: combines/converges standard protcols (such as TCP/IP) with proprietary/non-standard ones; they can complicate enterprise-wide security engineering efforts requiring specialist knowledge
+- **DNS**: Domain Name Service is three in interrelated elements: a service, a physical server, and a network protocol
+- **DHCP**: Dynamic Host Configuration Protocol is an industry standard used to dynamically assign IP addresses to network devices
+- **Ports 1024-4951**: registered ports used with non-system applications associated with vendors and devs
+- **Ports 49152-65535**: dynamic ports (AKA private or non-reserved ports) used as temporary ports, often in association when a service is requested via a well-known port
+- **FDDI**: Fiber Distributed Data Interface is an ANSI X3T9.5 LAN standard; 100Mbps, token-passing using fiber-optic, up to 2 kilometers
+- **FCoE**: Fibre Channel over Ethernet is a lightweight encapulsation protocol without the reliable data transport of TCP
+- **Gateway device**: a firewall or other device that sits at the edge of the network to regulate traffic and enforce rules
+- **ICMP**: Internet Control Message Protocol, standardized by IETF via RFC 792 to determine if a particular host is available
+- **IGMP**: Internet Group Management Protocol, used to manage multicasting groups
+- **Internetworking**: two different sets of servers/communication elements using network protocol stacks to communicate and coordinate activities
+- **LDAP**: lightweight directory access protocol uses simple (basic) authentication such as SSL/TLS, or SASL (Simple Authentication and Security Layer)
+- **Microsegmentation**: part of a zero trust strategy, that breaks LANs into very small highly localized zones using firewalls or similar; note that at the limit, this places a firewall at every connection point
+- **NFV**: Network Function Virtualization (AKA Virtual Network Function) that seeks to decouple functions, such as firewall management, intrusion detection, NAT and name service resolution, from specific hardware solutions, and make them virtual/software; the focus is to optimize distinct network services
+- **PLC**: Packet Loss Concealment used in VoIP communications to mask the effect of dropped packets
+- **Packet-Switched Network**: a network that doesn't use a dedicated connection between endpoints
+- **Point-to-Point Protocol**: a standard method for transporting multiprotocol datagrams over point-to-point links
+- **Port Address Translation**: an extension of NAT (Network Address Translation) translating all addresses to one routable IP address and translate the source port number in the packet to a unique value
+- **RPC**: Remote Procedure Call is a protocol that enables one system to execute instructions on other hosts across a network infrastructure
+- **Root of Trust**: a source that can always be trusted within a cryptographic system; because cryptographic security is dependent on keys to encrypt and decrypt data and perform functions such as generating digital signatures and verifying signatures, RoT schemes generally include a hardened hardware module; a RoT guarantees the integrity of the hardware prior to loading the OS of a computer
+- **SNMP**: Simple Network Management Protocol, is a protocol for collecting and organizing info about managed devices on IP networks; it can be used to determine the health of devices such as routers, switches, servers, workstations, etc
+- **Smurf attack**: ICMP echo request sent to the network broadcast address of a spoofed victim causing all nodes to respond to the victim with an echo reply
+- **Teardrop attack**: exploits reassembly of fragmented IP packets in the fragment offset field (indicating the start position or offset of data contained in a fragemented packet)
+- **Terminal Emulation Protocol**: AKA Telnet, is a command-line protocol designed to provide access between hosts
+- **Unbound (Wireless) Network**: network where the physical layer interconnections are done using radio, light, or some other means (not confined to wires, cables, or fibers); may or may not be mobile
+- **WAF**: Web Application Firewall is a software-based app that monitors and filters exchanges between applications and a host; usually inspect and filter conversations like HTTP/S
+
 [4.1](#4.1) Assess and implement secure design principles in network architectures (OSG-9 Chpts 11,12)
 
 - 4.1.1 Open System Interconnection (OSI) and Transmission Control Protocol/Internet Protocol (TCP/IP) models
@@ -49,7 +95,8 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - Defines session rules like how much data each segment can contain, how to verify message integrity, and how to determine whether data has been lost
         - Protocols that operate at the Transport layer:
             - Transmission Control Protocol (TCP)
-                - full-duplex, connection-oriented protocol
+                - the major transport protocol in the internet suite of protocols providing reliable, connection-oriented, full-duplex streams
+                - emphasizing: full-duplex, connection-oriented protocol
                 - uses three-way handshake
             - User Datagram Protocol (UDP)
                 - connectionless protocol that provides fast, best-effort delivery of **datagrams** (self-container unit of data)
@@ -67,7 +114,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
                 - Interior Gateway Routing Protocol (IGRP)
                 - Enhanced Interior Gateway Routing Protocol (EIGRP)
             - **link state**: (interior) uses router characteristics (e.g. speed, latency, error rates) to make next hop routing decisions; examples:
-                - Open Shortest Path First (OSPF)
+                - **Open Shortest Path First (OSPF)**: an interior gateway routing protocol developed for IP networks based on shorest path first or link-state algorithm
                 - Intermediate System to Intermediate System (IS-IS)
             - interior vs exterior:
                 - interior routing protocols ("myopic") make next hop decisions based only on info related to the next immediate hop
@@ -79,10 +126,11 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - Adds the source and destination hardware addresses to the frame
         - Media Access Control (MAC) - (hardware-based) address/AKA NIC address
             - MAC address is a 6-byte (48-bit) binary address written in hex
-                - first 6b/48-bits: Organizationally Unique Identifier (OUI) - denotes manufacturer
+                - first 3b/24-bits: Organizationally Unique Identifier (OUI) - denotes manufacturer
                 - last 3b/24-bits: unique to that interface
         - **Address Resolution Protocol (ARP)**: operates at layer 2
         - Switches & bridges function at this layer
+        - Logical Link Control (LLC) is one of two sublayers that make up the Data Link Layer
 
     - Physical Layer (1)
         - Converts a frame into bits for transmission/receiving over the physical connection medium
@@ -99,9 +147,10 @@ Networking can be one of the more complex exam topics; if you have a networking 
 
 - 4.1.2 Internet Protocol (IP) networking (e.g., Internet Protocol Security (IPSec), Internet Protocol (IP) v4/6)
      - IP is part of the TCP/IP (Transmission Control Protocol/Internet Protocol) suite
+        - TCP/IP is the name of IETF's four-layer networking model, and its protocol stack; the four layers are link (physical), internet (network-to-network), transport (channels for connection/connectionless data exchange) and application (where apps make use of network services)
         - IP provides the foundation for other protocols to be able to communicate; IP itself is a connectionless protocol
-        - IPv4 uses 32-bit addresses
-        - IPv6 uses 128-bit addresses
+        - IPv4: dominant protocol that operates at layer 3; IP is responsible for addressing packets, uses 32-bit addresses
+        - IPv6: modernization of IPv4, uses 128-bit addresses, supporting 2128 hosts
         - TCP or UDP is used to communicate over IP 
         - IPSec provides data authentication, integrity and confidentiality
     - **Logical address**: occurs when an address is assigned and used by software or a protocol rather than being provided/controlled by hardware
@@ -151,12 +200,13 @@ Networking can be one of the more complex exam topics; if you have a networking 
             - FCoE used to encapsulate Fibre Channel over Ethernet networks
             - with this technology, Fibre Channel operates as a Network layer (OSI layer 3) protocol, replacing IP as the payload of a standard Ethernet network
         - **Internet Small Computer Sysetms Interface (iSCSI)**: operating at layer 3, iSCSI is a network storage standard based on IP, used to enable location-independent file storage, transmission, and retrieval over LAN, WAN, or public internet connections
-        - **Multiprotocol Label Switching (MPLS)**: a high-throughput/high-performance network technology that directs data across a network based on short path labels rather than longer network addresses
+        - **Multiprotocol Label Switching (MPLS)**: a WAN protocol that operates at both layer 2 and 3 and does label switching; MPLS is a high-throughput/high-performance network technology that directs data across a network based on short path labels rather than longer network addresses
         - **Voice over Internet Protocol (VoIP)**: a tunneling mechanism that encapsulates audio, video, and other data into IP packets to support voice calls and multimedia collab
             - VoIP is considered a converged protocol because it combines audio and video encapsulation technology (operating as application layer protocols) with the protocol stack of TCP/IP
 
 - 4.1.6 Micro-segmentation (e.g., Software Defined Networks (SDN), Virtual eXtensible Local Area Network (VXLAN),Encapsulation, Software-Defined Wide Area Network (SD-WAN))
     - **Software-defined networks (SDN)**:
+        - SDN is a broad range of techniques enabling network management, routing, forwarding, and control functions to be directed by software
         - SDN is effectively network virtualization, and separates the infrastructure layer (aka the data or forwarding plane) - hardware and hardware-based settings, from the control layer - network services of data transmission management
             - NOTE: the **control plane**: uses protocols to decide where to send traffic, and the **data plane**: includes rules that decide whether traffic will be forwarded
         - typically ABAC-based
@@ -165,6 +215,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - Allows org to mix/match hardware
     - **Virtual extensible local area network (VXLAN)**:
         - an encapsulation protocol that enables VLANs to be stretched across subnets and geographic distances
+        - VLANs allow network admins to use switches to create software-based LAN segments that can be defined based on factors other than physical location
         - Typically restricted to layer 2
         - Allows up to 16 million virtual networks (VLAN limit is 4096)
         - VXLAN can be used as a means to implement microsegmentation without limiting segments to local entities only
@@ -173,12 +224,12 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - Encapsulation:
         - the OSI model represents a protocol stack, or a layered collection of multiple protocols, and communication between protocol layers occurs via encapsulation and deencapsulation (defined above)
 
-    - **Software-defined wide area network (SD-WAN)**: an evolution of SDN that can be used to manage the connectivity and control services between distant data centers, remote locations, and cloud services over WAN links
+    - **Software-defined wide area network (SD-WAN)**: an evolution of SDN that can be used to manage the connectivity and control services between distant data centers, remote locations, and cloud services over WAN links; put another way, SDN-WAN is an extension of SDN practices to connect entities spread across the internet, supporing WAN architecture; espcially related to cloud migration
 
 - 4.1.7 Wireless networks (e.g. LiFi, Wi-Fi, Zigbee, satellite)
 
     - Li-Fi: **light fidelity (Li-Fi)**: a form of wireless communication technology that relies on light to transmit data, with theorectical speeds up to 224Gbits/sec
-    - Wi-Fi:
+    - **Wi-Fi**: Wirless LAN IEEE 802.11x; associated with computer networking, Wi-Fi uses 802.11x spec to create a public or private wireless LAN
         - **Wired Equivalent Privacy (WEP)**:
             - WEP is defined by the original IEEE 802.11 standard
             - WEP uses a predefined shared Rivest Cipher 4 (RC4) secret key for both authentication (SKA) and encryption
@@ -224,6 +275,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - 4G
         - 4G allows for mobile devices to achieve 100 Mbps, and stationary devices can reach 1 Gbps
         - LTE and WiMAX are common transmission systems
+        - **WiMAX**: Broadband Wireless Access IEEE 802.16 is a well-known example of wireless broadband; WiMAX can potentially deliver data rates of > 30 Mbps
     - 5G
         - 5G uses higher frequencies than previous tech, allowing for higher transmission speeds — up to 10 Gbps, but at reduced distances
         - Orgs need to enforce security requirements on 5G
@@ -245,7 +297,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 The components of a network make up the backbone of the logical infrastructure for an organization; these components are often critical to day-to-day operations, and an outage or security issue can be very costly
 
 - 4.2.1 Operation of hardware (e.g. redundant, power, warranty, support)
-    - Modems are a type of Channel Service Unit/Data Service Unit (CSU/DSU) typically used for converting analog signals into digital; the CSU handles communication to the provider network, the DSU handles communication with the internal digital equipment (in most cases, a router)
+    - Modems provide modulation/demodulation of binary data into analog signals for transmission; modems are a type of Channel Service Unit/Data Service Unit (CSU/DSU) typically used for converting analog signals into digital;  the CSU handles communication to the provider network, the DSU handles communication with the internal digital equipment (in most cases, a router)
         - modems typically operate at Layer 2 
         - routers operate at Layer 3, and make the connection from a modem available to multiple devices in a network, including switches, access points and endpoint devices 
         - switches are typically connected to a router to enable multiple devices to use the connection
@@ -332,6 +384,7 @@ The components of a network make up the backbone of the logical infrastructure f
 [4.3](#4.3) Implement secure communication channels according to design ((OSG-9 Chpt 12))
 - Protocols that provide security services for application-specific communication channels are called secure communication protocols
 - 4.3.1 Voice
+    - **Voice of Internet Protocol (VoIP)**: set of technologies that enables voice to be sent over a packet network
     - As more orgs switch to VoIP, protocols like SIP become more common, and introducing additional management, either via dedicated voice VLANs, or by establishing quality of service (QoS) levels to ensure voice traffic priority
     - Web-based voice apps can be more difficult to manage, causing additional unplanned bandwidth consumption
 - 4.3.2 Multimedia collaboration

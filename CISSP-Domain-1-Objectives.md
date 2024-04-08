@@ -4,16 +4,19 @@
 
 - As a CISSP, you must understand and follow the (ISC)² code of ethics, as well as your organization’s own code
 - 1.1.1 (ISC)² Code of Professional Ethics
-  - (ISC)² Code of Professional Ethics -- take the time to read the code of ethics available at www.isc2.org/Ethics 
+  - (ISC)² Code of Professional Ethics -- take the time to read the [code of ethics](www.isc2.org/Ethics)
   - At a minimum, know and understand the ethics canons:
-    - Protect society, the common good, necessary public trust and confidence, and the infrastructure
+    - **Protect society, the common good, necessary public trust and confidence, and the infrastructure**
       - this is “do the right thing”; put the common good ahead of yourself 
       - ensure that the public can have faith in your infrastructure and security
-    - Act honorably, honestly, justly, responsibly, and legally; always follow the laws 
+    - **Act honorably, honestly, justly, responsibly, and legally**
+      - always follow the laws 
       - but if you find yourself working on a project where conflicting laws from different countries or jurisdictions apply, you should prioritize the local jurisdiction from which you are performing the services
-    - Provide diligent and competent service to principles; avoid passing yourself as an expert or as qualified in areas that you aren’t 
+    - **Provide diligent and competent service to principles** 
+      - avoid passing yourself as an expert or as qualified in areas that you aren’t 
       - maintain and expand your skills to provide competent services
-    - Advance and protect the profession; don’t bring negative publicity to the profession 
+    - **Advance and protect the profession**
+      - don’t bring negative publicity to the profession 
       - provide competent services, get training and act honorably 
       - think of it like this: If you follow the first three canons in the code
   of ethics, you automatically comply with this one
@@ -31,7 +34,7 @@
     - Preserving confidentiality means protecting an asset or data, even if it's not a secret
   
   - **Integrity**:
-    - Concept of protecting the reliability and correctness of data 
+    - Concept of protecting the reliability and correctness of data; guarding against improper info modification/destruction; includes ensuring non-repudiation and authenticity
     - Integrity protection prevents unauthorized alterations of data
     - Preventing unauthorized subjects from making modifications
     - Preventing authorized subjects from making unauthorized modifications, such as mistakes
@@ -50,14 +53,14 @@
 
   - **AAA Services**:
     - Identification: claiming to be an identity when attempting to access a secured area or system
-    - Authentication: proving that you are that claimed identity
-    - Authorization: defining the permissions (i.e. allow/grant and/or deny) of a resource and object access for a specific identity or subject
+    - Authentication: proving that you are that claimed identity via one or more factors (something you have, something you know, something you are)
+    - Authorization: defining the needed resources, permissions (i.e. allow/grant and/or deny) to a resource, and object access for a specific identity or subject
     - Auditing: recording a log of the events and activities related to the system and subjects
-    - Accounting: (aka accountability) reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
+    - Accounting: (aka accountability) access control process which records info about attempts by all entities to access resources; reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
  
 [1.3](#1.3) Evaluate and apply security governance principles (OSG-9 Chpt 1)
  
-- **Security governance**: the collection of practices related to supporting, evaluating, defining, and directing the security efforts of an organization 
+- **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org 
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
   - There are numerous security frameworks and governance guidelines, including the National Institute of Standards and Technology (NIST) SP 800-53 and SP 800-100
 - **The security function**: the aspect of operating a business that focuses on the task of evaluating and improving security over time 
@@ -92,7 +95,7 @@
   - Custodian: responsible for the task of implementing the proscribed protection defined by the security policy and senior management
   - Auditor: responsible for reviewing and verifying that the security policy is properly implemented
 - 1.3.4 Security control frameworks
-  - A control framework is important in planning the structure of an org's security solution; many frameworks to choose from, such as:
+  - A **security control framework**: outlines the org's approach to security, including a list of specific security processes, procedures, and solutions used; it is important in planning the structure of an org's security solution; many frameworks to choose from, such as:
     -  **Control Objectives for Information Technology (COBIT)** ("moderately referenced" on the exam)
         - COBIT is a documented set of best IT security practices by ISACA
         - Six key principles:
@@ -118,7 +121,7 @@
           - respond
           - recover
 - 1.3.5 Due care/due diligence
-  - **Due diligence**: establishing a plan, policy, and process to protect the interests of the organization; due diligence is about understanding your security governance principles (policies and procedures) and the risks to your organization 
+  - **Due diligence**: establishing a plan, policy, and process to protect the interests of the organization; due diligence is about understanding your security governance principles (policies and procedures) and the risks to your organization; actions taken by a vendor to demonstrate or provide due care
     - Due diligence often involves:
       - gathering information through discovery, risk assessments and review of existing documentation 
       - developing a formalized security structure containing a security policy, standards, baselines guidlines, and procedures 
@@ -171,6 +174,7 @@
     - the EU and other countries have their own requirements, for instance, the GDPR has very strict data breach notification requirements: A data breach must be reported to the competent supervisory authority within 72 hours of its discovery
     - Some countries do not have any reporting requirements
 - 1.5.2 Licensing and intellectual property (IP) requirements
+  - **Intellectual property**: intangible assets (e.g. software, data)
   - **Trademarks**: words, slogans, and logos used to identify a company and its products or services
   - **Patents**: a temporary monopoly for producing a specific item such as a toy, which must be novel and unique to qualify for a patent
     - **Utility**: protect the intellectual property rights of inventors
@@ -251,6 +255,7 @@
 
 [1.7](#1.7) Develop, document, and implement security policy, standards, procedures and guidelines (OSG-9 Chpt 1)
 - The top tier of a formalized hierarchical organization security documentation is the security policy
+  - **Policy**: docs created by and published by senior management describing organizational strategic goals
   - A security policy is a document that defines the scope of security needed by the org, discussing assets that require protection and the extent to which security solutions should go to provide the necessary protections
   - It defines the strategic security objectives, vision, and goals and outlines the security framework of the organization
 - **Acceptable User Policy**: the AUP is a commonly produced document that exists as part of the overall security documentation infrastructure 
@@ -258,12 +263,12 @@
 
 - Security Standards, Baselines and Guidelines: once the main security policies are set, the remaining security docuemntation can be crafted from these policies
   - **Policies**: these are high-level documents, usually written by the management team; policies are mandatory, and a policy might provide requirements, but not the steps for implementation
-  - **Standards**: more descriptive than policies, standards define compulsary requirements for the homogenous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
+  - **Standards**: specific mandates explicity stating expections of performance/conformance; more descriptive than policies, standards define compulsary requirements for the homogenous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
   - **Baseline**: defines a minimum level of security that every system throughout the organization must meet; baselines are usually system specific and refer to industry / government standards
     - e.g. a baseline for  server builds would be a list of configuration areas that should be applied to every server that is built 
     - A Group Policy Object (GPO) in a Windows network is sometimes used to comply with standards; configuration management solutions can also help you establish baselines and spot configurations that are not in alignment
   - **Guideline**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users 
-    - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not complusory
+    - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not complusory; suggested practices and expectations of activity to best accomplish tasks and goals
   - **Procedure** (AKA Standard Operating Procedure or SOP): detailed, step-by-step how-to doc that describes the exact actions necessary to implement a specific security mechanism, control, or solution
 
 [1.8](#1.8) Identify, analyze, and prioritize Business Continuity (BC) requirements (OSG-9 Chpt 3)
@@ -299,7 +304,7 @@
       - As part of the BIA, establish:
         - **recovery time objectives (RTO)** (how long it takes to recover)
         - **recovery point objectives (RPO)** (the maximum tolerable data loss)
-        - **maximum tolerable downtime (MTD)**, along with the costs of downtime and recovery
+        - **maximum tolerable downtime (MTD)**, (how long an org can survive an interruption of critical functions) along with the costs of downtime and recovery; AKA MTD (maximum tolerable downtime)
     - **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that need to be protected against interruption
       - The next phase of BCP development, continuity planning, focuses on the development and implementation of a continuity strategy to minimize the impact realized risks might have on protected assets
       - There are two primary subtasks involved in continuity planning:
@@ -387,12 +392,13 @@
     - **Risk Deterrence**: deterrence is the process of implementing deterrents for would-be violators of security and policy 
       - the goal is to convince a threat agent not to attack; 
       - e.g. implementing auditing, security cameras, and warning banners; using security guards
-    - **Risk Avoidance**: the process of selecting alternate options or activities that have less associated risk than the default, common, expedient, or cheap option
+    - **Risk Avoidance**: determining that the impact or likelihood of a specific risk is too greate to be offset by potential benefits, and not performing a particular business function due to that determiniation; the process of selecting alternate options or activities that have less associated risk than the default, common, expedient, or cheap option
     - **Risk Acceptance**: the result after a cost/benefit analysis determines that countermeasure costs would outweigh the possible cost of loss due to a risk 
       - also means that management has agreed to accept the consequences/loss if the risk is realized
     - **Risk Rejection**: an unacceptable possible response to risk is to reject risk or ignore risk; denying that risk exists and hoping that it will never be realized are not valid prudent due care/due diligence responses to risk
+    - **Risk Transference**: paying an external party to accept the financial impact of a given risk
   - **Inherent Risk**: the level of natural, native, or default risk that exists in an environment, system, or product prior to any risk management efforts being performed (AKA initial or starting risk); this is the risk identified by the risk assessment process
-  - **Residual Risk**: consists of threats to specific assets against which management chooses not to implement (the risk that management has chosen to accept rather than mitigate)
+  - **Residual Risk**: consists of threats to specific assets against which management chooses not to implement (the risk that management has chosen to accept rather than mitigate); risk remaining after security controls have been put in place
   - **Total Risk**: the amount of risk an org would face if no safeguards were implemented
   - **Conceptual Total Risk Formula**: threats * vulnerabilities * asset value = total risk
   - **Controls Gap**: amount of risk that is reduced by implementing safeguards
@@ -453,7 +459,7 @@
     - SP 800-37 Rev 2, Risk Management Framework for Information Systems and Organizations
     - SP 800-39, Managing Information Security Risk
     - SP 800-30 Rev 1, Guide for Conducting Risk Assessments
-    - The **RMF 7 steps**, and has **six cyclical phases**:
+    - The **RMF has 7 steps**, and **six cyclical phases**:
       - **Prepare** to execute the RMF from an organization and system-level perspective by establishing a context and priorities for managing security and privacy risk
       - **Categorize** the system and the information processed, stored, and transmitted by the system based on an analysis of the impact of loss
       - **Select** an initial set of controls for the system and tailor the controls as needed to reduce risk to an acceptable level based on an assessment of risk

@@ -4,6 +4,8 @@
 - Asset security includes the concepts, principles, and standards of monitoring and securing any asset important to the organization
 
 - The Asset Security domain focuses on collecting, handling, and protecting information throughout its lifecycle; the first step is classifying information based on its value to the organization
+- **Asset**: anything of value owned by the organization
+- **Asset lifecycle**: phases an asset goes through, from creation (or collection) to destruction
 
 [2.1](#2.1) Identify and classify information assets (OSG-9 Chpt 5)
 
@@ -11,6 +13,7 @@
   - Managing the data lifecycle refers to protecting it from cradle to grave -- steps need to be taken to protect data when it's first created until it's destroyed
   - One of the first steps in the lifecycle is identifying and classifying information and assets, often within a security policy
   - In this context, assets include sensitive data, the hardware used to process that data, and the media used to store/hold it
+  - **Data categorization**: process of grouping sets of data, info or knowledge that have comparable sensativities (e.g. impact or loss rating), and have similar law/contract/compliance security needs
   - **Sensitive data**: any information that isn't public or unclassified, and can include anything an org needs to protect due to its value, or to comply with existing laws and regulations
   - **Personally Identifiable Information (PII)**: any information that can identify an individual
     - more specifically, info about an individual including (1) any info that can be used to distinguish or trace an individual‘s identity, such as name, social security number, date and place of birth, mother‘s maiden name, or biometric records; and (2) any other information that is linked or linkable to an individual, such as medical, educational, financial, and employment information ([NIST SP 800-122](https://csrc.nist.gov/publications/detail/sp/800-122/final))
@@ -32,6 +35,7 @@
 
 - 2.1.2 Asset Classification
   - It's important to identify and classify assets, such as systems, mobile devices etc.
+  - **Classification**: derived from compliance mandates, the process of recognizing organizational impacts if information suffers any security compromise (whether to confidentiality, integrity, availability, non-repudiation, authenticity, privacy, or safety)
   - Asset classifications should match data classification, i.e. if a computer is processing top secret data, the computer should be classified as a top secret asset
   - **Clearance**: relates to access of certain classfication of data or equipment, and who has access to that level or classification
   - A **formal access approval process** should be used to change user access; the process should involve approval from the data/asset owner, and the user should be informed about rules and limits
@@ -53,8 +57,8 @@
 - **Storage**: define storage locations and procedures by storage type; use physical locks for paper-based media, and encrypt electronic data
 - **Destruction**: destroy data no longer needed by the organization; policy should define acceptable destruction methods by type and classification ([see NIST SP-800-88 for details](https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final))
   - **Erasing**: usually refers to a delete operation on media, leaving data remanence
-  - **Clearing**: over-writing existing data
-  - **Purging**: usually refers to mutliple clearing passes combined with other tools (see below) -- not considered acceptable for top secret data
+  - **Clearing**: removal of sensitive data from a storage device such that there is assurance data may not be reconstructed using normal functions or software recovery or software recovery utilities; over-writing existing data
+  - **Purging**: removal of sensitive data from a system or device with the intent that data cannot be reconstructed by any known technique; usually refers to mutliple clearing passes combined with other tools (see below) -- not considered acceptable for top secret data
 - **Data Remanence**: data remaining on media after typical erasure; to ensure all remanence is removed, the following tools can help:
   - **Degaussing**: used on magentic media
   - **(Physical) destruction**: used for SSD/electronic components, or in combination with other less-secure methods
@@ -71,6 +75,7 @@
   - **Data owner**: the person who has ultimate organizational responsibility for data; usually sr. manager (CEO,president, dept. head); data owners typically delegate data protection tasks to others in the org
 
 - 2.3.2 Asset inventory (e.g., tangible, intangible)
+  - **Inventory**: complete list of items
   - **Tangible assets**: include hardware and software assets owned by the company
   - **Intangible assets**: things like patents, copyrights, a company’s reputation, and other assets representing potential revenue
     - an org should keep track of intangible assets, like intellectual property, patents, trademarks, and company’s reputation, and copyrights to protect them
@@ -78,6 +83,7 @@
 
 - 2.3.3 Asset management
   - Asset management refers to managing both tangible and intangible assets; this starts with inventories of assets, tracking the assets, and taking additional steps to protect them throughout their lifetime
+  - **Accountability**: ensures that account management has assurance that only authorized users are accessing a system and using it properly
   - **Hardware assets**: IT resources such as computers, servers, routers, switches and peripherals
     - use an automated configuration management system (CMS) to help with hardware asset management
     - use barcodes, RFID tags to track hardware assets
@@ -88,18 +94,19 @@
 
 [2.4](#2.4) Manage data lifecycle (OSG-9 Chpt 5)
 - 2.4.1 Data roles (i.e., owners, controllers, custodians, processors, users/subjects)
-  - **System owner**: controls the computer storing the data; usually includes software and hardware configurations and support services (e.g. cloud implementation) 
+  - **System owner**: controls the computer storing the data; usually includes software and hardware configurations and support services (e.g. cloud implementation)
+    - data owner is the person respsonible for classifying, categorizing, and permitting access to the data; the data owner is the person who is best familiar with the importance of the data to the business
     - system owners are responsible for the systems that process the data
     - system owner is responsible for system operation and maintenance, and associated updating/patching as well as related procurement activities
   - **Data controller**: decide what data to process and how to process it
     - the data controller is the person or entity that controls the processing of the data - deciding what data to process, why this data should be processed, and how it is processed
     - e.g. a company that collects personal information on employees for payroll is a data controller (but, if they pass this info to a third-party to process payroll, the payroll company is the data processor, see below)
-  - **Data processor**: have a responsibility to protect the privacy of the data and not use it for any purpose other than directed by the data controller; generally, a data processor is any system used to process data
+  - **Data processor**: an entity working on behalf (or the direction) of the data controller, that processes PII; they have a responsibility to protect the privacy of the data and not use it for any purpose other than directed by the data controller; generally, a data processor is any system used to process data
     - a controller can hire a third party to process data, and in this context, the third party is the data processor; data processors are often third-party entities that process data for an org at the direction of the data controller
     - note GDPR definition: "a natural or legal person, public authority, agency, or other body, which processes personal data soley on behalf of the data controller"
       - GDPR also restricts data tranfers to countries outside EU, with fines for violations
       - many orgs have created dedicated roles to oversee GDPR data laws are followed
-  - **Data custodian**: a custodian is delegated day-to-day responsibilities for properly storing and protecting data; responsible for the protection of data through maintenance activities, backing up and archiving, and preventing the loss or corruption and recovering data 
+  - **Data custodian**: a custodian is delegated, from the system owner, day-to-day responsibilities for properly storing and protecting data; responsible for the protection of data through maintenance activities, backing up and archiving, and preventing the loss or corruption and recovering data 
   - **Security administrator**: responsible for ensuring the overall security of entire infrastructure; they perform tasks that lead to the discovery of vulnerabilities, monitor network traffic and configure tools to protect the network (like firewalls and antivirus software) 
     - security admins also devise security policies, plans for business continuity and disaster recovery and train staff
   - **Supervisors**: responsible for overseeing the activities of all the above entities and all support personnel; they ensure team activities are conducted smoothly and that personnel is properly skilled for the tasks assigned
@@ -141,6 +148,7 @@
   - An org's security or data policy should define the acceptable methods of destroying data based on the data's classification
   - a degausser can be used on a hard disk drives/magnetic media
   - the best SSD wiping method is destruction -- even when using manufacturers SSD wiping tools, data can remain, and therefore the best SSD wipe method is destruction
+  - **Defensible destruction**: eliminating data using a controlled, legally defensible and regulatory compiant way
 
 [2.5](#2.5) Ensure appropriate asset retention (e.g. End-of-Life EOL, End-of-Support (EOS)) (OSG-9 Chpt 5)
 - Hardware: even if you maintain data for the appropriate retention period, it won’t do you any good if you don’t have hardware that can read the data
@@ -165,14 +173,15 @@
       - applications should flush memory buffers to remove data after it is no longer needed
 
 - 2.6.2 Scoping and tailoring
+  - **Baseline**: documented, lowest level of security config allowed by a standard or org
   - After selecting a control baseline, orgs fine-tune with tailoring and scoping processes; a big part of the tailoring process is aligning controls with an org's specific security requirements
   - **Tailoring**: refers to modifying the list of security controls within a baseline to align with the org's mission
     - includes the following activities:
-      - identifying and designating common controls
-      - applying scoping considerations
-      - selecting compensating controls
+      - identifying and designating common controls; specificaion of organization-defined parameters in the security controls via explicit assignment and selection statements
+      - applying scoping guidance/considerations
+      - selecting/specifying compensating controls
       - assigning control values
-  - **Scoping**: part of the tailoring process and refers to reviewing a list of baseline security controls and selecting only those controls that apply to the systems you're trying to protect
+  - **Scoping**: limiting the general baseline recommendations by removing those that do not apply; part of the tailoring process and refers to reviewing a list of baseline security controls and selecting only those controls that apply to the systems you're trying to protect
     - scoping processes eliminate controls that are recommended in a baseline
 
 - 2.6.3 Standards selection
