@@ -4,7 +4,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 
 - **ACK**: an acknoledment of a signal being received
 - **ARP**: used at the Media Access Control (MAC) layer to provide for direct communication between two devices within the same LAN segment
-- **APT**: Advanced Persistent Threat
+- **APT**: Advanced Persistent Threat is an agent/org that plans, organizes, and carries out highly sophisticated attacks against a target person, org, or industry over a period of time (months or even years); usually with a strategic goal in mind
 - **API**: Application Programming Interface; code mechanisms that provide ways for apps to share data, emthods, or functions over a network (usually implemented in XML or JavaScript Object Notation (JSON))
 - **Bandwidth**: amount of information transmitted over a period of time; can be applied to moving bits over a medium, or human processes like learning or education
 - **Bluetooth**: wireless personal area network, IEEE 802.15; an open standard for short-range RF communication used primarily with wireless personal area networks (WPANs)

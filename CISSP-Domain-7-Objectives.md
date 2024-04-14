@@ -22,7 +22,8 @@
 - **Regression testing**: testing of a system to ascertain whether recently approved modifications have changed its performance, or if other approved functions have introduced unauthorized behaviors
 - **Request For Change (RFC)**: documentation of a proposed change in support of change management activities 
 - **Root Cause Analysis**: principle-based systems approach for the identification of underlying causes associated with a particular risk set or incidents
-
+- **Trusted Computing Base (TCB)**: the collection of all hardware, software, and firmware components within an architecture that is specifically responsible for security and the isolation of objects; TCB is a term that is usually associated with security kernels and the reference monitor
+- **View-Based access controls**: access control that allows the database to be logically divided into components like records, fields, or groups allowing sensitive data to be hidden from non-authorized users; admins can set up views by user type, allowing only access to assigned views
 
 [7.1](#7.1) Understand and comply with investigations (OSG-9 Chpt 19)
 - **Investigation**: a formal inquiry and systematic process that involves gathering information to determine the cause of a security incident or violation
@@ -461,28 +462,29 @@
     - They look and act like legit systems, but they do not host data of any real value for an attacker; admins often configure honeypots with vulnerabilities to tempt intruders into attacking them
     - In addition to keeping the attacker away from a production environment, the honeypot allows administrators to observe an attacker’s activity without compromising the live environment
 - 7.7.7 Anti-malware
-    - Malware is malicious software that negatively impacts a system
+    - **Malware**: program inserted into a system with the intent of compromising the CIA of the victim's data, applications, or  OS; malicious software that negatively impacts a system
     - The most important protection against malicious code is the use of antimalware software with up-to-date signature files and heuristic capabilities
         - multi-pronged approach with antimalware software on each system in addition to filtering internet content helps protect systems from infections
         - following the principle of least privilege, ensuring users do not have admin permissions on systems won’t be able to install apps that may be malicious
     
     - These are the characteristics of each malware type:
-        - virus: the defining characteristic is that it's a piece of malware that has to be triggered in some way by the user
-        - worm: malware that can self-propagate and spread through a network or a series of systems on its own by exploiting a vulnerability in those systems
+        - virus: software written with the intent/capability to copy and disperse itself without direct owner knowledge/cooperation; the defining characteristic is that it's a piece of malware that has to be triggered in some way by the user; program that modifies other programs to contain a possibly altered version of itself
+        - worm: software written with the intent/capability to copy and disperse without owner knowledge/cooperation, but without needing to modify other programs to contain compies of itself; malware that can self-propagate and spread through a network or a series of systems on its own by exploiting a vulnerability in those systems
         - companion: helper software -- it's not malicious on its own; it could be something like a wrapper that accompanies the actual malware
         - macro: associated with Microsoft Office products, and is created using a straightforward programming language to automate tasks; macros can be programmed to be malicious and harmful
         - multipartite: means the malware spreads in different ways; (e.g. Stuxnet)
         - polymorphic: malware that can change aspects of itself as it replicates to evade detection (e.g. file name, file size, code structure etc)
-        - trojan: A Trojan horse is malware that looks harmless or desirable but contains malicious code; trojans are often found in easily downloadable software
+        - trojan: A Trojan horse is malware that looks harmless or desirable but contains malicious code; trojans are often found in easily downloadable software; a trojan inserts backdoors or trapdoors into other programs or systems
+        - bot: an emerging class of mobile code; employing limited machine learning capabilities to assist with user requests for help or assistance, automation of or assistance with workflows, data input quality validation etc
         - botnet: many infected systems that have been harnessed together and act in unison
         - boot sector infectors: pieces of malware that can install themselves in the boot sector of a drive
         - hoaxes/pranks: not actually software, they're usually part of social engineering—via email or other means—that intends harm (hoaxes) or a joke (pranks)
-        - logic bomb: code that will execute based on some triggering event
+        - logic bomb: malware inserted into a program which will activate and perform functions suiting the attacker at some later date/conditions are met; code that will execute based on some triggering event
         - stealth: malware that uses various active techniques to avoid detection
         - ransome attack: any form of attack which threatens the destruction, denial or unauthorized public release/remarketing of private infomation assets; usually involves encrypting assets and withholding the decryption key until a ransom is paid
         - ransomware: type of malware that typically encrypts a system or a network of systems, effectively locking users out, and then demands a ransom payment (usually in the form of a digital currency) to gain access to the decryption key
         - rootkit: Similar to stealth malware, a rootkit attempts to mask its presence on a system; typically includes a collection of malware tools that an attacker can utilize according to specific goals
-        - zero-day: is any type of malware that's never been seen in the wild before, and the vendor of the impacted product is unaware (or hasn't issued a patch), as are security companies that create anti-malware software intended to protect systems
+        - zero-day: is any type of malware that's never been seen in the wild before, and the vendor of the impacted product is unaware (or hasn't issued a patch), as are security companies that create anti-malware software intended to protect systems; previously unreported vuln which can be potentially exploited without risk of detection or prevention until system owner/developer detects and corrects vuln; gets name from the "zero time" being the time at which the exploit or vuln is first identified by the systems' owners or builders; AKA zero-hour exploit, zero-day attack
 
 - 7.7.8 Machine learning and Artificial Intelligence (AI) based tools
     - **AI**: gives machines the ability to do things that a human can do better or allows a machine to perform tasks that we previously thought required human intelligence
