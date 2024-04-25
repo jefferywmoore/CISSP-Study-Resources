@@ -455,6 +455,7 @@
     - OSG also mentions that some SaaS vendors provide security services via the cloud (e.g. next-gen firewalls, UTM devices, and email gateways for spam and malware filtering)
 - 7.7.5 Sandboxing
     - **Sandboxing**: refers to a security technique where a separate, secure environment is created to run and analyze untested or untrusted programs or code without risking harm to the host device or network; this isolated environment, known as a **sandbox**, effectively contains the execution of the code, allowing it to run and behave as if it were in a normal computing environment, but without the ability to affect the host system or access critical resources and data 
+    - **Confinement**: restriction of a process to certain resources; isolation is using bounds to create/enforce confinement
     - Sandboxing provides a security boundary for applications and prevents the app from interacting with other apps; can be used as part of development, integration, or acceptance testing, as part of malware screening, or as part of a honeynet
 - 7.7.6 Honeypots/honeynets
     - **Honeypots**: individual computers created as a trap or a decoy for intruders or insider threats

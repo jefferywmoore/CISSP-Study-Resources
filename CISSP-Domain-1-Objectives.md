@@ -1,5 +1,9 @@
 [Domain 1](#domain1-top) **Security and Risk Management**
 
+- **Glass-Steagall Act**: passed in 1933 and separated investment and commercial banking activities in response to involvement in stock market investment
+  - The Gramm-Leach-Bliley Act eliminated the Glass-Steagall Act's restrictions against affiliations between commercial and investment banks in 1999
+  - **Security Control Assessment (SCA)**: an evaluation process of the different type of controls such as management, operational and security control within an information system, with the purpose of validation of the requirement of a control, correct implementation, operationally being followed as intended, and result is as desired
+    - basically a formal evaluation of a defined set of controls, which may be conducted with the Security Test and Evaluation (ST&E); NIST Special Publication 800-53A Security and Privacy Controls for Federal Information Systems and Organizations ensure the security requirements and enforcement of appropriate security controls
 [1.1](#1.1) Understand, adhere to, and promote professional ethics (OSG-9 Chpts 1,19)
 
 - As a CISSP, you must understand and follow the (ISC)² code of ethics, as well as your organization’s own code
@@ -172,6 +176,7 @@
     - GLBA (Gramm-Leach-Bliley Act) applies to insurance and financial orgs, requiring notification to federal regulators, law enforcement agencies and customers when a data breach occurs 
     - Certain states also impose their own requirements concerning data breaches 
     - the EU and other countries have their own requirements, for instance, the GDPR has very strict data breach notification requirements: A data breach must be reported to the competent supervisory authority within 72 hours of its discovery
+    - **Communications Assistance to Law Enforcement Act (CALEA)**: requires all communication carriers make wiretaps possible for law enforcement officials who have an appropriate court order
     - Some countries do not have any reporting requirements
 - 1.5.2 Licensing and intellectual property (IP) requirements
   - **Intellectual property**: intangible assets (e.g. software, data)
@@ -182,7 +187,7 @@
     - Software: area of on-going controversy; Google vs Oracle; given to rise of "patent trolls"
   - **Copyright**: exclusive use of artistic, musical or literary works which prevents unauthorized duplication, distribution or modification
   - **Licensing**: a contract between the software producer and the consumer which limits the use and/or distribution of the software
-  - **Trade Secrets**: intellectual property that is critical to a business, and significant damage would result if it were disclosed to competitors or the public
+  - **Trade Secrets**: intellectual property that is critical to a business, and significant damage would result if it were disclosed to competitors or the public; the Economic Espionage Act imposes fines and jail sentences on someone found guilty of stealing trade secrets from a US corp
 - 1.5.3 Import/export controls
   -  Every country has laws around the import and export of hardware and software; e.g. the US has restrictions around the export of cryptographic technology, and Russia requires a license to import encryption technologies manufactured outside the country
 - 1.5.4 Transborder data flow
@@ -503,6 +508,7 @@
    - Focus on assets: an org’s most valuable assets are likely to be targeted by attackers
    - Focus on software: orgs that develop applications in house, and can be viewed as part of the threat landscape; the goal isn’t to identify every possible attack, but to focus on the big picture, identifying risks and attack vectors
 - Understanding threats to the org allow the documentation of potential attack vectors; diagramming can be used to list various technologies under threat
+- **Reduction analysis**: with a purpose of gaining a greater understanding of the logic of a product and interactions with external elements includes breaking down a system into five core elements: trust boundaries, data flow paths, input points, privileged operations, and security control details; AKA decomposing the application, system, or environment
 
 [1.12](#1.12) Apply Supply Chain Risk Management (SRM) concepts (OSG-9 Chpt 1)
 - 1.12.1 Risks associated with hardware, software, and services

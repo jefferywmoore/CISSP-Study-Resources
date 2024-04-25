@@ -176,6 +176,11 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - **IPSec**: an IETF standard suite of protocols that is used to connect nodes (e.g. computers or office locations) together
         - widely used in virtual private networks (VPNs)
         - IPSec provides encryption, authentication and data integrity
+        - **transport mode**: only packet payload is encrypted
+        - **tunnel mode**: the entire packet (including header) is encrypted
+        - **security association (SA)**: represents a simplex communication connection/session, recording any config and status info; 
+        - **authentication header (AH)**: provides assurance of message integrity and nonrepudiation; also provides authentication and access control, preventing replay attacks
+        - ****encapsulating security payload (ESP)**: provides confidentiality and integrity of packet content; also encryption and limited authentication and preventing replay attacks (not to the degree of AH)
 
 - 4.1.4 Implications of multilayer protocols
     - TCP/IP is a multilayer protocol, and derives several associated benefits
@@ -238,6 +243,19 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - Wi-Fi Protected Access II (WPA2):
             - IEEE 802.11i WPA2 replaced WEP and WPA
             - Uses AES-CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol)
+        - Wi-Fi Protected Access 3 (WPA3):
+            - WPA3-ENT uses 192-bit AES CCMP encryption
+            - WPA3-PER remains at 128-bit AES CCMP
+        - 802.1X / EAP
+            - WPA, WPA2, and WPA3 support the enterprise (ENT) authentication known as 802.1X/EAP
+            - Extensible Authentication Protocol (EAP) is not a specific mechanism of authentication, rather an authentication framework
+            - 802.1X/EAP is a standard port-based network access control that ensures that clients cannot communicate with a resource until proper authentication has taken place
+            - Through the use of 802.1X Remote Authentication Dial-In User Service (RADIUS), Terminal Access Control Access Control System (TACACS), certificates, smartcards, token devices and biometrics can be integrated into wireless networks
+        - Lightweight Extensible Authentication Protocol (LEAP) is a Cisco proprietary alternative to TKIP for WPA
+            - Avoid using LEAP, use EAP-TLS as an alternative; if LEAP must be used a complex password is recommended
+        - Don’t forget about ports related to common AAA services:
+            - UDP 1812 for RADIUS
+            - TCP 49 for TACACS+
         - Frequency table:
             
         | Amendment | Wi-Fi Alliance | Speed | Frequency |
@@ -250,6 +268,11 @@ Networking can be one of the more complex exam topics; if you have a networking 
         | 802.11ac   | Wi-Fi 5    | 1 Gbps |2.4 GHz               |
         | 802.11ax   | Wi-Fi 6/Wi-Fi 6E     | 9.5 Gbps |2.4 GHz   |
 
+    - Modes:
+        - Ad hoc: directly connects two clients
+        - Standalone: connects lcients using a WAP, but not to wired resources
+        - Infrastructure: connects endpoints to a central network, not to each other
+        - Wired extension: uses a wireless access point to link wireless clients to a wired network
     - **Zigbee**: IoT equipment communications concept based on Bluetooth
         - Low power/low throughput
         - Requires close proximity

@@ -2,26 +2,29 @@
 
 You may find this domain to be more technical than others, and if you have experience woring in a security engineering role you likely have an advantage. If not, allocate extra time to this domain to ensure you have a good understanding of the topics
 - **Algorithm**: a mathmatical function that is used in the encryption and decryption process; can be simply or very complex; also defined as a set of instructions by which encryption and decryption is done
+- **ASLR**: Address space layout randomization (ASLR) is a memory-protection process for operating systems (OSes) that guards against buffer-overflow attacks by randomizing the location where system executables are loaded into memory
 - **Block Mode Encryption**: using fixed-length sequences of input plaintext symbols as the unit of encryption
 - **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
 - **Collision**: occurs when a hash function generates the same output for different inputs
 - **Cryptanalysis**: study of techniques for attempting to defeat cryptographic techniques and generally information security services
 - **Cryptographic Hash function**: process or function that transforms an input plaintext into a unique value called a hash (or hash value); note that they do not use cryptographic algorithms, as hashes are one-way functions where it's infeasible to determine the plaintext; Message digests are an example of cryptographic hash
-- **Cryptography**: study of/application of methods to ssecure the meaning and content of messages, files etc by disguise, obscuration, or other transformations
-- **Cryptosystem**: complete set of hardware, software, communictions elements and procedures that allow parties to communicate, store or use info protected by cryptographic means; includes algroithm, key, and key management functions
+- **Cryptography**: study of/application of methods to secure the meaning and content of messages, files etc by disguise, obscuration, or other transformations
+- **Cryptosystem**: complete set of hardware, software, communications elements and procedures that allow parties to communicate, store or use info protected by cryptographic means; includes algroithm, key, and key management functions
 - **Cryptovariables(s)**: parameters associated with a particular cryptogrphic algorithm; e.g. block size, key length and number of iterations
 - **Decoding**: the reverse process from encoding, converting the encoded message back to plaintext format
 - **Decryption**: the reverse process from encryption
 - **Encoding**: action of changing a message or set of info into another format through the use of code; unlike encryption, encoded info can still be read by anyone with knowledge of the encoding process
 - **Encryption**: process and act of converting the message from plaintext to ciphertext (AKA enciphering)
-- **Frequency analysis**: form of cryptanalys that uses frequency of occurrence of letters, words or symbols in the plaintext as a way of reducing the search space
+- **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the plaintext as a way of reducing the search space
 - **Hybrid encryption system**: a system that uses both symmetric and asymmetric encryption
-- **Key**: the input that controls the operation of the cryptographic algorthm, determining the behavior of the algorithm and permis the reliable encyrption and decryption of the message
+- **Key**: the input that controls the operation of the cryptographic algorthm, determining the behavior of the algorithm and permits the reliable encyrption and decryption of the message
 - **Key pair**: matching set of one public and one private key
 - **Key escrow**: process by which keys (asymmetric or symmetric) are placed in a trusted storage agent's custody, for later retrieval
 - **Key generation**: the process of creating a new encryption/decryption key
 - **Key recovery**: process of reconstructing an encryption key from the cyphertext alone; if there is a workable key recovery system, it means the algorithm is not secure
 - **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password
+- **Meet-in-the-middle**: attack that uses a known plaintext message and both encryption of the plaintext and decryption of the ciphertext simultaneously in a brute-force manner to identify the encryption key; 2DES is vulnerable to this attack
+- **Multistate systems**: certified to handle data from different security classifications simultaneously
 - **One-time pad**: series of randomly generated symmetric encryption keys, each one to be used only once by the sender and recipient
 - **Out-of-band**: transmitting or sharing control information (e.g. encryption keys and crypto variables) by means of a separate and distinct communications path, channel, or system
 - **Plaintext**: message or data in its readable form, not turned into a secret
@@ -33,22 +36,24 @@ You may find this domain to be more technical than others, and if you have exper
 - **Transposition cypher**: encryption/decription process using transposition
 - **VESDA**: very early smoke detection process (air sensing device brand name)
 - **Work factor**: amount of effort necessary to break a cryptographic system, measured in elapsed time
+- **Zero-knowledge proof**: one person demonstrates to another that they can achieve a reslut that requires sensitive info without actually disclosing the sensitive info
 
 [3.1](#3.1) Research, implement, and manage engineering processes using secure design principles (OSG-9 Chpts 1,8,9,16)
 
 - 3.1.1 Threat Modeling
-    - **Threat modeling**: a security process where potential threats are identified, categorized, and analyzed. It can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed
+    - **Threat modeling**: a security process where potential threats are identified, categorized, and analyzed; it can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed
         - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat
 - 3.1.2 Least Privilege
     - **Least privilege**: states that subjects are granted only the privileges necessary to perform assigned work tasks and no more; this concept extends to data and systems
         - Limiting and controlling privileges based on this concept protects confidentiality and data integrity
 - 3.1.3 Defense in Depth
-    - **Defense in Depth**: AKA layering, is the use of multiple controls in a series, where a single failed control should not result in exposure of systems or data. Layers should be used in a series (one after the other), NOT in parallel. When you see the terms levels, multilevel, layers, classifications, zones, realms, compartments, protection rings etc think about Defense in Depth
+    - **Defense in Depth**: AKA layering, is the use of multiple controls in a series, where a single failed control should not result in exposure of systems or data; layers should be used in a series (one after the other), NOT in parallel
+        - When you see the terms like levels, multilevel, layers, classifications, zones, realms, compartments, protection rings etc think about Defense in Depth
 - 3.1.4 Secure defaults
     - **Secure defaults**: when you think about defaults, consider how something operates brand new, just turned over to you by the vendor
         - e.g. wireless router default admin password, or firewall configuration requiring changes to meet an organization's needs
 - 3.1.5 Fail securely
-    - **Fail securely**: if a system, asset, or process fails, it shouldn't reveal sensitive information, or be less secure than during normal operation. Failing securely could involve reverting to defaults
+    - **Fail securely**: if a system, asset, or process fails, it shouldn't reveal sensitive information, or be less secure than during normal operation; failing securely could involve reverting to defaults
 - 3.1.6 Separation of duties (SoD)
     - **Separation of duties (SoD)**: separation of duties (SoD) and responsibilities ensures that no single person has total control over a critical function or system;  SoD is a process to minimize opportunities for misuse of data or environment damage 
         - e.g. one person sells tickets, another collects tickets and restricts access to ticket holders in a movie theater
@@ -67,34 +72,34 @@ You may find this domain to be more technical than others, and if you have exper
             - Default setting: make private by default, e.g. social media app shouldn't share user data with everybody by default
             - Embedded: build privacy in; don’t add it later
             - Full functionality, positive-sum: achieve both security and privacy, not just one or the other
-            - Full lifecycle protection: privacy should be achieved before, during and after a transaction. Part of this is securely disposing of data when it is no longer needed
+            - Full lifecycle protection: privacy should be achieved before, during and after a transaction; part of this is securely disposing of data when it is no longer needed
             - Visibility, transparency, open: publish the requirements and goals; audit them and publish the findings
             - Respect, user-centric: involve end users, providing the right amount of information for them to make informed decisions about their data
-- 3.1.10 Trust by verify
+- 3.1.10 Trust but verify
     - **Trust but verify**: based on a Russian proverb, and no longer sufficient; it's the traditional approach of trusting subjects and devices within a company's security perimeter automatically, leaving an org vulnerable to insider attacks and providing intruders the ability to easily perform lateral movement
 - 3.1.11 Shared responsibility
     - **Shared responsibility**: the security design principle that indicates that organizations do not operate in isolation
         - Everyone in an organization has some level of security responsibility
-        - the job of the CISO and security team is to establish & maintain security
+        - The job of the CISO and security team is to establish & maintain security
         - The job of regular employees to perform their tasks within the confines of security
         - The job of the auditor is to monitor the environment for violations
-        - When working with third parties, especially with cloud providers, each entity needs to understand their portion of the shared responsibility of performing work operations and maintaining security. This is often referenced as the **cloud shared responsibility model**
+        - When working with third parties, especially with cloud providers, each entity needs to understand their portion of the shared responsibility of performing work operations and maintaining security; this is often referenced as the **cloud shared responsibility model**
 
-[3.2](#3.2) Understand the fundamental concepts of security modles (e.g. Biba, Star Model, Bell-LaPadula) (OSG-9 Chpt 8)
+[3.2](#3.2) Understand the fundamental concepts of security models (e.g. Biba, Star Model, Bell-LaPadula) (OSG-9 Chpt 8)
 - Security models:
     - Intended to provide an explicit set of rules that a computer can follow to implement the fundamental security concepts, processes, and procedures of a security policy 
     - Provide a way for a designer to map abstract statements into a security policy prescribing the algorithms and data structures necessary to build hardware and software
     - Enable people to access only the data classified for their clearance level
-- **Bell-LaPadula**: Model was established in 1973. The goal is to ensure that information is exposed only to those with the right level of classification
-    - Focuse is on confidentiality 
-    - Simple property: No read-up 
-    - Star (*) property: No write-down (AKA confinement property)
+- **Bell-LaPadula**: Model was established in 1973; the goal is to ensure that information is exposed only to those with the right level of classification
+    - Focuse is on *confidentiality* 
+    - **Simple property**: No read-up 
+    - **Star (*) property**: No write-down (AKA confinement property)
     - Discretionary Security Property: uses an access matrix (need to know in order to access)
     - Doesn't address covert channels
 - **Biba**: Released in 1977, this model was created to supplement Bell-LaPadula 
-    - Focus is on integrity 
-    - “No read down” (for example, users with a Top Secret clearance can’t read data classified as Secret)
-    - “No write up” (for example, a user with a Secret clearance can’t write data to files classified as Top Secret)
+    - Focus is on *integrity* 
+    - **Simple Integrity Property**:"No read down" (for example, users with a Top Secret clearance can’t read data classified as Secret)
+    - **Star (*) Integrity Property**: "No write up" (for example, a user with a Secret clearance can’t write data to files classified as Top Secret)
     - By combining it with Bell-LaPadula, you get both confidentiality and integrity
 - **Take-Grant**: 
     - The take-grant model employs a directed graph to dictate how rights can be passed from one subject to another, or from a subject to an object
@@ -106,6 +111,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Clark-Wilson**:
     - Designed to protect integrity using the access control triplet
     - A program interface is used to limit what is done by a subject; if the focus of an intermediary program between subject and object is to protect integrity, then it is an implementation of the Clark-Wilson model
+    - Uses security labels to grant access to objects via transformation procedures and a restricted interface model
 - **Brewer and Nash Model**:
     - AKA "ethical wall", and "cone of silence"
     - created to permit access controls to change dynamically based on a user's previous activity 
@@ -350,6 +356,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - Identify the acceptable key lengths for use with each algorithm based on the sensitivity of the info transmitted
     - Enumerate the secure transaction protocols (e.g. TLS) that may be used
     - As computing power goes up, the strength of cryptographic algorithms goes down; keep in mind the effective life of a certificate or cert template, and of cryptographic systems 
+    - TLS uses an ephemeral symmetric session key between server and client, exchanged using asymmetric crtypography; note that all content is protected using symmetric cryptography
     - Beyond brute force, consider things like the discovery of a bug or an issue with an algorithm or system
     - NIST defines the following terms that are commonly used to describe algorithms and key lengths: 
         - approved (an algorithm that is specified as a NIST or FIPS recommendation) 
@@ -366,7 +373,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - primarily employed to perform bulk encryption and provides only for the security service of confidentiality 
         - "same" is a synonym for symmetric 
         - "different" is a synonym for asymmetric 
-        - total number of keys required to completely connect n parties using symmetric cryptography is given by this formula: 
+        - **total number of keys** required to completely connect n parties using symmetric cryptography is given by this formula: 
             - **(n(n - 1)) / 2**
     - **Asymmetric** encryption: process that uses different keys for encryption and decryption, and in which the decryption key is computationally not possible to determine given the encryption key itself
         - Asymmetric (AKA public key, since one key of a pair is available to anybody) algorithms provide convenient key exchange mechanisms and are scalable to very large numbers of users (addressing the two most significant challenges for users of symmetric cryptosystems) 
@@ -437,7 +444,8 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - Digital signatures rely on a combination of two major concepts — public key cryptography, and hashing functions 
         - Digitally signed messages assure the recipient that the message truly came from the claimed sender, enforcing nonrepudiation
         - Digitally signed messages assure the recipient that the message was not altered while in transit; protecting against both malicious modification (third party altering message meaning), and unintentional modification (faults in the communication process) 
-        - Digital signature process does not provide confidentiality in and of itself (only ensures integrity, authentication, and nonrepudiation) 
+        - Digital signature process does not provide confidentiality in and of itself (only ensures integrity, authentication, and nonrepudiation)
+    - FIPS 186-4 specifies three techniques for the generation and verification of digital signatures that can be used for the protection of data: the Rivest-Shamir-Adleman Algorithm (RSA), the Digital Signature Algorithm (DSA), and the Elliptic Curve Digital Signature Algorithm (ECDSA)
 - 3.6.6 Digital Non-repudiation
     - Here non-repudiation refers to methods ensuring certainty about data origins; in general, the inability to deny
     - Non-repudiation of origin: sender cannot deny having sent a particular message
