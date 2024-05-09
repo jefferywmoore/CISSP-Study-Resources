@@ -6,19 +6,30 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - Identification is the process of a subject claiming, or professing, an identity
 - Authentication verifies the subject’s identity by comparing one or more authentication factors against a database holding authentication info for users
 - The three primary authentication factors are something you know, something you have, and something you are
+    - Something you know: Type 1 authentication (passwords, pass phrase, PIN etc)
+    - Something you have: Type 2 authentication (ID, Passport, Smart Card, Token, cookie on PC etc)
+    - Something you are: Type 3 authentication, includes Biometrics (Fingerprint, Iris Scan, Facial geometry etc.)
+    - Somewhere you are: Type 4 authentication (IP/MAC Address)
+    - Something you do: Type 5 authentication (Signature, Pattern unlock)
 - Single sign-on (SSO) technologies allow users to authenticate once and access any resources in a network or the cloud, without authenticating again
 - Federated Identity Management (FIM) systems link user identities in one system with other systems to implement SSO
 - **Access Control System**: ensuring access to assets is authorized and restricted based on business and security requirements
 - **Access Control Token**: based on the parameters like time, date, day etc a token defines access validity to a system
+- **ADFS**: identity access solution that provides client computers (internal or external to your network) with seamless SSO access to protected Internet-facing applications or services, even when the user accounts and applications are located in completely different networks or orgs
+- **Capability tables**: list privileges assigned to subjects and identify the objects that subjects can access
+- **CAS**: Central Authentication Service (an SSO implementation)
+- **Content-dependent control**: Content-dependent access control adds additional criteria beyond identification and authentication: the actual content the subject is attempting to access; all employees of an org may have access to the HR database to view their accrued sick time and vacation time, but should an employee attempt to access the content of the CIO's HR record, access is denied
+- **Context-dependent access control**: applies additional context before granting access, with time as a commonly used context
 - **Crossover Error Rate**: point at which false acceptance (Type 2) error rate equals the false rejection (Type 1) error rate for a given sensor, in a given system and context; it is the optimal point of operation if the potential impacts of both types of errors are equivalent
+- **Cross-Site Request Forgery (CSRF)**: an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated
 - **FRR**: False Rejection Rate (Type 1) incorrectly denying authentication to a legit identity and therefore denying access
 - **FAR**: False Acceptance Rate (Type 2) incorrectly authenticating a claimed identity as legit, recognizing and granting access on that basis
-- **Ethical Wall**: the use of administrative, phyiscal/logical controls to establih/enforce separation of information, assets or job functions for need-to-know boundaries or prevent conflict of interest situations; AKA compartmentalization
+- **Ethical Wall**: the use of administrative, physical/logical controls to establish/enforce separation of information, assets or job functions for need-to-know boundaries or prevent conflict of interest situations; AKA compartmentalization
 - **Granularity of controls**: level of abstraction or detail which in a security function can be configured or tuned for performance and sensitivity
 - **IDaaS**: cloud-based service that broker IAM functions to target systems on customers' premise and/or in the cloud
 - **Identity proofing**: process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person
-- **Self-service identity management**: elemnts of the identity management lifecycle which the end-user (identity in question) can initiate or perform on their own (e.g. password reset, changes to challenge questions etc)
-- **Whaling attack**: phishing attacks targeting highly-placed officials/private individuals with sizeable assets authorizing large fund wire transfers
+- **Self-service identity management**: elements of the identity management lifecycle which the end-user (identity in question) can initiate or perform on their own (e.g. password reset, changes to challenge questions etc)
+- **Whaling attack**: phishing attack targeting highly-placed officials/private individuals with sizeable assets authorizing large-fund wire transfers
 
 [5.1](#5.1) Control physical and logical access to assets (OSG-9 Chpt 13)
 - Controlling access to assets (tangible: things you can touch, or nontangible: info and data) is a central theme of security
@@ -65,7 +76,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
         - **Time-based One-Time Password (TOTP)**: similar to HOTP, but uses a timestamp and remains valid for a certain time frame (e.g. 30 or 60 seconds)
             - e.g. phone-based authenticator app, where your phone is mimicking a hardware TOTP token (combined with userid/password is considered two-factor or two-step authentication)
         - **Email challenge**: popular method, used by websites, sending the user an email with a PIN
-        - Short Message Service (SMS) to send users a text with a PIN is another 2-factor method; note that NIST SP 800-63B points out vulnerabilities, and deprecates use of SMS as a two-factor method for federal agencies
+        - Short Message Service (SMS): to send users a text with a PIN is another 2-factor method; note that NIST SP 800-63B points out vulnerabilities, and deprecates use of SMS as a two-factor method for federal agencies
 - 5.2.3 Accountability
     - Two important security elements in an access control system are authorization and accountability
         - **Authorization**: subjects are granted access to objects based on proven identities
@@ -186,12 +197,12 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
             - explaining how to access help desk
             - show to access, share and save resources
     - Deprovisioning/Offboarding
-        - Deprovisioning/offboarding occurs when an employee leaves the organization or is transferred to a different department
-        - **Account revocation**: deleting an account is the easiest way to deprovision
+        - deprovisioning/offboarding occurs when an employee leaves the organization or is transferred to a different department
+        - **account revocation**: deleting an account is the easiest way to deprovision
             - an employee's account is usually first disabled
             - supervisors can then review the user’s data and determine if anything is needed
             - note: if terminated employee retains access to a user account after the exit interview, the risk for sabatage is very high
-        - Deprovisioning includes collecting any hardware issued to an employee such as laptops, mobile devices and auth tokens
+        - deprovisioning includes collecting any hardware issued to an employee such as laptops, mobile devices and auth tokens
 - 5.5.3 Role definition
     - Employee responsibilities can change in the form of transfers to a different role, or into a newly created role
         - for new roles, it’s important to define the role and the privileges needed by the employees in that role
@@ -207,13 +218,14 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 [5.6](#5.6) Implement authentication systems (OSG-9 Chpt 14)
 - 5.6.1 OpenID Connect (OIDC) / Open Authorization (Oauth)
-    - OAuth 2.0 authorization framework enables third-party apps to obtain limited access to an HTTP service, either on behalf of a resource owner (by orchestrating an approval interaction), or by allowing third-party applications to obtain access on its own behalf
-    - OAuth is an open framework used for authentication and authorization protocols 
-    - The most common protocol built on OAuth is OpenID Connect (OIDC) 
-    - OAuth 2.0 is often used for delegated access to applications, e.g. a mobile game that automatically finds all of your new friends from a social media app is likely using OAuth 2.0
+    - OAuth 2.0 authorization framework enables third-party apps to obtain limited access to an HTTP service, either on behalf of a resource owner (by orchestrating an approval interaction), or by allowing third-party applications to obtain access on its own behalf; OAuth provides the ability to access resources from another service
+    - OAuth is an open framework used for authentication and authorization protocols
+    - OAuth is the most widely used open standard for authorization and delgation of rights for cloud services
+    - The most common protocol built on OAuth is OpenID Connect (OIDC); OpenID is used for authentication
+    - OAuth 2.0 is often used for delegated access to applications, e.g. a mobile game that automatically finds all of your new friends from a social media app is likely using OAuth 2.0;
     - Conversely, if you sign into a new mobile game using a social media account (instead of creating a user account just for the game), that process might use OIDC
     - **OpenID Connect (OIDC)**: an authentication layer using the OAuth 2.0 authorization framework, maintained by the OpenID Foundation, providing both authentication and authorization
-    - OIDC uses JSON (JavaScript Object Notation) Web Tokens (JWT) -- AKA ID token
+        - OIDC is a RESTful, JSON (JavaScript Object Notation)-based auth protocol that, when pared with OAuth can provide identity verification and basic profile info; uses JSON  Web Tokens (JWT) -- AKA ID token
     - OAuth and OIDC are used with many web-based applications to share information without sharing credentials
         - OAuth provides authorization
         - OIDC uses the OAuth framework for authorization and builds on the OpenID technologies for authentication
@@ -243,25 +255,28 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
         - **Key Distribution Center (KDC)**: the trusted third party that provides authentication services
         - **Kerberos Authentication Server**: hosts the functions of the KDC:
             - **ticket-granting service (TGS)**: provides proof that a subject has authenticated through a KDC and is authorized to request tickets to access other objects
+                - the ticket for the full ticket-granting service is called a ticket-granting ticket ([TGT](https://learn.microsoft.com/en-us/windows/win32/secauthn/ticket-granting-tickets)); when the client asks the KDC for a ticket to a server, it presents credentials in the form of an authenticator message and a ticket (a TGT) and the ticket-granting service opens the TGT with its master key, extracts the logon session key for this client, and uses the logon session key to encrypt the client's copy of a session key for the server
                 - a TGT is encrypted and includes a symmetric key, an expiration time, and user’s IP address
                 - subjects present the TGT when requesting tickets to access objects
-            - **authentication service (AS)**: verifies or rejects the authenticity and timeliness of tickets. Often referred to as the KDC
-        - **ticket (AKA service ticket (ST))**: an encrypted message that provides proof that a subject is authorized to access an object
+            - **authentication service (AS)**: verifies or rejects the authenticity and timeliness of tickets; often referred to as the KDC
+        - **Ticket (AKA service ticket (ST))**: an encrypted message that provides proof that a subject is authorized to access an object
         - **Kerberos Principal**: typically a user but can be any entity that can request a ticket
         - **Kerberos realm**: a logical area (such as a domain or network) ruled by Kerberos
     - Kerberos login process:
-        - user types a username/password into the client
-        - client encrypts the username with AES for transmission to the KDC
-        - the KDC verifies the username against a db of known credentials
-        - the KDC generates a symmetric key that will be used by the client and the Kerberos server
+        1) user provides authentication credentials (types a username/password into the client)
+        2) client/TGS key generated
+            - client encrypts the username with AES for transmission to the KDC
+            - the KDC verifies the username against a db of known credentials
+            - the KDC generates a symmetric key that will be used by the client and the Kerberos server
             - it encrypts this with a hash of the user’s password
-            - the KDC also generates an encrypted timestamped TGT
-        - the KDC then transmits the encrypted symmetric key and the encrypted timestamped TGT to the client
-        - the client installs the TGT for use until it expires
+        3) TGT generated - the KDC generates an encrypted timestamped TGT
+        4) client/server ticket generated
+            - the KDC then transmits the encrypted symmetric key and the encrypted timestamped TGT to the client
+            - the client installs the TGT for use until it expires
             - the client also decrypts the symmetric key using a hash of the user’s password
             - NOTE: the client’s password is never transmitted over the network, but it is verified
                 - the server encrypts a symmetric key using a hash of the user’s password, and it can only be decrypted with a hash of the user’s password
-                - as long as the user enters the correct password, this step works
+        5) user accesses requested service
     - When a client wants to access an object (like a hosted resource), it must request a ticket through the Kerberos server, in the following steps:
         - the client sends its TGT back to the KDC with a request for access to the resource
         - the KDC verifies that the TGT is valid, and checks its access control matrix to verify user privileges for the requested resource

@@ -23,6 +23,7 @@
 - **Findings**: results created by the application of an assessment procedure
 - **Judgement Sampling**: AKA purposive or authoritative sampling, a non-probability sampling technique where members are chosen only on the basis of the researcher's knowledge and judgement
 - **Misue Case Testing**: testing strategy from a hostile actor's point of view, attempting to lead to integrity failures, malfunctions, or other security or safety compromises
+- **Mutation testing**: mutation testing modifies a program in small ways and then tests that mutant to determine if it behaves as it should or if it fails; technique is used to design and test software through mutation
 - **Plan of Action and Milestones (POA&M)**: a document indentifying tasks to be accomplished, including details, resources, milestones, and completion target dates
 - **RoE**: Rules of Engagement, set of rules/constraints/boundaries that establish limits of participant activity; in ethical pen testing, an RoE defines the scope of testing, and to establish liabilty limits for both testers and the sponsoring org or system owners
 - **Statistical Sampling**: process of selecting subsets of examples from a population with the objective of estimating properties of the total population
@@ -249,8 +250,8 @@
 - 6.4.2 Exception handling
     - **Exception handling**: the process of handling unexpected activity, since software should never depend on users behaving properly
         - "expect the unexpected", gracefully handle invalid input and improperly sequenced activity etc 
-    - Sometimes vulns can't be patched in a timely manner (e.g. medical devices needing re-accreditation) and the solution is to implement compensitory controls, document the excpetion and decision, and revisit
-        - **compensitory controls**:measures taken to address any weaknesses of existing controls or to compensate for the inability to meet specific security requirements due to various different constraints
+    - Sometimes vulns can't be patched in a timely manner (e.g. medical devices needing re-accreditation) and the solution is to implement compensitory controls, document the exception and decision, and revisit
+        - **compensitory controls**: measures taken to address any weaknesses of existing controls or to compensate for the inability to meet specific security requirements due to various different constraints
         - e.g. micro-segmentation of device, access restrictions, monitoring etc
     - Exception handling may be required due to system crash as the result of patching (requiring roll-back)
 
@@ -263,7 +264,7 @@
 [6.5](#6.5) Conduct or facilitate security audits (OSG-9 Chpt 15)
 - 6.5.1 Internal
     - Having an internal team conduct security audits has several advantages:
-        - understanding of the internal environment reduces time
+        - understanding the internal environment reduces time
         - an internal team can delve into all parts of systems, because they have insider knowledge
         - internal auditors can be more agile in adapting to changing needs, rescheduling failed assessment components quickly
     - Disadvantages of using an internal team to conduct security audits:

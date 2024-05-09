@@ -101,6 +101,7 @@ You may find this domain to be more technical than others, and if you have exper
     - **Simple Integrity Property**:"No read down" (for example, users with a Top Secret clearance can’t read data classified as Secret)
     - **Star (*) Integrity Property**: "No write up" (for example, a user with a Secret clearance can’t write data to files classified as Top Secret)
     - By combining it with Bell-LaPadula, you get both confidentiality and integrity
+    - Biba uses a lattice to control access and is a form of mandatory access control (MAC) model
 - **Take-Grant**: 
     - The take-grant model employs a directed graph to dictate how rights can be passed from one subject to another, or from a subject to an object
     - Four rules: 
