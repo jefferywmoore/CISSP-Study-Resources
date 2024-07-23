@@ -5,6 +5,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **ASLR**: Address space layout randomization (ASLR) is a memory-protection process for operating systems (OSes) that guards against buffer-overflow attacks by randomizing the location where system executables are loaded into memory
 - **Block Mode Encryption**: using fixed-length sequences of input plaintext symbols as the unit of encryption
 - **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
+- **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
 - **Collision**: occurs when a hash function generates the same output for different inputs
 - **Cryptanalysis**: study of techniques for attempting to defeat cryptographic techniques and generally information security services
 - **Cryptographic Hash function**: process or function that transforms an input plaintext into a unique value called a hash (or hash value); note that they do not use cryptographic algorithms, as hashes are one-way functions where it's infeasible to determine the plaintext; Message digests are an example of cryptographic hash
@@ -13,6 +14,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Cryptovariables(s)**: parameters associated with a particular cryptogrphic algorithm; e.g. block size, key length and number of iterations
 - **Decoding**: the reverse process from encoding, converting the encoded message back to plaintext format
 - **Decryption**: the reverse process from encryption
+- **Elliptic-curve cryptography (ECC)**: a newer mainstream algorithm, is normally 256 bits in length (a 256-bit ECC key is equivalent to a 3072-bit RSA key), making it securer and able to offer stronger anti-attack capabilities
 - **Encoding**: action of changing a message or set of info into another format through the use of code; unlike encryption, encoded info can still be read by anyone with knowledge of the encoding process
 - **Encryption**: process and act of converting the message from plaintext to ciphertext (AKA enciphering)
 - **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the plaintext as a way of reducing the search space
@@ -22,13 +24,12 @@ You may find this domain to be more technical than others, and if you have exper
 - **Key escrow**: process by which keys (asymmetric or symmetric) are placed in a trusted storage agent's custody, for later retrieval
 - **Key generation**: the process of creating a new encryption/decryption key
 - **Key recovery**: process of reconstructing an encryption key from the cyphertext alone; if there is a workable key recovery system, it means the algorithm is not secure
-- **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password
+- **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password; keyspace = 2 to the power of the number of bits, so 4 bits = 16 keys, 8 bits = 256 keys
 - **Meet-in-the-middle**: attack that uses a known plaintext message and both encryption of the plaintext and decryption of the ciphertext simultaneously in a brute-force manner to identify the encryption key; 2DES is vulnerable to this attack
 - **Multistate systems**: certified to handle data from different security classifications simultaneously
 - **One-time pad**: series of randomly generated symmetric encryption keys, each one to be used only once by the sender and recipient
 - **Out-of-band**: transmitting or sharing control information (e.g. encryption keys and crypto variables) by means of a separate and distinct communications path, channel, or system
 - **Plaintext**: message or data in its readable form, not turned into a secret
-- **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
 - **Session key**: a symmetric encryption key generated for one-time use; usually requires a key encapsulation approach to eliminate key management issues
 - **Stream mode encryption**: system using a process that treats the input plaintext as a continuous flow of symbols, encrypting one symbol at a time; usually uses a streaming key, using part of the key as a one-time key for each symbol's encryption
 - **Substitution cipher**: encryption/decription process using subsitution
@@ -43,6 +44,7 @@ You may find this domain to be more technical than others, and if you have exper
 - 3.1.1 Threat Modeling
     - **Threat modeling**: a security process where potential threats are identified, categorized, and analyzed; it can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed
         - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat
+        - Threat modeling commonly involves decomposing the app to understand it and how it interacts with other components or users; idnetifying and ranking threats allows potential threats to be propritized; dentifying how to mitigate those threats finishes the process
 - 3.1.2 Least Privilege
     - **Least privilege**: states that subjects are granted only the privileges necessary to perform assigned work tasks and no more; this concept extends to data and systems
         - Limiting and controlling privileges based on this concept protects confidentiality and data integrity
@@ -92,8 +94,8 @@ You may find this domain to be more technical than others, and if you have exper
     - Enable people to access only the data classified for their clearance level
 - **Bell-LaPadula**: Model was established in 1973; the goal is to ensure that information is exposed only to those with the right level of classification
     - Focuse is on *confidentiality* 
-    - **Simple property**: No read-up 
-    - **Star (*) property**: No write-down (AKA confinement property)
+    - **Simple property**: "No read up" 
+    - **Star (*) property**: "No write down" (AKA confinement property)
     - Discretionary Security Property: uses an access matrix (need to know in order to access)
     - Doesn't address covert channels
 - **Biba**: Released in 1977, this model was created to supplement Bell-LaPadula 
@@ -103,16 +105,25 @@ You may find this domain to be more technical than others, and if you have exper
     - By combining it with Bell-LaPadula, you get both confidentiality and integrity
     - Biba uses a lattice to control access and is a form of mandatory access control (MAC) model
 - **Take-Grant**: 
-    - The take-grant model employs a directed graph to dictate how rights can be passed from one subject to another, or from a subject to an object
-    - Four rules: 
-        - take 
-        - grant 
-        - create 
-        - remove
+    - The take-grant is a confidentiality-based model that supports four basic operations: take, grant, create, and revoke; it employs a directed graph to dictate how rights can be passed from one subject to another, or from a subject to an object
+    - **Take rule**: allows a subject to take rights over an object 
+    - **Grant rule**: allows a subject to grant rights to an object 
+    - **Create rule**: allows a subject to create new rights 
+    - **Remove rule**: allows a subject to remove rights it has
+
 - **Clark-Wilson**:
     - Designed to protect integrity using the access control triplet
     - A program interface is used to limit what is done by a subject; if the focus of an intermediary program between subject and object is to protect integrity, then it is an implementation of the Clark-Wilson model
     - Uses security labels to grant access to objects via transformation procedures and a restricted interface model
+    - The Clark-Wilson Model enforces the concept of separation of duties
+    - Three parts of the Clark-Wilson model are: subject, object, and program (or interface)
+    - Clark-Wilson components:
+        - **Users**: (AKA active agents) the subjects which will access the objects
+        - **Transformation Procedures (TPs)**: operations the subject is trying to perform (read, write, modify)
+        - **Constrained Data Items (CDIs)**: objects at a higher-level of protection; CDIs can only be manipulated by a TP
+        - **Unconstrained Data Items (UDIs)**: can be accessed directly by the subject, and do not need to go through a intermediary like a TP
+        - **Integrity Verification Procedures (IVPs)**: a way to audit the TP, checking for internal and external consistency
+
 - **Brewer and Nash Model**:
     - AKA "ethical wall", and "cone of silence"
     - created to permit access controls to change dynamically based on a user's previous activity 
@@ -198,6 +209,11 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 - 3.5.3 Database systems
     - Databases often store a company's most sensitive data (e.g. proprietary, CC info, PHI, and PII)
+    - Database general ACID properties (Atomicity, Consistency, Isolation and Durability):
+        - Atomicity: transactions are all-or-nothing; a transaction must be an atomic unit of work, i.e., all of its data modifications are performed, or none are performed
+        - Consistency: transactions must leave the database in a consistent state
+        - Isolation: transactions are processed independently
+        - Durability: once a transaction is committed, it is permanently recorded
     - Attackers may use inference or aggregation to obtain confidential information
     - **Aggregation attack**: process where SQL provides a number of functions that combine records from one or more tables to produce potentially useful info
     - **Inference attack**: involves combining several pieces of nonsensitive info to gain access to that which should be classified at a higher level; inference makes use of the human mind’s deductive capacity rather than the raw mathematical ability of database platforms
@@ -309,7 +325,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - Embedded systems focus on minimizing cost and extraneous features
         - Embedded systems are often in control of/associated with physical systems, and can have real-world impact
         - Securing embedded systems:
-            - ebedded systems should be isolated from the internet, and from a private production network to minimize exposure to remote exploitation, remote control, and malware
+            - embedded systems should be isolated from the internet, and from a private production network to minimize exposure to remote exploitation, remote control, and malware
             - use secure boot feature and physically protecting the hardware
 - 3.5.13 High-Performance Computing (HPC) systems
     - **High-performance computing (HPC)** systems: platforms designed to perform complex calculations/data manipulation at extremely high speeds (e.g. super computers or MPP (Massively Parallel Processing)); often used by large orgs, universities, or gov agencies
@@ -356,7 +372,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - Specify the cryptographic algorithms (such as AES, 3DES, and RSA) acceptable for use in an organization
     - Identify the acceptable key lengths for use with each algorithm based on the sensitivity of the info transmitted
     - Enumerate the secure transaction protocols (e.g. TLS) that may be used
-    - As computing power goes up, the strength of cryptographic algorithms goes down; keep in mind the effective life of a certificate or cert template, and of cryptographic systems 
+    - As computing power goes up, the strength of cryptographic algorithms goes down; keep in mind the effective life of a certificate or cert template, and of cryptographic systems
     - TLS uses an ephemeral symmetric session key between server and client, exchanged using asymmetric crtypography; note that all content is protected using symmetric cryptography
     - Beyond brute force, consider things like the discovery of a bug or an issue with an algorithm or system
     - NIST defines the following terms that are commonly used to describe algorithms and key lengths: 

@@ -16,20 +16,26 @@
 - **Assessment**: testing or evaluation of controls to understand which are implemented correctly, operating as intended and producing the desired outcome in meeting the security or privacy requirements of a system or org
 - **Audit**: process of reviewing a system for compliance against a standard or baseline (e.g. audit of security controls, baselines, financial records) can be formal and independent, or informal/internal
 - **Chaos Engineering**: discipline of experiments on a software system in production to build confidence in the system's capabilities to withstand turbulent/unexpected conditions
+- **Code testing suite**: usually used to validate function, statement, branch and condition coverage
 - **Compliance Calendar**: tracks an org's audits, assessments, required filings, due dates and related
 - **Compliance Tests**: an evaluation that determines if an org's controls are being applied according to management policies and procedures
 - **Penetration Testing/Ethical Penentration Testing**: security testing and assessment where testers actively attempt to circumvent/defaut a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
 - **Examination**: process of reviewing/inspecting/observing/studying/analyzing specs/mechanisms/activities to understand, clarify, or obtain evidence
 - **Findings**: results created by the application of an assessment procedure
+- **IAM system**: identity and access management system combines lifecycle management and monitoring tools to ensure that identity and authorization are properly handled throughout an org
+- **ITSM**: IT Service Management tools include change management and associated approval tracking
 - **Judgement Sampling**: AKA purposive or authoritative sampling, a non-probability sampling technique where members are chosen only on the basis of the researcher's knowledge and judgement
 - **Misue Case Testing**: testing strategy from a hostile actor's point of view, attempting to lead to integrity failures, malfunctions, or other security or safety compromises
 - **Mutation testing**: mutation testing modifies a program in small ways and then tests that mutant to determine if it behaves as it should or if it fails; technique is used to design and test software through mutation
 - **Plan of Action and Milestones (POA&M)**: a document indentifying tasks to be accomplished, including details, resources, milestones, and completion target dates
+- **RUM**: real user monitoring is a passive monitoring technique that records user interation with an app or system to ensure performance and proper app behavior; often used as a predeploymment process using the actual user interface
 - **RoE**: Rules of Engagement, set of rules/constraints/boundaries that establish limits of participant activity; in ethical pen testing, an RoE defines the scope of testing, and to establish liabilty limits for both testers and the sponsoring org or system owners
+- **SCF**: Script Check Engine is designed to make scripts interoperable with security policy definitions
 - **Statistical Sampling**: process of selecting subsets of examples from a population with the objective of estimating properties of the total population
 - **Substantive Test**: testing technique used by an auditor to obtain the audit evidence in order to support the auditor's opinion
 - **Testing**: process of exersizing one or more assessment objects (activities or mechanisms) under specified conditions to compare actual to expected behaior
 - **Trust Services Criteria (TSC)**: used by an auditor when evaluating the suitability of the design and operating effectiveness of controls relevant to the security, availabiliity, or processing integrity of information and systems or the confidentiality or privacy of the info processed by the entity
+
 
 [6.1](#6.1) Design and validate assessment, test, and audit strategies (OSG-9 Chpt 15)
 - 6.1.1 Internal
@@ -78,17 +84,18 @@
     - **Security Content Automation Protocol (SCAP)**: provides a common framework for discussion and facilitation of automation of interactions between different security systems (sponsored by NIST)
         - SCAP components related to vulnerability assessments:
             - **Common Vulnerabilities and Exposures (CVE)**: provides a naming system for describing security vulnerabilities
-            - **Common Vulnerability Scoring Systems (CVSS)**: provides a standardized scoring system for describing the severity of security vulnerabilities
+            - **Common Vulnerability Scoring Systems (CVSS)**: provides a standardized scoring system for describing the severity of security vulnerabilities; it includes metrics and calc tools for exploitability, impact, how mature exploit code is, and how vulnerabilities can be remediated, and a means to score vulns against users' unqiue requirements
             - **Common Configuration Enumeration (CCE)**: provides a naming system for system config issues
             - **Common Platform Enumeration (CPE)**: provides a naming system for operating systems, applications, and devices
             - **Extensible Configuration Checklist Description Format (XCCDF)**: provides a language for specifying security checklists
-            - **Open Vulnerability and Assessment Language (OVAL)**: provides a language for describing security testing procedures
+            - **Open Vulnerability and Assessment Language (OVAL)**: provides a language for describing security testing procedures; used to describe the security condition of a system
     - Vulnerability scans automatically probe systems, applications, and networks looking for weaknesses that could be exploited by an attacker
     - Four main categories of vulnerability scans:
         - network discovery scans
         - network vulnerability scans
         - web application vulnerability scans
         - database vulnerability scans
+    - **Authenticated scans**: (AKA credentialed security scan) involves conducting vulnerability assessments and security checks on a network, system, or application using valid credentials; this approach enables the scanner to simulate the actions of an authenticated user, allowing it to access deeper layers of the target system, gather more information, and provide a more accurate assessment of vulnerabilities; often uses a read-only account to access configuration files
 
 - 6.2.2 Penetration testing
     - Penetration tests goes beyond vulnerability testing techniques because it actually attempts to exploit systems
@@ -107,10 +114,12 @@
             - provides the attackers with **detailed information** about the systems they target
             - this bypasses many of the reconnaissance steps that normally precede attacks, shortening the time of the attack and increasing the likelihood that it will find security flaws
             - these tests are sometimes called "**known environment**" tests
+            - in white-box testing, the tester has access to the source code and performss testing from a developer's perspective
         - **gray-box penetration test**:
             - AKA **partial knowledge tests**, these are sometimes chosen to balance the advantages and disadvantages of white- and black-box penetration tests
             - this is particularly common when black-box results are desired but costs or time constraints mean that some knowledge is needed to complete the testing
             - these tests are sometimes called "**partially known environment**" tests
+            - in gray-box testing, the tester evaluates software from a user perspective but has access to the source code
         - **black-box penetration test**:
             - does not provide attackers with any information prior to the attack
             - this simulates an external attacker trying to gain access to information about the business and technical environment before engaging in an attack
@@ -125,6 +134,7 @@
 
 - 6.2.4 Synthetic transactions
     - **Synthetic transactions**: scripted transactions with known expected results
+    - **Synthetic monitoring**: uses emulated or recorded transactions to monitor for performance changes in response time, functionality, or other performance monitors
     - Dynamic testing may include the use of synthetic transactions to verify system performance; synthetic transactions are run against code and compare out to expected state
 
 - 6.2.5 Code review and testing
@@ -138,16 +148,18 @@
         4) inspection
         5) rework
         6) follow-up
+        - Entry criteria are the criteria or requirements which must be met to enter a specific process
+        - Exit criteria are the criteria or requirements which must be met to complete a specific process
     - **Static application security testing (SAST)**: evaluates the security of software without running it by analyzing either the source code or the compiled application
     - **Dynamic application security testing (DAST)**: evaluates the security of software in a runtime environment and is often the only option for organizations deploying applications written by someone else
 
 - 6.2.6 Misuse case testing
-    - **Misuse case testing**: AKA abuse case testing - used by software testers to evaluate the vulnerability of their software to known risks
+    - **Misuse case testing**: AKA abuse case testing - used by software testers to evaluate the vulnerability of their software to known risks;focuses on behaviors that are not what the org desires or that are counter to the proper function of a system/app
     - In misuse case testing, testers first enumerate the known misuse cases, then attempt to exploit those use cases with manual or automated attack techniques
 
 - 6.2.7 Test coverage analysis
-    - A test coverage analysis is used to estimate the degree of testing conducted against new software
-    - **Test coverage** = number of use cases tested / total number of use cases
+    - A test coverage analysis is used to estimate the degree of testing conducted against new software; to provide insight into how well testing covered the use cases that an app is being tested for
+    - **Test coverage**: number of use cases tested / total number of use cases
         - requires enumerating possible use cases (which is a difficult task), and anyone using test coverage calcs to understand the process used to develop the input values
     - Five common criteria used for test coverage analysis:
         - **branch coverage**: has every IF statement been executed under all IF and ELSE conditions?
@@ -155,6 +167,7 @@
         - **functional coverage**: has every function in the code been called and returned results?
         - **loop coverage**: has every loop in the code been executed under conditions that cause code execution multiple times, only once, and not at all?
         - **statement coverage**: has every line of code been executed during the test?
+    - **Test coverage report**: measures how many of the test cases have been completed; is used to provide test metrics when using test cases
 
 - 6.2.8 Interface testing
     - Interface testing assesses the performance of modules against the interface specs to ensure that they will work together properly when all the development efforts are complete
@@ -165,10 +178,12 @@
             - UIs provide end users with the ability to interact with the software, and tests should include reviews of all UIs
         - physical interfaces: exist in some apps that manipulate machinery, logic controllers, or other objects
             - software testers should pay careful attention to physical interfaces because of the potential consequences if they fail
+    - Also see [OWASP API security top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
 
 - 6.2.9 Breach attack simulations
     - **Breach and attack simulation (BAS)**: platforms that seek to automate some aspects of penetration testing
     - The BAS platform is not actually waging attacks, but conducting automated testing of security controls to identify deficencies
+    - A BAS system combines red team (attack) and blue team (defense) techniques together with automation to simulate advanced persistent threats (and other advanced threat actors) running against the environment
     - Designed to inject threat indicators onto systems and networks in an effort to trigger other security controls (e.g. place a suspicious file on a server)
         - detection and prevention controls should immediately detect and/or block this traffic as potentially malicious
     - See:

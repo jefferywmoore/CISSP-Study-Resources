@@ -25,7 +25,13 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **East/West traffic**: network traffic that is within a data, control, or application plane; within a data center or between geo dispersed locations
 - **North/South traffic**: in SDN terms, data flowing up (northbound) and down (southbound) the stack of data/control/application planes; data flowing from the organization to external distinations (northbound), or into the org from external sources (southbound)
 - **Converged protocol**: combines/converges standard protcols (such as TCP/IP) with proprietary/non-standard ones; they can complicate enterprise-wide security engineering efforts requiring specialist knowledge
-- **DNS**: Domain Name Service is three in interrelated elements: a service, a physical server, and a network protocol
+- **DNS**: Domain Name Service is three interrelated elements: a service, a physical server, and a network protocol
+    - DNS poisoning examples:
+        - HOSTS poisoning
+        - authorized DNS server attack
+        - caching DNS server attack
+        - changing a DNS server address
+        - DNS query spoofing
 - **DHCP**: Dynamic Host Configuration Protocol is an industry standard used to dynamically assign IP addresses to network devices
 - **Ports 1024-4951**: registered ports used with non-system applications associated with vendors and devs
 - **Ports 49152-65535**: dynamic ports (AKA private or non-reserved ports) used as temporary ports, often in association when a service is requested via a well-known port
@@ -55,7 +61,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - S/MIME specifies the MIME type application/pkcs7-mime (smime-type "enveloped-data") for data enveloping (encrypting) where the whole (prepared) MIME entity to be enveloped is encrypted and packed into an object which subsequently is inserted into an application/pkcs7-mime MIME entity
 - **SNMP**: Simple Network Management Protocol, is a protocol for collecting and organizing info about managed devices on IP networks; it can be used to determine the health of devices such as routers, switches, servers, workstations, etc
 - **Smurf attack**: ICMP echo request sent to the network broadcast address of a spoofed victim causing all nodes to respond to the victim with an echo reply
-- **SPML**: Service Provisioning Markup Language is XML-based and designed to allow platforms to generate and respond to provisioning requests
+- **SPML**: Service Provisioning Markup Language is XML-based and designed to allow platforms to generate and respond to provisioning requests; uses the concept of requesting authority, a provisioning service point, and a provisioning service target; requesting authorities issue SPML requests to a provisioning service point; provisioning service targets are often user accounts and are required to be allowed unique identification of the data in its implementaion
 - **STRP**: Secure Real-time Transport Protocol is an extension of Real-time Transport Protocol (RTP) that features encryption, confidentiality, message authentication, and replay protection to audio and video traffic
 - **Multi-tiered firewall**: tiers are not the number of firewalls but the number of zones protected by the firewall; 2-tier protects two zones
 - **Teardrop attack**: exploits reassembly of fragmented IP packets in the fragment offset field (indicating the start position or offset of data contained in a fragemented packet)
@@ -117,7 +123,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
             - Transmission Control Protocol (TCP)
                 - the major transport protocol in the internet suite of protocols providing reliable, connection-oriented, full-duplex streams
                 - emphasizing: full-duplex, connection-oriented protocol
-                - uses three-way handshake
+                - uses three-way handshake: involves the following three steps: synchronize (SYN), synchronize-acknowledge (SYN-ACK), and acknowledge (ACK)
             - User Datagram Protocol (UDP)
                 - connectionless protocol that provides fast, best-effort delivery of **datagrams** (self-container unit of data)
             - Transport Layer Security (TLS)
@@ -258,6 +264,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 
     - **Software-defined wide area network (SD-WAN/SDWAN)**: an evolution of SDN that can be used to manage the connectivity and control services between distant data centers, remote locations, and cloud services over WAN links; put another way, SDN-WAN is an extension of SDN practices to connect entities spread across the internet, supporing WAN architecture; espcially related to cloud migration
     - SDWANs are commonly used to manage multiple ISP, and other connectivity options for speed, reliability, and bandwidth design goals
+    - **Software-defined Visibility (SDV)**: a framework to automate the processes of network monitoring and response; the goal is to enable the analysis of every packet and make deep intelligence-based decisions on forwarding, dropping, or otherwise responding to threats
 
 - 4.1.7 Wireless networks (e.g. LiFi, Wi-Fi, Zigbee, satellite)
 

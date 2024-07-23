@@ -20,8 +20,8 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **CAS**: Central Authentication Service (an SSO implementation)
 - **Content-dependent control**: Content-dependent access control adds additional criteria beyond identification and authentication: the actual content the subject is attempting to access; all employees of an org may have access to the HR database to view their accrued sick time and vacation time, but should an employee attempt to access the content of the CIO's HR record, access is denied
 - **Context-dependent access control**: applies additional context before granting access, with time as a commonly used context
-- **Crossover Error Rate**: point at which false acceptance (Type 2) error rate equals the false rejection (Type 1) error rate for a given sensor, in a given system and context; it is the optimal point of operation if the potential impacts of both types of errors are equivalent
-- **Cross-Site Request Forgery (CSRF)**: an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated
+- **Crossover Error Rate** (CER): point at which false acceptance (Type 2) error rate equals the false rejection (Type 1) error rate for a given sensor, in a given system and context; it is the optimal point of operation if the potential impacts of both types of errors are equivalent
+- **Cross-Site Request Forgery (CSRF)**: (AKA XSRF) an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated
 - **FRR**: False Rejection Rate (Type 1) incorrectly denying authentication to a legit identity and therefore denying access
 - **FAR**: False Acceptance Rate (Type 2) incorrectly authenticating a claimed identity as legit, recognizing and granting access on that basis
 - **Ethical Wall**: the use of administrative, physical/logical controls to establish/enforce separation of information, assets or job functions for need-to-know boundaries or prevent conflict of interest situations; AKA compartmentalization
@@ -30,6 +30,8 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **Identity proofing**: process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person
 - **Self-service identity management**: elements of the identity management lifecycle which the end-user (identity in question) can initiate or perform on their own (e.g. password reset, changes to challenge questions etc)
 - **Whaling attack**: phishing attack targeting highly-placed officials/private individuals with sizeable assets authorizing large-fund wire transfers
+- **XSS**: Cross-Site Scripting (XSS) essentially uses reflected input to trick a user's browser into executing untrusted code from a trusted site; these attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites; XSS attacks occur when an attacker uses a web app to send malicious code, generally in the form of a browser side script, to a different end user; flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it
+- **XST**: Cross-Site Tracing (XST) attack involves the use of Cross-site Scripting (XSS) and the TRACE or TRACK HTTP methods; this could potentially allow the attacker to steal a user's cookies
 
 [5.1](#5.1) Control physical and logical access to assets (OSG-9 Chpt 13)
 - Controlling access to assets (tangible: things you can touch, or nontangible: info and data) is a central theme of security
@@ -146,6 +148,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - Instead of assigning permissions directly to users, user accounts are placed in roles and administrators assign privileges to the roles (typically defined by job function)
         - if the user account is in a role, the user has all privileges assigned to the role
     - MS Windows OS uses this model with groups
+    - RBAC models can group users into roles based on the org's hierarchy, and it is a non-descretionary access control model; central authority access decisions can use the RBAC model
 - 5.4.2 Rule Based access control
     - A key characteristic of the Rule-Based access control model is that it applies global rules to all subjects
         - e.g. firewalls uses rules that allow or block traffic to all users equally
@@ -232,6 +235,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 - 5.6.2 Security Assertion Markup Language (SAML)
     - Security Assertion Markup Language (SAML): an open XML-based standard commonly used to exchange authentication and authorization (AA) information between federated orgs
+    - Frequently used to integrate cloud services and provides the ability to make authentication and authorization assertions
     - SAML provides SSO capabilities for browser access
     - SAML is a popular SSO standard on the internet - used to exchange authentication and authorization (AA) information
     - Organization for the Advancement of Structure Information Standards (OASIS) maintains it
@@ -245,12 +249,12 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
         - Attribute Assertion: attributes can be any information about the user agent
 - 5.6.3 Kerberos
     - Kerberos is a network authentication protocol widely used in corporate and private networks and found in many LDAP and directory services solutions such as Microsoft Active Directory
-    - It provides single sign-on and uses cryptography to strengthen the authentication process
-    - The purpose of Kerberos is authentication; Kerberos offers a single sign-on solution for users and protects logon credentials
+    - It provides single sign-on and uses cryptography to strengthen the authentication process and protect logon credentials
     - Ticket authentication is a mechanism that employs a third-party entity to prove identification and provide authentication - Kerberos is a well-known ticket system
     - After users authenticate and prove their identity, Kerberos uses their proven identity to issue tickets, and user accounts present these tickets when accessing resources
     - Kerberos version 5 relies on symmetric-key cryptography (AKA secret-key cryptography) using the Advanced Encryption Standard (AES) symmetric encryption protocol
     - Kerberos provides confidentiality and integrity for authentication traffic using end-to-end security and helps protect against eavesdropping and replay attacks
+    - Kerberos uses UDP port 88 by default
     - Kerberos elements:
         - **Key Distribution Center (KDC)**: the trusted third party that provides authentication services
         - **Kerberos Authentication Server**: hosts the functions of the KDC:

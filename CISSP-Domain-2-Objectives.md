@@ -2,7 +2,6 @@
 
 - Domain 2 of the CISSP exam covers asset security making up ~10% of the test 
 - Asset security includes the concepts, principles, and standards of monitoring and securing any asset important to the organization
-
 - The Asset Security domain focuses on collecting, handling, and protecting information throughout its lifecycle; the first step is classifying information based on its value to the organization
 - **Asset**: anything of value owned by the organization
 - **Asset lifecycle**: phases an asset goes through, from creation (or collection) to destruction
@@ -59,8 +58,9 @@
 - **Storage**: define storage locations and procedures by storage type; use physical locks for paper-based media, and encrypt electronic data
 - **Destruction**: destroy data no longer needed by the organization; policy should define acceptable destruction methods by type and classification ([see NIST SP-800-88 for details](https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final))
   - **Erasing**: usually refers to a delete operation on media, leaving data remanence
-  - **Clearing**: removal of sensitive data from a storage device such that there is assurance data may not be reconstructed using normal functions or software recovery or software recovery utilities; over-writing existing data
-  - **Purging**: removal of sensitive data from a system or device with the intent that data cannot be reconstructed by any known technique; usually refers to mutliple clearing passes combined with other tools (see below) -- not considered acceptable for top secret data
+  - **Clearing**: removal of sensitive data from a storage device such that there is assurance data may not be reconstructed using normal functions or software recovery or software recovery utilities; over-writing existing data; it's not very strong, and there's a chance that the data could be brought back
+  - **Purging**: removal of sensitive data from a system or device with the intent that data cannot be reconstructed by any known technique; usually refers to mutliple clearing passes combined with other tools; often means getting rid of data in more reliable ways, like using a strong magnetic field (degaussing) to destroy data on storage devices(see below) -- although not considered acceptable for top secret data
+  - **Destruction**: includes physically destroying media through shredding, burning, pulverizing, or incinerating, and also includes the use of strong encryption to logically destroy data; a surer way than even purging
 - **Data Remanence**: data remaining on media after typical erasure; to ensure all remanence is removed, the following tools can help:
   - **Degaussing**: used on magentic media
   - **(Physical) destruction**: used for SSD/electronic components, or in combination with other less-secure methods

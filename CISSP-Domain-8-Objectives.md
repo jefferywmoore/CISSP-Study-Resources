@@ -18,11 +18,12 @@
 - **Acceptance**: formal, structured hand-off of the completed software system to the customer org; usually involves test, analysis and assessment activites
 - **Accreditation**: AKA Security Accreditation a formal declaration by a designated accrediting authority (DAA) that an information system is approved to operate at an acceptable level of risk, absed onthe implementation an approved set of technical, managerial, and procedural safeguards
 - **ACID Test**: data integrity provided by means of enforcing atomicity, consistency, isolation, and durability policies
-- **Aggregation**: ability to combine non-sensitive data from separate sources to create sensitive info
+- **Aggregation**: ability to combine non-sensitive data from separate sources to create sensitive info; note that aggregation is a "security issue", where as inference is an attack (where an attacker can pull together peces of less sensitive info to derive info of greater sensitivity)
 - **Arbitrary code**: alternate set of instructions and data that an attacker attempts to trick a processor into executing
 - **Buffer overflow**: source code vulnerability allowing access to data locations outside of the storage space allocated to the buffer; can be triggered by attempting to input data larger than the size of the buffer
 - **Bypass attack**: attempt to bypass front-end controls of a database to access information
 - **Certification**: comprehensive technical security analysis of a system to ensure it meets all applicable security requirements
+- **CAB**: Change Advisory Board purpose is to review and approve/reject proposed code changes
 - **Citizen programmers**: organizational members who codify work-related knowledge, insights, and ideas into (varying degress of) usable software; the process and result is ad hoc, difficult to manage, and usually bereft of security considerations
 - **Code protection/logic hiding**: prevents one software unit from reading/altering the source/intermediate/executable code of another software unit
 - **Code resuse**: reuse of code, rather than re-invented code means units of software (procedures/objects) means higher productivity toward development requirements using correct, complete, safe code
@@ -35,11 +36,13 @@
 - **Data Lake**: a data warehouse incorporating multiple types of streams of unstructured or semi-structured data
 - **Data Mining**: analysis and decision-making technique that relies on extracting deeper meanings from many different instances and types of data; often applied to data warehouse content
 - **Data Modeling**: design process that identifies all data elements that the system will need to input, create, store, modify, output, and destroy during operational use; should be one of the first steps in analysis and design
-- **Data Protection and Data Hiding**: restricts or prevents one software unit from reading or altering the private data of another software unit
+- **Data Protection and Data Hiding**: restricts or prevents one software unit from reading or altering the private data of another software unit or in preventing data from being discovered or accessed by a subject
 - **Data Type Enforcement**: how a language protects a developer from trying to perform operations on dissimilar types of data, or in ways that would lead to erroneous results
 - **Data Warehouse**: collection of data sources such as separate internal databases to provide a broader base of info for analysis, trending and reference; may also involve databases from outside the org
 - **Data-centric Threat Modeling**: methodology and framework focusing on the authorized movements and data input/output into and from a system; corresponds with protecting data in transit, at rest, and in use when classifying organizational data
 - **Defensive Programming**: design/coding allowing acceptable but sanitized data inputs to a system; lack of defensive programming measures can result in arbitrary code execution, misdirection of the program to other resoruces/locations, or reveal info useful to an attacker
+- **Design Reviews**: should take place after the development of functional and control specifications but before the creation of code
+- **Dirty read**: occurs when one transaction reads a value from a database that was written by another transaction that didn't commit
 - **Emerging Properties**: an alternate/more powerful way of looking at systems-level behavior characteristics such as safety and security; helps provide a more testable, measurable answer to questions such as "how secure is our system?"
 - **Encapsulation**: note see network [Encapsulation](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-4-Objectives.md) (disambiguation); enforcement of data/code hiding during all phases of software development and operational use; bundling together data and methods is the process of encapulation (opposite of unpacking/revealing)
 - **Executable/Object Code**: binary representation of the machine language instruction set that the CPU and other hardware of the target computer can directly execute
@@ -64,12 +67,15 @@
 - **Object-oriented database model**: database model that uses object-oriented programming concepts like classes, instances, and objects to organize, structure, and store data and methods; schemas define the structure of the data, views specify table, rows, and columns that meet user/security requirements
 - **Object-oriented security**: systems security designs that make sue of object-oriented programming characteristics such as encapsulation, inheritance, polymorphism, and polyinstantiation
 - **Open-source software**: source code and design info is made public, and often using licenses that allow modification and refactoring
-- **Polyinstantiation**: creates a new instance (copy) of a data item, with the same identifier or key, allowing each process to have its own version of that data; useful for enforcing and protecting different security levels for a shared resource
+- **Pair programming**: requires two devs to work together, one writing code, and the other reviewing and tracking progress
+- **Pass-around reviews**: often done via email or code review system, allows devs to review code asynchronously
+- **PERT**: chart that uses nodes to represent milestones or deliverables, showing the estimated to to move between milestones
+- **Polyinstantiation**: creates a new instance (copy) of a data item, with the same identifier or key, allowing each process to have its own version of that data; useful for enforcing and protecting different security levels for a shared resource; polyinstantiation also allows the storage of multiple different pieces of info in a database at different classification levels to prevent attackers from inferring anything about the absence of info
 - **Procedural programming**: emphasizes the logical sequence of steps to be peformed, where a procedure is a set of software that performs a particular function, requiring specific input data, producing a specific set of outputs, and procedures can invoke other procedures
 - **Query attack**: use of query tools to access data not normally allowed by the trusted front end, including the views controlled by the query application; could also result from malformed queries using SQL to bypass security controls; improper/incomplese checks on queries can be used in a similar way to bypass access controls
 - **Ransom attack**: form of attack that threatens destruction, denial, or unauthorized public release/remarketing of private information assets; usually involves encrypting assets and withhold the decryption key until a ransom is paid by the victim
 - **Refactoring**: partial or complete rewrite of a set of software to perform the same functions, but in a more straightforward, more efficient, or more maintainable form
-- **Regression testing**: test a system to ascertain whether recently approved modifications have changed performance of other approved functions or introduced other unautorized behavior
+- **Regression testing**: test a system to ascertain whether recently approved modifications have changed performance of other approved functions or introduced other unauthorized behavior;testing that runs a set of known inputs against an app and compares to results previously produced (by an earlier version of the software)
 - **Relational database model**: data elements and records arragned in tables which are related or linked to each other to implement business logic, where data records of different structures or types are needed together in the same activity
 - **Representational State Transfer (REST)**: software architectural style for synchronizing the activities of two or more apps running on different systems on a network; REST facilitiates these processes exchanging state information, usually via HTTP/S
 - **Reputation monitoring**: defensive tactic that uses the trust reputation of a website or IP address as a means of blocking an org's users, processes or systems from connecting to a possible source of malware or exploitations; possibly the only real defense against zero-day exploits; involves monitoring URLs, domains, IP addresses or other similar info to separate untrustworthy traffic
@@ -83,6 +89,7 @@
 - **Threat surface**: total set of penetrations of a boundary or perimeter that surrounds or contains system elements
 - **TOCTOU attack**: time of check vs time of use (TOCTOU) attack takes advantage of the time delay between a security check (such as authentication or authorization) being performed and actual use of the asset
 - **Trapdoor/backdoor**: AKA maintenance hook; hidden mechanism that bypasses access control measures; an entry point into an architecture or system that is inserted in software by devs during development to provide a method of gaining access for modification/support; can also be inserted by an attacker, bypassing access control measures designed to prevent unauthorized software changes
+- **UAT**: User Acceptance Testing typically the last phase of the testing process; verifies that the solution developed meets user requirements, and validates against use cases
 
 - 8.1.1 Development methodologies (e.g. Agile, Waterfall, DevOps, DevSecOps)
     - **Agile methodology**: a project management approach to development that involves breaking the project into phases and emphasizes continuous collaboration and improvement; teams follow a cycle of planning, executing, and evaluating
@@ -104,13 +111,13 @@
             - working software is the primary measure of progress
             - agile processes promote sustainable development; the them should be able to maintain a constant pace indefinitely
             - continuous attention to technical excellence and good design enhances agility
-            - simplicity, or the art of maximizing the amount of work not done,  is essential
+            - simplicity, or the art of maximizing the amount of work not done, is essential
             - the best architectures, requirements, and designs emerge from self-organizing teams
             - at regular intervals, the team reviews their effective and adjusts for improvement
         - Several methodologies have emerged that take these Agile principles and define specific processes around them:
             - **Scrum**: a management framework that teams use to self-organize and work towards a common goal; it describes a set of meetings, tools, and roles for efficient project delivery, allowing teams to self-manage, learn from experience, and adapt to change; named from the daily team meetings, called scrums
             - **Kanban**: a visual system used to manage and keep track of work as it moves through a process; the word kanban is Japanese for "card you can see"; Kanban teams focus on reducing the time a project (or user story) takes from start to finish, using a kanban board and continuously improving their flow of work
-            - **Rapid Application Development (RAD)**: an agile software development approach that focuses more on ongoing software projects and user feedback and less on following a strict plan, emphasizing rapid prototyping over planning
+            - **Rapid Application Development (RAD)**: an agile software development approach that focuses more on ongoing software projects and user feedback and less on following a strict plan, emphasizing rapid prototyping over planning; RAD uses four phases: requirements planning, user design, construction, and cutover
             - **Rational Unified Process (RUP)**: an agile software development methodology that splits the project life cycle into four phases:
                 - inception: which defines the scope of the project and develop business case
                 - elaboration: Plan project, specify features, and baseline the architecture 
@@ -155,8 +162,8 @@
         - stages of the CMM:
             - Level 1: Initial: process is disorganized; usually little or no defined software development process
             - Level 2: Repeatable: in this phase, basic lifecycle management processes are introduced
-            - Level 3: Defined: in this phase, software devs operate according to a set of formal, documented software development processes
-            - Level 4: Managed: in this phase, there is better management of the software process
+            - Level 3: Defined: in this phase, software devs operate according to a set of formal, documented software development processes; marked by the presence of basic liefcycle management processes and reuse of code; includes the use of requirements management, software project planning, quality assurance, and configuration management
+            - Level 4: Managed: in this phase, there is better management of the software process; characterized by the use of quantitative software development measures
             - Level 5: Optimizing: in this phase continuous improvement occurs
     - **Software Assurance Maturity Model (SAMM)**: an open source project maintained by the Open Web Application Security Project (OWASP)
         - provides a framework for integrating security into the software development and maintenance processes and provides orgs with the ability to assess their maturity
@@ -192,7 +199,7 @@
                     - operational management
     - **IDEAL Model**: developed by SEI, a model for software development that uses many of the SW-CMM attributes, using 5 phases:
         - Initiating: business reasons for the change are outlined, support is built, and applicable infrastructure is allocated
-        - Diagnosing: in this phase, engineers analyze the current state of the organization and make general recommendations for change
+        - Diagnosing: in this phase, engineers analyze the current state of the org and make general recommendations for change
         - Establishing: development of a specific plan of action based on the diagnosing phase recommendations
         - Acting: in this phase, the org develops solutions and then tests, refines, and implements them
         - Learning: continuously analyze efforts to achieve these goals, and propose new actions as required
@@ -216,10 +223,11 @@
 - 8.1.4 Change management
     - Change management (AKA control management) plays an important role when monitoring systems in a controlled environment, and has 3 basic components:
         - **Request Control**: process that provides an organized framework within which users can request modifications, managers can conduct cost/benefit analysis, and developers can prioritize tasks
-        - **Change Control**: the process of controlling specific changes that need to take place during the life cycle of a system, serving to document the necessary change-related activities 
+        - **Change Control**: the process of controlling specific changes that need to take place during the life cycle of a system, serving to document the necessary change-related activities; or the process of providing an organized framework within which multiple devs can create and test a solution prior to rolling it out in a production environment
             - where change management is the project manager’s responsibility for the overarching process, change control is what devs do to ensure the software or environment doesn’t break when changed
             - change control is basically the process used by devs to re-create a situation encountered by a user and analyze the appropriate changes; it provides a framework where multiple devs can create and test a solution prior to rolling it out into a prod environment
         - **Release Control**: once changes are finalized, they must be approved for release through the release control procedure
+            - one of the responsibilities of release control is ensuring that the process includes acceptance testing, confirming that any alterations to end-user work tasks are understood and functional prior to code release
 - 8.1.5 Integrated Product Team (IPT)
     - **Integrated Product Team (IPT)**:Introduced by the DoD as an approach to bring together multifunctional teams with a single goal of delivering a product or developing a process or policy, and fostering parallel, rather than sequential, decisions
     - Essentially, IPT is used to ensure that all aspects of a product, process, or policy are considered during the development process
