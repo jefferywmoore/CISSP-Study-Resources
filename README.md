@@ -4,6 +4,8 @@ Material and Resources pursing CISSP Certification
 This is my collection of resources, study materials, notes, and advice I have gathered, working towards certification.
 No compilation is exhaustive, but my goal is to put together information that will be useful and encouraging to others undertaking this effort.
 
+Note that these notes are based on the 2021 Office Study Guide ("OSG-9"). For an overview of what's been added and changed in 2024, take a look at Destination Certification's [CISSP 2024 Exam Changes](https://www.youtube.com/watch?v=TGWpwtTPexE).
+
 Feel free to share this repo or any of the resources if you find them useful.
 Tell me about mistakes or improvements you think should be made!
 Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/)
@@ -14,7 +16,8 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/)
 - [My Study Guides](#my-study-guides) built as I'm progressing through the reference material
 
 # Overview
-There is a ton of information on the CISSP exam available, including from (ISC)², associated & third-party instructors and authors, as well as guides put together by those in preparation.
+There is a ton of information on the CISSP exam available, including from (ISC)², associated & third-party instructors and authors, as well as guides put together by those in preparation. If you're just starting out, I'd recommend the [Sybex Study Guide and Practice Test bundle](https://a.co/d/g6VFNZK).
+
 Many have noted that the most appropriate frame of reference is that of a manager, and not a technician. Try to understand the process, and why any technology would be used. As [Lance puts it](https://github.com/1337-Xtreme/awesome-CISSP-CCSP), try to answer these questions for basic topics:
 - Why technology is needed?
 - What is the process for making a pro or con decision?
