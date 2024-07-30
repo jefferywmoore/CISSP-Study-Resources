@@ -4,16 +4,15 @@ Material and Resources pursing CISSP Certification
 This is my collection of resources, study materials, notes, and advice I have gathered, working towards certification.
 No compilation is exhaustive, but my goal is to put together information that will be useful and encouraging to others undertaking this effort.
 
-Note that these notes are based on the 2021 Office Study Guide ("OSG-9"). For an overview of what's been added and changed in 2024, take a look at Destination Certification's [CISSP 2024 Exam Changes](https://www.youtube.com/watch?v=TGWpwtTPexE).
+My notes are based on the 2021 Official Study Guide 9th edition ("OSG-9"). For an overview of what's been added and changed in 2024, take a look at Destination Certification's [CISSP 2024 Exam Changes](https://www.youtube.com/watch?v=TGWpwtTPexE).
 
-Feel free to share this repo or any of the resources if you find them useful.
-Tell me about mistakes or improvements you think should be made!
+Feel free to share this repo or any of the resources if you find them useful. Tell me about mistakes or improvements you think should be made!
 Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/)
 
 ## Table of contents
-- [Overview](#overview) of CISSP exam and content
-- [Reference Material](#reference-material) including books, articles, recommended courses, and guides
-- My [Study Guides By Domain](#my-study-guides) built as I'm progressing through the reference material
+- [Overview](#overview) of CISSP exam and content.
+- [Reference Material](#reference-material) including books, articles, recommended courses, and guides.
+- My [Study Guides By Domain](#my-study-guides) built as I'm progressing through the reference material.
 
 ## Overview
 There is a ton of information on the CISSP exam available, including from (ISC)², associated & third-party instructors and authors, as well as guides put together by those in preparation. If you're just starting out, I'd recommend the [Sybex Study Guide and Practice Test bundle](https://amzn.to/3WpNWKM) (note that I get a small commission for purchases made through this link).
@@ -54,14 +53,15 @@ Test Process:
 - You can pass and complete or fail in first 100 questions. If you go beyond 100, you are somewhere in between.
 
 ## Reference Material
-- Certified Information Systems Security Professional, Official Study Guide (using Ninth Edition) - this is the baseline text and from what I've seen,usually the starting point for study
-- CISSP Official Practice Tests (I have third edition)
-- This course has been highly recommended by several people: [CISSP Overview by Kelly Handerhan](https://app.cybrary.it/immersive/12270505/activity/61891) (Note: I have yet to take it!)
+- As mentioned above, the Certified Information Systems Security Professional, Official Study Guide (10th edition) - this is the baseline text and from what I've seen,usually the starting point for study.
+- CISSP Official Practice Tests - containing 100 questions for each of the 8 domains, and practice exams.
+- This course has been highly recommended by several people: [CISSP Overview by Kelly Handerhan](https://app.cybrary.it/immersive/12270505/activity/61891)
 - Thor Teaches:
-  - [CISSP study plan (2021)](https://thorteaches.com/wp-content/uploads/2021/01/ThorTeaches-CISSP-study-plan-2021.pdf)
+  - [Thor Teaches CISSP Study Bundles](https://thorteaches.com/cissp/)
   - [Daily CISSP Questions](https://thorteaches.com/free-daily-cissp-questions/)
 - [Understand Bloom's Taxonomy](https://www.bloomstaxonomy.net/) - a framework used by educators and exam creators to guide learning or exam objectives. Cross-reference words used in the exam objectives with the framework to understand the specific meaning, and to guide the level of study required to master.
-- Head over to the [Certstation](https://discord.gg/certstation) for support and communion with fellow travelers 
+- I've also found the [LearnzApp](https://www.learnzapp.com/apps/cissp/) to be useful, with study questions, flashcards, and practice tests (note that you'll need a subscription to take advantage of most of these features).
+- Head over to the [Certstation](https://discord.gg/certstation) for support and communion with fellow travelers.
 
 Note: these are my notes and resources I've found helpful in my study so far. You are advised to do your own analysis to determine what will be helpful to you in your study. There are no guarantees, implied or othewise that these notes are complete or will meet your needs to pass the CISSP certification.
 

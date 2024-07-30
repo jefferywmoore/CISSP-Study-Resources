@@ -1,11 +1,14 @@
 [Domain 3](#domain3-top) **Security Architecture and Engineering**
 
 You may find this domain to be more technical than others, and if you have experience woring in a security engineering role you likely have an advantage. If not, allocate extra time to this domain to ensure you have a good understanding of the topics
+- **Advanced Encryption Standard (AES)**: uses the Rijndael algorithm and is the US gov standard for the secure exchange of sensitive but unclassified data; AES uses key lengths of 128, 192, and 256 bits, acheiving a higher level of security than the older DES algorithm
 - **Algorithm**: a mathmatical function that is used in the encryption and decryption process; can be simply or very complex; also defined as a set of instructions by which encryption and decryption is done
 - **ASLR**: Address space layout randomization (ASLR) is a memory-protection process for operating systems (OSes) that guards against buffer-overflow attacks by randomizing the location where system executables are loaded into memory
 - **Block Mode Encryption**: using fixed-length sequences of input plaintext symbols as the unit of encryption
+- **Ciphers**: always meant to hide the true meaning of a message; types of ciphers include transposition, substitution, stream, and block
 - **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
 - **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
+- **Codes**: cryptographic systems of symbols that operate on words or phrases and are sometimes secret, but don't always provide confidentiality
 - **Collision**: occurs when a hash function generates the same output for different inputs
 - **Cryptanalysis**: study of techniques for attempting to defeat cryptographic techniques and generally information security services
 - **Cryptographic Hash function**: process or function that transforms an input plaintext into a unique value called a hash (or hash value); note that they do not use cryptographic algorithms, as hashes are one-way functions where it's infeasible to determine the plaintext; Message digests are an example of cryptographic hash
@@ -27,7 +30,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password; keyspace = 2 to the power of the number of bits, so 4 bits = 16 keys, 8 bits = 256 keys
 - **Meet-in-the-middle**: attack that uses a known plaintext message and both encryption of the plaintext and decryption of the ciphertext simultaneously in a brute-force manner to identify the encryption key; 2DES is vulnerable to this attack
 - **Multistate systems**: certified to handle data from different security classifications simultaneously
-- **One-time pad**: series of randomly generated symmetric encryption keys, each one to be used only once by the sender and recipient
+- **One-time pad**: series of randomly generated symmetric encryption keys, each one to be used only once by the sender and recipient; to be successful, the key must be generated randomly without any known pattern; the key must be at least as long as the message to be encrypted; the pads must be protected against physical disclosure and each pad must be used only one time, then discarded
 - **Out-of-band**: transmitting or sharing control information (e.g. encryption keys and crypto variables) by means of a separate and distinct communications path, channel, or system
 - **Plaintext**: message or data in its readable form, not turned into a secret
 - **Session key**: a symmetric encryption key generated for one-time use; usually requires a key encapsulation approach to eliminate key management issues
@@ -36,7 +39,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Symmetric encryption**: process that uses the same key (or a simple transformation of it) for both encryption/decryption
 - **Transposition cypher**: encryption/decription process using transposition
 - **VESDA**: very early smoke detection process (air sensing device brand name)
-- **Work factor**: amount of effort necessary to break a cryptographic system, measured in elapsed time
+- **Work factor**: (AKA Work function) is a way to measure the strength of a cryptography system, measuring the effort in terms of cost/time to decrypt messages; amount of effort necessary to break a cryptographic system using a bruteforce attack, measured in elapsed time
 - **Zero-knowledge proof**: one person demonstrates to another that they can achieve a reslut that requires sensitive info without actually disclosing the sensitive info
 
 [3.1](#3.1) Research, implement, and manage engineering processes using secure design principles (OSG-9 Chpts 1,8,9,16)
@@ -392,6 +395,14 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - "different" is a synonym for asymmetric 
         - **total number of keys** required to completely connect n parties using symmetric cryptography is given by this formula: 
             - **(n(n - 1)) / 2**
+        - symmetric cryptosystems operate in several discrete modes:
+            - Electronic Code Book (ECB) mode: considered the least secure, used only for short messages
+            - Cipher Block Chaining (CBC) mode
+            - Cipher Feedback (CFB) mode
+            - Output Feedback (OFB) mode
+            - Counter (CTR) mode
+            - Galois/Counter mode (GCM)
+            - Counter with Cipher Block Chaining Message Authentication Code mode (CCM)
     - **Asymmetric** encryption: process that uses different keys for encryption and decryption, and in which the decryption key is computationally not possible to determine given the encryption key itself
         - Asymmetric (AKA public key, since one key of a pair is available to anybody) algorithms provide convenient key exchange mechanisms and are scalable to very large numbers of users (addressing the two most significant challenges for users of symmetric cryptosystems) 
         - Asymmetric cryptosystems avoid the challenge of sharing the same secret key between users, by using pairs of public and private keys to allow secure communication without the overhead of complex key distribution
