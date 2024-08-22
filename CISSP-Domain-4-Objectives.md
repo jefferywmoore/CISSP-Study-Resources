@@ -49,6 +49,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **Packet-Switched Network**: a network that doesn't use a dedicated connection between endpoints
 - **Point-to-Point Protocol**: a standard method for transporting multiprotocol datagrams over point-to-point links
 - **Port Address Translation**: an extension of NAT (Network Address Translation) translating all addresses to one routable IP address and translate the source port number in the packet to a unique value
+- **Race condition (RCE)**: AKA race hazard is the condition of an electronics, software, or other system where the system's substantive behavior is dependent on the sequence or timing of other uncontrollable events, leading to unexpected or inconsistent results
 - **RPC**: Remote Procedure Call is a protocol that enables one system to execute instructions on other hosts across a network infrastructure
 - **Root of Trust**: a source that can always be trusted within a cryptographic system; because cryptographic security is dependent on keys to encrypt and decrypt data and perform functions such as generating digital signatures and verifying signatures, RoT schemes generally include a hardened hardware module; a RoT guarantees the integrity of the hardware prior to loading the OS of a computer
 - **SIPS**: secure version of the Session Initialization Protocol for VoIP, adds TLS encryption to keep the session initialization process secure
@@ -59,6 +60,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - Privacy
         - Data security (using encryption)
     - S/MIME specifies the MIME type application/pkcs7-mime (smime-type "enveloped-data") for data enveloping (encrypting) where the whole (prepared) MIME entity to be enveloped is encrypted and packed into an object which subsequently is inserted into an application/pkcs7-mime MIME entity
+    - S/MIME is the emerging standard for secure email / encrypted messages
 - **SNMP**: Simple Network Management Protocol, is a protocol for collecting and organizing info about managed devices on IP networks; it can be used to determine the health of devices such as routers, switches, servers, workstations, etc
 - **Smurf attack**: ICMP echo request sent to the network broadcast address of a spoofed victim causing all nodes to respond to the victim with an echo reply
 - **SPML**: Service Provisioning Markup Language is XML-based and designed to allow platforms to generate and respond to provisioning requests; uses the concept of requesting authority, a provisioning service point, and a provisioning service target; requesting authorities issue SPML requests to a provisioning service point; provisioning service targets are often user accounts and are required to be allowed unique identification of the data in its implementaion
@@ -127,6 +129,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
             - User Datagram Protocol (UDP)
                 - connectionless protocol that provides fast, best-effort delivery of **datagrams** (self-container unit of data)
             - Transport Layer Security (TLS)
+                - note: in the OSI model, TLS operates on four layers: Application, Presentation, Session, and Transport; in the TCP/IP model, it operates only on the Transport layer
         - Segmentation, sequencing, and error checking occur at the Transport layer
     - Network Layer (3)
         - Responsible for logical addressing, and providing routing or delivery guidance (but not necessarily verifying guaranteed delivery), manages error detection and traffic control
@@ -177,7 +180,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
      - IP is part of the TCP/IP (Transmission Control Protocol/Internet Protocol) suite
         - TCP/IP is the name of IETF's four-layer networking model, and its protocol stack; the four layers are link (physical), internet (network-to-network), transport (channels for connection/connectionless data exchange) and application (where apps make use of network services)
         - IP provides the foundation for other protocols to be able to communicate; IP itself is a connectionless protocol
-        - IPv4: dominant protocol that operates at layer 3; IP is responsible for addressing packets, uses 32-bit addresses
+        - IPv4: dominant protocol that operates at layer 3; IP is responsible for addressing packets, using 32-bit addresses
         - IPv6: modernization of IPv4, uses 128-bit addresses, supporting 2128 hosts
         - TCP or UDP is used to communicate over IP 
         - IPSec provides data authentication, integrity and confidentiality
@@ -198,18 +201,23 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - TLS has supplanted SSL (the original protocol, considered legacy/insecure) 
         - TLS was initially introduced in 1999 but didn’t gain widespread use until years later
         - The original versions of TLS (1.0 and 1.1) are considered deprecated and organizations should be relying on TLS 1.2 or TLS 1.3
+        - The defacto standard for secure web traffic is HTTP over TLS, which relies on hybrid cryptography: using asymmetric cryptography to exchange an ephemeral session key, which is then used to carry on symmetric cryptography for the remainder of the session
     - **SFTP**: a version of FTP that includes encryption and is used for transferring files between two devices (often a client / server)
     - **SSH**: remote management protocol, which operates over TCP/IP
         - all communications are encrypted
         - primarily used by IT administrators to manage devices such as servers and network devices
     - **IPSec**: an IETF standard suite of protocols that is used to connect nodes (e.g. computers or office locations) together
+        - IPsec protocol standard provides a common framework for encrypting network traffic and is built into a number of common OSs
+        - IPsec establishes a secure channel in either transport or tunnel mode
+        - IPsec uses two protocols: Authentication Header (AH) and Encapsulating Security Payload (ESP) -- see below 
         - widely used in virtual private networks (VPNs)
         - IPSec provides encryption, authentication and data integrity
-        - **transport mode**: only packet payload is encrypted
-        - **tunnel mode**: the entire packet (including header) is encrypted
-        - **security association (SA)**: represents a simplex communication connection/session, recording any config and status info; 
-        - **authentication header (AH)**: provides assurance of message integrity and nonrepudiation; also provides authentication and access control, preventing replay attacks
-        - ****encapsulating security payload (ESP)**: provides confidentiality and integrity of packet content; also encryption and limited authentication and preventing replay attacks (not to the degree of AH)
+        - **transport mode**: only packet payload is encrypted for peer-to-peer communication
+        - **tunnel mode**: the entire packet (including header) is encrypted for gateway-to-gateway communication
+        - **security association (SA)**: represents a simplex communication connection/session, recording any config and status info
+        - **authentication header (AH)**: provides assurance of message integrity and nonrepudiation; also provides authentication and access control, preventing replay attacks; does not provide encryption; like an official authentication stamp, but it's not encrypted so anyone can read it
+        - **encapsulating security payload (ESP)**: provides encryption of the payload which provides confidentiality and integrity of packet content; works with tunnel or transport mode; provides limited authentication and preventing replay attacks (not to the degree of AH)
+    - **Internet Key Exchange (IKE)**: a standard protocol used to set up a secure and authenticated communication channel between two parties via a virtual private network (VPN); the protocol ensures security for VPN negotiation, remote host and network access
 
 - 4.1.4 Implications of multilayer protocols
     - TCP/IP is a multilayer protocol, and derives several associated benefits
@@ -238,6 +246,8 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - **Voice over Internet Protocol (VoIP)**: a tunneling mechanism that encapsulates audio, video, and other data into IP packets to support voice calls and multimedia collab
             - VoIP is considered a converged protocol because it combines audio and video encapsulation technology (operating as application layer protocols) with the protocol stack of TCP/IP
             - SIPS and SRTP are used to secure VoIP
+            - **Secure Real-Time Transport Protocol (SRTP)**: an extension profile of RTP (Real-Time Transport Protocol) which adds further security features, such as message authentication, confidentiality and replay protection mostly intended for VoIP communications
+            - SIPS: see definition above
 
 - 4.1.6 Micro-segmentation (e.g., Software Defined Networks (SDN), Virtual eXtensible Local Area Network (VXLAN),Encapsulation, Software-Defined Wide Area Network (SD-WAN))
     - **Software-defined networks (SDN)**:

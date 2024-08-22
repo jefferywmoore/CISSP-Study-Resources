@@ -1,10 +1,11 @@
 [Domain 3](#domain3-top) **Security Architecture and Engineering**
 
 You may find this domain to be more technical than others, and if you have experience woring in a security engineering role you likely have an advantage. If not, allocate extra time to this domain to ensure you have a good understanding of the topics
-- **Advanced Encryption Standard (AES)**: uses the Rijndael algorithm and is the US gov standard for the secure exchange of sensitive but unclassified data; AES uses key lengths of 128, 192, and 256 bits, acheiving a higher level of security than the older DES algorithm
+- **Advanced Encryption Standard (AES)**: uses the Rijndael algorithm and is the US gov standard for the secure exchange of sensitive but unclassified data; AES uses key lengths of 128, 192, and 256 bits, and a fixed block size of 128 bits, achieving a higher level of security than the older DES algorithm
 - **Algorithm**: a mathmatical function that is used in the encryption and decryption process; can be simply or very complex; also defined as a set of instructions by which encryption and decryption is done
 - **ASLR**: Address space layout randomization (ASLR) is a memory-protection process for operating systems (OSes) that guards against buffer-overflow attacks by randomizing the location where system executables are loaded into memory
 - **Block Mode Encryption**: using fixed-length sequences of input plaintext symbols as the unit of encryption
+- **Block ciphers**: take a number of bits and encrypt them in a single unit, padding the plaintext to achieve a multiple of the block size; the Advanced Encryption Standard (AES) algorithm uses 128-bit blocks 
 - **Ciphers**: always meant to hide the true meaning of a message; types of ciphers include transposition, substitution, stream, and block
 - **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
 - **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
@@ -33,11 +34,14 @@ You may find this domain to be more technical than others, and if you have exper
 - **One-time pad**: series of randomly generated symmetric encryption keys, each one to be used only once by the sender and recipient; to be successful, the key must be generated randomly without any known pattern; the key must be at least as long as the message to be encrypted; the pads must be protected against physical disclosure and each pad must be used only one time, then discarded
 - **Out-of-band**: transmitting or sharing control information (e.g. encryption keys and crypto variables) by means of a separate and distinct communications path, channel, or system
 - **Plaintext**: message or data in its readable form, not turned into a secret
+- **Salting vs key stretching**: salting adds randomness and uniqueness to each password before hashing, which reduces the effectiveness of rainbow table attacks; key stretching makes the hashing process deliberately slow, making it much more challenging for attackers to crack passwords using brute-force or precomputed tables; common password hashing algorithms that use key stretching include PBKDF2, bcrypt, and scrypt
 - **Session key**: a symmetric encryption key generated for one-time use; usually requires a key encapsulation approach to eliminate key management issues
 - **Stream mode encryption**: system using a process that treats the input plaintext as a continuous flow of symbols, encrypting one symbol at a time; usually uses a streaming key, using part of the key as a one-time key for each symbol's encryption
+- **Stream ciphers**: encrypt the digits (typically bytes), or letters (in substitution ciphers) of a message one at a time
 - **Substitution cipher**: encryption/decription process using subsitution
 - **Symmetric encryption**: process that uses the same key (or a simple transformation of it) for both encryption/decryption
 - **Transposition cypher**: encryption/decription process using transposition
+- **Trust and Assurance**: trust is the presence of a security mechanism or capability; assurance is how reliable the security mechanism(s) are at providing security
 - **VESDA**: very early smoke detection process (air sensing device brand name)
 - **Work factor**: (AKA Work function) is a way to measure the strength of a cryptography system, measuring the effort in terms of cost/time to decrypt messages; amount of effort necessary to break a cryptographic system using a bruteforce attack, measured in elapsed time
 - **Zero-knowledge proof**: one person demonstrates to another that they can achieve a reslut that requires sensitive info without actually disclosing the sensitive info
@@ -66,7 +70,7 @@ You may find this domain to be more technical than others, and if you have exper
     - **Keep it simple**: AKA keep it simple, stupid (KISS), this concept is the encouragement to avoid overcomplicating the environment, organization, or product design
     3.1.8 Zero Trust
     - **Zero Trust**: "assume breach"; a security concept and alternative of the traditional (castle/moat) approach where nothing is automatically trusted; instead each request for activity or access is assumed to be from an unknown and untrusted location until otherwise verified
-        - replaces trust but verify as a security design principle by asserting that all activities by all users/entities must be subject to control, authentication, authorization, and management at the most granular level possible
+        - "Never trust, always verify" replaces "trust but verify" as a security design principle by asserting that all activities by all users/entities must be subject to control, authentication, authorization, and management at the most granular level possible
         - Goal is to have every access request authenticated, authorized, and encrypted prior to access being granted to an asset or resource
         - See my article on an [Overview of Zero Trust Basics](https://blog.balancedsec.com/p/an-overview-of-zero-trust-basics)
 - 3.1.9 Privacy by design
@@ -88,6 +92,7 @@ You may find this domain to be more technical than others, and if you have exper
         - The job of the CISO and security team is to establish & maintain security
         - The job of regular employees to perform their tasks within the confines of security
         - The job of the auditor is to monitor the environment for violations
+        - Because we participate in shared responsibility we must research, implement, and manage engineering processes using secure design principles
         - When working with third parties, especially with cloud providers, each entity needs to understand their portion of the shared responsibility of performing work operations and maintaining security; this is often referenced as the **cloud shared responsibility model**
 
 [3.2](#3.2) Understand the fundamental concepts of security models (e.g. Biba, Star Model, Bell-LaPadula) (OSG-9 Chpt 8)
@@ -95,8 +100,11 @@ You may find this domain to be more technical than others, and if you have exper
     - Intended to provide an explicit set of rules that a computer can follow to implement the fundamental security concepts, processes, and procedures of a security policy 
     - Provide a way for a designer to map abstract statements into a security policy prescribing the algorithms and data structures necessary to build hardware and software
     - Enable people to access only the data classified for their clearance level
+- **State machine model**: ensures that all instances of subjects accessing objects are secure
+- **Information flow model**: designed to prevent unauthorized, insecure, or restricted information flow; the Information Flow model is an extension of the state machine concept and serves as the basis of design for both the Biba and Bell-LaPadula models
+- **Noninterference model**: prevents the actions of one subject from affecting the system state or actions of another subject
 - **Bell-LaPadula**: Model was established in 1973; the goal is to ensure that information is exposed only to those with the right level of classification
-    - Focuse is on *confidentiality* 
+    - Focus is on *confidentiality* 
     - **Simple property**: "No read up" 
     - **Star (*) property**: "No write down" (AKA confinement property)
     - Discretionary Security Property: uses an access matrix (need to know in order to access)
@@ -108,14 +116,14 @@ You may find this domain to be more technical than others, and if you have exper
     - By combining it with Bell-LaPadula, you get both confidentiality and integrity
     - Biba uses a lattice to control access and is a form of mandatory access control (MAC) model
 - **Take-Grant**: 
-    - The take-grant is a confidentiality-based model that supports four basic operations: take, grant, create, and revoke; it employs a directed graph to dictate how rights can be passed from one subject to another, or from a subject to an object
+    - Take-grant is a confidentiality-based model that supports four basic operations: take, grant, create, and revoke; it employs a directed graph to dictate how rights can be passed from one subject to another, or from a subject to an object
     - **Take rule**: allows a subject to take rights over an object 
     - **Grant rule**: allows a subject to grant rights to an object 
     - **Create rule**: allows a subject to create new rights 
     - **Remove rule**: allows a subject to remove rights it has
 
 - **Clark-Wilson**:
-    - Designed to protect integrity using the access control triplet
+    - Designed to protect integrity using the access control triplet (subject/program/object)
     - A program interface is used to limit what is done by a subject; if the focus of an intermediary program between subject and object is to protect integrity, then it is an implementation of the Clark-Wilson model
     - Uses security labels to grant access to objects via transformation procedures and a restricted interface model
     - The Clark-Wilson Model enforces the concept of separation of duties
@@ -150,6 +158,7 @@ You may find this domain to be more technical than others, and if you have exper
 [3.3](#3.3) Select controls based upon systems security requirements (OSG-9 Chpt 8)
 
 - Be familiar with the **Common Criteria (CC)** for Information Technology Security Evaluation
+- Based on ISO/IEC 15408 is a subjective security function evaluation tool that uses protection profiles (PPs) and security targets (Sts) and assigns an Evaluation Assurance level (EAL)
 - The CC provides a standard to evaluate systems, defining various levels of testing and confirmation of systems' security capabilities 
 - The number of the level indicates what kind of testing and confirmation has been performed
 - The important concepts:
@@ -390,6 +399,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - symmetric encryption uses a shared secret key available to all users of the cryptosystem 
         - symmetric encryption is faster than asymmetric encryption because smaller keys can be used for the same level of protection
         - downside is that users or systems must find a way to securely share the key and hope the key is used only for the specified communication
+        - symmetric-key encryption can use either stream ciphers or block ciphers
         - primarily employed to perform bulk encryption and provides only for the security service of confidentiality 
         - "same" is a synonym for symmetric 
         - "different" is a synonym for asymmetric 
@@ -403,18 +413,21 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
             - Counter (CTR) mode
             - Galois/Counter mode (GCM)
             - Counter with Cipher Block Chaining Message Authentication Code mode (CCM)
+        - Examples of symmetric algorithms: Twofish, Serpent, AES (Rijndael), Camellia, Salsa20, ChaCha20, Blowfish, CAST5, Kuznyechik, RC4/5/6, DES, 3DES, Skipjack, Safer, and IDEA
     - **Asymmetric** encryption: process that uses different keys for encryption and decryption, and in which the decryption key is computationally not possible to determine given the encryption key itself
         - Asymmetric (AKA public key, since one key of a pair is available to anybody) algorithms provide convenient key exchange mechanisms and are scalable to very large numbers of users (addressing the two most significant challenges for users of symmetric cryptosystems) 
         - Asymmetric cryptosystems avoid the challenge of sharing the same secret key between users, by using pairs of public and private keys to allow secure communication without the overhead of complex key distribution
         - **Public key**: one part of the matching key pair, which can be shared or published
         - Besides the public key, there is a private key that should remain private and protected
         - Private key secrecy and integrity of an asymmetric encryption process are entirely dependent upon protecting the value of the private key
-        - While asymmetric encryption is slower, it is best suited for sharing between two or more parties 
+        - While asymmetric encryption is slower, it is best suited for sharing between two or more parties
+        - Asymmetric encryption provides confidentiality, authentication and non-repudiation
         - Most common asymmetric cryptosystems in use today:    
-            - Rivest-Shamir-Adleman (RSA) 
-            - Diffie-Hellman 
-            - ElGamal
-            - Eliptical Curve Cryptography (EEC)
+            - Rivest-Shamir-Adleman (RSA): depends on factoring the product of prime numbers
+            - Diffie-Hellman: depends on modular arithmetic
+            - ElGamal: extension of Diffie-Hellman that depends on modular arithmetic
+            - Eliptical Curve Cryptography (EEC): elliptic curve algorithm depends on the elliptic curve discrete logarithm problem and provides more security than other algorithms when both are used with keys of the same length
+    - Check out [Practical Cryptography for Developers](https://github.com/nakov/Practical-Cryptography-for-Developers-Book/blob/master/encryption-symmetric-and-asymmetric.md) for a deeper dive
 - 3.6.3 Public Key Infrastructure (PKI)
     - **Public Key Infrastructure (PKI)**: hierarchy of trust relationships permitting the combination of asymmetric and symmetric cryptography along with hashing and digital certificates (giving us hybrid cryptography) 
         - A PKI issues certificates to computing devices and users, enabling them to apply cryptography (e.g., to send encrypted email messages, encrypt websites or use IPsec to encrypt data communications)
@@ -424,6 +437,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
             - certificates: issued to other certification authorities or to devices and users 
             - policies and procedures: such as how the PKI is secured, and 
             - templates: a predefined configuration for specific uses, such as a web server template 
+            - CAs generate digital certificates containing the public keys of system users; users then distribute these certificates to people with whom they want to communicate; certificate recipients verify a certificate using the CA's pubic key
         - There are other components and concepts you should know for the exam:
             - A PKI can have multiple tiers:    
                 - single tier means you have one or more servers that perform all the functions of a PKI 
@@ -473,6 +487,8 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - Digitally signed messages assure the recipient that the message truly came from the claimed sender, enforcing nonrepudiation
         - Digitally signed messages assure the recipient that the message was not altered while in transit; protecting against both malicious modification (third party altering message meaning), and unintentional modification (faults in the communication process) 
         - Digital signature process does not provide confidentiality in and of itself (only ensures integrity, authentication, and nonrepudiation)
+        - To digitally sign a message, first use a hashing function to generate a message digest; then encrypt the digest with your private key
+        - To verify a digital signature, decrypt the signature with the sender's public key and compare the message digest to the one you generate yourself: if they match, the message is authentic
     - FIPS 186-4 specifies three techniques for the generation and verification of digital signatures that can be used for the protection of data: the Rivest-Shamir-Adleman Algorithm (RSA), the Digital Signature Algorithm (DSA), and the Elliptic Curve Digital Signature Algorithm (ECDSA)
 - 3.6.6 Digital Non-repudiation
     - Here non-repudiation refers to methods ensuring certainty about data origins; in general, the inability to deny
@@ -495,6 +511,9 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - the hash function should be collision-resistant, meaning it is extremely hard to find two messages that produce the same hash value output
         - hashes are used for storing passwords, with email, and for file download integrity verification
     - Hashing and integrity: if the hash generated by sender, and separately by the receiver match, then we have integrity
+    - Successors to the Secure Hash Algorithm (SHA), SHA-2, and SHA-3, make up the government standawrd message digest funtion
+        - SHA-2 supports variable-length message digests, ranging up to 512 bits
+        - SHA-3 improves upon the security of SHA-2 and supports the same hash lengths
 
 [3.7](#3.7) Understand methods of cryptanalytic attacks (OSG-9 Chpts 7,14,21)
 - 3.7.1 Brute force
@@ -503,7 +522,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 - 3.7.2 Ciphertext only
     - **Ciphertext only**: an attack where you only have the encrypted ciphertext message at your disposal (not the plaintext)
         - if you have enough ciphertext samples, the idea is that you can decrypt the target ciphertext based on the samples
-        - one technique proves helpful against simple ciphers is frequency analysis (counting the number of times each letter appears in the ciphertext)
+        - one technique that proves helpful against simple ciphers is frequency analysis (counting the number of times each letter appears in the ciphertext) -- see below
 - 3.7.3 Known plaintext
     - **Known plaintext**: in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes
 - 3.7.4 Frequency analysis

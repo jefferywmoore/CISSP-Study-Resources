@@ -29,7 +29,7 @@
 - **Sampling**: one of two main methods of choosing records from a large pool for ruther analysis, sampling uses statistical techniques to choose a sample that is representative of the entire pool (also see clipping)
 - **SCCM**: System Center Configuration Manager is a Microsoft systems management software product that provides the capability to manage large groups of computers providing remote control, patch management, software distribution, operating system deployment, and hardware and software inventory
 - **Security Incident**: Any attempt to undermine the security of an org or violation of a security policy is a security incident
-- **Trusted Computing Base (TCB)**: the collection of all hardware, software, and firmware components within an architecture that is specifically responsible for security and the isolation of objects; TCB is a term that is usually associated with security kernels and the reference monitor
+- **Trusted Computing Base (TCB)**: the collection of all hardware, software, and firmware components within an architecture that is specifically responsible for security and the isolation of objects that forms a trusted base; TCB is a term that is usually associated with security kernels and the reference monitor; a trusted base enforces the security policy; a security perimeter is the imaginary boundary that separates the TCB from the rest of the system; TCB comonents communicate with non-TCB components using trusted paths
 - **View-Based access controls**: access control that allows the database to be logically divided into components like records, fields, or groups allowing sensitive data to be hidden from non-authorized users; admins can set up views by user type, allowing only access to assigned views
 
 [7.1](#7.1) Understand and comply with investigations (OSG-9 Chpt 19)
@@ -463,7 +463,7 @@
     - OSG also mentions that some SaaS vendors provide security services via the cloud (e.g. next-gen firewalls, UTM devices, and email gateways for spam and malware filtering)
 - 7.7.5 Sandboxing
     - **Sandboxing**: refers to a security technique where a separate, secure environment is created to run and analyze untested or untrusted programs or code without risking harm to the host device or network; this isolated environment, known as a **sandbox**, effectively contains the execution of the code, allowing it to run and behave as if it were in a normal computing environment, but without the ability to affect the host system or access critical resources and data 
-    - **Confinement**: restriction of a process to certain resources; isolation is using bounds to create/enforce confinement
+    - **Confinement**: restriction of a process to certain resources, or reading from and writing to certain memory locations; bounds are the limits of memory a process cannot exceed when reading or writing;isolation is using bounds to create/enforce confinement
     - Sandboxing provides a security boundary for applications and prevents the app from interacting with other apps; can be used as part of development, integration, or acceptance testing, as part of malware screening, or as part of a honeynet
 - 7.7.6 Honeypots/honeynets
     - **Honeypots**: individual computers created as a trap or a decoy for intruders or insider threats
