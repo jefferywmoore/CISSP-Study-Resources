@@ -51,6 +51,7 @@
 - **Hierarchical database model**: data elements and records are arranged in tree-like parent-child structures
 - **Integrated Product and Process Development (IPPD)**: management technique that simultaneously integrates essential acquisition activities through the use of multidisciplinary teams to optimize the design, manufacturing, and supportability processes
 - **Integrated Product Team**: team of stakeholders and individuals that possess different skills and who work together to acheive a defined process or product
+- **Infrastructure as Code (IaC)**: instead of viewing hardware confi as a manual, direct hands-on, one-on-one admin hassel, it is viewed as just another collecti on of elements to be managed in the same way that software and code are managed under DevSecOps
 - **Interactive Application Security Testing (IAST)**: testing that combines or integrates SAST and DAST to improve testing and provide behavioral analysis capabilities to pinpoint the source of vulnerabilities
 - **Knowledge Discovery in Database (KDD)**: mathematical, statistical, and visualization method of identifying valid and useful patterns in data
 - **Knowledge Management**: efficent/effective management of info and associated resources in an enterprise to drive busienss intelligence and decision-making; may include workflow management, business process modeling, doc management, db and info systems and knowledge-based systems

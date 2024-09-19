@@ -3,7 +3,7 @@
 Networking can be one of the more complex exam topics; if you have a networking background, you likely won’t find this domain difficult-- if not, spend extra time in this section and consider diving deeper into topics that are fuzzy
 
 - **ACK**: an acknowledgement of a signal being received
-- **Active-active, active-passive clustering**: a data resiliency architecture in which client workloads are distributed across two or more nodes in a cluster to keep your data safe and available in the event of an unexpected component failure; active-active can use the full throughput capability of both devices; active-passive can only handle throughput of a single device allowing the secondary device to remain ready (but not passing traffic) until needed
+- **Active-active, active-passive clustering**: a data resiliency architecture in which client workloads are distributed across two or more nodes in a cluster to keep data safe and available in the event of an unexpected component failure; active-active can use the full throughput capability of both devices; active-passive can only handle throughput of a single device allowing the secondary device to remain ready (but not passing traffic) until needed
 - **ARP**: used at the Media Access Control (MAC) layer to provide for direct communication between two devices within the same LAN segment
 - **APT**: Advanced Persistent Threat is an agent/org that plans, organizes, and carries out highly sophisticated attacks against a target person, org, or industry over a period of time (months or even years); usually with a strategic goal in mind
 - **API**: Application Programming Interface; code mechanisms that provide ways for apps to share data, emthods, or functions over a network (usually implemented in XML or JavaScript Object Notation (JSON))
@@ -38,6 +38,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **FDDI**: Fiber Distributed Data Interface is an ANSI X3T9.5 LAN standard; 100Mbps, token-passing using fiber-optic, up to 2 kilometers
 - **FCoE**: Fibre Channel over Ethernet is a lightweight encapulsation protocol without the reliable data transport of TCP
 - **Gateway device**: a firewall or other device that sits at the edge of the network to regulate traffic and enforce rules
+- **Generic Routing Encapsulation (GRE)**: a protocol for encapsulating data packets that use one routing protocol inside the packets of another protocol; "encapsulating" means wrapping one data packet within another data packet, like putting a box inside another box; note that when using IPv4, the GRE header is inserted between the delivery and payload headers
 - **ICMP**: Internet Control Message Protocol, standardized by IETF via RFC 792 to determine if a particular host is available
 - **IGMP**: Internet Group Management Protocol, used to manage multicasting groups
 - **Internetworking**: two different sets of servers/communication elements using network protocol stacks to communicate and coordinate activities
@@ -293,6 +294,9 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - Wi-Fi Protected Access II (WPA2):
             - IEEE 802.11i WPA2 replaced WEP and WPA
             - Uses AES-CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol)
+            - WPA2 operates in two modes, personal and enterprise 
+                - personal mode or the Pre-Shared Key (PSK) relies on a shared passcode or key known to both the access point and the client device; typically used for home network security
+                - enterprise mode uses the more advanced Extensible Authentication Protocol (EAP) and an authentication server and individual credentials for each user or device; enterprise mode is best suited to companies and businesses
         - Wi-Fi Protected Access 3 (WPA3):
             - WPA3-ENT uses 192-bit AES CCMP encryption
             - WPA3-PER remains at 128-bit AES CCMP

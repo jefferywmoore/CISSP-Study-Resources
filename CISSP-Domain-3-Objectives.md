@@ -11,7 +11,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
 - **Codes**: cryptographic systems of symbols that operate on words or phrases and are sometimes secret, but don't always provide confidentiality
 - **Collision**: occurs when a hash function generates the same output for different inputs
-- **Cryptanalysis**: study of techniques for attempting to defeat cryptographic techniques and generally information security services
+- **Cryptanalysis**: study of techniques for attempting to defeat cryptographic techniques and generally information security services; Cryptanalysis is the process of transforming or decoding communications from non-readable to readable format without having access to the real key
 - **Cryptographic Hash function**: process or function that transforms an input plaintext into a unique value called a hash (or hash value); note that they do not use cryptographic algorithms, as hashes are one-way functions where it's infeasible to determine the plaintext; Message digests are an example of cryptographic hash
 - **Cryptography**: study of/application of methods to secure the meaning and content of messages, files etc by disguise, obscuration, or other transformations
 - **Cryptosystem**: complete set of hardware, software, communications elements and procedures that allow parties to communicate, store or use info protected by cryptographic means; includes algroithm, key, and key management functions
@@ -21,7 +21,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Elliptic-curve cryptography (ECC)**: a newer mainstream algorithm, is normally 256 bits in length (a 256-bit ECC key is equivalent to a 3072-bit RSA key), making it securer and able to offer stronger anti-attack capabilities
 - **Encoding**: action of changing a message or set of info into another format through the use of code; unlike encryption, encoded info can still be read by anyone with knowledge of the encoding process
 - **Encryption**: process and act of converting the message from plaintext to ciphertext (AKA enciphering)
-- **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the plaintext as a way of reducing the search space
+- **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the ciphertext as a way of reducing the search space
 - **Hybrid encryption system**: a system that uses both symmetric and asymmetric encryption
 - **Key**: the input that controls the operation of the cryptographic algorthm, determining the behavior of the algorithm and permits the reliable encyrption and decryption of the message
 - **Key pair**: matching set of one public and one private key
@@ -307,6 +307,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
             - review IoT vendor to understand their history with reported vulnerabilities, response time to vulnerabilities and their overall approach to security
             - not all IoT devices are suitable for enterprise networks
 - 3.5.9 Microservices
+    - **Service-oriented Architecture (SOA)**: constructs new apps or functions out of existing but separate and distinct software services, and the resulting app is often new; therefore its security issues are unknown, untested, and unprotected; a derivative os SOA is microservices
     - **Microservices**: a feature of web-based solutions and derivative of SOA 
         - A microservice is simply one element, feature, capability, business logic, or function of a web app that can be called upon or used by other web apps
         - Microservices are usually small and focused on a single operation, engineered with few dependencies, and based on fast, short-term development cycles (similar to Agile)
@@ -406,13 +407,27 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - **total number of keys** required to completely connect n parties using symmetric cryptography is given by this formula: 
             - **(n(n - 1)) / 2**
         - symmetric cryptosystems operate in several discrete modes:
-            - Electronic Code Book (ECB) mode: considered the least secure, used only for short messages
-            - Cipher Block Chaining (CBC) mode
-            - Cipher Feedback (CFB) mode
-            - Output Feedback (OFB) mode
-            - Counter (CTR) mode
-            - Galois/Counter mode (GCM)
-            - Counter with Cipher Block Chaining Message Authentication Code mode (CCM)
+            - **Electronic Code Book (ECB) mode**: the simplest and weakest of the modes; each block of plaintext is encrypted separately, but they are encrypted in the same way
+                - advantages:fast, blocks can be processed simultaneously
+                - disadvantages: any plaintext duplication would produce the same ciphertext
+            - **Cipher Block Chaining (CBC) mode**: a block cipher mode of operation that encrypts plaintext by using an operation called XOR (exclusive-OR); XORing a block with the previous ciphertext block is known as "chaining"; this means that the decryption of a block of ciphertext depends on all the preceding ciphertext blocks; CBC uses an Initialization Vector or IV, which is a random value or nonce shared between sender and receiver
+                - advantages: CBC uses the previous ciphertext block to encrypt the next plaintext block, making it harder to deconstruct; XORing process prevents identical plaintext from producing identical ciphertext; a single bit error in a ciphertext block affects the decryption of that block and the next, making it harder for attackers to exploit errors
+                - disadvantages: you have to process the blocks in order, not simultaneously (so it's slower); CBC is also vulnerable to POODLE and GOLDENDOODLE attacks
+            - **Cipher Feedback (CFB) mode**: similar to CBC, it uses an IV and the cipher from the previous block; the main difference is that with CFB, the cipher from the previous block is encrypted first, then XORed with the current block
+                - advantages: CFB is considered to be faster than CBC even though it’s also sequential
+                - disadvantages: if there’s an error in one block, it can carry over into the next block
+            - **Output Feedback (OFB) mode**: OFB turns a block cipher into a synchronous stream cipher; based on an IV and the key, it generates keystream blocks which are then simply XORed with the plaintext data; as with CFB, the encryption and decryption processes are identical, and no padding is required
+                - advantages: OFB mode doesn't need a unique nonce for each message, which can simplify the management and generation of nonces; it's resistant to replay attacks
+                - disadvantages: no data integrity protection, vulnerability to IV management issues, potential for error propagation if a ciphertext block is corrupted, and lack of parallelization capabilities due to the dependence of the keystream on previous blocks
+            - **Counter (CTR) mode**: key feature is that you can parallelize encryption and decryption, and it doesn’t require chaining; it uses a counter function to generate a nonce value for each block’s encryption; the nonce number (aka the counter) gets encrypted and then XORed with the plaintext to generate ciphertext; the resulting ciphertext should also always be unique
+                - advantage: CTR mode is fast, and considered to be secure
+                - disadvantage: lacks integrity, so we need to use hashing
+            - **Galois/Counter (GCM) mode**: combines counter mode (CTR) with Galois authentication; we can not only encrypt data, but we can authenticate where the data came from (providing both data integrity and confidentiality); includes authentication data, and uses hashing as starting values
+                - advantages: extremely fast, GCM is recognized by NIST and used in the IEEE 802.1AE standard
+                - disadvantages:most stated disadvantages seem to be around implementation burdens
+            - **Counter with Cipher Block Chaining Message Authentication Code (CCM) mode**: uses counter mode so there is no error propogation; there is no duplication, but uses chaining, so cannot run in parallel; MAC or message authentication code: provides authentication and integrity
+                - advantages: no error propogation, provides authentication and integrity
+                - disadvantages: cannot be run in parallel
         - Examples of symmetric algorithms: Twofish, Serpent, AES (Rijndael), Camellia, Salsa20, ChaCha20, Blowfish, CAST5, Kuznyechik, RC4/5/6, DES, 3DES, Skipjack, Safer, and IDEA
     - **Asymmetric** encryption: process that uses different keys for encryption and decryption, and in which the decryption key is computationally not possible to determine given the encryption key itself
         - Asymmetric (AKA public key, since one key of a pair is available to anybody) algorithms provide convenient key exchange mechanisms and are scalable to very large numbers of users (addressing the two most significant challenges for users of symmetric cryptosystems) 
@@ -480,7 +495,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
                 - revocation: permanently revoked
                 - expiration
                 - destruction
-            - See NIST 800-57, Part 1
+            - See [NIST 800-57, Part 1](https://csrc.nist.rip/projects/key-management/key-management-guidelines)
 - 3.6.5 Digital signatures and digital certificates
     - **Digital signatures**: provide proof that a message originated from a particular user of a cryptosystem, and ensures that the message was not modified while in transit between two parties
         - Digital signatures rely on a combination of two major concepts — public key cryptography, and hashing functions 
@@ -489,7 +504,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - Digital signature process does not provide confidentiality in and of itself (only ensures integrity, authentication, and nonrepudiation)
         - To digitally sign a message, first use a hashing function to generate a message digest; then encrypt the digest with your private key
         - To verify a digital signature, decrypt the signature with the sender's public key and compare the message digest to the one you generate yourself: if they match, the message is authentic
-    - FIPS 186-4 specifies three techniques for the generation and verification of digital signatures that can be used for the protection of data: the Rivest-Shamir-Adleman Algorithm (RSA), the Digital Signature Algorithm (DSA), and the Elliptic Curve Digital Signature Algorithm (ECDSA)
+    - [FIPS 186-5](https://csrc.nist.gov/pubs/fips/186-5/final) specifies four techniques for the generation and verification of digital signatures that can be used for the protection of data: the Digital Signature Algorithm (DSA), the Rivest-Shamir-Adleman Algorithm (RSA), the Elliptic Curve Digital Signature Algorithm (ECDSA), and the Edwards-curve Digital Signature Algorithm (EdDSA)
 - 3.6.6 Digital Non-repudiation
     - Here non-repudiation refers to methods ensuring certainty about data origins; in general, the inability to deny
     - Non-repudiation of origin: sender cannot deny having sent a particular message
@@ -522,15 +537,17 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 - 3.7.2 Ciphertext only
     - **Ciphertext only**: an attack where you only have the encrypted ciphertext message at your disposal (not the plaintext)
         - if you have enough ciphertext samples, the idea is that you can decrypt the target ciphertext based on the samples
-        - one technique that proves helpful against simple ciphers is frequency analysis (counting the number of times each letter appears in the ciphertext) -- see below
+        - frequency analysis is a technique that is helpful against simple ciphers (see below)
 - 3.7.3 Known plaintext
     - **Known plaintext**: in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes
+    - **Linear cryptanalysis**: a known plaintext attack, in which the attacker studies probabilistic linear relations referred to as linear approximations among parity bits of the plaintext, the Ciphertext and the hidden key
 - 3.7.4 Frequency analysis
     - **Frequency analysis**: an attack where the characteristics of a language are used to defeat substitution ciphers
         - for example in English, the letter "E" is the most common, so the most common letter in an encrypted cyphertext could be a substitution for "E"
         - other examples might include letters that appear twice in sequence, as well as the most common words used in a language 
 - 3.7.5 Chosen ciphertext
-    - **Chosen ciphertext**: in a chosen ciphertext attack, the attacker has access to one or more ciphertexts and their plaintexts; i.e. the attacker has the ability to decrypt chosen portions of the ciphertext message, and use the decrypted portion to discover the key
+    - **Chosen ciphertext**: in a chosen ciphertext attack, the attacker has access to one or more plaintexts of arbitrary ciphertexts; i.e. the attacker has the ability to decrypt chosen portions of the ciphertext message, and use the decrypted portion to discover the key
+    - **Chosen-plaintext attack (CPA)**: an attack model for cryptanalysis which presumes that the attacker can obtain the ciphertexts for arbitrary plaintexts, with the goal to gain information that reduces the security of the encryption scheme; a CPA is more powerful than a known plaintext attack; however a chosen-plaintext is less powerful than a chosen ciphertext
     - **Differential cryptanalysis**: a type of chosen plaintext attack, and a general form of cryptanalysis applicable primarily to block ciphers, but also to stream ciphers and cryptographic hash functions; in the broadest sense, it is the study of how differences in information input can affect the resultant difference at the output; advanced methods such as differential cryptanalysis are types of chosen plaintext attacks
         - as an example, an attacker may try to get the receiver to decrypt modified ciphertext, looking for that modification to cause a predictable change to the plaintext
 - 3.7.6 Implementation attacks
