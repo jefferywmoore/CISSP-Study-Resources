@@ -71,9 +71,16 @@
  
 [1.3](#1.3) Evaluate and apply security governance principles (OSG-9 Chpt 1)
  
-- **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org 
+- **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies  align with business goals, and that they are comprehensive and consistent across the organization
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
-  - There are numerous security frameworks and governance guidelines, including the National Institute of Standards and Technology (NIST) SP 800-53 and SP 800-100
+  - There are numerous security frameworks and governance guidelines providing a structured approach to security governance: 
+    - [ISO/IEC 27001](https://www.iso.org/standard/27001): a widely recognized international standard for information security management systsems (ISMS); it provides a risk-based approach, and emphasizes coontinual improvement of the ISMS
+    - [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework): built around six core functions: govern, identify, protect, detect, respond, and recover to provide guidance to industry, government agencies, and other orgs to manage cybersecurity risks
+    - [SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final): a comprehensive set or catelog of security and privacy controls across multiple security domains, covering areas such as risk management, access control, incident response, and system maintenance
+    - [SP 800-100](https://csrc.nist.gov/pubs/sp/800/100/r1/iprd): Titled Information Security Handbook: a guide for managers, NIST hasn't released an update since 2006, although they appear to have an update in progress
+    - **COBIT (Control Objectives for Information and Related Technologies)**: COBIT focuses enterprise IT, aligning IT and business strategies, and providing a comprehensive framework for managing risks (see additional below)
+    - **CIS Critical Security Controls**: the CIS (Center for Internet Security) Critical Security Controls provides a prioritize set of actions to defend against threats; it focuses on practical steps to reduce the attack surface, like implementing secure configurations, managing admin privileges, and monitoring logs
+    - **ITIL (Information Technology Infrastructure Library)**: ITIL is a set of practices for IT service management (ITSM) that focuses on aligning IT services with business needs; it includes elements of security governance, particularly in managing security incidents, changes, and service continuity, and is often integrated with other frameworks like ISO 27001
 - **The security function**: the aspect of operating a business that focuses on the task of evaluating and improving security over time 
   - To manage security, an org must implement proper and sufficient security governance
   - The act of performing a risk assessment to drive the security policy is the clearest and most direct example of management of the security function
@@ -81,7 +88,7 @@
 - 1.3.1 Alignment of security function to business strategy, goals, mission, and objectives
   - **Security Management Planning**: ensures proper creation/implementation/enforcment of a security policy, and alignment with org strategy, goals, mission, and objectives; security management is based on three types of plans: strategic, tactical, and operational
   - **Strategic Plan**: a strategic plan is a long-term plan (useful for 5 years); it defines the org's security purpose 
-    - A strategic plan should include risk assessment
+    - A strategic plan should include a risk assessment
   - **Tactical Plan**: mid-term plan (1 year or less) developed to provide more details on accomplishing the goals set forth in the strategic plan
   - **Operational Plan**: a short-term, highly detailed plan based on strategic or tactical plans 
     - Strategy, goals, missions,and objectives — support each other in a heirarchy
@@ -108,7 +115,7 @@
   - Auditor: responsible for reviewing and verifying that the security policy is properly implemented
 - 1.3.4 Security control frameworks
   - A **security control framework**: outlines the org's approach to security, including a list of specific security processes, procedures, and solutions used; it is important in planning the structure of an org's security solution; many frameworks to choose from, such as:
-    -  **Control Objectives for Information and Related Technology (COBIT)** ("moderately referenced" on the exam)
+    -  COBIT Control Objectives for Information and Related Technology ("moderately referenced" on the exam):
         - COBIT is a documented set of best IT security practices by ISACA; a "security concept infrastructure" used to organize the complex security solutions of companies
         - COBIT is commonly used as an audit framework for orgs
         - Six key principles:
@@ -313,10 +320,15 @@
 - The overall goal of BCP is to provide a quick, calm, and efficient response in the event of an emergency and to enhance a company's ability to quickly recover from a distruptive event
 
 - 1.8.2 Develop and document the scope and the plan
-  - The BCP process has four main steps (Project scope and planning, Business Impact Analysis, Continuity planning, and Approval and implementation):
-    - **Project scope and planning**: Developing the project scope and plan starts with gaining support of the management team, making a business case (cost/benefit analysis, regulatory or compliance reasons etc.) and gaining approval to move forward. 
+  - The BCP process has four main steps:
+    1. Project scope and planning
+    2. Business Impact Analysis
+    3. Continuity planning
+    4. Approval and implementation
+    
+    - **Project scope and planning**: Developing the project scope and plan starts with gaining support of the management team, making a business case (cost/benefit analysis, regulatory or compliance reasons etc.) and gaining approval to move forward
       - Next, you need to form a team with representatives from the business as well as IT
-      - Next, start with a business continuity policy statement, then conduct a business impact analysis (see next item), and then develop the remaining components: 
+      - Next, start with a business continuity policy statement,conduct a business impact analysis (see next item), and then develop the remaining components: 
         - preventive controls
         - relocation
         - the actual continuity plan 
@@ -333,7 +345,7 @@
       - As part of the BIA, establish:
         - **recovery time objectives (RTO)**: how long it takes to recover
         - **recovery point objectives (RPO)**: the maximum tolerable data loss
-        - **maximum tolerable downtime (MTD)**: how long an org can survive an interruption of critical functions 
+        - **maximum tolerable downtime (MTD)**: (AKA maximum allowable downtime or MAD) how long an org can survive an interruption of critical functions 
         - along with the costs of downtime and recovery
     - **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that need to be protected against interruption
       - The next phase of BCP development, continuity planning, focuses on the development and implementation of a continuity strategy to minimize the impact realized risks might have on protected assets

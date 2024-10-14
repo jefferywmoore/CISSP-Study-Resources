@@ -21,6 +21,9 @@
 - **Information Sharing and Analysis Center (ISAC)**: entity or collab created for the purposes of analyzing critical cyber and related info to better understand security problems and interdependencies to ensure CIA
 - **Log**: record of actions/events that have taken place on a system
 - **Motion detector types**: wave pattern motion detectors transmit ultrasonic or microwave signals into the montored area watching for changes in the returned signals bouncing off objects; infrared heat-based detectors watch for unusual heat patters; capacitance detectors work based on electromagnetic fields
+- **MTBF**: mean time between failure is an estimation of time between the first and any subsequent failures
+- **MTTF**: mean time to failure is the expected typical functional lifetime of the device given a specific operating enviornment
+- **MTTR**: mean time to repair is the average length of time required to perform a repair on the device
 - **Netflow**: data that contains info on the source, destination, and size of all network communications and is routinely saved as a matter of normal activity
 - **Precursor**: signal from events suggesting a possible change of conditions, that may alter the current threat landscape
 - **Regression testing**: testing of a system to ascertain whether recently approved modifications have changed its performance, or if other approved functions have introduced unauthorized behaviors
@@ -29,7 +32,12 @@
 - **Sampling**: one of two main methods of choosing records from a large pool for ruther analysis, sampling uses statistical techniques to choose a sample that is representative of the entire pool (also see clipping)
 - **SCCM**: System Center Configuration Manager is a Microsoft systems management software product that provides the capability to manage large groups of computers providing remote control, patch management, software distribution, operating system deployment, and hardware and software inventory
 - **Security Incident**: Any attempt to undermine the security of an org or violation of a security policy is a security incident
-- **Trusted Computing Base (TCB)**: the collection of all hardware, software, and firmware components within an architecture that is specifically responsible for security and the isolation of objects that forms a trusted base; TCB is a term that is usually associated with security kernels and the reference monitor; a trusted base enforces the security policy; a security perimeter is the imaginary boundary that separates the TCB from the rest of the system; TCB comonents communicate with non-TCB components using trusted paths
+- **Trusted Computing Base (TCB)**: the collection of all hardware, software, and firmware components within an architecture that is specifically responsible for security and the isolation of objects that forms a trusted base
+    - TCB is a term that is usually associated with security kernels and the reference monitor
+    - a trusted base enforces the security policy
+    - a security perimeter is the imaginary boundary that separates the TCB from the rest of the system; TCB comonents communicate with non-TCB components using trusted paths
+    - the reference monitor is the logical part of the TCB that confirms whether a subject has the right to use a resource prior to granting access;
+    - the security kernel is the collection of the TCB components that implement the functionality of the reference monitor
 - **View-Based access controls**: access control that allows the database to be logically divided into components like records, fields, or groups allowing sensitive data to be hidden from non-authorized users; admins can set up views by user type, allowing only access to assigned views
 
 [7.1](#7.1) Understand and comply with investigations (OSG-9 Chpt 19)
@@ -157,7 +165,7 @@
 - 7.2.1 Intrusion detection and prevention
     - **Intrusion**: a security event, or a combination of multiple security events that constitutes an incident; occurs when an attacker attempts to bypass or can bypass or thwart security mechanisms and access an organization’s resources without the authority to do so
     - **Intrusion detection**: a specific form of monitoring events, usually in real time, to detect abnormal activity indicating a potential incident or intrusion
-    - **Intrusion Detection System (IDS)**: a security service that monitors and analyzes network or system events for the purpose of finding/providing realtime/neartime warnings of unauthorized attempts to access system resources; automates the inspection of logs and real-time system events to detect intrusion attempts and system failures
+    - **Intrusion Detection System (IDS)**: (AKA burglar alarms) is a security service that monitors and analyzes network or system events for the purpose of finding/providing realtime/neartime warnings of unauthorized attempts to access system resources; automates the inspection of logs and real-time system events to detect intrusion attempts and system failures
         - an IDS is intended as part of a defense-in-depth security plan
     - **Intrusion Prevention Systems (IPS)**: a security service that uses available info to determine if an attack is underway, alerting and also blocking attacks from reaching intended target; includes detection capabilities, you’ll also see them referred to as intrusion detection and prevention systems (IDPSs)
     - NIST SP 800-94 Guide to Intrusion Detection and Prevention Systems provides comprehensive coverage of both IDS and IPS
@@ -407,7 +415,7 @@
         - intrusion prevention systems
 - A detective control is deployed to discover or detect unwanted or unauthorized activity; detective controls operate after the fact
     - Examples:
-        - security guards
+        - security guards, guard dogs
         - motion detectors
         - recording and reviewing of events captured by security cameras
         - job rotation policies
@@ -449,7 +457,6 @@
         - an IPS includes all the capabilities of an IDS but can also take additional steps to stop or prevent intrusions
     - IDS/IPS should be deployed at strategic network locations to monitor traffic, such as at the perimeters, or between network segments, and should be configured to alert for specific types of scans and traffic patterns
     - See NIST SP 800-94
-
 - 7.7.3 Whitelisting/blacklisting
     - Method used to control which applications run and which applications can’t is allow list and deny list (AKA whitelists and blacklists)
     - **Allow list**:: identifies a list of apps authorized to run on a system and blocks all other apps
@@ -477,23 +484,23 @@
         - following the principle of least privilege, ensuring users do not have admin permissions on systems won’t be able to install apps that may be malicious
     
     - These are the characteristics of each malware type:
-        - virus: software written with the intent/capability to copy and disperse itself without direct owner knowledge/cooperation; the defining characteristic is that it's a piece of malware that has to be triggered in some way by the user; program that modifies other programs to contain a possibly altered version of itself
-        - worm: software written with the intent/capability to copy and disperse without owner knowledge/cooperation, but without needing to modify other programs to contain compies of itself; malware that can self-propagate and spread through a network or a series of systems on its own by exploiting a vulnerability in those systems
-        - companion: helper software -- it's not malicious on its own; it could be something like a wrapper that accompanies the actual malware
-        - macro: associated with Microsoft Office products, and is created using a straightforward programming language to automate tasks; macros can be programmed to be malicious and harmful
-        - multipartite: means the malware spreads in different ways; (e.g. Stuxnet)
-        - polymorphic: malware that can change aspects of itself as it replicates to evade detection (e.g. file name, file size, code structure etc)
-        - trojan: A Trojan horse is malware that looks harmless or desirable but contains malicious code; trojans are often found in easily downloadable software; a trojan inserts backdoors or trapdoors into other programs or systems
-        - bot: an emerging class of mobile code; employing limited machine learning capabilities to assist with user requests for help or assistance, automation of or assistance with workflows, data input quality validation etc
-        - botnet: many infected systems that have been harnessed together and act in unison
-        - boot sector infectors: pieces of malware that can install themselves in the boot sector of a drive
-        - hoaxes/pranks: not actually software, they're usually part of social engineering—via email or other means—that intends harm (hoaxes) or a joke (pranks)
-        - logic bomb: malware inserted into a program which will activate and perform functions suiting the attacker at some later date/conditions are met; code that will execute based on some triggering event
-        - stealth: malware that uses various active techniques to avoid detection
-        - ransome attack: any form of attack which threatens the destruction, denial or unauthorized public release/remarketing of private infomation assets; usually involves encrypting assets and withholding the decryption key until a ransom is paid
-        - ransomware: type of malware that typically encrypts a system or a network of systems, effectively locking users out, and then demands a ransom payment (usually in the form of a digital currency) to gain access to the decryption key
-        - rootkit: Similar to stealth malware, a rootkit attempts to mask its presence on a system; typically includes a collection of malware tools that an attacker can utilize according to specific goals
-        - zero-day: is any type of malware that's never been seen in the wild before, and the vendor of the impacted product is unaware (or hasn't issued a patch), as are security companies that create anti-malware software intended to protect systems; previously unreported vuln which can be potentially exploited without risk of detection or prevention until system owner/developer detects and corrects vuln; gets name from the "zero time" being the time at which the exploit or vuln is first identified by the systems' owners or builders; AKA zero-hour exploit, zero-day attack
+        - **virus**: software written with the intent/capability to copy and disperse itself without direct owner knowledge/cooperation; the defining characteristic is that it's a piece of malware that has to be triggered in some way by the user; program that modifies other programs to contain a possibly altered version of itself
+        - **worm**: software written with the intent/capability to copy and disperse without owner knowledge/cooperation, but without needing to modify other programs to contain copies of itself; malware that can self-propagate and spread through a network or a series of systems on its own by exploiting a vulnerability in those systems
+        - **companion**: helper software that is not malicious on its own; it could be something like a wrapper that accompanies the actual malware
+        - **macro**: associated with Microsoft Office products, and is created using a straightforward programming language to automate tasks; macros can be programmed to be malicious and harmful
+        - **multipartite**: means the malware spreads in different ways (e.g. Stuxnet)
+        - **polymorphic**: malware that can change aspects of itself as it replicates to evade detection (e.g. file name, file size, code structure etc)
+        - **trojan**: a Trojan horse is malware that looks harmless or desirable but contains malicious code; trojans are often found in easily downloadable software; a trojan inserts backdoors or trapdoors into other programs or systems
+        - **bot**: an emerging class of mobile code; employing limited machine learning capabilities to assist with user requests for help or assistance, automation of or assistance with workflows, data input quality validation etc.
+        - **botnet**: many infected systems that have been harnessed together and act in unison
+        - **boot sector infectors**: pieces of malware that can install themselves in the boot sector of a drive
+        - **hoaxes/pranks**: not actually software, they're usually part of social engineering—via email or other means—that intends harm (hoaxes) or a joke (pranks)
+        - **logic bomb**: malware inserted into a program which will activate and perform functions suiting the attacker when some later date/conditions are met; code that will execute based on some triggering event
+        - **stealth**: malware that uses various active techniques to avoid detection
+        - **ransome attack**: any form of attack which threatens the destruction, denial or unauthorized public release/remarketing of private infomation assets; usually involves encrypting assets and withholding the decryption key until a ransom is paid
+        - **ransomware**: type of malware that typically encrypts a system or a network of systems, effectively locking users out, and then demands a ransom payment (usually in the form of a digital currency) to gain access to the decryption key
+        - **rootkit**: Similar to stealth malware, a rootkit attempts to mask its presence on a system; malware that embeds itself deeply in an OS; term is derived from the concept of rooting and a utility kit of hacking tools; rooting is gaining total or full control over a system; typically includes a collection of malware tools that an attacker can utilize according to specific goals
+        - **zero-day**: is any type of malware that's never been seen in the wild before, and the vendor of the impacted product is unaware (or hasn't issued a patch), as are security companies that create anti-malware software intended to protect systems; previously unreported vuln which can be potentially exploited without risk of detection or prevention until system owner/developer detects and corrects vuln; gets name from the "zero time" being the time at which the exploit or vuln is first identified by the systems' owners or builders; AKA zero-hour exploit, zero-day attack
 
 - 7.7.8 Machine learning and Artificial Intelligence (AI) based tools
     - **AI**: gives machines the ability to do things that a human can do better or allows a machine to perform tasks that we previously thought required human intelligence
@@ -812,14 +819,16 @@
     - **Security bollards**: a key element of physical security, which prevent vehicles from ramming access points and entrances
     - **Barricades**: in addition to fencing, are used to control both foot traffic and vehicles
     - Lighting is the most commonly used form of perimeter security control providing the security benefit of deterrence (primary purpose is to discourage casual intruders, trespassers etc)
+    - Security guards are able to adapt and react to considtions and situations; guard dogs can be an alternative for perimiter control, functioning as detection and deterrent
     - All physical security controls ultimately rely on personnel to intervene and stop actual intrusions and attacks
+    - KPIs (kep performance indicators) of physical security are metrics or measurements of the operation of or failure of key security aspects; they should be monitored, recorded, and evaluated
 - 7.14.2 Internal security controls
     - In all circumstances and under all conditions, the most important aspect of security is protecting people
+    - Internal security controls include locks, badges, protective distribution systems (PDSs), motion detectors, intrusion alarms, and secondary verification systems
     - If a facility is designed with restricted areas to control physical security, a mechanism to handle visitors is required
     - **Visitor logs**: manual (or automated) list of nonemployee entries or access to a facility/location
         - physical access logs can establish context for interpretation of logical logs
-    - Locks: designed to prevent access without proper authorization; a lock is a crude form of an identification and authorization mechanism
-
+    - Locks: designed to prevent access without proper authorization; a lock is a crude form of an identification and authorization mechanism 
 [7.15](#7.15) Address personnel safety and security concerns (OSG-9 Chpt 16)
 - 7.15.1 Travel
     - Training personnel on safe practices while traveling can increase their safety and prevent security incidents:

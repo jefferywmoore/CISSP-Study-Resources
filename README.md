@@ -53,22 +53,28 @@ Test Process:
 - You can pass and complete or fail in first 100 questions. If you go beyond 100, you are somewhere in between.
 
 ## Reference Material
-- As mentioned above, the Certified Information Systems Security Professional, [Official Study Guide (10th edition) and Practice Tests](https://amzn.to/3WpNWKM) - is a great study base line, with 100 questions for each of the 8 domains & more than 1300 questions total.
-- [CISSP All-in-One Exam Guide](https://amzn.to/3AraOCd) (currently Ninth Edition is available, from May, 2023) - I've found the book valuable, as it reinforces core concepts, and provides additional clear explanations to supplement the OSG.
-- This course has been highly recommended by several people: [CISSP Overview by Kelly Handerhan](https://app.cybrary.it/immersive/12270505/activity/61891)
-- Thor Teaches:
-  - [Thor Teaches CISSP Study Bundles](https://thorteaches.com/cissp/)
-  - [Daily CISSP Questions](https://thorteaches.com/free-daily-cissp-questions/)
-- [Destination Certification MindMap videos](https://www.youtube.com/playlist?list=PLZKdGEfEyJhLd-pJhAD7dNbJyUgpqI4pu): I have seen a lot of positive comments on these mind map videos being extremely helpful for intro, summary, and connecting key topics.
-- I've found the [LearnzApp](https://www.learnzapp.com/apps/cissp/) to be useful, with study questions, flashcards, and practice tests (note that you'll need a subscription to take advantage of most of these features).
-- [Understand Bloom's Taxonomy](https://www.bloomstaxonomy.net/): a framework used by educators and exam creators to guide learning or exam objectives. Cross-reference words used in the exam objectives with the framework to understand the specific meaning, and to guide the level of study required to master.
-- Practice tests:
+- Books:
+  - As mentioned above, the Certified Information Systems Security Professional, [Official Study Guide (10th edition) and Practice Tests](https://amzn.to/3WpNWKM):is a great study base line, with 100 questions for each of the 8 domains & more than 1300 questions total.
+  - [CISSP All-in-One Exam Guide](https://amzn.to/3AraOCd): (currently Ninth Edition is available, from May, 2023) - I've found the book valuable, as it reinforces core concepts, and provides additional clear explanations to supplement the OSG.
+   - [11th Hour CISSP:Study Guide, 3rd Edition](https://amzn.to/3Bkz4Xf): this book is a bit older, but it's compact, and prep'd "for ease of last-minute studying."
+- Courses:
+  - This course has been highly recommended by several people: [CISSP Overview by Kelly Handerhan](https://app.cybrary.it/immersive/12270505/activity/61891)
+  - Thor Teaches:
+    - [Thor Teaches CISSP Study Bundles](https://thorteaches.com/cissp/)
+    - [Daily CISSP Questions](https://thorteaches.com/free-daily-cissp-questions/)
+- Videos:
+  - [Destination Certification MindMap videos](https://www.youtube.com/playlist?list=PLZKdGEfEyJhLd-pJhAD7dNbJyUgpqI4pu): I have seen a lot of positive comments on these mind map videos being extremely helpful for intro, summary, and connecting key topics.
+- Mobile Apps:
+  - I've found the [LearnzApp](https://www.learnzapp.com/apps/cissp/): to be useful, with study questions, flashcards, and practice tests (note that you'll need a subscription to take advantage of most of these features).
+- Practice Tests:
   - OSG and All-in-One Exam Guide practice tests: once you've traversed the OSG material, these tests are a good baseline.
   - [CISSP Exam Prep](https://cissprep.net/): users have commented on the "tricky questions" in this test bank; that might be a distraction or conversely force you to pay closer attention, depending on your POV; note that you'll need a subscription ($24.99 for 6 months).
   - [CertPreps](https://certpreps.com/cissp/): user comments range from "very realistic" to "will make you worry unnecessarily." Many questions focus on identifying the "most" significant/effecive strategy/benefit, or "highest" priority.
   - [CCCure](https://cccure.education/certification/certificate-detail/isc2-cissp-latest-cbk-2024): freepracticetests.org redirects to CCCure, which requires a subscription (from single-user 1 month @ $59.99 to 12 months @ $149.99). I took a practice test and found it underwhelming, but your mileage may vary.
-
-- Head over to the [Certstation](https://discord.gg/certstation) for support and communion with fellow travelers.
+- General & Communities:
+  - [Understand Bloom's Taxonomy](https://www.bloomstaxonomy.net/): a framework used by educators and exam creators to guide learning or exam objectives. Cross-reference words used in the exam objectives with the framework to understand the specific meaning, and to guide the level of study required to master.
+  - [CISSP Study Group](https://www.skool.com/cissp): this is a great place to share resources, get advice, and connect with peers studying cybersecurity.
+  - Head over to the [Certstation](https://discord.gg/certstation) for support and communion with fellow travelers.
 
 Note: these are the notes and resources I've found helpful in my study so far. You are advised to do your own analysis to determine what will be helpful to you in your study. There are no guarantees, implied or othewise that these notes are complete or will meet your needs to pass the CISSP certification. 
 

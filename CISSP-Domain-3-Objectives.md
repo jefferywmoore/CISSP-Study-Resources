@@ -16,11 +16,13 @@ You may find this domain to be more technical than others, and if you have exper
 - **Cryptography**: study of/application of methods to secure the meaning and content of messages, files etc by disguise, obscuration, or other transformations
 - **Cryptosystem**: complete set of hardware, software, communications elements and procedures that allow parties to communicate, store or use info protected by cryptographic means; includes algroithm, key, and key management functions
 - **Cryptovariables(s)**: parameters associated with a particular cryptogrphic algorithm; e.g. block size, key length and number of iterations
+- **Cyber-physical systems**: systems that use 'computational means' to control physical devices
 - **Decoding**: the reverse process from encoding, converting the encoded message back to plaintext format
 - **Decryption**: the reverse process from encryption
 - **Elliptic-curve cryptography (ECC)**: a newer mainstream algorithm, is normally 256 bits in length (a 256-bit ECC key is equivalent to a 3072-bit RSA key), making it securer and able to offer stronger anti-attack capabilities
 - **Encoding**: action of changing a message or set of info into another format through the use of code; unlike encryption, encoded info can still be read by anyone with knowledge of the encoding process
 - **Encryption**: process and act of converting the message from plaintext to ciphertext (AKA enciphering)
+- **Fog computing**: advanced computational architecture often used as an element in IIoT; fog computing relies on sensors, IoT devices, or edge computing devices to collect data, then transfers it back to a central location for processing (centralizing processing and intelligence)
 - **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the ciphertext as a way of reducing the search space
 - **Hybrid encryption system**: a system that uses both symmetric and asymmetric encryption
 - **Key**: the input that controls the operation of the cryptographic algorthm, determining the behavior of the algorithm and permits the reliable encyrption and decryption of the message
@@ -30,12 +32,19 @@ You may find this domain to be more technical than others, and if you have exper
 - **Key recovery**: process of reconstructing an encryption key from the cyphertext alone; if there is a workable key recovery system, it means the algorithm is not secure
 - **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password; keyspace = 2 to the power of the number of bits, so 4 bits = 16 keys, 8 bits = 256 keys
 - **Meet-in-the-middle**: attack that uses a known plaintext message and both encryption of the plaintext and decryption of the ciphertext simultaneously in a brute-force manner to identify the encryption key; 2DES is vulnerable to this attack
+- **Microcontroller**: similar to system on a chip (SoC), consists of a CPU, memory, IO devices, and non-volatile storage (e.g. flash or ROM/PROM/EEPROM); think Raspberry Pi or Arduino
+- Mobile device deployment models that cover allowing or providing mobile devices for employees include: BYOD, COPE, CYOD, and COMS/COBO; also consider VDI and VMI options; 
+- Mobile device deployment policies should address things like data ownership, support ownership, patch and update management, security product management, forensics, privacy, on/offboarding, adherence to corporate policies, user acceptance, legal concerns, acceptable use policies, camera/video, microphone, Wi-Fi Direct, tethering and hotspots, contactless payment methods, and infrastructure considerations
 - **Multistate systems**: certified to handle data from different security classifications simultaneously
 - **One-time pad**: series of randomly generated symmetric encryption keys, each one to be used only once by the sender and recipient; to be successful, the key must be generated randomly without any known pattern; the key must be at least as long as the message to be encrypted; the pads must be protected against physical disclosure and each pad must be used only one time, then discarded
 - **Out-of-band**: transmitting or sharing control information (e.g. encryption keys and crypto variables) by means of a separate and distinct communications path, channel, or system
+- **Personal electronic device (PED)** security features can usually be managed using mobile device management (MDM) or unified endpoint management (UEM) solutions, including device authentication, full-device encryption, communication protection, remote wiping, communication protection, device lockout, screen locks, GPS and location services, content management, app control, push notification management, third-party app store control, rooting/jailbreaking, credential management and more
 - **Plaintext**: message or data in its readable form, not turned into a secret
+- **RTOS**: real-time operating system (RTOS) is an operating system specifically designed to manage hardware resources and run applications with precise timing and high reliability; they are designed to process data with minimum latency; an RTOS is often stored on ROM; they use deterministic timing, meaning tasks are completed within a defined time frame and is designed to operate in a hard (i.e. missing a deadline can cause system failure) or soft (missing a deadline degrades performance but is not catastrophic) real-tme condition
 - **Salting vs key stretching**: salting adds randomness and uniqueness to each password before hashing, which reduces the effectiveness of rainbow table attacks; key stretching makes the hashing process deliberately slow, making it much more challenging for attackers to crack passwords using brute-force or precomputed tables; common password hashing algorithms that use key stretching include PBKDF2, bcrypt, and scrypt
+- **SDx**: software-defined everything refers to replacing hardware with software using virtualization; includes virtualization, virtualized software, virtual networking, containerization, serverless architecture, IaC, SDN, VSAN, software-defined storage (SDS), VDI, VMI SDV, and software-defined data center (SDDC)
 - **Session key**: a symmetric encryption key generated for one-time use; usually requires a key encapsulation approach to eliminate key management issues
+- **Static Environments**: apps, OSs, hardware, or networks that are created/configured to meet a particular need or function are set to remain unaltered; static environments, embedded systems, network-enabled devices, edge, fog, and mobile devices need security management that may include network segmentation, security layers, app firewalls, manual updates, firmware version control, wrappers, and control redundancy/diversity
 - **Stream mode encryption**: system using a process that treats the input plaintext as a continuous flow of symbols, encrypting one symbol at a time; usually uses a streaming key, using part of the key as a one-time key for each symbol's encryption
 - **Stream ciphers**: encrypt the digits (typically bytes), or letters (in substitution ciphers) of a message one at a time
 - **Substitution cipher**: encryption/decription process using subsitution
@@ -188,7 +197,7 @@ You may find this domain to be more technical than others, and if you have exper
     - **Hardware segmentation**: forces separation via physical hardware controls rather than logical processes; in this type of segmentation, the operating system maps processes to dedicated memory locations
 
 - **Virtualization**: technology used to host one or more operating systems within the memory of a single host, or to run applications that are not compatible with the host OS; the goal is to protect the hypervisor and ensure that compromising one VM doesn't affect others on that host
-
+- **Virtual Software**: software that is deployed in a way that acts as if it is interacting with a full host OS; virutalized app is isolated from the host OS so it cna't make direct/permanent changes to the host OS
 - **Trusted Platform Module (TPM)**: a cryptographic chip that is sometimes included with a client computer or server; a TPM enhances the capabilities of a computer by offering hardware-based cryptographic operations
     - TPM is a tamper-resistant integrated circuit built into some motherboards that can perform cryptographic operations (including key gen) and protect small amoutns of sensitive info, like passwords and cryptographic keys
     - Many security products and encryption solutions require a TPM
@@ -317,7 +326,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
             - closely aligned with microservices is the concept of shifting left, or addressing security earlier in the SDLC; also integrating it into the CI/CD pipeline 
             - consider the software supplychain or dependencies of libries used, when addressing updates and patching
 - 3.5.10 Containerization
-    - **Containerization**: AKA OS virtualization, is based on the concept of eliminating the duplication of OS elements in a virtual machine; instead each app is placed into a container that includes only the actual resources needed to support the enclosed app, and the common or shared OS elements are then part of the hypervisor
+    - **Containerization**: AKA OS virtualization, is based on the concept of eliminating the duplication of OS elements in a virtual machine; instead each app is placed into a container that includes only the actual resources needed to support the app, and the common or shared OS elements are used from the hypervisor
         - Containerization is able to provide 10 to 100 x more application density per physical server compared to traditional virtualization
         - Vendors often have security benchmarks and hardening guidelines to follow to enhance container security
         - Securing containers: 
@@ -328,7 +337,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
             - harden container deployment including the OS of the underlying host, using firewalls, and VPC rules, and use limited access accounts
             - reduce the attack surface by minimizing the number of components in each container, and update and scan them frequently 
 - 3.5.11 Serverless
-    - **Serverless architecture** (AKA **function as a service (FaaS)**): a cloud computing concept where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the CSP
+    - **Serverless architecture** (AKA **function as a service (FaaS)**): cloud computing where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the CSP
         - Applications developed on serverless architecture are similar to microservices, and each function is created to operate independently and automonomously
         - A serverless model, as in other CSP models, is a shared security model,and your org and the CSP share security responsibility
 
@@ -352,7 +361,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
             - deploy head nodes and route all outside traffic through them, isolating parts of a system 
             - "fingerprint" HPC systems to understand use, and detect anomalous behavior
 - 3.5.14 Edge computing systems
-    - **Edge computing**: philosophy of network design where data and compute resources are located as close as possible, at or near the network edge, to optimize bandwidth use while minimizing latency
+    - **Edge computing**: philosophy of network design where data and compute resources are located as close as possible, at or near the network edge, to optimize bandwidth use while minimizing latency; intelligence and processing are contained within each device, and each device can process it's own data locally
         - Securing edge computing:
             - this technology creates additional network edges that result in increased levels of complexity
             - visibility, control, and correlation requires a Zero Trust access-based approach to address security on the LAN edge, WAN edge and cloud edge, as well as network management
@@ -593,14 +602,20 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 [3.8](#3.8) Apply security principles to site and facility design (OSG-9 Chpt 10)
 
-- **Secure facility plan**: outlines the security needs of your organization and emphasizes methods or mechanisms to employ to provide security, developed through risk assessment and critical path analysis
-    - **critical path analysis (CPA)**: a systematic effort to identify relationships between mission-critical applications, processes, and operations and all the necessary supporting components
-    - During CPA, evaluate potential **technology convergence**: the tendency for various technologies, solutions, utilities, and systems to evolve and merge over time, which can result in a single point of failure
+- **Secure facility plan**: outlines the security needs of your org and emphasizes methods or mechanisms to employ to provide security, developed through risk assessment and critical path analysis
+    - **critical path analysis (CPA)**: a systematic effort to identify relationships between mission-critical apps, processes, and operations and all the necessary supporting components
+    - During CPA, evaluate potential **technology convergence**: the tendency for various technologies, solutions, utilities, and systems to evolve and merge over time, which can result in a single point of failure and a more valuable target
     - A secure facility plan is based on a layered defense model
-    - Site selection should take into account cost, location, and size (but security should always take precedence), that the building can withstand local extreme weather events, vulnerable entry points, and exterior objects that could conceal break-ins
+    - Site selection should take into account cost, location, and size (but security should always take precedence), that the building can withstand local extreme weather events, vulnerable entry points, and exterior objects that could conceal break-in; 
+        - Key elements of site selection:
+            - visibility
+            - composition of the surrounding area
+            - area accessibility
+
 - Facility Design: 
     - The top priority of security should always be the protection of the life and safety of personnel
     - In the US, follow the guidelines and requirements from Occupational Safety and Health Administration (OSHA), and Environmental Protection Agency (EPA)
+    - A key element in designing a facility for construction is understanding the level required by your org and planning for it before beginning construction
     -  **Crime Prevention Through Environmental Design (CPTED)**: a well-established school of thought on "secure architecture" - an archiectural approach to building and space design that emphasizes passive features to reduce the likelihood of criminal activity
         - core principle of CPTED is that the design of the physical environment can be managed/manipulated, and crafted with intention in order to create behavioral effects or changes in people present in those areas that result in reduction of crime as well as a reduction of the fear of crime
         - CPTED stresses three main principles:
@@ -621,6 +636,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - **Wiring closets/intermediate distribution facilities (IDF)**: A wiring closet  or IDF is typically the smallest room that holds IT
     hardware
         - wiring closet is AKA premises wire distribution room, main distribution frame (MDF), intermediate distribution frame (IDF), and telecommunications room, and it is referred to as an IDF in (ISC)^2 CISSP objective 3.9.1
+        - where networking cables for the building or a floor are conntected to equipment (e.g. patch panels, switches, routers, LAN extenders etc)
         - usually includes telephony and network devices, alarm systems, circuit breaker panels, punch-down blocks, WAPs, video/security
         - may include a small number of servers 
         - access to the wiring closest/IDF should be restricted to authorized personnel responsible for managing the IT hardware 
@@ -637,19 +653,21 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - datacenters are usually more protected than server rooms, and can include guards and mantraps
         - datacenters can be single-tenant or multitenant
 - 3.9.3 Media storage facilities
-    - **Media storage facilities**:often store backup tapes and other media, and should be protected just like a server room
+    - **Media storage facilities**:often store backup tapes/disks, blank, resuable and other media, and should be protected just like a server room
         - depending on requirements a cabinet or safe could suffice
         - new blank media, and media that is reused (e.g. thumb drives, flash memory cards, portable hard drives) should be protected against theft and data remnant recovery
+        - concerns include theft, corruption, data remnant recovery
         - other recommendations:
             - employ a media librarian or custodian
             - use check-in/check-out process for media tracking
             - run a secure drive sanitization or zeroization when media is returned
         - note: a safe is a movable secured container that's not integrated into a building's construction; a vault is a permanent safe integrated into construction
 - 3.9.4 Evidence storage
-    - **Evidence storage**: as cybercrime events continue to increase, it is import to retain logs, audit trails, and other records of digital events; the evidence storage exists to preserve chain of custody
+    - **Evidence storage**: as cybercrime events continue to increase, it is import to retain logs, audit trails, drive images, VM snapshots and other records of digital events; the evidence storage exists to preserve chain of custody
         - a key part of incident response is to gather evidence to perform root cause analysis
         - an evidence storage room should be protected like a server room or media storage facility
         - an evidence storage room can contain physical evidence (such as a smartphone) or digital evidence (such as a database)
+        - protections should include dedicated/isolated storage facilities, offline storage, activity tracking, hash management, access restrictions, and encryption
 - 3.9.5 Restricted and work area security
     - **Restricted and work area security**: covers the design and configuration of internal security, including work and visitor areas
         - includes areas that contain assets of higher value/importance which should have more restricted access
@@ -671,6 +689,10 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - Think through types of physical controls for HVAC:
         - restrict duct space continuity to controlled areas
         - use separate and redundant HVAC systems for computer equipment
+        - rooms containing primarily computers should have:
+            - temps kept at 59 to 89.6 deg Fahrenheit (15 to 32 deg Celsius)
+            - humidity should be maintained between 20 and 80 percent
+        - note that even on nonstatic carpeting, if the env has low humidity, a 20k-volt static discharge is possible; and even minimal levels of static electricity can destroy electronic equipment
     - Datacenter: 
         - should be on different power circuits from occupied areas
         - common to use a backup generator
@@ -680,6 +702,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - If water-based sprinklers are used for fire suppression, damage to electronic equipment is likely; automate the shutoff of electricity prior to sprinkler trigger
     - Other environmental issues include earthquakes, power outages, tornados and wind
     - Secondary facilities should be located far enough away from the primary to ensure they won't be damaged by the same event
+    - Water leakage and flooding should be addressed in your environmental safety policy and procedures; water and electricity together is sure to cause damange; locate server rooms and critical eqiupment away from any water source or transport pipes
 - 3.9.8 Fire prevention, detection, and suppression
     - Protecting personnel from harm should always be the most important goal of any security or protection system!
     - In addition to protecting people, fire detection and suppression is designed to keep asset damage caused by fire, smoke, heat, and suppression materials to a minimum

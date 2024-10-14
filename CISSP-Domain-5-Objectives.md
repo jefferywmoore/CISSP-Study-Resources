@@ -35,6 +35,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 [5.1](#5.1) Control physical and logical access to assets (OSG-9 Chpt 13)
 - Controlling access to assets (tangible: things you can touch, or nontangible: info and data) is a central theme of security
+- Understand that there is no security without physical security: admin, technical and logical access controls aren't effective without control over the physical env
 - In addition to personnel, assets can be information, systems, devices, facilities, or applications:
     - 5.1.1 Information: an org’s information includes all of its data, stored in simple files (on servers, computers, and small devices), or in databases
     - 5.1.2 Systems: an org’s systems include anything that provide one or more services; a web server with a database is a system; permissions assigned to user and system accounts control system access

@@ -31,7 +31,7 @@
 - **CORBA**: Common Object Request Broker Architecture is a set of standards addressing interoperability between software and hardware products, residing on different machines across a network; providing object location and use across a network
 - **Configuration Control**: process of controlling modifications to hardware, firmware, software, and documentation to protect the information system against improper modifications prior to, during, and after system implementation
 - **Configuration Management (CM)**: collection of activities focused on establishing and maintaining integrity of IT products and information systems, through the control of processes for initialization, changing and monitoring the configurations of those products and systems throughout the system development lifecycle
-- **Covert Channels/Paths**: communication pathways that violate security policy or requirement (deliberately or unwittingly)
+- **Covert Channels/Paths**: a method used to pass information over a path that is not normally used for communiction; communication pathways that violate security policy or requirement (deliberately or unwittingly); basic types are timing and storage
 - **Data Contamination**: attackers attempt to use malformed inputs, at the field, record, transaction, or file level, in an attempt to disrupt the proper functioning of the system
 - **Data Lake**: a data warehouse incorporating multiple types of streams of unstructured or semi-structured data
 - **Data Mining**: analysis and decision-making technique that relies on extracting deeper meanings from many different instances and types of data; often applied to data warehouse content
@@ -51,7 +51,7 @@
 - **Hierarchical database model**: data elements and records are arranged in tree-like parent-child structures
 - **Integrated Product and Process Development (IPPD)**: management technique that simultaneously integrates essential acquisition activities through the use of multidisciplinary teams to optimize the design, manufacturing, and supportability processes
 - **Integrated Product Team**: team of stakeholders and individuals that possess different skills and who work together to acheive a defined process or product
-- **Infrastructure as Code (IaC)**: instead of viewing hardware confi as a manual, direct hands-on, one-on-one admin hassel, it is viewed as just another collecti on of elements to be managed in the same way that software and code are managed under DevSecOps
+- **Infrastructure as Code (IaC)**: instead of viewing hardware config as a manual, direct hands-on, one-on-one admin hassel, it is viewed as just another collecti on of elements to be managed in the same way that software and code are managed under DevSecOps
 - **Interactive Application Security Testing (IAST)**: testing that combines or integrates SAST and DAST to improve testing and provide behavioral analysis capabilities to pinpoint the source of vulnerabilities
 - **Knowledge Discovery in Database (KDD)**: mathematical, statistical, and visualization method of identifying valid and useful patterns in data
 - **Knowledge Management**: efficent/effective management of info and associated resources in an enterprise to drive busienss intelligence and decision-making; may include workflow management, business process modeling, doc management, db and info systems and knowledge-based systems
