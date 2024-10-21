@@ -3,7 +3,7 @@
 - Domain 2 of the CISSP exam covers asset security making up ~10% of the test 
 - Asset security includes the concepts, principles, and standards of monitoring and securing any asset important to the organization
 - The Asset Security domain focuses on collecting, handling, and protecting information throughout its lifecycle; the first step is classifying information based on its value to the organization
-- **Anonymization**: replaces privacy data with useful but inaccurate data; the dataset can be shared,  ut anonymization removes individual identities; anonymization is permanent
+- **Anonymization**: replaces privacy data with useful but inaccurate data; the dataset can be shared, but anonymization removes individual identities; anonymization is permanent
 - **Asset**: anything of value owned by the organization
 - **Asset lifecycle**: phases an asset goes through, from creation (or collection) to destruction
 - **EPROM / UVEPROM**: erasable programmable read-only memory, is a type of programmable read-only memory (PROM) chip that retains its data when its power supply is switched off; chips my be erased with ultraviolet light
@@ -166,6 +166,7 @@
   - **Defensible destruction**: eliminating data using a controlled, legally defensible and regulatory compiant way
 
 [2.5](#2.5) Ensure appropriate asset retention (e.g. End-of-Life EOL, End-of-Support (EOS)) (OSG-9 Chpt 5)
+
 - Hardware: even if you maintain data for the appropriate retention period, it won’t do you any good if you don’t have hardware that can read the data
 - Personnel: beyond retaining data for required time periods and maintaining hardware to read the data, you need personnel who know how to operate the hardware to execute restoraton processes
 

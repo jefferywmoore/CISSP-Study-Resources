@@ -9,10 +9,15 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **APT**: Advanced Persistent Threat is an agent/org that plans, organizes, and carries out highly sophisticated attacks against a target person, org, or industry over a period of time (months or even years); usually with a strategic goal in mind
 - **API**: Application Programming Interface; code mechanisms that provide ways for apps to share data, emthods, or functions over a network (usually implemented in XML or JavaScript Object Notation (JSON))
 - **Bandwidth**: amount of information transmitted over a period of time; can be applied to moving bits over a medium, or human processes like learning or education
+- **Bluebugging**: a type of Bluetooth attack where an attacker exploits vulnerabilities in a device's Bluetooth connection to gain unauthorized access and control over it; the attacker can then use this access to listen to phone calls, read or send messages, steal data, or even manipulate the device’s settings, all without the victim's knowledge; to combat this attack, turn off Bluetooth when nont in use, set to "non-discoverable", and use strong authentication
+- **Bluejacking**: a relatively harmless Bluetooth-based attack where an attacker sends unsolicited messages to nearby Bluetooth-enabled devices, such as mobile phones, tablets, or laptops; it exploits the Bluetooth feature that allows devices to communicate over short distances (typically up to 10 meters) and works by pushing messages to any device with Bluetooth set to "discoverable" mode
+- **Bluesnarfing**: Bluesnarfing is a Bluetooth-based attack where an attacker gains unauthorized access to data on a victim's Bluetooth-enabled device; unlike Bluejacking (which only sends unsolicited messages), bluesnarfing is a serious security threat because it involves stealing or retrieving sensitive data without the user's knowledge or consent
+- **Bluesniffing**: Bluesniffing is a type of Bluetooth attack that involves eavesdropping on Bluetooth communications to intercept data being exchanged between devices; it’s a form of passive Bluetooth reconnaissance where the attacker attempts to listen in on Bluetooth signals to gather information, much like Wi-Fi sniffing attacks on wireless networks
 - **Bound networks**: AKA wired/Ethernet networks, where devices are connected by physical cables
 - **Boundary routers**: they advertise routes that external hosts can use to reach internal hosts
 - **Bridge**: device that aggregates separate network segments into a single network segment, operating at OSI layer 2
 **CAM Table Flooding**: attack where switches don't know where to send traffic; prevented by enabling switch port security
+- **Captive portal**: an authentication mechanism that redirects a newly-connected client to a web-based portal access control page
 - **CHAP**: Challenge-Handshake Authentication Protocol, used by PPP servers to authenticate remote clients; encrypts both username and password, and performs periodic session reauthentication to prevent replay attacks
 - **CSMA/CA**: Carrier Sense Multiple Access with Collission Avoidance is a method of network flow control
 - **CSMA/CD**: Carrier Sense Multiple Access with Colliion Detection is a method of network flow control, where if > 1 station accesses the network at the same time, other stations detect and re-try their transmission
@@ -26,15 +31,17 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **East/West traffic**: network traffic that is within a data, control, or application plane; within a data center or between geo dispersed locations
 - **North/South traffic**: in SDN terms, data flowing up (northbound) and down (southbound) the stack of data/control/application planes; data flowing from the organization to external distinations (northbound), or into the org from external sources (southbound)
 - **Converged protocol**: combines/converges standard protcols (such as TCP/IP) with proprietary/non-standard ones; they can complicate enterprise-wide security engineering efforts requiring specialist knowledge
-- **DNS**: Domain Name Service is three interrelated elements: a service, a physical server, and a network protocol
-    - **DNS poisoning**: act of falsifying DNS info used by clients to reach a system; can be accomplished via a rogue DNS server, pharming, altering a hosts file, corrupting IP config, DNS query spoofing, and proxy falsification; examples:
-        - HOSTS poisoning
-        - authorized DNS server attack
-        - caching DNS server attack
-        - changing a DNS server address
-        - DNS query spoofing
 - **DHCP**: Dynamic Host Configuration Protocol is an industry standard used to dynamically assign IP addresses to network devices
+- **Disassociation attack**: AKA deauthentication attack, is a type of denial-of-service (DoS) attack targeting Wi-Fi networks; it exploits the management frames used in the Wi-Fi protocol to forcibly disconnect (disassociate) a user’s device from a wireless access point (AP); these attacks can cause disruptions in network availability and can be used as part of a larger attack, such as a man-in-the-middle (MITM) attack
+- **DNS**: Domain Name Service is three interrelated elements: a service, a physical server, and a network protocol
+- **DNS poisoning**: act of falsifying DNS info used by clients to reach a system; can be accomplished via a rogue DNS server, pharming, altering a hosts file, corrupting IP config, DNS query spoofing, and proxy falsification; examples:
+    - HOSTS poisoning
+    - authorized DNS server attack
+    - caching DNS server attack
+    - changing a DNS server address
+    - DNS query spoofing
 - **Domain hijacking**: or domain theft, is the malicious action of changing the registration of a domain name without the authorization of the owner
+- **Evil twin**: a type of Wi-Fi attack where a malicious actor sets up a fake wireless access point (AP) that mimics a legitimate one, with the goal of tricking users into connecting to the rogue access point, allowing the attacker to intercept, monitor, and manipulate the victim’s network traffic, potentially capturing sensitive data such as login credentials, financial info, and personal communications
 - **FDDI**: Fiber Distributed Data Interface is an ANSI X3T9.5 LAN standard; 100Mbps, token-passing using fiber-optic, up to 2 kilometers
 - **FCoE**: Fibre Channel over Ethernet is a lightweight encapulsation protocol without the reliable data transport of TCP
 - **Gateway device**: a firewall or other device that sits at the edge of the network to regulate traffic and enforce rules
@@ -45,8 +52,10 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **ICMP**: Internet Control Message Protocol, standardized by IETF via RFC 792 to determine if a particular host is available
 - **IGMP**: Internet Group Management Protocol, used to manage multicasting groups
 - **Internetworking**: two different sets of servers/communication elements using network protocol stacks to communicate and coordinate activities
+**IV (Initialization Vector) attack**: occurs when attackers exploit weaknesses in how an IV is generated or used in cryptographic systems, particularly in stream ciphers and certain modes of block ciphers; the Initialization Vector (IV) is a random or pseudo-random value used to ensure that even if the same data is encrypted multiple times, the resulting ciphertext is different each time; if the IV is predictable, reused, or improperly managed, it can lead to security vulnerabilities, enabling attackers to decrypt data, tamper with messages, or perform replay attacks
 - **LDAP**: lightweight directory access protocol uses simple (basic) authentication such as SSL/TLS, or SASL (Simple Authentication and Security Layer)
 - **MAC filtering**: a list of authorized wireless client interface MAC addresses used by a WAP to block access to all nonauthoried devices
+- **Managed Dection and Response (MDR)**: a service that monitors an IT environment in real-time to detect and resolve threats; not limited to endpoints, MDR focuses on threat detection and mediation; often a combination and integration of numerous technologies, such as SIEM, network traffic analysis (NTA), EDR, and IDS
 - **Microsegmentation**: part of a zero trust strategy that breaks or divides up an internal network into very small (sometimes as small as a single device or important server/end-point), highly localized zones; each zone is separated from others by internal segmentation firewalls (ISFWs), subnets, or VLANs; note that at the limit, this places a firewall at every connection point
 - **Network container names**: network containers are OSI layers 7-5: protocol data unit (PDU); layer 4: segment (TCP) or datagram (UDP); layer 3: packet; layer 2: frame; layer 1: bits
 - **NFV**: Network Function Virtualization (AKA Virtual Network Function) that seeks to decouple functions, such as firewall management, intrusion detection, NAT and name service resolution, from specific hardware solutions, and make them virtual/software; the focus is to optimize distinct network services
@@ -413,6 +422,17 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - Standalone: connects clients using a WAP, but not to wired resources
         - Infrastructure: connects endpoints to a central network, not to each other
         - Wired extension: uses a wireless access point to link wireless clients to a wired network
+    - Wireless antennas: when setting up a wireless network, the type of antenna used on both the wireless client (device trying to connect) and the base station (such as an access point or router) is important for optimizing signal strength and coverage; different antennas are used depending on the needs of the environment, and these antennas vary in terms of their directionality and range
+
+        | **Antenna Type**          | **Directionality**       | **Range**                    | **Use Case**                                                |
+        |---------------------------|--------------------------|------------------------------|-------------------------------------------------------------|
+        | **Omnidirectional Pole**   | 360-degree (all around)   | Short to medium               | General-purpose Wi-Fi coverage in homes/offices             |
+        | **Yagi Antenna**           | Highly directional        | Long                          | Long-distance links between buildings or to distant devices |
+        | **Cantenna**               | Directional               | Medium to long (DIY solutions)| Extending Wi-Fi to a distant access point                   |
+        | **Panel Antenna**          | Semi-directional          | Medium                        | Indoor/outdoor targeted coverage in one direction            |
+        | **Parabolic Antenna**      | Extremely directional     | Very long                     | Point-to-point communication over miles                     |
+
+
     - **Zigbee**: IoT equipment communications concept based on Bluetooth
         - Low power/low throughput
         - Requires close proximity
@@ -522,17 +542,41 @@ The components of a network make up the backbone of the logical infrastructure f
         - installed on each management system, checks config files regularly, and can quarantine for non-compliance
         - dissolvable: usually written in a web/mobile language and is executed on each local machine when the specific management web page is accessed (such as captive portal)
         - permanent: installed on the monitored system as a persistent background service
-    - NAC posture assessment capability determines if a system is sufficiently suecre and complaint to conntect to the network; this is a form of risk-based access control
+    - Agentless NAC: no software is installed on the endpoint, instead, the NAC system performs security checks using existing network infrastructure, such as switches, routers, firewalls, and network protocols; it gathers information about the device passively or actively through scans, without requiring direct interaction with the endpoint
+    - NAC posture assessment capability determines if a system is sufficiently secure and compliant to connect to the network; this is a form of risk-based access control
+        | Feature                          | **Agent-Based NAC**                                           | **Agentless NAC**                                    |
+        |-----------------------------------|---------------------------------------------------------------|------------------------------------------------------|
+        | **Software Requirement**          | Requires agent installation on devices                        | No software installation required on devices         |
+        | **Depth of Security Checks**      | Provides deep insight into device security posture (antivirus, OS, patches) | Provides basic information (device type, MAC, OS)    |
+        | **Continuous Monitoring**         | Yes, can perform continuous monitoring after network access    | Typically performs one-time or periodic checks       |
+        | **Device Compatibility**          | May not support unmanaged devices or IoT devices               | Works with all devices (IoT, printers, guest devices) |
+        | **Deployment Complexity**         | More complex due to agent installation and management          | Easier to deploy, no software installation required  |
+        | **Granular Control**              | Offers granular control over security policies                 | Limited control, focuses on basic compliance         |
+        | **Remediation Capabilities**      | Can help remediate non-compliant devices (e.g., installing patches) | Limited or no remediation capabilities               |
+
     - Just as you need to control physical access to equipment and wiring, you need to use logical controls to protect a network; there are a variety of devices that provide this type of protection, including:
         - stateful and stateless firewalls can perform inspection of the network packets and use rules, signatures and patterns to determine whether the packet should be delivered
-            - reasons for dropping a packet could include addresses that don’t exist on the network, ports or addresses that are blocked, or the content of the packet (e.g malicious packets blocked by admin policy)
+            - reasons for dropping a packet could include addresses that don’t exist on the network, ports or addresses that are blocked, or the content of the packet (e.g. malicious packets blocked by admin policy)
         - IDP devices, which monitor the network for unusual network traffic and MAC or IP address spoofing, and then either alert on or actively stop this type of traffic
-        - proxy/reverse proxies: 
-            - proxy servers can be used to proxy internet-bound traffic, instead of letting clients talk directly
-            - reverse proxies are often deployed to a perimeter network; they proxy communication from the internet to an internal host, such as a web server
-            - like a firewall, a reverse proxy can use rules and policies to block certain types of communication
+        - proxy server information:
+            - **proxy server**: used to mediate between clients and servers, most often in the context of providing cleints on a private network with internet access, while protecting the identify of the client
+            - **forward proxy**: usually used by clients to anonymize their traffic, improve privacy, and cache data; a forward proxy is configured on client-side devices to manage access to external resources
+            - **reverse proxy**: usually positioned in front of servers to distribute incoming traffic, improve performance through load balancing, and enhance security by hiding the details of backend servers; reverse proxies are often deployed to a perimeter network; they proxy communication from the internet to an internal host, such as a web server
+            - **transparent proxy**: operates without client configuration and intercepts traffic transparently, often for monitoring or content filtering purposes without altering the client’s perception of the connection
+            - **nontransparent proxy**: requires explicit configuration on the client side and may modify traffic to enforce policies, such as restricting access or logging user activities
+        
+            | **Attribute**                | **Forward Proxy**                                  | **Reverse Proxy**                                   | **Transparent Proxy**                               | **Nontransparent Proxy**                             |
+            |------------------------------|---------------------------------------------------|----------------------------------------------------|----------------------------------------------------|-----------------------------------------------------|
+            | **Primary Function**          | Acts as an intermediary between client and internet | Acts as an intermediary between client and backend servers | Intercepts client requests without modifying them  | Requires explicit client configuration               |
+            | **Client Awareness**          | Client is aware of proxy usage                    | Client is unaware of proxy usage                    | Client is unaware of proxy usage                    | Client is aware of proxy usage                       |
+            | **Use Case**                  | Content filtering, privacy, and caching for users | Load balancing, security, and hiding server identity| Caching, content filtering without client configuration | Content filtering, security, and logging             |
+            | **Configuration**             | Configured on client devices or network settings  | Configured on the server side                      | No configuration needed on the client side          | Requires configuration on the client side            |
+            | **Visibility**                | Proxy IP address is visible to the target website | Proxy hides server IP address from the client       | Proxy operation is invisible to both client and server | Proxy server IP address is visible to the client     |
+            | **Modification of Requests**  | Can modify or filter client requests              | Can modify server responses or requests from clients| Does not modify requests or responses               | Can modify or filter client requests                 |
+            | **Security Benefits**         | Provides privacy by hiding client IP addresses    | Provides security by hiding server details, load balancing | Limited security, primarily used for convenience   | High security potential, especially for monitoring   |
+
 - 4.2.4 Endpoint security
-    - **Endpoint security**: each individual device must maintain local security
+    - **Endpoint security**: each individual device must maintain local security whether or not its network or telecom channels also provide security
         - any weakness in a network, whether border, server, or client-based presents a risk to all elements of the org
         - client/Server model is distributed architecture, meaning that security must be addressed everywhere instead of at a single centralized host
         - processing, storage on clients and servers, network links, communication equipment all must be secured

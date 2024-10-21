@@ -1,4 +1,5 @@
 # CISSP Study Resources
+
 Material and Resources pursing CISSP Certification
 
 This is my collection of resources, study materials, notes, and advice I have gathered, working towards certification. Because there is so much material available, when you are starting out it can be a bit daunting to even know where to begin, and what really merits your time and effort.
@@ -10,14 +11,17 @@ Feel free to share this repo or any of the resources if you find them useful. Te
 Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/)
 
 ## Table of contents
+
 - [Overview](#overview) of CISSP exam and content.
 - [Reference Material](#reference-material) including books, articles, courses, videos, and test banks.
 - My [Study Guides By Domain](#my-study-guides) built as I'm progressing through the reference material.
 
 ## Overview
+
 There is a ton of information on the CISSP exam available, including from (ISC)², associated & third-party instructors and authors, as well as guides put together by those in preparation. If you're just starting out, I'd recommend the [Sybex Study Guide and Practice Test bundle](https://amzn.to/3WpNWKM) (note that I get a small commission for purchases made through Amazon links).
 
 Many have noted that the most appropriate frame of reference is that of a manager, and not a technician. Try to understand the process, and why any technology would be used. As [Lance puts it](https://github.com/1337-Xtreme/awesome-CISSP-CCSP), try to answer these questions for basic topics:
+
 - Why technology is needed?
 - What is the process for making a pro or con decision?
 - When would it be needed, and under what circumstances?
@@ -33,6 +37,7 @@ Many have noted that the most appropriate frame of reference is that of a manage
 Focus on understanding the topics, and the analysis process. Your goal is to reduce risk.
 
 Test Process:
+
 - Read the question and answers twice: skim the question and answers,then go back and read through the question carefully. Argue with each of the answers. Does an answer meet all requirements in the question? Are any other answers more efficient for time and cost?
 - If you have no idea what the answer is, you can generally eliminate at least two answers by thinking about the language used in the question. For instance, the question could be asking for a technology, and two of the answers are about process.
 - The first priority for any incident is saving human life.
@@ -53,10 +58,11 @@ Test Process:
 - You can pass and complete or fail in first 100 questions. If you go beyond 100, you are somewhere in between.
 
 ## Reference Material
+
 - Books:
   - As mentioned above, the Certified Information Systems Security Professional, [Official Study Guide (10th edition) and Practice Tests](https://amzn.to/3WpNWKM):is a great study base line, with 100 questions for each of the 8 domains & more than 1300 questions total.
   - [CISSP All-in-One Exam Guide](https://amzn.to/3AraOCd): (currently Ninth Edition is available, from May, 2023) - I've found the book valuable, as it reinforces core concepts, and provides additional clear explanations to supplement the OSG.
-   - [11th Hour CISSP:Study Guide, 3rd Edition](https://amzn.to/3Bkz4Xf): this book is a bit older, but it's compact, and prep'd "for ease of last-minute studying."
+  - [11th Hour CISSP:Study Guide, 3rd Edition](https://amzn.to/3Bkz4Xf): this book is a bit older, but it's compact, and prep'd "for ease of last-minute studying."
 - Courses:
   - This course has been highly recommended by several people: [CISSP Overview by Kelly Handerhan](https://app.cybrary.it/immersive/12270505/activity/61891)
   - Thor Teaches:
@@ -79,6 +85,7 @@ Test Process:
 Note: these are the notes and resources I've found helpful in my study so far. You are advised to do your own analysis to determine what will be helpful to you in your study. There are no guarantees, implied or othewise that these notes are complete or will meet your needs to pass the CISSP certification. 
 
 ## Study Guides By Domain
+
 - [Domain 1 - Security and Risk Management](CISSP-Domain-1-Objectives.md)
 - [Domain 2 - Asset Security](CISSP-Domain-2-Objectives.md)
 - [Domain 3 - Security Architecture and Engineering](CISSP-Domain-3-Objectives.md) 

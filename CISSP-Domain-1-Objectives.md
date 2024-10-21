@@ -74,7 +74,7 @@
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies  align with business goals, and that they are comprehensive and consistent across the organization
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
   - There are numerous security frameworks and governance guidelines providing a structured approach to security governance: 
-    - [ISO/IEC 27001](https://www.iso.org/standard/27001): a widely recognized international standard for information security management systsems (ISMS); it provides a risk-based approach, and emphasizes coontinual improvement of the ISMS
+    - [ISO/IEC 27001](https://www.iso.org/standard/27001): a widely recognized international standard for information security management systems (ISMS); it provides a risk-based approach, and emphasizes coontinual improvement of the ISMS
     - [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework): built around six core functions: govern, identify, protect, detect, respond, and recover to provide guidance to industry, government agencies, and other orgs to manage cybersecurity risks
     - [SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final): a comprehensive set or catelog of security and privacy controls across multiple security domains, covering areas such as risk management, access control, incident response, and system maintenance
     - [SP 800-100](https://csrc.nist.gov/pubs/sp/800/100/r1/iprd): Titled Information Security Handbook: a guide for managers, NIST hasn't released an update since 2006, although they appear to have an update in progress
@@ -115,8 +115,8 @@
   - Auditor: responsible for reviewing and verifying that the security policy is properly implemented
 - 1.3.4 Security control frameworks
   - A **security control framework**: outlines the org's approach to security, including a list of specific security processes, procedures, and solutions used; it is important in planning the structure of an org's security solution; many frameworks to choose from, such as:
-    -  COBIT Control Objectives for Information and Related Technology ("moderately referenced" on the exam):
-        - COBIT is a documented set of best IT security practices by ISACA; a "security concept infrastructure" used to organize the complex security solutions of companies
+    - COBIT Control Objectives for Information and Related Technology ("moderately referenced" on the exam):
+      - COBIT is a documented set of best IT security practices by ISACA; a "security concept infrastructure" used to organize the complex security solutions of companies
         - COBIT is commonly used as an audit framework for orgs
         - Six key principles:
           - provide stakeholder value
@@ -125,21 +125,21 @@
           - governance distinct from management
           - tailored to enterprise needs
           - end-to-end governance system   
-    -  ISO 27000 series (27000, 27001, 27002, etc.). 
-    -  NIST **CyberSecurity Framework (CSF)**
-        - designed for commerical orgs and critical infrastructure, CSF 1.1 consists of five functions:
-          - identify
-          - protect
-          - detect
-          - respond
-          - recovery
-        - note: updated (2024) CSF 2.0 functions:
-          - govern
-          - identify
-          - protect
-          - detect
-          - respond
-          - recover
+    - ISO 27000 series (27000, 27001, 27002, etc.). 
+    - NIST **CyberSecurity Framework (CSF)**
+      - designed for commerical orgs and critical infrastructure, CSF 1.1 consists of five functions:
+        - identify
+        - protect
+        - detect
+        - respond
+        - recovery
+      - note: updated (2024) CSF 2.0 functions:
+        - govern
+        - identify
+        - protect
+        - detect
+        - respond
+        - recover
 - 1.3.5 Due care/due diligence
   - **Due diligence**: establishing a plan, policy, and process to protect the interests of the organization; due diligence is knowing what should be done and planning for it; understanding your security governance principles (policies and procedures) and the risks to your organization; actions taken by a vendor to demonstrate or provide due care
     - Due diligence often involves:
@@ -154,6 +154,7 @@
   - Due diligence is the ability to prove due care
 
 [1.4](#1.4) Determine compliance and other requirements (OSG-9 Chpt 4)
+
 - 1.4.1 Contractual, legal, industry standards, and regulatory requirements
   - Understand the difference between criminal, civil, and administrative law.
     - **Criminal law**: protects society against acts that violate the basic principles we believe in; violations of criminal law are prosecuted by federal and state governments
@@ -169,20 +170,21 @@
     - **Electronic Communications Privacy Act (ECPA)** - in short, makes it a crime to invade the electronic privacy of an individual; passed in 1986 to expand and revise federal wiretapping and electronic eavesdropping provisions, making it a crime to intercept or procure electronic communications, and includes important provisions that protect a person’s wire and electronic communications from being intercepted by another private individual
     - **Digital Millennium Copyright Act (DMCA)** - prohibits the circumvention of copyright protection mechanisms placed in digital media and limits the liability of internet service providers for the activities of their users
 - 1.4.2 Privacy requirements
-    - European Union's **General Data Protection Regulation (GDPR)** - replaced Data Protection Directive (DPD), purpose is to provide a single, harmonized law that covers data throughout the EU
-      - Lawfulness, fairness, and transparency
-      - Purpose Limitation
-      - Data Minimization
-      - Accuracy
-      - Storage Limitation
-      - Security
-      - Accountability
-    - Personal Information Protection and Electronic Documents Act (PIPEDA): Canadian law that governs the use of personal information
-    - California Consumer Privacy Act (CCPA)
-    - Be familiar with the EU Data Protection Directive
-    - Be familiar with the requirements around healthcare data, credit card data and other PII data as it relates to various countries and their laws and regulations
+  - European Union's **General Data Protection Regulation (GDPR)** - replaced Data Protection Directive (DPD), purpose is to provide a single, harmonized law that covers data throughout the EU
+    - Lawfulness, fairness, and transparency
+    - Purpose Limitation
+    - Data Minimization
+    - Accuracy
+    - Storage Limitation
+    - Security
+    - Accountability
+  - Personal Information Protection and Electronic Documents Act (PIPEDA): Canadian law that governs the use of personal information
+  - California Consumer Privacy Act (CCPA)
+  - Be familiar with the EU Data Protection Directive
+  - Be familiar with the requirements around healthcare data, credit card data and other PII data as it relates to various countries and their laws and regulations
 
 [1.5](#1.5) Understand legal and regulatory issues that pertain to information security in a holistic context (OSG-9 Chpt 4)
+
 - 1.5.1 Cybercrimes and data breaches
   - Understand the notification requirements placed on organizations that experience a data breach
   - California's SB 1386 implemented the first statewide requirement to notify individuals of a breach of their personnel information; all other states eventually followed suit with similar laws
@@ -208,10 +210,10 @@
   - **Licensing**: a contract between the software producer and the consumer which limits the use and/or distribution of the software
   - **Trade Secrets**: trade secret laws protect the operating secrets of a firm; trade secrets are intellectual property that is critical to a business, and significant damage would result if it were disclosed to competitors or the public; the Economic Espionage Act imposes fines and jail sentences on someone found guilty of stealing trade secrets from a US corp
 - 1.5.3 Import/export controls
-  -  Every country has laws around the import and export of hardware and software; e.g. the US has restrictions around the export of cryptographic technology, and Russia requires a license to import encryption technologies manufactured outside the country
+  - Every country has laws around the import and export of hardware and software; e.g. the US has restrictions around the export of cryptographic technology, and Russia requires a license to import encryption technologies manufactured outside the country
 - 1.5.4 Transborder data flow
-  -  Orgs should adhere to origin country-specific laws and regulations, regardless of where data resides
-  -  Also be aware of applicable laws where data is stored and systems are used
+  - Orgs should adhere to origin country-specific laws and regulations, regardless of where data resides
+  - Also be aware of applicable laws where data is stored and systems are used
   - **International Traffic in Arms Regulations (ITAR)**: a US regulation that was built to ensure control over any export of items such as missiles, rockets, bombs, or anything else existing in the United States Munitions List (USML)
   - **Export Administration Regulations (EAR)**: EAR predominantly focuses on commercial use-related items like computers, lasers, marine items, and more; however, it can also include items that may have been designed for commercial use but actually have military applications
 - 1.5.5 Privacy
@@ -261,7 +263,7 @@
     - storage limitation
     - security
     - accountability
-  -  The EU-US **Privacy Shield** (formerly the EU-US Safe Harbor agreement): controls data flow from the EU to the United States; the EU has more stringent privacy protections and without the Privacy Shield, personal data flow from the EU to the United States would not be allowed
+  - The EU-US **Privacy Shield** (formerly the EU-US Safe Harbor agreement): controls data flow from the EU to the United States; the EU has more stringent privacy protections and without the Privacy Shield, personal data flow from the EU to the United States would not be allowed
 
 [1.6](#1.6) Understand requirements for investigation types (i.e., administrative, criminal, civil, regulatory, industry standards) (OSG-9 Chpt 19)
 
@@ -280,6 +282,7 @@
     - Here the org is required to comply with the investigation, e.g., by not hiding or destroying evidence
 
 [1.7](#1.7) Develop, document, and implement security policy, standards, procedures and guidelines (OSG-9 Chpt 1)
+
 - To create a comprehensive security plan, you need the following items: security policy, standards, baselines, guidelines, and procedures
 - The top tier of a formalized hierarchical organization security documentation is the security policy
   - **Policy**: docs created by and published by senior management describing organizational strategic goals
@@ -325,7 +328,7 @@
     2. Business Impact Analysis
     3. Continuity planning
     4. Approval and implementation
-    
+
     - **Project scope and planning**: Developing the project scope and plan starts with gaining support of the management team, making a business case (cost/benefit analysis, regulatory or compliance reasons etc.) and gaining approval to move forward
       - Next, you need to form a team with representatives from the business as well as IT
       - Next, start with a business continuity policy statement,conduct a business impact analysis (see next item), and then develop the remaining components: 
@@ -335,27 +338,27 @@
         - testing
         - training and maintenance
 - 1.8.1 Business Impact Analysis (BIA)
-    - **Business impact analysis (BIA)**: Identify the systems and services that the business relies on and assess the impacts that a disruption or outage would cause, including the impacts on business processes like accounts receivable and sales
-      - Step 1: Identification of priorities
-      - Step 2: Risk identification
-      - Step 3: Likelihood assessment
-      - Step 4: Resource prioritization
-        - deciding which systems and services you need to get things running again (think foundational IT services such as the network and directory, which many other systems rely on)
-        - and prioritize the order in which critical systems and services are recovered or brought back online 
-      - As part of the BIA, establish:
-        - **recovery time objectives (RTO)**: how long it takes to recover
-        - **recovery point objectives (RPO)**: the maximum tolerable data loss
-        - **maximum tolerable downtime (MTD)**: (AKA maximum allowable downtime or MAD) how long an org can survive an interruption of critical functions 
-        - along with the costs of downtime and recovery
-    - **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that need to be protected against interruption
-      - The next phase of BCP development, continuity planning, focuses on the development and implementation of a continuity strategy to minimize the impact realized risks might have on protected assets
-      - There are two primary subtasks/phases involved in continuity planning:
-        - **Strategy development**: in this phase, the BCP team determines which risks they will mitigate
-        - **Provisions and processes**: in this phase, the team designs mechanisms and procedures that will mitigate identified risks
-      - The goal of this process is to create a **continuity of operations plan** (COOP), which focuses on how an org will carry out critical business functions starting shortly after a disruption occurs and extending up to one month of sustained operations
-    - **Approval and implementation**:
-      - BCP plan now needs sr. management buy-in (should be endorsed by the org's top exec)
-      - BCP team should create an implementation schedule, and all personnel involed should receive training on the plan
+  - **Business impact analysis (BIA)**: Identify the systems and services that the business relies on and assess the impacts that a disruption or outage would cause, including the impacts on business processes like accounts receivable and sales
+    - Step 1: Identification of priorities
+    - Step 2: Risk identification
+    - Step 3: Likelihood assessment
+    - Step 4: Resource prioritization
+      - deciding which systems and services you need to get things running again (think foundational IT services such as the network and directory, which many other systems rely on)
+      - and prioritize the order in which critical systems and services are recovered or brought back online 
+    - As part of the BIA, establish:
+      - **recovery time objectives (RTO)**: how long it takes to recover
+      - **recovery point objectives (RPO)**: the maximum tolerable data loss
+      - **maximum tolerable downtime (MTD)**: (AKA maximum allowable downtime or MAD) how long an org can survive an interruption of critical functions 
+      - along with the costs of downtime and recovery
+  - **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that need to be protected against interruption
+    - The next phase of BCP development, continuity planning, focuses on the development and implementation of a continuity strategy to minimize the impact realized risks might have on protected assets
+    - There are two primary subtasks/phases involved in continuity planning:
+      - **Strategy development**: in this phase, the BCP team determines which risks they will mitigate
+      - **Provisions and processes**: in this phase, the team designs mechanisms and procedures that will mitigate identified risks
+    - The goal of this process is to create a **continuity of operations plan** (COOP), which focuses on how an org will carry out critical business functions starting shortly after a disruption occurs and extending up to one month of sustained operations
+  - **Approval and implementation**:
+    - BCP plan now needs sr. management buy-in (should be endorsed by the org's top exec)
+    - BCP team should create an implementation schedule, and all personnel involed should receive training on the plan
 
 - The top priority of BCP and DRP is people: **Always prioritize people's safety**; get people out of harm's way, and then address IT recovery and restoration issues
 
@@ -382,7 +385,7 @@
       - non-compete 
       - codes of conduct such as an acceptable use policy (AUP), which defines what is and isn’t acceptable acitivty, practice, or use for company equipemnt and resources
       - nondisclosure agreement (NDA), which is a doc used to protect confidential information from being disclosed by a current or former employee
-- 1.9.3 Onboarding, transfers and termination processes   
+- 1.9.3 Onboarding, transfers and termination processes
   - **Onboarding**: process of bringing a new employee into the org
     - creating documented processes allowing the new employee to be intgrated quickly and consistently
   - **Transfer**: an employee moves from one job to another, likely requiring adjusted account access to maintain appropriate least privilege
@@ -393,17 +396,18 @@
   - Info security policies and procedures must address outsourcing secuity and the use of service providers, vendors and consultants 
     - e.g. access control, document exchange and review, maintenance, on-site assessment, process and policy review, and Service Level Agreements (SLAs) are examples of outsourcing security considerations
 - 1.9.5 Compliance policy requirements
-    - **Compliance**: the act of confirming or adhering to rules, policies, regulations, standards, or requirements
-      - on a personnel level, compliance is related to individual employees following company policies and procedures
-      - employees need to be trained on company standards as defined in the security policy and remain in compliance with any contractual obligations (e.g. with PCI DSS)
-    - Compliance is a form of administrative or managerial security control
-    - **Compliance enforcement**: the application of sanctions or consequences for failing to follow policy, training, best practices, or regulations
+  - **Compliance**: the act of confirming or adhering to rules, policies, regulations, standards, or requirements
+    - on a personnel level, compliance is related to individual employees following company policies and procedures
+    - employees need to be trained on company standards as defined in the security policy and remain in compliance with any contractual obligations (e.g. with PCI DSS)
+  - Compliance is a form of administrative or managerial security control
+  - **Compliance enforcement**: the application of sanctions or consequences for failing to follow policy, training, best practices, or regulations
 - 1.9.6 Privacy policy requirements    
-    - Personally identifiable information (PII) about employees, partners, contractors, customers and others should be stored in a secure way, accessible only to those who require the information to perform their jobs
-    - Orgs should maintain a documented privacy policy outlining the type of data covered by the policy and who the policy applies to 
-    - Employees and contractors should be required to read and agree to the privacy policy upon hire and on a regular basis thereafter (such as annually)
+  - Personally identifiable information (PII) about employees, partners, contractors, customers and others should be stored in a secure way, accessible only to those who require the information to perform their jobs
+  - Orgs should maintain a documented privacy policy outlining the type of data covered by the policy and who the policy applies to 
+  - Employees and contractors should be required to read and agree to the privacy policy upon hire and on a regular basis thereafter (such as annually)
 
 [1.10](#1.10) Understand and apply risk management concepts (OSG-9 Chpt 2)
+
 - 1.10.1 Privacy policy requirements
   - **Risk Management**: process of identifying factors that could damage or disclose data, evaluating those factors in light of data value and countermeasure cost, and implementing cost-effective solutions for mitigating or reducing risk
   - **Threats**: any potential occurrence that many cause an undersirable or unwanted outome for a specific asset; they can be intentional or accidental; loosely think of a threat as a weapon that could cause harm to a target
@@ -532,6 +536,7 @@
   - There are other risk frameworks, such as the ISO/IEC 31000, ISO/IEC 31004, COSO, Risk IT, OCTAVE, FAIR, and TARA; be familiar with frameworks and their goals
 
 [1.11](#1.11) Understand and apply threat modeling concepts and methodologies (OSG-9 Chpt 1)
+
 - **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed; can be performed as a proactive measure during design and development (aka defensive approach) or as an reactive measure once a product has been deployed (aka adversarial approach)
   - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat 
 - Microsoft uses the **Security Development Lifecycle** (SDL) with the motto: "Secure by design, secure by default, secure in deployment and communication" 
@@ -559,11 +564,11 @@
 - Each stage of PASTA has a specific list of objectives to achieve and deliverables to produce in order to complete the stage
 - **Visual, Agile, and Simple Threat (VAST)**: a threat modeling concept that integrates threat and risk management into an Agile programming environment on a scalable basis
 - Part of the job of the security team is to identify threats, using different methods:
-   - Focus on attackers: this is a useful method in specific situations;
-    - e.g. suppose that a developer’s employment is terminated, and that post-offboarding and review of developer’s computer, a determination is made that the person was disgruntled and angry
-      - understanding this situation as a possible threat, allows mitigation steps to be taken
-   - Focus on assets: an org’s most valuable assets are likely to be targeted by attackers
-   - Focus on software: orgs that develop applications in house, and can be viewed as part of the threat landscape; the goal isn’t to identify every possible attack, but to focus on the big picture, identifying risks and attack vectors
+  - Focus on attackers: this is a useful method in specific situations;
+  - e.g. suppose that a developer’s employment is terminated, and that post-offboarding and review of developer’s computer, a determination is made that the person was disgruntled and angry
+    - understanding this situation as a possible threat, allows mitigation steps to be taken
+  - Focus on assets: an org’s most valuable assets are likely to be targeted by attackers
+  - Focus on software: orgs that develop applications in house, and can be viewed as part of the threat landscape; the goal isn’t to identify every possible attack, but to focus on the big picture, identifying risks and attack vectors
 - Understanding threats to the org allow the documentation of potential attack vectors; diagramming can be used to list various technologies under threat
 - **Reduction analysis**: with a purpose of gaining a greater understanding of the logic of a product and interactions with external elements includes breaking down a system into five core elements: trust boundaries, data flow paths, input points, privileged operations, and security control details; AKA decomposing the application, system, or environment
 - **DREAD**: Microsoft developed the DREAD threat modeling approach to detect and prioritize threats so that serious threats can be mitigated first
@@ -574,6 +579,7 @@
   - D: Discoverability
 
 [1.12](#1.12) Apply Supply Chain Risk Management (SRM) concepts (OSG-9 Chpt 1)
+
 - 1.12.1 Risks associated with hardware, software, and services
   - **Supply Chain Risk Management (SCRM)**: the means to ensure that all of the vendors or links in the supply chain are: 
     - reliable, 
@@ -597,6 +603,7 @@
       - this can sometimes take time, as the acquiring company might have to support established SLAs until they expire or are up for renewal 
 
 [1.13](#1.13) Establish and maintain a security awareness, education, and training program (OSG-9 Chpt 2)
+
 - 1.13.1 Methods and techniques to present awareness and training (e.g., social engineering, phishing, security champions, gamification)
   - Before actual training takes place, user security awareness needs to take place; from there, training, or teaching employees to perform their work tasks and to comply with the security policy can begin
     - All new employees require some level of training so that they will be able to comply with all standards, guidelines, and procedures mandated by the security policy
@@ -625,6 +632,7 @@
   - Time and money must be allocated for evaluating the company’s security awareness and training; the company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email links
 
 Also see my articles on risk management: 
+
 - [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1)  introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
 - Since the primary goal of risk management is to identify potential threats against an organizaton's assets, and bring those risks into alignment with an organization's risk appetite, in [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2), we cover the threat assessment -- a process of examining and evaluating cyber threat sources with potential system vulnerabilities
   - we look at how a risk assessment helps drive our understanding of risk by pairing assets and their associated potential threats, ranking them by criticality
