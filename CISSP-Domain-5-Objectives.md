@@ -7,8 +7,11 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - Authentication verifies the subject’s identity by comparing one or more authentication factors against a database holding authentication info for users
 - The three primary authentication factors are something you know, something you have, and something you are
     - Something you know: Type 1 authentication (passwords, pass phrase, PIN etc)
+          - Authoriative Sources of Password Policy recommendations
+          - NIST SP 800-63B Digital Identity Guidelines: Authentication and Lifecycle Management (Hashed, No expiry, No requirement for special characters, Copy and Paste password, can use all characters, systems should screen password)
+          - PCI DSS Password Requirement v3.2.1
     - Something you have: Type 2 authentication (ID, Passport, Smart Card, Token, cookie on PC etc)
-    - Something you are: Type 3 authentication, includes Biometrics (Fingerprint, Iris Scan, Facial geometry etc.)
+    - Something you are: Type 3 authentication, includes Biometrics (Fingerprint, Retina, Iris Scan, Facial geometry etc.)
     - Somewhere you are: Type 4 authentication (IP/MAC Address)
     - Something you do: Type 5 authentication (Signature, Pattern unlock)
 - Single sign-on (SSO) technologies allow users to authenticate once and access any resources in a network or the cloud, without authenticating again
@@ -75,9 +78,10 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
         - multifactor auth must use multiple types or factors, such as something you know and something you have
         - note: requiring users to enter a password and a PIN is NOT multifactor (both are something you know)
     - Two-factor methods:
-        - **Hash Message Authentication Code (HMAC)**: includes a hash function used by the HMAC-based One-Time Password (HOTP) standard to create onetime passwords
-        - **Time-based One-Time Password (TOTP)**: similar to HOTP, but uses a timestamp and remains valid for a certain time frame (e.g. 30 or 60 seconds)
+        - **Hash Message Authentication Code (HMAC)**: similar to Asynchronous Dynamic Password tokens, includes a hash function used by the HMAC-based One-Time Password (HOTP) standard to create onetime passwords
+        - **Time-based One-Time Password (TOTP)**: Synchronous Dynamic password tokens, similar to HOTP, but uses a timestamp and remains valid for a certain time frame (e.g. 30 or 60 seconds)
             - e.g. phone-based authenticator app, where your phone is mimicking a hardware TOTP token (combined with userid/password is considered two-factor or two-step authentication)
+            - NIST SP 800-63B deprecates SMS for 2FA
         - **Email challenge**: popular method, used by websites, sending the user an email with a PIN
         - Short Message Service (SMS): to send users a text with a PIN is another 2-factor method; note that NIST SP 800-63B points out vulnerabilities, and deprecates use of SMS as a two-factor method for federal agencies
 - 5.2.3 Accountability
