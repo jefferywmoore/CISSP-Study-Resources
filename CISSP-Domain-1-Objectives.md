@@ -1,4 +1,4 @@
-[Domain 1](#domain1-top) **Security and Risk Management**
+# [Domain-1](#domain-1-security-and-risk-management) **Security and Risk Management**
 
 - **Glass-Steagall Act**: passed in 1933 and separated investment and commercial banking activities in response to involvement in stock market investment
   - The Gramm-Leach-Bliley Act eliminated the Glass-Steagall Act's restrictions against affiliations between commercial and investment banks in 1999
@@ -11,7 +11,7 @@
   - (d) destroys the integrity of computer-based information, and/or
   - (e) compromises the privacy of users
 
-[1.1](#1.1) Understand, adhere to, and promote professional ethics (OSG-9 Chpts 1,19)
+## [1.1](#11-understand-adhere-to-and-promote-professional-ethics-osg-9-chpts-119) Understand, adhere to, and promote professional ethics (OSG-9 Chpts 1,19)
 
 - As a CISSP, you must understand and follow the (ISC)² code of ethics, as well as your organization’s own code
 - 1.1.1 (ISC)² Code of Professional Ethics
@@ -34,7 +34,8 @@
   - You must also support ethics at your organization; this can be interpreted to mean evangelizing ethics throughout the organization, providing documentation and training around ethics, or looking for ways to enhance the existing organizational ethics 
     - some organizations might have slightly different ethics than others, so be sure to familiarize yourself with your org’s ethics and guidelines
 
-[1.2](#1.2) Understand and apply security concepts (OSG-9 Chpt 1)
+## [1.2](#12-understand-and-apply-security-concepts-osg-9-chpt-1) Understand and apply security concepts (OSG-9 Chpt 1)
+
 - 1.2.1 Confidentiality, integrity, and availability, authenticity and nonrepudiation
   - **Confidentiality**:
     - Principle that objects are not disclosed to unauthorized subjects
@@ -55,8 +56,8 @@
     - Principle that authorized subjects are granted timely and uninterrupted access to objects
     - To ensure high availability of services and data, use techniques like failover clustering, site resiliency, automatic failover, load balancing, redundancy of hardware and software components, and fault tolerance
 
-  - **Authenticity**: ensuring a transmission, message or sender is legitimate    
-    - See the NIST glossary for examples: https://csrc.nist.gov/glossary/term/authenticity
+  - **Authenticity**: ensuring a transmission, message or sender is legitimate
+    - See the NIST glossary for examples: <https://csrc.nist.gov/glossary/term/authenticity>
 
   - **Nonrepudiation**: 
     - Ensures that the subject of activity or who caused an event cannot deny that the event occurred
@@ -68,9 +69,9 @@
     - Authorization: defining the needed resources, permissions (i.e. allow/grant and/or deny) to a resource, and object access for a specific identity or subject
     - Auditing: recording a log of the events and activities related to the system and subjects
     - Accounting: (aka accountability) access control process which records info about attempts by all entities to access resources; reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
- 
+
 [1.3](#1.3) Evaluate and apply security governance principles (OSG-9 Chpt 1)
- 
+
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies  align with business goals, and that they are comprehensive and consistent across the organization
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
   - There are numerous security frameworks and governance guidelines providing a structured approach to security governance: 
@@ -108,7 +109,7 @@
     - third-party audit
 - 1.3.3 Organizational Roles and Responsibilities
   - Primary security roles are senior manager, security professional, asset owner, custodian, user, and auditor
-  -  Senior Manager: has a responsibility for organizational security and to maximize profits and shareholder value
+  - Senior Manager: has a responsibility for organizational security and to maximize profits and shareholder value
   - Security Professional: has the functional responsibility for security, including writing the security policy and implementing it
   - Asset Owner: responsible for classifying information for placement or protection within the security solution
   - Custodian: responsible for the task of implementing the proscribed protection defined by the security policy and senior management
@@ -153,7 +154,7 @@
   - Due care is the responsible protection of assets
   - Due diligence is the ability to prove due care
 
-[1.4](#1.4) Determine compliance and other requirements (OSG-9 Chpt 4)
+## [1.4](#14-determine-compliance-and-other-requirements-osg-9-chpt-4) Determine compliance and other requirements (OSG-9 Chpt 4)
 
 - 1.4.1 Contractual, legal, industry standards, and regulatory requirements
   - Understand the difference between criminal, civil, and administrative law.
@@ -183,7 +184,7 @@
   - Be familiar with the EU Data Protection Directive
   - Be familiar with the requirements around healthcare data, credit card data and other PII data as it relates to various countries and their laws and regulations
 
-[1.5](#1.5) Understand legal and regulatory issues that pertain to information security in a holistic context (OSG-9 Chpt 4)
+## [1.5](#15-understand-legal-and-regulatory-issues-that-pertain-to-information-security-in-a-holistic-context-osg-9-chpt-4) Understand legal and regulatory issues that pertain to information security in a holistic context (OSG-9 Chpt 4)
 
 - 1.5.1 Cybercrimes and data breaches
   - Understand the notification requirements placed on organizations that experience a data breach
@@ -227,8 +228,8 @@
   - California SB 1386 (2002): immediate disclosure to individuals for PII breach
   - **California Consumer Privacy Act (CCPA)**: The CCPA applies to: 
     - For-profit businesses that collect consumers’ personal information (or have others collect personal information for them), 
-    - Determine why and how the information will be processed, 
-    - Do business in California and meet any of the following: 
+    - Determine why and how the information will be processed
+    - Do business in California and meet any of the following:
       - have a gross annual revenue > $25 million;
       - buy, sell, or share the personal information of 100k or more California residents or households; or
       - get 50% or more of their annual revenue from selling or sharing California residents’ personal information
@@ -265,7 +266,7 @@
     - accountability
   - The EU-US **Privacy Shield** (formerly the EU-US Safe Harbor agreement): controls data flow from the EU to the United States; the EU has more stringent privacy protections and without the Privacy Shield, personal data flow from the EU to the United States would not be allowed
 
-[1.6](#1.6) Understand requirements for investigation types (i.e., administrative, criminal, civil, regulatory, industry standards) (OSG-9 Chpt 19)
+## [1.6](#16-understand-requirements-for-investigation-types-ie-administrative-criminal-civil-regulatory-industry-standards-osg-9-chpt-19) Understand requirements for investigation types (i.e., administrative, criminal, civil, regulatory, industry standards) (OSG-9 Chpt 19)
 
 - An investigation will vary based on incident type; e.g. for a financial services company, a financial system compromise might cause a regulatory investigation; a system breach or website compromise might cause a criminal investigation; each type of investigation has special considerations:
   - **Administrative**: an administrative investigation has a primary purpose of providing the appropriate authorities with incident information; thereafter, authorities will determine the proper action, if any 
@@ -281,27 +282,27 @@
   - **Regulatory**: A regulatory investigation is conducted by a regulatory body, such as the Securities and Exchange Commission (SEC) or Financial Industry Regulatory Authority (FINRA), against an org suspected of an infraction 
     - Here the org is required to comply with the investigation, e.g., by not hiding or destroying evidence
 
-[1.7](#1.7) Develop, document, and implement security policy, standards, procedures and guidelines (OSG-9 Chpt 1)
+## [1.7](#17-develop-document-and-implement-security-policy-standards-procedures-and-guidelines-osg-9-chpt-1) Develop, document, and implement security policy, standards, procedures and guidelines (OSG-9 Chpt 1)
 
 - To create a comprehensive security plan, you need the following items: security policy, standards, baselines, guidelines, and procedures
 - The top tier of a formalized hierarchical organization security documentation is the security policy
   - **Policy**: docs created by and published by senior management describing organizational strategic goals
   - A security policy is a document that defines the scope of security needed by the org, discussing assets that require protection and the extent to which security solutions should go to provide the necessary protections
   - It defines the strategic security objectives, vision, and goals and outlines the security framework of the organization
-- **Acceptable User Policy**: the AUP is a commonly produced document that exists as part of the overall security documentation infrastructure 
+- **Acceptable User Policy**: the AUP is a commonly produced document that exists as part of the overall security documentation infrastructure
   - This policy defines a level of acceptable performance and expectation of behavior and activity; failure to comply with the policy may result in job action warnings, penalties, or termination
 
 - Security Standards, Baselines and Guidelines: once the main security policies are set, the remaining security docuemntation can be crafted from these policies
   - **Policies**: these are high-level documents, usually written by the management team; policies are mandatory, and a policy might provide requirements, but not the steps for implementation
   - **Standards**: specific mandates explicity stating expections of performance/conformance; more descriptive than policies, standards define compulsary requirements for the homogenous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
   - **Baseline**: defines a minimum level of security that every system throughout the organization must meet; baselines are usually system specific and refer to industry / government standards
-    - e.g. a baseline for  server builds would be a list of configuration areas that should be applied to every server that is built 
+    - e.g. a baseline for  server builds would be a list of configuration areas that should be applied to every server that is built
     - A Group Policy Object (GPO) in a Windows network is sometimes used to comply with standards; configuration management solutions can also help you establish baselines and spot configurations that are not in alignment
   - **Guideline**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users 
     - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not complusory; suggested practices and expectations of activity to best accomplish tasks and goals
   - **Procedure** (AKA Standard Operating Procedure or SOP): detailed, step-by-step how-to doc that describes the exact actions necessary to implement a specific security mechanism, control, or solution
 
-[1.8](#1.8) Identify, analyze, and prioritize Business Continuity (BC) requirements (OSG-9 Chpt 3)
+## [1.8](#18-identify-analyze-and-prioritize-business-continuity-bc-requirements-osg-9-chpt-3) Identify, analyze, and prioritize Business Continuity (BC) requirements (OSG-9 Chpt 3)
 
 - **Business Continuity Planning (BCP)**: involves assessing the risk to organizational processes and creating policies, plans, and procedures to minimize the impact those risks might have on the organization if they were to occur
   - BCP is used to maintain the continuous operation of a business in the event of an emergency, with a goal to implement a combination of policies, procedures, and processes
@@ -310,13 +311,13 @@
     - business impact analysis
     - continuity planning
     - approval and implementation
-  - Business continuity requires a lot of planning and preparation; actual implementation of business continuity processes occur quite infrequently 
+  - Business continuity requires a lot of planning and preparation; actual implementation of business continuity processes occur quite infrequently
   - The primary facets of business continuity are:
-    - Resilience: (e.g. within a data center and between sites or data centers) 
+    - Resilience: (e.g. within a data center and between sites or data centers)
     - Recovery: if a service becomes unavailable, you need to recover it as soon as possible
     - Contingency: a last resort in case resilience and recovery prove ineffective
 
-- BCP vs DR: 
+- BCP vs DR:
   - BCP activities are typically strategically focused at a high level and center themselves on business processes and operations
   - DR plans tend to be more tactical and describe technical activities such as recovery sites, backups, and fault tolerance
 
@@ -334,7 +335,7 @@
       - Next, start with a business continuity policy statement,conduct a business impact analysis (see next item), and then develop the remaining components: 
         - preventive controls
         - relocation
-        - the actual continuity plan 
+        - the actual continuity plan
         - testing
         - training and maintenance
 - 1.8.1 Business Impact Analysis (BIA)
@@ -362,7 +363,7 @@
 
 - The top priority of BCP and DRP is people: **Always prioritize people's safety**; get people out of harm's way, and then address IT recovery and restoration issues
 
-[1.9](#1.9) Contribute to and enforce personnel security policies and procedures (OSG-9 Chpt 2)
+## [1.9](#19-contribute-to-and-enforce-personnel-security-policies-and-procedures-osg-9-chpt-2) Contribute to and enforce personnel security policies and procedures (OSG-9 Chpt 2)
 
 - People are often considered the weakest element in any security solution; no matter what physical or logical controls are deployed, humans can discover ways of to avoid them, circumvent/subvert them, or disable them 
   - Malicious actors are routinely targeting users with phishing and spear phishing campaigns, social engineering, and other types of attacks, and everybody is a target
@@ -401,12 +402,12 @@
     - employees need to be trained on company standards as defined in the security policy and remain in compliance with any contractual obligations (e.g. with PCI DSS)
   - Compliance is a form of administrative or managerial security control
   - **Compliance enforcement**: the application of sanctions or consequences for failing to follow policy, training, best practices, or regulations
-- 1.9.6 Privacy policy requirements    
+- 1.9.6 Privacy policy requirements
   - Personally identifiable information (PII) about employees, partners, contractors, customers and others should be stored in a secure way, accessible only to those who require the information to perform their jobs
   - Orgs should maintain a documented privacy policy outlining the type of data covered by the policy and who the policy applies to 
   - Employees and contractors should be required to read and agree to the privacy policy upon hire and on a regular basis thereafter (such as annually)
 
-[1.10](#1.10) Understand and apply risk management concepts (OSG-9 Chpt 2)
+## [1.10](#110-understand-and-apply-risk-management-concepts-osg-9-chpt-2) Understand and apply risk management concepts (OSG-9 Chpt 2)
 
 - 1.10.1 Privacy policy requirements
   - **Risk Management**: process of identifying factors that could damage or disclose data, evaluating those factors in light of data value and countermeasure cost, and implementing cost-effective solutions for mitigating or reducing risk
@@ -419,7 +420,7 @@
     - **Threat Agent/Actors**: intentionally exploit vulnerabilities
     - **Threat Events**: accidential occurrences and intentinoal exploitations of vulnerabilities
     - **Threat Vectors**: (AKA attack vector) is the path or means by which an attack or attacker can gain access to a target in order to cause harm
-    - **Exposure**: being susceptible to asset loss because of a threat; the potential for harm to occur 
+    - **Exposure**: being susceptible to asset loss because of a threat; the potential for harm to occur
     - **Exposure Factor (EF)**: derived from this concept; an element of quantitative risk analysis that represents the percentage of loss than org would experience if a specific asset were violated by a realized risk
     - **Single Loss Expectancy (SLE)**: an element of quantitative risk analysis that represents the cost associated with a single realized risk against a specific asset; SLE = asset value (AV) * exposure factor (EF)
     - **Annualized rate of occurrence (ARO)**: an element of quantitative risk analysis that represent the expected frequency with which a specific threat or risk will occur within a single year
@@ -463,8 +464,8 @@
     - Bear in mind that security should be designed to support and enable business tasks and functions
       - security controls, countermeasures, and safeguards can be implemented administratively, logically / technically, or physically 
       - these 3 categories should be implemented in a conceptual layered defense-in-depth manner to provide maximum benefit
-      - based on the concept that policies (part of administrative controls) drive all aspects of security and thus form the initial protection layer around assets 
-      - then, logical and technical controls provide protection against logical attacks and exploits 
+      - based on the concept that policies (part of administrative controls) drive all aspects of security and thus form the initial protection layer around assets
+      - then, logical and technical controls provide protection against logical attacks and exploits
       - then, physical controls provide protection against real-world physical attacks against facilities and devices
 - 1.10.5 Applicable types of controls (e.g., preventive, detective, corrective)
   - **Administrative**: the policies and procedures defined by an org's security policy and other regulations or requirements
@@ -476,7 +477,7 @@
     - they can be any controls used in addition to, or in place of, another control
     - they can be a means to improve the effectiveness of a primary control or as the alternative or failover option in the event of a primary control failure
   - **Corrective**: a corrective control modifies the environment to return systems to normal after an unwanted or unauthorized activity as occurred; it attempts to correct any problems resulting from a security incident
-  - **Recovery**: An extension of corrective controls but have more advanced or complex abilities; a recovery control attempts to repair or restore resources, functions, and capabilities after a security policy violation 
+  - **Recovery**: An extension of corrective controls but have more advanced or complex abilities; a recovery control attempts to repair or restore resources, functions, and capabilities after a security policy violation
     - recovery controls typically address more significant damaging events compared to corrective controls, especially when security violations may have occurred
   - **Directive**: A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies
 - 1.10.6 Control assessments (security and privacy)
@@ -485,7 +486,7 @@
     - A report is typically produced to show the outcomes and enable the org to remediate deficiencies 
     - Often, security and privacy control assessment are performed and/or validated by different teams, with the privacy team handling the privacy aspects
 - 1.10.7 Monitoring and measurement
-  - Monitoring and measurement are closely aligned with identifying risks 
+  - Monitoring and measurement are closely aligned with identifying risks
   - While monitoring is used for more than security purposes, monitoring should be tuned to ensure the org is notified about potential security incidents as soon as possible 
   - If a security breach occurs, monitored systems and data become valuable from a forensics perspective; rrom the ability to derive root cause of an incident to making adjustments to minimize the chances of reoccurance 
 - 1.10.8 Reporting
@@ -510,7 +511,7 @@
     - attacks
     - breaches
 
-  - An **Enterprise Risk Management** (ERM) program can be evaluated using an RMM 
+  - An **Enterprise Risk Management** (ERM) program can be evaluated using an RMM
   - **Risk Maturity Model (RMM)**: assesses the key indicators and activities of a mature, sustainable, and repeatable risk management process, typically relating the assessment of risk maturity against a five-level model such as:
     - **Ad hoc**: a chaotic starting point from which all orgs initiate risk management
     - **Preliminary**: loose attempts are made to follow risk management processes, but each department may perform risk assessment uniquely
@@ -518,7 +519,7 @@
     - **Integrated**: risk management operations are integrated into business processes, metrics are used to gather effectiveness data, and risk is considered an element in business strategy decisions
     - **Optimized**: risk management focuses on achieving objectives rather than just reacting to external threats; increased strategic planning is geared toward business success rather than just avoiding incidents; and lessons learned are re-integrated into the risk management process
 - 1.10.10 Risk frameworks
-  - A risk framework is a guide or recipe for how risk is to be accessed, resolved, and monitored 
+  - A risk framework is a guide or recipe for how risk is to be accessed, resolved, and monitored
   - NIST established the **Risk Management Framework** (RMF) and the **Cybersecurity Framework** (CSF): the CSF is a set of guidelines for mitigating organizational cybersecurity risks, based on existing standards, guidelines, and practices
   - The RMF is intended as a risk management process to identify and respond to threats, and is defined in three core, interrelated Special Publications: 
     - SP 800-37 Rev 2, Risk Management Framework for Information Systems and Organizations
@@ -535,7 +536,7 @@
     - See my overview article, [The NIST Risk Management Framework](https://blog.balancedsec.com/p/the-nist-risk-management-framework)
   - There are other risk frameworks, such as the ISO/IEC 31000, ISO/IEC 31004, COSO, Risk IT, OCTAVE, FAIR, and TARA; be familiar with frameworks and their goals
 
-[1.11](#1.11) Understand and apply threat modeling concepts and methodologies (OSG-9 Chpt 1)
+## [1.11](#111-understand-and-apply-threat-modeling-concepts-and-methodologies-osg-9-chpt-1) Understand and apply threat modeling concepts and methodologies (OSG-9 Chpt 1)
 
 - **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed; can be performed as a proactive measure during design and development (aka defensive approach) or as an reactive measure once a product has been deployed (aka adversarial approach)
   - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat 
@@ -578,12 +579,12 @@
   - A: Affected users
   - D: Discoverability
 
-[1.12](#1.12) Apply Supply Chain Risk Management (SRM) concepts (OSG-9 Chpt 1)
+## [1.12](#112-apply-supply-chain-risk-management-srm-concepts-osg-9-chpt-1) Apply Supply Chain Risk Management (SRM) concepts (OSG-9 Chpt 1)
 
 - 1.12.1 Risks associated with hardware, software, and services
-  - **Supply Chain Risk Management (SCRM)**: the means to ensure that all of the vendors or links in the supply chain are: 
-    - reliable, 
-    - trustworthy, 
+  - **Supply Chain Risk Management (SCRM)**: the means to ensure that all of the vendors or links in the supply chain are:
+    - reliable,
+    - trustworthy,
     - reputable organizations that disclose their practices and security requirements to their business partners (not necessarily to the public)
   - Each link in the chain should be responsible and accountable to the next link in the chain; each handoff is properly organized, documented, managed, and audited
     - The goal of a secure supply chain is that the finished product is of sufficient quality, meets performance and operational goals, provides stated security mechanisms, and that at no point in the process was any element counterfeited or subject to unauthorized or malicious manipulation or sabotage
@@ -598,11 +599,12 @@
   - As part of assessment, the minimum security requirements must be established; in some cases, the minimum security requirements are your company’s security requirements, in other cases, new minimum security requirements need to be established 
     - In such scenarios, the minimum security requirements should have a defined period
 - 1.12.4 Service-level requirements
-  - **Service Level Agreements (SLAs)**: companies have SLAs for internal operations (such as how long it takes for the helpdesk to respond to a new ticket), for customers (such as the availability of a public-facing service) and for partner orgs (such as how much support a vendor provides a partner) 
+  - **Service Level Agreements (SLAs)**: companies have SLAs for internal operations (such as how long it takes for the helpdesk to respond to a new ticket), for customers (such as the availability of a public-facing service) and for partner orgs (such as how much support a vendor provides a partner)
+    - Outside entity or vendor agreements should stipulate performance expectations like maximum downtimes and include penalties if the vendor doesn't meet expections
     - All SLAs should be reviewed; a company sometimes has an SLA standard that should be applied, when possible, to the service level agreements as part of working with another company
-      - this can sometimes take time, as the acquiring company might have to support established SLAs until they expire or are up for renewal 
+      - this can sometimes take time, as the acquiring company might have to support established SLAs until they expire or are up for renewal
 
-[1.13](#1.13) Establish and maintain a security awareness, education, and training program (OSG-9 Chpt 2)
+## [1.13](#113-establish-and-maintain-a-security-awareness-education-and-training-program-osg-9-chpt-2) Establish and maintain a security awareness, education, and training program (OSG-9 Chpt 2)
 
 - 1.13.1 Methods and techniques to present awareness and training (e.g., social engineering, phishing, security champions, gamification)
   - Before actual training takes place, user security awareness needs to take place; from there, training, or teaching employees to perform their work tasks and to comply with the security policy can begin
@@ -631,7 +633,7 @@
 - 1.13.2 Program effectiveness evaluation 
   - Time and money must be allocated for evaluating the company’s security awareness and training; the company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email links
 
-Also see my articles on risk management: 
+Also see my articles on risk management:
 
 - [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1)  introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
 - Since the primary goal of risk management is to identify potential threats against an organizaton's assets, and bring those risks into alignment with an organization's risk appetite, in [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2), we cover the threat assessment -- a process of examining and evaluating cyber threat sources with potential system vulnerabilities
