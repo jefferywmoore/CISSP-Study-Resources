@@ -28,6 +28,7 @@
 - **Citizen programmers**: organizational members who codify work-related knowledge, insights, and ideas into (varying degress of) usable software; the process and result is ad hoc, difficult to manage, and usually bereft of security considerations
 - **Code protection/logic hiding**: prevents one software unit from reading/altering the source/intermediate/executable code of another software unit
 - **Code resuse**: reuse of code, rather than re-invented code means units of software (procedures/objects) means higher productivity toward development requirements using correct, complete, safe code
+- **Complete coverage**: testing all of the functions of software
 - **Object/Memory reuse**: systems allocate/release and reuse memory/resources as objects to requesting processes; data remaining in the object when it is reused is a potential security violation (i.e. data remanence)
 - **CORBA**: Common Object Request Broker Architecture is a set of standards addressing interoperability between software and hardware products, residing on different machines across a network; providing object location and use across a network
 - **Configuration Control**: process of controlling modifications to hardware, firmware, software, and documentation to protect the information system against improper modifications prior to, during, and after system implementation
@@ -78,7 +79,7 @@
 - **Ransom attack**: form of attack that threatens destruction, denial, or unauthorized public release/remarketing of private information assets; usually involves encrypting assets and withhold the decryption key until a ransom is paid by the victim
 - **Refactoring**: partial or complete rewrite of a set of software to perform the same functions, but in a more straightforward, more efficient, or more maintainable form
 - **Regression testing**: test a system to ascertain whether recently approved modifications have changed performance of other approved functions or introduced other unauthorized behavior;testing that runs a set of known inputs against an app and compares to results previously produced (by an earlier version of the software)
-- **Relational database model**: data elements and records arragned in tables which are related or linked to each other to implement business logic, where data records of different structures or types are needed together in the same activity
+- **Relational database model**: AKA relational database management system (RDBMS), data elements and records arranged in tables which are related or linked to each other to implement business logic, where data records of different structures or types are needed together in the same activity
 - **Representational State Transfer (REST)**: software architectural style for synchronizing the activities of two or more apps running on different systems on a network; REST facilitiates these processes exchanging state information, usually via HTTP/S
 - **Reputation monitoring**: defensive tactic that uses the trust reputation of a website or IP address as a means of blocking an org's users, processes or systems from connecting to a possible source of malware or exploitations; possibly the only real defense against zero-day exploits; involves monitoring URLs, domains, IP addresses or other similar info to separate untrustworthy traffic
 - **Runtime Application Security Protection (RASP)**: security agents comprised of small code units built into an app which can detect set of security violations; upon detection, the RASP agent can cause the app to terminate, or take other protective actions
@@ -117,7 +118,7 @@
       - the best architectures, requirements, and designs emerge from self-organizing teams
       - at regular intervals, the team reviews their effective and adjusts for improvement
     - Several methodologies have emerged that take these Agile principles and define specific processes around them:
-      - **Scrum**: a management framework that teams use to self-organize and work towards a common goal; it describes a set of meetings, tools, and roles for efficient project delivery, allowing teams to self-manage, learn from experience, and adapt to change; named from the daily team meetings, called scrums
+      - **Scrum**: a management framework that teams use to self-organize and work towards a common goal; it describes a set of meetings, tools, and roles for efficient project delivery, allowing teams to self-manage, learn from experience, and adapt to change; named from the daily team meetings, called scrums; development focuses on short sprints that deliver finished products; integrated product teams (IPTs) were an early effort of this approach
       - **Kanban**: a visual system used to manage and keep track of work as it moves through a process; the word kanban is Japanese for "card you can see"; Kanban teams focus on reducing the time a project (or user story) takes from start to finish, using a kanban board and continuously improving their flow of work
       - **Rapid Application Development (RAD)**: an agile software development approach that focuses more on ongoing software projects and user feedback and less on following a strict plan, emphasizing rapid prototyping over planning; RAD uses four phases: requirements planning, user design, construction, and cutover
       - **Rational Unified Process (RUP)**: an agile software development methodology that splits the project life cycle into four phases:
@@ -157,16 +158,42 @@
     - DevSecOps supports the concept of software-defined security, where security controls are actively managed into the CI/CD pipeline
 
 - 8.1.2 Maturity models (e.g., Capability Maturity Model (CMM), Software Assurance Maturity Model (SAMM))
+  - Maturity models help software organizations improve the maturity and quality of their software processes by implementing an evolutionary path from ad hoc, chaotic processes to mature, disciplined processes
+  - NOTE: be able to describe the SW-CMM, IDEAL, and SAMM models
   - Software Engineering Institute (SEI) (Carnegie Mellon University) created the Capability Maturity Model for Software (AKA Software Capability Maturity Model, abbreviated SW-CMM, CMM, or SCMM)
     - **SW-CMM**: a management process to foster the ongoing and continuous improvement of an org's processes and workflows for developing, maintaining and using software
     - all software development moves through a set of maturity phases in sequential fashion, and CMM describes the principles and practices underlying software process maturity, intended to help improve the maturity and quality of software processes
     - note that CMM doesn't explicitly address security
     - stages of the CMM:
       - Level 1: Initial: process is disorganized; usually little or no defined software development process
+        - no KPIs
+        - processes are ad-hoc, and immature
+        - no basis for predicting project quality, time to completion etc
+        - limited project management
+        - limited software dev tools or automation
+        - highly dependent on individual's skills and knowledge
       - Level 2: Repeatable: in this phase, basic lifecycle management processes are introduced
+        - focus on establishing basic project management policies
+        - project planning
+        - configuration management
+        - requirements management
+        - sub-contract management
+        - software quality assurance
       - Level 3: Defined: in this phase, software devs operate according to a set of formal, documented software development processes; marked by the presence of basic lifecycle management processes and reuse of code; includes the use of requirements management, software project planning, quality assurance, and configuration management
+        - documentation of standard guidelines and procedures takes place
+        - peer reviews
+        - intergroup coordination
+        - org process definition
+        - org process focus
+        - training programs
       - Level 4: Managed: in this phase, there is better management of the software process; characterized by the use of quantitative software development measures
+        - quantitative goals are set for software products and process
+        - software quality management
+        - quantitative management
       - Level 5: Optimizing: in this phase continuous improvement occurs
+        - process change management
+        - technology change management
+        - defect prevention
   - **Software Assurance Maturity Model (SAMM)**: an open source project maintained by the Open Web Application Security Project (OWASP)
     - provides a framework for integrating security into the software development and maintenance processes and provides orgs with the ability to assess their maturity
     - SAMM associates software development with 5 business functions:
@@ -230,7 +257,7 @@
     - **Release Control**: once changes are finalized, they must be approved for release through the release control procedure
       - one of the responsibilities of release control is ensuring that the process includes acceptance testing, confirming that any alterations to end-user work tasks are understood and functional prior to code release
 - 8.1.5 Integrated Product Team (IPT)
-  - **Integrated Product Team (IPT)**: Introduced by the DoD as an approach to bring together multifunctional teams with a single goal of delivering a product or developing a process or policy, and fostering parallel, rather than sequential, decisions
+  - **Integrated Product Team (IPT)**: Introduced by the US Department of Defense (DoD) as an approach to bring together multifunctional teams with a single goal of delivering a product or developing a process or policy, and fostering parallel, rather than sequential, decisions
   - Essentially, IPT is used to ensure that all aspects of a product, process, or policy are considered during the development process
 
 ## [8.2](#82-identify-and-apply-security-controls-in-software-development-ecosystems-osg-9-chpts-15172021) Identify and apply security controls in software development ecosystems (OSG-9 Chpts 15,17,20,21)
@@ -274,7 +301,7 @@
   - **Software library**: a pre-written collection of components (classes, procedures, scripts etc) that do specific tasks, useful to other components (e.g. software libraries for encryption algorithms, managing network connections, or displaying graphics)
   - Shared software libraries contain reusable code, improving developer's efficiency, and reducing the need to write well-known algorithms from scratch; often available as open source
     - shared libraries can also include many security issues (e.g. Heartbleed), and devs should be aware of the origins of the shared code that they use, and keep informed about any security vulns that might be discovered in these libraries
- 
+
 - 8.2.3 Tool sets
   - Forcing all devs to use the same toolset can reduce productivity and job satisfaction; however letting every dev choose their own tools and environment widens an organization's attack surface
     - a better approach is to use a change advisory board to validate developer tool requirements, assess associated risks; if approved, the sec team monitors controls
@@ -297,7 +324,7 @@
   - Secure practices such as threat modeling, least privilege, defense in depth, and zero trust can help reduce possible threats to these tools and systems
 
 - 8.2.7 Security Orchestration, Automation, and Response (SOAR)
-  - **Security Orchestration, Automation, and Response (SOAR)**: refers to a group of technologies that allow orgs to respond to some incidents automatically
+  - **Security Orchestration, Automation, and Response (SOAR)**: refers to a group of technologies that allow orgs to respond to some incidents automatically; SOAR tech automates responses t oincidents; a primary benefit is that this reduces the workload of admins, and it removes/reduces the possibility of human error by having a computer/system respond
   - **Playbook**: a document or checklist that defines how to verify an incident
   - **Runbook**: implements the playbook data into an automated tool
   - SOAR allows security admins to define these incidents and the response, typically using playbooks and runbooks
@@ -308,6 +335,11 @@
   - **Software Configuration Management (SCM)**: a product that identifies the attributes of software at various points in time and performs methodical change control for the purpose of maintaining software integrity and traceability throughout the SDLC
     - SCM tracks config changes, and verifies that the delivered software includes all approved changes
     - SCM systems manage and track revisions made by multiple people against a single master software repository, providing concurrency management, versioning, and synchronization
+    - auditing and logging of software changes mitigates risk to the organization by:
+      - providing a detailed record of all modifications made to software applications
+      - allowing security teams to identify suspicious activity
+      - quickly detect unauthorized changes and investigate potential security breaches
+      - and take corrective actions, ultimately protecting the integrity and confidentiality of the org's data and systems
 
 - 8.2.9 Code repositories
   - Software development is a collaborative effort, and larger projects require teams of devs working simultaneously on different parts

@@ -27,6 +27,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Fog computing**: advanced computational architecture often used as an element in IIoT; fog computing relies on sensors, IoT devices, or edge computing devices to collect data, then transfers it back to a central location for processing (centralizing processing and intelligence)
 - **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the ciphertext as a way of reducing the search space
 - **Hybrid encryption system**: a system that uses both symmetric and asymmetric encryption
+- **International Data Encryption Algorithm (IDEA)**: IDEA is a form of symmetric key block cipher encryption that uses a 128-bit key and operates on 64-bit blocks; it encrypts a 64-bit block of plaintext into a 64-bit block of ciphertext, and the input plaintext block is divided into four subblocks of 16 bits each
 - **Key**: the input that controls the operation of the cryptographic algorthm, determining the behavior of the algorithm and permits the reliable encyrption and decryption of the message
 - **Key pair**: matching set of one public and one private key
 - **Key escrow**: process by which keys (asymmetric or symmetric) are placed in a trusted storage agent's custody, for later retrieval
@@ -44,6 +45,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Pepper**: a large constant number used to increase the security of the hashed password further; it is stored outside of the database holding the hashed passwords
 - **Personal electronic device (PED)** security features can usually be managed using mobile device management (MDM) or unified endpoint management (UEM) solutions, including device authentication, full-device encryption, communication protection, remote wiping, communication protection, device lockout, screen locks, GPS and location services, content management, app control, push notification management, third-party app store control, rooting/jailbreaking, credential management and more
 - **Plaintext**: message or data in its readable form, not turned into a secret
+- **Remote attestation**: feature of the TPM (Trusted Platform Module) that creates a hash value from the system configuration to confirm the integrity of the configuration
 - **RTOS**: real-time operating system (RTOS) is an operating system specifically designed to manage hardware resources and run applications with precise timing and high reliability; they are designed to process data with minimum latency; an RTOS is often stored on ROM; they use deterministic timing, meaning tasks are completed within a defined time frame and is designed to operate in a hard (i.e. missing a deadline can cause system failure) or soft (missing a deadline degrades performance but is not catastrophic) real-tme condition
 - **Salting**: adds additional bits to a password before hashing it, and helps thwart rainbow attacks; algorithms like Argon2, bcrypt, and PBKDF2 add salt and repeat the hashing function many times; salts are stored in the same database as the hashed password
 - **Salting vs key stretching**: salting adds randomness and uniqueness to each password before hashing, which reduces the effectiveness of rainbow table attacks; key stretching makes the hashing process deliberately slow, making it much more challenging for attackers to crack passwords using brute-force or precomputed tables; common password hashing algorithms that use key stretching include PBKDF2, bcrypt, and scrypt
@@ -62,8 +64,17 @@ You may find this domain to be more technical than others, and if you have exper
 
 ## [3.1](#31--research-implement-and-manage-engineering-processes-using-secure-design-principles-osg-9-chpts-18916)  Research, implement, and manage engineering processes using secure design principles (OSG-9 Chpts 1,8,9,16)
 
+- Standard **secure design principles** are:
+  - Least privilege
+  - Secure defaults
+  - Fail securely
+  - Threat modeling
+  - Keep it simple
+  - Separation of duties
+  - Zero trust
+  - Privacy by design
 - 3.1.1 Threat Modeling
-  - **Threat modeling**: a security process where potential threats are identified, categorized, and analyzed; it can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed
+  - **Threat modeling**: (see Domain 1), a security process where potential threats are identified, categorized, and analyzed; it can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed
     - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat
     - Threat modeling commonly involves decomposing the app to understand it and how it interacts with other components or users; idnetifying and ranking threats allows potential threats to be propritized; dentifying how to mitigate those threats finishes the process
 - 3.1.2 Least Privilege
@@ -82,7 +93,7 @@ You may find this domain to be more technical than others, and if you have exper
     - e.g. one person sells tickets, another collects tickets and restricts access to ticket holders in a movie theater
 - 3.1.7 Keep it simple
   - **Keep it simple**: AKA keep it simple, stupid (KISS), this concept is the encouragement to avoid overcomplicating the environment, organization, or product design
-    3.1.8 Zero Trust
+- 3.1.8 Zero Trust
   - **Zero Trust**: "assume breach"; a security concept and alternative of the traditional (castle/moat) approach where nothing is automatically trusted; instead each request for activity or access is assumed to be from an unknown and untrusted location until otherwise verified
     - "Never trust, always verify" replaces "trust but verify" as a security design principle by asserting that all activities by all users/entities must be subject to control, authentication, authorization, and management at the most granular level possible
     - Goal is to have every access request authenticated, authorized, and encrypted prior to access being granted to an asset or resource
@@ -237,6 +248,8 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 - 3.5.3 Database systems
   - Databases often store a company's most sensitive data (e.g. proprietary, CC info, PHI, and PII)
+  - **Cardinality**: refers to the number of rows in a table
+  - **Degree**: refers to the number of columns in a table
   - Database general ACID properties (Atomicity, Consistency, Isolation and Durability):
     - Atomicity: transactions are all-or-nothing; a transaction must be an atomic unit of work, i.e., all of its data modifications are performed, or none are performed
     - Consistency: transactions must leave the database in a consistent state
@@ -349,6 +362,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - reduce the attack surface by minimizing the number of components in each container, and update and scan them frequently
 - 3.5.11 Serverless
   - **Serverless architecture** (AKA **function as a service (FaaS)**): cloud computing where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the CSP
+    - Note that FaaS is a subcategory of PaaS
     - Applications developed on serverless architecture are similar to microservices, and each function is created to operate independently and automonomously
     - A serverless model, as in other CSP models, is a shared security model,and your org and the CSP share security responsibility
 

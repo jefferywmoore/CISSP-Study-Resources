@@ -27,6 +27,7 @@
 - **Compliance Tests**: an evaluation that determines if an org's controls are being applied according to management policies and procedures
 - **Penetration Testing/Ethical Penentration Testing**: security testing and assessment where testers actively attempt to circumvent/defaut a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
 - **Examination**: process of reviewing/inspecting/observing/studying/analyzing specs/mechanisms/activities to understand, clarify, or obtain evidence
+- **Federal Risk and Authorization Management Program FedRAMP)**: a government-wide program that standardizes the security assessment, authorization, and monitoring of cloud services and products; the program was established in 2011 to help the federal government use cloud technologies while protecting federal information
 - **Findings**: results created by the application of an assessment procedure
 - **Functional order of controls**: deter, deny, detect, delay, deterimine, and decide
 - **Fuzzing**: uses modified inputs to test sofware performance under unexpected circumstances; mutation fuzzing modifies known inputs to generate synthetic inputs that may trigger unexpected behavior; generational fuzzing develops inputs based on models of expected inputs to perform the same task
@@ -98,7 +99,7 @@
       - **Common Vulnerability Scoring Systems (CVSS)**: provides a standardized scoring system for describing the severity of security vulnerabilities; it includes metrics and calc tools for exploitability, impact, how mature exploit code is, and how vulnerabilities can be remediated, and a means to score vulns against users' unqiue requirements
       - **Common Configuration Enumeration (CCE)**: provides a naming system for system config issues
       - **Common Platform Enumeration (CPE)**: provides a naming system for operating systems, applications, and devices
-      - **Extensible Configuration Checklist Description Format (XCCDF)**: provides a language for specifying security checklists
+      - **eXtensible Configuration Checklist Description Format (XCCDF)**: provides a language for specifying security checklists
       - **Open Vulnerability and Assessment Language (OVAL)**: provides a language for describing security testing procedures; used to describe the security condition of a system
   - Vulnerability scans automatically probe systems, applications, and networks looking for weaknesses that could be exploited by an attacker
     - flaws may include missing patches, misconfigurations, or faulty code
@@ -124,7 +125,7 @@
     - **reporting**: summarizes the results of the pen testing and makes recommendations for improvements to system security
   - tests are normally categorized into three groups:
     - **white-box penetration test**:
-      - provides the attackers with **detailed information** about the systems they target
+      - white box provides the attackers with **detailed information** about the systems they target
       - this bypasses many of the reconnaissance steps that normally precede attacks, shortening the time of the attack and increasing the likelihood that it will find security flaws
       - these tests are sometimes called "**known environment**" tests
       - in white-box testing, the tester has access to the source code and performss testing from a developer's perspective
@@ -140,6 +141,9 @@
 
 - 6.2.3 Log reviews
   - **Security Information and Event Management (SIEM)**: packages that collect information using the syslog functionality present in many devices, operating systems, and applications
+  - Log data is recorded in databases; common logs include:
+    - security, application, firewall, proxy, and change management logs
+  - Log files should be protected by centrally storing them and using permissions to restrict access, and archived logs should be set to read-only to prevent modification
   - Admins may choose to deploy logging policies through Windows Group Policy Objects (GPOs)
   - Logging systems should also make use of the Network Time Protocol (NTP) to ensure that clocks are synchronized on systems sending log entries to the SIEM as well as the SIEM itself, ensuring info from multiple sources have a consistent timeline
   - Information security managers should also periodically conduct log reviews, particularly for sensitive functions, to ensure that privileged users are not abusing their privileges
@@ -268,6 +272,8 @@
 - 6.3.6 Disaster Recover (DR) and Business Continuity (BC)
   - **Business Continuity (BC)**: the processes used by an organization to ensure, holistically, that its vital business processes remain unaffected or can be quickly restored following a serious incident
   - **Disaster Recovery (DR)**: is a subset of BC, that focuses on restoring information systems after a disaster
+    - these programs should take a comprehensive approach to planning and include considerations related to the initial response effort, personnel involved, communication among the team members and with internal and external entities, assessment of response efforts, and restoration of services
+    - DR programs should also include training and awareness efforts to ensure personnel understand their responsibilities and lessons learned sessions to continuously improve the program
   - These processes need to be periodically accessed, and regular testing of disaster recovery and business continuity controls provide organizations with the assurance they are effectively protected against disruptions to business ops
   - Protection of life is of the utmost importance and should be dealt with first before attempting to save material things
 

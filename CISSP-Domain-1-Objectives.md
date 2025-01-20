@@ -3,7 +3,11 @@
 - **Glass-Steagall Act**: passed in 1933 and separated investment and commercial banking activities in response to involvement in stock market investment
   - The Gramm-Leach-Bliley Act eliminated the Glass-Steagall Act's restrictions against affiliations between commercial and investment banks in 1999
   - **Security Control Assessment (SCA)**: an evaluation process of the different type of controls such as management, operational and security control within an information system, with the purpose of validation of the requirement of a control, correct implementation, operationally being followed as intended, and result is as desired
-    - basically a formal evaluation of a defined set of controls, which may be conducted with the Security Test and Evaluation (ST&E); NIST Special Publication 800-53A Security and Privacy Controls for Federal Information Systems and Organizations ensure the security requirements and enforcement of appropriate security controls
+    - basically a formal evaluation of a defined set of controls against a baseline or reliability expectation; may be conducted with the Security Test and Evaluation (ST&E); NIST Special Publication 800-53A Security and Privacy Controls for Federal Information Systems and Organizations ensure the security requirements and enforcement of appropriate security controls
+    - goals of SCA:
+      - ensure the effectiveness of the security mechanisms
+      - evaluate the quality and thoroughness of the risk management processes of the org
+      - produce a report of the relative strengths and weaknesses of the deployed security infrastructure
 - [RFC 1087](https://datatracker.ietf.org/doc/html/rfc1087): activitiy that is unethical and unacceptable:
   - (a) seeks to gain unauthorized access to the resources of the Internet
   - (b) disrupts the intended use of the Internet
@@ -18,20 +22,20 @@
   - (ISC)² Code of Professional Ethics -- take the time to read the [code of ethics](https://www.isc2.org/Ethics)
   - At a minimum, know and understand the ethics canons:
     - **Protect society, the common good, necessary public trust and confidence, and the infrastructure**
-      - this is “do the right thing”; put the common good ahead of yourself 
+      - this is “do the right thing”; put the common good ahead of yourself
       - ensure that the public can have faith in your infrastructure and security
     - **Act honorably, honestly, justly, responsibly, and legally**
-      - always follow the laws 
+      - always follow the laws
       - but if you find yourself working on a project where conflicting laws from different countries or jurisdictions apply, you should prioritize the local jurisdiction from which you are performing the services
-    - **Provide diligent and competent service to principles** 
-      - avoid passing yourself as an expert or as qualified in areas that you aren’t 
+    - **Provide diligent and competent service to principles**
+      - avoid passing yourself as an expert or as qualified in areas that you aren’t
       - maintain and expand your skills to provide competent services
     - **Advance and protect the profession**
-      - don’t bring negative publicity to the profession 
-      - provide competent services, get training and act honorably 
+      - don’t bring negative publicity to the profession
+      - provide competent services, get training and act honorably
       - think of it like this: If you follow the first three canons in the code of ethics, you automatically comply with this one
 - 1.1.2 Organizational code of ethics
-  - You must also support ethics at your organization; this can be interpreted to mean evangelizing ethics throughout the organization, providing documentation and training around ethics, or looking for ways to enhance the existing organizational ethics 
+  - You must also support ethics at your organization; this can be interpreted to mean evangelizing ethics throughout the organization, providing documentation and training around ethics, or looking for ways to enhance the existing organizational ethics
     - some organizations might have slightly different ethics than others, so be sure to familiarize yourself with your org’s ethics and guidelines
 
 ## [1.2](#12-understand-and-apply-security-concepts-osg-9-chpt-1) Understand and apply security concepts (OSG-9 Chpt 1)
@@ -118,14 +122,14 @@
   - A **security control framework**: outlines the org's approach to security, including a list of specific security processes, procedures, and solutions used; it is important in planning the structure of an org's security solution; many frameworks to choose from, such as:
     - COBIT Control Objectives for Information and Related Technology ("moderately referenced" on the exam):
       - COBIT is a documented set of best IT security practices by ISACA; a "security concept infrastructure" used to organize the complex security solutions of companies
-        - COBIT is commonly used as an audit framework for orgs
+        - COBIT is commonly used as an *audit/compliance* framework for orgs
         - Six key principles:
           - provide stakeholder value
           - holistic approach
           - dynamic governance system
           - governance distinct from management
           - tailored to enterprise needs
-          - end-to-end governance system   
+          - end-to-end governance system
     - ISO 27000 series (27000, 27001, 27002, etc.). 
     - NIST **CyberSecurity Framework (CSF)**
       - designed for commerical orgs and critical infrastructure, CSF 1.1 consists of five functions:
@@ -144,8 +148,8 @@
 - 1.3.5 Due care/due diligence
   - **Due diligence**: establishing a plan, policy, and process to protect the interests of the organization; due diligence is knowing what should be done and planning for it; understanding your security governance principles (policies and procedures) and the risks to your organization; actions taken by a vendor to demonstrate or provide due care
     - Due diligence often involves:
-      - gathering information through discovery, risk assessments and review of existing documentation 
-      - developing a formalized security structure containing a security policy, standards, baselines guidlines, and procedures 
+      - gathering information through discovery, risk assessments and review of existing documentation
+      - developing a formalized security structure containing a security policy, standards, baselines guidlines, and procedures
       - documentation to establish written policies
       - disseminating the information to the organization
   - **Due care**: practicing the individual activities that maintain the due diligence effort; due care is about your legal responsibility within the law or within org policies to implement your org’s controls, follow security policies, do the right thing and make reasonable choices
@@ -163,9 +167,11 @@
     - **Administrative law**: used by government agencies to effectively carry out their day-to-day business
   - **Compliance**: Organizations may find themselves subject to a wide variety of laws, and regulations imposed by regulatory agencies or contractual obligation
     - **Payment Card Industry Data Security Standard (PCI DSS)** - governs the security of credit card information and is enforced through the terms of a merchant agreement between a business that accepts CC payments, and the bank that processes the business' transactions
-    - **Sarbanes-Oxley (SOX)** - financial systems may be audited to ensure security controls are sufficient to ensure compliance with SOX
+    - **Sarbanes-Oxley (SOX)**: governs publicly traded corps; financial systems may be audited to ensure security controls are sufficient to ensure compliance with SOX
+      - violations include criminal penalties
     - **Gramm-Leach-Bliley Act (GLBA)** - affects banks, insurance companies, and credit providers; included a number of limitations on the types of information that could be exchanged even among subsidiaries of the same corp, and required financial institutions to provide written privacy policies to all their customers
     - **Health Insurance Portability and Accountability Act (HIPAA)** - privacy and security regulations requiring strict security measures for hospitals, physicians, insurance companies, and other organizations that process or store private medical information about individuals; also clearly defines the rights of individuals who are the subject of medical records and requires organizations that maintain such records to disclose these rights in writing
+      - includes criminal penalties for violations
     - **Federal Information Security Management Act (FISMA)** - requires federal agencies to implement an information security program that covers the agency's operations and contractors
     - **Computer Fraud and Abuse Act (CFAA)** (as amended) - protects computers used by the government or in interstate commerce from a variety of abuses
     - **Electronic Communications Privacy Act (ECPA)** - in short, makes it a crime to invade the electronic privacy of an individual; passed in 1986 to expand and revise federal wiretapping and electronic eavesdropping provisions, making it a crime to intercept or procure electronic communications, and includes important provisions that protect a person’s wire and electronic communications from being intercepted by another private individual
@@ -179,7 +185,7 @@
     - Storage Limitation
     - Security
     - Accountability
-  - Personal Information Protection and Electronic Documents Act (PIPEDA): Canadian law that governs the use of personal information
+  - **Personal Information Protection and Electronic Documents Act (PIPEDA)**: Canadian law that governs the use of personal information
   - California Consumer Privacy Act (CCPA)
   - Be familiar with the EU Data Protection Directive
   - Be familiar with the requirements around healthcare data, credit card data and other PII data as it relates to various countries and their laws and regulations
@@ -206,7 +212,7 @@
   - **Patents**: provide protection to the creators of new inventions; a temporary monopoly for producing a specific item such as a toy, which must be novel and unique to qualify for a patent
     - **Utility**: protect the intellectual property rights of inventors
     - **Design**: cover the appearance of an invention and last for 15 years; note design patents don't protect the idea of an invention only its form, and are generally seen as weaker
-    - Software: area of on-going controversy; Google vs Oracle; given to rise of "patent trolls"
+    - Software: area of on-going controversy; Google vs Oracle; given to a rise of "patent trolls"
   - **Copyright**: protects original works of authoriship, such as books, articles, poems, and songs; exclusive use of artistic, musical or literary works which prevents unauthorized duplication, distribution or modification
   - **Licensing**: a contract between the software producer and the consumer which limits the use and/or distribution of the software
   - **Trade Secrets**: trade secret laws protect the operating secrets of a firm; trade secrets are intellectual property that is critical to a business, and significant damage would result if it were disclosed to competitors or the public; the Economic Espionage Act imposes fines and jail sentences on someone found guilty of stealing trade secrets from a US corp
@@ -227,7 +233,7 @@
   - HITECH: see above
   - California SB 1386 (2002): immediate disclosure to individuals for PII breach
   - **California Consumer Privacy Act (CCPA)**: The CCPA applies to: 
-    - For-profit businesses that collect consumers’ personal information (or have others collect personal information for them), 
+    - For-profit businesses that collect consumers’ personal information (or have others collect personal information for them)
     - Determine why and how the information will be processed
     - Do business in California and meet any of the following:
       - have a gross annual revenue > $25 million;
@@ -421,8 +427,8 @@
     - **Threat Events**: accidential occurrences and intentinoal exploitations of vulnerabilities
     - **Threat Vectors**: (AKA attack vector) is the path or means by which an attack or attacker can gain access to a target in order to cause harm
     - **Exposure**: being susceptible to asset loss because of a threat; the potential for harm to occur
-    - **Exposure Factor (EF)**: derived from this concept; an element of quantitative risk analysis that represents the percentage of loss than org would experience if a specific asset were violated by a realized risk
-    - **Single Loss Expectancy (SLE)**: an element of quantitative risk analysis that represents the cost associated with a single realized risk against a specific asset; SLE = asset value (AV) * exposure factor (EF)
+    - **Exposure Factor (EF)**: derived from this concept; an element of quantitative risk analysis that represents the percentage of loss that an org would experience if a specific asset were violated by a realized risk
+    - **Single Loss Expectancy (SLE)**: an element of quantitative risk analysis that represents the cost associated with a single realized risk against a specific asset; SLE = asset value (AV) * exposure factor (EF); a metric that represents the magnitude of loss or impact that a threat could have on a system or data, quantified as a percentage of loss that a realized threat would have on a specific asset; e.g. an EF of 0.2 (or 20%) for a specific threat would indicate that a realization of that threat would result in a loss of 20% of the asset’s value
     - **Annualized rate of occurrence (ARO)**: an element of quantitative risk analysis that represent the expected frequency with which a specific threat or risk will occur within a single year
     - **Annualized loss expectancy (ALE)**: an element of quantitative risk analysis that represent the possible yearly cost of all instances of a specific realized threat against a specific asset; ALE = SLE * ARO
     - **Safeguard evaluation**: ALE for an asset if a safeguard is implemented; ALE before safeguard - ALE with safeguard - annual cost of safeguard, or (ALE1 - ALE2) - ACS
@@ -534,12 +540,13 @@
       - **Authorize** the system or common controls based on a determination that the risk to organizational operations and assets, individuals, and other organizations, and the nation is acceptable
       - **Monitor** the system and associated controls on an on-going basis to include assessing control effectiveness, documenting changes to the system and environment of operation, conducting risk assessments and impact analysis, and reporting the security and privacy posture of the system
     - See my overview article, [The NIST Risk Management Framework](https://blog.balancedsec.com/p/the-nist-risk-management-framework)
-  - There are other risk frameworks, such as the ISO/IEC 31000, ISO/IEC 31004, COSO, Risk IT, OCTAVE, FAIR, and TARA; be familiar with frameworks and their goals
+  - There are other risk frameworks, such as the ISO/IEC 31000, ISO/IEC 31004, COSO's ERM, ISACA's Risk IT, OCTAVE, FAIR, and TARA (transfer, avoid, reduce, and accept); be familiar with frameworks and their goals
 
 ## [1.11](#111-understand-and-apply-threat-modeling-concepts-and-methodologies-osg-9-chpt-1) Understand and apply threat modeling concepts and methodologies (OSG-9 Chpt 1)
 
-- **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed; can be performed as a proactive measure during design and development (aka defensive approach) or as an reactive measure once a product has been deployed (aka adversarial approach)
-  - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat 
+- **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed; can be performed as a **proactive** measure during design and development (aka **defensive approach**) or as an **reactive** measure once a product has been deployed (aka **adversarial approach**)
+  - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat
+- [**MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge)**](https://attack.mitre.org/): a comprehensive framework with a globally accessible knowledge base that documents real-world tactics, techniques, and procedures (TTPs) used by cyber adversaries; it is widely used by organizations to improve threat detection, incident response, and cybersecurity defenses; ATT&CK is used as a default model in many software packages
 - Microsoft uses the **Security Development Lifecycle** (SDL) with the motto: "Secure by design, secure by default, secure in deployment and communication" 
   - It has two objectives:
     - Reduce the number of security-related design and coding defects
@@ -551,7 +558,7 @@
   - Tampering: any action resulting in unauthorized changes or manipulation of data, whether in transit or in storage
   - Repudiation: the ability of a user or attacker to deny having performed an action or activity by maintaining plausible deniability
   - Information Disclosure: the revelation or distribution of private, confidential, or controlled information to external or unauthorized entities
-  - Denial of Service (DoS): an attack that attempts to prevent authorized use of a resource; this can be done through flaw exploitation, connection overloading, or traffic flooding
+  - **Denial of Service (DoS)**: an attack that attempts to prevent authorized use of a resource; this can be done through flaw exploitation, connection overloading, or traffic flooding; for example, a SYN flood is a DoS attack that disrupts the TCP three-way handshake
   - Elevation of privilege: an attack where a limited user account is transformed into an account with greater privileges, powers, and access
   - STRIDE is threat categorization model; threat categorization is an important part of app threat modeling
 - **Process for Attack Simulation and Threat Analysis (PASTA)**: a seven-stage threat modeling methodology:
@@ -578,6 +585,10 @@
   - E: Exploitability
   - A: Affected users
   - D: Discoverability
+- Threat intelligence feed standards include:
+  - **CAPEC (Common Attack Pattern Enumeration and Classification)**: a dictionary of known attack patterns
+  - **STIX (Structured Threat Information eXpression language)**: used to describe threats in a standardized way
+  - **TAXII (Trusted Automated eXchange of Indicator Information)**: defines how threat information can be shared and exchanged
 
 ## [1.12](#112-apply-supply-chain-risk-management-srm-concepts-osg-9-chpt-1) Apply Supply Chain Risk Management (SRM) concepts (OSG-9 Chpt 1)
 
@@ -603,6 +614,8 @@
     - Outside entity or vendor agreements should stipulate performance expectations like maximum downtimes and include penalties if the vendor doesn't meet expections
     - All SLAs should be reviewed; a company sometimes has an SLA standard that should be applied, when possible, to the service level agreements as part of working with another company
       - this can sometimes take time, as the acquiring company might have to support established SLAs until they expire or are up for renewal
+  - **Service Level Requirement (SLR)**: a statement of expectations of service and performance from a product or service
+  - **Business Partner Agreement (BPA)**: a contract between two entities dictating the terms of their business relationship
 
 ## [1.13](#113-establish-and-maintain-a-security-awareness-education-and-training-program-osg-9-chpt-2) Establish and maintain a security awareness, education, and training program (OSG-9 Chpt 2)
 
@@ -615,10 +628,11 @@
     - Training should be mandatory and provided both to new employees and yearly (at a minimum) for ongoing training 
     - Routine tests of operational security should be performed (such as phishing test campaigns, tailgating at company doors and social engineering tests)
     - **Social engineering**: a form of attack that exploits human nature and behavior; the common social engineering principles are authority, intimidation, consensus, scarcity, familiarity, trust, and urgency;
+      - **familiarity**: as a social engineering principle, an attempt to exploit someone's native trust in things that are familiar; might include claiming to know a coworker (existing or not), and designed to put the target in a mindset that promotes willingness to provide info
       - social engineering attacks include phishing, spear phishing, business email compromise (BEC), whaling, smishing, vishing, spam, shoulder surfing, invoice scams, hoaxes, impersonation, masquerading, tailgating, piggybacking, dumpster diving, identity fraud, typo squatting, and influence campaigns
       - while many orgs don’t perform social engineering campaigns (testing employees using benign social engineering attempts) as part of security awareness, it is likely to gain traction
       - outside of campaigns, presenting social engineering scenarios and information is a common way to educate
-    - Phishing: phishing campaigns are popular, and many orgs use third-party services to routinely test their employees with fake phishing emails 
+    - Phishing: phishing campaigns are popular, and many orgs use third-party services to routinely test their employees with fake phishing emails
       - such campaigns produce valuable data, such as the percentage of employees who open the phishing email, the percentage who open attachments or click links, and the percentage who report the fake phishing email as malicious
     - Security champions: the term "champion" has been gaining ground; orgs often use it to designate a person on a team who is a subject matter expert in a particular area or responsible for a specific area
       - e.g. somebody on the team could be a monitoring champion — they have deep knowledge around monitoring and evangelize the benefits of monitoring to the team or other teams

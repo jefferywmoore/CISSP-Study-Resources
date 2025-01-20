@@ -18,6 +18,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **Access Control System**: ensuring access to assets is authorized and restricted based on business and security requirements
 - **Access Control Token**: based on the parameters like time, date, day etc a token defines access validity to a system
 - **ADFS**: identity access solution that provides client computers (internal or external to your network) with seamless SSO access to protected Internet-facing applications or services, even when the user accounts and applications are located in completely different networks or orgs
+- **Cache poisoning**: adding content to cache that wasn't an intended element (of say a web page); once poisoned, a legit web doc can call on a cached item, activating the malicious cache
 - **Capability tables**: list privileges assigned to subjects and identify the objects that subjects can access
 - **CAS**: Central Authentication Service (an SSO implementation)
 - **Content-dependent control**: Content-dependent access control adds additional criteria beyond identification and authentication: the actual content the subject is attempting to access; all employees of an org may have access to the HR database to view their accrued sick time and vacation time, but should an employee attempt to access the content of the CIO's HR record, access is denied
@@ -29,10 +30,12 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **Ethical Wall**: the use of administrative, physical/logical controls to establish/enforce separation of information, assets or job functions for need-to-know boundaries or prevent conflict of interest situations; AKA compartmentalization
 - **Granularity of controls**: level of abstraction or detail which in a security function can be configured or tuned for performance and sensitivity
 - **IDaaS**: cloud-based service that broker IAM functions to target systems on customers' premise and/or in the cloud
-- **Identity proofing**: process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person; identity proofing includes knowledge-based authentication and cognitive passwords, where a user is asked a series of questions that only they would know
+- **Identity proofing**: proving ussers are who they claim to be;process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person; identity proofing includes knowledge-based authentication and cognitive passwords, where a user is asked a series of questions that only they would know
+- **Knowledge-based authentication (KBA)**: process of asking a user a series of questions based on their history that is recorded in authoritative sources; e.g. a bank asks a customer a series of questions about past addresses they've lived, and current payment amounts for car/mortgage
 - **Objects**: things a subject accesses, such as files; a user is a subject who accesses objects while performing some action or accomplishing a task
 - **Passwords authentication**: the weakest form of authentication, but password policies help increase security by enforcing complexity and history requirements
 - **Self-service identity management**: elements of the identity management lifecycle which the end-user (identity in question) can initiate or perform on their own (e.g. password reset, changes to challenge questions etc)
+**Split-response attack**: attack that causes the client to download content that was not an intended element of a requested web page, storing it in browser cache
 - **Subject**: actice entities, such as users, that access passive objects
 - **Whaling attack**: phishing attack targeting highly-placed officials/private individuals with sizeable assets authorizing large-fund wire transfers
 - **XSS**: Cross-Site Scripting (XSS) essentially uses reflected input to trick a user's browser into executing untrusted code from a trusted site; these attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites; XSS attacks occur when an attacker uses a web app to send malicious code, generally in the form of a browser side script, to a different end user; flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it
@@ -90,7 +93,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - 5.2.3 Accountability
   - Two important security elements in an access control system are authorization and accountability
     - **Authorization**: subjects are granted access to objects based on proven identities
-    - **Accountability**: users and other subjects can be held accountable for their actions when auditing is implemented
+    - **Accountability**: (also see definitions/interpolations in Domain 2, and above) users and other subjects can be held accountable for their actions when auditing is implemented; accountability is maintained for individual subjects through the use of auditing; logs record user activities and users can be held accountable for their logged actions; this encourages good user behavior and compliance with the org's security policy
   - **Auditing**: tracks subjects and records when they access objects, creating an audit trail in one or more audit logs
   - Auditing provides accountability
 - 5.2.4 Session management
@@ -196,9 +199,10 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - many software-defined networks (SDNs) use the ABAC model
   - ABAC allows administrators to create rules within a policy using plain language statements such as "Allow Managers to access the WAN using a mobile device"
 - 5.4.6 Risk based access control
-  - **Risk-based access control**: evaluates the environment and the situation, and makes decisions based on software security policies; 
+  - **Risk-based access control**: evaluates the environment and the situation, and makes decisions based on software security policies
     - a model that grants access after evaluating risk; it can control access based on multiple factors such as a user's location, determined by IP addresses, whether the user has logged on with MFA, and the user's device
     - advanced models use machine learning, making predictive conclusions about current activity based on past activity
+    - note that a risk-based access control can be used, as an example, to block malicious traffic from an infected IoT device by evaluating the environment and situation, and using that info to block traffic deemed abnormal
 
 ## [5.5](#55-manage-the-identity-and-access-provisioning-lifecycle-osg-9-chpts-1314) Manage the identity and access provisioning lifecycle (OSG-9 Chpts 13,14)
 
@@ -218,6 +222,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
       - new-user account creation is AKA enrollment or registration
     - **automated provisioning**: information is provided to an app, that then creates the accounts via pre-defined rules (assigning to appropriate groups based on roles)
       - automated provisioning systems create accounts consistently
+    - **workflow provisioning**: provisioning that occurs through an established workflow, like an HR process
     - provisioning also includes issuing hardware, tokens, smartcards etc to employees
     - it’s important to keep accurate records when issuing hardware to employees
     - after provisioning, an org can follow up with onboarding processes, including:
@@ -256,13 +261,13 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - 5.6.1 OpenID Connect (OIDC) / Open Authorization (Oauth)
   - **OpenID provides authentication**
   - **OIDC provides both authentication and authorization (by using the OAuth framework)**
-  - **OAuth 2.0**: an open authorization framework described in RFC 6749
+  - **OAuth 2.0**: an open authorization framework described in RFC 6749 (maintained by Internet Engineering Task Force (IETF))
   - OAuth 2.0 enables third-party apps to obtain limited access to an HTTP service, either on behalf of a resource owner (by orchestrating an approval interaction), or by allowing third-party applications to obtain access on its own behalf; OAuth provides the ability to access resources from another service
   - OAuth is the most widely used open standard for authorization and delegation of rights for cloud services
   - The most common protocol built on OAuth is OpenID Connect (OIDC); OpenID is used for authentication
-  - OAuth 2.0 is often used for delegated access to applications, e.g. a mobile game that automatically finds all of your new friends from a social media app is likely using OAuth 2.0;
+  - OAuth 2.0 is often used for delegated access to applications, e.g. a mobile game that automatically finds your new friends from a social media app is likely using OAuth 2.0;
   - Conversely, if you sign into a new mobile game using a social media account (instead of creating a user account just for the game), that process might use OIDC
-  - **OpenID Connect (OIDC)**: an authentication layer using the OAuth 2.0 authorization framework, maintained by the OpenID Foundation, providing both authentication and authorization
+  - **OpenID Connect (OIDC)**: an authentication layer using the OAuth 2.0 authorization framework, maintained by the OpenID Foundation (not IETF), providing both authentication and authorization
     - OIDC is a RESTful, JSON (JavaScript Object Notation)-based auth protocol that, when pared with OAuth can provide identity verification and basic profile info; uses JSON Web Tokens (JWT), (AKA ID token)
   - OAuth and OIDC are used with many web-based applications to share information without sharing credentials
     - OAuth provides authorization
@@ -286,6 +291,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - **The primary purpose of Kerberos is authentication**
   - **Kerberos uses symmetric cryptography and tickets to prove identification and provide authentication**
   - **Kerberos relies on NTP (Network Time Protocol) to sync time between server and clients**
+  - **Kerberos uses port 88 for auth communications**, clients communicate with KDC servers over the port so that users can effectively access privileged network resources
   - Kerberos is a network authentication protocol widely used in corporate and private networks and found in many LDAP and directory services solutions such as Microsoft Active Directory
   - It provides single sign-on and uses cryptography to strengthen the authentication process and protect logon credentials
   - Ticket authentication is a mechanism that employs a third-party entity to prove identification and provide authentication - Kerberos is a well-known ticket system
