@@ -8,11 +8,11 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **ARP**: Address Resolution Protocol; used to resolve IP addresses into Media Access Control (MAC) addresses; provides for direct communication between two devices within the same LAN segment
 - **ARP poisoning**: AKA ARP spoofing, where an attacker sends malicious ARP messages to a local network with the goal of associating the attacker’s MAC address with the IP address of another device (typically the default gateway or another trusted device) in the network; once successful, the attacker can intercept, modify, or block data intended for that IP address, facilitating attacks like man-in-the-middle (MITM), eavesdropping, or denial of service (DoS)
 - **APT**: Advanced Persistent Threat is an agent/org that plans, organizes, and carries out highly sophisticated attacks against a target person, org, or industry over a period of time (months or even years); usually with a strategic goal in mind
-- **API**: Application Programming Interface; code mechanisms that provide ways for apps to share data, emthods, or functions over a network (usually implemented in XML or JavaScript Object Notation (JSON))
+- **API**: Application Programming Interface; code mechanisms that provide ways for apps to share data, methods, or functions over a network (usually implemented in XML or JavaScript Object Notation (JSON))
 - **Automatic Private IP Addressing (APIPA)**: acts as a failover mechanism for DHCP servers and makes it easier to configure and support small LANs; primarily used in situations where a DHCP server is not available or is not responding; APIPA address range is 169.254.0.0–169.254.255.255, with the subnet mask of 255.255.0.0 (/16)
 - **Bandwidth**: amount of information transmitted over a period of time; can be applied to moving bits over a medium, or human processes like learning or education
 - **Baseband Communication**: refers to the transmission of a single signal over a medium using its original frequencies (without modulation), and the entire bandwidth of the medium is used to carry the signal; ethernet networks (like 10BASE-T) operate using baseband signaling, where the entire cable is dedicated to a single communication channel
-- **Bluebugging**: a type of Bluetooth attack where an attacker exploits vulnerabilities in a device's Bluetooth connection to gain unauthorized access and control over it; the attacker can then use this access to listen to phone calls, read or send messages, steal data, or even manipulate the device’s settings, all without the victim's knowledge; to combat this attack, turn off Bluetooth when nont in use, set to "non-discoverable", and use strong authentication
+- **Bluebugging**: a type of Bluetooth attack where an attacker exploits vulnerabilities in a device's Bluetooth connection to gain unauthorized access and control over it; the attacker can then use this access to listen to phone calls, read or send messages, steal data, or even manipulate the device’s settings, all without the victim's knowledge; to combat this attack, turn off Bluetooth when not in use, set to "non-discoverable", and use strong authentication
 - **Bluejacking**: a relatively harmless Bluetooth-based attack where an attacker sends unsolicited messages to nearby Bluetooth-enabled devices, such as mobile phones, tablets, or laptops; it exploits the Bluetooth feature that allows devices to communicate over short distances (typically up to 10 meters) and works by pushing messages to any device with Bluetooth set to "discoverable" mode
 - **Bluesnarfing**: Bluesnarfing is a Bluetooth-based attack where an attacker gains unauthorized access to data on a victim's Bluetooth-enabled device; unlike Bluejacking (which only sends unsolicited messages), bluesnarfing is a serious security threat because it involves stealing or retrieving sensitive data without the user's knowledge or consent
 - **Bluesniffing**: Bluesniffing is a type of Bluetooth attack that involves eavesdropping on Bluetooth communications to intercept data being exchanged between devices; it’s a form of passive Bluetooth reconnaissance where the attacker attempts to listen in on Bluetooth signals to gather information, much like Wi-Fi sniffing attacks on wireless networks
@@ -21,18 +21,18 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **Broadband**: refers to the transmission of multiple signals over a single communication medium using different frequency ranges (via modulation); it allows simultaneous transmission of multiple channels or services; examples include cable tv and DSL internet services
 - **Broadcast**: a one-to-all communication method where data is sent from one sender to all possible receivers within a network segment; in broadcasting, a single data packet is transmitted, and all devices on the network receive it, regardless of whether they need the information
 - **Bridge**: device that aggregates separate network segments into a single network segment, operating at OSI layer 2
-**CAM Table Flooding**: attack where switches don't know where to send traffic; prevented by enabling switch port security
+- **CAM Table Flooding**: attack where switches don't know where to send traffic; prevented by enabling switch port security
 - **Captive portal**: an authentication mechanism that redirects a newly-connected client to a web-based portal access control page
 - **Challenge-Handshake Authentication Protocol (CHAP)**: used by PPP servers to authenticate remote clients; performs authentication using a challenge-response dialogue that cannot be replayed; encrypts both username and password, and performs periodic session reauthentication to prevent replay attacks
-- **CSMA/CA**: Carrier Sense Multiple Access with Collission Avoidance is a method of network flow control
-- **CSMA/CD**: Carrier Sense Multiple Access with Colliion Detection is a method of network flow control, where if > 1 station accesses the network at the same time, other stations detect and re-try their transmission
+- **CSMA/CA**: Carrier Sense Multiple Access with Collision Avoidance is a method of network flow control
+- **CSMA/CD**: Carrier Sense Multiple Access with Collision Detection is a method of network flow control, where if > 1 station accesses the network at the same time, other stations detect and re-try their transmission
 - **Circuit-switched network**: network that uses a dedicated circuit between endpoints
 - **CDMA**: Code-Division Multiple Access: a method of encoding several sources of data so they can all be transmitted over a single RF carrier by one transmitter, or by using a single RF carrier frequency with multiple transmitters; the data from each call is encoded with a unique key, and calls are transmitted at once
-- **Collision Domain**: set of systems that can cause a sollision if they transmitted at the same time; note that broadcast domain is the set of systems that can receive a breadcast from each other
-- **Concentrator**: provides communication capability between many low-speed, usually asynchronous channels and one or more high-speed, usually synchronous channels. Usually different speeds, codes, and protocols can be accommodated on the low-speed side; multiplexed into one signal
-- **CDN**: Content Distribution Network is a large distributed system of servers deploye in multiple data centers, with a goal of Quality of Service (QoS) and availability requirements
+- **Collision Domain**: set of systems that can cause a collision if they transmitted at the same time; note that broadcast domain is the set of systems that can receive a broadcast from each other
+- **Concentrator**: provides communication capability between many low-speed, usually asynchronous channels and one or more high-speed, usually synchronous channels; usually different speeds, codes, and protocols can be accommodated on the low-speed side; multiplexed into one signal
+- **CDN**: Content Distribution Network is a large distributed system of servers deployed in multiple data centers, with a goal of Quality of Service (QoS) and availability requirements
 - **Control plane**: part of a network that controls how data packets are forwarded — meaning how data is sent from one place to another; e.g. the process of creating a routing table is considered part of the control plane; control of network functionality and programmability is directly made to devices at this layer
-- **Converged protocol**: combines/converges standard protcols (such as TCP/IP) with proprietary/non-standard ones; they can complicate enterprise-wide security engineering efforts requiring specialist knowledge
+- **Converged protocol**: combines/converges standard protocols (such as TCP/IP) with proprietary/non-standard ones; they can complicate enterprise-wide security engineering efforts requiring specialist knowledge
 - **DHCP**: Dynamic Host Configuration Protocol is an industry standard used to dynamically assign IP addresses to network devices
 - **Disassociation attack**: AKA deauthentication attack, is a type of denial-of-service (DoS) attack targeting Wi-Fi networks; it exploits the management frames used in the Wi-Fi protocol to forcibly disconnect (disassociate) a user’s device from a wireless access point (AP); these attacks can cause disruptions in network availability and can be used as part of a larger attack, such as a man-in-the-middle (MITM) attack
 - **Domain-based Message Authentication, Reporting, and Conformance (DMARC)**: an email authentication protocol that builds on SPF and DKIM to prevent email spoofing; DMARC allows domain owners to specify a policy for handling unauthenticated emails, such as quarantine or reject, and to receive reports on email authentication results; DMARC works by checking that the "From" address matches the domain in the SPF and DKIM checks (alignment)
@@ -47,15 +47,15 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **Domain hijacking**: or domain theft, is the malicious action of changing the registration of a domain name without the authorization of the owner
 - **Extranet**: a private network similar to an intranet, but typically open to external parties, such as business partners, suppliers, key customers, etc; main purpose of an extranet is to allow users to exchange data and applications, and share information
 - **Extensible Authentication Protocol (EAP)**: a framework that allows for various authentication methods to be used for secure network access, including wireless networks, by providing a standardized way to exchange authentication information between a client and an authentication server; it's not a specific authentication method itself, but a platform to support multiple methods like passwords, certificates, or smart cards depending on the chosen "EAP method."; EAP allows customized authentication security solutions
-- **East/West traffic**: network traffic that is within a data, control, or application plane; within a data center or between geo dispersed locations
+- **East/West (east-west) traffic**: network traffic that is within a data, control, or application plane; within a data center or between geo dispersed locations
 - **Email bombing**: AKA "mail-bombing" - when email itself is used as an attack mechanism by flooding a system with messages, causing a denial of service
 - **Email security**: internet email is based on SMTP, POP3, and IMAP, and is inherently insecure; email can be secured, and the methods used must be addressed in a security policy; email security solutions include using S/MIME, PGP, DKIM, SPF, DMARC, STARTTLS, and Implicit SMTPS
 - **EPP**: endpoint protection platform (EPP) is a variation of EDR; EPP focuses on four main security functions: predict, prevent, detect, and respond; EPP is the more active predict and prevent variation of the more passive EDR
 - **Evil twin**: a type of Wi-Fi attack where a malicious actor sets up a fake wireless access point (AP) that mimics a legitimate one, with the goal of tricking users into connecting to the rogue access point, allowing the attacker to intercept, monitor, and manipulate the victim’s network traffic, potentially capturing sensitive data such as login credentials, financial info, and personal communications
-- **FDDI**: Fiber Distributed Data Interface is an ANSI X3T9.5 LAN standard; 100Mbps, token-passing using fiber-optic, up to 2 kilometers
-- **FCoE**: Fibre Channel over Ethernet is a lightweight encapulsation protocol without the reliable data transport of TCP
+- **FDDI**: Fiber Distributed Data Interface is an ANSI X3T9.5 LAN standard; 100 Mbps, token-passing using fiber-optic, up to 2 kilometers
+- **FCoE**: Fibre Channel over Ethernet is a lightweight encapsulations protocol without the reliable data transport of TCP
 - **Gateway device**: a firewall or other device that sits at the edge of the network to regulate traffic and enforce rules
-- **Generic Routing Encapsulation (GRE)**: a protocol for encapsulating data packets that use one routing protocol inside the packets of another protocol; "encapsulating" means wrapping one data packet within another data packet, like putting a box inside another box; encapsulation is the addition of a header, possibly footer, to the data received by each layer from the layer above before handing it off to the layer below; the inverse action is deencapsulation; note that when using IPv4, the GRE header is inserted between the delivery and payload headers
+- **Generic Routing Encapsulation (GRE)**: a protocol for encapsulating data packets that use one routing protocol inside the packets of another protocol; "encapsulating" means wrapping one data packet within another data packet, like putting a box inside another box; encapsulation is the addition of a header, possibly footer, to the data received by each layer from the layer above before handing it off to the layer below; the inverse action is de-encapsulation; note that when using IPv4, the GRE header is inserted between the delivery and payload headers
 - **Host-based IDS (HIDS)**: monitor activity on a single system; one drawback of a HIDS is that attackers can discover and disable them (compare to NIDS)
 - **Hypervisor**: aka virtual machine monitor/manager (VMM); the virtualization component that creates, manages, and operates VMs
 - **Hypervisor Type I**: a native or bare-metal hypervisor; there is no host OS, the hypervisor installs directly onto the hardware instead of the host OS
@@ -70,22 +70,21 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **LDAP**: lightweight directory access protocol uses simple (basic) authentication such as SSL/TLS, or SASL (Simple Authentication and Security Layer)
 - **Load balancers**: used to spread or distribute network traffic load across several network links or devices, with the purpose of optimizing infrastructure utilization, minimize response time, maximize throughput, reduce overloading, and remove bottlenecks
 - **MAC filtering**: a list of authorized wireless client interface MAC addresses used by a WAP to block access to all nonauthoried devices
-- **Managed Dection and Response (MDR)**: a service that monitors an IT environment in real-time to detect and resolve threats; not limited to endpoints, MDR focuses on threat detection and mediation; often a combination and integration of numerous technologies, such as SIEM, network traffic analysis (NTA), EDR, and IDS
+- **Managed Detection and Response (MDR)**: a service that monitors an IT environment in real-time to detect and resolve threats; not limited to endpoints, MDR focuses on threat detection and mediation; often a combination and integration of numerous technologies, such as SIEM, network traffic analysis (NTA), EDR, and IDS
 - **Microsegmentation**: part of a zero trust strategy that breaks or divides up an internal network into very small (sometimes as small as a single device or important server/end-point), highly localized zones; each zone is separated from others by internal segmentation firewalls (ISFWs), subnets, or VLANs; note that at the limit, this places a firewall at every connection point
 - **MSSP**: managed security service provider (MSSP) provides centrally-controlled and managed XDR solutions; can be fully deployed on-premise, in the cloud, or hybrid; MSSP solutions can be overseen through a SOC which is itself local or remote; orgs working with an MSSP to provide EDR, MDR, EPP, or XDR leverages the experience and expertise of the MSSP's staff
 - **Multicast**: is a one-to-many communication method where data is transmitted from one sender to multiple specific receivers who are part of a multicast group; unlike broadcast, multicast only targets devices that have expressed interest in receiving the data, making it more efficient by conserving bandwidth and reducing unnecessary network load; used for live video streaming, online gaming, and conferencing
-- **Network Address Translation (NAT)**: NAT translates IP addresses without changing port information, vi one-to-one (static NAT) or many-to-one (dynamic NAT); NAT protects the addressing scheme of a private network, allowing the use of private IP addresses, and enables multiple internal clients to obtain internet access through a few public IP addresses; NAT is supported by many security border devices, such as firewalls, routers, gateways, WAPs, and proxies; NAT is useful when specific devices need to be accessible from outside the network, like servers that host websites; also see PAT; The main difference between NAT and PAT the is that PAT uses port numbers to map private IP addresses to a public IP address, while NAT does not
+- **Network Address Translation (NAT)**: NAT translates IP addresses without changing port information, via one-to-one (static NAT) or many-to-one (dynamic NAT); NAT protects the addressing scheme of a private network, allowing the use of private IP addresses, and enables multiple internal clients to obtain internet access through a few public IP addresses; NAT is supported by many security border devices, such as firewalls, routers, gateways, WAPs, and proxies; NAT is useful when specific devices need to be accessible from outside the network, like servers that host websites; also see PAT; The main difference between NAT and PAT is that PAT uses port numbers to map private IP addresses to a public IP address, while NAT does not
 - **Network-based IDS (NIDS)**: a network based IDS can monitor activity on a network, and isn't necessarily visible to an attacker
-- **Network container names**: network containers are OSI layers 7-5: protocol data unit (PDU); layer 4: segment (TCP) or datagram (UDP); layer 3: packet; layer 2: frame; layer 1: bits
-- **NFV**: Network Function Virtualization (AKA Virtual Network Function) that seeks to decouple functions, such as firewall management, intrusion detection, NAT and name service resolution, from specific hardware solutions, and make them virtual/software; the focus is to optimize distinct network services
+- **Network container names**: network containers by OSI layer: 7,6,5: protocol data unit (PDU); layer 4: segment (TCP) or datagram (UDP); layer 3: packet; layer 2: frame; layer 1: bit
+- **NFV**: Network Function Virtualization (AKA Virtual Network Function) goal is to decouple functions, such as firewall management, intrusion detection, NAT and name service resolution from specific hardware solutions, and make them virtual/software; the focus is to optimize distinct network services
 - **Nonroutable IP addresses**: from RFC 1918; 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
-- **North/South traffic**: in SDN terms, data flowing up (northbound) and down (southbound) the stack of data/control/application planes; data flowing from the organization to external distinations (northbound), or into the org from external sources (southbound)
+- **North/South (north-south) traffic**: in SDN terms, data flowing up (northbound) and down (southbound) the stack of data/control/application planes; data flowing from the organization to external destinations (northbound), or into the org from external sources (southbound)
 - **Northbound/Southbound interface**: A northbound interface lets a specific component communicate with a higher-level component in the same network; a southbound interface is the opposite — enabling a specific component to communicate with a lower-level component
-**Online Certificate Status Protocol(OCSP)**: a real-time method for verifying the status of an X.509 (e.g. SSL/TLS) digital certificate
+- **Online Certificate Status Protocol(OCSP)**: a real-time method for verifying the status of an X.509 (e.g. SSL/TLS) digital certificate
 - **Packet-Switched Network**: a network that doesn't use a dedicated connection between endpoints; packet switching occurs when the message or communication is broken up into small segments and sent across intermediary networks to the destination; within packet-switching systems are two types of communication paths (or virtual circuits): permanent virtual circuits (PVCs) and switched virtual circuits (SVCs)
 - **Password Authentication Protocol (PAP)**: a password-based protocol that verifies users for Point-to-Point Protocol (PPP); PAP transmits usernames and passwords in cleartext
-- **Peering**: a method for two or more networks to exchange data directly with each other without going through a third party; a cost-effective way for networks to connect and improve performance
-- **Port Address Translation (PAT)**: a type of NAT which allows multiple devices on a private network to use the same public IP address by assigning each device a unique port number; PAT is useful when multiple devices need internet access but there aren't many public IP addresses available
+- **Peering**: a method for two or more networks to exchange data directly with each other without going through a third party; a cost-effective way for networks to connect and improve performance; peering can be public (e.g. connection through an internet exchange point) or private (e.g. colocation)
 - **Phreaking**: type of attack using various types of tech to circumvent the telephone system to make long-distance calls, alter the phone service function, steal services, or cause service disruptions; a phreaker is the phreaking attacker
 - **Ping of Death (ping-of-death)**: an attack that sends numerous oversized ping packets to the victim, causing a freeze, crash, or reboot
 **Plain Old Telephone Service (POTS)**: refers to the traditional, analog voice telephone service that has been in use since the late 19th century; it operates over copper twisted-pair wires and provides basic telephone functions like voice calling and fax transmission; POTS uses circuit-switched technology, establishing a dedicated connection for the duration of a call; known for its reliability and simplicity, offering standard features such as dial tone, ring tone, and support for analog devices like modems and fax machines
@@ -94,7 +93,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 **Point-to-Point Tunneling Protocol (PPTP)**: an outdated VPN protocol that creates a secure tunnel for data over IP networks, primarily for remote access; operates at Layer 2 (Data Link Layer) of the OSI model, PPTP encapsulates data within IP packets but provides only basic encryption, making it relatively fast but less secure by modern standards; due to its weaker security, PPTP has largely been replaced by more robust VPN protocols, such as L2TP/IPsec and OpenVPN
 - **Ports 1024-4951**: registered ports used with non-system applications associated with vendors and devs
 - **Ports 49152-65535**: dynamic ports (AKA private or non-reserved ports) used as temporary ports, often in association when a service is requested via a well-known port
-- **Port Address Translation**: an extension of NAT (Network Address Translation) translating all addresses to one routable IP address and translate the source port number in the packet to a unique value
+- **Port Address Translation (PAT)**: a type of NAT which allows multiple devices on a private network to use the same public IP address by assigning each device a unique port number; PAT is useful when multiple devices need internet access but there aren't many public IP addresses available; an extension of NAT translating all addresses to one routable IP address and translating the source port number in the packet to a unique value
 - **Private Branch Exchange (PBX)**: a private telephone network used within an org or enterprise, allowing internal users to communicate with each other and share a certain number of external phone lines for making outgoing calls; a PBX system manages incoming and outgoing calls, offering features such as call routing, voicemail, call conferencing, extension dialing, and automated attendants; modern PBX systems can be hardware-based, software-based, or hosted in the cloud, and they often support both traditional analog lines and digital communication methods like VoIP (Voice over Internet Protocol); countermeasures to PBX fraud include many of the same controls you would employ to protect a network (e.g. logical or technical, administrative and physical controls)
 - **Proximity device/reader**: proximity devices can be passive, field-powered, or transponder; when a device passes near a proximity reader, the reader is able to determine the identity and authorization status of the bearer
 - **Public Switched Telephone Network (PSTN)**: the global network of interconnected voice-oriented public telephone systems; encompasses the world's circuit-switched telephone networks operated by national, regional, and local telephony operators; the PSTN enables landline telephony and is responsible for routing calls between different telephone networks, both domestically and internationally; uses a combination of copper wires, fiber optics, microwave transmission, and undersea cables to facilitate voice communication across vast distances
@@ -115,13 +114,13 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - S/MIME is the emerging standard for secure email / encrypted messages
 - **SNMP**: Simple Network Management Protocol, is a protocol for collecting and organizing info about managed devices on IP networks; it can be used to determine the health of devices such as routers, switches, servers, workstations, etc
 - **Smurf attack**: ICMP echo request sent to the network broadcast address of a spoofed victim causing all nodes to respond to the victim with an echo reply; a smurf attack is a form of DoS employing an amplification network to send numerous response packets to the victim
-- **SPML**: Service Provisioning Markup Language is XML-based and designed to allow platforms to generate and respond to provisioning requests; uses the concept of requesting authority, a provisioning service point, and a provisioning service target; requesting authorities issue SPML requests to a provisioning service point; provisioning service targets are often user accounts and are required to be allowed unique identification of the data in its implementaion
+- **SPML**: Service Provisioning Markup Language is XML-based and designed to allow platforms to generate and respond to provisioning requests; uses the concept of requesting authority, a provisioning service point, and a provisioning service target; requesting authorities issue SPML requests to a provisioning service point; provisioning service targets are often user accounts and are required to be allowed unique identification of the data in its implementation
 - **STARTTLS**: an email protocol command that upgrades an existing, insecure connection to a secure, encrypted connection using TLS (Transport Layer Security); commonly used in SMTP (Simple Mail Transfer Protocol), as well as IMAP and POP3 for email retrieval; when STARTTLS is enabled, email servers negotiate encryption with each other, protecting the email content and credentials from interception during transmission
 - **STRP**: Secure Real-time Transport Protocol is an extension of Real-time Transport Protocol (RTP) that features encryption, confidentiality, message authentication, and replay protection to audio and video traffic
 - **Multi-tiered firewall**: tiers are not the number of firewalls but the number of zones protected by the firewall; 2-tier protects two zones
 - **Network Polling**: a communication method used in network systems where a central controller or master device periodically checks, or "polls," each connected device (node) to determine if it has data to transmit or to monitor its status; method ensures orderly communication by controlling when devices can send data, preventing data collisions and efficiently managing network traffic
 - **TCP ACK scan**: type of network discovery scan, attempting to simulate an already-opened network connection; sending an ACK packet, simulating a packet from the middle of an already established connection
-- **Teardrop attack**: exploits reassembly of fragmented IP packets in the fragment offset field (indicating the start position or offset of data contained in a fragemented packet)
+- **Teardrop attack**: exploits reassembly of fragmented IP packets in the fragment offset field (indicating the start position or offset of data contained in a fragmented packet)
 - **Terminal Emulation Protocol**: designed to provide access between hosts; allows a computer to act like a traditional terminal and send commands/receive output from a remote system via a graphical interface; examples include Telnet, SSH, and Kermit
 - **Token Passing**: a network access method used to control which devices can transmit data at any given time; a special data packet called a "token" circulates among the connected devices (nodes), and only the device that holds the token is permitted to send data over the network
 - **Tunneling**: the encapsulation of protocol-deliverable message within a second protocol; the second protocol often performs encryption to protect the message contents
@@ -130,6 +129,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **VLAN**: a virtual LAN is a hardware-imposed network segmentation created by switches that requires a routing function to support communication between different segments
 - **VLAN hopping**: a method of attacking the network resources of a VLAN by sending packets to a port not usually accessible from an end system; the goal of this form of attack is to gain access to other VLANs on the same network
 - **Virtual Private Cloud (VPC)**: a private cloud environment that's hosted within a public cloud; VPCs allow orgs to create a virtual network that is isolated from other users of the public cloud
+- **Virtual Routing and Forwarding (VRF)**: allows multiple routing tables to be used on the same device simultaneously, similar to the concept of a VLAN (which is layer 2), but operating at layer 3; because routing instances operate independently, VRF allows IP addresses to overlap without conflict which supports segmentation and permits flexibility for zero trust implementations
 - **WAF**: Web Application Firewall is a software-based app that monitors and filters exchanges between applications and a host; usually inspect and filter conversations like HTTP/S
 - **X.509**: an ITU standard defining the format of public key certificates; X.509 certificates are used in many Internet protocols, including TLS/SSL, which is the basis for HTTPS; they are also used in offline applications, like electronic signatures
 - **XDR**: extended detection and response (XDR) components usually include EDR, MDR, and EPP elements; XDR is not solely focused on endpoints, often including NTA, NIDS, and NIPS functionality
@@ -137,19 +137,19 @@ Networking can be one of the more complex exam topics; if you have a networking 
 ## [4.1](#41-assess-and-implement-secure-design-principles-in-network-architectures-osg-9-chpts-1112) Assess and implement secure design principles in network architectures (OSG-9 Chpts 11,12)
 
 - 4.1.1 Open System Interconnection (OSI) and Transmission Control Protocol/Internet Protocol (TCP/IP) models
-  - **TCP/IP**: AKA DARPA or DOD model has four layers: Application (AKA Process), Transport (AKA Host-to-Host), Internet (AKA Internetworking), and Link (AKA Network Interface or Network Access) 
+  - **TCP/IP**: AKA DARPA or DOD model has four layers: Application (AKA Process), Transport (AKA Host-to-Host), Internet (AKA Internetworking), and Link (AKA Network Interface or Network Access)
   - **OSI**: Open Systems Interconnection (OSI) Reference Model developed by ISO (International Organization for Standardization) to establish a common communication structure or standard for all computer systems; it is an abstract framework
-        - Communication between layers via **encapsulation** (at each layer, the previous layer's header and payload become the payload of the current layer) and **deencapsulation** (inverse action occurring as data moves up layers)
+        - Communication between layers via **encapsulation** (at each layer, the previous layer's header and payload become the payload of the current layer) and **de-encapsulation** (inverse action occurring as data moves up layers)
 
     | Layer | OSI model layer | TCP/IP model | PDU | Devices | Protocols | 
     |-----|---------------| -------------------|------------| ----------------|-----------|
-    | 7     | Application     | Application |Data               | L7 firewall                                | HTTP/s, DNS, DHCP, FTP, LPD, S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, SIP, S/MIME, X Window, NFS etc. |
-    | 6     | Presentation    | Application |Data   | L7 firewall  | JPEG, ASCII, MIDI etc
-    | 5     | Session         | Application| Data               | L7 firewall                                | All the above                                                |
-    | 4     | Transport       | Transport (host-to-host) | Segments           | L4 firewall                                | TCP (connection oriented), UDP (connectionless)     |
-    | 3     | Network         | Internet/IP | Packets            | Router, Multilayer Switch, Router         | IPv4, IPv6, IPSec, OSPF, EIGRP; ICMP, RIP, NAT                              |
-    | 2     | Data Link       | Network Access | Frames             | Switch, Bridge, NIC, Wireless Access Point | MAC, ARP, Ethernet 802.3 (Wired), CDP, LLDP, HDLC, PPP, DSL, L2TP, IEEE 802.11 (Wireless), SONET/SDH, VLANs |
-    | 1     | Physical        | Network Access | Bits               | All the above                              | Electrical signal (copper wire), Light signal (optical fibre), Radio signal (air) |
+    | 7     | Application     | Application |Data               | Application Firewall                                | HTTP/s, DNS, DHCP, FTP, LPD, S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, SIP, S/MIME, X Window, NFS etc. |
+    | 6     | Presentation    | Application |Data   |   | JPEG, ASCII, MIDI etc
+    | 5     | Session         | Application| Data               | Circuit Proxy Firewall | NetBIOS, RPC|
+    | 4     | Transport       | Transport (host-to-host) | Segments (TCP) / Datagrams (UDP)         |                              | TCP (connection oriented), UDP (connectionless), TLS, BGP     |
+    | 3     | Network         | Internet/IP | Packets            | Router, Multilayer Switch, Packet Filtering Firewall         | IPv4, IPv6, IPSec, OSPF, EIGRP, ICMP, IGMP, RIP, NAT                              |
+    | 2     | Data Link       | Network Access (Link) | Frames             | Switch, Bridge, NIC, Wireless Access Point | MAC, ARP, Ethernet 802.3 (Wired), CDP, LLDP, HDLC, PPP, PPTP, DSL, L2TP, IEEE 802.11 (Wireless), SONET/SDH, VLANs, Auth protocols (PAP, CHAP, EAP) |
+    | 1     | Physical        | Network Access (Link) | Bits               | Hubs, Repeaters, Concentrators                              | Electrical signal (copper wire), Light signal (optical fibre), Radio signal (air) |
 
     ### OSI layers in detail
 
@@ -158,23 +158,23 @@ Networking can be one of the more complex exam topics; if you have a networking 
       - from bottom: Please Do Not Throw Sausage Pizza Away
     - Application Layer (7)
       - Responsible for:
-        - interfacing user applications, network services, or the operating system with the protocol stack 
-        - identifying and establishing availability of communication partners 
-        - determining resource availability and 
+        - interfacing user applications, network services, or the operating system with the protocol stack
+        - identifying and establishing availability of communication partners
+        - determining resource availability
         - synchronizing communication
-        - Uses data streams
+      - Uses data streams
     - Presentation Layer (6)
       - Responsible for transforming data into the format that any system following the OSI model can understand
-        - JPEG, ASCII, MIDI etc are used at the presentation lay
+        - JPEG, ASCII, MIDI etc are used at the presentation layer
         - Associated tasks:
           - data representation
           - character conversion
           - data compression
           - data encryption
-        - Uses data streams
+      - Uses data streams
     - Session Layer (5)
       - Responsible for establishing, maintaining, and terminating communication sessions between two computers
-      - Three communication session phases: 
+      - Three communication session phases:
         - connection establishment
           - **simplex**: one-way
           - **half-duplex**: both comm devices can transmit/receive, but not at the same time
@@ -196,12 +196,13 @@ Networking can be one of the more complex exam topics; if you have a networking 
           - connectionless protocol that provides fast, best-effort delivery of **datagrams** (self-container unit of data)
         - Transport Layer Security (TLS)
           - note: in the OSI model, TLS operates on four layers: Application, Presentation, Session, and Transport; in the TCP/IP model, it operates only on the Transport layer
-      E- Segmentation, sequencing, and error checking occur at the Transport layer
+        - BGP: Border Gateway Protocol - used to exchange routing and reachability information between routers (looking at available paths, picking the best)
+        - Segmentation, sequencing, and error checking occur at the Transport layer
 
     - Network Layer (3)
       - Responsible for logical addressing, and providing routing or delivery guidance (but not necessarily verifying guaranteed delivery), manages error detection and traffic control
       - **routing protocols**: move routed protocol messages across a network
-        - includes RIP, OSPF, IS-IS, IGRP, and BGP
+        - includes RIP, OSPF, IS-IS, IGRP, IGMP, and BGP
         - routing protocols are defined at the Network Layer and specify how routers communicate
         - routing protocols can be static or dynamic, and categorized as interior or exterior
         - **static routing protocol**: requires an admin to create/update routes on the router
@@ -222,11 +223,19 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - Data Link Layer (2)
       - Responsible for formatting a packet for transmission
       - Adds the source and destination hardware addresses to the frame
-      - **Media Access Control (MAC)**: a 6-byte (48-bit) binary address written in hex (hexidecimal notation); AKA hardware, physical, or NIC address; 
+      - **Media Access Control (MAC)**: a 6-byte (48-bit) binary address written in hex (hexidecimal notation); AKA hardware, physical, or NIC address
         - first 3b/24-bits: Organizationally Unique Identifier (OUI) which denotes manufacturer
         - last 3b/24-bits: unique to that interface
       - ARP, switches and bridges operates at layer 2
+      - Bridges: connect two physical network segments together
+      - Switches: layer 2 switches interconnect multiple devices, forwarding data to intended recipient based on MAC address
       - Logical Link Control (LLC) is one of two sublayers that make up the Data Link Layer
+      - Protocols:
+        - 802.1x: used for authenticating network devices to a network (network access control)
+        - ARP: Address Resolution Protocol - translates an IP address to a MAC address
+        - RARP: Reverse Address Resolution Protocol - translates a MAC address to an IP address
+        - PPTP: Point-to-Point Tunneling Protocol - used for created tunnels
+        - PPP: Point-to-Point Protocol - encapsulates IP traffic so that it can be transmitted over analog connections and provides authentication, encryption, and compression
 
     - Physical Layer (1)
       - Converts a frame into bits for transmission/receiving over the physical connection medium
@@ -240,9 +249,11 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - **bus**: all devices are connected to a single cable (backbone) terminated on both ends
         - Know commonly used twisted-pair cable categories
         - Know cable types & characteristics
-    - Common TCP Protocols
+      - Protocols:
+        - 802.11: a family of protocols for wireless local area networks including 802.11a, b, g, n, ac, ax
+    - Common TCP Ports
 
-      | Port | Protocol | 
+      | Port | Protocol |
         |-----|---------------|
         | 20,21    | FTP |
         | 22    | SSH |
@@ -251,6 +262,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
         | 53    | DNS |
         | 80    | HTTP |
         | 110    | POP3 |
+        | 137-139 | NETBIOS |
         | 143    | IMAP |
         | 389    | LDAP |
         | 443    | HTTPS |
@@ -258,7 +270,6 @@ Networking can be one of the more complex exam topics; if you have a networking 
         | 636    | Secure LDAP |
         | 1433    | MS SQL Server |
         | 3389    | RDP |
-        | 137-139 | NETBIOS |
 
 - 4.1.2 Internet Protocol (IP) networking (e.g., Internet Protocol Security (IPSec), Internet Protocol (IP) v4/6)
   - IP is part of the TCP/IP (Transmission Control Protocol/Internet Protocol) suite
@@ -328,7 +339,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - many different protocols can be used at higher layers
     - encryption can be incorporated (at various layers)
     - it provides flexibility and resiliency in complex networks
-Multilayer disadvantages:
+  - Multilayer disadvantages:
     - nothing stops an added layer from being covert
     - encapsulating can be used to bypass filters
     - logical network segments can be traversed
@@ -359,7 +370,6 @@ Multilayer disadvantages:
       - microservices (see definition [here](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-9-chpts-91620))
 
       - IaC (see definition in [Domain 8](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-8-Objectives.md))
-      
       - serverless architecture (see definition [here](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-9-chpts-91620))
 
 - 4.1.6 Micro-segmentation (e.g., Software Defined Networks (SDN), Virtual eXtensible Local Area Network (VXLAN),Encapsulation, Software-Defined Wide Area Network (SD-WAN))
@@ -391,7 +401,7 @@ Multilayer disadvantages:
 
 - 4.1.7 Wireless networks (e.g. LiFi, Wi-Fi, Zigbee, satellite)
   - **Narrowband**: refers to a communication channel or system that operates with a small bandwidth, meaning it uses a limited range of frequencies to transmit data; in contrast to broadband, which can carry large amounts of data over a wide frequency range, narrowband systems focus on efficient transmission of smaller amounts of data, often over long distances, by using lower data rates and narrower frequency bands
-  - **light fidelity (Li-Fi)**: a form of wireless communication technology that relies on light to transmit data, with theorectical speeds up to 224Gbits/sec
+  - **Light Fidelity (Li-Fi)**: a form of wireless communication technology that relies on light to transmit data, with theorectical speeds up to 224Gbits/sec
   - **Radio Frequency Identification (RFID)**: a technology used to identify and track objects or individuals using radio waves, with two main components: an RFID tag (or transponder) and an RFID reader; the tag contains a small microchip and an antenna, and the reader emits a signal that communicates with the tag to retrieve the stored information
     - Passive Tags don't have their own power source, relying instead on the energy from the RFID reader's signal to transmit data
     - Active Tags have a battery and can broadcast signals over longer distances
@@ -408,14 +418,16 @@ Multilayer disadvantages:
       - WEP is defined by the original IEEE 802.11 standard
       - WEP uses a predefined shared Rivest Cipher 4 (RC4) secret key for both authentication (SKA) and encryption
       - Shared key is static
-      - WEP is weak from RC4 flaws
-    - Wi-Fi Protected Access II (WPA2):
+      - WEP is weak from RC4 implementation flaws
+    - **Wi-Fi Protected Access (WPA)**: a security standard for wireless network computing devices; developed by the Wi-Fi Alliance to provide better data encryption and user authentication than WEP, which was the original Wi-Fi security standard
+      - **Temporal Key Integrity Protocol (TKIP)**: an encryption protocol that was part of the WPA protocol; TKIP was designed to replace the insecure WEP encryption protocol,TKIP is no longer considered secure and has been deprecated
+    - **Wi-Fi Protected Access II (WPA2)**:
       - IEEE 802.11i WPA2 replaced WEP and WPA
       - Uses AES-CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol)
       - WPA2 operates in two modes, personal and enterprise
         - personal mode or the Pre-Shared Key (PSK) relies on a shared passcode or key known to both the access point and the client device; typically used for home network security
         - enterprise mode uses the more advanced Extensible Authentication Protocol (EAP) and an authentication server and individual credentials for each user or device; enterprise mode is best suited to companies and businesses
-    - Wi-Fi Protected Access 3 (WPA3):
+    - **Wi-Fi Protected Access 3 (WPA3)**:
       - WPA3-ENT uses 192-bit AES CCMP encryption
       - WPA3-PER remains at 128-bit AES CCMP
       - WPA3 **simultaneous authentication of equals (SAE)**: improves on WPA2's PSK mode by allowing for secure authentication between clients and the wireless network without enterprise user accounts; SAE performs a zero-knowledge proof process known as **Dragonfly Key Exchange** (which is a derivative of Diffie-Hellman); SAE uses a preset password and the MAC addresses of the client and AP to perform authentication and session key exchange
@@ -431,7 +443,7 @@ Multilayer disadvantages:
     - **Service Set Identifier (SSID)**: the name of a wireless network that is broadcast by a Wi-Fi router or access point, and used to uniquely identify a wireless network, so devices can recognize and connect to it; when you search for Wi-Fi networks on your phone or computer, the list of available networks you see consists of their SSIDs
       - **Extended Service Set Identifier (ESSID)**: the name of a wireless network (Wi-Fi network) that users see when they search for available networks, identifying the extended service set, which is essentially a group of one or more access points (APs) that form a wireless network; multiple APs in the same network can share the same ESSID, allowing seamless roaming for users within the network coverage area
       - **Basic Service Set Identifier (BSSID)**: a unique identifier for each AP in a Wi-Fi network; it’s the MAC address of the individual wireless access point or router within the network; while multiple APs in a network can share the same ESSID, each AP will have its own unique BSSID to distinguish it from other APs
-    - **Site survey**: a formal assessment of wireles signal strength, quality, and interference using an RF signal detector
+    - **Site survey**: a formal assessment of wireless signal strength, quality, and interference using an RF signal detector
     - **Wi-Fi Protected Setup (WPS)**: intended to simplify the effort of setting up/adding new clients to a secured wireless network; operates by automatically connecting the first new wireless client to seek the network once WPS is triggered
       - WPS allows users to easily connect devices to a Wi-Fi network by:
         - pressing a physical WPS button on the router
@@ -630,7 +642,8 @@ The components of a network make up the backbone of the logical infrastructure f
         | **Security Benefits**         | Provides privacy by hiding client IP addresses    | Provides security by hiding server details, load balancing | Limited security, primarily used for convenience   | High security potential, especially for monitoring   |
 
 - 4.2.4 Endpoint security
-  - **Endpoint security**: each individual device must maintain local security whether or not its network or telecom channels also provide security
+  - **Endpoint security**: concept that encourages admins to install firewalls, malware scanners, and IDS on every host
+    - each individual device must maintain local security whether or not its network or telecom channels also provide security
     - any weakness in a network, whether border, server, or client-based presents a risk to all elements of the org
     - client/Server model is distributed architecture, meaning that security must be addressed everywhere instead of at a single centralized host
     - processing, storage on clients and servers, network links, communication equipment all must be secured
@@ -671,7 +684,7 @@ The components of a network make up the backbone of the logical infrastructure f
     - Unauthorized Data Sharing: sharing files through unapproved channels, such as personal email or cloud storage, which may not meet organizational security standards
     - User home network environment: insecure Wi-Fi networks, VPN misconfigurations, and inconsistent application of security policies and monitoring, increasing the risk of unauthorized access
     - Endpoint security risks: examples include unsecured personal devices, lack of patching and updates, and susceptibility to malware and ransomware
-  - General telecomutting secuirty mitigations:
+  - General telecomutting security mitigations:
     - Implement strong authentication
     - Use VPNs and secure connections
     - Enforce endpoint protection
@@ -680,7 +693,7 @@ The components of a network make up the backbone of the logical infrastructure f
   - **Virtual Private Network (VPN)**: a traditional remote access technology; VPNs are based on encrypted tunneling; they offer authentication and data protection as a point-to-point solution
     - most common VPN protocols: PPTP, L2TP, SSH, TLS, and IPsec
     - split tunnel: a VPN configuration that allows a VPN-connected client system (e.g. remote node) to access both the org network via the VPN and the internet directly at the same time
-    - full tunnel: a VPN configuration in which all the client's traffic is sent t othe org network over the VPN link, and any internet-bound traffic is routed out of the org network's proxy or firewall interface
+    - full tunnel: a VPN configuration in which all the client's traffic is sent to the org network over the VPN link, and any internet-bound traffic is routed out of the org network's proxy or firewall interface
   - WAP (wireless access point) - local env treats as remote access
   - **VDI (virtual desktop infrastructure)**: means of reducing the security risks and performance requirements of end devices by hosting desktop/workstation VMs on servers that are remotely accessible by users
   - **VMI (virtual mobile interface)**: virtual mobile device OS is hosted on a central server

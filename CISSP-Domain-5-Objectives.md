@@ -23,14 +23,14 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **CAS**: Central Authentication Service (an SSO implementation)
 - **Content-dependent control**: Content-dependent access control adds additional criteria beyond identification and authentication: the actual content the subject is attempting to access; all employees of an org may have access to the HR database to view their accrued sick time and vacation time, but should an employee attempt to access the content of the CIO's HR record, access is denied
 - **Context-dependent access control**: applies additional context before granting access, with time as a commonly used context
-- **Crossover Error Rate** (CER): identifies the accuracy of a biometric method, and is the point at which false acceptance rate (FAR or Type 2) equals the false rejection rate (FRR or Type 1) for a given sensor, in a given system and context; it is the optimal point of operation if the potential impacts of both types of errors are equivalent
+- **Crossover Error Rate (CER)**: identifies the accuracy of a biometric method, and is the point at which false acceptance rate (FAR or Type 2) equals the false rejection rate (FRR or Type 1) for a given sensor, in a given system and context; it is the optimal point of operation if the potential impacts of both types of errors are equivalent
 - **Cross-Site Request Forgery (CSRF)**: (AKA XSRF) an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated
 - **FRR**: False Rejection Rate (Type 1) incorrectly denying authentication to a legit identity and therefore denying access
 - **FAR**: False Acceptance Rate (Type 2) incorrectly authenticating a claimed identity as legit, recognizing and granting access on that basis
 - **Ethical Wall**: the use of administrative, physical/logical controls to establish/enforce separation of information, assets or job functions for need-to-know boundaries or prevent conflict of interest situations; AKA compartmentalization
 - **Granularity of controls**: level of abstraction or detail which in a security function can be configured or tuned for performance and sensitivity
 - **IDaaS**: cloud-based service that broker IAM functions to target systems on customers' premise and/or in the cloud
-- **Identity proofing**: proving ussers are who they claim to be;process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person; identity proofing includes knowledge-based authentication and cognitive passwords, where a user is asked a series of questions that only they would know
+- **Identity proofing**: proving users are who they claim to be;process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person; identity proofing includes knowledge-based authentication and cognitive passwords, where a user is asked a series of questions that only they would know
 - **Knowledge-based authentication (KBA)**: process of asking a user a series of questions based on their history that is recorded in authoritative sources; e.g. a bank asks a customer a series of questions about past addresses they've lived, and current payment amounts for car/mortgage
 - **Objects**: things a subject accesses, such as files; a user is a subject who accesses objects while performing some action or accomplishing a task
 - **Passwords authentication**: the weakest form of authentication, but password policies help increase security by enforcing complexity and history requirements
@@ -43,7 +43,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 ## [5.1](#51-control-physical-and-logical-access-to-assets-osg-9-chpt-13) Control physical and logical access to assets (OSG-9 Chpt 13)
 
-- Controlling access to assets (tangible: things you can touch, or nontangible: info and data) is a central theme of security
+- Controlling access to assets (tangible: things you can touch, or non-tangible: info and data) is a central theme of security
 - Understand that there is no security without physical security: admin, technical and logical access controls aren't effective without control over the physical env
 - In addition to personnel, assets can be information, systems, devices, facilities, or applications:
   - 5.1.1 Information: an org’s information includes all of its data, stored in simple files (on servers, computers, and small devices), or in databases
@@ -67,17 +67,17 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - a core principle with authentication is that all subjects must have unique identities
   - identification and authentication occur together as a single two-step process
   - users identify themselves with usernames and authenticate (or prove their identity) with passwords
-- 5.2.1 Identiy management (IdM) implementation
-  - Identity and access management is a collection of processes and techologies that are used to control access to critical assets; it's purpose is the management of access to information, systems, devices, and facilities
+- 5.2.1 Identify management (IdM) implementation
+  - Identity and access management is a collection of processes and technologies that are used to control access to critical assets; it's purpose is the management of access to information, systems, devices, and facilities
   - Identity Management (IdM) implementation techniques generally fall into two categories:
     - **centralized access control**: implies a single entity within a system performs all authorization verification
       - potentially creates a single point of failure
       - small team can manage initially, and can scale to more users
     - **decentralized access control**: (AKA distributed access control) implies several entities located throughout a system perform auth verification
-      - requires more individuals or teams to manage, and admin may be spred across numerous locations
+      - requires more individuals or teams to manage, and admin may be spread across numerous locations
       - difficult to maintain consistency
       - changes made to any individual access control point needs to be repeated at others
-  - With ubiquitious mobile computing and anywhere, anytime access (to apps & data), identity is the "new perimeter"
+  - With ubiquitous mobile computing and anywhere, anytime access (to apps & data), identity is the "new perimeter"
 - 5.2.2 Single/Multi-Factor Authentication (MFA)
   - **Single-factor authentication**: any authentication using only one proof of identity
   - **Two-factor authentication (2FA)**: requires two different proofs of identity
@@ -97,7 +97,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - **Auditing**: tracks subjects and records when they access objects, creating an audit trail in one or more audit logs
   - Auditing provides accountability
 - 5.2.4 Session management
-  - Session management processess help prevent unauthorized access by closing unattended sessions; developers commonly use web frameworks to implement session management, allowing devs to ensure sessions are closed after they become inactive for a period of time
+  - Session management processes help prevent unauthorized access by closing unattended sessions; developers commonly use web frameworks to implement session management, allowing devs to ensure sessions are closed after they become inactive for a period of time
   - Session management is important to use with any type of authentication system to prevent unauthorized access
   - Desktop/laptops: recommendation to use screensavers, although modern OSs have timeout/lock features
   - Secure online sessions should terminate after a timeout period
@@ -105,10 +105,10 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - 5.2.5 Registration, proofing, and establishment of identity
   - Within an organization, new employees prove their identity with appropriate documentation during the hiring process
     - in-person identity proofing includes things like passport, DL, birth cert etc
-  - Online orgs often use knowledge-based authentication (KBA) for identity-proofing of someone new (e.g. a new customer creating a new bank/savings account)
+  - Online orgs often use **knowledge-based authentication (KBA)** for identity-proofing of someone new (e.g. a new customer creating a new bank/savings account)
     - example questions include past vehicle purchases, amount of mortgage payment, previous addresses, DL numbers
     - they then query authoritative information (e.g. credit bureaus or gov agencies) for matches
-  - Cognitive Passwords: security questions that are gathered during account creation, which are later used as questions for authentication (e.g. name of pet, color of first car etc)
+  - **Cognitive Passwords**: security questions that are gathered during account creation, which are later used as questions for authentication (e.g. name of pet, color of first car etc)
     - one of the flaws associated with cognitive passwords is that the information is often available on social media sites or general internet searches
 - 5.2.6 Federated Identity Management (FIM)
   - Federated Identity Management (FIM) systems (a form of SSO) are often used by cloud-based apps
@@ -173,7 +173,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - Instead of assigning permissions directly to users, user accounts are placed in roles and administrators assign privileges to the roles (typically defined by job function)
     - if the user account is in a role, the user has all privileges assigned to the role
   - MS Windows OS uses this model with groups
-  - RBAC models can group users into roles based on the org's hierarchy, and it is a non-descretionary access control model; central authority access decisions can use the RBAC model
+  - RBAC models can group users into roles based on the org's hierarchy, and it is a non-discretionary access control model; central authority access decisions can use the RBAC model
 - 5.4.2 Rule Based access control
   - **Rule-based Access Control**: use a set of rules, restrictions, or filters to determine access; key characteristic is that it applies global rules to all subjects
     - e.g. firewalls access control lists use a list of rules that define what access is allowed and what access is blocked
@@ -190,7 +190,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - e.g. you create a file and are the owner, and can grant permissions to that file
   - All objects have owners, owners can modify permission
   - Each object has an access control list defining permissions (e.g. read and modify files)
-  - All other models are nondiscretionary models, and admins centrally manage nondiscretionary controls
+  - All other models are non-discretionary models, and admins centrally manage non-discretionary controls
   - New Technology File System (NTFS) used in Windows, uses the DAC model
 - 5.4.5 Attribute Based Access Control (ABAC)
   - **Attribute-Based Access Control (ABAC)**: an advanced implementation of a rule-based access model, applying rules based on attributes; an access control paradigm where access rights are granted to users with policies that combine attributes together
@@ -206,10 +206,10 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 ## [5.5](#55-manage-the-identity-and-access-provisioning-lifecycle-osg-9-chpts-1314) Manage the identity and access provisioning lifecycle (OSG-9 Chpts 13,14)
 
-- 5.5.1 Account accesss review
+- 5.5.1 Account access review
   - Administrators need to periodically review user, system and service accounts to ensure they meet security policies and that they don’t have excessive privileges
   - Be careful in using the local system account as an application service account; although it allows the app to run without creating a special service account, it usually grants the app more access than it needs
-  - You can use scripts to run periodically and check for unused accounts, and check priveleged group membership, removing unauthorized accounts
+  - You can use scripts to run periodically and check for unused accounts, and check privileged group membership, removing unauthorized accounts
   - Guard against two access control issues:
     - excessive privilege: occurs when users have more privileges than assigned work tasks dictate; these privileges should be revoked
     - creeping privileges (AKA privilege creep): user accounts accumulating additional privileges over time as job roles and assigned tasks change
@@ -217,7 +217,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - Identity and access provisioning lifecycle refers to the creation, management, and deletion of accounts
     - this lifecycle is important because without properly defined and maintained user accounts, a system is unable to establish accurate identity, perform authentication, provide authorization, and track accountability
   - Provisioning/Onboarding
-    - provisioning ensures that accounts have appropriate privileges based on task requirements and employees receive needed hardware
+    - provisioning ensures that accounts have appropriate privileges based on task requirements and employees receive needed hardware; said another way, includes the creation, maintenance, and removal of user objects from apps, systems, and directories
     - proper user account creation, or provisioning, ensures that personnel follow specific procedures when creating accounts
       - new-user account creation is AKA enrollment or registration
     - **automated provisioning**: information is provided to an app, that then creates the accounts via pre-defined rules (assigning to appropriate groups based on roles)
@@ -239,7 +239,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - **account revocation**: deleting an account is the easiest way to deprovision
       - an employee's account is usually first disabled
       - supervisors can then review the user’s data and determine if anything is needed
-      - note: if terminated employee retains access to a user account after the exit interview, the risk for sabatage is very high
+      - note: if terminated employee retains access to a user account after the exit interview, the risk for sabotage is very high
     - deprovisioning includes collecting any hardware issued to an employee such as laptops, mobile devices and auth tokens
 - 5.5.3 Role definition
   - When a new job role is created, it's important to identify privileges needed by someone in that role; this ensures that employees in the new roles do not have excessive privileges
@@ -265,22 +265,22 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - OAuth 2.0 enables third-party apps to obtain limited access to an HTTP service, either on behalf of a resource owner (by orchestrating an approval interaction), or by allowing third-party applications to obtain access on its own behalf; OAuth provides the ability to access resources from another service
   - OAuth is the most widely used open standard for authorization and delegation of rights for cloud services
   - The most common protocol built on OAuth is OpenID Connect (OIDC); OpenID is used for authentication
-  - OAuth 2.0 is often used for delegated access to applications, e.g. a mobile game that automatically finds your new friends from a social media app is likely using OAuth 2.0;
+  - OAuth 2.0 is often used for delegated access to applications, e.g. a mobile game that automatically finds your new friends from a social media app is likely using OAuth 2.0
   - Conversely, if you sign into a new mobile game using a social media account (instead of creating a user account just for the game), that process might use OIDC
   - **OpenID Connect (OIDC)**: an authentication layer using the OAuth 2.0 authorization framework, maintained by the OpenID Foundation (not IETF), providing both authentication and authorization
-    - OIDC is a RESTful, JSON (JavaScript Object Notation)-based auth protocol that, when pared with OAuth can provide identity verification and basic profile info; uses JSON Web Tokens (JWT), (AKA ID token)
+    - OIDC is a RESTful, JSON (JavaScript Object Notation)-based auth protocol that, when paired with OAuth can provide identity verification and basic profile info; uses JSON Web Tokens (JWT), (AKA ID token)
   - OAuth and OIDC are used with many web-based applications to share information without sharing credentials
     - OAuth provides authorization
     - OIDC uses the OAuth framework for authorization and builds on the OpenID technologies for authentication
 
 - 5.6.2 Security Assertion Markup Language (SAML)
-  - Security Assertion Markup Language (SAML): an open XML-based standard commonly used to exchange authentication and authorization (AA) information between federated orgs
+  - **Security Assertion Markup Language (SAML)**: an open XML-based standard commonly used to exchange authentication and authorization (AA) information between federated orgs
   - Frequently used to integrate cloud services and provides the ability to make authentication and authorization assertions
   - SAML provides SSO capabilities for browser access
   - Organization for the Advancement of Structure Information Standards (OASIS) maintains it
   - SAML 2 spec utilizes three entities:
     - Principal or User Agent
-    - Service Provider (SP): providing the service a user is interested in using
+    - Service Provider (SP): providing a service for the user
     - Identity Provider (IdP): a third-party that holds the user authentication and authorization info
   - IdP can send three types of XML messages known as assertions:
     - **Authentication Assertion**: provides proof that the user agent provided the proper credentials, identifies the identification method, and identifies the time the user agent logged on
@@ -348,5 +348,5 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - provides improvements over the earlier version and over RADIUS, it separates authentication, authorization, and accounting into separate processes, which can be hosted on three different servers
     - additionally, TACACS+ encrypts all of the authentication information, not just the password, as RADIUS does
     - TACACS+ uses TCP port 49, providing a higher level of reliability for the packet transmissions
-  - **Diameter AAA protocol**: an advanced system designed to address the limitations of the older RADIUS protocol (diameter is twice the radius!); Diameter improves on RADIUS by providing enhanced security (uses IPsec or TLS instead of MD5 hashing), supports more extenstive attribute sets (suitable for large, complex networks), and can handle complex sessions
+  - **Diameter AAA protocol**: an advanced system designed to address the limitations of the older RADIUS protocol (diameter is twice the radius!); Diameter improves on RADIUS by providing enhanced security (uses IPsec or TLS instead of MD5 hashing), supports more extensive attribute sets (suitable for large, complex networks), and can handle complex sessions
     - Diameter is based on RADIUS and improves many of its weaknesses, but Diameter is not compatible with RADIUS

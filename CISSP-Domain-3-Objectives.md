@@ -1,50 +1,56 @@
 # [Domain-3](#domain-3-security-architecture-and-engineering) **Security Architecture and Engineering**
 
-You may find this domain to be more technical than others, and if you have experience woring in a security engineering role you likely have an advantage; if not, allocate extra time to this domain to ensure you have a good understanding of the topics
+You may find this domain to be more technical than others, and if you have experience working in a security engineering role you likely have an advantage; if not, allocate extra time to this domain to ensure you have a good understanding of the topics
 
 - **Advanced Encryption Standard (AES)**: uses the Rijndael algorithm and is the US gov standard for the secure exchange of sensitive but unclassified data; AES uses key lengths of 128, 192, and 256 bits, and a fixed block size of 128 bits, achieving a higher level of security than the older DES algorithm
-- **Algorithm**: a mathmatical function that is used in the encryption and decryption process; can be simply or very complex; also defined as a set of instructions by which encryption and decryption is done
+- **Algorithm**: a mathematical function that is used in the encryption and decryption process; can be simply or very complex; also defined as a set of instructions by which encryption and decryption is done
 - **Argon2**: a secure key derivation and password hashing algorithm designed to protect against brute-force and side-channel attacks; it was the winner of the Password Hashing Competition in 2015 and is considered highly secure and efficient, especially for systems requiring robust password protection
 - **ASLR**: Address space layout randomization (ASLR) is a memory-protection process for operating systems (OSes) that guards against buffer-overflow attacks by randomizing the location where system executables are loaded into memory
 - **Block Mode Encryption**: using fixed-length sequences of input plaintext symbols as the unit of encryption
-- **Block ciphers**: take a number of bits and encrypt them in a single unit, padding the plaintext to achieve a multiple of the block size; the Advanced Encryption Standard (AES) algorithm uses 128-bit blocks 
-- **Ciphers**: always meant to hide the true meaning of a message; types of ciphers include transposition, substitution, stream, and block
+- **Block cipher**: method of encrypting text that produces ciphertext, where a cryptographic key and algorithm are applied to a block of data at once/as a group, instead of one bit at a time; takes a number of bits and encrypts them in a single unit, padding the plaintext to achieve a multiple of the block size; the Advanced Encryption Standard (AES) algorithm uses 128-bit blocks
+- **Cipher**: always meant to hide the true meaning of a message; always secret; types of ciphers include transposition, substitution, stream, and block
 - **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
 - **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
-- **Codes**: cryptographic systems of symbols that operate on words or phrases and are sometimes secret, but don't always provide confidentiality
+- **Code**: cryptographic systems of symbols that operate on words or phrases and are sometimes secret, but don't always provide confidentiality
 - **Collision**: occurs when a hash function generates the same output for different inputs
-- **Cryptanalysis**: study of techniques for attempting to defeat cryptographic techniques and generally information security services; Cryptanalysis is the process of transforming or decoding communications from non-readable to readable format without having access to the real key
+- **Cryptanalysis**: study of techniques for attempting to defeat cryptographic methods and generally information security services; Cryptanalysis is the process of transforming or decoding communications from non-readable to readable format without having access to the real key; two major types of cryptanalysis: cryptanalytic attacks, and cryptographic attacks
+- **Cryptanalytic attack**: attack with a primary goal of deducing the key
 - **Cryptographic Hash function**: process or function that transforms an input plaintext into a unique value called a hash (or hash value); note that they do not use cryptographic algorithms, as hashes are one-way functions where it's infeasible to determine the plaintext; Message digests are an example of cryptographic hash
 - **Cryptography**: study of/application of methods to secure the meaning and content of messages, files etc by disguise, obscuration, or other transformations
-- **Cryptosystem**: complete set of hardware, software, communications elements and procedures that allow parties to communicate, store or use info protected by cryptographic means; includes algroithm, key, and key management functions
-- **Cryptovariables(s)**: parameters associated with a particular cryptogrphic algorithm; e.g. block size, key length and number of iterations
+- **Cryptosystem**: complete set of hardware, software, communications elements and procedures that allow parties to communicate, store or use info protected by cryptographic means; includes algorithm, key, and key management functions
+- **Cryptovariable**: parameter associated with a particular cryptographic algorithm; e.g. block size, key length and number of iterations
 - **Cyber-physical systems**: systems that use 'computational means' to control physical devices
 - **Decoding**: the reverse process from encoding, converting the encoded message back to plaintext format
 - **Decryption**: the reverse process from encryption
 - **Elliptic-curve cryptography (ECC)**: a newer mainstream algorithm, is normally 256 bits in length (a 256-bit ECC key is equivalent to a 3072-bit RSA key), making it securer and able to offer stronger anti-attack capabilities
 - **Encoding**: action of changing a message or set of info into another format through the use of code; unlike encryption, encoded info can still be read by anyone with knowledge of the encoding process
 - **Encryption**: process and act of converting the message from plaintext to ciphertext (AKA enciphering)
+- **Factoring attack**: in terms of the test, only the RSA algorithm uses factoring as the hard math problem; so if you see factoring attack, think RSA
 - **Fog computing**: advanced computational architecture often used as an element in IIoT; fog computing relies on sensors, IoT devices, or edge computing devices to collect data, then transfers it back to a central location for processing (centralizing processing and intelligence)
 - **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the ciphertext as a way of reducing the search space
 - **Hybrid encryption system**: a system that uses both symmetric and asymmetric encryption
-- **International Data Encryption Algorithm (IDEA)**: IDEA is a form of symmetric key block cipher encryption that uses a 128-bit key and operates on 64-bit blocks; it encrypts a 64-bit block of plaintext into a 64-bit block of ciphertext, and the input plaintext block is divided into four subblocks of 16 bits each
-- **Key**: the input that controls the operation of the cryptographic algorthm, determining the behavior of the algorithm and permits the reliable encyrption and decryption of the message
-- **Key pair**: matching set of one public and one private key
+- **International Data Encryption Algorithm (IDEA)**: IDEA is a form of symmetric key block cipher encryption that uses a 128-bit key and operates on 64-bit blocks; it encrypts a 64-bit block of plaintext into a 64-bit block of ciphertext, and the input plaintext block is divided into four sub-blocks of 16 bits each
+- **Initialization Vector (IV)**: a random string of bits (aka a nonce) that is XORed with a message, reducing predictability and repeatability; size of the IV varies by algorithm but normally is the same length as the block size of the cipher (or as large as the encryption key); IV is the cryptographic version of a random number
+- **Key**: the input that controls the operation of the cryptographic algorithm, determining the behavior of the algorithm and permits the reliable encryption and decryption of the message
+- **Key clustering**: weakness in cryptography where a plain-text message generates identical ciphertext messages when using the same algorithm but using different keys
 - **Key escrow**: process by which keys (asymmetric or symmetric) are placed in a trusted storage agent's custody, for later retrieval
 - **Key generation**: the process of creating a new encryption/decryption key
-- **Key recovery**: process of reconstructing an encryption key from the cyphertext alone; if there is a workable key recovery system, it means the algorithm is not secure
+- **Key pair**: matching set of one public and one private key
+- **Key recovery**: process of reconstructing an encryption key from the ciphertext alone; if there is a workable key recovery system, it means the algorithm is not secure
 - **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password; keyspace = 2 to the power of the number of bits, so 4 bits = 16 keys, 8 bits = 256 keys
+- **Lattice-based Cryptography**: Lattice-based cryptography leverages complex grids or constructions known as lattices for the purpose of encryption and decryption; involves mathematical problems that remain hard to solve even with the enhanced computational power of quantum computing
 - **Meet-in-the-middle**: attack that uses a known plaintext message and both encryption of the plaintext and decryption of the ciphertext simultaneously in a brute-force manner to identify the encryption key; 2DES is vulnerable to this attack
 - **Microcontroller**: similar to system on a chip (SoC), consists of a CPU, memory, IO devices, and non-volatile storage (e.g. flash or ROM/PROM/EEPROM); think Raspberry Pi or Arduino
-- Mobile device deployment models that cover allowing or providing mobile devices for employees include: BYOD, COPE, CYOD, and COMS/COBO; also consider VDI and VMI options; 
-- Mobile device deployment policies should address things like data ownership, support ownership, patch and update management, security product management, forensics, privacy, on/offboarding, adherence to corporate policies, user acceptance, legal concerns, acceptable use policies, camera/video, microphone, Wi-Fi Direct, tethering and hotspots, contactless payment methods, and infrastructure considerations
-- **Multistate systems**: certified to handle data from different security classifications simultaneously
+- **Mobile device deployment models**: that cover allowing or providing mobile devices for employees include: BYOD (Bring Your Own Device), COPE (Company Owned/Personally Enabled), CYOD (Choose Your Own Device), and COBO (Company Owned/Business Only); also consider VDI and VMI options
+- **Mobile device deployment policies**: should address things like data ownership, support ownership, patch and update management, security product management, forensics, privacy, on/offboarding, adherence to corporate policies, user acceptance, legal concerns, acceptable use policies, camera/video, microphone, Wi-Fi Direct, tethering and hot spots, contactless payment methods, and infrastructure considerations
+- **Multi-state systems**: certified to handle data from different security classifications simultaneously
 - **One-time pad**: series of randomly generated symmetric encryption keys, each one to be used only once by the sender and recipient; to be successful, the key must be generated randomly without any known pattern; the key must be at least as long as the message to be encrypted; the pads must be protected against physical disclosure and each pad must be used only one time, then discarded
 - **Out-of-band**: transmitting or sharing control information (e.g. encryption keys and crypto variables) by means of a separate and distinct communications path, channel, or system
 - **Password-Based Key Derivation Function 2 (PBKDF2)**: securely derives cryptographic keys from passwords; by applying salting and key stretching (through multiple hashing iterations), PBKDF2 transforms a password into a cryptographic key that can be used for encrypting data or securely storing passwords; this process makes it much harder for attackers to guess or brute-force the password, as it increases the computational work required to test each possible password, improving resistance against attacks
 - **Pepper**: a large constant number used to increase the security of the hashed password further; it is stored outside of the database holding the hashed passwords
 - **Personal electronic device (PED)** security features can usually be managed using mobile device management (MDM) or unified endpoint management (UEM) solutions, including device authentication, full-device encryption, communication protection, remote wiping, communication protection, device lockout, screen locks, GPS and location services, content management, app control, push notification management, third-party app store control, rooting/jailbreaking, credential management and more
 - **Plaintext**: message or data in its readable form, not turned into a secret
+- **Post-Quantum Cryptography**: development of new types of cryptographic approaches that can be implemented using conventional computing, and is resistant to quantum computing attacks; note that Lattice-based cryptography is resistant to most, but not all, quantum attacks (also see my [article on quantum computing threats and opportunities](https://blog.balancedsec.com/p/quantum-computing-heros))
 - **Remote attestation**: feature of the TPM (Trusted Platform Module) that creates a hash value from the system configuration to confirm the integrity of the configuration
 - **RTOS**: real-time operating system (RTOS) is an operating system specifically designed to manage hardware resources and run applications with precise timing and high reliability; they are designed to process data with minimum latency; an RTOS is often stored on ROM; they use deterministic timing, meaning tasks are completed within a defined time frame and is designed to operate in a hard (i.e. missing a deadline can cause system failure) or soft (missing a deadline degrades performance but is not catastrophic) real-tme condition
 - **Salting**: adds additional bits to a password before hashing it, and helps thwart rainbow attacks; algorithms like Argon2, bcrypt, and PBKDF2 add salt and repeat the hashing function many times; salts are stored in the same database as the hashed password
@@ -53,14 +59,14 @@ You may find this domain to be more technical than others, and if you have exper
 - **Session key**: a symmetric encryption key generated for one-time use; usually requires a key encapsulation approach to eliminate key management issues
 - **Static Environments**: apps, OSs, hardware, or networks that are created/configured to meet a particular need or function are set to remain unaltered; static environments, embedded systems, network-enabled devices, edge, fog, and mobile devices need security management that may include network segmentation, security layers, app firewalls, manual updates, firmware version control, wrappers, and control redundancy/diversity
 - **Stream mode encryption**: system using a process that treats the input plaintext as a continuous flow of symbols, encrypting one symbol at a time; usually uses a streaming key, using part of the key as a one-time key for each symbol's encryption
-- **Stream ciphers**: encrypt the digits (typically bytes), or letters (in substitution ciphers) of a message one at a time
-- **Substitution cipher**: encryption/decription process using subsitution
+- **Stream cipher**: a symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream; each plaintext digit is encrypted one at a time with the corresponding digit of the keystream, to give a ciphertext stream
+- **Substitution cipher**: uses an encryption algorithm to replace each character or bit of the plaintext message with a different character; one of the earliest substitution ciphers was developed by Julius Caesar, known as the "Caesar cipher"
 - **Symmetric encryption**: process that uses the same key (or a simple transformation of it) for both encryption/decryption
-- **Transposition cypher**: encryption/decription process using transposition
+- **Transposition cypher**: encryption/decryption process using transposition
 - **Trust and Assurance**: trust is the presence of a security mechanism or capability; assurance is how reliable the security mechanism(s) are at providing security
 - **VESDA**: very early smoke detection process (air sensing device brand name)
-- **Work factor**: (AKA Work function) is a way to measure the strength of a cryptography system, measuring the effort in terms of cost/time to decrypt messages; amount of effort necessary to break a cryptographic system using a bruteforce attack, measured in elapsed time
-- **Zero-knowledge proof**: one person demonstrates to another that they can achieve a reslut that requires sensitive info without actually disclosing the sensitive info
+- **Work factor**: (AKA Work function) is a way to measure the strength of a cryptography system, measuring the effort in terms of cost/time to decrypt messages; amount of effort necessary to break a cryptographic system using a brute-force attack, measured in elapsed time
+- **Zero-knowledge proof**: one person demonstrates to another that they can achieve a result that requires sensitive info without actually disclosing the sensitive info
 
 ## [3.1](#31--research-implement-and-manage-engineering-processes-using-secure-design-principles-osg-9-chpts-18916)  Research, implement, and manage engineering processes using secure design principles (OSG-9 Chpts 1,8,9,16)
 
@@ -76,7 +82,7 @@ You may find this domain to be more technical than others, and if you have exper
 - 3.1.1 Threat Modeling
   - **Threat modeling**: (see Domain 1), a security process where potential threats are identified, categorized, and analyzed; it can be performed as a proactive measure during design and development or as an reactive measure once a product has been deployed
     - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat
-    - Threat modeling commonly involves decomposing the app to understand it and how it interacts with other components or users; idnetifying and ranking threats allows potential threats to be propritized; dentifying how to mitigate those threats finishes the process
+    - Threat modeling commonly involves decomposing the app to understand it and how it interacts with other components or users; identifying and ranking threats allows potential threats to be prioritized; identifying how to mitigate those threats finishes the process
 - 3.1.2 Least Privilege
   - As noted in Domain 2, Least privilege states that subjects are granted only the privileges necessary to perform assigned work tasks and no more; this concept extends to data and systems
     - Limiting and controlling privileges based on this concept protects confidentiality and data integrity
@@ -92,7 +98,7 @@ You may find this domain to be more technical than others, and if you have exper
   - **Separation of duties (SoD)**: separation of duties (SoD) and responsibilities ensures that no single person has total control over a critical function or system;  SoD is a process to minimize opportunities for misuse of data or environment damage
     - e.g. one person sells tickets, another collects tickets and restricts access to ticket holders in a movie theater
 - 3.1.7 Keep it simple
-  - **Keep it simple**: AKA keep it simple, stupid (KISS), this concept is the encouragement to avoid overcomplicating the environment, organization, or product design
+  - **Keep it simple**: AKA keep it simple, stupid (KISS), this concept is the encouragement to avoid over-complicating the environment, organization, or product design
 - 3.1.8 Zero Trust
   - **Zero Trust**: "assume breach"; a security concept and alternative of the traditional (castle/moat) approach where nothing is automatically trusted; instead each request for activity or access is assumed to be from an unknown and untrusted location until otherwise verified
     - "Never trust, always verify" replaces "trust but verify" as a security design principle by asserting that all activities by all users/entities must be subject to control, authentication, authorization, and management at the most granular level possible
@@ -163,7 +169,7 @@ You may find this domain to be more technical than others, and if you have exper
 
 - **Brewer and Nash Model**:
   - AKA "ethical wall", and "cone of silence"
-  - created to permit access controls to change dynamically based on a user's previous activity
+  - Primarily used to prevent conflicts of interest, by restricting access to information that could create a conflict; created to permit access controls that change dynamically based on a user's previous activity
 - **Goguen-Meseguer Model**:
   - An integrity model
   - Foundation of noninterference conceptual theories
@@ -184,7 +190,7 @@ You may find this domain to be more technical than others, and if you have exper
 ## [3.3](#33-select-controls-based-upon-systems-security-requirements-osg-9-chpt-8) Select controls based upon systems security requirements (OSG-9 Chpt 8)
 
 - Be familiar with the **Common Criteria (CC)** for Information Technology Security Evaluation
-- Based on ISO/IEC 15408 is a subjective security function evaluation tool that uses protection profiles (PPs) and security targets (Sts) and assigns an Evaluation Assurance level (EAL)
+- Based on ISO/IEC 15408 is a subjective security function evaluation tool that uses protection profiles (PPs) and security targets (STs) and assigns an Evaluation Assurance level (EAL)
 - The CC provides a standard to evaluate systems, defining various levels of testing and confirmation of systems' security capabilities
 - The number of the level indicates what kind of testing and confirmation has been performed
 - The important concepts:
@@ -214,9 +220,9 @@ You may find this domain to be more technical than others, and if you have exper
   - **Hardware segmentation**: forces separation via physical hardware controls rather than logical processes; in this type of segmentation, the operating system maps processes to dedicated memory locations
 
 - **Virtualization**: technology used to host one or more operating systems within the memory of a single host, or to run applications that are not compatible with the host OS; the goal is to protect the hypervisor and ensure that compromising one VM doesn't affect others on that host
-- **Virtual Software**: software that is deployed in a way that acts as if it is interacting with a full host OS; virutalized app is isolated from the host OS so it can't make direct/permanent changes to the host OS
+- **Virtual Software**: software that is deployed in a way that acts as if it is interacting with a full host OS; virtualized app is isolated from the host OS so it can't make direct/permanent changes to the host OS
 - **Trusted Platform Module (TPM)**: a cryptographic chip that is sometimes included with a client computer or server; a TPM enhances the capabilities of a computer by offering hardware-based cryptographic operations
-  - TPM is a tamper-resistant integrated circuit built into some motherboards that can perform cryptographic operations (including key gen) and protect small amoutns of sensitive info, like passwords and cryptographic keys
+  - TPM is a tamper-resistant integrated circuit built into some motherboards that can perform cryptographic operations (including key gen) and protect small amounts of sensitive info, like passwords and cryptographic keys
   - Many security products and encryption solutions require a TPM
   - TPM is both a specification for a cryptoprocessor chip on a motherboard and the general name for implementation of the specification
   - A TPM is an example of a **hardware security module (HSM)**: a cryptoprocessor used to manage and store digital encryption keys, accelerate crypto operations, support faster digital signatures, and improve authentication
@@ -232,7 +238,7 @@ You may find this domain to be more technical than others, and if you have exper
 
 ## [3.5](#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-9-chpts-91620) Assess and mitigate the vulnerabilities of security architectures, designs and solution elements (OSG-9 Chpts 9,16,20)
 
-This objective relates to identifying vulnerabilities and corresponding mitigating contols and solutions; the key is understanding the types of vulnerabilities commonly present in different environments, and their mitigation options
+This objective relates to identifying vulnerabilities and corresponding mitigating controls and solutions; the key is understanding the types of vulnerabilities commonly present in different environments, and their mitigation options
 
 - 3.5.1 Client-based systems
   - **Client-based systems**: client computers are the most attacked entry point
@@ -256,8 +262,8 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - Isolation: transactions are processed independently
     - Durability: once a transaction is committed, it is permanently recorded
   - Attackers may use inference or aggregation to obtain confidential information
-  - **Aggregation attack**: process where SQL provides a number of functions that combine records from one or more tables to produce potentially useful info
-  - **Inference attack**: involves combining several pieces of nonsensitive info to gain access to that which should be classified at a higher level; inference makes use of the human mind’s deductive capacity rather than the raw mathematical ability of database platforms
+  - **Aggregation attack**: based on math; process where SQL provides a number of functions that combine records from one or more tables to produce potentially useful info
+  - **Inference attack**: based on human deduction; involves combining several pieces of nonsensitive info to gain access to that which should be classified at a higher level; inference makes use of the human mind’s deductive capacity rather than the raw mathematical ability of database platforms
 
 - 3.5.4 Cryptographic systems
   - Goal of a well-implemented cryptographic system is to make compromise too time-consuming and/or expensive
@@ -289,7 +295,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 - 3.5.6 Cloud-based systems (e.g., Software as a Service (SaaS), Infrastructure as a Service (IaaS), Platform as a Service (PaaS))
   - **Software as a Service (SaaS)**: provides fully functional apps typically accessible via a web browser
   - **Platform as a Service (PaaS)**: provide consumers with a computing platform, including hardware, operating systems, and a runtime environment
-  - **Infrastructure as a Service (IaaS)**: provide basic computig resoruces like servers, storage, and networking
+  - **Infrastructure as a Service (IaaS)**: provide basic computing resources like servers, storage, and networking
     - note that the cloud service provider providing the least amount of maintenance and security is the IaaS model
   - **Cloud-based systems**: on-demand access to computing resources available from almost anywhere
   - Cloud's primary challenge: resources are outside the org’s direct control, making it more difficult to manage risk
@@ -348,7 +354,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - use HTTPS only
       - encrypt everything possible and use routine scanning
       - closely aligned with microservices is the concept of shifting left, or addressing security earlier in the SDLC; also integrating it into the CI/CD pipeline
-      - consider the software supplychain or dependencies of libries used, when addressing updates and patching
+      - consider the software supplychain or dependencies of libraries used, when addressing updates and patching
 - 3.5.10 Containerization
   - **Containerization**: AKA OS virtualization, is based on the concept of eliminating the duplication of OS elements in a virtual machine; instead each app is placed into a container that includes only the actual resources needed to support the app, and the common or shared OS elements are used from the hypervisor
     - Containerization is able to provide 10 to 100 x more application density per physical server compared to traditional virtualization
@@ -363,7 +369,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 - 3.5.11 Serverless
   - **Serverless architecture** (AKA **function as a service (FaaS)**): cloud computing where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the CSP
     - Note that FaaS is a subcategory of PaaS
-    - Applications developed on serverless architecture are similar to microservices, and each function is created to operate independently and automonomously
+    - Applications developed on serverless architecture are similar to microservices, and each function is created to operate independently and autonomously
     - A serverless model, as in other CSP models, is a shared security model,and your org and the CSP share security responsibility
 
 - 3.5.12 Embedded systems
@@ -408,7 +414,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - virtualization doesn't lessen the security management requirements of an OS, patch management is still required
       - be aware of VM Sprawl and Shadow IT
       - **VM escape**: occurs when software within a guest OS is able to breach the isolation protection provided by the hypervisor
-      - VM escape minimizaton:
+      - VM escape minimization:
         - keep highly sensitive systems and data on separate physical machines
         - keep all hypervisor software current with vendor-released patches
         - monitor attack, exposure and abuse indexes for new threats to virtual machines (which might be better protected); often, virtualization administrators have access to all virtuals
@@ -448,7 +454,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - **Cipher Block Chaining (CBC) mode**: a block cipher mode of operation that encrypts plaintext by using an operation called XOR (exclusive-OR); XORing a block with the previous ciphertext block is known as "chaining"; this means that the decryption of a block of ciphertext depends on all the preceding ciphertext blocks; CBC uses an Initialization Vector or IV, which is a random value or nonce shared between sender and receiver
         - advantages: CBC uses the previous ciphertext block to encrypt the next plaintext block, making it harder to deconstruct; XORing process prevents identical plaintext from producing identical ciphertext; a single bit error in a ciphertext block affects the decryption of that block and the next, making it harder for attackers to exploit errors
         - disadvantages: the blocks must be processed in order, not simultaneously (so it's slower); CBC is also vulnerable to POODLE and GOLDENDOODLE attacks
-      - **Cipher Feedback (CFB) mode**: similar to CBC, it uses an IV and the cipher from the previous block; the main difference is that with CFB, the cipher from the previous block is encrypted first, then XORed with the current block
+      - **Cipher Feedback (CFB) mode**: streaming version of CBC; similar to CBC, it uses an IV and the cipher from the previous block so errors can propagate; the main difference is that with CFB, the cipher from the previous block is encrypted first, then XORed with the current block
         - advantages: CFB is considered to be faster than CBC even though it’s also sequential
         - disadvantages: if there’s an error in one block, it can carry over into the next block
       - **Output Feedback (OFB) mode**: OFB turns a block cipher into a synchronous stream cipher; based on an IV and the key, it generates keystream blocks which are then simply XORed with the plaintext data; as with CFB, the encryption and decryption processes are identical, and no padding is required
@@ -459,9 +465,9 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - disadvantage: lacks integrity, so we need to use hashing
       - **Galois/Counter (GCM) mode**: combines counter mode (CTR) with Galois authentication; we can not only encrypt data, but we can authenticate where the data came from (providing both data integrity and confidentiality); includes authentication data, and uses hashing as starting values
         - advantages: extremely fast, GCM is recognized by NIST and used in the IEEE 802.1AE standard
-        - disadvantages:most stated disadvantages seem to be around implementation burdens
-      - **Counter with Cipher Block Chaining Message Authentication Code (CCM) mode**: uses counter mode so there is no error propogation; there is no duplication, but uses chaining, so cannot run in parallel; MAC or message authentication code: provides authentication and integrity
-        - advantages: no error propogation, provides authentication and integrity
+        - disadvantages: most stated disadvantages seem to be around implementation burdens
+      - **Counter with Cipher Block Chaining Message Authentication Code (CCM) mode**: uses counter mode so there is no error propagation; there is no duplication, but uses chaining, so cannot run in parallel; MAC or message authentication code: provides authentication and integrity
+        - advantages: no error propagation, provides authentication and integrity
         - disadvantages: cannot be run in parallel
       - Examples of symmetric algorithms: Twofish, Serpent, AES (Rijndael), Camellia, Salsa20, ChaCha20, Blowfish, CAST5, Kuznyechik, RC4/5/6, DES, 3DES, Skipjack, Safer, and IDEA
   - **Asymmetric** encryption: process that uses different keys for encryption and decryption, and in which the decryption key is computationally not possible to determine given the encryption key itself
@@ -472,11 +478,14 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - Private key secrecy and integrity of an asymmetric encryption process are entirely dependent upon protecting the value of the private key
     - While asymmetric encryption is slower, it is best suited for sharing between two or more parties
     - Asymmetric encryption provides confidentiality, authentication and non-repudiation
+    - Asymmetric key use:
+      - to encrypt a message: use the recipient's public key
+      - to decrypt a message: use your own private key
     - Most common asymmetric cryptosystems in use today:
       - Rivest-Shamir-Adleman (RSA): depends on factoring the product of prime numbers
       - Diffie-Hellman: depends on modular arithmetic
       - ElGamal: extension of Diffie-Hellman that depends on modular arithmetic
-      - Eliptical Curve Cryptography (EEC): elliptic curve algorithm depends on the elliptic curve discrete logarithm problem and provides more security than other algorithms when both are used with keys of the same length
+      - Elliptical Curve Cryptography (EEC): elliptic curve algorithm depends on the elliptic curve discrete logarithm problem and provides more security than other algorithms when both are used with keys of the same length
   - Check out [Practical Cryptography for Developers](https://github.com/nakov/Practical-Cryptography-for-Developers-Book/blob/master/encryption-symmetric-and-asymmetric.md) for a deeper dive
 - 3.6.3 Public Key Infrastructure (PKI)
   - **Public Key Infrastructure (PKI)**: hierarchy of trust relationships permitting the combination of asymmetric and symmetric cryptography along with hashing and digital certificates (giving us hybrid cryptography)
@@ -492,7 +501,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - A PKI can have multiple tiers:
         - single tier means you have one or more servers that perform all the functions of a PKI
         - two tiers means there is an offline root CA (a server that issues certificates to the issuing CAs but remains offline most of the time) in one tier, and issuing CAs (the servers that issue certificates to computing devices and users) in the other tier
-        - servers in the second tier are often referred to as intermediate CAs or subordinate CAs
+          - servers in the second tier are often referred to as intermediate CAs or subordinate CAs
         - three tier means you can have CAs that are responsible only for issuing policies (and they represent the second tier in a three-tier hierarchy)
           - in such a scenario, the policy CAs should also remain offline and be brought online only as needed
         - Generally, the more tiers, the more security (but proper configuration is critical)
@@ -539,7 +548,11 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - Digital signature process does not provide confidentiality in and of itself (only ensures integrity, authentication, and nonrepudiation)
     - To digitally sign a message, first use a hashing function to generate a message digest; then encrypt the digest with your private key
     - To verify a digital signature, decrypt the signature with the sender's public key and compare the message digest to the one you generate yourself: if they match, the message is authentic
-  - [FIPS 186-5](https://csrc.nist.gov/pubs/fips/186-5/final) specifies four techniques for the generation and verification of digital signatures that can be used for the protection of data: the Digital Signature Algorithm (DSA), the Rivest-Shamir-Adleman Algorithm (RSA), the Elliptic Curve Digital Signature Algorithm (ECDSA), and the Edwards-curve Digital Signature Algorithm (EdDSA)
+  - [FIPS 186-5](https://csrc.nist.gov/pubs/fips/186-5/final) Digital Signature Standard (DSS) - specifies three techniques for the generation and verification of digital signatures that can be used for the protection of data:
+    - the Rivest-Shamir-Adleman Algorithm (RSA)
+    - the Elliptic Curve Digital Signature Algorithm (ECDSA), and
+    - the Edwards-Curve Digital Signature Algorithm (EdDSA)
+    - NOTE: the Digital Signature Algorithm (DSA) is now to be used only for verifying existing signatures
 - 3.6.6 Digital Non-repudiation
   - Here non-repudiation refers to methods ensuring certainty about data origins; in general, the inability to deny
   - Non-repudiation of origin: sender cannot deny having sent a particular message
@@ -561,9 +574,15 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - the hash function should be collision-resistant, meaning it is extremely hard to find two messages that produce the same hash value output
     - hashes are used for storing passwords, with email, and for file download integrity verification
   - Hashing and integrity: if the hash generated by sender, and separately by the receiver match, then we have integrity
-  - Successors to the Secure Hash Algorithm (SHA), SHA-2, and SHA-3, make up the government standard message digest funtion
+  - Successors to the Secure Hash Algorithm (SHA), SHA-2, and SHA-3, make up the government standard message digest function
     - SHA-2 supports variable-length message digests, ranging up to 512 bits
     - SHA-3 improves upon the security of SHA-2 and supports the same hash lengths
+  - Good hash functions have five requirements:
+    - they allow input of any length
+    - provide fixed-length output
+    - make it relatively easy to compute the hash function for any input
+    - provide one-way functionality
+    - are collision-free
 
 ## [3.7](#37-understand-methods-of-cryptanalytic-attacks-osg-9-chpts-71421) Understand methods of cryptanalytic attacks (OSG-9 Chpts 7,14,21)
 
@@ -575,16 +594,16 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - if you have enough ciphertext samples, the idea is that you can decrypt the target ciphertext based on the samples
     - frequency analysis is a technique that is helpful against simple ciphers (see below)
 - 3.7.3 Known plaintext
-  - **Known plaintext**: in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes
+  - **Known plaintext**: in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes; the goal is to use the plaintext and associated ciphertext to deduce the encryption key
   - **Linear cryptanalysis**: a known plaintext attack, in which the attacker studies probabilistic linear relations referred to as linear approximations among parity bits of the plaintext, the Ciphertext and the hidden key
 - 3.7.4 Frequency analysis
   - **Frequency analysis**: an attack where the characteristics of a language are used to defeat substitution ciphers
-    - for example in English, the letter "E" is the most common, so the most common letter in an encrypted cyphertext could be a substitution for "E"
+    - for example in English, the letter "E" is the most common, so the most common letter in an encrypted ciphertext could be a substitution for "E"
     - other examples might include letters that appear twice in sequence, as well as the most common words used in a language
 - 3.7.5 Chosen ciphertext
   - **Chosen ciphertext**: in a chosen ciphertext attack, the attacker has access to one or more plaintexts of arbitrary ciphertexts; i.e. the attacker has the ability to decrypt chosen portions of the ciphertext message, and use the decrypted portion to discover the key
   - **Chosen-plaintext attack (CPA)**: an attack model for cryptanalysis which presumes that the attacker can obtain the ciphertexts for arbitrary plaintexts, with the goal to gain information that reduces the security of the encryption scheme; a CPA is more powerful than a known plaintext attack; however a chosen-plaintext is less powerful than a chosen ciphertext
-  - **Differential cryptanalysis**: a type of chosen plaintext attack, and a general form of cryptanalysis applicable primarily to block ciphers, but also to stream ciphers and cryptographic hash functions; in the broadest sense, it is the study of how differences in information input can affect the resultant difference at the output; advanced methods such as differential cryptanalysis are types of chosen plaintext attacks
+  - **Differential cryptanalysis**: a type of chosen plaintext attack, and a general form of cryptanalysis applicable primarily to block ciphers, but also to stream ciphers and cryptographic hash functions; it is the study of how differences in information input can affect the resultant difference at the output; advanced methods such as differential cryptanalysis are types of chosen plaintext attacks
     - as an example, an attacker may try to get the receiver to decrypt modified ciphertext, looking for that modification to cause a predictable change to the plaintext
 - 3.7.6 Implementation attacks
   - **Implementation attack**: attempts to exploit weaknesses in the implementation of a cryptography system
@@ -624,8 +643,8 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - **Ransomware**: a type of malware that weaponizes cryptography
     - using many of the same techniques as other types of malware, ransomware gens an encryption key, and encrypts critical files
     - this encryption renders the data inaccessible to the authorized user or anyone else other than the malware author
-    - often threatening to publically release sensitive data if ransome is not paid
-    - 2020 study, 56% of orgs suffered a ransomeware attack, 27% of orgs who reported an attack chose to pay, on average ~$1.1m
+    - often threatening to publicly release sensitive data if ransome is not paid
+    - 2020 study, 56% of orgs suffered a ransomware attack, 27% of orgs who reported an attack chose to pay, on average ~$1.1m
     - seek legal advice prior to engaging with ransomware authors
 
 ## [3.8](#38-apply-security-principles-to-site-and-facility-design-osg-9-chpt-10) Apply security principles to site and facility design (OSG-9 Chpt 10)
@@ -644,7 +663,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - The top priority of security should always be the protection of the life and safety of personnel
   - In the US, follow the guidelines and requirements from Occupational Safety and Health Administration (OSHA), and Environmental Protection Agency (EPA)
   - A key element in designing a facility for construction is understanding the level required by your org and planning for it before beginning construction
-  - **Crime Prevention Through Environmental Design (CPTED)**: a well-established school of thought on "secure architecture" - an archiectural approach to building and space design that emphasizes passive features to reduce the likelihood of criminal activity
+  - **Crime Prevention Through Environmental Design (CPTED)**: a well-established school of thought on "secure architecture" - an architectural approach to building and space design that emphasizes passive features to reduce the likelihood of criminal activity
     - core principle of CPTED is that the design of the physical environment can be managed/manipulated, and crafted with intention in order to create behavioral effects or changes in people present in those areas that result in reduction of crime as well as a reduction of the fear of crime
     - CPTED stresses three main principles:
       - **natural access control**: the subtle guidance of those entering and leaving a building
@@ -660,12 +679,12 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 ## [3.9](#39-design-site-and-facility-security-controls-osg-9-chpt-10) Design site and facility security controls (OSG-9 Chpt 10)
 
-- Note that alghough the topics in this section cover mostly interior spaces, physical security is applicable to both interior and exterior of a facility
+- Note that although the topics in this section cover mostly interior spaces, physical security is applicable to both interior and exterior of a facility
 - 3.9.1 Wiring closets/intermediate distribution facilities
   - **Wiring closets/intermediate distribution facilities (IDF)**: A wiring closet or IDF is typically the smallest room that holds IT
     hardware
     - wiring closet is AKA premises wire distribution room, main distribution frame (MDF), intermediate distribution frame (IDF), and telecommunications room, and it is referred to as an IDF in (ISC)^2 CISSP objective 3.9.1
-    - where networking cables for the building or a floor are conntected to equipment (e.g. patch panels, switches, routers, LAN extenders etc)
+    - where networking cables for the building or a floor are connected to equipment (e.g. patch panels, switches, routers, LAN extenders etc)
     - usually includes telephony and network devices, alarm systems, circuit breaker panels, punch-down blocks, WAPs, video/security
     - may include a small number of servers
     - access to the wiring closest/IDF should be restricted to authorized personnel responsible for managing the IT hardware
@@ -675,21 +694,21 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - **Server rooms/data centers**: server rooms, data centers, communication rooms, server vaults, and IT closets are enclosed, restricted, and protected rooms where mission critical servers and networks are housed
     - a server room is a bigger version of a wiring closet, much smaller than a data center
     - a server room typically houses network equipment, backup infrastructure and servers (more archaic versions include telephony equipment)
-    - server rooms should be designed to support optimal operation of IT infrastructure and to block unauthorirzed human access or intervention
+    - server rooms should be designed to support optimal operation of IT infrastructure and to block unauthorized human access or intervention
     - server rooms should be located at the core of the building (avoid ground floor, top floor, or in the basement)
     - server rooms should have a single entrance (and an emergency exit)
     - server room should block unauthorized access, and entries and exits should be logged
     - datacenters are usually more protected than server rooms, and can include guards and mantraps
-    - datacenters can be single-tenant or multitenant
+    - datacenters can be single-tenant or multi-tenant
 - 3.9.3 Media storage facilities
-  - **Media storage facilities**: often store backup tapes/disks, blank, resuable and other media, and should be protected just like a server room
+  - **Media storage facilities**: often store backup tapes/disks, blank, reusable and other media, and should be protected just like a server room
     - depending on requirements a cabinet or safe could suffice
     - new blank media, and media that is reused (e.g. thumb drives, flash memory cards, portable hard drives) should be protected against theft and data remnant recovery
     - concerns include theft, corruption, data remnant recovery
     - other recommendations:
       - employ a media librarian or custodian
       - use check-in/check-out process for media tracking
-      - run a secure drive sanitization or zeroization when media is returned
+      - run a secure drive sanitization or "zeroization" when media is returned
     - note: a safe is a movable secured container that's not integrated into a building's construction; a vault is a permanent safe integrated into construction
 - 3.9.4 Evidence storage
   - **Evidence storage**: as cybercrime events continue to increase, it is import to retain logs, audit trails, drive images, VM snapshots and other records of digital events; the evidence storage exists to preserve chain of custody
@@ -731,7 +750,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - If water-based sprinklers are used for fire suppression, damage to electronic equipment is likely; automate the shutoff of electricity prior to sprinkler trigger
   - Other environmental issues include earthquakes, power outages, tornados and wind
   - Secondary facilities should be located far enough away from the primary to ensure they won't be damaged by the same event
-  - Water leakage and flooding should be addressed in your environmental safety policy and procedures; water and electricity together is sure to cause damange; locate server rooms and critical eqiupment away from any water source or transport pipes
+  - Water leakage and flooding should be addressed in your environmental safety policy and procedures; water and electricity together is sure to cause damage; locate server rooms and critical equipment away from any water source or transport pipes
 - 3.9.8 Fire prevention, detection, and suppression
   - Protecting personnel from harm should always be the most important goal of any security or protection system!
   - In addition to protecting people, fire detection and suppression is designed to keep asset damage caused by fire, smoke, heat, and suppression materials to a minimum
@@ -762,7 +781,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 - 3.9.9 Power (e.g., redundant, backup)
   - Consider designing power to provide for high availability
   - Most power systems have to be tested at regular intervals
-  - As part of the design, mandate redundant power systems to accommodate testing, upgrades and other maintenance 
+  - As part of the design, mandate redundant power systems to accommodate testing, upgrades and other maintenance
   - Additionally, test failover to a redundant power system and ensure it is fully functional
   - The International Electrical Testing Association (NETA) has developed standards around testing power systems
   - Battery backup/fail-over power (including UPS/generators):

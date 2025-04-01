@@ -20,7 +20,7 @@
   - Managing the data lifecycle refers to protecting it from cradle to grave -- steps need to be taken to protect data when it's first created until it's destroyed
   - One of the first steps in the lifecycle is identifying and classifying information and assets, often within a security policy
   - In this context, assets include sensitive data, the hardware used to process that data, and the media used to store/hold it
-  - **Data categorization**: process of grouping sets of data, info or knowledge that have comparable sensativities (e.g. impact or loss rating), and have similar law/contract/compliance security needs
+  - **Data categorization**: process of grouping sets of data, info or knowledge that have comparable sensitivities (e.g. impact or loss rating), and have similar law/contract/compliance security needs
   - **Sensitive data**: any information that isn't public or unclassified, and can include anything an org needs to protect due to its value, or to comply with existing laws and regulations
   - **Personally Identifiable Information (PII)**: any information that can identify an individual
     - more specifically, info about an individual including (1) any info that can be used to distinguish or trace an individual‘s identity, such as name, social security number, date and place of birth, mother‘s maiden name, or biometric records; and (2) any other information that is linked or linkable to an individual, such as medical, educational, financial, and employment information ([NIST SP 800-122](https://csrc.nist.gov/publications/detail/sp/800-122/final))
@@ -65,17 +65,17 @@
 - **Destruction**: destroy data no longer needed by the organization; policy should define acceptable destruction methods by type and classification ([see NIST SP-800-88 for details](https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final))
   - **Erasing**: usually refers to a delete operation on media, leaving data remanence
   - **Clearing**: removal of sensitive data from a storage device such that there is assurance data may not be reconstructed using normal functions or software recovery or software recovery utilities; over-writing existing data; it's not very strong, and there's a chance that the data could be brought back
-  - **Purging**: removal of sensitive data from a system or device with the intent that data cannot be reconstructed by any known technique; usually refers to mutliple clearing passes combined with other tools; often means getting rid of data in more reliable ways, like using a strong magnetic field (degaussing) to destroy data on storage devices(see below) -- although not considered acceptable for top secret data
+  - **Purging**: removal of sensitive data from a system or device with the intent that data cannot be reconstructed by any known technique; usually refers to multiple clearing passes combined with other tools; often means getting rid of data in more reliable ways, like using a strong magnetic field (degaussing) to destroy data on storage devices (see below) -- although not considered acceptable for top secret data; writing a series of 1s and 0s over media multiple times is a purging technique
   - **Destruction**: includes physically destroying media through shredding, burning, pulverizing, or incinerating, and also includes the use of strong encryption to logically destroy data; a surer way than even purging
   - **Data Remanence**: data remaining on media after typical erasure; to ensure all remanence is removed, the following tools can help:
-  - **Degaussing**: used on magentic media, removes data from tapes and magnetic hard drives; no affect on optical media or SSDs
+  - **Degaussing**: used on magnetic media, removes data from tapes and magnetic hard drives; no affect on optical media or SSDs
   - **(Physical) destruction**: used for SSD/electronic components, or in combination with other less-secure methods; destruction methods include incineration, crushing, shredding, and disintegration
-  - **Cryptographic Erasure**: AKA cryptoshedding, basically destroying encryption key; may be only secure method for cloud storage
+  - **Cryptographic Erasure**: AKA crypto shredding, basically destroying encryption key; may be only secure method for cloud storage
   - **File carving**: computer forensics technique that recovers files from a storage device's raw data based on their structure and content, often used to recover files that are not indexed by the file system, such as those that are deleted, formatted, or encrypted; file carving is also a good method for recovering files if an entire directory is missing or corrupt
 
 ## [2.3](#23-provision-resources-securely-osg-9-chpt-16) Provision resources securely (OSG-9 Chpt 16)
 
-- The primary purpose of security operations practices is to safeguard assets such as information, systems, devices, facilities, and apps; these practices help to identify threats, vulnerabilities, and implement controls to reduce the risk to these asssets
+- The primary purpose of security operations practices is to safeguard assets such as information, systems, devices, facilities, and apps; these practices help to identify threats, vulnerabilities, and implement controls to reduce the risk to these assets
 - Implementing common security operations concepts, along with performing periodic security audits and reviews demonstrates a level of due care
 - **Need-to-know**: a principle that imposes the requirement to grant users access only to data or resources they need to perform assigned work tasks
 - **Least privilege**: a principle stating that subjects are granted only the privileges necessary to perform assigned work tasks and no more
@@ -106,7 +106,7 @@
 
 - 2.4.1 Data roles (i.e., owners, controllers, custodians, processors, users/subjects)
   - **System owner**: controls the computer storing the data; usually includes software and hardware configurations and support services (e.g. cloud implementation)
-    - data owner is the person respsonible for classifying, categorizing, and permitting access to the data; the data owner is the person who is best familiar with the importance of the data to the business
+    - data owner is the person responsible for classifying, categorizing, and permitting access to the data; the data owner is the person who is best familiar with the importance of the data to the business
     - system owners are responsible for the systems that process the data
     - system owner is responsible for system operation and maintenance, and associated updating/patching as well as related procurement activities
     - per [NIST SP 800-18](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-18r1.pdf), information system owner has the following responsibilities:
@@ -120,8 +120,8 @@
     - e.g. a company that collects personal information on employees for payroll is a data controller (but, if they pass this info to a third-party to process payroll, the payroll company is the data processor, see below)
   - **Data processor**: an entity working on behalf (or the direction) of the data controller, that processes PII; they have a responsibility to protect the privacy of the data and not use it for any purpose other than directed by the data controller; generally, a data processor is any system used to process data
     - a controller can hire a third party to process data, and in this context, the third party is the data processor; data processors are often third-party entities that process data for an org at the direction of the data controller
-    - note GDPR definition: "a natural or legal person, public authority, agency, or other body, which processes personal data soley on behalf of the data controller"
-      - GDPR also restricts data tranfers to countries outside EU, with fines for violations
+    - note GDPR definition: "a natural or legal person, public authority, agency, or other body, which processes personal data solely on behalf of the data controller"
+      - GDPR also restricts data transfers to countries outside EU, with fines for violations
       - many orgs have created dedicated roles to oversee GDPR data laws are followed
   - **Data custodian**: a custodian is delegated, from the system owner, day-to-day responsibilities for properly storing and protecting data; responsible for the protection of data through maintenance activities, backing up and archiving, and preventing the loss or corruption and recovering data
   - **Security administrator**: responsible for ensuring the overall security of entire infrastructure; they perform tasks that lead to the discovery of vulnerabilities, monitor network traffic and configure tools to protect the network (like firewalls and antivirus software)
@@ -165,12 +165,12 @@
   - An org's security or data policy should define the acceptable methods of destroying data based on the data's classification
   - a degausser can be used on a hard disk drives/magnetic media
   - the best SSD wiping method is destruction -- even when using manufacturers SSD wiping tools, data can remain, and therefore the best SSD wipe method is destruction
-  - **Defensible destruction**: eliminating data using a controlled, legally defensible and regulatory compiant way
+  - **Defensible destruction**: eliminating data using a controlled, legally defensible and regulatory-compliant way
 
 ## [2.5](#25-ensure-appropriate-asset-retention-eg-end-of-life-eol-end-of-support-eos-osg-9-chpt-5) Ensure appropriate asset retention (e.g. End-of-Life EOL, End-of-Support (EOS)) (OSG-9 Chpt 5)
 
 - Hardware: even if you maintain data for the appropriate retention period, it won’t do you any good if you don’t have hardware that can read the data
-- Personnel: beyond retaining data for required time periods and maintaining hardware to read the data, you need personnel who know how to operate the hardware to execute restoraton processes
+- Personnel: beyond retaining data for required time periods and maintaining hardware to read the data, you need personnel who know how to operate the hardware to execute restoration processes
 
 - **End-Of-Life (EOL)**: often identified by vendors as the time when they stop offering a product for sale
 - **End-Of-Support (EOS)/End-Of-Service-Life (EOSL)**: often used to identify when support ends for a product
@@ -195,7 +195,7 @@
   - After selecting a control baseline, orgs fine-tune with tailoring and scoping processes; a big part of the tailoring process is aligning controls with an org's specific security requirements
   - **Tailoring**: refers to modifying the list of security controls within a baseline to align with the org's mission
     - includes the following activities:
-      - identifying and designating common controls; specificaion of organization-defined parameters in the security controls via explicit assignment and selection statements
+      - identifying and designating common controls; specification of organization-defined parameters in the security controls via explicit assignment and selection statements
       - applying scoping guidance/considerations
       - selecting/specifying compensating controls
       - assigning control values
@@ -213,9 +213,11 @@
 
 - 2.6.4 Data protection methods (e.g., Digital Rights Management (DRM), Data Loss Prevention (DLP), Cloud Access Security Broker (CASB))
   - **Data protection methods** include:
-    - **digital rights management (DRM)**: methods used in attempt to protect copyrighted materials; purpose is to prevent the unauthorized use, modification, and distirbution of copyrighted works
+    - **digital rights management (DRM)**: methods used in attempt to protect copyrighted materials; purpose is to prevent the unauthorized use, modification, and distribution of copyrighted works
     - **Cloud Access Security Brokers (CASBs)**: software placed logically between users and cloud-based resources ensuring that cloud resources have the same protections as resources within a network
-      - note that entities must comply with the EU GDPR, and use additional data protection methods/controls such as anonymization and randomized masking (which, when done correctly, can't be reversed), or quasi-anonymization which can be reversed (pseudonymization, tokenization, encryption)
+      - CASB is a solution for security policy enforcement, ensuring security policies and compliance are met when accessing cloud apps and data; it can be used on-premise or in the cloud
+      - the four cornerstones of CASBs are visibility, data security, threat detection, and compliance
+    - note that entities must comply with the EU GDPR, and use additional data protection methods/controls such as anonymization and randomized masking (which, when done correctly, can't be reversed), or quasi-anonymization which can be reversed (pseudonymization, tokenization, encryption)
   - One of the primary methods of protecting the confidentiality of data is encryption
   - Options for protecting your data vary depending on its state:
     - Data at rest: consider encryption for operating system volumes and data volumes, and backups as well

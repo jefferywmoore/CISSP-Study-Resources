@@ -25,25 +25,25 @@
 - **Code testing suite**: usually used to validate function, statement, branch and condition coverage
 - **Compliance Calendar**: tracks an org's audits, assessments, required filings, due dates and related
 - **Compliance Tests**: an evaluation that determines if an org's controls are being applied according to management policies and procedures
-- **Penetration Testing/Ethical Penentration Testing**: security testing and assessment where testers actively attempt to circumvent/defaut a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
+- **Penetration Testing/Ethical Penetration Testing**: security testing and assessment where testers actively attempt to circumvent/default a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
 - **Examination**: process of reviewing/inspecting/observing/studying/analyzing specs/mechanisms/activities to understand, clarify, or obtain evidence
-- **Federal Risk and Authorization Management Program FedRAMP)**: a government-wide program that standardizes the security assessment, authorization, and monitoring of cloud services and products; the program was established in 2011 to help the federal government use cloud technologies while protecting federal information
+- **[Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/)**: a government-wide program that standardizes the security assessment, authorization, and monitoring of cloud services and products; the program was established in 2011 to help the federal government use cloud technologies while protecting federal information
 - **Findings**: results created by the application of an assessment procedure
-- **Functional order of controls**: deter, deny, detect, delay, deterimine, and decide
-- **Fuzzing**: uses modified inputs to test sofware performance under unexpected circumstances; mutation fuzzing modifies known inputs to generate synthetic inputs that may trigger unexpected behavior; generational fuzzing develops inputs based on models of expected inputs to perform the same task
+- **Functional order of controls**: deter, deny, detect, delay, determine, and decide
+- **Fuzzing**: uses modified inputs to test software performance under unexpected circumstances; mutation fuzzing modifies known inputs to generate synthetic inputs that may trigger unexpected behavior; generational fuzzing develops inputs based on models of expected inputs to perform the same task
 - **IAM system**: identity and access management system combines lifecycle management and monitoring tools to ensure that identity and authorization are properly handled throughout an org
 - **ITSM**: IT Service Management tools include change management and associated approval tracking
 - **Judgement Sampling**: AKA purposive or authoritative sampling, a non-probability sampling technique where members are chosen only on the basis of the researcher's knowledge and judgement
 - **Misue Case Testing**: testing strategy from a hostile actor's point of view, attempting to lead to integrity failures, malfunctions, or other security or safety compromises
 - **Mutation testing**: mutation testing modifies a program in small ways and then tests that mutant to determine if it behaves as it should or if it fails; technique is used to design and test software through mutation
-- **Plan of Action and Milestones (POA&M)**: a document indentifying tasks to be accomplished, including details, resources, milestones, and completion target dates
-- **RUM**: real user monitoring is a passive monitoring technique that records user interation with an app or system to ensure performance and proper app behavior; often used as a predeploymment process using the actual user interface
-- **RoE**: Rules of Engagement, set of rules/constraints/boundaries that establish limits of participant activity; in ethical pen testing, an RoE defines the scope of testing, and to establish liabilty limits for both testers and the sponsoring org or system owners
+- **Plan of Action and Milestones (POA&M)**: a document identifying tasks to be accomplished, including details, resources, milestones, and completion target dates
+- **RUM**: real user monitoring is a passive monitoring technique that records user iteration with an app or system to ensure performance and proper app behavior; often used as a pre-deployment process using the actual user interface
+- **RoE**: Rules of Engagement, set of rules/constraints/boundaries that establish limits of participant activity; in ethical pen testing, an RoE defines the scope of testing, and to establish liability limits for both testers and the sponsoring org or system owners
 - **SCF**: Script Check Engine is designed to make scripts interoperable with security policy definitions
 - **Statistical Sampling**: process of selecting subsets of examples from a population with the objective of estimating properties of the total population
 - **Substantive Test**: testing technique used by an auditor to obtain the audit evidence in order to support the auditor's opinion
-- **Testing**: process of exersizing one or more assessment objects (activities or mechanisms) under specified conditions to compare actual to expected behaior
-- **Trust Services Criteria (TSC)**: used by an auditor when evaluating the suitability of the design and operating effectiveness of controls relevant to the security, availabiliity, or processing integrity of information and systems or the confidentiality or privacy of the info processed by the entity
+- **Testing**: process of exercising one or more assessment objects (activities or mechanisms) under specified conditions to compare actual to expected behavior
+- **Trust Services Criteria (TSC)**: used by an auditor when evaluating the suitability of the design and operating effectiveness of controls relevant to the security, availability, or processing integrity of information and systems or the confidentiality or privacy of the info processed by the entity
 
 ## [6.1](#61-design-and-validate-assessment-test-and-audit-strategies-osg-9-chpt-15) Design and validate assessment, test, and audit strategies (OSG-9 Chpt 15)
 
@@ -76,7 +76,7 @@
       - however, SOC3 audit results are intended for public disclosure
   - Two types of SOC reports:
     - **Type I Reports**: provide the auditor’s opinion on the description provided by management and the suitability of the design of the controls
-      - type I reports also cover only a specific point in time, rather than an extended period
+      - type I reports cover only a specific point in time, rather than an extended period
       - think of Type I report as more of a documentation review
     - **Type II Reports**: go further and also provide the auditor’s opinion on the operating effectiveness of the controls
       - the auditor actually confirms the controls are functioning properly
@@ -89,14 +89,19 @@
 - Security control testing can include testing of the physical facility, logical systems and applications; common testing methods:
 - 6.2.1 Vulnerability assessment
   - **Vulnerabilities**: weaknesses in systems and security controls that might be exploited by a threat
-  - **Vulnerability assessments**: examining systems for these weaknesses
+  - **Vulnerability assessments**: examining systems for these weaknesses; steps in the assessment:
+    - Reconnaissance: passively gather publicly available info
+    - Enumeration: actively enumerate through target IP addresses and ports
+    - Vulnerability Analysis: Identify potential vulns to be exploited
+    - Execution: applies only if you are doing a penetration test
+    - Document Findings: reporting on findings and severity
   - The goal of a vulnerability assessment is to identify elements in an environment that are not adequately protected -- and not necessarily from a technical perspective; you can also assess the vulnerability of physical security or the external reliance on power, for instance
     - can include personnel testing, physical testing, system and network testing, and other facilities tests
   - Vulnerability assessments are some of the most important testing tools in the information security professional’s toolkit
   - **Security Content Automation Protocol (SCAP)**: provides a common framework for discussion and facilitation of automation of interactions between different security systems (sponsored by NIST)
     - SCAP components related to vulnerability assessments:
       - **Common Vulnerabilities and Exposures (CVE)**: provides a naming system for describing security vulnerabilities
-      - **Common Vulnerability Scoring Systems (CVSS)**: provides a standardized scoring system for describing the severity of security vulnerabilities; it includes metrics and calc tools for exploitability, impact, how mature exploit code is, and how vulnerabilities can be remediated, and a means to score vulns against users' unqiue requirements
+      - **Common Vulnerability Scoring Systems (CVSS)**: provides a standardized scoring system for describing the severity of security vulnerabilities; it includes metrics and calc tools for exploitability, impact, how mature exploit code is, and how vulnerabilities can be remediated, and a means to score vulns against users' unique requirements
       - **Common Configuration Enumeration (CCE)**: provides a naming system for system config issues
       - **Common Platform Enumeration (CPE)**: provides a naming system for operating systems, applications, and devices
       - **eXtensible Configuration Checklist Description Format (XCCDF)**: provides a language for specifying security checklists
@@ -112,7 +117,7 @@
 
 - 6.2.2 Penetration testing
   - Penetration tests goes beyond vulnerability testing techniques because it actually attempts to exploit systems
-  - Vulnerability management programs take the results of the tests as inputs and then implement a risk management process for identfied vulnerabilities
+  - Vulnerability management programs take the results of the tests as inputs and then implement a risk management process for identified vulnerabilities
   - NIST defines the penetration testing process as consisting of four phases:
     - **planning**: includes agreement on the scope of the test and the rules of engagement
       - ensures that both the testing team and management are in agreement about the nature of the test and that it is explicitly authorized
@@ -128,7 +133,7 @@
       - white box provides the attackers with **detailed information** about the systems they target
       - this bypasses many of the reconnaissance steps that normally precede attacks, shortening the time of the attack and increasing the likelihood that it will find security flaws
       - these tests are sometimes called "**known environment**" tests
-      - in white-box testing, the tester has access to the source code and performss testing from a developer's perspective
+      - in white-box testing, the tester has access to the source code and performs testing from a developer's perspective
     - **gray-box penetration test**:
       - AKA **partial knowledge tests**, these are sometimes chosen to balance the advantages and disadvantages of white- and black-box penetration tests
       - this is particularly common when black-box results are desired but costs or time constraints mean that some knowledge is needed to complete the testing
@@ -200,7 +205,7 @@
 
 - 6.2.9 Breach attack simulations
   - **Breach and attack simulation (BAS)**: platforms that seek to automate some aspects of penetration testing
-  - The BAS platform is not actually waging attacks, but conducting automated testing of security controls to identify deficencies
+  - The BAS platform is not actually waging attacks, but conducting automated testing of security controls to identify deficiencies
   - A BAS system combines red team (attack) and blue team (defense) techniques together with automation to simulate advanced persistent threats (and other advanced threat actors) running against the environment
   - Designed to inject threat indicators onto systems and networks in an effort to trigger other security controls (e.g. place a suspicious file on a server)
     - detection and prevention controls should immediately detect and/or block this traffic as potentially malicious
@@ -217,7 +222,7 @@
 
 ## [6.3](#63-collect-security-process-data-eg-technical-and-administrative-osg-9-chpts-15186.3) Collect security process data (e.g. technical and administrative) (OSG-9 Chpts 15,18)
 
-- Many components of the information security program generate data that is curcial to security assessment processes; these components include:
+- Many components of the information security program generate data that is crucial to security assessment processes; these components include:
   - Account management process
   - Management review and approval
   - Key performance and risk indicators
@@ -227,12 +232,12 @@
 - 6.3.1 Account management
   - Preferred attacker techniques for obtaining privilege user access include:
     - compromising an existing privileged account: mitigated through use of strong authentication (strong passwords and multifactor), and by admins use of privileged accounts only for specific tasks
-    - privelege escalation of a regular account or creation of a new account: these approaches can be mitigated by paying attention to the creation, modification, and use of user accounts
+    - privilege escalation of a regular account or creation of a new account: these approaches can be mitigated by paying attention to the creation, modification, and use of user accounts
 
 - 6.3.2 Management review and approval
   - Account management reviews ensure that users only retain authorized permissions and that unauthorized modifications do not occur
   - Full review of accounts: time-consuming to review all, and often done only for highly privileged accounts
-  - Organizations that don’t have time to conduct a full review process may use sampling, but only if sampling is truely random
+  - Organizations that don’t have time to conduct a full review process may use sampling, but only if sampling is truly random
   - Adding accounts: should be a well-defined process, and users should sign an AUP
   - Adding, removing, and modifying accounts and permissions should be carefully controlled and documented
   - Accounts that are no longer needed should be suspended
@@ -294,8 +299,8 @@
 - 6.4.2 Exception handling
   - **Exception handling**: the process of handling unexpected activity, since software should never depend on users behaving properly
     - "expect the unexpected", gracefully handle invalid input and improperly sequenced activity etc
-  - Sometimes vulns can't be patched in a timely manner (e.g. medical devices needing re-accreditation) and the solution is to implement compensitory controls, document the exception and decision, and revisit
-    - **compensitory controls**: measures taken to address any weaknesses of existing controls or to compensate for the inability to meet specific security requirements due to various different constraints
+  - Sometimes vulns can't be patched in a timely manner (e.g. medical devices needing re-accreditation) and the solution is to implement compensatory controls, document the exception and decision, and revisit
+    - **compensatory controls**: measures taken to address any weaknesses of existing controls or to compensate for the inability to meet specific security requirements due to various different constraints
     - e.g. micro-segmentation of device, access restrictions, monitoring etc
   - Exception handling may be required due to system crash as the result of patching (requiring roll-back)
 
@@ -303,7 +308,7 @@
   - While conducting security testing, cybersecurity pros may discover previously undiscovered vulns (perhaps implementing compensating controls to correct) that they may be unable to correct
   - **Ethical disclosure**: the idea that security pros who detect a vuln have a responsibility to report it to the vendor, providing them with enough time to patch or remediate
     - the disclosure should be made privately to the vendor providing reasonable amount of time to correct
-    - if the vuln is not corrected, then public disclosure of the vuln is warrented, such that other professionals can make informed decisions about future use of the product(s)
+    - if the vuln is not corrected, then public disclosure of the vuln is warranted, such that other professionals can make informed decisions about future use of the product(s)
 
 ## [6.5](#65-conduct-or-facilitate-security-audits-osg-9-chpt-15) Conduct or facilitate security audits (OSG-9 Chpt 15)
 

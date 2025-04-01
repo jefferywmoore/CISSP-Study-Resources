@@ -6,9 +6,9 @@
     - basically a formal evaluation of a defined set of controls against a baseline or reliability expectation; may be conducted with the Security Test and Evaluation (ST&E); NIST Special Publication 800-53A Security and Privacy Controls for Federal Information Systems and Organizations ensure the security requirements and enforcement of appropriate security controls
     - goals of SCA:
       - ensure the effectiveness of the security mechanisms
-      - evaluate the quality and thoroughness of the risk management processes of the org
+      - evaluate the quality and thoroughness of the risk management processes
       - produce a report of the relative strengths and weaknesses of the deployed security infrastructure
-- [RFC 1087](https://datatracker.ietf.org/doc/html/rfc1087): activitiy that is unethical and unacceptable:
+- [RFC 1087](https://datatracker.ietf.org/doc/html/rfc1087): activity that is unethical and unacceptable:
   - (a) seeks to gain unauthorized access to the resources of the Internet
   - (b) disrupts the intended use of the Internet
   - (c) wastes resources (people, capacity, computer) through such actions
@@ -24,16 +24,20 @@
     - **Protect society, the common good, necessary public trust and confidence, and the infrastructure**
       - this is “do the right thing”; put the common good ahead of yourself
       - ensure that the public can have faith in your infrastructure and security
+      - any member of the public can file a claim under canon I
     - **Act honorably, honestly, justly, responsibly, and legally**
       - always follow the laws
       - but if you find yourself working on a project where conflicting laws from different countries or jurisdictions apply, you should prioritize the local jurisdiction from which you are performing the services
+      - any member of the public can file a claim under canon II
     - **Provide diligent and competent service to principles**
       - avoid passing yourself as an expert or as qualified in areas that you aren’t
       - maintain and expand your skills to provide competent services
+      - only an employer or someone with a contractual relationship can file a complaint under canon III
     - **Advance and protect the profession**
       - don’t bring negative publicity to the profession
       - provide competent services, get training and act honorably
       - think of it like this: If you follow the first three canons in the code of ethics, you automatically comply with this one
+      - anyone who subscribes to a code of ethics as part of their licensure or certification is eligible to file a complaint under canon IV
 - 1.1.2 Organizational code of ethics
   - You must also support ethics at your organization; this can be interpreted to mean evangelizing ethics throughout the organization, providing documentation and training around ethics, or looking for ways to enhance the existing organizational ethics
     - some organizations might have slightly different ethics than others, so be sure to familiarize yourself with your org’s ethics and guidelines
@@ -45,7 +49,7 @@
     - Principle that objects are not disclosed to unauthorized subjects
     - Concept of measures used to ensure the protection of the secrecy of data, objects, and resources
     - Confidentiality protections prevent disclosure while protecting authorized access
-    - Preserving authorized restrictions on information access and disclosure, including the means for protecting personal privacy and prioprietary information
+    - Preserving authorized restrictions on information access and disclosure, including the means for protecting personal privacy and proprietary information
     - Sensitive data, including personally identifiable information (PII) must be kept confidential; confidentiality is different from secrecy
     - Preserving confidentiality means protecting an asset or data, even if it's not a secret
   
@@ -63,7 +67,7 @@
   - **Authenticity**: ensuring a transmission, message or sender is legitimate
     - See the NIST glossary for examples: <https://csrc.nist.gov/glossary/term/authenticity>
 
-  - **Nonrepudiation**: 
+  - **Nonrepudiation**:
     - Ensures that the subject of activity or who caused an event cannot deny that the event occurred
     - Nonrepudiation is made possible through identification, authentication, authorization, accountability, and auditing
 
@@ -78,29 +82,29 @@
 
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies  align with business goals, and that they are comprehensive and consistent across the organization
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
-  - There are numerous security frameworks and governance guidelines providing a structured approach to security governance: 
-    - [ISO/IEC 27001](https://www.iso.org/standard/27001): a widely recognized international standard for information security management systems (ISMS); it provides a risk-based approach, and emphasizes coontinual improvement of the ISMS
-    - [NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework): built around six core functions: govern, identify, protect, detect, respond, and recover to provide guidance to industry, government agencies, and other orgs to manage cybersecurity risks
-    - [SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final): a comprehensive set or catelog of security and privacy controls across multiple security domains, covering areas such as risk management, access control, incident response, and system maintenance
-    - [SP 800-100](https://csrc.nist.gov/pubs/sp/800/100/r1/iprd): Titled Information Security Handbook: a guide for managers, NIST hasn't released an update since 2006, although they appear to have an update in progress
-    - **COBIT (Control Objectives for Information and Related Technologies)**: COBIT focuses enterprise IT, aligning IT and business strategies, and providing a comprehensive framework for managing risks (see additional below)
-    - **CIS Critical Security Controls**: the CIS (Center for Internet Security) Critical Security Controls provides a prioritize set of actions to defend against threats; it focuses on practical steps to reduce the attack surface, like implementing secure configurations, managing admin privileges, and monitoring logs
+  - There are numerous security frameworks and governance guidelines providing a structured approach to security governance:
+    - **[ISO/IEC 27001](https://www.iso.org/standard/27001)**: a widely recognized international standard for information security management systems (ISMS); it provides a risk-based approach, and emphasizes continual improvement of the ISMS
+    - **[NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)**: built around six core functions: govern, identify, protect, detect, respond, and recover to provide guidance to industry, government agencies, and other orgs to manage cybersecurity risks
+    - **[SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)**: a comprehensive set or catalog of security and privacy controls across multiple security domains, covering areas such as risk management, access control, incident response, and system maintenance
+    - **[SP 800-100](https://csrc.nist.gov/pubs/sp/800/100/r1/iprd)**: titled Information Security Handbook: a guide for managers, NIST hasn't released an update since 2006, although they appear to have an update in progress
+    - **[COBIT (Control Objectives for Information and Related Technologies)](https://www.isaca.org/resources/cobit#1)**: COBIT is a framework created by ISACA that focuses on enterprise IT, aligning IT and business strategies, and providing a comprehensive framework for managing risks (see additional below)
+    - **[CIS Critical Security Controls](https://www.cisecurity.org/controls)**: the CIS (Center for Internet Security) Critical Security Controls provides a prioritize set of actions to defend against threats; it focuses on practical steps to reduce the attack surface, like implementing secure configurations, managing admin privileges, and monitoring logs
     - **ITIL (Information Technology Infrastructure Library)**: ITIL is a set of practices for IT service management (ITSM) that focuses on aligning IT services with business needs; it includes elements of security governance, particularly in managing security incidents, changes, and service continuity, and is often integrated with other frameworks like ISO 27001
 - **The security function**: the aspect of operating a business that focuses on the task of evaluating and improving security over time 
   - To manage security, an org must implement proper and sufficient security governance
   - The act of performing a risk assessment to drive the security policy is the clearest and most direct example of management of the security function
 - **Third-party governance**: external entity oversight that may be mandated by law, regulation, industry standards, contractual obligation, or licensing requirement; outside investigator or auditors are often involved
 - 1.3.1 Alignment of security function to business strategy, goals, mission, and objectives
-  - **Security Management Planning**: ensures proper creation/implementation/enforcment of a security policy, and alignment with org strategy, goals, mission, and objectives; security management is based on three types of plans: strategic, tactical, and operational
-  - **Strategic Plan**: a strategic plan is a long-term plan (useful for 5 years); it defines the org's security purpose 
+  - **Security Management Planning**: ensures proper creation/implementation/enforcement of a security policy, and alignment with org strategy, goals, mission, and objectives; security management is based on three types of plans: strategic, tactical, and operational
+  - **Strategic Plan**: a strategic plan is a long-term plan (useful for 5 years); it defines the org's security purpose
     - A strategic plan should include a risk assessment
   - **Tactical Plan**: mid-term plan (1 year or less) developed to provide more details on accomplishing the goals set forth in the strategic plan
-  - **Operational Plan**: a short-term, highly detailed plan based on strategic or tactical plans 
-    - Strategy, goals, missions,and objectives — support each other in a heirarchy
-    - **Objectives**: are closest to the ground-level and represent small efforts to help you achieve a mission 
+  - **Operational Plan**: a short-term, highly detailed plan based on strategic or tactical plans
+    - Strategy, goals, missions,and objectives — support each other in a hierarchy
+    - **Objectives**: are closest to the ground-level and represent small efforts to help you achieve a mission
     - **Missions**: represent a collection of objectives, and one or more missions lead to goals; when you reach your goals, you are achieving the strategy
   - A security framework must closely tie to mission and objectives, enabling the business to complete its objectives and advance the mission while securing the environment based on risk tolerance
-- 1.3.2 Organizational processes (e.g., acquistions, divestitures, governance committees)
+- 1.3.2 Organizational processes (e.g., acquisitions, divestitures, governance committees)
   - Security governance should address every aspect of an org, including organizational processes of acquisitions, divestitures, and governance
   - Be aware of the risks in acquisitions (since the state of the IT environment to be integrated is unknown, due diligence is key) and divestitures (how to split the IT infrastructure and what to do with identities and credentials)
   - Understand the value of governance committees (vendor governance, project governance, architecture governance, etc.)
@@ -130,9 +134,9 @@
           - governance distinct from management
           - tailored to enterprise needs
           - end-to-end governance system
-    - ISO 27000 series (27000, 27001, 27002, etc.). 
+    - ISO 27000 series (27000, 27001, 27002, etc.).
     - NIST **CyberSecurity Framework (CSF)**
-      - designed for commerical orgs and critical infrastructure, CSF 1.1 consists of five functions:
+      - designed for commercial orgs and critical infrastructure, CSF 1.1 consists of five functions:
         - identify
         - protect
         - detect
@@ -149,12 +153,12 @@
   - **Due diligence**: establishing a plan, policy, and process to protect the interests of the organization; due diligence is knowing what should be done and planning for it; understanding your security governance principles (policies and procedures) and the risks to your organization; actions taken by a vendor to demonstrate or provide due care
     - Due diligence often involves:
       - gathering information through discovery, risk assessments and review of existing documentation
-      - developing a formalized security structure containing a security policy, standards, baselines guidlines, and procedures
+      - developing a formalized security structure containing a security policy, standards, baselines guidelines, and procedures
       - documentation to establish written policies
       - disseminating the information to the organization
   - **Due care**: practicing the individual activities that maintain the due diligence effort; due care is about your legal responsibility within the law or within org policies to implement your org’s controls, follow security policies, do the right thing and make reasonable choices
   - Security documentation is the security policy
-  - After establishing a framework for governance, security awareness training should be implemented, including all new hires, who complete the security awareness training as they come on board, and existing employees who should recertify regularly (typically yearly)
+  - After establishing a framework for governance, security awareness training should be implemented, including all new hires, who complete the security awareness training as they come on board, and existing employees who should re-certify regularly (typically yearly)
   - Due care is the responsible protection of assets
   - Due diligence is the ability to prove due care
 
@@ -198,11 +202,11 @@
   - Currently, federal law only requires notification of individuals when a HIPAA-covered entity breaches their protected health information (likely to soon change)
   - Before an org expands to other countries, perform due diligence to understand legal systems and what changes might be required to the way that data is handled and secured
   - In particular, be familiar with:
-    - **Council of Europe Convention on Cybercrime**: a treaty signed by many countries that establishes standards for cybercrime policy 
+    - **Council of Europe Convention on Cybercrime**: a treaty signed by many countries that establishes standards for cybercrime policy
     - Laws about data breaches, including notification requirements
     - In the US, the **Health Information Technology for Economic and Clinical Health (HITECH)** Act requires notification of a data breach in some cases, such as when the personal health information was not protected as required by HIPAA
-    - GLBA (Gramm-Leach-Bliley Act) applies to insurance and financial orgs, requiring notification to federal regulators, law enforcement agencies and customers when a data breach occurs 
-    - Certain states also impose their own requirements concerning data breaches 
+    - GLBA (Gramm-Leach-Bliley Act) applies to insurance and financial orgs, requiring notification to federal regulators, law enforcement agencies and customers when a data breach occurs
+    - Certain states also impose their own requirements concerning data breaches
     - the EU and other countries have their own requirements, for instance, the GDPR has very strict data breach notification requirements: A data breach must be reported to the competent supervisory authority within 72 hours of its discovery
     - **Communications Assistance to Law Enforcement Act (CALEA)**: requires all communication carriers make wiretaps possible for law enforcement officials who have an appropriate court order
     - Some countries do not have any reporting requirements
@@ -213,7 +217,7 @@
     - **Utility**: protect the intellectual property rights of inventors
     - **Design**: cover the appearance of an invention and last for 15 years; note design patents don't protect the idea of an invention only its form, and are generally seen as weaker
     - Software: area of on-going controversy; Google vs Oracle; given to a rise of "patent trolls"
-  - **Copyright**: protects original works of authoriship, such as books, articles, poems, and songs; exclusive use of artistic, musical or literary works which prevents unauthorized duplication, distribution or modification
+  - **Copyright**: protects original works of authorship, such as books, articles, poems, and songs; exclusive use of artistic, musical or literary works which prevents unauthorized duplication, distribution or modification
   - **Licensing**: a contract between the software producer and the consumer which limits the use and/or distribution of the software
   - **Trade Secrets**: trade secret laws protect the operating secrets of a firm; trade secrets are intellectual property that is critical to a business, and significant damage would result if it were disclosed to competitors or the public; the Economic Espionage Act imposes fines and jail sentences on someone found guilty of stealing trade secrets from a US corp
 - 1.5.3 Import/export controls
@@ -225,14 +229,14 @@
   - **Export Administration Regulations (EAR)**: EAR predominantly focuses on commercial use-related items like computers, lasers, marine items, and more; however, it can also include items that may have been designed for commercial use but actually have military applications
 - 1.5.5 Privacy
   - Many laws include privacy protections for personal data 
-    - The EU’s GDPR has strong privacy rules that apply to any org anywhere that stores or processes the personal data of EU residents; these individuals must be told how their data is collected and used, and they must be able to opt out 
+    - The EU’s GDPR has strong privacy rules that apply to any org anywhere that stores or processes the personal data of EU residents; these individuals must be told how their data is collected and used, and they must be able to opt out
   - The privacy guidelines of the **Organization for Economic Co-operation and Development (OECD)** require orgs to avoid unjustified obstacles to trans-border data flow, set limits to personal data collection, protect personal data with reasonable security and more
   - Fourth Amendment to the US Constitution: the right of the people to be secure in their persons, houses, papers, effects against unreasonable search and seizure
   - **Electronic Communication Privacy Act (ECPA)**: as amended, protects wire, oral, and electronic communications while those communications are being made, are in transit, and when they are stored on computers; makes it a crime to invade electronic privacy of an individual, and it broadened the Federal Wiretap Act
   - HIPAA: see above
   - HITECH: see above
   - California SB 1386 (2002): immediate disclosure to individuals for PII breach
-  - **California Consumer Privacy Act (CCPA)**: The CCPA applies to: 
+  - **California Consumer Privacy Act (CCPA)**: The CCPA applies to:
     - For-profit businesses that collect consumers’ personal information (or have others collect personal information for them)
     - Determine why and how the information will be processed
     - Do business in California and meet any of the following:
@@ -251,14 +255,14 @@
 
   - **Children's Online Privacy Protection Act (COPPA)** of 1998:
     - COPPA makes a series of demands on websites that cater to children or knowingly collect information from children:
-      - Websites must have a privacy notice that clearly states the types of info they collect and what it's used for (including whether infor is disclosed to third parties); must also include contact info for site operators
+      - Websites must have a privacy notice that clearly states the types of info they collect and what it's used for (including whether info is disclosed to third parties); must also include contact info for site operators
       - Parents must be able to review any info collected from children and permanently delete it from the site's records
       - Parents must give verifiable consent to the collection of info about children younger than the age of 13 prior to any such collection
   - GLBA: see above
   - US Patriot Act of 2002: enacted following the September 11 attacks with the stated goal of tightening U.S. national security, particularly as it related to foreign terrorism
     - The act included three main provisions:
       - expanded surveillance abilities of law enforcement, including by tapping domestic and international phones
-      - easier interagency communication to allow federal agencies to more effectively use all available resources in counterterrorism efforts
+      - easier interagency communication to allow federal agencies to more effectively use all available resources in counter-terrorism efforts
       - increased penalties for terrorism crimes and an expanded list of activities which would qualify for terrorism charges
   - **Family Education Rights and Privacy Act (FERPA)**: Grants privacy rights to students over 18, and the parents of minor students
   - EU's Data Protection Directive (DPD): see above
@@ -275,7 +279,7 @@
 ## [1.6](#16-understand-requirements-for-investigation-types-ie-administrative-criminal-civil-regulatory-industry-standards-osg-9-chpt-19) Understand requirements for investigation types (i.e., administrative, criminal, civil, regulatory, industry standards) (OSG-9 Chpt 19)
 
 - An investigation will vary based on incident type; e.g. for a financial services company, a financial system compromise might cause a regulatory investigation; a system breach or website compromise might cause a criminal investigation; each type of investigation has special considerations:
-  - **Administrative**: an administrative investigation has a primary purpose of providing the appropriate authorities with incident information; thereafter, authorities will determine the proper action, if any 
+  - **Administrative**: an administrative investigation has a primary purpose of providing the appropriate authorities with incident information; thereafter, authorities will determine the proper action, if any
     - Administrative investigations are often tied to HR scenarios, such as when a manager has been accused of improprieties
   - **Criminal**: a criminal investigation occurs when a crime has been committed and you are working with a law enforcement agency to convict the alleged perpetrator; in such a case, it is common to gather evidence for a court of law, and to share the evidence with the defense
     - You need to gather and handle the information using methods that ensure the evidence can be used in court
@@ -283,9 +287,9 @@
   - **Civil**: in a civil case, one person or entity sues another; e.g. one company could sue another for a trademark violation 
     - A civil case is typically about monetary damages, and doesn't involve criminality
     - In a civil case, a preponderance of evidence is required to secure a victory; differing from criminal cases, where a suspect is innocent until proven guilty beyond a reasonable doubt
-  - **Industry Standards**: an industry standards investigation is intended to determine whether an org is adhering to a specific industry standard or set of standards, such as logging and auditing failed logon attempts 
+  - **Industry Standards**: an industry standards investigation is intended to determine whether an org is adhering to a specific industry standard or set of standards, such as logging and auditing failed logon attempts
     - Because industry standards represent well-understood and widely implemented best practices, many orgs try to adhere to them even when they are not required to do so in order to improve security, and reduce operational and other risks
-  - **Regulatory**: A regulatory investigation is conducted by a regulatory body, such as the Securities and Exchange Commission (SEC) or Financial Industry Regulatory Authority (FINRA), against an org suspected of an infraction 
+  - **Regulatory**: A regulatory investigation is conducted by a regulatory body, such as the Securities and Exchange Commission (SEC) or Financial Industry Regulatory Authority (FINRA), against an org suspected of an infraction
     - Here the org is required to comply with the investigation, e.g., by not hiding or destroying evidence
 
 ## [1.7](#17-develop-document-and-implement-security-policy-standards-procedures-and-guidelines-osg-9-chpt-1) Develop, document, and implement security policy, standards, procedures and guidelines (OSG-9 Chpt 1)
@@ -298,25 +302,20 @@
 - **Acceptable User Policy**: the AUP is a commonly produced document that exists as part of the overall security documentation infrastructure
   - This policy defines a level of acceptable performance and expectation of behavior and activity; failure to comply with the policy may result in job action warnings, penalties, or termination
 
-- Security Standards, Baselines and Guidelines: once the main security policies are set, the remaining security docuemntation can be crafted from these policies
+- Security Standards, Baselines and Guidelines: once the main security policies are set, the remaining security documentation can be crafted from these policies
   - **Policies**: these are high-level documents, usually written by the management team; policies are mandatory, and a policy might provide requirements, but not the steps for implementation
-  - **Standards**: specific mandates explicity stating expections of performance/conformance; more descriptive than policies, standards define compulsary requirements for the homogenous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
+  - **Standards**: specific mandates explicitly stating expectations of performance/conformance; more descriptive than policies, standards define compulsory requirements for the homogenous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
   - **Baseline**: defines a minimum level of security that every system throughout the organization must meet; baselines are usually system specific and refer to industry / government standards
     - e.g. a baseline for  server builds would be a list of configuration areas that should be applied to every server that is built
     - A Group Policy Object (GPO) in a Windows network is sometimes used to comply with standards; configuration management solutions can also help you establish baselines and spot configurations that are not in alignment
-  - **Guideline**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users 
-    - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not complusory; suggested practices and expectations of activity to best accomplish tasks and goals
+  - **Guideline**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users
+    - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not compulsory; suggested practices and expectations of activity to best accomplish tasks and goals
   - **Procedure** (AKA Standard Operating Procedure or SOP): detailed, step-by-step how-to doc that describes the exact actions necessary to implement a specific security mechanism, control, or solution
 
 ## [1.8](#18-identify-analyze-and-prioritize-business-continuity-bc-requirements-osg-9-chpt-3) Identify, analyze, and prioritize Business Continuity (BC) requirements (OSG-9 Chpt 3)
 
 - **Business Continuity Planning (BCP)**: involves assessing the risk to organizational processes and creating policies, plans, and procedures to minimize the impact those risks might have on the organization if they were to occur
   - BCP is used to maintain the continuous operation of a business in the event of an emergency, with a goal to implement a combination of policies, procedures, and processes
-  - BCP has four distinct phases:
-    - project scope and planning
-    - business impact analysis
-    - continuity planning
-    - approval and implementation
   - Business continuity requires a lot of planning and preparation; actual implementation of business continuity processes occur quite infrequently
   - The primary facets of business continuity are:
     - Resilience: (e.g. within a data center and between sites or data centers)
@@ -327,18 +326,18 @@
   - BCP activities are typically strategically focused at a high level and center themselves on business processes and operations
   - DR plans tend to be more tactical and describe technical activities such as recovery sites, backups, and fault tolerance
 
-- The overall goal of BCP is to provide a quick, calm, and efficient response in the event of an emergency and to enhance a company's ability to quickly recover from a distruptive event
+- The overall goal of BCP is to provide a quick, calm, and efficient response in the event of an emergency and to enhance a company's ability to quickly recover from a disruptive event
 
 - 1.8.2 Develop and document the scope and the plan
   - The BCP process has four main steps:
     1. Project scope and planning
     2. Business Impact Analysis
     3. Continuity planning
-    4. Approval and implementation
+    4. Approval and Implementation
 
     - **Project scope and planning**: Developing the project scope and plan starts with gaining support of the management team, making a business case (cost/benefit analysis, regulatory or compliance reasons etc.) and gaining approval to move forward
       - Next, you need to form a team with representatives from the business as well as IT
-      - Next, start with a business continuity policy statement,conduct a business impact analysis (see next item), and then develop the remaining components: 
+      - Next, start with a business continuity policy statement, conduct a business impact analysis (see next item), and then develop the remaining components:
         - preventive controls
         - relocation
         - the actual continuity plan
@@ -351,11 +350,11 @@
     - Step 3: Likelihood assessment
     - Step 4: Resource prioritization
       - deciding which systems and services you need to get things running again (think foundational IT services such as the network and directory, which many other systems rely on)
-      - and prioritize the order in which critical systems and services are recovered or brought back online 
+      - and prioritize the order in which critical systems and services are recovered or brought back online
     - As part of the BIA, establish:
       - **recovery time objectives (RTO)**: how long it takes to recover
       - **recovery point objectives (RPO)**: the maximum tolerable data loss
-      - **maximum tolerable downtime (MTD)**: (AKA maximum allowable downtime or MAD) how long an org can survive an interruption of critical functions 
+      - **maximum tolerable downtime (MTD)**: (AKA maximum allowable downtime or MAD) how long an org can survive an interruption of critical functions
       - along with the costs of downtime and recovery
   - **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that need to be protected against interruption
     - The next phase of BCP development, continuity planning, focuses on the development and implementation of a continuity strategy to minimize the impact realized risks might have on protected assets
@@ -365,13 +364,13 @@
     - The goal of this process is to create a **continuity of operations plan** (COOP), which focuses on how an org will carry out critical business functions starting shortly after a disruption occurs and extending up to one month of sustained operations
   - **Approval and implementation**:
     - BCP plan now needs sr. management buy-in (should be endorsed by the org's top exec)
-    - BCP team should create an implementation schedule, and all personnel involed should receive training on the plan
+    - BCP team should create an implementation schedule, and all personnel involved should receive training on the plan
 
 - The top priority of BCP and DRP is people: **Always prioritize people's safety**; get people out of harm's way, and then address IT recovery and restoration issues
 
 ## [1.9](#19-contribute-to-and-enforce-personnel-security-policies-and-procedures-osg-9-chpt-2) Contribute to and enforce personnel security policies and procedures (OSG-9 Chpt 2)
 
-- People are often considered the weakest element in any security solution; no matter what physical or logical controls are deployed, humans can discover ways of to avoid them, circumvent/subvert them, or disable them 
+- People are often considered the weakest element in any security solution; no matter what physical or logical controls are deployed, humans can discover ways of to avoid them, circumvent/subvert them, or disable them
   - Malicious actors are routinely targeting users with phishing and spear phishing campaigns, social engineering, and other types of attacks, and everybody is a target
   - Once attackers compromise an account, they can use that entry point to move around the network and elevate their privileges 
   - People can also become a key security asset when they are properly trained and are motivated to protect not only themselves but the security of the organization as well
@@ -379,28 +378,28 @@
 
 - 1.9.1 Candidate screening and hiring
   - The following strategies can reduce your risk:
-    - **Candidate screening and hiring**: To properly plan for security, you shold have standards in place for job descriptions, job classification, work tasks, job responsibilities, prevention of collusion, candidate screening, background checks, security clearances, employment agreements, and nondisclosure agreements 
+    - **Candidate screening and hiring**: To properly plan for security, you should have standards in place for job descriptions, job classification, work tasks, job responsibilities, prevention of collusion, candidate screening, background checks, security clearances, employment agreements, and nondisclosure agreements 
       - screening employment candidates thoroughly is a key part of the hiring process
       - be sure to conduct a full background check that includes a criminal records check, job history verification, education verification, certification validation and confirmation of other accolades when possible
       - all references should be contacted
-- 1.9.2 Employement agreements and policies
-  - **Employment agreement**: specifies job duties, expectations, rate of pay, benefits and info about termination; sometimes, such agreements are for a set period (for example, in a contract or short-term job). 
+- 1.9.2 Employment agreements and policies
+  - **Employment agreement**: specifies job duties, expectations, rate of pay, benefits and info about termination; sometimes, such agreements are for a set period (for example, in a contract or short-term job)
     - Employment agreements facilitate termination when needed for an underperforming employee 
     - The more info and detail in an employment agreement, the less risk (risk of a wrongful termination lawsuit, for example) the company has during a termination proceeding
     - e.g. a terminated employee might take a copy of their email with them without thinking of it as stealing, but they are less likely to do so if an employment agreement or another policy document clearly prohibits it
     - example employee agreements:
-      - non-compete 
-      - codes of conduct such as an acceptable use policy (AUP), which defines what is and isn’t acceptable acitivty, practice, or use for company equipemnt and resources
+      - non-compete
+      - codes of conduct such as an acceptable use policy (AUP), which defines what is and isn’t acceptable activity, practice, or use for company equipment and resources
       - nondisclosure agreement (NDA), which is a doc used to protect confidential information from being disclosed by a current or former employee
 - 1.9.3 Onboarding, transfers and termination processes
   - **Onboarding**: process of bringing a new employee into the org
-    - creating documented processes allowing the new employee to be intgrated quickly and consistently
+    - creating documented processes allowing the new employee to be integrated quickly and consistently
   - **Transfer**: an employee moves from one job to another, likely requiring adjusted account access to maintain appropriate least privilege
   - **Termination or offboarding**: offboarding is the removal of an employee's identity from the IAM system, once that person has left the org; can also be an element used when an employee transfers into a new role
     - whether cordial or abrupt, the ex-employee should be escorted off the premises and not allowed to return
 - 1.9.4 Vendor, consultant, and contractor agreements and controls
   - Orgs commonly outsource many IT functions, particularly data center hosting, contact-center support, and application development
-  - Info security policies and procedures must address outsourcing secuity and the use of service providers, vendors and consultants 
+  - Info security policies and procedures must address outsourcing security and the use of service providers, vendors and consultants 
     - e.g. access control, document exchange and review, maintenance, on-site assessment, process and policy review, and Service Level Agreements (SLAs) are examples of outsourcing security considerations
 - 1.9.5 Compliance policy requirements
   - **Compliance**: the act of confirming or adhering to rules, policies, regulations, standards, or requirements
@@ -410,38 +409,38 @@
   - **Compliance enforcement**: the application of sanctions or consequences for failing to follow policy, training, best practices, or regulations
 - 1.9.6 Privacy policy requirements
   - Personally identifiable information (PII) about employees, partners, contractors, customers and others should be stored in a secure way, accessible only to those who require the information to perform their jobs
-  - Orgs should maintain a documented privacy policy outlining the type of data covered by the policy and who the policy applies to 
+  - Orgs should maintain a documented privacy policy outlining the type of data covered by the policy and who the policy applies to
   - Employees and contractors should be required to read and agree to the privacy policy upon hire and on a regular basis thereafter (such as annually)
 
 ## [1.10](#110-understand-and-apply-risk-management-concepts-osg-9-chpt-2) Understand and apply risk management concepts (OSG-9 Chpt 2)
 
 - 1.10.1 Privacy policy requirements
   - **Risk Management**: process of identifying factors that could damage or disclose data, evaluating those factors in light of data value and countermeasure cost, and implementing cost-effective solutions for mitigating or reducing risk
-  - **Threats**: any potential occurrence that many cause an undersirable or unwanted outome for a specific asset; they can be intentional or accidental; loosely think of a threat as a weapon that could cause harm to a target
-  - **Vulnerability**: the weakness in an asset, or weakness (or absense) of a safeguard or countermeasure; a flaw, limitation, error, frailty, or susceptibility to harm
+  - **Threats**: any potential occurrence that many cause an undesirable or unwanted outcome for a specific asset; they can be intentional or accidental; loosely think of a threat as a weapon that could cause harm to a target
+  - **Vulnerability**: the weakness in an asset, or weakness (or absence) of a safeguard or countermeasure; a flaw, limitation, error, frailty, or susceptibility to harm
   - Threats and vulnerabilities are related: a threat is possible when a vulnerability is present
-    - Threats exploit vulnerabilities, which results in exposure 
-    - Exposure is risk, and risk is mitigated by safeguards 
+    - Threats exploit vulnerabilities, which results in exposure
+    - Exposure is risk, and risk is mitigated by safeguards
     - Safeguards protect assets that are endangered by threats
     - **Threat Agent/Actors**: intentionally exploit vulnerabilities
-    - **Threat Events**: accidential occurrences and intentinoal exploitations of vulnerabilities
+    - **Threat Events**: accidental occurrences and intentional exploitations of vulnerabilities
     - **Threat Vectors**: (AKA attack vector) is the path or means by which an attack or attacker can gain access to a target in order to cause harm
     - **Exposure**: being susceptible to asset loss because of a threat; the potential for harm to occur
     - **Exposure Factor (EF)**: derived from this concept; an element of quantitative risk analysis that represents the percentage of loss that an org would experience if a specific asset were violated by a realized risk
     - **Single Loss Expectancy (SLE)**: an element of quantitative risk analysis that represents the cost associated with a single realized risk against a specific asset; SLE = asset value (AV) * exposure factor (EF); a metric that represents the magnitude of loss or impact that a threat could have on a system or data, quantified as a percentage of loss that a realized threat would have on a specific asset; e.g. an EF of 0.2 (or 20%) for a specific threat would indicate that a realization of that threat would result in a loss of 20% of the asset’s value
-    - **Annualized rate of occurrence (ARO)**: an element of quantitative risk analysis that represent the expected frequency with which a specific threat or risk will occur within a single year
-    - **Annualized loss expectancy (ALE)**: an element of quantitative risk analysis that represent the possible yearly cost of all instances of a specific realized threat against a specific asset; ALE = SLE * ARO
+    - **Annualized rate of occurrence (ARO)**: an element of quantitative risk analysis that represents the expected frequency with which a specific threat or risk will occur within a single year
+    - **Annualized loss expectancy (ALE)**: an element of quantitative risk analysis that represents the possible yearly cost of all instances of a specific realized threat against a specific asset; ALE = SLE * ARO
     - **Safeguard evaluation**: ALE for an asset if a safeguard is implemented; ALE before safeguard - ALE with safeguard - annual cost of safeguard, or (ALE1 - ALE2) - ACS
-    - **Risk**: the possiblity or likelihood that a threat will exploit a vulnerability to cause harm to an asset and the severity of damage that could result; the > the potential harm, the > the risk
+    - **Risk**: the possibility or likelihood that a threat will exploit a vulnerability to cause harm to an asset and the severity of damage that could result; the > the potential harm, the > the risk
 - 1.10.1 Risk assessment/analysis
   - **Risk Assessment**: used to identify the risks and set criticality priorities, and then risk response is used to determine the best defense for each identified risk
   - Risk is threat with a vulnerability
   - Risk = threat * vulnerability (or probability of harm multiplied by severity of harm)
   - Addressing either the threat or threat agent or vulnerability directly results in a reduction of risk (known as threat mitigation)
-  - All IT systems have risk; all orgs have risk; there is no way to elminiate 100% of all risks 
+  - All IT systems have risk; all orgs have risk; there is no way to eliminate 100% of all risks
     - Instead upper management must decide which risks are acceptable, and which are not; there are two primary risk-assessment methodologies:
       - **Quantitative Risk Analysis**: assigns real dollar figures to the loss of an asset and is based on mathematical calculations
-      - **Qualitative Risk Analysis**: assigns subjective and intangible values to the loss of an asset and takes into account perspectives, feelings, intuition, preferences, ideas, and gut reactions; qualitative risk analys is based more on scenarios than calculations, and threats are ranked to evaluate risks, costs, and effects
+      - **Qualitative Risk Analysis**: assigns subjective and intangible values to the loss of an asset and takes into account perspectives, feelings, intuition, preferences, ideas, and gut reactions; qualitative risk analysis is based more on scenarios than calculations, and threats are ranked to evaluate risks, costs, and effects
     - Most orgs employ a hybrid of both risk assessment methodologies
     - The goal of risk assessment is to identify risks (based on asset-threat parings) and rank them in order of criticality
 
@@ -449,18 +448,18 @@
   - **Risk response**: the formulation of a plan for each identified risk; for a given risk, you have a choice for a possible risk response:
     - **Risk Mitigation**: reducing risk, or risk mitigation, is the implementation of safeguards, security controls, and countermeasures to reduce and/or eliminate vulnerabilities or block threats
     - **Risk Assignment**: assigning or transferring risk is the placement of the responsibility of loss due to a risk onto another entity or organization; AKA assignment of risk and transference of risk
-    - **Risk Deterrence**: deterrence is the process of implementing deterrents for would-be violators of security and policy 
-      - the goal is to convince a threat agent not to attack 
+    - **Risk Deterrence**: deterrence is the process of implementing deterrents for would-be violators of security and policy
+      - the goal is to convince a threat agent not to attack
       - e.g. implementing auditing, security cameras, and warning banners; using security guards
-    - **Risk Avoidance**: determining that the impact or likelihood of a specific risk is too great to be offset by potential benefits, and not performing a particular business function due to that determiniation; the process of selecting alternate options or activities that have less associated risk than the default, common, expedient, or cheap option
-    - **Risk Acceptance**: the result after a cost/benefit analysis determines that countermeasure costs would outweigh the possible cost of loss due to a risk 
+    - **Risk Avoidance**: determining that the impact or likelihood of a specific risk is too great to be offset by potential benefits, and not performing a particular business function due to that determination; the process of selecting alternate options or activities that have less associated risk than the default, common, expedient, or cheap option
+    - **Risk Acceptance**: the result after a cost/benefit analysis determines that countermeasure costs would outweigh the possible cost of loss due to a risk
       - also means that management has agreed to accept the consequences/loss if the risk is realized
     - **Risk Rejection**: an unacceptable possible response to risk is to reject risk or ignore risk; denying that risk exists and hoping that it will never be realized are not valid prudent due care/due diligence responses to risk
     - **Risk Transference**: paying an external party to accept the financial impact of a given risk
   - **Inherent Risk**: the level of natural, native, or default risk that exists in an environment, system, or product prior to any risk management efforts being performed (AKA initial or starting risk); this is the risk identified by the risk assessment process
   - **Residual Risk**: consists of threats to specific assets against which management chooses not to implement (the risk that management has chosen to accept rather than mitigate); risk remaining after security controls have been put in place
   - **Total Risk**: the amount of risk an org would face if no safeguards were implemented
-  - **Conceptual Total Risk Formula**: threats * vulnerabilities * asset value = total risk
+  - **Conceptual Total Risk Formula**: threats x vulnerabilities x asset value = total risk
   - **Controls Gap**: amount of risk that is reduced by implementing safeguards, or the difference between total risk and residual risk
   - **Conceptual Residual Risk Formula**: total risk - controls gap = residual risk
   - Risk should be reassessed on a periodic basis to maintain reasonable security because security changes over time
@@ -468,7 +467,7 @@
   - **Countermeasure**: AKA a "control" or "safeguard" can help reduce risk
     - For exam prep, understand how the concepts are integrated into your environment; this is not a step-by-step technical configuration, but the process of the implementation — where you start, in which order it occurs and how you finish
     - Bear in mind that security should be designed to support and enable business tasks and functions
-      - security controls, countermeasures, and safeguards can be implemented administratively, logically / technically, or physically 
+      - security controls, countermeasures, and safeguards can be implemented administratively, logically / technically, or physically
       - these 3 categories should be implemented in a conceptual layered defense-in-depth manner to provide maximum benefit
       - based on the concept that policies (part of administrative controls) drive all aspects of security and thus form the initial protection layer around assets
       - then, logical and technical controls provide protection against logical attacks and exploits
@@ -487,14 +486,14 @@
     - recovery controls typically address more significant damaging events compared to corrective controls, especially when security violations may have occurred
   - **Directive**: A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies
 - 1.10.6 Control assessments (security and privacy)
-  - Periodically assess security and privacy controls: what’s working, what isn’t 
+  - Periodically assess security and privacy controls: what’s working, what isn’t
     - As part of this assessment, the existing documents should be thoroughly reviewed, and some of the controls tested randomly 
     - A report is typically produced to show the outcomes and enable the org to remediate deficiencies 
     - Often, security and privacy control assessment are performed and/or validated by different teams, with the privacy team handling the privacy aspects
 - 1.10.7 Monitoring and measurement
   - Monitoring and measurement are closely aligned with identifying risks
   - While monitoring is used for more than security purposes, monitoring should be tuned to ensure the org is notified about potential security incidents as soon as possible 
-  - If a security breach occurs, monitored systems and data become valuable from a forensics perspective; rrom the ability to derive root cause of an incident to making adjustments to minimize the chances of reoccurance 
+  - If a security breach occurs, monitored systems and data become valuable from a forensics perspective; from the ability to derive root cause of an incident to making adjustments to minimize the chances of reoccurrence
 - 1.10.8 Reporting
   - Risk Reporting is a key task to perform at the conclusion of risk analysis (i.e. production and presentation of a summarizing report) 
   - A Risk Register or Risk Log is a document that inventories all identified risks to an org or system or within an individual project 
@@ -530,7 +529,17 @@
   - The RMF is intended as a risk management process to identify and respond to threats, and is defined in three core, interrelated Special Publications: 
     - SP 800-37 Rev 2, Risk Management Framework for Information Systems and Organizations
     - SP 800-39, Managing Information Security Risk
-    - SP 800-30 Rev 1, Guide for Conducting Risk Assessments
+    - [SP 800-30 Rev 1, Guide for Conducting Risk Assessments](https://csrc.nist.gov/pubs/sp/800/30/r1/final) outlines four primary steps to conduct a risk assessment
+      - Prepare for the assessment
+      - Conduct assessment
+        - identify threat sources and events
+        - identify vulnerabilities and predisposing conditions
+        - determine likelihood of occurrence
+        - determine magnitude of impact
+        - determine risk
+      - Communicate results
+      - Maintain assessment
+
     - The **RMF has 7 steps**, and **six cyclical phases**:
       - **Prepare** to execute the RMF from an organization and system-level perspective by establishing a context and priorities for managing security and privacy risk
       - **Categorize** the system and the information processed, stored, and transmitted by the system based on an analysis of the impact of loss
@@ -547,7 +556,7 @@
 - **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed; can be performed as a **proactive** measure during design and development (aka **defensive approach**) or as an **reactive** measure once a product has been deployed (aka **adversarial approach**)
   - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat
 - [**MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge)**](https://attack.mitre.org/): a comprehensive framework with a globally accessible knowledge base that documents real-world tactics, techniques, and procedures (TTPs) used by cyber adversaries; it is widely used by organizations to improve threat detection, incident response, and cybersecurity defenses; ATT&CK is used as a default model in many software packages
-- Microsoft uses the **Security Development Lifecycle** (SDL) with the motto: "Secure by design, secure by default, secure in deployment and communication" 
+- Microsoft uses the **Security Development Lifecycle** (SDL) with the motto: "Secure by design, secure by default, secure in deployment and communication"
   - It has two objectives:
     - Reduce the number of security-related design and coding defects
     - Reduce the severity of any remaining defects
@@ -572,8 +581,8 @@
 - Each stage of PASTA has a specific list of objectives to achieve and deliverables to produce in order to complete the stage
 - **Visual, Agile, and Simple Threat (VAST)**: a threat modeling concept that integrates threat and risk management into an Agile programming environment on a scalable basis
 - Part of the job of the security team is to identify threats, using different methods:
-  - Focus on attackers: this is a useful method in specific situations;
-  - e.g. suppose that a developer’s employment is terminated, and that post-offboarding and review of developer’s computer, a determination is made that the person was disgruntled and angry
+  - Focus on attackers: this is a useful method in specific situations
+    - e.g. suppose that a developer’s employment is terminated, and that post-offboarding and review of developer’s computer, a determination is made that the person was disgruntled and angry
     - understanding this situation as a possible threat, allows mitigation steps to be taken
   - Focus on assets: an org’s most valuable assets are likely to be targeted by attackers
   - Focus on software: orgs that develop applications in house, and can be viewed as part of the threat landscape; the goal isn’t to identify every possible attack, but to focus on the big picture, identifying risks and attack vectors
@@ -585,6 +594,8 @@
   - E: Exploitability
   - A: Affected users
   - D: Discoverability
+- Note that STRIDE and DREAD are used together: STRIDE to identify the threats, DREAD to prioritize them
+- **Trike**: an open source risk-based threat modeling methodology; provides a method of performing a reliable and repeatable security audit, and a framework for collaboration and communication
 - Threat intelligence feed standards include:
   - **CAPEC (Common Attack Pattern Enumeration and Classification)**: a dictionary of known attack patterns
   - **STIX (Structured Threat Information eXpression language)**: used to describe threats in a standardized way
@@ -601,17 +612,17 @@
     - The goal of a secure supply chain is that the finished product is of sufficient quality, meets performance and operational goals, provides stated security mechanisms, and that at no point in the process was any element counterfeited or subject to unauthorized or malicious manipulation or sabotage
   - The supply chain can be a threat vector, where materials, software, hardware, or data is being obtained from a supposedly trusted source but the supply chain behind the source could have been compromised and asset poisoned or modified
 - 1.12.2 Third-party assessment and monitoring
-  - Before doing business with another company, an org needs to perform due-dilligence, and third-party assessments can help gather information and perform the assessment 
-  - An on-site assessment is useful to gain information about physical security and operations 
+  - Before doing business with another company, an org needs to perform due-diligence, and third-party assessments can help gather information and perform the assessment
+  - An on-site assessment is useful to gain information about physical security and operations
     - During document review, your goal is to thoroughly review all the architecture, designs, implementations, policies, procedures, etc. 
     - A good understanding of the current state of the environment, especially to understand any shortcomings or compliance issues prior to integrating the IT infrastructures
-    - The level of access and depth of information obtained is usually proportional to how closely the companies will work together 
+    - The level of access and depth of information obtained is usually proportional to how closely the companies will work together
 - 1.12.3 Minimum security requirements
   - As part of assessment, the minimum security requirements must be established; in some cases, the minimum security requirements are your company’s security requirements, in other cases, new minimum security requirements need to be established 
     - In such scenarios, the minimum security requirements should have a defined period
 - 1.12.4 Service-level requirements
   - **Service Level Agreements (SLAs)**: companies have SLAs for internal operations (such as how long it takes for the helpdesk to respond to a new ticket), for customers (such as the availability of a public-facing service) and for partner orgs (such as how much support a vendor provides a partner)
-    - Outside entity or vendor agreements should stipulate performance expectations like maximum downtimes and include penalties if the vendor doesn't meet expections
+    - Outside entity or vendor agreements should stipulate performance expectations like maximum downtimes and include penalties if the vendor doesn't meet expectations
     - All SLAs should be reviewed; a company sometimes has an SLA standard that should be applied, when possible, to the service level agreements as part of working with another company
       - this can sometimes take time, as the acquiring company might have to support established SLAs until they expire or are up for renewal
   - **Service Level Requirement (SLR)**: a statement of expectations of service and performance from a product or service
@@ -622,12 +633,12 @@
 - 1.13.1 Methods and techniques to present awareness and training (e.g., social engineering, phishing, security champions, gamification)
   - Before actual training takes place, user security awareness needs to take place; from there, training, or teaching employees to perform their work tasks and to comply with the security policy can begin
     - All new employees require some level of training so that they will be able to comply with all standards, guidelines, and procedures mandated by the security policy
-    - Education is a more detailed endeavor in which students/users learn much more than they actually need to know to perform their work tasks 
+    - Education is a more detailed endeavor in which students/users learn much more than they actually need to know to perform their work tasks
     - Education is most often associated with users pursuing certification or seeking job promotion
   - Employees need to understand what to be aware of (e.g. types of threats, such as phishing and free USB sticks), how to perform their jobs securely (e.g. encrypt sensitive data, physically protect valuable assets) and how security plays a role in the big picture (company reputation, profits,and losses) 
     - Training should be mandatory and provided both to new employees and yearly (at a minimum) for ongoing training 
     - Routine tests of operational security should be performed (such as phishing test campaigns, tailgating at company doors and social engineering tests)
-    - **Social engineering**: a form of attack that exploits human nature and behavior; the common social engineering principles are authority, intimidation, consensus, scarcity, familiarity, trust, and urgency;
+    - **Social engineering**: a form of attack that exploits human nature and behavior; the common social engineering principles are authority, intimidation, consensus, scarcity, familiarity, trust, and urgency
       - **familiarity**: as a social engineering principle, an attempt to exploit someone's native trust in things that are familiar; might include claiming to know a coworker (existing or not), and designed to put the target in a mindset that promotes willingness to provide info
       - social engineering attacks include phishing, spear phishing, business email compromise (BEC), whaling, smishing, vishing, spam, shoulder surfing, invoice scams, hoaxes, impersonation, masquerading, tailgating, piggybacking, dumpster diving, identity fraud, typo squatting, and influence campaigns
       - while many orgs don’t perform social engineering campaigns (testing employees using benign social engineering attempts) as part of security awareness, it is likely to gain traction
@@ -641,18 +652,18 @@
       - gamification has enabled organizations to get more out of the typical employee training
   
 - 1.13.2 Periodic content reviews
-  - Threats are complex, so training needs to be relevant and interesting to be effective; this means updating training materials and changing out the ways which security is tested and measured 
-    - if you always use the same phishing test campaign or send it from the same account on the same day, it isn’t effective, and the same applies to other materials. 
+  - Threats are complex, so training needs to be relevant and interesting to be effective; this means updating training materials and changing out the ways which security is tested and measured
+    - if you always use the same phishing test campaign or send it from the same account on the same day, it isn’t effective, and the same applies to other materials
     - instead of relying on long/detailed security documentation for training and awareness, consider using internal social media tools, videos and interactive campaigns
-- 1.13.2 Program effectiveness evaluation 
+- 1.13.2 Program effectiveness evaluation
   - Time and money must be allocated for evaluating the company’s security awareness and training; the company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email links
 
 Also see my articles on risk management:
 
 - [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1)  introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
-- Since the primary goal of risk management is to identify potential threats against an organizaton's assets, and bring those risks into alignment with an organization's risk appetite, in [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2), we cover the threat assessment -- a process of examining and evaluating cyber threat sources with potential system vulnerabilities
+- Since the primary goal of risk management is to identify potential threats against an organization's assets, and bring those risks into alignment with an organization's risk appetite, in [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2), we cover the threat assessment -- a process of examining and evaluating cyber threat sources with potential system vulnerabilities
   - we look at how a risk assessment helps drive our understanding of risk by pairing assets and their associated potential threats, ranking them by criticality
   - we also discuss quantitative analytic tools to help provide specific numbers for various potential risks, losses, and costs
 - In the [third installment](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-3), we review the outcome of the risk assessment process, looking at total risk, allowing us to determine our response to each risk/threat pair and perform a cost/benefit review of a particular safeguard or control
-  - we look at the categories and types of controls and the idea of layering them to provide several different types of protection mechanisms 
+  - we look at the categories and types of controls and the idea of layering them to provide several different types of protection mechanisms
   - we also review the important step of reporting out our risk analysis and recommended responses, noting differences in requirements for messaging by group
