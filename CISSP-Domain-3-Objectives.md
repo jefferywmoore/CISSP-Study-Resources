@@ -2,7 +2,7 @@
 
 You may find this domain to be more technical than others, and if you have experience working in a security engineering role you likely have an advantage; if not, allocate extra time to this domain to ensure you have a good understanding of the topics
 
-- **Advanced Encryption Standard (AES)**: uses the Rijndael algorithm and is the US gov standard for the secure exchange of sensitive but unclassified data; AES uses key lengths of 128, 192, and 256 bits, and a fixed block size of 128 bits, achieving a higher level of security than the older DES algorithm
+- **Advanced Encryption Standard (AES)**: uses the Rijndael symmetric algorithm and is the US gov standard for the secure exchange of sensitive but unclassified data; AES uses key lengths of 128, 192, and 256 bits, and a fixed block size of 128 bits, achieving a higher level of security than the older DES algorithm
 - **Algorithm**: a mathematical function that is used in the encryption and decryption process; can be simply or very complex; also defined as a set of instructions by which encryption and decryption is done
 - **Argon2**: a secure key derivation and password hashing algorithm designed to protect against brute-force and side-channel attacks; it was the winner of the Password Hashing Competition in 2015 and is considered highly secure and efficient, especially for systems requiring robust password protection
 - **ASLR**: Address space layout randomization (ASLR) is a memory-protection process for operating systems (OSes) that guards against buffer-overflow attacks by randomizing the location where system executables are loaded into memory
@@ -11,6 +11,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Cipher**: always meant to hide the true meaning of a message; always secret; types of ciphers include transposition, substitution, stream, and block
 - **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
 - **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
+- **Cloud Controls Matrix (CCM)**: Cloud Security Alliance (CSA) framework designed to provide security principles to guide cloud vendors and assist prospective cloud customers in assessing the risks of cloud usage
 - **Code**: cryptographic systems of symbols that operate on words or phrases and are sometimes secret, but don't always provide confidentiality
 - **Collision**: occurs when a hash function generates the same output for different inputs
 - **Cryptanalysis**: study of techniques for attempting to defeat cryptographic methods and generally information security services; Cryptanalysis is the process of transforming or decoding communications from non-readable to readable format without having access to the real key; two major types of cryptanalysis: cryptanalytic attacks, and cryptographic attacks
@@ -22,9 +23,10 @@ You may find this domain to be more technical than others, and if you have exper
 - **Cyber-physical systems**: systems that use 'computational means' to control physical devices
 - **Decoding**: the reverse process from encoding, converting the encoded message back to plaintext format
 - **Decryption**: the reverse process from encryption
-- **Elliptic-curve cryptography (ECC)**: a newer mainstream algorithm, is normally 256 bits in length (a 256-bit ECC key is equivalent to a 3072-bit RSA key), making it securer and able to offer stronger anti-attack capabilities
+- **Elliptic-curve cryptography (ECC)**: a newer mainstream asymmetric algorithm, is normally 256 bits in length (a 256-bit ECC key is equivalent to a 3072-bit RSA key), making it securer and able to offer stronger anti-attack capabilities
 - **Encoding**: action of changing a message or set of info into another format through the use of code; unlike encryption, encoded info can still be read by anyone with knowledge of the encoding process
 - **Encryption**: process and act of converting the message from plaintext to ciphertext (AKA enciphering)
+- **Enterprise Security Architecture**: methods to ensure security is aligned with org goals and objectives to protect critical components (people, process, and technology)
 - **Factoring attack**: in terms of the test, only the RSA algorithm uses factoring as the hard math problem; so if you see factoring attack, think RSA
 - **Fog computing**: advanced computational architecture often used as an element in IIoT; fog computing relies on sensors, IoT devices, or edge computing devices to collect data, then transfers it back to a central location for processing (centralizing processing and intelligence)
 - **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the ciphertext as a way of reducing the search space
@@ -57,15 +59,18 @@ You may find this domain to be more technical than others, and if you have exper
 - **Salting vs key stretching**: salting adds randomness and uniqueness to each password before hashing, which reduces the effectiveness of rainbow table attacks; key stretching makes the hashing process deliberately slow, making it much more challenging for attackers to crack passwords using brute-force or precomputed tables; common password hashing algorithms that use key stretching include PBKDF2, bcrypt, and scrypt
 - **SDx**: software-defined everything refers to replacing hardware with software using virtualization; includes virtualization, virtualized software, virtual networking, containerization, serverless architecture, IaC, SDN, VSAN, software-defined storage (SDS), VDI, VMI SDV, and software-defined data center (SDDC)
 - **Session key**: a symmetric encryption key generated for one-time use; usually requires a key encapsulation approach to eliminate key management issues
+- **Sherwood Applied Business Security Architecture (SABSA)**: Enterprise Security Architecture based on a risk-driven model based on business requirements for security
 - **Static Environments**: apps, OSs, hardware, or networks that are created/configured to meet a particular need or function are set to remain unaltered; static environments, embedded systems, network-enabled devices, edge, fog, and mobile devices need security management that may include network segmentation, security layers, app firewalls, manual updates, firmware version control, wrappers, and control redundancy/diversity
 - **Stream mode encryption**: system using a process that treats the input plaintext as a continuous flow of symbols, encrypting one symbol at a time; usually uses a streaming key, using part of the key as a one-time key for each symbol's encryption
 - **Stream cipher**: a symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream; each plaintext digit is encrypted one at a time with the corresponding digit of the keystream, to give a ciphertext stream
 - **Substitution cipher**: uses an encryption algorithm to replace each character or bit of the plaintext message with a different character; one of the earliest substitution ciphers was developed by Julius Caesar, known as the "Caesar cipher"
 - **Symmetric encryption**: process that uses the same key (or a simple transformation of it) for both encryption/decryption
+- **The Open Group Architecture Framework (TOGAF)**: Enterprise Security Architecture that provides for rapid and iterative development, defining business goals and aligning them with architecture objectives
 - **Transposition cypher**: encryption/decryption process using transposition
 - **Trust and Assurance**: trust is the presence of a security mechanism or capability; assurance is how reliable the security mechanism(s) are at providing security
 - **VESDA**: very early smoke detection process (air sensing device brand name)
 - **Work factor**: (AKA Work function) is a way to measure the strength of a cryptography system, measuring the effort in terms of cost/time to decrypt messages; amount of effort necessary to break a cryptographic system using a brute-force attack, measured in elapsed time
+- **Zachman**: Enterprise Security Architecture based on 2-d table of what, how, when who, where, why; and identification, definition, representation, specification, configuration, and installation
 - **Zero-knowledge proof**: one person demonstrates to another that they can achieve a result that requires sensitive info without actually disclosing the sensitive info
 
 ## [3.1](#31--research-implement-and-manage-engineering-processes-using-secure-design-principles-osg-9-chpts-18916)  Research, implement, and manage engineering processes using secure design principles (OSG-9 Chpts 1,8,9,16)
@@ -95,7 +100,7 @@ You may find this domain to be more technical than others, and if you have exper
 - 3.1.5 Fail securely
   - **Fail securely**: if a system, asset, or process fails, it shouldn't reveal sensitive information, or be less secure than during normal operation; failing securely could involve reverting to defaults
 - 3.1.6 Separation of duties (SoD)
-  - **Separation of duties (SoD)**: separation of duties (SoD) and responsibilities ensures that no single person has total control over a critical function or system;  SoD is a process to minimize opportunities for misuse of data or environment damage
+  - **Separation of duties (SoD)**: separation of duties (SoD) and responsibilities ensures that no single person has total control over a critical function or system;  SoD is a process to minimize opportunities for misuse of data or environment damage; separation of duties helps prevent fraud
     - e.g. one person sells tickets, another collects tickets and restricts access to ticket holders in a movie theater
 - 3.1.7 Keep it simple
   - **Keep it simple**: AKA keep it simple, stupid (KISS), this concept is the encouragement to avoid over-complicating the environment, organization, or product design
@@ -139,13 +144,15 @@ You may find this domain to be more technical than others, and if you have exper
   - Focus is on *confidentiality*
   - **Simple property**: "No read up"
   - **Star (*) property**: "No write down" (AKA confinement property)
+  - **Strong Star Security Property**: subject can read/write only in their own layer of secrecy
   - Discretionary Security Property: uses an access matrix (need to know in order to access)
   - Doesn't address covert channels
 - **Biba**: Released in 1977, this model was created to supplement Bell-LaPadula
   - Focus is on *integrity*
   - **Simple Integrity Property**: "No read down" (for example, users with a Top Secret clearance can’t read data classified as Secret)
   - **Star (*) Integrity Property**: "No write up" (for example, a user with a Secret clearance can’t write data to files classified as Top Secret)
-  - By combining it with Bell-LaPadula, you get both confidentiality and integrity
+  - **Invocation Property**: prohibits subject at one level of integrity from invoking a subject at a higher level of integrity
+  - **Lipner implementation**: by combining Biba and Bell-LaPadula, you get both confidentiality and integrity
   - Biba uses a lattice to control access and is a form of mandatory access control (MAC) model
 - **Take-Grant**:
   - Take-grant is a confidentiality-based model that supports four basic operations: take, grant, create, and revoke; it employs a directed graph to dictate how rights can be passed from one subject to another, or from a subject to an object
@@ -156,6 +163,7 @@ You may find this domain to be more technical than others, and if you have exper
 
 - **Clark-Wilson**:
   - Designed to protect integrity using the access control triplet (subject/program/object)
+  - Clark-Wilson has three rules of integrity: well-formed transactions (transactions must follow specific rules), certification rule (processes must be certified as meeting the model's requirements), and enforcement rule (the system must enforce the certification rule)
   - A program interface is used to limit what is done by a subject; if the focus of an intermediary program between subject and object is to protect integrity, then it is an implementation of the Clark-Wilson model
   - Uses security labels to grant access to objects via transformation procedures and a restricted interface model
   - The Clark-Wilson Model enforces the concept of separation of duties
@@ -174,9 +182,9 @@ You may find this domain to be more technical than others, and if you have exper
   - An integrity model
   - Foundation of noninterference conceptual theories
 - **Sutherland Model**:
-  - Focuses on preventing interference in support of integrity
+  - Focuses on preventing interference in support of integrity; might be used to prevent covert channel attacks
 - **Graham-Denning Model**
-  - Focused on the secure creation and deletion of both subjects and objects
+  - Graham-Denning is primarily an access control model; focused on the secure creation and deletion of both subjects and objects
   - 8 primary protection rules or actions
     - 1-4:securely create/delete a subject/object
     - 5-8:securely provide the read/grant/delete/transfer access right
@@ -284,7 +292,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - algorithms themselves are not secret; they have extensive public details about history and how they function
 
 - 3.5.5 Industrial Control Systems (ICS)
-  - **Industrial control systems (ICS)**: a form of computer-management device that controls industrial processes and machines, also known as operational technology (OT)
+  - **Industrial control systems (ICS)**: a form of computer-management device that controls industrial processes and machines, also known as operational technology (OT); there are several forms of ICS including distributed control systems (DCS), programmable logic controllers (PLC), and supervisory control and data acquisition (SCADA)
   - **Supervisory control and data acquisition (SCADA)**: systems used to control physical devices like those in an electrical power plant or factory; SCADA systems are well suited for distributed environments, such as those spanning continents
     - some SCADA systems still rely on legacy or proprietary communications, putting them at risk, especially as attackers gain knowledge of such systems and their vulnerabilities
     - SCADA risk mitigations:
@@ -304,6 +312,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - All sensitive data should be encrypted, both for network communication and data-at-rest
   - Use centralized identity access and management system, with multifactor authentication
   - Customers shouldn’t use encryption controlled by the vendor, eliminating risks to vendor-based insider threats, and supporting destruction using cryptographic erase
+  - **Community cloud**: the cloud enviornment is maintained, used, and paid for as a shared benefit by associated users or organizations; benefits might include collaboration, data exchange, and cost savings compared to private or public clouds
   - **Cryptographic erase**: methods that permanently remove the cryptographic keys
   - Capture diagnostic and security data from cloud-based systems and store in your SIEM system
   - Ensure cloud configuration matches or exceeds your on-premise security requirements
@@ -595,7 +604,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - frequency analysis is a technique that is helpful against simple ciphers (see below)
 - 3.7.3 Known plaintext
   - **Known plaintext**: in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes; the goal is to use the plaintext and associated ciphertext to deduce the encryption key
-  - **Linear cryptanalysis**: a known plaintext attack, in which the attacker studies probabilistic linear relations referred to as linear approximations among parity bits of the plaintext, the Ciphertext and the hidden key
+  - **Linear cryptanalysis**: a known plaintext attack, in which the attacker studies probabilistic linear relations referred to as linear approximations among parity bits of the plaintext, the Ciphertext and the hidden key; considered most effective technique in exploiting statistical properties of ciphertext to find correlations between plaintext and ciphertext
 - 3.7.4 Frequency analysis
   - **Frequency analysis**: an attack where the characteristics of a language are used to defeat substitution ciphers
     - for example in English, the letter "E" is the most common, so the most common letter in an encrypted ciphertext could be a substitution for "E"
@@ -621,7 +630,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 - 3.7.9 Timing
   - **Timing**: timing attacks are an example of a side-channel attack where the attacker measures precisely how long cryptographic operations take to complete, gaining information about the cryptographic process that may be used to undermine its security
 - 3.7.10 Man-in-the-middle (MITM)
-  - **Man-in-the-middle (MITM) (AKA on-path)**: in this attack a malicious individual sits between two communicating parties and intercepts all communications (including the setup of the cryptographic session)
+  - **Man-in-the-middle (MITM) (AKA on-path, or Adversary-in-the-middle(AitM))**: in this attack a malicious individual sits between two communicating parties and intercepts all communications (including the setup of the cryptographic session)
     - attacker responds to the originator's initialization requests and sets up a secure session with the originator
     - attacker then establishes a second secure session with the intended recipient using a different key and posing as the originator
     - attacker can then "sit in the middle" of the communication and read all traffic as it passes between the two parties

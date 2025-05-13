@@ -27,12 +27,13 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **CSMA/CA**: Carrier Sense Multiple Access with Collision Avoidance is a method of network flow control
 - **CSMA/CD**: Carrier Sense Multiple Access with Collision Detection is a method of network flow control, where if > 1 station accesses the network at the same time, other stations detect and re-try their transmission
 - **Circuit-switched network**: network that uses a dedicated circuit between endpoints
-- **CDMA**: Code-Division Multiple Access: a method of encoding several sources of data so they can all be transmitted over a single RF carrier by one transmitter, or by using a single RF carrier frequency with multiple transmitters; the data from each call is encoded with a unique key, and calls are transmitted at once
+- **CDMA**: Code-Division Multiple Access: a method of encoding several sources of data so they can all be transmitted over a single RF carrier by one transmitter, or by using a single RF carrier frequency with multiple transmitters; the data from each call is encoded with a unique key, and calls are transmitted at once; wireless radio protocol used to provide 2G and 3G voice and data services; replaced by 4G / LTE
 - **Collision Domain**: set of systems that can cause a collision if they transmitted at the same time; note that broadcast domain is the set of systems that can receive a broadcast from each other
 - **Concentrator**: provides communication capability between many low-speed, usually asynchronous channels and one or more high-speed, usually synchronous channels; usually different speeds, codes, and protocols can be accommodated on the low-speed side; multiplexed into one signal
 - **CDN**: Content Distribution Network is a large distributed system of servers deployed in multiple data centers, with a goal of Quality of Service (QoS) and availability requirements
 - **Control plane**: part of a network that controls how data packets are forwarded — meaning how data is sent from one place to another; e.g. the process of creating a routing table is considered part of the control plane; control of network functionality and programmability is directly made to devices at this layer
 - **Converged protocol**: combines/converges standard protocols (such as TCP/IP) with proprietary/non-standard ones; they can complicate enterprise-wide security engineering efforts requiring specialist knowledge
+- **Dense Wavelength Division Multiplexing (DWDM)**: by enabling multiple data streams or channels to be simultaneously transmitted over a single optical fiber, DWDM increases capacity and efficiency of the network
 - **DHCP**: Dynamic Host Configuration Protocol is an industry standard used to dynamically assign IP addresses to network devices
 - **Disassociation attack**: AKA deauthentication attack, is a type of denial-of-service (DoS) attack targeting Wi-Fi networks; it exploits the management frames used in the Wi-Fi protocol to forcibly disconnect (disassociate) a user’s device from a wireless access point (AP); these attacks can cause disruptions in network availability and can be used as part of a larger attack, such as a man-in-the-middle (MITM) attack
 - **Domain-based Message Authentication, Reporting, and Conformance (DMARC)**: an email authentication protocol that builds on SPF and DKIM to prevent email spoofing; DMARC allows domain owners to specify a policy for handling unauthenticated emails, such as quarantine or reject, and to receive reports on email authentication results; DMARC works by checking that the "From" address matches the domain in the SPF and DKIM checks (alignment)
@@ -46,7 +47,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
   - DNS query spoofing
 - **Domain hijacking**: or domain theft, is the malicious action of changing the registration of a domain name without the authorization of the owner
 - **Extranet**: a private network similar to an intranet, but typically open to external parties, such as business partners, suppliers, key customers, etc; main purpose of an extranet is to allow users to exchange data and applications, and share information
-- **Extensible Authentication Protocol (EAP)**: a framework that allows for various authentication methods to be used for secure network access, including wireless networks, by providing a standardized way to exchange authentication information between a client and an authentication server; it's not a specific authentication method itself, but a platform to support multiple methods like passwords, certificates, or smart cards depending on the chosen "EAP method."; EAP allows customized authentication security solutions
+- **Extensible Authentication Protocol (EAP)**: a framework that allows for various authentication methods to be used for secure network access, including wireless networks, by providing a standardized way to exchange authentication information between a client and an authentication server; it's not a specific authentication method itself, but a platform to support multiple methods like passwords, certificates, or smart cards depending on the chosen "EAP method"; EAP allows customized authentication security solutions
 - **East/West (east-west) traffic**: network traffic that is within a data, control, or application plane; within a data center or between geo dispersed locations
 - **Email bombing**: AKA "mail-bombing" - when email itself is used as an attack mechanism by flooding a system with messages, causing a denial of service
 - **Email security**: internet email is based on SMTP, POP3, and IMAP, and is inherently insecure; email can be secured, and the methods used must be addressed in a security policy; email security solutions include using S/MIME, PGP, DKIM, SPF, DMARC, STARTTLS, and Implicit SMTPS
@@ -91,6 +92,8 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **PLC**: Packet Loss Concealment used in VoIP communications to mask the effect of dropped packets
 - **Point-to-Point Protocol (PPP)**: an encapsulation protocol designed to support the transmission of IP traffic over dial-up or point-to-point links; a standard method for transporting multiprotocol datagrams over point-to-point links; original PPP options for authentication were PAP, CHAP, and EAP
 **Point-to-Point Tunneling Protocol (PPTP)**: an outdated VPN protocol that creates a secure tunnel for data over IP networks, primarily for remote access; operates at Layer 2 (Data Link Layer) of the OSI model, PPTP encapsulates data within IP packets but provides only basic encryption, making it relatively fast but less secure by modern standards; due to its weaker security, PPTP has largely been replaced by more robust VPN protocols, such as L2TP/IPsec and OpenVPN
+- **Ports**: associated with services on network architectures; 65,535 ports in total
+- **Ports 0-1023**: associated with common services
 - **Ports 1024-4951**: registered ports used with non-system applications associated with vendors and devs
 - **Ports 49152-65535**: dynamic ports (AKA private or non-reserved ports) used as temporary ports, often in association when a service is requested via a well-known port
 - **Port Address Translation (PAT)**: a type of NAT which allows multiple devices on a private network to use the same public IP address by assigning each device a unique port number; PAT is useful when multiple devices need internet access but there aren't many public IP addresses available; an extension of NAT translating all addresses to one routable IP address and translating the source port number in the packet to a unique value
@@ -103,6 +106,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **Screened subnet**: AKA DMZ (or demilitarized zone) is a network security architecture that uses firewalls to create a barrier between the public internet and the internal network, allowing only controlled access to external-facing servers while protecting the internal network from potential attacks
 - **Sender Policy Framework (SPF)**: an email authentication protocol that helps verify if an email claiming to come from a specific domain is sent by an authorized mail server; SPF works by allowing domain owners to publish a list of approved sending IP addresses in their DNS records; when an email is received, the recipient's server checks the SPF record to ensure the email was sent from an authorized IP; if the IP is listed, the email is more likely to be legitimate and if not, it may be flagged as spam or rejected, helping to prevent email spoofing and phishing
 - **SIPS**: secure version of the Session Initialization Protocol for VoIP, adds TLS encryption to keep the session initialization process secure
+- **Stateless Address Autoconfiguration (SLAAC)**: a method in IPv6 where devices automatically configure their IP addresses without relying on a DHCP server, using Router Advertisements (RAs) to obtain network prefixes and their own interface identifiers to create unique addresses
 - **Smartcard**: credit card-sized IDs, badges, or security passes with a magnetic stripe, bar code, or integrated circuit chip, containing info about the authorized bearer; used for identification or auth purposes; smartcards can include microprocessors and cryptographic certificates
 - **S/MIME**: provides the following cryptographic security services for electronic messaging applications:
         - Authentication
@@ -111,7 +115,9 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - Privacy
         - Data security (using encryption)
   - S/MIME specifies the MIME type application/pkcs7-mime (smime-type "enveloped-data") for data enveloping (encrypting) where the whole (prepared) MIME entity to be enveloped is encrypted and packed into an object which subsequently is inserted into an application/pkcs7-mime MIME entity
-    - S/MIME is the emerging standard for secure email / encrypted messages
+  - S/MIME is a standard for public key encryption, providing security services for digital messaging apps
+  - S/MIME requires the use of a PKI in order to work properly
+  - S/MIME is the emerging standard for secure email / encrypted messages
 - **SNMP**: Simple Network Management Protocol, is a protocol for collecting and organizing info about managed devices on IP networks; it can be used to determine the health of devices such as routers, switches, servers, workstations, etc
 - **Smurf attack**: ICMP echo request sent to the network broadcast address of a spoofed victim causing all nodes to respond to the victim with an echo reply; a smurf attack is a form of DoS employing an amplification network to send numerous response packets to the victim
 - **SPML**: Service Provisioning Markup Language is XML-based and designed to allow platforms to generate and respond to provisioning requests; uses the concept of requesting authority, a provisioning service point, and a provisioning service target; requesting authorities issue SPML requests to a provisioning service point; provisioning service targets are often user accounts and are required to be allowed unique identification of the data in its implementation
@@ -172,6 +178,9 @@ Networking can be one of the more complex exam topics; if you have a networking 
           - data compression
           - data encryption
       - Uses data streams
+      - Protocols at layer 7 include:
+        - **Session Initiation Protocol (SIP)**: signalling protocol used to init, maintain, modify, and terminate real-time communication session between IP devices; used to establish voice and video calls
+        - Hypertext Transfer Protocol (HTTP)
     - Session Layer (5)
       - Responsible for establishing, maintaining, and terminating communication sessions between two computers
       - Three communication session phases:
@@ -182,6 +191,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - data transfer
         - connection release
       - Uses data streams
+      - Protocols at layer 5 include NetBIOS, and RPC
     - Transport Layer (4)
       - Responsible for managing the integrity of a connection and controlling the session; providing transparent data transport and end-to-end transmission control
       - Defines session rules like how much data each segment can contain, how to verify message integrity, and how to determine whether data has been lost
@@ -192,8 +202,10 @@ Networking can be one of the more complex exam topics; if you have a networking 
           - uses three-way handshake using following three steps: synchronize (SYN), synchronize-acknowledge (SYN-ACK), and acknowledge (ACK)
           - TCP header flags:
             - URG ACK PSH RST SYN FIN (mnemonic: Unskilled Attackers Pester Real Security Folks)
+          - TCP Packet Header: 10 fields, 160 bits, including source port, destination port, sequence number, acknowledgement number, checksum etc
         - User Datagram Protocol (UDP)
           - connectionless protocol that provides fast, best-effort delivery of **datagrams** (self-container unit of data)
+          - UDP Datagram Header: 4 fields, 64 bits, including source port, destination port, length of data, checksum
         - Transport Layer Security (TLS)
           - note: in the OSI model, TLS operates on four layers: Application, Presentation, Session, and Transport; in the TCP/IP model, it operates only on the Transport layer
         - BGP: Border Gateway Protocol - used to exchange routing and reachability information between routers (looking at available paths, picking the best)
@@ -201,6 +213,8 @@ Networking can be one of the more complex exam topics; if you have a networking 
 
     - Network Layer (3)
       - Responsible for logical addressing, and providing routing or delivery guidance (but not necessarily verifying guaranteed delivery), manages error detection and traffic control
+      - **Internet Control Message Protocol (ICMP)**: allows network devices to send error and control messages and provides Ping and Traceroute utilities
+      - **Internet Group Management Protocol (IGMP)**: allows hosts and adjacent routers on IP networks to establish multicast group memberships
       - **routing protocols**: move routed protocol messages across a network
         - includes RIP, OSPF, IS-IS, IGRP, IGMP, and BGP
         - routing protocols are defined at the Network Layer and specify how routers communicate
@@ -208,11 +222,11 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - **static routing protocol**: requires an admin to create/update routes on the router
         - **dynamic**: can discover routers and determine best route to a given destination; routing table is periodically updated
         - **distance-vector**: (interior) makes routing decisions based on distance (e.g. hop count), and vector (router egress interface); examples:
-          - **Routing Information Protocol (RIP)**: a distance-vector protocol that uses hop count as its routing metric
-          - Interior Gateway Routing Protocol (IGRP)
+          - **Routing Information Protocol (RIP)**: a distance-vector protocol that uses hop count as its routing metric; prevents routing loops by limiting the number of hops allowed by a packet in a path between source to destination; outdated and less scalable than protocols like OSPF
+          - Interior Gateway Routing Protocol (IGRP): note that IGRP is proprietary and outdated
           - Enhanced Interior Gateway Routing Protocol (EIGRP)
         - **link state**: (interior) uses router characteristics (e.g. speed, latency, error rates) to make next hop routing decisions; examples:
-          - **Open Shortest Path First (OSPF)**: an interior gateway routing protocol developed for IP networks based on shortest path first or link-state algorithm
+          - **Open Shortest Path First (OSPF)**: an interior gateway routing protocol developed for IP networks based on shortest path first or link-state algorithm; calculates the shortest route to a destination through a network based on an algorithm
           - Intermediate System to Intermediate System (IS-IS)
         - **path vector**: (exterior) a type of routing protocol used to determine the best path for data to travel across networks, particularly in scenarios involving multiple autonomous systems (AS); most commonly associated with **Border Gateway Protocol (BGP)**: the primary exterior routing protocol used on the internet
         - interior vs exterior:
@@ -226,16 +240,18 @@ Networking can be one of the more complex exam topics; if you have a networking 
       - **Media Access Control (MAC)**: a 6-byte (48-bit) binary address written in hex (hexidecimal notation); AKA hardware, physical, or NIC address
         - first 3b/24-bits: Organizationally Unique Identifier (OUI) which denotes manufacturer
         - last 3b/24-bits: unique to that interface
-      - ARP, switches and bridges operates at layer 2
+      - ARP, switches and bridges operate at layer 2
       - Bridges: connect two physical network segments together
       - Switches: layer 2 switches interconnect multiple devices, forwarding data to intended recipient based on MAC address
-      - Logical Link Control (LLC) is one of two sublayers that make up the Data Link Layer
+      - Logical Link Control (LLC) is one of two sublayers that make up the Data Link Layer; provides flow and error control, and interfaces to layer 3
       - Protocols:
         - 802.1x: used for authenticating network devices to a network (network access control)
-        - ARP: Address Resolution Protocol - translates an IP address to a MAC address
+        - ARP: Address Resolution Protocol - translates a (layer 3) IP address to a MAC address
+        - L2F: Layer 2 Forwarding - (Cisco) layer 2 tunneling protocol used to establish VPN connections; doesn't provide encryption
+        - L2TP: Layer 2 tunneling protocol - used to establish VPN connections
+        - PPTP: Point-to-Point Tunneling Protocol - used for creating VPNs; does not include encryption/authentication and considered obsolete
+        - PPP: Point-to-Point Protocol - encapsulates IP traffic so that it can be transmitted over analog connections and provides authentication, encryption, and compression; replaced SLIP; authentication protocols include Password Authentication Protocol (PAP), Challenge-Handshake Authentication protocol (CHAP), and Extensible Authentication Protocol (EAP)
         - RARP: Reverse Address Resolution Protocol - translates a MAC address to an IP address
-        - PPTP: Point-to-Point Tunneling Protocol - used for created tunnels
-        - PPP: Point-to-Point Protocol - encapsulates IP traffic so that it can be transmitted over analog connections and provides authentication, encryption, and compression
 
     - Physical Layer (1)
       - Converts a frame into bits for transmission/receiving over the physical connection medium
@@ -276,13 +292,13 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - TCP/IP is the name of IETF's four-layer networking model, and its protocol stack; the four layers are: link (physical), internet (network-to-network), transport (channels for connection/connectionless data exchange) and application (where apps make use of network services)
     - IP provides the foundation for other protocols to be able to communicate; IP itself is a connectionless protocol
     - IPv4: dominant protocol that operates at layer 3; IP is responsible for addressing packets, using 32-bit addresses
-    - IPv6: modernization of IPv4, uses 128-bit (16-byte) addresses, supporting 2^128 total addresses
+    - IPv6: modernization of IPv4, uses 128-bit (16-byte) addresses, supporting 2^128 total addresses; makes IPSec mandatory
     - TCP or UDP is used to communicate over IP
     - **IP Subnetting**: method used to divide a large network into smaller, manageable pieces, called subnets
       - IP addresses: like a street address that identifies a device on a network in two parts:
         - network: identifies the "neighborhood" or network of the device
         - host: specifies the device (or "house") in that neighborhood
-      - subnet masK: tool to divide the IP address into its network and host parts; e.g. 192.168.1.15 with subnet mast of 255.255.255.0 tells us that 192.168.1 is the network, and 15 is the host or device part
+      - subnet mask: tool to divide the IP address into its network and host parts; e.g. 192.168.1.15 with subnet mast of 255.255.255.0 tells us that 192.168.1 is the network, and 15 is the host or device part
     - **CIDR notation**: a compact way of representing IP addresses and their associated network masks
       - example: 192.168.1.0/24
         - consists of two parts:
@@ -293,6 +309,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
       - other examples:
         - 10.0.0.0/16: where /16 means the first 16 bits are reserved for the network, leaving 16 bits for hosts; allows 2^16 or 65,536 IP addresses, with 65,534 usable addresses
         - 172.16.0.0/12: /12 means 12 bits are for the network, leaving 20 bits for hosts; providing 2^20 = 1,048,576 IP addresses
+    - Network Classes: IPv4 class A network contains 16,777,216 addresses; class B contains 65,534; Class C contains 254
 
     - IPSec provides data authentication, integrity and confidentiality
       - specifically, IPsec provides encryption, access control, nonrepudiation, and message authentication using public key cryptography
@@ -305,8 +322,8 @@ Networking can be one of the more complex exam topics; if you have a networking 
 
 - 4.1.3 Secure protocols
   - **Kerberos**: standards-based network authentication protocol, used in many products (most notably Microsoft Active Directory Domain Services or AD DS)
-    - Kerberos is mostly used on LANs for organization-wide authentication, single sign-on (SSO) and authorization
-  - SSL and TLS: data protection; used for protecting website transactions (e.g. banking, ecommerce)
+    - Kerberos is mostly used on LANs for organization-wide authentication, single sign-on (SSO) and authorization; Kerberos provides three primary functions: accounting, authentication, and auditing
+  - SSL and TLS: data protection; used for protecting website transactions (e.g. banking, e-commerce)
     - SSL and TLS both offer data encryption, integrity and authentication
     - TLS has supplanted SSL (the original protocol, considered legacy/insecure)
     - TLS was initially introduced in 1999 but didn’t gain widespread use until years later
@@ -418,7 +435,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
       - WEP is defined by the original IEEE 802.11 standard
       - WEP uses a predefined shared Rivest Cipher 4 (RC4) secret key for both authentication (SKA) and encryption
       - Shared key is static
-      - WEP is weak from RC4 implementation flaws
+      - WEP is weak from RC4 implementation flaws (short, static IV sent in cleartext, IV is part of encryption key, and no integrity protection)
     - **Wi-Fi Protected Access (WPA)**: a security standard for wireless network computing devices; developed by the Wi-Fi Alliance to provide better data encryption and user authentication than WEP, which was the original Wi-Fi security standard
       - **Temporal Key Integrity Protocol (TKIP)**: an encryption protocol that was part of the WPA protocol; TKIP was designed to replace the insecure WEP encryption protocol,TKIP is no longer considered secure and has been deprecated
     - **Wi-Fi Protected Access II (WPA2)**:
@@ -433,6 +450,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
       - WPA3 **simultaneous authentication of equals (SAE)**: improves on WPA2's PSK mode by allowing for secure authentication between clients and the wireless network without enterprise user accounts; SAE performs a zero-knowledge proof process known as **Dragonfly Key Exchange** (which is a derivative of Diffie-Hellman); SAE uses a preset password and the MAC addresses of the client and AP to perform authentication and session key exchange
     - 802.1X / EAP
       - IEEE 802.1X defines the use of encapsulated EAP to support a wide range of authentication options for LAN connections; the 802.1x standard is named "Port-Based Network Access Control"
+      - 802.1X is a mechanism to proxy authentication from the local device to a different dedicated auth service within the network
       - WPA, WPA2, and WPA3 support the enterprise (ENT) authentication known as 802.1X/EAP (requires user accounts)
       - Extensible Authentication Protocol (EAP) is not a specific mechanism of authentication, rather an authentication framework
       - 802.1X/EAP is a standard port-based network access control that ensures that clients cannot communicate with a resource until proper authentication has taken place

@@ -30,11 +30,13 @@
 - **[Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/)**: a government-wide program that standardizes the security assessment, authorization, and monitoring of cloud services and products; the program was established in 2011 to help the federal government use cloud technologies while protecting federal information
 - **Findings**: results created by the application of an assessment procedure
 - **Functional order of controls**: deter, deny, detect, delay, determine, and decide
-- **Fuzzing**: uses modified inputs to test software performance under unexpected circumstances; mutation fuzzing modifies known inputs to generate synthetic inputs that may trigger unexpected behavior; generational fuzzing develops inputs based on models of expected inputs to perform the same task
+- **Fuzzing**: uses modified inputs to test software performance under unexpected circumstances
+  - Mutation (dumb) fuzzing modifies known inputs to generate synthetic inputs that may trigger unexpected behavior
+  - Generational (intelligent) fuzzing develops inputs based on models of expected inputs to perform the same task
 - **IAM system**: identity and access management system combines lifecycle management and monitoring tools to ensure that identity and authorization are properly handled throughout an org
 - **ITSM**: IT Service Management tools include change management and associated approval tracking
 - **Judgement Sampling**: AKA purposive or authoritative sampling, a non-probability sampling technique where members are chosen only on the basis of the researcher's knowledge and judgement
-- **Misue Case Testing**: testing strategy from a hostile actor's point of view, attempting to lead to integrity failures, malfunctions, or other security or safety compromises
+- **Misuse Case Testing**: testing strategy from a hostile actor's point of view, attempting to lead to integrity failures, malfunctions, or other security or safety compromises
 - **Mutation testing**: mutation testing modifies a program in small ways and then tests that mutant to determine if it behaves as it should or if it fails; technique is used to design and test software through mutation
 - **Plan of Action and Milestones (POA&M)**: a document identifying tasks to be accomplished, including details, resources, milestones, and completion target dates
 - **RUM**: real user monitoring is a passive monitoring technique that records user iteration with an app or system to ensure performance and proper app behavior; often used as a pre-deployment process using the actual user interface
@@ -70,19 +72,20 @@
   - SSAE 18 and ISAE 3402 engagements are commonly referred to as a service organization controls (SOC) audits
   - Three forms of SOC audits:
     - **SOC 1 Engagements**: assess the organization’s controls that might impact the accuracy of financial reporting
-    - **SOC 2 Engagements**: assess the organization’s controls that affect the security (confidentiality, integrity, and availability) and privacy of information stored in a system
+    - **SOC 2 Engagements**: assess the organization’s controls that affect the security and privacy of information stored in a system
+      - SOC 2 focus on 5 trust principles: Security, Availability, Confidentiality, Processing Integrity, and Privacy
       - SOC 2 audit results are confidential and are usually only shared outside an org under an NDA
     - **SOC 3 Engagements**: assess the organization’s controls that affect the security (confidentiality, integrity, and availability) and privacy information stored in a system
-      - however, SOC3 audit results are intended for public disclosure
+      - however, SOC3 audit results are intended for public disclosure; they are regarded primarily as marketing tools
   - Two types of SOC reports:
     - **Type I Reports**: provide the auditor’s opinion on the description provided by management and the suitability of the design of the controls
       - type I reports cover only a specific point in time, rather than an extended period
       - think of Type I report as more of a documentation review
     - **Type II Reports**: go further and also provide the auditor’s opinion on the operating effectiveness of the controls
       - the auditor actually confirms the controls are functioning properly
-      - Type II reports also cover an extended period of time, at least 6 months
+      - Type II reports also cover an extended period of time, at least 6 months, typically a year
       - think of Type II report as similar to a traditional audit; the auditor is checking the paperwork, and verifying the controls are functioning properly
-    - Type II reports are considered much more reliable than Type I reports (Type I reports simply take the service orgs word that the controls are implemented as described)
+    - Type II reports are considered much more reliable than Type I reports (Type I reports simply take the service orgs word that the controls are implemented as described); security pros want SOC2, Type II reports
 
 ## [6.2](#62-conduct-security-control-testing-osg-9-chpt-15) Conduct security control testing (OSG-9 Chpt 15)
 
@@ -98,7 +101,7 @@
   - The goal of a vulnerability assessment is to identify elements in an environment that are not adequately protected -- and not necessarily from a technical perspective; you can also assess the vulnerability of physical security or the external reliance on power, for instance
     - can include personnel testing, physical testing, system and network testing, and other facilities tests
   - Vulnerability assessments are some of the most important testing tools in the information security professional’s toolkit
-  - **Security Content Automation Protocol (SCAP)**: provides a common framework for discussion and facilitation of automation of interactions between different security systems (sponsored by NIST)
+  - **Security Content Automation Protocol (SCAP)**: provides a common framework and suite of specifications that standardize how software flaws and security configuration is communicated both to machines and humans; provides discussion and facilitation of automation of interactions between different security systems (see [NIST 800-126](https://csrc.nist.gov/pubs/sp/800/126/r3/final))
     - SCAP components related to vulnerability assessments:
       - **Common Vulnerabilities and Exposures (CVE)**: provides a naming system for describing security vulnerabilities
       - **Common Vulnerability Scoring Systems (CVSS)**: provides a standardized scoring system for describing the severity of security vulnerabilities; it includes metrics and calc tools for exploitability, impact, how mature exploit code is, and how vulnerabilities can be remediated, and a means to score vulns against users' unique requirements
@@ -117,7 +120,17 @@
 
 - 6.2.2 Penetration testing
   - Penetration tests goes beyond vulnerability testing techniques because it actually attempts to exploit systems
-  - Vulnerability management programs take the results of the tests as inputs and then implement a risk management process for identified vulnerabilities
+  - **Vulnerability management**: the cyclical process of identifying, classifying, prioritizing, and mitigating vulnerabilities; programs take the results of the tests as inputs and then implement a risk management process for identified vulnerabilities, with the following steps:
+    - Asset inventory
+    - Identifying the value of each asset
+    - Identifying the vulnerabilities for each asset
+    - Ongoing review and assessment
+  - Testing stages from the OSG include:
+    - Reconnaissance: passively gather publicly available info
+    - Enumeration: active network discovery (i.e. find target IP address and ports)
+    - Vulnerability analysis: identify potential vulns
+    - Execution: attempt to exploit vulns
+    - Document findings: report on findings
   - NIST defines the penetration testing process as consisting of four phases:
     - **planning**: includes agreement on the scope of the test and the rules of engagement
       - ensures that both the testing team and management are in agreement about the nature of the test and that it is explicitly authorized
@@ -130,9 +143,10 @@
     - **reporting**: summarizes the results of the pen testing and makes recommendations for improvements to system security
   - tests are normally categorized into three groups:
     - **white-box penetration test**:
+      - AKA "**known environment tests**"
       - white box provides the attackers with **detailed information** about the systems they target
       - this bypasses many of the reconnaissance steps that normally precede attacks, shortening the time of the attack and increasing the likelihood that it will find security flaws
-      - these tests are sometimes called "**known environment**" tests
+      - 
       - in white-box testing, the tester has access to the source code and performs testing from a developer's perspective
     - **gray-box penetration test**:
       - AKA **partial knowledge tests**, these are sometimes chosen to balance the advantages and disadvantages of white- and black-box penetration tests
@@ -140,12 +154,13 @@
       - these tests are sometimes called "**partially known environment**" tests
       - in gray-box testing, the tester evaluates software from a user perspective but has access to the source code
     - **black-box penetration test**:
+      - AKA "**unknown environment tests**"
       - does not provide attackers with any information prior to the attack
       - this simulates an external attacker trying to gain access to information about the business and technical environment before engaging in an attack
-      - these tests are sometimes called "**unknown environment**" tests
-
+  - Differences between vulnerability assessments and pen tests: vuln assessments are usually more automated, can be performed quickly, and no attempt to made to exploit vulns
 - 6.2.3 Log reviews
   - **Security Information and Event Management (SIEM)**: packages that collect information using the syslog functionality present in many devices, operating systems, and applications
+  - SIEM capabilities: aggregation, normalization, correlation, secure storage, analysis, reporting
   - Log data is recorded in databases; common logs include:
     - security, application, firewall, proxy, and change management logs
   - Log files should be protected by centrally storing them and using permissions to restrict access, and archived logs should be set to read-only to prevent modification
@@ -248,20 +263,21 @@
     - act: formally do the management review
 
 - 6.3.3 Key performance and risk indicators
-  - **Key Performance Indicators (KPIs)**: measures that provide significance of showing the performance of an ISMS compared to stated goals
-  - Choose the factors that can show the state of security
-  - Define baselines for some (or better yet all) of the factors
-  - Develop a plan for periodically capturing factor values (use automation!)
-  - Analyze and interpret the data and report the results
-  - Key metrics or KPIs that should be monitored by security managers may vary from org to org, but could include:
-    - number of open vulns
-    - time to resolve vulns
-    - vulnerability/defect recurrence
-    - number of compromised accounts
-    - number of software flaws detected in pre-production scanning
-    - repeat audit findings
-    - user attempts to visit known malicious sites
-  - Develop a dashboard of metrics and track them
+  - **Key Performance Indicators (KPIs)**: measures that provide significance of showing the performance of an ISMS compared to stated goals; KPIs are backward looking
+    - Choose the factors that can show the state of security
+    - Define baselines for some (or better yet all) of the factors
+    - Develop a plan for periodically capturing factor values (use automation!)
+    - Analyze and interpret the data and report the results
+    - Key metrics or KPIs that should be monitored by security managers may vary from org to org, but could include:
+      - number of open vulns
+      - time to resolve vulns
+      - vulnerability/defect recurrence
+      - number of compromised accounts
+      - number of software flaws detected in pre-production scanning
+      - repeat audit findings
+      - user attempts to visit known malicious sites
+    - Develop a dashboard of metrics and track them
+  - **Key Risk Indicators (KRIs)**: indicate the level of exposure to operational risk; they help monitor potential future shifts in risk conditions or emerging risks; KRIs are forward-looking
 
 - 6.3.4 Backup verification data
   - Managers should periodically inspect the results of backups to verify that the process functions effectively and meets the organization’s data protection needs

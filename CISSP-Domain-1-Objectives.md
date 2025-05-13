@@ -72,25 +72,25 @@
     - Nonrepudiation is made possible through identification, authentication, authorization, accountability, and auditing
 
   - **AAA Services**:
-    - Identification: claiming to be an identity when attempting to access a secured area or system
-    - Authentication: proving that you are that claimed identity via one or more factors (something you have, something you know, something you are)
+    - Identification: assertion of a user's identity; claiming to be an identity when attempting to access a secured area or system
+    - Authentication: proving that you are that claimed identity via one or more factors of knowledge, ownership, or characteristic (something you know, something you have, something you are)
     - Authorization: defining the needed resources, permissions (i.e. allow/grant and/or deny) to a resource, and object access for a specific identity or subject
-    - Auditing: recording a log of the events and activities related to the system and subjects
-    - Accounting: (aka accountability) access control process which records info about attempts by all entities to access resources; reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
+    - Accountability (aka accounting, aka principle of access control): proper identification, authentication, and authorization that is logged and monitored; access control process which records info about attempts by all entities to access resources; reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
+  - Auditing: recording a log of the events and activities related to the system and subjects
 
-[1.3](#1.3) Evaluate and apply security governance principles (OSG-9 Chpt 1)
+## [1.3](#13-evaluate-and-apply-security-governance-principles-osg-9-chpt-1) Evaluate and apply security governance principles (OSG-9 Chpt 1)
 
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies  align with business goals, and that they are comprehensive and consistent across the organization
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
   - There are numerous security frameworks and governance guidelines providing a structured approach to security governance:
     - **[ISO/IEC 27001](https://www.iso.org/standard/27001)**: a widely recognized international standard for information security management systems (ISMS); it provides a risk-based approach, and emphasizes continual improvement of the ISMS
-    - **[NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)**: built around six core functions: govern, identify, protect, detect, respond, and recover to provide guidance to industry, government agencies, and other orgs to manage cybersecurity risks
+    - **[NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)**: built around six core functions: govern, identify, protect, detect, respond, and recover; provides guidance to industry, government agencies, and other orgs to improve their ability to prevent, detect, and respond to cyber attacks, and manage cybersecurity risks
     - **[SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)**: a comprehensive set or catalog of security and privacy controls across multiple security domains, covering areas such as risk management, access control, incident response, and system maintenance
     - **[SP 800-100](https://csrc.nist.gov/pubs/sp/800/100/r1/iprd)**: titled Information Security Handbook: a guide for managers, NIST hasn't released an update since 2006, although they appear to have an update in progress
     - **[COBIT (Control Objectives for Information and Related Technologies)](https://www.isaca.org/resources/cobit#1)**: COBIT is a framework created by ISACA that focuses on enterprise IT, aligning IT and business strategies, and providing a comprehensive framework for managing risks (see additional below)
     - **[CIS Critical Security Controls](https://www.cisecurity.org/controls)**: the CIS (Center for Internet Security) Critical Security Controls provides a prioritize set of actions to defend against threats; it focuses on practical steps to reduce the attack surface, like implementing secure configurations, managing admin privileges, and monitoring logs
     - **ITIL (Information Technology Infrastructure Library)**: ITIL is a set of practices for IT service management (ITSM) that focuses on aligning IT services with business needs; it includes elements of security governance, particularly in managing security incidents, changes, and service continuity, and is often integrated with other frameworks like ISO 27001
-- **The security function**: the aspect of operating a business that focuses on the task of evaluating and improving security over time 
+- **The security function**: the aspect of operating a business that focuses on the task of evaluating and improving security over time
   - To manage security, an org must implement proper and sufficient security governance
   - The act of performing a risk assessment to drive the security policy is the clearest and most direct example of management of the security function
 - **Third-party governance**: external entity oversight that may be mandated by law, regulation, industry standards, contractual obligation, or licensing requirement; outside investigator or auditors are often involved
@@ -108,7 +108,7 @@
   - Security governance should address every aspect of an org, including organizational processes of acquisitions, divestitures, and governance
   - Be aware of the risks in acquisitions (since the state of the IT environment to be integrated is unknown, due diligence is key) and divestitures (how to split the IT infrastructure and what to do with identities and credentials)
   - Understand the value of governance committees (vendor governance, project governance, architecture governance, etc.)
-  - Executives, managers and appointed individuals meet to review architecture, projects and incidents (security or otherwise),and provide approvals for new strategies or directions 
+  - Executives, managers and appointed individuals meet to review architecture, projects and incidents (security or otherwise),and provide approvals for new strategies or directions
     - The goal is a fresh set of eyes, often eyes that are not purely focused on information security
   - When evaluating a third-party for your security integration, consider the following:
     - on-site assessment
@@ -134,7 +134,11 @@
           - governance distinct from management
           - tailored to enterprise needs
           - end-to-end governance system
-    - ISO 27000 series (27000, 27001, 27002, etc.).
+    - ISO 27000 series (27000, 27001, 27002, etc.)
+      - **ISO 27001:2022**: provides best practice recommendations for an Information Security Management System (ISMS)
+      - **ISO 27002:2022**: provides detailed implementation guidance for controls in ISO 27001
+      - **ISO 27017:2015**: provides guidelines for information security controls applicable to the provision and use of cloud services
+      - **ISO 27018:2019**: commonly accepted controls and guidelines for protecting PII in the cloud (concent, control, transparency, communication, independent, yearly audit)
     - NIST **CyberSecurity Framework (CSF)**
       - designed for commercial orgs and critical infrastructure, CSF 1.1 consists of five functions:
         - identify
@@ -149,6 +153,7 @@
         - detect
         - respond
         - recover
+    - Committee of Sponsoring Organizations of the Treadway Commission (COSO)**: framework that helps orgs reduce financial fraud by establishing, assessing, and enhancing their internal controls
 - 1.3.5 Due care/due diligence
   - **Due diligence**: establishing a plan, policy, and process to protect the interests of the organization; due diligence is knowing what should be done and planning for it; understanding your security governance principles (policies and procedures) and the risks to your organization; actions taken by a vendor to demonstrate or provide due care
     - Due diligence often involves:
@@ -171,7 +176,7 @@
     - **Administrative law**: used by government agencies to effectively carry out their day-to-day business
   - **Compliance**: Organizations may find themselves subject to a wide variety of laws, and regulations imposed by regulatory agencies or contractual obligation
     - **Payment Card Industry Data Security Standard (PCI DSS)** - governs the security of credit card information and is enforced through the terms of a merchant agreement between a business that accepts CC payments, and the bank that processes the business' transactions
-    - **Sarbanes-Oxley (SOX)**: governs publicly traded corps; financial systems may be audited to ensure security controls are sufficient to ensure compliance with SOX
+    - **Sarbanes-Oxley (SOX)**: governs publicly traded corps; financial systems may be audited to ensure security controls are sufficient to ensure compliance with SOX; requires top management to individually certify the accuracy of financial info
       - violations include criminal penalties
     - **Gramm-Leach-Bliley Act (GLBA)** - affects banks, insurance companies, and credit providers; included a number of limitations on the types of information that could be exchanged even among subsidiaries of the same corp, and required financial institutions to provide written privacy policies to all their customers
     - **Health Insurance Portability and Accountability Act (HIPAA)** - privacy and security regulations requiring strict security measures for hospitals, physicians, insurance companies, and other organizations that process or store private medical information about individuals; also clearly defines the rights of individuals who are the subject of medical records and requires organizations that maintain such records to disclose these rights in writing
@@ -191,7 +196,7 @@
     - Accountability
   - **Personal Information Protection and Electronic Documents Act (PIPEDA)**: Canadian law that governs the use of personal information
   - California Consumer Privacy Act (CCPA)
-  - Be familiar with the EU Data Protection Directive
+  - Be familiar with the EU Data Protection Directive (Directive 95/46/EC, now superseded by GDPR)
   - Be familiar with the requirements around healthcare data, credit card data and other PII data as it relates to various countries and their laws and regulations
 
 ## [1.5](#15-understand-legal-and-regulatory-issues-that-pertain-to-information-security-in-a-holistic-context-osg-9-chpt-4) Understand legal and regulatory issues that pertain to information security in a holistic context (OSG-9 Chpt 4)
@@ -205,6 +210,7 @@
     - **Council of Europe Convention on Cybercrime**: a treaty signed by many countries that establishes standards for cybercrime policy
     - Laws about data breaches, including notification requirements
     - In the US, the **Health Information Technology for Economic and Clinical Health (HITECH)** Act requires notification of a data breach in some cases, such as when the personal health information was not protected as required by HIPAA
+      - Under the HITECH Breach Notification Rule, HIPAA-covered entities that experience a data breach must notify affected individuals, the Secretary of Health and Human Services (HHS) and the media of the breach, when more than 500 individuals are affected
     - GLBA (Gramm-Leach-Bliley Act) applies to insurance and financial orgs, requiring notification to federal regulators, law enforcement agencies and customers when a data breach occurs
     - Certain states also impose their own requirements concerning data breaches
     - the EU and other countries have their own requirements, for instance, the GDPR has very strict data breach notification requirements: A data breach must be reported to the competent supervisory authority within 72 hours of its discovery
@@ -227,10 +233,11 @@
   - Also be aware of applicable laws where data is stored and systems are used
   - **International Traffic in Arms Regulations (ITAR)**: a US regulation that was built to ensure control over any export of items such as missiles, rockets, bombs, or anything else existing in the United States Munitions List (USML)
   - **Export Administration Regulations (EAR)**: EAR predominantly focuses on commercial use-related items like computers, lasers, marine items, and more; however, it can also include items that may have been designed for commercial use but actually have military applications
+  - **Wassenaar Arrangement**: multinational agreement, voluntary export control
 - 1.5.5 Privacy
-  - Many laws include privacy protections for personal data 
+  - Many laws include privacy protections for personal data
     - The EU’s GDPR has strong privacy rules that apply to any org anywhere that stores or processes the personal data of EU residents; these individuals must be told how their data is collected and used, and they must be able to opt out
-  - The privacy guidelines of the **Organization for Economic Co-operation and Development (OECD)** require orgs to avoid unjustified obstacles to trans-border data flow, set limits to personal data collection, protect personal data with reasonable security and more
+  - The privacy guidelines of the **Organization for Economic Co-operation and Development (OECD)** 8 best practices privacy principles: collection limitation, data quality, purpose specification, use limitation, security safeguards, openness, individual participation, and accountability; require orgs to avoid unjustified obstacles to trans-border data flow, set limits to personal data collection, protect personal data with reasonable security and more
   - Fourth Amendment to the US Constitution: the right of the people to be secure in their persons, houses, papers, effects against unreasonable search and seizure
   - **Electronic Communication Privacy Act (ECPA)**: as amended, protects wire, oral, and electronic communications while those communications are being made, are in transit, and when they are stored on computers; makes it a crime to invade electronic privacy of an individual, and it broadened the Federal Wiretap Act
   - HIPAA: see above
@@ -352,9 +359,9 @@
       - deciding which systems and services you need to get things running again (think foundational IT services such as the network and directory, which many other systems rely on)
       - and prioritize the order in which critical systems and services are recovered or brought back online
     - As part of the BIA, establish:
-      - **recovery time objectives (RTO)**: how long it takes to recover
-      - **recovery point objectives (RPO)**: the maximum tolerable data loss
-      - **maximum tolerable downtime (MTD)**: (AKA maximum allowable downtime or MAD) how long an org can survive an interruption of critical functions
+      - **recovery time objectives (RTO)**: how long it takes to recover; maximum tolerable time to recover systems to a defined service level
+      - **recovery point objectives (RPO)**: the maximum tolerable data loss measured in time
+      - **maximum tolerable downtime (MTD) or maximum allowable downtime (MAD)**: the length of time an org can suffer the loss of its critical path or critical functions before ceasing to be a viable enterprise; how long an org can survive an interruption of critical functions
       - along with the costs of downtime and recovery
   - **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that need to be protected against interruption
     - The next phase of BCP development, continuity planning, focuses on the development and implementation of a continuity strategy to minimize the impact realized risks might have on protected assets
@@ -473,21 +480,26 @@
       - then, logical and technical controls provide protection against logical attacks and exploits
       - then, physical controls provide protection against real-world physical attacks against facilities and devices
 - 1.10.5 Applicable types of controls (e.g., preventive, detective, corrective)
-  - **Administrative**: the policies and procedures defined by an org's security policy and other regulations or requirements
-  - **Physical**: security mechanisms focused on providing protection to the facility and real world objects
-  - **Preventive**: a preventive or preventative control is deployed to thwart or stop unwanted or unauthorized activity from occurring
-  - **Deterrent**: a deterrent control is deployed to discourage security policy violations; deterrent and preventative controls are similar, but deterrent controls often depend on individuals being convinced not to take an unwanted action
-  - **Detective**: a detective control is deployed to discover or detect unwanted or unauthorized activity; detective controls operate after the fact
-  - **Compensating**: a compensating control is deployed to provide various options to other existing controls, to aid in enforcement and support of security policies
-    - they can be any controls used in addition to, or in place of, another control
-    - they can be a means to improve the effectiveness of a primary control or as the alternative or failover option in the event of a primary control failure
-  - **Corrective**: a corrective control modifies the environment to return systems to normal after an unwanted or unauthorized activity as occurred; it attempts to correct any problems resulting from a security incident
-  - **Recovery**: An extension of corrective controls but have more advanced or complex abilities; a recovery control attempts to repair or restore resources, functions, and capabilities after a security policy violation
+  - Three ways to implement mitigating controls:
+    - **Administrative**: the policies and procedures defined by an org's security policy and other regulations or requirements
+    - **Technical / Logical**: examples include firewalls, automated backups, encryption
+    - **Physical**: security mechanisms focused on providing protection to the facility and real world objects
+  - Safeguards:
+    - **Preventive**: a preventive or preventative control is deployed to thwart or stop unwanted or unauthorized activity from occurring
+    - **Deterrent**: a deterrent control is deployed to discourage security policy violations; deterrent and preventative controls are similar, but deterrent controls often depend on individuals being convinced not to take an unwanted action
+    - **Directive**: A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies
+  - Countermeasures:
+    - **Detective**: a detective control is deployed to discover or detect unwanted or unauthorized activity; detective controls operate after the fact
+    - **Corrective**: a corrective control modifies the environment to return systems to normal after an unwanted or unauthorized activity as occurred; it attempts to correct any problems resulting from a security incident
+    - **Recovery**: An extension of corrective controls but have more advanced or complex abilities; a recovery control attempts to repair or restore resources, functions, and capabilities after a security policy violation
     - recovery controls typically address more significant damaging events compared to corrective controls, especially when security violations may have occurred
-  - **Directive**: A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies
+    - **Compensating**: a compensating control is deployed to provide various options to other existing controls, to aid in enforcement and support of security policies
+      - they can be any controls used in addition to, or in place of, another control
+      - they can be a means to improve the effectiveness of a primary control or as the alternative or failover option in the event of a primary control failure
+  
 - 1.10.6 Control assessments (security and privacy)
   - Periodically assess security and privacy controls: what’s working, what isn’t
-    - As part of this assessment, the existing documents should be thoroughly reviewed, and some of the controls tested randomly 
+    - As part of this assessment, the existing documents should be thoroughly reviewed, and some of the controls tested randomly
     - A report is typically produced to show the outcomes and enable the org to remediate deficiencies 
     - Often, security and privacy control assessment are performed and/or validated by different teams, with the privacy team handling the privacy aspects
 - 1.10.7 Monitoring and measurement
@@ -526,7 +538,7 @@
 - 1.10.10 Risk frameworks
   - A risk framework is a guide or recipe for how risk is to be accessed, resolved, and monitored
   - NIST established the **Risk Management Framework** (RMF) and the **Cybersecurity Framework** (CSF): the CSF is a set of guidelines for mitigating organizational cybersecurity risks, based on existing standards, guidelines, and practices
-  - The RMF is intended as a risk management process to identify and respond to threats, and is defined in three core, interrelated Special Publications: 
+  - The RMF is intended as a risk management process to identify and respond to threats, and is defined in three core, interrelated Special Publications:
     - SP 800-37 Rev 2, Risk Management Framework for Information Systems and Organizations
     - SP 800-39, Managing Information Security Risk
     - [SP 800-30 Rev 1, Guide for Conducting Risk Assessments](https://csrc.nist.gov/pubs/sp/800/30/r1/final) outlines four primary steps to conduct a risk assessment

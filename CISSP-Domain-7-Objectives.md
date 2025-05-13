@@ -50,7 +50,7 @@
   - TCB is a term that is usually associated with security kernels and the reference monitor
   - a trusted base enforces the security policy
   - a security perimeter is the imaginary boundary that separates the TCB from the rest of the system; TCB components communicate with non-TCB components using trusted paths
-  - the reference monitor is the logical part of the TCB that confirms whether a subject has the right to use a resource prior to granting access
+  - **Reference Monitor Concept (RMC)**: the logical part of the TCB that confirms whether a subject has the right to use a resource prior to granting access; based on three principles: Complete Mediation (all access must be validated by the Reference Monitor), Verifiability (the correct operation of the Reference monitor can be analyzed and verified), and Isolation (the Reference Monitor must be protected from unauthorized modification or tampering)
   - the security kernel is the collection of the TCB components that implement the functionality of the reference monitor
 - **Tuple**: tuple usually refers to a collection of values that represent specific attributes of a network connection or packet; these values are used to uniquely identify and manage network flows, as part of a state table or rule set in a firewall; as an example, a 5-tuple is as a bundle of five values that identify a specific connection or network session, which might include the sourced IP address, source port numbers, destination IP address, destination port number, and the specific protocol in use (e.g. TCP UDP)
 - **Vendor Management System (VMS)**: software that assists with the management and procurement of staffing services, hardware, software, and other products and services
@@ -163,9 +163,9 @@
     - written documents: checks, printed contracts, handwritten letters/notes
     - computer systems: components, local/portable storage, memory etc
     - visual/audio: visual and audio evidence pertinent to a security investigation could include photographs, video, taped recordings, and surveillance footage from security cameras
-- Several investigative techniques can be used when conducting analysis:
-  - media analysis: examining the bits on a hard drive that are intact despite not having an index
-  - software analysis: focuses on an applications and malware, determining how it works and what it's trying to do, with a goal of attribution
+  - Several investigative techniques can be used when conducting analysis:
+    - media analysis: examining the bits on a hard drive that are intact despite not having an index
+    - software analysis: focuses on an applications and malware, determining how it works and what it's trying to do, with a goal of attribution
 
 - 7.1.4 Digital forensics tools, tactics, and procedures
   - Digital forensics: the scientific examination and analysis of data from storage media so that the information can be used as part of an investigation to identify the culprit or the root cause of an incident
@@ -256,7 +256,7 @@
     - evaluate the effectiveness of the attack
   - Orgs have adapted this model for cybersecurity: Lockheed Martin created the **Cyber Kill Chain** framework including seven ordered stages of an attack:
     - **reconnaissance**: attackers gather info on the target
-    - **weaponize**: attackers identify an exploit that the target is vulnerable to, along with methods to send the exploit
+    - **weaponization**: attackers identify an exploit that the target is vulnerable to, along with methods to send the exploit
     - **delivery**: attackers send the weapon to the target via phishing attacks, malicious email attachments, compromised websites, or other common social engineering methods
     - **exploitation**: the weapon exploits a vulnerability on the target system
     - **installation**: code that exploits the vulnerability then installs malware with a backdoor allowing attacker remote access
@@ -522,6 +522,7 @@
     - See NIST SP 800-94
 - 7.7.3 Whitelisting/blacklisting
   - Method used to control which applications run and which apps can’t is via allow list, and deny list (AKA whitelists and blacklists)
+  - Application whitelisting or allow listing is a security option prohibiting unauthorized software from executing; AKA deny by default or implicit deny
   - **Allow list**: identifies a list of apps authorized to run on a system and blocks all other apps
   - **Deny list**: identifies a list of apps that are not authorized to run on a system
   - Allow and deny lists are used for applications to help prevent malware infections
@@ -775,7 +776,7 @@
   - Ensure testing, training, and exercises
   - Maintenance
 
-- Four key measurements for BCP and DRP procedures:
+- As part of the Business Impact Analysis (BIA), four key measurements for BCP and DRP procedures:
   - **RPO (recovery point objective)**: max tolerable data loss measured in time
   - **RTO (recovery time objective)**: max tolerable time to recover systems to a defined service level; specifies the amount of time that business continuity planners find acceptable for the restoration of a service after a disaster
   - **WRT (work recovery time)**: max time available to verify system and data integrity as part of the resumption of normal ops
@@ -865,7 +866,7 @@
   - **Full-interruption tests**: operate like parallel tests, but involve actually shutting down operations at the primary site and shifting them to the recovery site
     - these tests involve a significant risk (shutting down the primary site, transfer recovery ops, followed by the reverse) and therefore are extremely difficult to arrange (management resistance to these tests are likely)
 
-[7.13](#7.13) Participate in Business Continuity (BC) planning and exercises (OSG-9 Chpt 3)
+## [7.13](#713-participate-in-business-continuity-bc-planning-and-exercises-osg-9-chpt-3) Participate in Business Continuity (BC) planning and exercises (OSG-9 Chpt 3)
 
 - Business continuity planning addresses how to keep an org in business after a major disruption takes place
   - It's important to note that the scope is much broader than that of DR
@@ -877,7 +878,7 @@
   - Training the staff
   - Testing, exercising, and maintaining the plans and solutions
 
-[7.14](#7.14) Implement and manage physical security (OSG-9 Chpt 10)
+## [7.14](#714-implement-and-manage-physical-security-osg-9-chpt-10) Implement and manage physical security (OSG-9 Chpt 10)
 
 - Physical access control mechanisms deployed to control, monitor and manage access to a facility
   - Sections, divisions, or areas within a site should be clearly designated as public, private, or restricted with appropriate signage
@@ -905,7 +906,8 @@
     - **Visitor logs**: manual (or automated) list of non-employee entries or access to a facility/location
       - physical access logs can establish context for interpretation of logical logs
   - Locks: designed to prevent access without proper authorization; a lock is a crude form of an identification and authorization mechanism
-[7.15](#7.15) Address personnel safety and security concerns (OSG-9 Chpt 16)
+
+## [7.15](#715-address-personnel-safety-and-security-concerns-osg-9-chpt-16) Address personnel safety and security concerns (OSG-9 Chpt 16)
 
 - 7.15.1 Travel
   - Training personnel on safe practices while traveling can increase their safety and prevent security incidents:

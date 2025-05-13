@@ -1,7 +1,5 @@
 # [Domain-8](#domain-8-software-development-security) **Software Development Security**
 
-## [8.1](#81-understand-and-integrate-security-in-the-software-develoment-life-cycle-sdlc-osg-9-chpt-20) Understand and integrate security in the Software Develoment Life Cycle (SDLC) (OSG-9 Chpt 20)
-
 - Domain 8 is focused on helping security pros understand and apply software or application security
   - Applications can present significant risks, and security pros must understand and balance these risks with business requirements and implement appropriate risk mitigation; if a company develops custom software, the custom solution can present additional, unique risks and vulns
     - orgs with custom solutions should be on the lookout for logic weaknesses (e.g. buffer overflow vulns), and guard against malicious changes (e.g. backdoors) that can leave the system vulnerable to attacks
@@ -52,6 +50,7 @@
 - **XML**: Extensible Markup Language is a set of HTML extensions providing for data storage and transport in networked environments; frequently used to integrate web pages with databases; XML is often embedded in the HTML files making up elements of a web page
 - **Functional requirements**: describes a finite task or process the system must perform; often directly traceable to specific elements in the final system's design and construction
 - **Hierarchical database model**: data elements and records are arranged in tree-like parent-child structures
+- **Instance**: in object-oriented programming, an "instance of a class" refers to a specific object created from that class, which is a blueprint or template defining the characteristics and behaviors of objects
 - **Integrated Product and Process Development (IPPD)**: management technique that simultaneously integrates essential acquisition activities through the use of multidisciplinary teams to optimize the design, manufacturing, and supportability processes
 - **Integrated Product Team**: team of stakeholders and individuals that possess different skills and who work together to achieve a defined process or product
 - **Infrastructure as Code (IaC)**: instead of viewing hardware config as a manual, direct hands-on, one-on-one admin hassle, it is viewed as just another collection of elements to be managed in the same way that software and code are managed under DevSecOps
@@ -94,6 +93,8 @@
 - **TOCTOU attack**: time of check vs time of use (TOCTOU) attack takes advantage of the time delay between a security check (such as authentication or authorization) being performed and actual use of the asset
 - **Trapdoor/backdoor**: AKA maintenance hook; hidden mechanism that bypasses access control measures; an entry point into an architecture or system that is inserted in software by devs during development to provide a method of gaining access for modification/support; can also be inserted by an attacker, bypassing access control measures designed to prevent unauthorized software changes
 - **UAT**: User Acceptance Testing typically the last phase of the testing process; verifies that the solution developed meets user requirements, and validates against use cases
+
+## [8.1](#81-understand-and-integrate-security-in-the-software-develoment-life-cycle-sdlc-osg-9-chpt-20) Understand and integrate security in the Software Develoment Life Cycle (SDLC) (OSG-9 Chpt 20)
 
 - 8.1.1 Development methodologies (e.g. Agile, Waterfall, DevOps, DevSecOps)
   - **Agile methodology**: a project management approach to development that involves breaking the project into phases and emphasizes continuous collaboration and improvement; teams follow a cycle of planning, executing, and evaluating
@@ -449,4 +450,4 @@
   - **Software-defined security (SDS or SDSec)**: a security model in which security functions such as firewalling, IDS/IPS, and network segmentation are implemented in software within an SDN environment
     - one of the advantages of this approach is that sensors (for systems like IDS/IPS) can be dynamically repositioned depending on the threat
     - SDS provides a decoupling from physical devices, because it abstracts security functions into software that can run on any compatible physical or virtual infrastructure, critical for supporting cloud services dynamic scaling and virtualized data centers
-- DevSecOps supports the concept of software-defined security, where security controls are actively managed into the CI/CD pipeline
+  - DevSecOps supports the concept of software-defined security, where security controls are actively managed into the CI/CD pipeline

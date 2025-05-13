@@ -2,41 +2,69 @@
 
 The identity and Access Management (IAM) domain focuses on issues related to granting and revoking privileges to access data or perform actions on systems
 
-- Assets include information, systems, devices, facilities, and applications
-- Organizations use both physical and logical access controls to protect them
-- **Identification**: the process of a subject claiming, or professing, an identity; subjects claim an identity through identification
+- Assets include information, systems, devices, facilities, and applications, and organizations use both physical and logical access controls to protect them
+- **Access control**: collection of mechanisms working together to protect organizational assets, allowing controlled access to authorized subjects, allowing management to specify which users can access what resources, and what operations they can perform; providing individual accountability
+- **Access control principles**: need to know, least privilege, and separation of duties
+- **Access control services**: (AKA AAA services) identification, authentication, authorization, and accountability
 - **Authentication**: verifies the subject’s identity by comparing one or more authentication factors against a database holding authentication info for users; subjects prove their identity by providing authentication credentials
-- **Accountability**: after authenticating subjects, systems authorize access to objects based on their proven identity; auditing logs and audit trails record events, including the identity of the subject performing the action; the combination of effective identification, authentication, and auditing provides accountability
-- The three primary authentication factors are something you know, something you have, and something you are
+- **Authenticator Assurance Levels (AAL)**:  a measure of the robustness of the authentication process; AAL levels are ranked from AAL1 (least robust) to AAL3 (most robust), and described in [NIST 800-63-3b](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf)
+  - AAL1 (some assurance that the user controls an authenticator about to their account): allows single-factor or multi-factor auth, with less stringent requirements on authenticator types
+  - AAL2 (high confidence): requires MFA, and must be resistant to replay attacks
+  - AAL3 (very high confidence): requires hardware-based MFA mandates verifier impersonation and phishing resistance
+- **Accountability**: after authenticating subjects, systems authorize access to objects based on their proven identity; auditing logs and audit trails record events, including the identity of the subject performing the action; the combination of effective identification, authentication, and auditing provides accountability; note that the **principle of access control** is accountability
+- The three primary authentication factors are authentication by knowledge (something you know), authentication by ownership (something you have), and authentication by characteristic (something you are)
   - Something you know: Type 1 authentication (passwords, pass phrase, PIN etc)
   - Something you have: Type 2 authentication (ID, passport, smart card, token, cookie on PC etc)
-  - Something you are: Type 3 authentication, includes Biometrics (fingerprint, iris or retinal scan, facial geometry etc.)
+  - Something you are: Type 3 authentication, includes biometrics (fingerprint, iris or retinal scan, facial geometry etc.)
   - Somewhere you are: Type 4 authentication (IP/MAC address)
   - Something you do: Type 5 authentication (signature, pattern unlock)
 - Single sign-on (SSO) technologies allow users to authenticate once and access any resources in a network or the cloud, without authenticating again
-- Federated Identity Management (FIM) systems link user identities in one system with other systems to implement SSO; FIM systems are implemented on-premise (providing the most control), via third-party cloud services, or as hybrid systems
+- **Federated Identity Management (FIM)**: (AKA federated access) one-time authentication to gain access to multiple systems, including those associated with other organizations; FIM systems link user identities in one system with other systems to implement SSO; FIM systems are implemented on-premise (providing the most control), via third-party cloud services, or as hybrid systems; using your Microsoft account to authenticate to a third-party SaaS is an example of FIM
+  - FIM trust relationships include: principal/user, identity provider (entity that owns the identity and performs the auth), and relying party (AKA service provider)
+  - FIM protocols include SAML, WS-Federation, OpenID (authentication), and OAuth (authorization)
+  - Compare FIM with SSO: user authenticates one time using SSO to access multiple systems in one org; a user authenticates one time using FIM to access multiple systems inside and outside an org because of multiple-entity trust relationships
 - **Access Control System**: ensuring access to assets is authorized and restricted based on business and security requirements
 - **Access Control Token**: based on the parameters like time, date, day etc a token defines access validity to a system
 - **ADFS**: identity access solution that provides client computers (internal or external to your network) with seamless SSO access to protected Internet-facing applications or services, even when the user accounts and applications are located in completely different networks or orgs
+- **Asynchronous token** (authentication by ownership hard/soft token): involves a challenge and response; they are more complicated (and expensive), but also more secure (see synchronous token)
 - **Cache poisoning**: adding content to cache that wasn't an intended element (of say a web page); once poisoned, a legit web doc can call on a cached item, activating the malicious cache
 - **Capability tables**: list privileges assigned to subjects and identify the objects that subjects can access
+- **CAPTCHA**: Completely Automated Public Turing test to tell Computers and Humans Apart is a security measure used to protect against account creation automation and spam & brute-force password decryption attacks
 - **CAS**: Central Authentication Service (an SSO implementation)
 - **Content-dependent control**: Content-dependent access control adds additional criteria beyond identification and authentication: the actual content the subject is attempting to access; all employees of an org may have access to the HR database to view their accrued sick time and vacation time, but should an employee attempt to access the content of the CIO's HR record, access is denied
 - **Context-dependent access control**: applies additional context before granting access, with time as a commonly used context
 - **Crossover Error Rate (CER)**: identifies the accuracy of a biometric method, and is the point at which false acceptance rate (FAR or Type 2) equals the false rejection rate (FRR or Type 1) for a given sensor, in a given system and context; it is the optimal point of operation if the potential impacts of both types of errors are equivalent
-- **Cross-Site Request Forgery (CSRF)**: (AKA XSRF) an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated
-- **FRR**: False Rejection Rate (Type 1) incorrectly denying authentication to a legit identity and therefore denying access
-- **FAR**: False Acceptance Rate (Type 2) incorrectly authenticating a claimed identity as legit, recognizing and granting access on that basis
+- **Cross-Site Request Forgery (CSRF)**: (AKA XSRF) an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated; in CSRF attack the intended target is the web app itself; the attack exploits the trust that the web app has in the user's browser, and by tricking the auth'd user into submitting a forged request, the attacker can cause the web app to perform actions as if it were initiated by the legit user
+- **FRR**: False Rejection Rate (Type 1) is the probability of incorrectly denying authentication to a legit identity and therefore denying access; expressed as a percentage
+- **FAR**: False Acceptance Rate (Type 2) is the probability of incorrectly authenticating a claimed identity as legit, recognizing and granting access on that basis; expressed as a percentage
 - **Ethical Wall**: the use of administrative, physical/logical controls to establish/enforce separation of information, assets or job functions for need-to-know boundaries or prevent conflict of interest situations; AKA compartmentalization
 - **Granularity of controls**: level of abstraction or detail which in a security function can be configured or tuned for performance and sensitivity
-- **IDaaS**: cloud-based service that broker IAM functions to target systems on customers' premise and/or in the cloud
-- **Identity proofing**: proving users are who they claim to be;process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person; identity proofing includes knowledge-based authentication and cognitive passwords, where a user is asked a series of questions that only they would know
+- **IDaaS**: cloud-based service that brokers IAM functions to target systems on customers' premise and/or in the cloud; refers to implementation/integration of identity services in a cloud-based environment; services include provisioning, administration, SSO, MFA, directory services, on-prem and in the cloud
+- **Identification**: the process of a subject claiming, or professing, an identity; subjects claim an identity through identification
+- **Identity proofing**: AKA registration, process of confirming someone is who they claim to be; process of collecting/verifying info about someone who has requested access/credential/special privilege to establish a relationship with that person; identity proofing includes knowledge-based authentication and cognitive passwords, where a user is asked a series of questions that only they would know
 - **Knowledge-based authentication (KBA)**: process of asking a user a series of questions based on their history that is recorded in authoritative sources; e.g. a bank asks a customer a series of questions about past addresses they've lived, and current payment amounts for car/mortgage
+- **Memory card**: authentication by ownership factor typically uses a magnetic strip as memory, where the same data is read from the strip with every transaction
 - **Objects**: things a subject accesses, such as files; a user is a subject who accesses objects while performing some action or accomplishing a task
 - **Passwords authentication**: the weakest form of authentication, but password policies help increase security by enforcing complexity and history requirements
+- **Policy Enforcement Point (PEP)**: app component that receives auth requests, functioning as a gatekeeper, sending the reuqest on to the PDP; once a decision is provided by the PDP, the PEP enforces it (grant/deny)
+- **Policy Decision Point (PDP)**: make decisions on auth requests sent from PEP, based on pre-defined rules
 - **Self-service identity management**: elements of the identity management lifecycle which the end-user (identity in question) can initiate or perform on their own (e.g. password reset, changes to challenge questions etc)
-**Split-response attack**: attack that causes the client to download content that was not an intended element of a requested web page, storing it in browser cache
-- **Subject**: actice entities, such as users, that access passive objects
+- **Server-Side Request Forgery (SSRF)**: if an API fetches a remote resource without validating the user-supplied URI, this vuln lets the attacker exploit the application to send a crafted request to an unexpected destination (regardless of firewall/VPN protection)
+- **SESAME**: Secure European System for Applications in a Multi-Vendor Environment an improved version of Kerberos; a protocol for SSO (like Kerberos), but has the advantage of supporting both symmetric and asymmetric cryptography (and therefore solves Kerberos' problem of key distro); it also issues multiple tickets mitigating attacks like TOCTOU
+- **Session**: what is created as a result of a successful user identification, authentication, and authorization process; represents the connection and interaction between a user and a system
+- [**Seven Laws of Identity**](https://www.ipc.on.ca/en/media/1525/download?attachment): 
+  - 1: User control and consent: identity systems should only reveal user-identifying info with the user's concent
+  - 2: Minimal disclosure for a constrained use: the identity system should disclose the least identifying info possible
+  - 3: Justifiable parties: systems should only disclose information to parties that have a justified need
+  - 4: Directed identity: highlights the need for both public and private identifiers, giving individuals control of their identities and how they establish trust
+  - 5: Pluralism of operators and technologies: identity systems should interoperate with agreed-upon protocols and a unified user experience
+  - 6: Human integration: businesses should establish very reliable communication between a system and users and test safeguards regularly
+  - 7: Consistent experience across context: the unifying identity system should guarantee users a simple, consistent experience, allowing users to decide what identity to use in what context
+- **Smart card**: authentication by ownership factor that contains an embedded integrated circuit (IC) chip that generates unique auth data with every transaction (see memory card)
+- **Split-response attack**: attack that causes the client to download content that was not an intended element of a requested web page, storing it in browser cache
+- **Subject**: entities, such as users, that access passive objects
+- **Synchronous token** (authentication by ownership hard/soft token): both the token generator and auth server generate the same token or one-time password every 30-60 seconds (see asynchronous token)
+- **Template**: a digital representation of someone's unique biometric features (i.e. a one-way math function representing biometric data); templates can be used as "1:N" for identification (where user's template is used to search for the identity of the user) , or "1:1" for authentication (where the user is identified and the template is used as a factor to authenticate the user)
 - **Whaling attack**: phishing attack targeting highly-placed officials/private individuals with sizeable assets authorizing large-fund wire transfers
 - **XSS**: Cross-Site Scripting (XSS) essentially uses reflected input to trick a user's browser into executing untrusted code from a trusted site; these attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites; XSS attacks occur when an attacker uses a web app to send malicious code, generally in the form of a browser side script, to a different end user; flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it
 - **XST**: Cross-Site Tracing (XST) attack involves the use of Cross-site Scripting (XSS) and the TRACE or TRACK HTTP methods; this could potentially allow the attacker to steal a user's cookies
@@ -63,7 +91,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 ## [5.2](#52-manage-identification-and-authentication-of-people-devices-and-services-osg-9-chpt-13) Manage identification and authentication of people, devices, and services (OSG-9 Chpt 13)
 
 - **Identification**: the process of a subject claiming, or professing an identity
-- **Authentication**: verifies the subject’s identity by comparing one or more factors against a database of valid identities, such as user accounts
+- **Authentication**: verifies the subject’s identity by verifying an identity through knowledge, ownership, or characteristic; comparing one or more factors against a database of valid identities, such as user accounts
   - a core principle with authentication is that all subjects must have unique identities
   - identification and authentication occur together as a single two-step process
   - users identify themselves with usernames and authenticate (or prove their identity) with passwords
@@ -92,15 +120,19 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - Short Message Service (SMS): to send users a text with a PIN is another 2-factor method; note that NIST SP 800-63B points out vulnerabilities, and deprecates use of SMS as a two-factor method for federal agencies
 - 5.2.3 Accountability
   - Two important security elements in an access control system are authorization and accountability
-    - **Authorization**: subjects are granted access to objects based on proven identities
-    - **Accountability**: (also see definitions/interpolations in Domain 2, and above) users and other subjects can be held accountable for their actions when auditing is implemented; accountability is maintained for individual subjects through the use of auditing; logs record user activities and users can be held accountable for their logged actions; this encourages good user behavior and compliance with the org's security policy
+    - **Authorization**: subjects are granted access to objects based on proven identities; the level of access defined for the identified and authenticated user or process
+    - **Accountability AKA Principle of Access Control**: proper identification, authentication, and authorization that is logged and monitored; users and other subjects can be held accountable for their actions when auditing is implemented; accountability is maintained for individual subjects through the use of auditing; logs record user activities and users can be held accountable for their logged actions; this encourages good user behavior and compliance with the org's security policy; also see definitions/interpolations in Domain 2, and above
   - **Auditing**: tracks subjects and records when they access objects, creating an audit trail in one or more audit logs
   - Auditing provides accountability
 - 5.2.4 Session management
-  - Session management processes help prevent unauthorized access by closing unattended sessions; developers commonly use web frameworks to implement session management, allowing devs to ensure sessions are closed after they become inactive for a period of time
+  - **Session management**: the management of sessions created by successful user identification, authentication, and authorization process; session management help prevent unauthorized access by closing unattended sessions; developers commonly use web frameworks to implement session management, allowing devs to ensure sessions are closed after they become inactive for a period of time
   - Session management is important to use with any type of authentication system to prevent unauthorized access
-  - Desktop/laptops: recommendation to use screensavers, although modern OSs have timeout/lock features
-  - Secure online sessions should terminate after a timeout period
+  - Session termination strategies:
+    - schedule limitations: setting hours when a system is available
+    - login limitation: preventing simultaneous logins using the same userID
+    - time-outs: session expires after a set amount of inactivity
+    - screensavers: activated after a period of inactivity, requiring re-authentication
+  - Session termination and re-authentication helps to prevent or mitigate session hijacking
   - The Open Web Application Security Project (OWASP) publishes “cheat sheets” that provide app developer’s specific recommendations
 - 5.2.5 Registration, proofing, and establishment of identity
   - Within an organization, new employees prove their identity with appropriate documentation during the hiring process
@@ -174,6 +206,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - if the user account is in a role, the user has all privileges assigned to the role
   - MS Windows OS uses this model with groups
   - RBAC models can group users into roles based on the org's hierarchy, and it is a non-discretionary access control model; central authority access decisions can use the RBAC model
+  - RBAC allows assignment of privileges to users with minimum admin overhead
 - 5.4.2 Rule Based access control
   - **Rule-based Access Control**: use a set of rules, restrictions, or filters to determine access; key characteristic is that it applies global rules to all subjects
     - e.g. firewalls access control lists use a list of rules that define what access is allowed and what access is blocked
@@ -185,7 +218,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - When documented in a table, the MAC model sometimes resembles a lattice (i.e. climbing rosebush framework), so it is referred to as a lattice-based model
   - the MAC model enforces the need to know principle and supports a hierarchical environment, a compartmentalized environment, or a combination of both (hybrid environment)
 - 5.4.4 Discretionary Access Control (DAC)
-  - **Discretionary Access Control (DAC)**: access control model in which the system owner decides who gets access
+  - **Discretionary Access Control (DAC)**: access control model in which the asset or system owner decides who gets access
   - A key characteristic of the DAC model is that every object has an owner, and the owner can grant or deny access to any other subjects
     - e.g. you create a file and are the owner, and can grant permissions to that file
   - All objects have owners, owners can modify permission
@@ -194,15 +227,17 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - New Technology File System (NTFS) used in Windows, uses the DAC model
 - 5.4.5 Attribute Based Access Control (ABAC)
   - **Attribute-Based Access Control (ABAC)**: an advanced implementation of a rule-based access model, applying rules based on attributes; an access control paradigm where access rights are granted to users with policies that combine attributes together
-  - A key characteristic of the ABAC model is its use of rules that can include multiple attributes
+  - A key characteristic of the ABAC model is its use of rules that can include multiple attributes about users, the environment, a user's action and the target resource 
     - this allows it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally
     - many software-defined networks (SDNs) use the ABAC model
   - ABAC allows administrators to create rules within a policy using plain language statements such as "Allow Managers to access the WAN using a mobile device"
+  - ABAC uses XACML (eXtensible Access Control Markup Language) which defines attribute-based  access control policy language, architecture, and a processing model
 - 5.4.6 Risk based access control
   - **Risk-based access control**: evaluates the environment and the situation, and makes decisions based on software security policies
     - a model that grants access after evaluating risk; it can control access based on multiple factors such as a user's location, determined by IP addresses, whether the user has logged on with MFA, and the user's device
     - advanced models use machine learning, making predictive conclusions about current activity based on past activity
     - note that a risk-based access control can be used, as an example, to block malicious traffic from an infected IoT device by evaluating the environment and situation, and using that info to block traffic deemed abnormal
+- **Non-discretionary Access Control**: somebody other than the asset owner determines access
 
 ## [5.5](#55-manage-the-identity-and-access-provisioning-lifecycle-osg-9-chpts-1314) Manage the identity and access provisioning lifecycle (OSG-9 Chpts 13,14)
 
