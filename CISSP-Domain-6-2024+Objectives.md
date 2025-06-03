@@ -1,11 +1,11 @@
 # [Domain-6](#domain-6-security-assessment-and-testing) **Security Assessment and Testing**
 
-- Security assessment and testing programs are an important mechanism for validating the on-going effectiveness of security controls
-  - they include a variety of tools, such as vulnerability assessments, penetration tests, software testing, audits, and other control validation
-- Every org should have a security assessment and testing program defined and operational
+Security assessment and testing programs are an important mechanism for validating the on-going effectiveness of security controls; this domain accounts for ~12% of the exam
+
+- Security assessment and testing include a variety of tools, such as vulnerability assessments, penetration tests, software testing, audits, and other control validation; every org should have a security assessment and testing program defined and operational
 - **Security assessments**: comprehensive reviews of the security of a system, application, or other tested environment
   - during a security assessment, a trained information security professional performs a risk assessment that identifies vulnerabilities in the tested environment that may allow a compromise and makes recommendations for remediation, as needed
-  - a security assessment includes the use of security testing tools, but go beyond scanning and manual penetration tests
+  - a security assessment includes the use of security testing tools, but goes beyond scanning and manual penetration tests
   - the main work product of a security assessment is normally an assessment report addressed to management that contains the results of the assessment in nontechnical language and concludes with specific recommendations for improving the security of the tested environment
 - An organization’s audit strategy will depend on its size, industry, financial status and other factors
   - a small non-profit, a small private company and a small public company will have different requirements and goals for their audit strategies
@@ -25,7 +25,6 @@
 - **Code testing suite**: usually used to validate function, statement, branch and condition coverage
 - **Compliance Calendar**: tracks an org's audits, assessments, required filings, due dates and related
 - **Compliance Tests**: an evaluation that determines if an org's controls are being applied according to management policies and procedures
-- **Penetration Testing/Ethical Penetration Testing**: security testing and assessment where testers actively attempt to circumvent/default a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
 - **Examination**: process of reviewing/inspecting/observing/studying/analyzing specs/mechanisms/activities to understand, clarify, or obtain evidence
 - **FedRAMP: (see Domain 1) a government-wide program that standardizes the security assessment, authorization, and monitoring of cloud services and products; the program was established in 2011 to help the federal government use cloud technologies while protecting federal information
 - **Findings**: results created by the application of an assessment procedure
@@ -38,6 +37,7 @@
 - **Judgement Sampling**: AKA purposive or authoritative sampling, a non-probability sampling technique where members are chosen only on the basis of the researcher's knowledge and judgement
 - **Misuse Case Testing**: testing strategy from a hostile actor's point of view, attempting to lead to integrity failures, malfunctions, or other security or safety compromises
 - **Mutation testing**: mutation testing modifies a program in small ways and then tests that mutant to determine if it behaves as it should or if it fails; technique is used to design and test software through mutation
+- **Penetration Testing/Ethical Penetration Testing**: security testing and assessment where testers actively attempt to circumvent/default a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
 - **Plan of Action and Milestones (POA&M)**: a document identifying tasks to be accomplished, including details, resources, milestones, and completion target dates
 - **RUM**: real user monitoring is a passive monitoring technique that records user iteration with an app or system to ensure performance and proper app behavior; often used as a pre-deployment process using the actual user interface
 - **RoE**: Rules of Engagement, set of rules/constraints/boundaries that establish limits of participant activity; in ethical pen testing, an RoE defines the scope of testing, and to establish liability limits for both testers and the sponsoring org or system owners
@@ -47,24 +47,25 @@
 - **Testing**: process of exercising one or more assessment objects (activities or mechanisms) under specified conditions to compare actual to expected behavior
 - **Trust Services Criteria (TSC)**: used by an auditor when evaluating the suitability of the design and operating effectiveness of controls relevant to the security, availability, or processing integrity of information and systems or the confidentiality or privacy of the info processed by the entity
 
-## [6.1](#61-design-and-validate-assessment-test-and-audit-strategies-osg-9-chpt-15) Design and validate assessment, test, and audit strategies (OSG-9 Chpt 15)
+## [6.1](#61-design-and-validate-assessment-test-and-audit-strategies-osg-10-chpt-15) Design and validate assessment, test, and audit strategies (OSG-10 Chpt 15)
 
 - Security audits occur when a third-party performs an assessment of the security controls protecting an org's information assets
-- 6.1.1 Internal
+
+- 6.1.1 Internal (e.g., within organization control)
   - An organization’s security staff can perform security tests and assessments, and the results are meant for internal use only, designed to evaluate controls with an eye toward finding potential improvements
   - An internal audit strategy should be aligned to the organization’s business and day-to-day operations
     - e.g. a publicly traded company will have a more rigorous internal auditing strategy than a privately held company
   - Designing the audit strategy should include laying out applicable regulatory requirements and compliance goals
   - Internal audits are performed by an organization’s internal audit staff and are typically intended for internal audiences, and management use
 
-- 6.1.2 External
+- 6.1.2 External (e.g., outside organization control)
   - An external audit strategy should complement the internal strategy, providing regular checks to ensure that procedures are being followed and the organization is meeting its compliance goals
   - External audits are performed by an outside auditing firm
     - these audits have a high degree of external validity because the auditors performing the assessment theoretically have no conflict of interest with the org itself
     - audits by these firms are generally considered acceptable by most investors and governing bodies
     - third-party audit reporting is generally intended for the org's governing body
 
-- 6.1.3 Third-party
+- 6.1.3 Third-party (e.g., outside of enterprise control)
   - Third-party audits are conducted by, or on behalf of, another org
   - In the case of a third-party audit, the org initiating the audit generally selects the auditors and designs the scope of the audit
   - The statement on **Standards for Attestation Engagements document 18 (SSAE 18)**, titled Reporting on Controls, provides a common standard to be used by auditors performing assessments of service orgs with the intent of allowing the org to conduct external assessments, instead of multiple third-party assessments, and then sharing the resulting report with customers and potential customers
@@ -87,9 +88,15 @@
       - think of Type II report as similar to a traditional audit; the auditor is checking the paperwork, and verifying the controls are functioning properly
     - Type II reports are considered much more reliable than Type I reports (Type I reports simply take the service orgs word that the controls are implemented as described); security pros want SOC2, Type II reports
 
-## [6.2](#62-conduct-security-control-testing-osg-9-chpt-15) Conduct security control testing (OSG-9 Chpt 15)
+- 6.1.4 Location (e.g., on-premise, cloud, hybrid)
+  - On-premise assessment: focuses on evaluating the security measures and infrastructure of in-house systems, or within an organization's physical data centers and facilities
+  - Cloud assessment: focus is on assessing the security of data and applications hosted in cloud service providers environment
+  - Hybrid assessment: assess connectivity and security measures used between on-premise and cloud resources; this assessment looks at data flow or interconnection and integration security controls
 
-- Security control testing can include testing of the physical facility, logical systems and applications; common testing methods:
+## [6.2](#62-conduct-security-controls-testing-osg-10-chpt-15) Conduct security controls testing (OSG-10 Chpt 15)
+
+- Security control testing can include testing of the physical facility, logical systems and applications; common testing methods include the following
+
 - 6.2.1 Vulnerability assessment
   - **Vulnerabilities**: weaknesses in systems and security controls that might be exploited by a threat
   - **Vulnerability assessments**: examining systems for these weaknesses; steps in the assessment:
@@ -118,8 +125,8 @@
     - database vulnerability scans
   - **Authenticated scans**: (AKA credentialed security scan) involves conducting vulnerability assessments and security checks on a network, system, or application using valid credentials; this approach enables the scanner to simulate the actions of an authenticated user, allowing it to access deeper layers of the target system, gather more information, and provide a more accurate assessment of vulnerabilities; often uses a read-only account to access configuration files
 
-- 6.2.2 Penetration testing
-  - Penetration tests goes beyond vulnerability testing techniques because it actually attempts to exploit systems
+- 6.2.2 Penetration testing (e.g., red, blue, and/or purple team exercises)
+  - Penetration tests go beyond vulnerability testing techniques because they attempt to exploit systems
   - **Vulnerability management**: the cyclical process of identifying, classifying, prioritizing, and mitigating vulnerabilities; programs take the results of the tests as inputs and then implement a risk management process for identified vulnerabilities, with the following steps:
     - Asset inventory
     - Identifying the value of each asset
@@ -146,7 +153,6 @@
       - AKA "**known environment tests**"
       - white box provides the attackers with **detailed information** about the systems they target
       - this bypasses many of the reconnaissance steps that normally precede attacks, shortening the time of the attack and increasing the likelihood that it will find security flaws
-      - 
       - in white-box testing, the tester has access to the source code and performs testing from a developer's perspective
     - **gray-box penetration test**:
       - AKA **partial knowledge tests**, these are sometimes chosen to balance the advantages and disadvantages of white- and black-box penetration tests
@@ -158,6 +164,23 @@
       - does not provide attackers with any information prior to the attack
       - this simulates an external attacker trying to gain access to information about the business and technical environment before engaging in an attack
   - Differences between vulnerability assessments and pen tests: vuln assessments are usually more automated, can be performed quickly, and no attempt to made to exploit vulns
+  - Red, blue andd purple teams have been around for a long time, and is becoming more popular
+    - Red team: this is the in-house offensive security team, they are the simulated hackers or the threat providing:
+      - offensive security
+      - ethical hacking
+      - penetration testing
+      - social engineering
+      - threat intelligence
+    Blue team: the blue team is the in-house defensive team, working to stop the threat:
+      - defensive security
+      - security monitoring
+      - incident response
+      - digital forensics
+      - security operations
+    Purple: not a separate team, but purple represents the collaboration between the red and blue teams:
+      - red and blue teams working together
+      - providing information sharing and healthy competition
+
 - 6.2.3 Log reviews
   - **Security Information and Event Management (SIEM)**: packages that collect information using the syslog functionality present in many devices, operating systems, and applications
   - SIEM capabilities: aggregation, normalization, correlation, secure storage, analysis, reporting
@@ -169,7 +192,7 @@
   - Information security managers should also periodically conduct log reviews, particularly for sensitive functions, to ensure that privileged users are not abusing their privileges
   - Network flow (NetFlow) logs are particularly useful when investigating security incidents
 
-- 6.2.4 Synthetic transactions
+- 6.2.4 Synthetic transactions/benchmarks
   - **Synthetic transactions**: scripted transactions with known expected results
   - **Synthetic monitoring**: uses emulated or recorded transactions to monitor for performance changes in response time, functionality, or other performance monitors
   - Dynamic testing may include the use of synthetic transactions to verify system performance; synthetic transactions are run against code and compare out to expected state
@@ -194,7 +217,7 @@
   - **Misuse case testing**: AKA abuse case testing - used by software testers to evaluate the vulnerability of their software to known risks; focuses on behaviors that are not what the org desires or that are counter to the proper function of a system/app
   - In misuse case testing, testers first enumerate the known misuse cases, then attempt to exploit those use cases with manual or automated attack techniques
 
-- 6.2.7 Test coverage analysis
+- 6.2.7 Coverage analysis
   - A test coverage analysis is used to estimate the degree of testing conducted against new software; to provide insight into how well testing covered the use cases that an app is being tested for
   - **Test coverage**: number of use cases tested / total number of use cases
     - requires enumerating possible use cases (which is a difficult task), and anyone using test coverage calcs to understand the process used to develop the input values
@@ -206,7 +229,7 @@
     - **statement coverage**: has every line of code been executed during the test?
   - **Test coverage report**: measures how many of the test cases have been completed; is used to provide test metrics when using test cases
 
-- 6.2.8 Interface testing
+- 6.2.8 Interface testing (e.g., user interface, network interface, application programming interface (API))
   - Interface testing assesses the performance of modules against the interface specs to ensure that they will work together properly when all the development efforts are complete
   - Interface testing essentially assesses the interaction between components and users with API testing, user interface testing, and physical interface testing
     - Three types of interfaces should be tested:
@@ -235,7 +258,7 @@
   - Orgs should create and maintain compliance plans documenting each of their regulatory obligations and map those to the specific security controls designed to satisfy each objective
   - Compliance checks are an important part of security testing and assessment programs for regulated firms: these checks verify that all of the controls listed in a compliance plan are functioning properly and are effectively meeting regulatory requirements
 
-## [6.3](#63-collect-security-process-data-eg-technical-and-administrative-osg-9-chpts-15186.3) Collect security process data (e.g. technical and administrative) (OSG-9 Chpts 15,18)
+## [6.3](#63-collect-security-process-data-eg-technical-and-administrative-osg-10-chpts-1518) Collect security process data (e.g. technical and administrative) (OSG-10 Chpts 15,18)
 
 - Many components of the information security program generate data that is crucial to security assessment processes; these components include:
   - Account management process
@@ -298,7 +321,7 @@
   - These processes need to be periodically accessed, and regular testing of disaster recovery and business continuity controls provide organizations with the assurance they are effectively protected against disruptions to business ops
   - Protection of life is of the utmost importance and should be dealt with first before attempting to save material things
 
-## 6.4 Analyze test output and generate report (OSG-9 Chpt 15)
+## [6.4](#64-analyze-test-output-and-generate-report-osg-10-chpt-15) Analyze test output and generate report (OSG-10 Chpt 15)
 
 - Step 1: review and understand the data
   - The goal of the analysis process is to proceed logically from facts to actionable info
@@ -326,7 +349,7 @@
     - the disclosure should be made privately to the vendor providing reasonable amount of time to correct
     - if the vuln is not corrected, then public disclosure of the vuln is warranted, such that other professionals can make informed decisions about future use of the product(s)
 
-## [6.5](#65-conduct-or-facilitate-security-audits-osg-9-chpt-15) Conduct or facilitate security audits (OSG-9 Chpt 15)
+## [6.5](#65-conduct-or-facilitate-security-audits-osg-10-chpt-15) Conduct or facilitate security audits (OSG-10 Chpt 15)
 
 - 6.5.1 Internal
   - Having an internal team conduct security audits has several advantages:
@@ -350,3 +373,9 @@
   - Disadvantage of using a third-party auditor:
     - cost: third-party auditors are going to be much more costly than internal teams; this means that the organization is not likely to conduct audits as frequently
     - internal resources are still required to assist or accompany auditors, to answer questions and guide
+
+- 6.5.4 Location (e.g., on-premise, cloud, hybrid)
+  - As in 6.1.4 above:
+  - On-premise assessment: focuses on evaluating the security measures and infrastructure of in-house systems, or within an organization's physical data centers and facilities
+  - Cloud assessment: focus is on assessing the security of data and applications hosted in cloud service providers environment
+  - Hybrid assessment: assess connectivity and security measures used between on-premise and cloud resources; this assessment looks at data flow or interconnection and integration security controls
