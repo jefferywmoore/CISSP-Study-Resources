@@ -15,7 +15,7 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/).
 
 - [Overview](#overview) of CISSP exam and content.
 - [Reference Material](#reference-material) including books, articles, courses, videos, and test banks.
-- My [Study Guides By Domain](#my-study-guides) built as I'm progressing through the reference material.
+- [Study Guides By Domain](#study-guides-by-domain) built as I studied for the exam.
 
 ## Overview
 
@@ -40,7 +40,7 @@ There is a lot of information on the CISSP exam available, including from (ISC)Â
 - Questions to ask on Material Coverage: common challenges during exam preparation relate to things like finding best resources for the way you learn, and staying on track. There is a large amount of preparation required to be ready for the exam, and it can be tough to know if you're covering the right material, in enough depth, and at the right pace. It can also be challenging to stay accountable during your preparation.
   - Ways to tackle this challenge include staying in touch with others in the community who are also preparing to take the exam (see General & Communities section below). Ask yourself how different concepts relate, and look for areas across domains that are referential. Use test banks to find areas where you need further study.
 - Questions to ask on learning resources: aligning resources with the way you best learn is important. For me, reading, and writing out concepts helps me internalize them. Audio or videos help reinforce what I've learned. Your best learning modalities may be the opposite of mine. But it's important to recognize and pursue the types of resources that best help you learn. See the areas below for different types that may best meet your needs.
-- My Approach: in preparing for the exam, I drew from a variety of sources to get a balanced viewpoint. I've used the Sybex Official Study Guide as my baseline, incorporating other material (such as the All-in-One guide by Maymi, Harris et al. -- see below) to supplement with alternative explanations. Pete Zerger's Exam Cram, and Destination Certification's Mindmap YT videos are good resources that can help you keep perspective on what's important. For testing, I used the OSG practice tests to start, then incorporated Learnzapp, and QuantumExams to gauge weak areas.
+- My Approach: in preparing for the exam, I drew from a variety of sources to get a balanced viewpoint. I've used the Sybex Official Study Guide as my baseline, incorporating other material (such as the All-in-One guide by Maymi, Harris et al. -- see below) to supplement with alternative explanations. Pete Zerger's Exam Cram, and Destination Certification's Mindmap YT videos are good resources that can help you keep perspective on what's important. For testing, I used the OSG practice tests to start, then incorporated Learnzapp, and finally QuantumExams to gauge weak areas.
 - Memorization approach: my memorization techniques include using acronyms to remember items in a list, and creating visualizations and picmonics to aid recall. Don't discount mindmaps and diagrams to help in keeping track of how areas or components fit together. Verbalizing answers via flashcards or studying with a friend (instead of just passively reading) can provide an additional channel to help your brain synthesize the material.
 
 ## Reference Material
@@ -53,7 +53,6 @@ There is a lot of information on the CISSP exam available, including from (ISC)Â
   - Thor Teaches:
     - [Thor Teaches CISSP Study Bundles](https://thorteaches.com/cissp/)
     - [Daily CISSP Questions](https://thorteaches.com/free-daily-cissp-questions/)
-
   - [Destination Certification MindMaps](https://www.youtube.com/playlist?list=PLZKdGEfEyJhLd-pJhAD7dNbJyUgpqI4pu) these help connect key topics.
 - Mobile Apps:
   - I've found the [Learnzapp](https://www.learnzapp.com/apps/cissp/) to be useful, with study questions, flashcards, and practice tests (note that you'll need a subscription to take advantage of most of these features).
@@ -81,3 +80,4 @@ Note: You are advised to do your own analysis to determine what will be helpful 
 - [Domain 6 - Security Assessment and Testing](CISSP-Domain-6-2024+Objectives.md)
 - [Domain 7 - Security Operations](CISSP-Domain-7-2024+Objectives.md)
 - [Domain 8 - Software Development Security](CISSP-Domain-8-2024+Objectives.md)
+- [Domain Objectives combined PDF download](https://balancedsec.gumroad.com/)

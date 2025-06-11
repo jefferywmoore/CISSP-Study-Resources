@@ -97,7 +97,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - 5.1.6 Services
   - The point of identity management is to control access to any asset including data, systems, and services; services include a wide range of process functionality such as printing, end-user support, network capacity etc; as above, access control is important to secure these services
 
-## [5.2](#52-design-identification-and-authentication-strategy-people-devices-and-services-osg-10-chpt-13) Design identification and authentication strategy (e.g., people, devices, and services) (OSG-10 Chpt 13)
+## [5.2](#52-design-identification-and-authentication-strategy-eg-people-devices-and-services-osg-10-chpt-13) Design identification and authentication strategy (e.g., people, devices, and services) (OSG-10 Chpt 13)
 
 - **Identification**: the process of a subject claiming, or professing an identity
 - **Authentication**: verifies the subject’s identity by verifying an identity through knowledge, ownership, or characteristic; comparing one or more factors against a database of valid identities, such as user accounts
@@ -272,7 +272,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 - 5.4.5 Attribute Based Access Control (ABAC)
   - **Attribute-Based Access Control (ABAC)**: an advanced implementation of a rule-based access model, applying rules based on attributes; an access control paradigm where access rights are granted to users with policies that combine attributes together
-  - A key characteristic of the ABAC model is its use of rules that can include multiple attributes about users, the environment, a user's action and the target resource 
+  - A key characteristic of the ABAC model is its use of rules that can include multiple attributes about users, the environment, a user's action and the target resource
     - this allows it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally
     - many software-defined networks (SDNs) use the ABAC model
   - ABAC allows administrators to create rules within a policy using plain language statements such as "Allow Managers to access the WAN using a mobile device"
@@ -450,3 +450,4 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - TACACS+ uses TCP port 49, providing a higher level of reliability for the packet transmissions
   - **Diameter AAA protocol**: an advanced system designed to address the limitations of the older RADIUS protocol (diameter is twice the radius!); Diameter improves on RADIUS by providing enhanced security (uses IPsec or TLS instead of MD5 hashing), supports more extensive attribute sets (suitable for large, complex networks), and can handle complex sessions
     - Diameter is based on RADIUS and improves many of its weaknesses, but Diameter is not compatible with RADIUS
+  

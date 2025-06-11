@@ -128,8 +128,6 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **Token Passing**: a network access method used to control which devices can transmit data at any given time; a special data packet called a "token" circulates among the connected devices (nodes), and only the device that holds the token is permitted to send data over the network
 - **Tunneling**: the encapsulation of protocol-deliverable message within a second protocol; the second protocol often performs encryption to protect the message contents
 - **Unbound (Wireless) Network**: network where the physical layer interconnections are done using radio, light, or some other means (not confined to wires, cables, or fibers); may or may not be mobile
-
-
 - **VLAN hopping**: a method of attacking the network resources of a VLAN by sending packets to a port not usually accessible from an end system; the goal of this form of attack is to gain access to other VLANs on the same network
 
 - **Virtual Routing and Forwarding (VRF)**: allows multiple routing tables to be used on the same device simultaneously, similar to the concept of a VLAN (which is layer 2), but operating at layer 3; because routing instances operate independently, VRF allows IP addresses to overlap without conflict which supports segmentation and permits flexibility for zero trust implementations
@@ -144,10 +142,10 @@ Networking can be one of the more complex exam topics; if you have a networking 
   - **OSI**: Open Systems Interconnection (OSI) Reference Model developed by ISO (International Organization for Standardization) to establish a common communication structure or standard for all computer systems; it is an abstract framework
         - Communication between layers via **encapsulation** (at each layer, the previous layer's header and payload become the payload of the current layer) and **de-encapsulation** (inverse action occurring as data moves up layers)
 
-    | Layer | OSI model layer | TCP/IP model | PDU | Devices | Protocols | 
+    | Layer | OSI model layer | TCP/IP model | PDU | Devices | Protocols |
     |-----|---------------| -------------------|------------| ----------------|-----------|
     | 7     | Application     | Application |Data               | Application Firewall                                | HTTP/s, DNS, DHCP, FTP, LPD, S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, SIP, S/MIME, X Window, NFS etc. |
-    | 6     | Presentation    | Application |Data   |   | JPEG, ASCII, MIDI etc
+    | 6     | Presentation    | Application |Data   |   | JPEG, ASCII, MIDI etc |
     | 5     | Session         | Application| Data               | Circuit Proxy Firewall | NetBIOS, RPC|
     | 4     | Transport       | Transport (host-to-host) | Segments (TCP) / Datagrams (UDP)         |                              | TCP (connection oriented), UDP (connectionless), TLS, BGP     |
     | 3     | Network         | Internet/IP | Packets            | Router, Multilayer Switch, Packet Filtering Firewall         | IPv4, IPv6, IPSec, OSPF, EIGRP, ICMP, IGMP, RIP, NAT                              |
@@ -383,11 +381,11 @@ Networking can be one of the more complex exam topics; if you have a networking 
       - SIPS: see definition above
     Other converged protocols:
       - SDN (see definition above)
-      - virtualization [here](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md#34-understand-security-capabilities-of-information-systems-is-eg-memory-protection-trusted-platform-model-tpm-encryptiondecryption-osg-10-chpt-8))
-      - SOA (see definition [here](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-10-chpts-6791620))
-      - microservices (see definition [here](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-10-chpts-6791620))
-      - IaC (see definition in [Domain 8](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-8-Objectives.md))
-      - serverless architecture (see definition [here](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-Objectives.md#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-9-chpts-91620))
+      - virtualization [in Domain 3](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-2024+Objectives.md#34-understand-security-capabilities-of-information-systems-is-eg-memory-protection-trusted-platform-model-tpm-encryptiondecryption-osg-10-chpt-8)
+      - SOA (see definition [in Domain 3](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-2024+Objectives.md#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-10-chpts-6791620))
+      - microservices (see definition [Domain 3](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-2024+Objectives.md#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-10-chpts-6791620))
+      - IaC (see definition [in Domain 8](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-8-2024+Objectives.md))
+      - serverless architecture (see definition [in Domain 3](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-2024+Objectives.#35-assess-and-mitigate-the-vulnerabilities-of-security-architectures-designs-and-solution-elements-osg-10-chpts-6791620))
 
 - 4.1.6 Transport architecture (e.g., topology, data/control/management plane, cut-through/store-and-forward)
   - Topology: how devices are interconnected (like bus, star, ring, tree, mesh)
@@ -739,7 +737,7 @@ The components of a network make up the backbone of the logical infrastructure f
 ## [4.3](#43-implement-secure-communication-channels-according-to-design-osg-10-chpt-12) Implement secure communication channels according to design (OSG-10 Chpt 12)
 
 - Protocols that provide security services for application-specific communication channels are called secure communication protocols
-  - examples of secure communication protocols include: IPsec, Kerberos, SSH, Signal protocol, S-RPC, and TLS 
+  - examples of secure communication protocols include: IPsec, Kerberos, SSH, Signal protocol, S-RPC, and TLS
 
 - 4.3.1 Voice, video, and collaboration (e.g., conferencing, Zoom rooms)
   - **Voice over Internet Protocol (VoIP)**: set of technologies that enables voice to be sent over a packet network

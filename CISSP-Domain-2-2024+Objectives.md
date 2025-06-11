@@ -253,3 +253,4 @@
     - validation: the CCP sends the token to the tokenization vault; the vault replies with the CC info, the charge is processed
     - completing the sale: the CCP sends a reply to the POS indicating the charge is approved
     - this system prevents CC theft at the POS system
+  

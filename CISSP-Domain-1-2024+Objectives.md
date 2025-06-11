@@ -291,7 +291,7 @@
       - Data Subject Rights: provides people with rights to access, correction, deletion, and to be informed of data breaches
       - Cross-Border Data Transfer: imposes restrictions on transferring personal data outside of China
   - **Privacy Shield**: (formerly the EU-US Safe Harbor agreement): controls data flow from the EU to the United States; the EU has more stringent privacy protections and without the Privacy Shield, personal data flow from the EU to the United States would not be allowed
-  - **Protection of Personal Information Act (POPIA)**: South Africa's comprehensive data protection law designed to protection personal information processed by public and private entities, and promote the right to privacy 
+  - **Protection of Personal Information Act (POPIA)**: South Africa's comprehensive data protection law designed to protection personal information processed by public and private entities, and promote the right to privacy
     - Key provisions of POPIA:
       - Applies to any organization processing PII of natural or juristic persons in SA
       - Eight conditions for lawful processing
@@ -426,14 +426,14 @@
   - Part of planning for security includes having standards in place for job descriptions, job classifications, work tasks, job responsibilities, prevention of collusion, candidate screening, background checks, security clearances, employment and nondisclosure agreements
 - 1.8.1 Candidate screening and hiring
   - The following strategies can reduce your risk:
-    - **Candidate screening and hiring**: To properly plan for security, you should have standards in place for job descriptions, job classification, work tasks, job responsibilities, prevention of collusion, candidate screening, background checks, security clearances, employment agreements, and nondisclosure agreements 
+    - **Candidate screening and hiring**: To properly plan for security, you should have standards in place for job descriptions, job classification, work tasks, job responsibilities, prevention of collusion, candidate screening, background checks, security clearances, employment agreements, and nondisclosure agreements
       - screening employment candidates thoroughly is a key part of the hiring process
       - be sure to conduct a full background check that includes a criminal records check, job history verification, education verification, certification validation and confirmation of other accolades when possible
       - all references should be contacted
 
 - 1.8.2 Employment agreements and policies driven requirements
   - **Employment agreement**: specifies job duties, expectations, rate of pay, benefits and info about termination; sometimes, such agreements are for a set period (for example, in a contract or short-term job)
-    - Employment agreements facilitate termination when needed for an underperforming employee 
+    - Employment agreements facilitate termination when needed for an underperforming employee
     - The more info and detail in an employment agreement, the less risk (risk of a wrongful termination lawsuit, for example) the company has during a termination proceeding
     - e.g. a terminated employee might take a copy of their email with them without thinking of it as stealing, but they are less likely to do so if an employment agreement or another policy document clearly prohibits it
     - example employee agreements:
@@ -458,7 +458,7 @@
 
 - 1.8.4 Vendor, consultant, and contractor agreements and controls
   - Orgs commonly outsource many IT functions, particularly data center hosting, contact-center support, and application development
-  - Info security policies and procedures must address outsourcing security and the use of service providers, vendors and consultants 
+  - Info security policies and procedures must address outsourcing security and the use of service providers, vendors and consultants
     - e.g. access control, document exchange and review, maintenance, on-site assessment, process and policy review, and Service Level Agreements (SLAs) are examples of outsourcing security considerations
   
 ## [1.9](#19-understand-and-apply-risk-management-concepts-osg-10-chpt-2) Understand and apply risk management concepts (OSG-10 Chpt 2)
@@ -554,8 +554,8 @@
   - If a security breach occurs, monitored systems and data become valuable from a forensics perspective; from the ability to derive root cause of an incident to making adjustments to minimize the chances of reoccurrence
 
 - 1.9.7 Reporting (e.g., internal, external)
-  - Risk Reporting is a key task to perform at the conclusion of risk analysis (i.e. production and presentation of a summarizing report) 
-  - A Risk Register or Risk Log is a document that inventories all identified risks to an org or system or within an individual project 
+  - Risk Reporting is a key task to perform at the conclusion of risk analysis (i.e. production and presentation of a summarizing report)
+  - A Risk Register or Risk Log is a document that inventories all identified risks to an org or system or within an individual project
     - A risk register is used to record and track the activities of risk management, including:
       - identifying risks
       - evaluating the severity of, and prioritizing those risks
@@ -677,7 +677,7 @@
 - 1.11.2 Risk mitigations (e.g., third-party assessment and monitoring, minimum security requirements, service level requirements, silicon root of trust, physically unclonable function, software bill of materials)
   - Before doing business with another company, an org needs to perform due-diligence, and third-party assessments can help gather information and perform the assessment
   - An on-site assessment is useful to gain information about physical security and operations
-    - During document review, your goal is to thoroughly review all the architecture, designs, implementations, policies, procedures, etc. 
+    - During document review, your goal is to thoroughly review all the architecture, designs, implementations, policies, procedures, etc.
     - A good understanding of the current state of the environment, especially to understand any shortcomings or compliance issues prior to integrating the IT infrastructures
     - The level of access and depth of information obtained is usually proportional to how closely the companies will work together
   - Creating security requirements that dovetail with SLAs and contracts is important, as are including things like a **silicon root of trust (RoT)** (AKA hardware root of trust) to ensure the integrity, authenticity, and confidentiality as a foundation of system startup security
@@ -691,8 +691,8 @@
     - All new employees require some level of training so that they will be able to comply with all standards, guidelines, and procedures mandated by the security policy
     - Education is a more detailed endeavor in which students/users learn much more than they actually need to know to perform their work tasks
     - Education is most often associated with users pursuing certification or seeking job promotion
-  - Employees need to understand what to be aware of (e.g. types of threats, such as phishing and free USB sticks), how to perform their jobs securely (e.g. encrypt sensitive data, physically protect valuable assets) and how security plays a role in the big picture (company reputation, profits,and losses) 
-    - Training should be mandatory and provided both to new employees and yearly (at a minimum) for ongoing training 
+  - Employees need to understand what to be aware of (e.g. types of threats, such as phishing and free USB sticks), how to perform their jobs securely (e.g. encrypt sensitive data, physically protect valuable assets) and how security plays a role in the big picture (company reputation, profits,and losses)
+    - Training should be mandatory and provided both to new employees and yearly (at a minimum) for ongoing training
     - Routine tests of operational security should be performed (such as phishing test campaigns, tailgating at company doors and social engineering tests)
     - **Social engineering**: a form of attack that exploits human nature and behavior; the common social engineering principles are authority, intimidation, consensus, scarcity, familiarity, trust, and urgency
       - **familiarity**: as a social engineering principle, an attempt to exploit someone's native trust in things that are familiar; might include claiming to know a coworker (existing or not), and designed to put the target in a mindset that promotes willingness to provide info
