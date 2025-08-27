@@ -31,7 +31,7 @@
       - always follow the laws
       - but if you find yourself working on a project where conflicting laws from different countries or jurisdictions apply, you should prioritize the local jurisdiction from which you are performing the services
       - any member of the public can file a claim under canon II
-    - **Provide diligent and competent service to principles**
+    - **Provide diligent and competent service to principals**
       - avoid passing yourself as an expert or as qualified in areas that you aren’t
       - maintain and expand your skills to provide competent services
       - only an employer or someone with a contractual relationship can file a complaint under canon III
@@ -73,12 +73,13 @@
     - Identification: assertion of a user's identity; claiming to be an identity when attempting to access a secured area or system
     - Authentication: proving that you are that claimed identity via one or more factors of knowledge, ownership, or characteristic (something you know, something you have, something you are)
     - Authorization: defining the needed resources, permissions (i.e. allow/grant and/or deny) to a resource, and object access for a specific identity or subject
+    - Auditing: recording a log of the events and activities related to the system and subjects
     - Accountability (aka accounting, aka principle of access control): proper identification, authentication, and authorization that is logged and monitored; access control process which records info about attempts by all entities to access resources; reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
-  - Auditing: recording a log of the events and activities related to the system and subjects
+  
 
 ## [1.3](#13-evaluate-apply-and-sustain-security-governance-principles-osg-10-chpt-1) Evaluate, apply, and sustain security governance principles (OSG-10 Chpt 1)
 
-- **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies  align with business goals, and that they are comprehensive and consistent across the organization
+- **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies align with business goals, and that they are comprehensive and consistent across the organization
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
 - **The security function**: the aspect of operating a business that focuses on the task of evaluating and improving security over time
   - To manage security, an org must implement proper and sufficient security governance
@@ -280,7 +281,7 @@
     - Be familiar with the EU Data Protection Directive (Directive 95/46/EC, which was superseded by GDPR)
   - GLBA: see above
   - HIPAA: (see above) note that HITECH updated many of HIPAA's privacy and security requirements, including requiring a written contract between a HIPAA-covered entity and their business associates (e.g. orgs that handle PHI on their behalf)
-  - HITECH: (see abovve) note that notification required by HIPAA-covered entities within 60 days of discovery when more than 500 individuals are affected
+  - HITECH: (see above) note that notification required by HIPAA-covered entities within 60 days of discovery when more than 500 individuals are affected
   - **Organization for Economic Co-operation and Development (OECD)**: 8 best practices privacy principles: collection limitation, data quality, purpose specification, use limitation, security safeguards, openness, individual participation, and accountability; require orgs to avoid unjustified obstacles to trans-border data flow, set limits to personal data collection, protect personal data with reasonable security and more
   - **Privacy Act of 1974**: a US federal law designed to protect individuals' personal information help by federal government agencies, mandating that agencies only keep records necessary for conducting their business, and procedures for people to get access to the government maintained records
   - **Personal Information Protection and Electronic Documents Act (PIPEDA)**: Canadian law that governs the use of personal information
@@ -351,17 +352,17 @@
   - **Policy**: docs created by and published by senior management describing organizational strategic goals
   - A security policy is a document that defines the scope of security needed by the org, discussing assets that require protection and the extent to which security solutions should go to provide the necessary protections
   - It defines the strategic security objectives, vision, and goals and outlines the security framework of the organization
-- **Acceptable User Policy**: the AUP is a commonly produced document that exists as part of the overall security documentation infrastructure
+- **Acceptable Use Policy**: the AUP is a commonly produced document that exists as part of the overall security documentation infrastructure
   - This policy defines a level of acceptable performance and expectation of behavior and activity; failure to comply with the policy may result in job action warnings, penalties, or termination
 - Security Standards, Baselines and Guidelines: once the main security policies are set, the remaining security documentation can be crafted from these policies
   - **Policies**: these are high-level documents, usually written by the management team; policies are mandatory, and a policy might provide requirements, but not the steps for implementation
   - **Standards**: specific mandates explicitly stating expectations of performance/conformance; more descriptive than policies, standards define compulsory requirements for the homogenous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
-  - **Baseline**: defines a minimum level of security that every system throughout the organization must meet; baselines are usually system specific and refer to industry / government standards
+  - **Baselines**: defines a minimum level of security that every system throughout the organization must meet; baselines are usually system specific and refer to industry / government standards
     - e.g. a baseline for  server builds would be a list of configuration areas that should be applied to every server that is built
     - A Group Policy Object (GPO) in a Windows network is sometimes used to comply with standards; configuration management solutions can also help you establish baselines and spot configurations that are not in alignment
-  - **Guideline**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users
+  - **Guidelines**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users
     - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not compulsory; suggested practices and expectations of activity to best accomplish tasks and goals
-  - **Procedure** (AKA Standard Operating Procedure or SOP): detailed, step-by-step how-to doc that describes the exact actions necessary to implement a specific security mechanism, control, or solution
+  - **Procedures** (AKA Standard Operating Procedure or SOP): detailed, step-by-step how-to doc that describes the exact actions necessary to implement a specific security mechanism, control, or solution
 
 ## [1.7](#17-identify-analyze-assess-prioritize-and-implement-business-continuity-bc-requirements-osg-10-chpt-3) Identify, analyze, assess, prioritize, and implement Business Continuity (BC) requirements (OSG-10 Chpt 3)
 
@@ -465,15 +466,15 @@
 
 - 1.9.1 Threat and vulnerability identification
   - **Risk Management**: process of identifying factors that could damage or disclose data, evaluating those factors in light of data value and countermeasure cost, and implementing cost-effective solutions for mitigating or reducing risk
-  - **Threats**: any potential occurrence that many cause an undesirable or unwanted outcome for a specific asset; they can be intentional or accidental; loosely think of a threat as a weapon that could cause harm to a target
+  - **Threat**: any potential occurrence that many cause an undesirable or unwanted outcome for a specific asset; they can be intentional or accidental; loosely think of a threat as a weapon that could cause harm to a target
   - **Vulnerability**: the weakness in an asset, or weakness (or absence) of a safeguard or countermeasure; a flaw, limitation, error, frailty, or susceptibility to harm
   - Threats and vulnerabilities are related: a threat is possible when a vulnerability is present
     - Threats exploit vulnerabilities, which results in exposure
     - Exposure is risk, and risk is mitigated by safeguards
     - Safeguards protect assets that are endangered by threats
-    - **Threat Agent/Actors**: intentionally exploit vulnerabilities
-    - **Threat Events**: accidental occurrences and intentional exploitations of vulnerabilities
-    - **Threat Vectors**: (AKA attack vector) is the path or means by which an attack or attacker can gain access to a target in order to cause harm
+    - **Threat Agent/Actor**: intentionally exploit vulnerabilities
+    - **Threat Event**: accidental occurrences and intentional exploitations of vulnerabilities
+    - **Threat Vector**: (AKA attack vector) is the path or means by which an attack or attacker can gain access to a target in order to cause harm
     - **Exposure**: being susceptible to asset loss because of a threat; the potential for harm to occur
     - **Exposure Factor (EF)**: derived from this concept; an element of quantitative risk analysis that represents the percentage of loss that an org would experience if a specific asset were violated by a realized risk
     - **Single Loss Expectancy (SLE)**: an element of quantitative risk analysis that represents the cost associated with a single realized risk against a specific asset; SLE = asset value (AV) * exposure factor (EF); a metric that represents the magnitude of loss or impact that a threat could have on a system or data, quantified as a percentage of loss that a realized threat would have on a specific asset; e.g. an EF of 0.2 (or 20%) for a specific threat would indicate that a realization of that threat would result in a loss of 20% of the asset’s value

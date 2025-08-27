@@ -12,6 +12,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
 - **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
 - **Cloud Controls Matrix (CCM)**: Cloud Security Alliance (CSA) framework designed to provide security principles to guide cloud vendors and assist prospective cloud customers in assessing the risks of cloud usage
+- **Cloud Security Posture Management (CSPM)**: identifies and remediates risk by automating visibility, uninterrupted monitoring, threat detection, and remediation workflows searching for misconfigurations across cloud environments and infrastructure such as Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS); these tools can also perform incident response, remediation recommendations, and compliance monitoring
 - **Code**: cryptographic systems of symbols that operate on words or phrases and are sometimes secret, but don't always provide confidentiality
 - **Collision**: occurs when a hash function generates the same output for different inputs
 - **Cryptanalysis**: study of techniques for attempting to defeat cryptographic methods and generally information security services; Cryptanalysis is the process of transforming or decoding communications from non-readable to readable format without having access to the real key; two major types of cryptanalysis: cryptanalytic attacks, and cryptographic attacks
@@ -149,7 +150,7 @@ You may find this domain to be more technical than others, and if you have exper
     - When working with third parties, especially with cloud providers, each entity needs to understand their portion of the shared responsibility of performing work operations and maintaining security; this is often referenced as the **cloud shared responsibility model**
 
 - 3.1.11 Secure access service edge
-  - **Secure Access Service Edge (SASE)**: a cloud-delivered framework that brings together networking and security functions into a unified platform, integrating capabilities like Software-Defined Wide Area Networking (SD-WAN), Secure Web Gateway (SWG), Access Security Broker (CASB), Firewall-as-a-Service (FWaaS), and Zero Trust Network Access (ZTNA); SASE aims to:
+  - **Secure Access Service Edge (SASE)**: a cloud-delivered framework that brings together networking and security functions into a unified platform, integrating capabilities like Software-Defined Wide Area Networking (SD-WAN), Secure Web Gateway (SWG), Cloud Access Security Broker (CASB), Firewall-as-a-Service (FWaaS), and Zero Trust Network Access (ZTNA); SASE aims to:
     - Address traditional or legacy security mode and architecture limitations by eliminating blind spots and maintaining enterprise-wide protection via continuous monitoring of user behavior and network conditions
     - Securing remote access associated with remote and hybrid work models by providing granular access controls and identity-based authentication, where every user and device must be authenticated and authorized for resources access
     - Enhancing cloud adoption by integrating on-premise and cloud and providing control visibility via cloud
@@ -427,7 +428,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - **Serverless architecture** (AKA **function as a service (FaaS)**): cloud computing where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the CSP
     - Note that FaaS is a subcategory of PaaS
     - Applications developed on serverless architecture are similar to microservices, and each function is created to operate independently and autonomously
-    - A serverless model, as in other CSP models, is a shared security model,and your org and the CSP share security responsibility
+    - A serverless model, as in other CSP models, is a shared security model, and your org and the CSP share security responsibility
 
 - 3.5.12 Embedded systems
   - **Embedded systems**: any form of computing component added to an existing mechanical or electrical system for the purpose of providing automation, remote control, and/or monitoring; usually including a limited set of specific functions
@@ -549,7 +550,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - Elliptical Curve Cryptography (EEC): elliptic curve algorithm depends on the elliptic curve discrete logarithm problem and provides more security than other algorithms when both are used with keys of the same length
   - **Quantum cryptography**: quantum computing is a newer and advanced type of technology with the promise of future power to enhance fields like AI, encryption, medicine, and science; classical computing uses electrical or optical on/off impulses representing 0s and 1s, and quantum computing's power lies in harnessing quantum mechanical principles allowing qubits (quantum bits) to represent both 0 and 1 simultaneously and multidimensionally
     - **Quantum supremacy**: the potential for quantum computing to easily resolve hard problems (e.g. factoring large integers and solving discrete logarithms) rendering algorithms like RSA and Diffie-Hellman insecure
-    - **Post-quantum cryptography (PQC)**: it's difficult to estimate when  quantum computing will render current encryption methods irrelevant (or even possibly if it already has); Harvest Now, Decrypt later (HDNL) is the threat of adversarial interception and storing of encrypted data, with the intent of using quantum computers to decrypt it in the future;
+    - **Post-quantum cryptography (PQC)**: it's difficult to estimate when quantum computing will render current encryption methods irrelevant (or even possibly if it already has); Harvest Now, Decrypt later (HDNL) is the threat of adversarial interception and storing of encrypted data, with the intent of using quantum computers to decrypt it in the future
       - security professionals need to consider the useful time period of currently encrypted data, and take steps to begin incorporating PQC-safe algorithms
   - Check out [Practical Cryptography for Developers](https://github.com/nakov/Practical-Cryptography-for-Developers-Book/blob/master/encryption-symmetric-and-asymmetric.md) for a deeper dive
 
@@ -850,7 +851,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 ## [3.10](#310-manage-the-information-system-lifecycle-osg-10-chpt-10) Manage the information system lifecycle (OSG-10 Chpt 10)
 
-- The Information System Lifecycle: the entire lifespan of a system, from initial concept to eventual decommission, which includes the components below. Note that this Information System lifecycle is very similar (with the exception of integration) to the Software Development Lifecycle (SDLC):
+- The Information System Lifecycle: the entire lifespan of a system, from initial concept to eventual decommission, which includes the components below; note that this Information System lifecycle is very similar (with the exception of integration) to the Software Development Lifecycle (SDLC):
   - Initiation/Requirements
   - Architecture & Design
   - Development

@@ -80,4 +80,4 @@ Note: You are advised to do your own analysis to determine what will be helpful 
 - [Domain 6 - Security Assessment and Testing](CISSP-Domain-6-2024+Objectives.md)
 - [Domain 7 - Security Operations](CISSP-Domain-7-2024+Objectives.md)
 - [Domain 8 - Software Development Security](CISSP-Domain-8-2024+Objectives.md)
-- [Domain Objectives combined PDF download](https://balancedsec.gumroad.com/)
+- [Domain Objectives Combined PDF Download](https://balancedsec.kit.com/f2fdda47cc)

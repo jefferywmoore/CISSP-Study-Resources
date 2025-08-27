@@ -205,7 +205,6 @@ Networking can be one of the more complex exam topics; if you have a networking 
           - note: in the OSI model, TLS operates on four layers: Application, Presentation, Session, and Transport; in the TCP/IP model, it operates only on the Transport layer
         - BGP: Border Gateway Protocol - used to exchange routing and reachability information between routers (looking at available paths, picking the best)
         - Segmentation, sequencing, and error checking occur at the Transport layer
-
     - Network Layer (3)
       - Responsible for logical addressing, and providing routing or delivery guidance (but not necessarily verifying guaranteed delivery), manages error detection and traffic control
       - **Internet Control Message Protocol (ICMP)**: allows network devices to send error and control messages and provides Ping and Traceroute utilities
@@ -247,7 +246,6 @@ Networking can be one of the more complex exam topics; if you have a networking 
         - PPTP: Point-to-Point Tunneling Protocol - used for creating VPNs; does not include encryption/authentication and considered obsolete
         - PPP: Point-to-Point Protocol - encapsulates IP traffic so that it can be transmitted over analog connections and provides authentication, encryption, and compression; replaced SLIP; authentication protocols include Password Authentication Protocol (PAP), Challenge-Handshake Authentication protocol (CHAP), and Extensible Authentication Protocol (EAP)
         - RARP: Reverse Address Resolution Protocol - translates a MAC address to an IP address
-
     - Physical Layer (1)
       - Converts a frame into bits for transmission/receiving over the physical connection medium
       - Network hardware devices that function at layer 1 include NICs, hubs, repeaters, concentrators, amplifiers
@@ -407,7 +405,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - 4.1.8 Traffic flows (e.g. north-south, east-west)
   - Traffic patterns (in, through, and out of a datacenter) are crucial considerations when designing network architecture, because they affect the choice of network topologies, routing protocols, and security strategies
   - **North/South (north-south) traffic**: the flows of data in and out of the datacenter, between the datacenter and a customer; traffic between clients on the Internet and servers within the datacenter (northbound), or vice versa (southbound); in SDN terms, data flowing up (northbound) and down (southbound) the stack of data/control/application planes
-  - **East/West (east-west) traffic**: the flows data within the datacenter itself, or between interconnected datacenters; network traffic that is within a data, control, or application plane; within a data center or between geo dispersed locations; the data flowing leterally between servers, storage systems, and applications within the datacenter or across datacenters
+  - **East/West (east-west) traffic**: the data flows within the datacenter itself, or between interconnected datacenters; network traffic that is within a data, control, or application plane; within a data center or between geo dispersed locations; the data flowing laterally between servers, storage systems, and applications within the datacenter or across datacenters
 
 - 4.1.9 Physical segmentation (e.g. in-band, out-of-band, air-gapped)
   - **In-band management**: managing network devices through the same network that they are used to transmit user or application data; this is ultimately less secure, because there is no physical segmentation
