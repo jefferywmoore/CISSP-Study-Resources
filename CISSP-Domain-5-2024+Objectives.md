@@ -198,7 +198,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - password managers make it much easier to create strong and different passwords for each system, without the need to memorize them
     - the downside of course is that if your master password is compromised, the attacker will have access to all your systems
 
-- 5.2.7 Singe Sign On (SSO)
+- 5.2.7 Single Sign On (SSO)
   - **Single Sign-On (SSO)**: a centralized access control technique allowing a subject to be authenticated once on a system and access multiple resources without authenticating again
   - Advantages of using SSO include:
     - reduces the number of passwords that users need to remember, and they are less likely to write them down
@@ -209,7 +209,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - **directory service**: a centralized database that includes information about subjects and objects, including authentication data
     - many directory services are based on the Lightweight Directory Access Protocol (LDAP)
 
-- 5.2.8 Just-In_time (JIT)
+- 5.2.8 Just-In-time (JIT)
   - Federated identity solutions that support just-in-time (JIT) provisioning automatically create the relationship between two entities so that new users can access resources
   - JIT provisioning creates user accounts on third-party sites the first time a user logs into the site; JIT reduces the admin workload
   - A JIT solution creates the connection without any administrative intervention

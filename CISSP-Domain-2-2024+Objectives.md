@@ -43,7 +43,7 @@
 - 2.1.2 Asset Classification
   - It's important to identify and classify assets, such as systems, mobile devices etc.
   - Owners are accountable for an asset and protecting its value
-  - **Asset Classification**: assigning assets the level of protection required based on their value to the org; assets require identified owner to be classified and protected adequately; derived from compliance mandates, the process of recognizing organizational impacts if information suffers any security compromise (whether to confidentiality, integrity, availability, non-repudiation, authenticity, privacy, or safety)
+  - **Asset Classification**: assigning assets the level of protection required based on their value to the org; assets require an identified owner to be classified and protected adequately; derived from compliance mandates, the process of recognizing organizational impacts if information suffers any security compromise (whether to confidentiality, integrity, availability, non-repudiation, authenticity, privacy, or safety)
   - Asset classifications should match data classification, i.e. if a computer is processing top secret data, the computer should be classified as a top secret asset
   - **Clearance**: relates to access of certain classification of data or equipment, and who has access to that level or classification
   - A **formal access approval process** should be used to change user access; the process should involve approval from the data/asset owner, and the user should be informed about rules and limits
@@ -69,12 +69,12 @@
 - **Storage**: data storage and associated media are based on the classification of the data; define storage locations and procedures by storage type; use physical locks for paper-based media, and encrypt electronic data
 - **Destruction**: retention and destruction of data should be based on data classification and archiving policies; destroy data no longer needed by the organization; policy should define acceptable destruction methods by type and classification ([see NIST SP-800-88 for details](https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final))
   - **Erasing**: usually refers to a delete operation on media, leaving data remanence
-  - **Clearing**: removal of sensitive data from a storage device such that there is assurance data may not be reconstructed using normal functions or software recovery or software recovery utilities; over-writing existing data; it's not very strong, and there's a chance that the data could be brought back
-  - **Purging**: removal of sensitive data from a system or device with the intent that data cannot be reconstructed by any known technique; usually refers to multiple clearing passes combined with other tools; often means getting rid of data in more reliable ways, like using a strong magnetic field (degaussing) to destroy data on storage devices (see below) -- although not considered acceptable for top secret data; writing a series of 1s and 0s over media multiple times is a purging technique
+  - **Clearing**: removal of sensitive data from a storage device such that there is assurance data may not be reconstructed using *normal functions* of software recovery or software recovery utilities; over-writing existing data with a pattern; note that with this method, there's a chance that the data could be brought back by using advanced techniques
+  - **Purging**: removal of sensitive data from a system or device with *the intent* that data cannot be reconstructed by any known technique; purging is a more vigorous version of clearing; usually refers to multiple clearing passes combined with other tools (writing a series of 1s and 0s over media multiple times is a purging technique); often means getting rid of data in more reliable ways, like using a strong magnetic field (degaussing) to destroy data on storage devices (see below) -- although not considered acceptable for top secret data, and not guaranteed to be secure against advanced techniques
   - **Destruction**: includes physically destroying media through shredding, burning, pulverizing, or incinerating; physical destruction is used for SSD/electronic components, or in combination with other less-secure methods; destruction methods include incineration, crushing, shredding, and disintegration and also includes the use of strong encryption to logically destroy data; a surer way than even purging
   - **Data Remanence**: data remaining on media after typical erasure; to ensure all remanence is removed, the following tools can help:
-  - **Degaussing**: used on magnetic media, removes data from tapes and magnetic hard drives; no affect on optical media or SSDs
-  - **Cryptographic Erasure** (AKA **crypto shredding**): using strong encryption to encrypt data, and then basically destroying encryption key; may be only secure method for cloud storage; again, crypto shredding is the best method for dealing with cloud data remanence
+    - **Degaussing**: used on magnetic media, removes data from tapes and magnetic hard drives; no affect on optical media or SSDs
+    - **Cryptographic Erasure** (AKA **crypto shredding**): using strong encryption to encrypt data, and then basically destroying encryption key; crypto shredding is the best method for dealing with cloud data remanence
   - **File carving**: computer forensics technique that recovers files from a storage device's raw data based on their structure and content, often used to recover files that are not indexed by the file system, such as those that are deleted, formatted, or encrypted; file carving is also a good method for recovering files if an entire directory is missing or corrupt
 
 ## [2.3](#23-provision-information-and-assets-securely-osg-10-chpt-16) Provision information and assets securely (OSG-10 Chpt 16)
@@ -85,20 +85,19 @@
 - **Least privilege**: a principle stating that subjects are granted only the privileges necessary to perform assigned work tasks and no more; a person is given only absolutely needed access, and nothing more
 
 - 2.3.1 Information and asset ownership
-  - **Data owner**: the person who has ultimate organizational responsibility for data; usually sr. manager (CEO,president, dept. head); data owners typically delegate data protection tasks to others in the org; the data owner has to make sure that appropriate security controls are in place to protect the data
+  - **Information and Asset owner**: assigning ownership is a key requirement for protection accountability; the owner is the person or role who has ultimate organizational accountability for protection of the asset; usually a Sr. Manager (CEO,president, dept. head); owners typically delegate data protection tasks to others in the org; the asset owner needs to make sure that appropriate security controls are in place
 
 - 2.3.2 Asset inventory (e.g., tangible, intangible)
   - **Inventory**: complete list of items
   - **Tangible assets**: include hardware and software assets owned by the company
   - **Intangible assets**: things like patents, copyrights, a company’s reputation, and other assets representing potential revenue
-    - an org should keep track of intangible assets, like intellectual property, patents, trademarks, and company’s reputation, and copyrights to protect them
+    - an org should keep track of intangible assets, like intellectual property, patents, trademarks, the company’s reputation, and copyrights to protect them
     - note: patents in the US are valid for 20 years
 
 - 2.3.3 Asset management
-  - Asset management refers to managing both tangible and intangible assets; this starts with inventories of assets, tracking the assets, and taking additional steps to protect them throughout their lifetime
+  - Asset management refers to managing both tangible and intangible assets; this starts with asset inventory, and includes tracking the assets, and taking additional steps to protect them throughout their lifetime
   - The primary goal of asset management is to prevent losses (by tracking and protecting assets)
-  - **Accountability**: ensures account management; only authorized users are accessing a system and using it properly
-  - **Hardware assets**: IT resources such as computers, servers, routers, switches and peripherals
+  - **Hardware assets**: IT resources such as computers, servers, routers, switches, and peripherals
     - use an automated configuration management system (CMS) to help with hardware asset management
     - use barcodes, RFID tags to track hardware assets
   - **Software assets**: operating systems and applications
@@ -108,9 +107,15 @@
 
 ## [2.4](#24-manage-data-lifecycle-osg-10-chpt-5) Manage data lifecycle (OSG-10 Chpt 5)
 
+- Data Lifecycle: the comprehensive process that data undergoes, from its creation to its eventual disposal; as a reference, take a look at this version of the data lifecycle from [the CSA](https://cloudsecurityalliance.org/artifacts/cybersecurity-and-the-data-lifecycle) as a baseline
+- Here is a slightly modified version:
+  - Creation: generate or alter data
+  - Classify & Store: ensure the data is classified and stored according to classification, and with appropriate data at rest security controls
+  - Use: data is protected during transmission/motion, and against improper exfiltration or sharing during use
+  - Archived: data is placed in long-term storage with appropriate data-at-rest protection
+  - Destroyed: data is permanently destroyed based on it's classificaiton, using the method (see above) required to ensure it can't be recovered
 - 2.4.1 Data roles (i.e., owners, controllers, custodians, processors, users/subjects)
   - **System owner**: controls the computer storing the data; usually includes software and hardware configurations and support services (e.g. cloud implementation)
-    - data owner is the person responsible for classifying, categorizing, and permitting access to the data; the data owner is the person who is best familiar with the importance of the data to the business
     - system owners are responsible for the systems that process the data
     - system owner is responsible for system operation and maintenance, and associated updating/patching as well as related procurement activities
     - per [NIST SP 800-18](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-18r1.pdf), information **system owner** has the following responsibilities:
@@ -120,10 +125,11 @@
       - ensures that system users and support personnel receive the requisite security training
       - updates the system security plan as required
       - assists in the identification, implementation, and assessment of the common security controls
-  - **Data controller**: decide what data to process and how to process it
+  - **Data owner**: the person responsible for classifying, categorizing, and permitting access to the data; the data owner is the person who is best familiar with the importance of the data to the business; typically the CEO, president, or department head
+  - **Data controller**: decides what data to process and how to process it
     - the data controller is the person or entity that controls the processing of the data - deciding what data to process, why this data should be processed, and how it is processed
     - e.g. a company that collects personal information on employees for payroll is a data controller (but, if they pass this info to a third-party to process payroll, the payroll company is the data processor, see below)
-  - **Data processor**: an entity *working* on behalf (or the direction) of the data controller, that processes PII; they have a responsibility to protect the privacy of the data and not use it for any purpose other than directed by the data controller; generally, a data processor is any system used to process data
+  - **Data processor**: an entity *working on behalf* (or the direction) of the data controller, that processes PII; they have a responsibility to protect the privacy of the data and not use it for any purpose other than directed by the data controller; generally, a data processor is any system used to process data
     - processing data on behalf of the Data Controller while ensuring quality, validation, and compliance, safe custody, transport, storage of the data and implementation of business rules
     - a controller can hire a third party to process data, and in this context, the third party is the data processor; data processors are often third-party entities that process data for an org at the direction of the data controller
     - note GDPR definition: "a natural or legal person, public authority, agency, or other body, which processes personal data solely on behalf of the data controller"
@@ -145,11 +151,11 @@
   - The **data collection guideline**: if the data doesn't have a clear purpose for use, don't collect it, and don't store it; this is why many privacy regulations mention limiting data collection
 - 2.4.3 Data location
   - **Data location**: in this context, refers to the location of data backups or data copies
-  - If a company's system is on-prem, keeps data on-site, but regularly backups up data, best practice is to keep a backup copy on site and backup copy off-site
+  - If a company's system is on-prem, keeps data on-site, but regularly backups up data; best practice is to keep a backup copy on-site and off-site
   - Consider distance between data/storage locations to mitigate potential mutual (primary and backup) damage risk
 
 - 2.4.4 Data maintenance
-  - **Data maintenance**: managing data through the data lifecycle (creation, usage, retirement); data maintenance is the process (often automated) of making sure the data is available (or not available) based on where it is in the lifecycle
+  - **Data maintenance**: managing data through the data lifecycle (see above); data maintenance is the process (often automated) of making sure the data is available (or not available) based on where it is in the lifecycle
   - Ensuring appropriate asset protection requires that sensitive data be preserved for a period of not less than what is business-required, but for no longer than necessary
   - Encrypt sensitive data
   - Safeguard assets via basic security controls to enforce appropriate levels of confidentiality, integrity and availability and act per security policies, standards, procedures and guidelines
@@ -161,7 +167,7 @@
   - Three fundamental retention policy questions:
     - **how to retain**: data should be kept in a manner that makes it accessible whenever required; take taxonomy (or the scheme for data classification) into account
     - **how long to retain data**: general guidelines for business data is 7 years (but can vary by country/region/regulation)
-    - **what data**: to retain per org requirements
+    - **what data**: retain per org requirements
 
 - 2.4.6 Data remanence
   - **Data remanence**: the data remaining on media after the data is supposedly erased
@@ -174,7 +180,7 @@
   - Destroy sensitive data when it is no longer needed
   - An org's security or data policy should define the acceptable methods of destroying data based on the data's classification
   - a degausser can be used on a hard disk drives/magnetic media
-  - the best SSD wiping method is destruction -- even when using manufacturers SSD wiping tools, data can remain, and therefore the best SSD wipe method is destruction
+  - the best SSD wiping method is destruction -- even when using manufacturers SSD wiping tools, data can remain
   - **Defensible destruction**: eliminating data using a controlled, legally defensible and regulatory-compliant way
 
 ## [2.5](#25-ensure-appropriate-asset-retention-eg-end-of-life-eol-end-of-support-osg-10-chpt-5) Ensure appropriate asset retention (e.g. End-of-Life (EOL), End-of-Support) (OSG-10 Chpt 5)

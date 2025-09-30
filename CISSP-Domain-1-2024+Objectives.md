@@ -2,10 +2,10 @@
 
 - This domain is one of the largest with a weighting of 16%; it is also very much foundational for most of the other domains, so give it the associated time in preparation
 
-- **Glass-Steagall Act**: passed in 1933 and separated investment and commercial banking activities in response to involvement in stock market investment
+- **Glass-Steagall Act**: passed in 1933 and separated investment and commercial banking activities and created the Federal Deposit Insurance Corporation (FDIC)
   - The Gramm-Leach-Bliley Act eliminated the Glass-Steagall Act's restrictions against affiliations between commercial and investment banks in 1999
-  - **Security Control Assessment (SCA)**: an evaluation process of the different type of controls such as management, operational and security control within an information system, with the purpose of validation of the requirement of a control, correct implementation, operationally being followed as intended, and result is as desired
-    - basically a formal evaluation of a defined set of controls against a baseline or reliability expectation; may be conducted with the Security Test and Evaluation (ST&E); NIST Special Publication 800-53A Security and Privacy Controls for Federal Information Systems and Organizations ensure the security requirements and enforcement of appropriate security controls
+  - **Security Control Assessment (SCA)**: an evaluation that tests if an organization's security controls (technical, administrative, and physical) are implemented correctly, functioning as intended and meeting security requirements
+    - basically a formal evaluation of a defined set of controls against a baseline or reliability expectation; may be conducted with the Security Test and Evaluation (ST&E); [NIST Special Publication 800-53A Security and Privacy Controls for Federal Information Systems and Organizations](https://www.nist.gov/privacy-framework/nist-sp-800-53a) ensure the security requirements and enforcement of appropriate security controls
     - goals of SCA:
       - ensure the effectiveness of the security mechanisms
       - evaluate the quality and thoroughness of the risk management processes
@@ -76,7 +76,6 @@
     - Auditing: recording a log of the events and activities related to the system and subjects
     - Accountability (aka accounting, aka principle of access control): proper identification, authentication, and authorization that is logged and monitored; access control process which records info about attempts by all entities to access resources; reviewing log files to check for compliance and violations in order to hold subjects accountable for their actions, especially violations of organizational security policy
   
-
 ## [1.3](#13-evaluate-apply-and-sustain-security-governance-principles-osg-10-chpt-1) Evaluate, apply, and sustain security governance principles (OSG-10 Chpt 1)
 
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies align with business goals, and that they are comprehensive and consistent across the organization
@@ -92,7 +91,7 @@
     - A strategic plan should include a risk assessment
   - **Tactical Plan**: mid-term plan (1 year or less) developed to provide more details on accomplishing the goals set forth in the strategic plan
   - **Operational Plan**: a short-term, highly detailed plan based on strategic or tactical plans
-    - Strategy, goals, missions,and objectives — support each other in a hierarchy
+    - Mission, strategy, goals, and objectives — support each other in a hierarchy
     - **Objectives**: are closest to the ground-level and represent small efforts to help you achieve a mission
     - **Missions**: represent a collection of objectives, and one or more missions lead to goals; when you reach your goals, you are achieving the strategy
   - A security framework must closely tie to mission and objectives, enabling the business to complete its objectives and advance the mission while securing the environment based on risk tolerance
@@ -101,7 +100,7 @@
   - Security governance should address every aspect of an org, including organizational processes of acquisitions, divestitures, and governance
   - Be aware of the risks in acquisitions (since the state of the IT environment to be integrated is unknown, due diligence is key) and divestitures (how to split the IT infrastructure and what to do with identities and credentials)
   - Understand the value of governance committees (vendor governance, project governance, architecture governance, etc.)
-  - Executives, managers and appointed individuals meet to review architecture, projects and incidents (security or otherwise),and provide approvals for new strategies or directions
+  - Executives, managers and appointed individuals meet to review architecture, projects and incidents (security or otherwise), and provide approvals for new strategies or directions
     - The goal is a fresh set of eyes, often eyes that are not purely focused on information security
   - When evaluating a third-party for your security integration, consider the following:
     - on-site assessment
@@ -127,8 +126,8 @@
           - **ISO 27002:2022**: provides detailed implementation guidance for controls in ISO 27001
           - **ISO 27017:2015**: provides guidelines for information security controls applicable to the provision and use of cloud services
           - **ISO 27018:2019**: commonly accepted controls and guidelines for protecting PII in the cloud (concent, control, transparency, communication, independent, yearly audit)
-    - **[NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)**: built around six core functions: govern, identify, protect, detect, respond, and recover; provides guidance to industry, government agencies, and other orgs to improve their ability to prevent, detect, and respond to cyber attacks, and manage cybersecurity risks
-      - CFS was designed for commercial orgs and critical infrastructure and CSF 2.0 consists of six functions:
+    - **[NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)**: built around six core functions providing guidance to industry, government agencies, and other orgs to improve their ability to prevent, detect, and respond to cyber attacks, and manage cybersecurity risks
+      - CFS was designed for commercial orgs and critical infrastructure and CSF 2.0 consists of these six functions:
         - govern
         - identify
         - protect
@@ -147,7 +146,7 @@
         - tailored to enterprise needs
         - end-to-end governance system
     - **[Sherwood Applied Business Security Architecture (SABSA)](https://sabsa.org/sabsa-executive-summary/)**: a framework and methodology for developing business-driven, risk and opportunity-focused architectures for security and risk management
-      - SABSA is comprised of a series of integrated frameworks, models, methods and processes, used independently or as an holistic integrated enterprise solution, including:
+      - SABSA is comprised of a series of integrated frameworks, models, methods and processes, used independently or as a holistic integrated enterprise solution, including:
         - Business Requirements Engineering Framework (known as Attributes Profiling)
         - Risk and Opportunity Management Framework
         - Policy Architecture Framework
@@ -183,7 +182,7 @@
       - disseminating the information to the organization
   - **Due care**: practicing the individual activities that maintain the due diligence effort; due care is about your legal responsibility within the law or within org policies to implement your org’s controls, follow security policies, do the right thing and make reasonable choices
   - Security documentation is the security policy
-  - After establishing a framework for governance, security awareness training should be implemented, including all new hires, who complete the security awareness training as they come on board, and existing employees who should re-certify regularly (typically yearly)
+  - After establishing a framework for governance, security awareness training should be implemented, making sure that all new hires receive the training as then on-board, and all existing employees re-certify regularly (typically yearly)
   - Due care is the responsible protection of assets
   - Due diligence is the ability to prove due care
 
@@ -196,18 +195,19 @@
       - accessing a computer without authorization, or exceeding authorized access
       - obtaining info illegally (e.g. from gov or financial institutions)
       - committing fraud via computer/system
-      - causing damage of DoS
+      - causing damage associated with DoS
       - trafficking in passwords or access creds
       - threatening to damage a computer, or to extort money/value
   - **National Information Infrastructure Protection Act**: passed in 1996 as an additional set of CFAA amendments including coverage of computer systems used in international commerce, protections for additional national infrastructure, and treating as a felony any act that causes damage to critical national infrastructure
   - FISMA (see below)
   - California's SB 1386 implemented the first statewide requirement to notify individuals of a breach of their personnel information; all other states eventually followed suit with similar laws
-  - Currently, federal law only requires notification of individuals when a HIPAA-covered entity breaches their protected health information (likely to soon change)
+  - Federal breach notification requirements are not governed by a single, comprehensive law but are instead determined by a patchwork of laws covering specific industries; organizations must also comply with state laws, many of which are stricter than federal regulations
+  - The HIPAA Breach Notification Rule requires covered entities and their business associates to notify affected individuals, the Department of Health and Human Services (HHS), and potentially the media following a breach of unsecured protected health information (PHI) within 60 days
   - Before an org expands to other countries, perform due diligence to understand legal systems and what changes might be required to the way that data is handled and secured
   - In particular, be familiar with:
     - **Council of Europe Convention on Cybercrime**: a treaty signed by many countries that establishes standards for cybercrime policy
     - Laws about data breaches, including notification requirements
-    - In the US, the **Health Information Technology for Economic and Clinical Health (HITECH)** Act requires notification of a data breach in some cases, such as when the personal health information was not protected as required by HIPAA
+    - In the US, the **Health Information Technology for Economic and Clinical Health (HITECH)** Act expanded HIPAA's breach reporting requiring notification of a data breach in some cases, such as when the personal health information was not protected as required by HIPAA
       - Under the HITECH Breach Notification Rule, HIPAA-covered entities that experience a data breach must notify affected individuals, the Secretary of Health and Human Services (HHS) and the media of the breach within 60 days of discovery, when more than 500 individuals are affected
     - GLBA (Gramm-Leach-Bliley Act) applies to insurance and financial orgs, requiring notification to federal regulators, law enforcement agencies and customers when a data breach occurs
     - Certain states also impose their own requirements concerning data breaches
@@ -221,7 +221,7 @@
   - **Patents**: provide protection to the creators of new inventions; a temporary monopoly for producing a specific item such as a toy, which must be novel and unique to qualify for a patent
     - **Utility**: protect the intellectual property rights of inventors
     - **Design**: cover the appearance of an invention and last for 15 years; note design patents don't protect the idea of an invention only its form, and are generally seen as weaker
-    - Software: area of on-going controversy; Google vs Oracle; given to a rise of "patent trolls"
+    - Software: area of on-going controversy; e.g. Google vs Oracle and giving to a rise of "patent trolls"
   - **Copyright**: protects original works of authorship, such as books, articles, poems, and songs; exclusive use of artistic, musical or literary works which prevents unauthorized duplication, distribution or modification
   - **Licensing**: a contract between the software producer and the consumer which limits the use and/or distribution of the software
   - **Trade Secrets**: trade secret laws protect the operating secrets of a firm; trade secrets are intellectual property that is critical to a business, and significant damage would result if it were disclosed to competitors or the public; the Economic Espionage Act imposes fines and jail sentences on someone found guilty of stealing trade secrets from a US corp
@@ -265,7 +265,7 @@
     - US-based companies must comply with lawful orders for data disclosure from foreign governments
     - Companies are provided a mechanism to challenge data requests
   - **Electronic Communication Privacy Act (ECPA)**: as amended, protects wire, oral, and electronic communications while those communications are being made, are in transit, and when they are stored on computers; makes it a crime to invade electronic privacy of an individual, and it broadened the Federal Wiretap Act
-  - **Electronic Espionage Act of 1996**: the EEA was enacted to address the threat of trade secret theft, misappropriations, or economic espionage by foreign entities changing the definitino of theft so it was no longer restricted by physical constraints
+  - **Electronic Espionage Act of 1996**: the EEA was enacted to address the threat of trade secret theft, misappropriations, or economic espionage by foreign entities changing the definition of theft so it was no longer restricted by physical constraints
   - **Family Education Rights and Privacy Act (FERPA)**: Grants privacy rights to students over 18, and the parents of minor students
   - **Fourth Amendment to the US Constitution**: the right of the people to be secure in their persons, houses, papers, effects against unreasonable search and seizure
   - **General Data Protection Regulation (GDPR)**: replaced Data Protection Directive (DPD), purpose is to provide a single, harmonized law that covers data throughout the EU
@@ -315,31 +315,31 @@
       - increased penalties for terrorism crimes and an expanded list of activities which would qualify for terrorism charges
 
 - 1.4.6 Contractual, legal, industry standards, and regulatory requirements
-  - Understand the difference between criminal, civil, and administrative law.
+  - Understand the difference between criminal, civil, and administrative law
     - **Criminal law**: protects society against acts that violate the basic principles we believe in; violations of criminal law are prosecuted by federal and state governments
     - **Civil law**: provides the framework for the transaction of business between people and organizations; violations of civil law are brought to the court and argued by the two affected parties
     - **Administrative law**: used by government agencies to effectively carry out their day-to-day business
   - **Compliance**: Organizations may find themselves subject to a wide variety of laws, and regulations imposed by regulatory agencies or contractual obligation
-    - **Payment Card Industry Data Security Standard (PCI DSS)** - governs the security of credit card information and is enforced through the terms of a merchant agreement between a business that accepts CC payments, and the bank that processes the business' transactions
+    - **Payment Card Industry Data Security Standard (PCI DSS)**: governs the security of credit card information and is enforced through the terms of a merchant agreement between a business that accepts CC payments, and the bank that processes the business' transactions
     - **Sarbanes-Oxley (SOX)**: governs publicly traded corps; financial systems may be audited to ensure security controls are sufficient to ensure compliance with SOX; requires top management to individually certify the accuracy of financial info
       - violations include criminal penalties
-    - **Gramm-Leach-Bliley Act (GLBA)** - affects banks, insurance companies, and credit providers; included a number of limitations on the types of information that could be exchanged even among subsidiaries of the same corp, and required financial institutions to provide written privacy policies to all their customers
-    - **Health Insurance Portability and Accountability Act (HIPAA)** - privacy and security regulations requiring strict security measures for hospitals, physicians, insurance companies, and other organizations that process or store private medical information about individuals; also clearly defines the rights of individuals who are the subject of medical records and requires organizations that maintain such records to disclose these rights in writing
+    - **Gramm-Leach-Bliley Act (GLBA)**: affects banks, insurance companies, and credit providers; included a number of limitations on the types of information that could be exchanged even among subsidiaries of the same corp, and required financial institutions to provide written privacy policies to all their customers
+    - **Health Insurance Portability and Accountability Act (HIPAA)**: privacy and security regulations requiring strict security measures for hospitals, physicians, insurance companies, and other organizations that process or store private medical information about individuals; also clearly defines the rights of individuals who are the subject of medical records and requires organizations that maintain such records to disclose these rights in writing
       - includes criminal penalties for violations
-    - **Federal Information Security Management Act (FISMA)** - requires federal agencies to implement an information security program that covers the agency's operations and contractors; the Federal Information Security Modernization Act of 2014 amended the 2002 version of FISMA by centralizing federal cybersecurity responsibility within the Department of Homeland Security (DHS) except for defense-related cybersecurity and scope of the DNI (Director of National Intelligence); teh Cybersecurity Enhancement Act of 2014 charged NIST with coordination of voluntary nation-wide cybersecurity standards
-    - **Electronic Communications Privacy Act (ECPA)** - in short, makes it a crime to invade the electronic privacy of an individual; passed in 1986 to expand and revise federal wiretapping and electronic eavesdropping provisions, making it a crime to intercept or procure electronic communications, and includes important provisions that protect a person’s wire and electronic communications from being intercepted by another private individual
-    - **Digital Millennium Copyright Act (DMCA)** - prohibits the circumvention of copyright protection mechanisms placed in digital media and limits the liability of internet service providers for the activities of their users
+    - **Federal Information Security Management Act (FISMA)**: requires federal agencies to implement an information security program that covers the agency's operations and contractors; the Federal Information Security Modernization Act of 2014 amended the 2002 version of FISMA by centralizing federal cybersecurity responsibility within the Department of Homeland Security (DHS) except for defense-related cybersecurity and scope of the DNI (Director of National Intelligence); the Cybersecurity Enhancement Act of 2014 charged NIST with coordination of voluntary nation-wide cybersecurity standards
+    - **Electronic Communications Privacy Act (ECPA)**: in short, makes it a crime to invade the electronic privacy of an individual; passed in 1986 to expand and revise federal wiretapping and electronic eavesdropping provisions, making it a crime to intercept or procure electronic communications, and includes important provisions that protect a person’s wire and electronic communications from being intercepted by another private individual
+    - **Digital Millennium Copyright Act (DMCA)**: prohibits the circumvention of copyright protection mechanisms placed in digital media and limits the liability of internet service providers for the activities of their users
 
 ## [1.5](#15-understand-requirements-for-investigation-types-ie-administrative-criminal-civil-regulatory-industry-standards-osg-10-chpt-19) Understand requirements for investigation types (i.e., administrative, criminal, civil, regulatory, industry standards) (OSG-10 Chpt 19)
 
-- An investigation will vary based on incident type; e.g. for a financial services company, a financial system compromise might cause a regulatory investigation; a system breach or website compromise might cause a criminal investigation; each type of investigation has special considerations:
+- An investigation will vary based on incident type, e.g. for a financial services company, a financial system compromise might cause a regulatory investigation; a system breach or website compromise might cause a criminal investigation; each type of investigation has special considerations:
   - **Administrative**: internal investigations usually review operational issues or violations of an organization's policies; often tied to HR scenarios, an admin investigation could be part of technical troubleshooting; since these investigations are for internal purposes, they usually have the lowest formality and standards in terms of documentation or procedures compared to other types; admin investigations often focus on finding the root cause of operational issues
   - **Criminal**: a criminal investigation occurs when a crime has been committed and you are working with a law enforcement agency to convict the alleged perpetrator; in such a case, it is common to gather evidence for a court of law, and to share the evidence with the defense
     - You need to gather and handle the information using methods that ensure the evidence can be used in court
     - In a criminal case, a suspect must be proven guilty beyond a reasonable doubt; a higher bar compared to a civil case, which is showing a preponderance of evidence
   - **Civil**: in a civil case, one person or entity sues another, e.g. one company could sue another for a trademark violation
     - A civil case is typically about monetary damages, and doesn't involve criminality
-    - In a civil case, a preponderance of evidence is required to secure a victory, differing from criminal cases, where a suspect is innocent until proven guilty beyond a reasonable doubt; evidence collection standards for civil investigations usually are usually lower than criminal cases
+    - In a civil case, a preponderance of evidence is required to secure a victory, differing from criminal cases, where a suspect is innocent until proven guilty beyond a reasonable doubt; evidence collection standards for civil investigations usually are lower than criminal cases
   - **Industry Standards**: an industry standards investigation is intended to determine whether an org is adhering to a specific industry standard or set of standards, such as those associated with PCI DSS; because standards are not laws, these investigations can be related to contractual compliance, and an org may be required to participate in audits or assessments
     - Because industry standards represent well-understood and widely implemented best practices, many orgs try to adhere to them even when they are not required to do so in order to improve security, and reduce operational and other risks
   - **Regulatory**: A regulatory investigation is conducted by a regulatory body, such as the Securities and Exchange Commission (SEC) or Financial Industry Regulatory Authority (FINRA), against an org suspected of an infraction
@@ -352,16 +352,16 @@
   - **Policy**: docs created by and published by senior management describing organizational strategic goals
   - A security policy is a document that defines the scope of security needed by the org, discussing assets that require protection and the extent to which security solutions should go to provide the necessary protections
   - It defines the strategic security objectives, vision, and goals and outlines the security framework of the organization
-- **Acceptable Use Policy**: the AUP is a commonly produced document that exists as part of the overall security documentation infrastructure
+- **Acceptable Use Policy (AUP)**: the AUP is a commonly produced document that exists as part of the overall security documentation infrastructure
   - This policy defines a level of acceptable performance and expectation of behavior and activity; failure to comply with the policy may result in job action warnings, penalties, or termination
 - Security Standards, Baselines and Guidelines: once the main security policies are set, the remaining security documentation can be crafted from these policies
   - **Policies**: these are high-level documents, usually written by the management team; policies are mandatory, and a policy might provide requirements, but not the steps for implementation
-  - **Standards**: specific mandates explicitly stating expectations of performance/conformance; more descriptive than policies, standards define compulsory requirements for the homogenous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
+  - **Standards**: specific mandates explicitly stating expectations of performance/conformance; more descriptive than policies, standards define compulsory requirements for the homogeneous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
   - **Baselines**: defines a minimum level of security that every system throughout the organization must meet; baselines are usually system specific and refer to industry / government standards
     - e.g. a baseline for  server builds would be a list of configuration areas that should be applied to every server that is built
     - A Group Policy Object (GPO) in a Windows network is sometimes used to comply with standards; configuration management solutions can also help you establish baselines and spot configurations that are not in alignment
   - **Guidelines**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users
-    - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not compulsory; suggested practices and expectations of activity to best accomplish tasks and goals
+    - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not compulsory, but are suggested practices and expectations of activity to best accomplish tasks and goals
   - **Procedures** (AKA Standard Operating Procedure or SOP): detailed, step-by-step how-to doc that describes the exact actions necessary to implement a specific security mechanism, control, or solution
 
 ## [1.7](#17-identify-analyze-assess-prioritize-and-implement-business-continuity-bc-requirements-osg-10-chpt-3) Identify, analyze, assess, prioritize, and implement Business Continuity (BC) requirements (OSG-10 Chpt 3)
@@ -384,7 +384,7 @@
       - There are two primary subtasks/phases involved in continuity planning:
         - **Strategy development**: in this phase, the BCP team determines which risks they will mitigate
         - **Provisions and processes**: in this phase, the team designs mechanisms and procedures that will mitigate identified risks
-      - The goal of this process is to create a **continuity of operations plan** (COOP), which focuses on how an org will carry out critical business functions starting shortly after a disruption occurs and extending up to one month of sustained operations
+      - The goal of this process is to create a **continuity of operations plan (COOP)**, which focuses on how an org will carry out critical business functions starting shortly after a disruption occurs and extending up to one month of sustained operations
     - **Approval and implementation**:
       - BCP plan now needs sr. management buy-in (should be endorsed by the org's top exec)
       - BCP team should create an implementation schedule, and all personnel involved should receive training on the plan
@@ -420,14 +420,14 @@
 
 ## [1.8](#18-contribute-to-and-enforce-personnel-security-policies-and-procedures-osg-10-chpt-2) Contribute to and enforce personnel security policies and procedures (OSG-10 Chpt 2)
 
-- People are often considered the weakest element in any security solution; no matter what physical or logical controls are deployed, humans can discover ways of to avoid them, circumvent/subvert them, or disable them
+- People are often considered the weakest element in any security solution; no matter what physical or logical controls are deployed, humans can discover ways to avoid, circumvent/subvert, or disable them
   - Malicious actors are routinely targeting users with phishing and spear phishing campaigns, social engineering, and other types of attacks, and everybody is a target
   - Once attackers compromise an account, they can use that entry point to move around the network and elevate their privileges
   - People can also become a key security asset when they are properly trained and are motivated to protect not only themselves but the security of the organization as well
   - Part of planning for security includes having standards in place for job descriptions, job classifications, work tasks, job responsibilities, prevention of collusion, candidate screening, background checks, security clearances, employment and nondisclosure agreements
 - 1.8.1 Candidate screening and hiring
   - The following strategies can reduce your risk:
-    - **Candidate screening and hiring**: To properly plan for security, you should have standards in place for job descriptions, job classification, work tasks, job responsibilities, prevention of collusion, candidate screening, background checks, security clearances, employment agreements, and nondisclosure agreements
+    - **Candidate screening and hiring**:
       - screening employment candidates thoroughly is a key part of the hiring process
       - be sure to conduct a full background check that includes a criminal records check, job history verification, education verification, certification validation and confirmation of other accolades when possible
       - all references should be contacted
@@ -477,17 +477,23 @@
     - **Threat Vector**: (AKA attack vector) is the path or means by which an attack or attacker can gain access to a target in order to cause harm
     - **Exposure**: being susceptible to asset loss because of a threat; the potential for harm to occur
     - **Exposure Factor (EF)**: derived from this concept; an element of quantitative risk analysis that represents the percentage of loss that an org would experience if a specific asset were violated by a realized risk
-    - **Single Loss Expectancy (SLE)**: an element of quantitative risk analysis that represents the cost associated with a single realized risk against a specific asset; SLE = asset value (AV) * exposure factor (EF); a metric that represents the magnitude of loss or impact that a threat could have on a system or data, quantified as a percentage of loss that a realized threat would have on a specific asset; e.g. an EF of 0.2 (or 20%) for a specific threat would indicate that a realization of that threat would result in a loss of 20% of the asset’s value
+    - **Single Loss Expectancy (SLE)**: an element of quantitative risk analysis that represents the cost associated with a single realized risk against a specific asset;
+      - SLE = asset value (AV) * exposure factor (EF)
+      - Where EF is a metric that represents the loss a realized threat would have on a specific asset, quantified as a percentage: e.g. an EF of 0.2 (or 20%) for a specific threat would indicate that a realization of that threat would result in a loss of 20% of the asset’s value
+      - Note that EF is not a fixed number for an asset, but is a unique value determined by a specific threat affecting a specific asset
     - **Annualized rate of occurrence (ARO)**: an element of quantitative risk analysis that represents the expected frequency with which a specific threat or risk will occur within a single year
-    - **Annualized loss expectancy (ALE)**: an element of quantitative risk analysis that represents the possible yearly cost of all instances of a specific realized threat against a specific asset; ALE = SLE * ARO
-    - **Safeguard evaluation**: ALE for an asset if a safeguard is implemented; ALE before safeguard - ALE with safeguard - annual cost of safeguard, or (ALE1 - ALE2) - ACS
+    - **Annualized loss expectancy (ALE)**: an element of quantitative risk analysis that represents the possible yearly cost of all instances of a specific realized threat against a specific asset
+      - ALE = SLE * ARO
+    - **Safeguard evaluation**: ALE for an asset if a safeguard is implemented
+      - ALE before safeguard - ALE with safeguard - annual cost of safeguard
+      - or (ALE1 - ALE2) - ACS
     - **Risk**: the possibility or likelihood that a threat will exploit a vulnerability to cause harm to an asset and the severity of damage that could result; the > the potential harm, the > the risk
 
 - 1.9.2 Risk analysis, assessment, and scope
   - **Risk Assessment**: used to identify the risks and set criticality priorities, and then risk response is used to determine the best defense for each identified risk
   - Risk is threat with a vulnerability
   - Risk = threat * vulnerability (or probability of harm multiplied by severity of harm)
-  - Addressing either the threat or threat agent or vulnerability directly results in a reduction of risk (known as threat mitigation)
+  - Addressing the threat, threat agent or vulnerability directly results in a reduction of risk (known as threat mitigation)
   - All IT systems have risk; all orgs have risk; there is no way to eliminate 100% of all risks
     - Instead upper management must decide which risks are acceptable, and which are not; there are two primary risk-assessment methodologies:
       - **Quantitative Risk Analysis**: assigns real dollar figures to the loss of an asset and is based on mathematical calculations
@@ -505,7 +511,7 @@
     - **Risk Avoidance**: determining that the impact or likelihood of a specific risk is too great to be offset by potential benefits, and not performing a particular business function due to that determination; the process of selecting alternate options or activities that have less associated risk than the default, common, expedient, or cheap option
     - **Risk Acceptance**: the result after a cost/benefit analysis determines that countermeasure costs would outweigh the possible cost of loss due to a risk
       - also means that management has agreed to accept the consequences/loss if the risk is realized
-    - **Risk Rejection**: an unacceptable possible response to risk is to reject risk or ignore risk; denying that risk exists and hoping that it will never be realized are not valid prudent due care/due diligence responses to risk
+    - **Risk Rejection**: an unacceptable possible response is to reject risk or ignore risk; denying that risk exists and hoping that it will never be realized are not valid prudent due care/due diligence responses to risk
     - **Risk Transference**: paying an external party (i.e. an insurance company) to accept the financial impact of a given risk
   - **Inherent Risk**: the level of natural, native, or default risk that exists in an environment, system, or product prior to any risk management efforts being performed (AKA initial or starting risk); this is the risk identified by the risk assessment process
   - **Residual Risk**: consists of threats to specific assets against which management chooses not to implement (the risk that management has chosen to accept rather than mitigate); risk remaining after security controls have been put in place
