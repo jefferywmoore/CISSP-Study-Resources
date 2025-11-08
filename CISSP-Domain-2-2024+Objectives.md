@@ -40,7 +40,7 @@
   - It is important to protect data in all states: at rest, in transit, or in use
   - The best way to protect data confidentiality is via use of strong encryption
 
-- 2.1.2 Asset Classification
+- 2.1.2 Asset classification
   - It's important to identify and classify assets, such as systems, mobile devices etc.
   - Owners are accountable for an asset and protecting its value
   - **Asset Classification**: assigning assets the level of protection required based on their value to the org; assets require an identified owner to be classified and protected adequately; derived from compliance mandates, the process of recognizing organizational impacts if information suffers any security compromise (whether to confidentiality, integrity, availability, non-repudiation, authenticity, privacy, or safety)
@@ -89,8 +89,8 @@
 
 - 2.3.2 Asset inventory (e.g., tangible, intangible)
   - **Inventory**: complete list of items
-  - **Tangible assets**: include hardware and software assets owned by the company
-  - **Intangible assets**: things like patents, copyrights, a company’s reputation, and other assets representing potential revenue
+  - **Tangible assets**: include hardware, devices, physical documents etc, owned by the company
+  - **Intangible assets**: things like software, patents, copyrights, a company’s reputation, etc
     - an org should keep track of intangible assets, like intellectual property, patents, trademarks, the company’s reputation, and copyrights to protect them
     - note: patents in the US are valid for 20 years
 
@@ -230,6 +230,7 @@
 - 2.6.4 Data protection methods (e.g., Digital Rights Management (DRM), Data Loss Prevention (DLP), Cloud Access Security Broker (CASB))
   - **Data protection methods** include:
     - **digital rights management (DRM)**: methods used in attempt to protect copyrighted materials; purpose is to prevent the unauthorized use, modification, and distribution of copyrighted works
+    - **Data Loss Prevention (DLP)**: 
     - **Cloud Access Security Brokers (CASBs)**: software placed logically between users and cloud-based resources ensuring that cloud resources have the same protections as resources within a network
       - CASB is a solution for security policy enforcement, ensuring security policies and compliance are met when accessing cloud apps and data; it can be used on-premise or in the cloud
       - the four cornerstones of CASBs are visibility, data security, threat detection, and compliance
@@ -259,4 +260,5 @@
     - validation: the CCP sends the token to the tokenization vault; the vault replies with the CC info, the charge is processed
     - completing the sale: the CCP sends a reply to the POS indicating the charge is approved
     - this system prevents CC theft at the POS system
-  
+
+Also see [Understanding CISSP Domain 2: Asset Security](https://blog.balancedsec.com/p/understanding-cissp-domain-2-asset) for additional information

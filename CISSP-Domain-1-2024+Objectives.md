@@ -136,7 +136,7 @@
         - recover
       - **[SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final)**: a comprehensive set or catalog of security and privacy controls across multiple security domains, covering areas such as risk management, access control, incident response, and system maintenance; note that 800-171 (Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations) is very similar to 800-53 but applied to government agencies
       - **[SP 800-100](https://csrc.nist.gov/pubs/sp/800/100/r1/iprd)**: titled Information Security Handbook: a guide for managers, NIST hasn't released an update since 2006, although they appear to have an update in progress
-    - **[COBIT (Control Objectives for Information and Related Technologies)](https://www.isaca.org/resources/cobit#1)**: COBIT is a framework created by ISACA that focuses on enterprise IT, aligning IT and business strategies, and providing a comprehensive framework for managing risks
+    - **[COBIT (Control Objectives for Information and Related Technologies)](https://www.isaca.org/resources/cobit)**: COBIT is a framework created by ISACA that focuses on enterprise IT, aligning IT and business strategies, and providing a comprehensive framework for managing risks
       - COBIT is commonly used as an *audit/compliance* framework for orgs
       - Six key principles:
         - provide stakeholder value
@@ -540,7 +540,7 @@
     - **Directive**: A directive control is deployed to direct, confine, or control the actions of subjects to force or encourage compliance with security policies
   - Countermeasures:
     - **Detective**: a detective control is deployed to discover or detect unwanted or unauthorized activity; detective controls operate after the fact
-    - **Corrective**: a corrective control modifies the environment to return systems to normal after an unwanted or unauthorized activity as occurred; it attempts to correct any problems resulting from a security incident
+    - **Corrective**: a corrective control modifies the environment to return systems to normal after an unwanted or unauthorized activity has occurred; it attempts to correct any problems resulting from a security incident
     - **Recovery**: An extension of corrective controls but have more advanced or complex abilities; a recovery control attempts to repair or restore resources, functions, and capabilities after a security policy violation
     - recovery controls typically address more significant damaging events compared to corrective controls, especially when security violations may have occurred
     - **Compensating**: a compensating control is deployed to provide various options to other existing controls, to aid in enforcement and support of security policies
@@ -592,7 +592,7 @@
 
 - 1.9.9 Risk frameworks (e.g., International Organization for Standardization (ISO), National Institute of Standards and Technology (NIST), Control Objectives for Information and Related Technology (COBIT), Sherwood Applied Business Security Architecture (SABSA), Payment Card Industry (PCI))
   - See section 1.3.4 above for definitions of these frameworks
-  - A risk framework is a guide or recipe for how risk is to be accessed, resolved, and monitored
+  - A risk framework is a guide or recipe for how risk is to be assessed, resolved, and monitored
   - NIST established the **Risk Management Framework** (RMF) and the **Cybersecurity Framework** (CSF): the CSF is a set of guidelines for mitigating organizational cybersecurity risks, based on existing standards, guidelines, and practices
   - The RMF is intended as a risk management process to identify and respond to threats, and is defined in three core, interrelated Special Publications:
     - SP 800-37 Rev 2, Risk Management Framework for Information Systems and Organizations
@@ -620,7 +620,7 @@
 
 ## [1.10](#110-understand-and-apply-threat-modeling-concepts-and-methodologies-osg-10-chpt-1) Understand and apply threat modeling concepts and methodologies (OSG-10 Chpt 1)
 
-- **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed; can be performed as a **proactive** measure during design and development (aka **defensive approach**) or as an **reactive** measure once a product has been deployed (aka **adversarial approach**)
+- **Threat Modeling**: security process where potential threats are identified, categorized, and analyzed; can be performed as a **proactive** measure during design and development (aka **defensive approach**) or as a **reactive** measure once a product has been deployed (aka **adversarial approach**)
   - Threat modeling identifies the potential harm, the probability of occurrence, the priority of concern, and the means to eradicate or reduce the threat
 - [**MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge)**](https://attack.mitre.org/): a comprehensive framework with a globally accessible knowledge base that documents real-world tactics, techniques, and procedures (TTPs) used by cyber adversaries; it is widely used by organizations to improve threat detection, incident response, and cybersecurity defenses; ATT&CK is used as a default model in many software packages
 - Microsoft uses the **Security Development Lifecycle** (SDL) with the motto: "Secure by design, secure by default, secure in deployment and communication"
@@ -634,6 +634,7 @@
   - Tampering: any action resulting in unauthorized changes or manipulation of data, whether in transit or in storage
   - Repudiation: the ability of a user or attacker to deny having performed an action or activity by maintaining plausible deniability
   - Information Disclosure: the revelation or distribution of private, confidential, or controlled information to external or unauthorized entities
+  - Elevation of privilege
   - **Denial of Service (DoS)**: an attack that attempts to prevent authorized use of a resource; this can be done through flaw exploitation, connection overloading, or traffic flooding; for example, a SYN flood is a DoS attack that disrupts the TCP three-way handshake
   - Elevation of privilege: an attack where a limited user account is transformed into an account with greater privileges, powers, and access
   - STRIDE is threat categorization model; threat categorization is an important part of app threat modeling
@@ -677,8 +678,8 @@
     - reputable organizations that disclose their practices and security requirements to their business partners (not necessarily to the public)
   - Each link in the chain should be responsible and accountable to the next link in the chain; each handoff is properly organized, documented, managed, and audited
     - The goal of a secure supply chain is that the finished product is of sufficient quality, meets performance and operational goals, provides stated security mechanisms, and that at no point in the process was any element counterfeited or subject to unauthorized or malicious manipulation or sabotage
-  - The supply chain can be a threat vector, where materials, software, hardware, or data is being obtained from a supposedly trusted source but the supply chain behind the source could have been compromised and asset poisoned or modified
-  - Supply chain attacks include things like product tampering, counterfeits, or implants; these attacks can be difficult to detect, and changes or manipulations can be via hardware (even miniaturized chips), or via software
+  - The supply chain can be a threat vector, where materials, software, hardware, or data are obtained from a supposedly trusted source but the supply chain behind the source could have been compromised and asset poisoned or modified
+  - Supply chain attacks include things like product tampering, counterfeits, or implants; these attacks can be difficult to detect, and changes or manipulations can be made via hardware (even miniaturized chips), or via software
     - choosing trusted and reputable vendors, and doing security monitoring, management and assessments are important to lower these risks
 
 - 1.11.2 Risk mitigations (e.g., third-party assessment and monitoring, minimum security requirements, service level requirements, silicon root of trust, physically unclonable function, software bill of materials)
@@ -727,9 +728,11 @@
 - 1.12.3 Program effectiveness evaluation
   - Time and money must be allocated for evaluating the company’s security awareness and training; the company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email links
 
-Also see my articles on risk management:
+Also see [Understanding CISSP Domain 1: Security and Risk Management](https://blog.balancedsec.com/p/understanding-cissp-domain-1-security) for additional information
 
-- [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1)  introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
+Articles on risk management:
+
+- [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1) - introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
 - Since the primary goal of risk management is to identify potential threats against an organization's assets, and bring those risks into alignment with an organization's risk appetite, in [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2), we cover the threat assessment -- a process of examining and evaluating cyber threat sources with potential system vulnerabilities
   - we look at how a risk assessment helps drive our understanding of risk by pairing assets and their associated potential threats, ranking them by criticality
   - we also discuss quantitative analytic tools to help provide specific numbers for various potential risks, losses, and costs
