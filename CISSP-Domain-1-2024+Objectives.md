@@ -728,7 +728,7 @@
 - 1.12.3 Program effectiveness evaluation
   - Time and money must be allocated for evaluating the company’s security awareness and training; the company should track key metrics, such as the percentage of employees who click on a fake phishing campaign email links
 
-Also see [Understanding CISSP Domain 1: Security and Risk Management](https://blog.balancedsec.com/p/understanding-cissp-domain-1-security) for additional information
+Also see [Understanding CISSP Domain 1: Security and Risk Management](https://blog.balancedsec.com/p/understanding-cissp-domain-1-security) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) for additional information
 
 Articles on risk management:
 

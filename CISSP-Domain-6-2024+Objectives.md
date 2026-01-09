@@ -133,7 +133,7 @@ Security assessment and testing programs are an important mechanism for validati
     - Identifying the vulnerabilities for each asset
     - Ongoing review and assessment
   - Testing stages from the OSG include:
-    - Reconnaissance: passively gather publicly available info
+    - Reconnaissance: gathering initial information about target systems  by using passive or active methods
     - Enumeration: active network discovery (i.e. find target IP address and ports)
     - Vulnerability analysis: identify potential vulns
     - Execution: attempt to exploit vulns
@@ -194,7 +194,8 @@ Security assessment and testing programs are an important mechanism for validati
 
 - 6.2.4 Synthetic transactions/benchmarks
   - **Synthetic transactions**: scripted transactions with known expected results
-  - **Synthetic monitoring**: uses emulated or recorded transactions to monitor for performance changes in response time, functionality, or other performance monitors
+  - **Synthetic (AKA active) monitoring**: uses emulated or recorded transactions to monitor for performance changes in response time, functionality, or other performance monitors
+  - **Real User Monitoring (RUM)**: observes and captures data from actual users as they interact with an app or website; this is also known as **passive monitoring** because user activity is passively monitored; this is good for identifying specific user issues
   - Dynamic testing may include the use of synthetic transactions to verify system performance; synthetic transactions are run against code and compare out to expected state
 
 - 6.2.5 Code review and testing
@@ -225,7 +226,7 @@ Security assessment and testing programs are an important mechanism for validati
     - **branch coverage**: has every IF statement been executed under all IF and ELSE conditions?
     - **condition coverage**: has every logical test in the code been executed under all sets of inputs?
     - **functional coverage**: has every function in the code been called and returned results?
-    - **loop coverage**: has every loop in the code been executed under conditions that cause code execution multiple times, only once, and not at all?
+    - **loop coverage**: has every loop in the code been executed under conditions that cause code execution multiple times, only once, or not at all?
     - **statement coverage**: has every line of code been executed during the test?
   - **Test coverage report**: measures how many of the test cases have been completed; is used to provide test metrics when using test cases
 
@@ -239,11 +240,11 @@ Security assessment and testing programs are an important mechanism for validati
         - UIs provide end users with the ability to interact with the software, and tests should include reviews of all UIs
       - physical interfaces: exist in some apps that manipulate machinery, logic controllers, or other objects
         - software testers should pay careful attention to physical interfaces because of the potential consequences if they fail
-    - Also see [OWASP API security top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+    - Also see [OWASP API security](https://owasp.org/www-project-api-security/)
 
 - 6.2.9 Breach attack simulations
-  - **Breach and attack simulation (BAS)**: platforms that seek to automate some aspects of penetration testing
-  - The BAS platform is not actually waging attacks, but conducting automated testing of security controls to identify deficiencies
+  - **Breach and attack simulation (BAS)**: platforms that automate some aspects of penetration testing
+  - The BAS platform is conducting automated testing of security controls to identify deficiencies
   - A BAS system combines red team (attack) and blue team (defense) techniques together with automation to simulate advanced persistent threats (and other advanced threat actors) running against the environment
   - Designed to inject threat indicators onto systems and networks in an effort to trigger other security controls (e.g. place a suspicious file on a server)
     - detection and prevention controls should immediately detect and/or block this traffic as potentially malicious
@@ -379,3 +380,5 @@ Security assessment and testing programs are an important mechanism for validati
   - On-premise assessment: focuses on evaluating the security measures and infrastructure of in-house systems, or within an organization's physical data centers and facilities
   - Cloud assessment: focus is on assessing the security of data and applications hosted in cloud service providers environment
   - Hybrid assessment: assess connectivity and security measures used between on-premise and cloud resources; this assessment looks at data flow or interconnection and integration security controls
+
+  Also see Understanding CISSP Domain 6, Security Assessment and Testing - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-6-security), and [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-6-security-cbf) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

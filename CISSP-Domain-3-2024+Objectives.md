@@ -959,7 +959,4 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 - 3.10.9 Retirement/disposal
   - At some point, the system will be retired once it has completed it's useful purpose and the lifecycle will be completed
 
-Also see: 
-- [Understanding CISSP Domain 3: Security Architecture and Engineering - Part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security) - covering objectives 3.1 - 3.5
-- [Understanding CISSP Domain 3: Security Architecture and Engineering - Part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security-ace) - covering 3.6
-- [Understanding CISSP Domain 3: Security Architecture and Engineering - Part 3](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security-e4e) - covering objectives 3.7 - 3.10
+Also see Understanding CISSP Domain 3: Security Architecture and Engineering - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security), [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security-ace), and [part 3](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security-e4e) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

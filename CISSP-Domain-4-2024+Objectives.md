@@ -31,7 +31,6 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **Concentrator**: provides communication capability between many low-speed, usually asynchronous channels and one or more high-speed, usually synchronous channels; usually different speeds, codes, and protocols can be accommodated on the low-speed side; multiplexed into one signal
 - **CDN**: Content Distribution Network is a large distributed system of servers deployed in multiple data centers, with a goal of Quality of Service (QoS) and availability requirements
 - **Control plane**: part of a network that controls how data packets are forwarded — meaning how data is sent from one place to another; e.g. the process of creating a routing table is considered part of the control plane; control of network functionality and programmability is directly made to devices at this layer
-- **Converged protocol**: combines/converges standard protocols (such as TCP/IP) with proprietary/non-standard ones; they can complicate enterprise-wide security engineering efforts requiring specialist knowledge
 - **Dense Wavelength Division Multiplexing (DWDM)**: by enabling multiple data streams or channels to be simultaneously transmitted over a single optical fiber, DWDM increases capacity and efficiency of the network
 - **DHCP**: Dynamic Host Configuration Protocol is an industry standard used to dynamically assign IP addresses to network devices
 - **Disassociation attack**: AKA deauthentication attack, is a type of denial-of-service (DoS) attack targeting Wi-Fi networks; it exploits the management frames used in the Wi-Fi protocol to forcibly disconnect (disassociate) a user’s device from a wireless access point (AP); these attacks can cause disruptions in network availability and can be used as part of a larger attack, such as a man-in-the-middle (MITM) attack
@@ -102,7 +101,6 @@ Networking can be one of the more complex exam topics; if you have a networking 
 - **Root of Trust**: a source that can always be trusted within a cryptographic system; because cryptographic security is dependent on keys to encrypt and decrypt data and perform functions such as generating digital signatures and verifying signatures, RoT schemes generally include a hardened hardware module; a RoT guarantees the integrity of the hardware prior to loading the OS of a computer
 - **Screened subnet**: AKA DMZ (or demilitarized zone) is a network security architecture that uses firewalls to create a barrier between the public internet and the internal network, allowing only controlled access to external-facing servers while protecting the internal network from potential attacks
 - **Sender Policy Framework (SPF)**: an email authentication protocol that helps verify if an email claiming to come from a specific domain is sent by an authorized mail server; SPF works by allowing domain owners to publish a list of approved sending IP addresses in their DNS records; when an email is received, the recipient's server checks the SPF record to ensure the email was sent from an authorized IP; if the IP is listed, the email is more likely to be legitimate and if not, it may be flagged as spam or rejected, helping to prevent email spoofing and phishing
-- **SIPS**: secure version of the Session Initialization Protocol for VoIP, adds TLS encryption to keep the session initialization process secure
 - **Stateless Address Autoconfiguration (SLAAC)**: a method in IPv6 where devices automatically configure their IP addresses without relying on a DHCP server, using Router Advertisements (RAs) to obtain network prefixes and their own interface identifiers to create unique addresses
 - **Smartcard**: credit card-sized IDs, badges, or security passes with a magnetic stripe, bar code, or integrated circuit chip, containing info about the authorized bearer; used for identification or auth purposes; smartcards can include microprocessors and cryptographic certificates
 - **S/MIME**: provides the following cryptographic security services for electronic messaging applications:
@@ -142,12 +140,12 @@ Networking can be one of the more complex exam topics; if you have a networking 
   - **OSI**: Open Systems Interconnection (OSI) Reference Model developed by ISO (International Organization for Standardization) to establish a common communication structure or standard for all computer systems; it is an abstract framework
         - Communication between layers via **encapsulation** (at each layer, the previous layer's header and payload become the payload of the current layer) and **de-encapsulation** (inverse action occurring as data moves up layers)
 
-    | Layer | OSI model layer | TCP/IP model | PDU | Devices | Protocols |
+    | Layer | OSI model | TCP/IP model | PDU | Devices | Protocols |
     |-----|---------------| -------------------|------------| ----------------|-----------|
     | 7     | Application     | Application |Data               | Application Firewall                                | HTTP/s, DNS, DHCP, FTP, LPD, S-HTTP, TPFT, Telnet, SSH, SMTP, POP3, PEM, IMAP, NTP, SNMP, TLS/SSL, GBP, SIP, S/MIME, X Window, NFS etc. |
     | 6     | Presentation    | Application |Data   |   | JPEG, ASCII, MIDI etc |
     | 5     | Session         | Application| Data               | Circuit Proxy Firewall | NetBIOS, RPC|
-    | 4     | Transport       | Transport (host-to-host) | Segments (TCP) / Datagrams (UDP)         |                              | TCP (connection oriented), UDP (connectionless), TLS, BGP     |
+    | 4     | Transport       | Transport (host-to-host) | Segments (TCP) / Datagrams (UDP)         |                              | TCP (connection oriented), UDP (connectionless), TLS, BGP  |
     | 3     | Network         | Internet/IP | Packets            | Router, Multilayer Switch, Packet Filtering Firewall         | IPv4, IPv6, IPSec, OSPF, EIGRP, ICMP, IGMP, RIP, NAT                              |
     | 2     | Data Link       | Network Access (Link) | Frames             | Switch, Bridge, NIC, Wireless Access Point | MAC, ARP, Ethernet 802.3 (Wired), CDP, LLDP, HDLC, PPP, PPTP, DSL, L2TP, IEEE 802.11 (Wireless), SONET/SDH, VLANs, Auth protocols (PAP, CHAP, EAP) |
     | 1     | Physical        | Network Access (Link) | Bits               | Hubs, Repeaters, Concentrators                              | Electrical signal (copper wire), Light signal (optical fibre), Radio signal (air) |
@@ -360,7 +358,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
     - logical network segments can be traversed
 
 - 4.1.5 Converged protocols (e.g., Internet Small Computer Systems Interface (iSCSI), Voice over Internet Protocol (VoIP), InfiniBand over Ethernet, Compute Express Link)
-  - **Converged protocols**: merged specialty or proprietary with standard protocols, such as those from the TCP/IP suite
+  - **Converged protocol**: combines/converges standard protocols (such as TCP/IP) with proprietary/non-standard ones; they can complicate enterprise-wide security engineering efforts requiring specialist knowledge
     - converged protocols provide the ability to use existing TCP/IP supporting network infrastructure to host special or proprietary services without the need to deploy different hardware
   - Examples of converged protocols:
     - **Compute Express Link**: connects CPUs to other devices or memory across the network, as quickly as possible
@@ -376,7 +374,7 @@ Networking can be one of the more complex exam topics; if you have a networking 
       - VoIP is considered a converged protocol because it combines audio and video encapsulation technology (operating as application layer protocols) with the protocol stack of TCP/IP
       - SIPS and SRTP are used to secure VoIP
       - **Secure Real-Time Transport Protocol (SRTP)**: an extension profile of RTP (Real-Time Transport Protocol) which adds further security features, such as message authentication, confidentiality and replay protection mostly intended for VoIP communications
-      - SIPS: see definition above
+      - **SIPS**: secure version of the Session Initialization Protocol for VoIP, adds TLS encryption to keep the session initialization process secure
     Other converged protocols:
       - SDN (see definition above)
       - virtualization [in Domain 3](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-3-2024+Objectives.md#34-understand-security-capabilities-of-information-systems-is-eg-memory-protection-trusted-platform-model-tpm-encryptiondecryption-osg-10-chpt-8)
@@ -438,11 +436,11 @@ Networking can be one of the more complex exam topics; if you have a networking 
 
 - 4.1.13 Wireless networks (e.g. Bluetooth, Wi-Fi, Zigbee, satellite)
   - **Narrowband**: refers to a communication channel or system that operates with a small bandwidth, meaning it uses a limited range of frequencies to transmit data; in contrast to broadband, which can carry large amounts of data over a wide frequency range, narrowband systems focus on efficient transmission of smaller amounts of data, often over long distances, by using lower data rates and narrower frequency bands
-  - **Light Fidelity (Li-Fi)**: a form of wireless communication technology that relies on light to transmit data, with theorectical speeds up to 224Gbits/sec
+  - **Light Fidelity (Li-Fi)**: a form of wireless communication technology that relies on light to transmit data, with theoretical speeds up to 224Gbits/sec
   - **Radio Frequency Identification (RFID)**: a technology used to identify and track objects or individuals using radio waves, with two main components: an RFID tag (or transponder) and an RFID reader; the tag contains a small microchip and an antenna, and the reader emits a signal that communicates with the tag to retrieve the stored information
     - Passive Tags don't have their own power source, relying instead on the energy from the RFID reader's signal to transmit data
     - Active Tags have a battery and can broadcast signals over longer distances
-  - **Near Field Communicatio (NFC)**: a wireless communication technology that allows devices to exchange data over short distances, usually within a range of about 4 centimeters (1.5 inches); it operates on the same principle as RFID but is designed for closer proximity communication and is commonly used in mobile devices for tasks like contactless payments and data sharing; unlike RFID, where only the reader actively sends signals, NFC enables two-way communication
+  - **Near Field Communicatio (NFC)**: a wireless communication technology that allows devices to exchange data over short distances (usually a few centimeters); it operates on the same principle as RFID but is designed for closer proximity communication and is commonly used in mobile devices for tasks like contactless payments and data sharing; unlike RFID, where only the reader actively sends signals, NFC enables two-way communication
     - Active Mode: both devices generate their own radio frequency signals to communicate
     - Passive Mode: one device (like an NFC tag) is passive and only transmits data when powered by the active device's signal, similar to how passive RFID tags work
   - **Bluetooth**: wireless personal area network, IEEE 802.15; an open standard for short-range RF communication used primarily with wireless personal area networks (WPANs); secure guidelines:
@@ -577,9 +575,9 @@ Networking can be one of the more complex exam topics; if you have a networking 
   - Client-based CDN is often referred to as P2P (peer-to-peer)
 
 - 4.1.16 Software defined networks (SDN), (e.g., application programming interface (API), Software-Defined Wide Area Network, network functions virtualization)
-  - Software Defined Netowrks (SDN): provide abstraction from the underlying physical network to enable rapid reconfiguration with centralized control; allows you creation of multiple virtual networks on top of a single physical network; SDN is fundamental to cloud networks
+  - Software Defined Networks (SDN): provide abstraction from the underlying physical network to enable rapid reconfiguration with centralized control; allows creation of multiple virtual networks on top of a single physical network; SDN is fundamental to cloud networks
     - an SDN is effectively network virtualization, separating the infrastructure layer (aka the data or forwarding plane) hardware and hardware-based settings, from the control layer - network services of data transmission management
-    - in a traditional network, each network device will have it's own control plane and data plane built into it, so each switch is making its own decisions on where to move packets and moving those packets
+    - in a traditional network, each network device will have it's own control plane and data plane built into it, so each switch is making its own decisions on where to move packets
     - in an SDN the control plane is centralized; you may still have multiple network devices on the network and still responsible for moving packets, but the control plane, the intelligence, is centralized making it much easier to configure/re-configure the network
       - **control plane**: functions and processes which determine paths; receives instructions and sends them to the network; uses protocols to decide where to send traffic
       - **data plane**: functions and processes that forward packets based on the direction of the control plane; includes rules that decide whether traffic will be forwarded
@@ -792,3 +790,5 @@ The components of a network make up the backbone of the logical infrastructure f
   - Remote workers are another form of third-party connectivity
   - Vendors (like IT auditing firms) may need to connect to your network, and attackers are routinely looking for creative ways to gain organizational access -- third-party connectivity is one option
   - As organizations evaluate third-party connectivity, they need to look carefully at the principle of least privilege and at methods of monitoring use and misuse
+
+Also see Understanding CISSP Domain 4: Communication and Network Security - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-4-communication), [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-4-communication-7ae), and [part 3](https://blog.balancedsec.com/p/understanding-cissp-domain-4-communication-15a) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

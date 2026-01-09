@@ -356,7 +356,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - FIM trust relationships include: principal/user, identity provider (entity that owns the identity and performs the auth), and relying party (AKA service provider)
   - FIM protocols include SAML, WS-Federation, OpenID (authentication), and OAuth (authorization)
   - Compare FIM with SSO: user authenticates one time using SSO to access multiple systems in one org; a user authenticates one time using FIM to access multiple systems inside and outside an org because of multiple-entity trust relationships
-- XML is defined in Domain 8, but essentially Extensible Markup Language is a set of HTML extensions providing for data storage and transport in networked environments; frequently used to integrate web pages with databases; XML is often embedded in the HTML files making up elements of a web page
+- XML is defined in Domain 8, but essentially eXtensible Markup Language is a set of HTML extensions providing for data storage and transport in networked environments; frequently used to integrate web pages with databases; XML is often embedded in the HTML files making up elements of a web page
   - XML does more than describing how to display data, it describes the data itself using tags
 - Security Assertion Markup Language (SAML)
   - **Security Assertion Markup Language (SAML)**: an open XML-based standard commonly used to exchange authentication and authorization (AA) information between federated orgs
@@ -450,4 +450,5 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - TACACS+ uses TCP port 49, providing a higher level of reliability for the packet transmissions
   - **Diameter AAA protocol**: an advanced system designed to address the limitations of the older RADIUS protocol (diameter is twice the radius!); Diameter improves on RADIUS by providing enhanced security (uses IPsec or TLS instead of MD5 hashing), supports more extensive attribute sets (suitable for large, complex networks), and can handle complex sessions
     - Diameter is based on RADIUS and improves many of its weaknesses, but Diameter is not compatible with RADIUS
-  
+
+Also see Understanding CISSP Domain 5: Identity and Access Management (IAM) - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-5-identity), and [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-5-identity-3f0) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

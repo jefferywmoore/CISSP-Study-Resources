@@ -261,4 +261,4 @@
     - completing the sale: the CCP sends a reply to the POS indicating the charge is approved
     - this system prevents CC theft at the POS system
 
-Also see [Understanding CISSP Domain 2: Asset Security](https://blog.balancedsec.com/p/understanding-cissp-domain-2-asset) for additional information
+Also see [Understanding CISSP Domain 2: Asset Security](https://blog.balancedsec.com/p/understanding-cissp-domain-2-asset) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) for additional information

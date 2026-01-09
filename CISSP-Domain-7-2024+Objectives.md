@@ -66,12 +66,12 @@ Security operations is about safeguarding assets and includes core concepts like
     - taking images of the scene
     - documenting evidence
     - ensuring evidence (e.g. computers, mobile devices, portable drives etc) is not contacted, tampered with, or destroyed
-  - general principles:
+  - general steps:
     - identify and secure the scene
-    - protect evidence -- proper collection of evidence preserves its integrity and the chain of custody
+    - protect evidence to preserve its integrity and the chain of custody
     - identification and examination of the evidence
-    - further analysis of the most compelling evidence
-    - final reporting of findings
+    - complete additional analysis of the most compelling evidence
+    - produce a final reporting of findings
 - **Locard exchange principle**: whenever a crime is committed something is taken, and something is left behind
 - The purpose of an investigation is to:
   - identify the root cause of the incident
@@ -211,23 +211,22 @@ Security operations is about safeguarding assets and includes core concepts like
     - require a properly trained team that understands how to read and interpret info, and escalation procedures to follow when a legitimate alert is raised
     - SIEM systems represent technology, process, and people, and each is important to overall effectiveness
     - a SIEM includes significant intelligence functionality, allowing large amounts of logged events and analysis and correlation of the same to occur very quickly
-  - SIEM capabilities include:
+  - SIEM solutions enhance threat detection and incident response, provide visibility and compliance management, and with AI and automation improve the security team's effectiveness
+  - Key capabilities include:
     - Aggregation
     - Normalization
     - Correlation
     - Secure storage
     - Analysis
     - Reporting
-
-- 7.2.3 Security orchestration, automation and response (SOAR)
   - **Security Orchestration, Automation, and Response (SOAR)**: refers to a group of technologies that allow orgs to respond to some incidents automatically; SOAR tech automates responses to incidents; a primary benefit is that this reduces the workload of admins, and it removes/reduces the possibility of human error by having a computer/system respond
-  - **Playbook**: a document or checklist that defines how to verify an incident
-  - **Runbook**: implements the playbook data into an automated tool
+  - **Playbook**: a document or checklist that defines how to respond to an incident
+  - **Runbook**: implementation of the playbook's documented processes; implements the playbook's content, translating steps into automated actions
   - SOAR allows security admins to define these incidents and the response, typically using playbooks and runbooks
   - Both SOAR and SIEM platforms can help detect and, in the case of SOAR, respond to threats against your software development efforts
     - devs can be resistant to anything that slows down the development process, and this is where DevSecOps can help build the right culture, and balance the needs of developers and security
 
-- 7.2.4 Continuous monitoring and tuning
+- 7.2.3 Continuous monitoring and tuning
   - Effective continuous monitoring encompasses technology, processes, and people
     - Continuous monitoring steps are:
       - Define
@@ -248,19 +247,20 @@ Security operations is about safeguarding assets and includes core concepts like
   - After a SIEM is set up, configured, tuned, and running, it must be routinely updated and continuously monitored to function effectively
   - **Tuning**: tuning a SIEM is inherently the process of reducing **false positives** (incorrectly classifying a benign activity, system state, or configuration as malicious or vulnerable), while not incurring **false negatives** (NOT alerting on a true malicious activity or vulnerability); false positives can result in analyst fatigue and reduced efficiency
 
-- 7.2.5 Egress monitoring
+- 7.2.4 Egress monitoring
   - It’s important to monitor traffic exiting as well as entering a network, and **Egress monitoring** refers to monitoring outgoing traffic to detect unauthorized data transfer outside the org (AKA data exfiltration)
     - Common methods used to detect or prevent data exfiltration are data loss prevention (DLP) techniques and monitoring for steganography
 
-- 7.2.6 Log management
+- 7.2.5 Log management
   - **Log management**: refers to all the methods used to collect, process, analyze, and protect log entries (see SIEM definition above)
   - **rollover logging**: allows admins to set a maximum log size, when the log reaches that max, the system begins overwriting the oldest events in the log
 
-- 7.2.7 Threat intelligence (e.g. threat feeds, threat hunting)
+- 7.2.6 Threat intelligence (e.g. threat feeds, threat hunting)
   - **Threat intelligence**: an umbrella term encompassing threat research and analysis and emerging threat trends; gathering data on potential threats, including various sources to get timely info on current threats; information that is aggregated, transformed, analyzed, interpreted, or enriched to provide the necessary context for the decision-making process
-  - **Threat feed**: provide orgs with a steady stream of raw data providing security admins with threat feeds to understand current threats; by using this knowledge to search through the network they can engage in **threat hunting** looking for signs of these threats
+  - **Threat feed**: provide orgs with a steady stream of raw data providing security admins with threat feeds to understand current threats; by using this knowledge to search through the network they can engage in threat hunting looking for signs of these threats
   - **Structured Threat Information eXpression (STIX)**: a standardized language that uses a JSON-based lexicon to express and share threat intelligence information in a readable and consistent format
   - **Trusted Automated eXchange of Intelligence Information (TAXII)**: the format through which threat intelligence data is transmitted; TAXII is a transport protocol that supports transferring STIX insights over Hyper Text Transfer Protocol Secure (HTTPS)
+  - **Threat hunting**: a proactive search across an org’s network and endpoints to identify malicious activity that has evaded traditional automated security tools; threat hunting assumes an attacker may already be present in the environment
   - **Kill chain**: military model (used for both offense and defense):
     - find/identify a target through reconnaissance
     - get the target’s location
@@ -277,7 +277,7 @@ Security operations is about safeguarding assets and includes core concepts like
     - **command and control**: attackers maintain a command and control system, which controls the target and other compromised systems
     - **actions on objectives**: attackers execute their original goals such as theft of money, or data, destruction of assets, or installing additional malicious code (eg. ransomware)
 
-- 7.2.8 User and Entity Behavior Analytics (UEBA)
+- 7.2.7 User and Entity Behavior Analytics (UEBA)
   - **UEBA (aka UBA)**: focuses on the analysis of user and entity behavior as a way of detecting inappropriate or unauthorized activity (e.g. fraud, malware, insider attacks etc); analysis engines are typically included with SIEM solutions or may be added via subscription; UEBA tools develop profiles of individual behavior and monitor users for deviations from those profiles that may indicate malicious activity and/or compromised accounts
   - **Behavior-based detection**: AKA statistical intrusion, anomaly, and heuristics-based detection, starts by creating a baseline of normal activities and events; once enough baseline data has been accumulated to determine normal activity, it can detect abnormal activity (that may indicate a malicious intrusion or event)
   - Behavior-based IDSs use the baseline, activity statistics, and heuristic evaluation techniques to compare current activity against previous activity to detect potentially malicious events
@@ -286,8 +286,8 @@ Security operations is about safeguarding assets and includes core concepts like
 
 ## [7.3](#73-perform-configuration-management-cm-eg-provisioning-baselining-automation-osg-10-chpt-16) Perform Configuration Management (CM) (e.g. provisioning, baselining, automation) (OSG-10 Chpt 16)
 
-- **Configuration Management (CM)**: collection of activities focused on establishing and maintaining the integrity of IT products and info systems, via the control of processes for initializing, changing, and monitoring the configurations of those products/systems through their lifecycle; CM is the process of identifying, controlling, and verifying the configuration of systems and components throughout their lifecycle
-  - the three basic components of change control: request control, change control, and release control
+- **Configuration Management (CM)**: is the process of identifying, controlling, and verifying the configuration of organizational systems and settings; the focus is on establishing and maintaining the integrity of IT products and systems by controlling their initialization and changes, and by monitoring configuration throughout their lifecycle
+  - the three basic components of change management: request control, change control, and release control
   - CM is an integral part of secure provisioning and relates to the proper configuration of a device at the time of deployment
   - CM helps ensure that systems are deployed in a secure, consistent state and that they stay in a secure, consistent state throughout their lifecycle
 - **Provisioning**: taking a particular config baseline, making additional or modified copies, and placing those copies into the environment in which they belong; refers to installing and configuring the operating system and needed apps on new systems
@@ -298,7 +298,7 @@ Security operations is about safeguarding assets and includes core concepts like
     - close all unused logical ports
     - remove all unused apps
     - change default passwords
-- **Baseline**: in the context of configuration management, it is the starting point or starting config for a system
+- **Baseline**: in the context of configuration management, a baseline is the starting point or starting config for a system
   - an easy way to think of a baseline is as a list of services; an OS baseline identifies all the settings to harden specific systems
   - many organizations use images to deploy baselines; baseline images improve the security of systems by ensuring that desired security settings are always configured correctly
   - baseline images improve the security of systems by ensuring that desired security settings are always configured correctly; they also reduce the amount of time required to deploy and maintain systems, reducing overall maintenance costs
@@ -403,12 +403,12 @@ Security operations is about safeguarding assets and includes core concepts like
     | Step | Stage | Action/Goal |  
     |--------|---------------| -----------|
     | Preparation|||
-    | (D)etection  | Triage| identification |
-    | (R)esponse | Triage| activate IR team |
-    | (M)itigation  | Investigate| containment|
-    | (R)eporting  | Investigate||
-    | (R)ecovery | Recovery | return to normal|
-    | (R)emediation  | Recovery| prevention|
+    | (D)etection  | Triage | initial assessment |
+    | (R)esponse | Investigate | activate IR team |
+    | (M)itigation  | Reduce incident severity| containment|
+    | (R)eporting  | Documentation|communicate to stakeholders|
+    | (R)ecovery | Restoration | return to normal|
+    | (R)emediation  | Recovery| root cause; prevention|
     | (L)essons Learned | Recovery| improve process|
 
 - The following steps (Detection, Response, Mitigation, Reporting, Recovery, Remediation, and Lessons Learned) are on the exam; you can use the mnemonic DRMRRRL (drumroll)
@@ -987,3 +987,5 @@ Security operations is about safeguarding assets and includes core concepts like
   - Duress systems allow guards to raise alarms in response to emergencies, and for emergency management plans help the org respond to disasters
   - Duress systems are useful when personnel are working alone
   - If a duress system is activated accidentally, code word(s) can be used to assure responding personnel it was an accident, or omit the word(s) keying an actual response
+
+Also see Understanding CISSP Domain 7, Security Operations - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-7-security), and [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-7-security-79d) (others coming soon) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)
