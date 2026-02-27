@@ -26,7 +26,7 @@ Security assessment and testing programs are an important mechanism for validati
 - **Compliance Calendar**: tracks an org's audits, assessments, required filings, due dates and related
 - **Compliance Tests**: an evaluation that determines if an org's controls are being applied according to management policies and procedures
 - **Examination**: process of reviewing/inspecting/observing/studying/analyzing specs/mechanisms/activities to understand, clarify, or obtain evidence
-- **FedRAMP: (see Domain 1) a government-wide program that standardizes the security assessment, authorization, and monitoring of cloud services and products; the program was established in 2011 to help the federal government use cloud technologies while protecting federal information
+- **FedRAMP**: (see Domain 1) a government-wide program that standardizes the security assessment, authorization, and monitoring of cloud services and products; the program was established in 2011 to help the federal government use cloud technologies while protecting federal information
 - **Findings**: results created by the application of an assessment procedure
 - **Functional order of controls**: deter, deny, detect, delay, determine, and decide
 - **Fuzzing**: uses modified inputs to test software performance under unexpected circumstances
@@ -37,11 +37,11 @@ Security assessment and testing programs are an important mechanism for validati
 - **Judgement Sampling**: AKA purposive or authoritative sampling, a non-probability sampling technique where members are chosen only on the basis of the researcher's knowledge and judgement
 - **Misuse Case Testing**: testing strategy from a hostile actor's point of view, attempting to lead to integrity failures, malfunctions, or other security or safety compromises
 - **Mutation testing**: mutation testing modifies a program in small ways and then tests that mutant to determine if it behaves as it should or if it fails; technique is used to design and test software through mutation
-- **Penetration Testing/Ethical Penetration Testing**: security testing and assessment where testers actively attempt to circumvent/default a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
+- **Penetration Testing/Ethical Penetration Testing**: security testing and assessment where testers actively attempt to circumvent a system's security features; typically constrained by contracts to stay within specified Rules of Engagement (RoE)
 - **Plan of Action and Milestones (POA&M)**: a document identifying tasks to be accomplished, including details, resources, milestones, and completion target dates
-- **RUM**: real user monitoring is a passive monitoring technique that records user iteration with an app or system to ensure performance and proper app behavior; often used as a pre-deployment process using the actual user interface
+- **RUM**: real user monitoring is a passive monitoring technique that records user interaction with an app or system to ensure performance and proper app behavior; often used as a pre-deployment process using the actual user interface
 - **RoE**: Rules of Engagement, set of rules/constraints/boundaries that establish limits of participant activity; in ethical pen testing, an RoE defines the scope of testing, and to establish liability limits for both testers and the sponsoring org or system owners
-- **SCF**: Script Check Engine is designed to make scripts interoperable with security policy definitions
+- **SCE**: Script Check Engine is designed to make scripts interoperable with security policy definitions
 - **Statistical Sampling**: process of selecting subsets of examples from a population with the objective of estimating properties of the total population
 - **Substantive Test**: testing technique used by an auditor to obtain the audit evidence in order to support the auditor's opinion
 - **Testing**: process of exercising one or more assessment objects (activities or mechanisms) under specified conditions to compare actual to expected behavior
@@ -74,7 +74,7 @@ Security assessment and testing programs are an important mechanism for validati
   - Three forms of SOC audits:
     - **SOC 1 Engagements**: assess the organization’s controls that might impact the accuracy of financial reporting
     - **SOC 2 Engagements**: assess the organization’s controls that affect the security and privacy of information stored in a system
-      - SOC 2 focus on 5 trust principles: Security, Availability, Confidentiality, Processing Integrity, and Privacy
+      - SOC 2 focuses on 5 **Trust Services Criteria (TSC)**: Security, Availability, Confidentiality, Processing Integrity, and Privacy
       - SOC 2 audit results are confidential and are usually only shared outside an org under an NDA
     - **SOC 3 Engagements**: assess the organization’s controls that affect the security (confidentiality, integrity, and availability) and privacy information stored in a system
       - however, SOC3 audit results are intended for public disclosure; they are regarded primarily as marketing tools
@@ -86,11 +86,12 @@ Security assessment and testing programs are an important mechanism for validati
       - the auditor actually confirms the controls are functioning properly
       - Type II reports also cover an extended period of time, at least 6 months, typically a year
       - think of Type II report as similar to a traditional audit; the auditor is checking the paperwork, and verifying the controls are functioning properly
-    - Type II reports are considered much more reliable than Type I reports (Type I reports simply take the service orgs word that the controls are implemented as described); security pros want SOC2, Type II reports
+    - Type II reports are considered much more reliable than Type I reports (Type I reports simply take the service org's word that the controls are implemented as described); security pros want SOC2, Type II reports
+    - **Exam tip**: Type I = point-in-time snapshot of control design; Type II = extended-period evaluation of control design AND operating effectiveness
 
 - 6.1.4 Location (e.g., on-premise, cloud, hybrid)
   - On-premise assessment: focuses on evaluating the security measures and infrastructure of in-house systems, or within an organization's physical data centers and facilities
-  - Cloud assessment: focus is on assessing the security of data and applications hosted in cloud service providers environment
+  - Cloud assessment: focus is on assessing the security of data and applications hosted in cloud service provider's environment
   - Hybrid assessment: assess connectivity and security measures used between on-premise and cloud resources; this assessment looks at data flow or interconnection and integration security controls
 
 ## [6.2](#62-conduct-security-controls-testing-osg-10-chpt-15) Conduct security controls testing (OSG-10 Chpt 15)
@@ -101,9 +102,9 @@ Security assessment and testing programs are an important mechanism for validati
   - **Vulnerabilities**: weaknesses in systems and security controls that might be exploited by a threat
   - **Vulnerability assessments**: examining systems for these weaknesses; steps in the assessment:
     - Reconnaissance: passively gather publicly available info
-    - Enumeration: actively enumerate through target IP addresses and ports
+    - Enumeration: active network discovery (i.e. find target IP address and ports)
     - Vulnerability Analysis: Identify potential vulns to be exploited
-    - Execution: applies only if you are doing a penetration test
+    - Execution: attempt to exploit vulns; applies only if you are doing a penetration test
     - Document Findings: reporting on findings and severity
   - The goal of a vulnerability assessment is to identify elements in an environment that are not adequately protected -- and not necessarily from a technical perspective; you can also assess the vulnerability of physical security or the external reliance on power, for instance
     - can include personnel testing, physical testing, system and network testing, and other facilities tests
@@ -132,12 +133,7 @@ Security assessment and testing programs are an important mechanism for validati
     - Identifying the value of each asset
     - Identifying the vulnerabilities for each asset
     - Ongoing review and assessment
-  - Testing stages from the OSG include:
-    - Reconnaissance: gathering initial information about target systems  by using passive or active methods
-    - Enumeration: active network discovery (i.e. find target IP address and ports)
-    - Vulnerability analysis: identify potential vulns
-    - Execution: attempt to exploit vulns
-    - Document findings: report on findings
+  - Testing stages: see steps in the assessment in 6.2.1 above
   - NIST defines the penetration testing process as consisting of four phases:
     - **planning**: includes agreement on the scope of the test and the rules of engagement
       - ensures that both the testing team and management are in agreement about the nature of the test and that it is explicitly authorized
@@ -163,21 +159,21 @@ Security assessment and testing programs are an important mechanism for validati
       - AKA "**unknown environment tests**"
       - does not provide attackers with any information prior to the attack
       - this simulates an external attacker trying to gain access to information about the business and technical environment before engaging in an attack
-  - Differences between vulnerability assessments and pen tests: vuln assessments are usually more automated, can be performed quickly, and no attempt to made to exploit vulns
-  - Red, blue andd purple teams have been around for a long time, and is becoming more popular
+  - Differences between vulnerability assessments and pen tests: vuln assessments are usually more automated, can be performed quickly, and no attempt is made to exploit vulns
+  - Red, blue and purple teams have been around for a long time, and are becoming more popular
     - Red team: this is the in-house offensive security team, they are the simulated hackers or the threat providing:
       - offensive security
       - ethical hacking
       - penetration testing
       - social engineering
       - threat intelligence
-    Blue team: the blue team is the in-house defensive team, working to stop the threat:
+    - Blue team: the blue team is the in-house defensive team, working to stop the threat:
       - defensive security
       - security monitoring
       - incident response
       - digital forensics
       - security operations
-    Purple: not a separate team, but purple represents the collaboration between the red and blue teams:
+    - Purple: not a separate team, but purple represents the collaboration between the red and blue teams:
       - red and blue teams working together
       - providing information sharing and healthy competition
 
@@ -196,7 +192,7 @@ Security assessment and testing programs are an important mechanism for validati
   - **Synthetic transactions**: scripted transactions with known expected results
   - **Synthetic (AKA active) monitoring**: uses emulated or recorded transactions to monitor for performance changes in response time, functionality, or other performance monitors
   - **Real User Monitoring (RUM)**: observes and captures data from actual users as they interact with an app or website; this is also known as **passive monitoring** because user activity is passively monitored; this is good for identifying specific user issues
-  - Dynamic testing may include the use of synthetic transactions to verify system performance; synthetic transactions are run against code and compare out to expected state
+  - Dynamic testing may include the use of synthetic transactions to verify system performance; synthetic transactions are run against code and compare output to expected state
 
 - 6.2.5 Code review and testing
   - Code review and testing is "one of the most critical components of a software testing program"
@@ -213,6 +209,7 @@ Security assessment and testing programs are an important mechanism for validati
     - Exit criteria are the criteria or requirements which must be met to complete a specific process
   - **Static application security testing (SAST)**: evaluates the security of software without running it by analyzing either the source code or the compiled application; code reviews are an example of static app security testing
   - **Dynamic application security testing (DAST)**: evaluates the security of software in a runtime environment and is often the only option for organizations deploying applications written by someone else
+  - **Interactive Application Security Testing (IAST)**: combines elements of both SAST and DAST by analyzing code during runtime from within the application, providing more accurate results
 
 - 6.2.6 Misuse case testing
   - **Misuse case testing**: AKA abuse case testing - used by software testers to evaluate the vulnerability of their software to known risks; focuses on behaviors that are not what the org desires or that are counter to the proper function of a system/app
@@ -244,13 +241,14 @@ Security assessment and testing programs are an important mechanism for validati
 
 - 6.2.9 Breach attack simulations
   - **Breach and attack simulation (BAS)**: platforms that automate some aspects of penetration testing
-  - The BAS platform is conducting automated testing of security controls to identify deficiencies
+  - The BAS platform helps conduct automated testing of security controls to identify deficiencies
   - A BAS system combines red team (attack) and blue team (defense) techniques together with automation to simulate advanced persistent threats (and other advanced threat actors) running against the environment
   - Designed to inject threat indicators onto systems and networks in an effort to trigger other security controls (e.g. place a suspicious file on a server)
     - detection and prevention controls should immediately detect and/or block this traffic as potentially malicious
   - See:
     - OWASP Web Security Testing Guide
     - OSSTMM (Open Source Security Testing Methodology Manual)
+    - MITRE ATT&CK framework
     - NIST 800-115
     - FedRAMP Penetration Test Guidance
     - PCI DSS Information Supplemental on Penetration Testing
@@ -269,7 +267,7 @@ Security assessment and testing programs are an important mechanism for validati
   - Data generated by disaster recovery and business continuity programs
 
 - 6.3.1 Account management
-  - Preferred attacker techniques for obtaining privilege user access include:
+  - Preferred attacker techniques for obtaining privileged user access include:
     - compromising an existing privileged account: mitigated through use of strong authentication (strong passwords and multifactor), and by admins use of privileged accounts only for specific tasks
     - privilege escalation of a regular account or creation of a new account: these approaches can be mitigated by paying attention to the creation, modification, and use of user accounts
 
@@ -301,7 +299,10 @@ Security assessment and testing programs are an important mechanism for validati
       - repeat audit findings
       - user attempts to visit known malicious sites
     - Develop a dashboard of metrics and track them
-  - **Key Risk Indicators (KRIs)**: indicate the level of exposure to operational risk; they help monitor potential future shifts in risk conditions or emerging risks; KRIs are forward-looking
+  - **Key Risk Indicators (KRIs)**: indicate the level of exposure to operational risk; they help monitor potential future shifts in risk conditions or emerging risks; KRIs are forward-looking; example KRIs might include:
+    - percentage of systems running unsupported/EOL software
+    - number of third-party vendors without current security assessments
+    - volume of unencrypted sensitive data transmissions
 
 - 6.3.4 Backup verification data
   - Managers should periodically inspect the results of backups to verify that the process functions effectively and meets the organization’s data protection needs
@@ -311,15 +312,17 @@ Security assessment and testing programs are an important mechanism for validati
   - Training and awareness programs play a crucial role in preparing an organization’s workforce to support information security programs
   - They educate employees about current threats and advise them on best practices for protecting information and systems under their care from attacks
   - Program should begin with initial training designed to provide foundation knowledge to employees who are joining the org or moving to a new role; the initial training should be tailored to an individual’s role
-  - Training and awareness should continue to take place throughout the year, reminding employees of their responsibilities and updating them on changes to the organization’s operating environment and threat landscape
+  - Training and awareness should continue to take place throughout the year, reminding employees of their responsibilities and updating them on changes to the org’s operating environment and threat landscape
   - Use phishing simulations to evaluate the effectiveness of their security awareness programs
+  - It's important to measure training effectiveness through metrics (e.g., phishing simulation click rates over time)
+  - Training should include requirements by role (e.g., developers receiving secure coding training), and take into consideration compliance-driven requirements (e.g., annual security awareness training mandated by regulations)
 
-- 6.3.6 Disaster Recover (DR) and Business Continuity (BC)
+- 6.3.6 Disaster Recovery (DR) and Business Continuity (BC)
   - **Business Continuity (BC)**: the processes used by an organization to ensure, holistically, that its vital business processes remain unaffected or can be quickly restored following a serious incident
   - **Disaster Recovery (DR)**: is a subset of BC, that focuses on restoring information systems after a disaster
     - these programs should take a comprehensive approach to planning and include considerations related to the initial response effort, personnel involved, communication among the team members and with internal and external entities, assessment of response efforts, and restoration of services
     - DR programs should also include training and awareness efforts to ensure personnel understand their responsibilities and lessons learned sessions to continuously improve the program
-  - These processes need to be periodically accessed, and regular testing of disaster recovery and business continuity controls provide organizations with the assurance they are effectively protected against disruptions to business ops
+  - DR and BC plans need to be periodically assessed and tested to ensure they remain effective
   - Protection of life is of the utmost importance and should be dealt with first before attempting to save material things
 
 ## [6.4](#64-analyze-test-output-and-generate-report-osg-10-chpt-15) Analyze test output and generate report (OSG-10 Chpt 15)
@@ -374,11 +377,12 @@ Security assessment and testing programs are an important mechanism for validati
   - Disadvantage of using a third-party auditor:
     - cost: third-party auditors are going to be much more costly than internal teams; this means that the organization is not likely to conduct audits as frequently
     - internal resources are still required to assist or accompany auditors, to answer questions and guide
+  - Some common third-party audit frameworks include:
+    - ISO 27001 (certification audits)
+    - PCI DSS (for payment card data)
+    - HIPAA (for healthcare)
 
 - 6.5.4 Location (e.g., on-premise, cloud, hybrid)
-  - As in 6.1.4 above:
-  - On-premise assessment: focuses on evaluating the security measures and infrastructure of in-house systems, or within an organization's physical data centers and facilities
-  - Cloud assessment: focus is on assessing the security of data and applications hosted in cloud service providers environment
-  - Hybrid assessment: assess connectivity and security measures used between on-premise and cloud resources; this assessment looks at data flow or interconnection and integration security controls
-
+  - See 6.1.4 above
+  
   Also see Understanding CISSP Domain 6, Security Assessment and Testing - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-6-security), and [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-6-security-cbf) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

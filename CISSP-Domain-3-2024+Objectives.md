@@ -3,13 +3,13 @@
 You may find this domain to be more technical than others, and if you have experience working in a security engineering role you likely have an advantage; if not, allocate extra time to this domain to ensure you have a good understanding of the topics; domain 3 is weighted around 13%
 
 - **Advanced Encryption Standard (AES)**: uses the Rijndael symmetric algorithm and is the US gov standard for the secure exchange of sensitive but unclassified data; AES uses key lengths of 128, 192, and 256 bits, and a fixed block size of 128 bits, achieving a higher level of security than the older DES algorithm
-- **Algorithm**: a mathematical function that is used in the encryption and decryption process; can be simply or very complex; also defined as a set of instructions by which encryption and decryption is done
+- **Algorithm**: a mathematical function that is used in the encryption and decryption process; can be simple or very complex; also defined as a set of instructions by which encryption and decryption is done
 - **Argon2**: a secure key derivation and password hashing algorithm designed to protect against brute-force and side-channel attacks; it was the winner of the Password Hashing Competition in 2015 and is considered highly secure and efficient, especially for systems requiring robust password protection
 - **ASLR**: Address space layout randomization (ASLR) is a memory-protection process for operating systems (OSes) that guards against buffer-overflow attacks by randomizing the location where system executables are loaded into memory
 - **Block Mode Encryption**: using fixed-length sequences of input plaintext symbols as the unit of encryption
 - **Block cipher**: method of encrypting text that produces ciphertext, where a cryptographic key and algorithm are applied to a block of data at once/as a group, instead of one bit at a time; takes a number of bits and encrypts them in a single unit, padding the plaintext to achieve a multiple of the block size; the Advanced Encryption Standard (AES) algorithm uses 128-bit blocks
 - **Cipher**: always meant to hide the true meaning of a message; always secret; types of ciphers include transposition, substitution, stream, and block
-- **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone expect the intended recipients (it's a secret)
+- **Ciphertext**: altered form of a plaintext message so as to be unreadable for anyone except the intended recipients (it's a secret)
 - **Cleartext**: any information that is unencrypted, although it might be in an encoded form that is not easily human-readable (such as base64 encoding)
 - **Cloud Controls Matrix (CCM)**: Cloud Security Alliance (CSA) framework designed to provide security principles to guide cloud vendors and assist prospective cloud customers in assessing the risks of cloud usage
 - **Cloud Security Posture Management (CSPM)**: identifies and remediates risk by automating visibility, uninterrupted monitoring, threat detection, and remediation workflows searching for misconfigurations across cloud environments and infrastructure such as Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS); these tools can also perform incident response, remediation recommendations, and compliance monitoring
@@ -29,9 +29,8 @@ You may find this domain to be more technical than others, and if you have exper
 - **Encryption**: process and act of converting the message from plaintext to ciphertext (AKA enciphering)
 - **Enterprise Security Architecture**: methods to ensure security is aligned with org goals and objectives to protect critical components (people, process, and technology)
 - **Factoring attack**: in terms of the test, only the RSA algorithm uses factoring as the hard math problem; so if you see factoring attack, think RSA
-- **Fog computing**: advanced computational architecture often used as an element in IIoT; fog computing relies on sensors, IoT devices, or edge computing devices to collect data, then transfers it back to a central location for processing (centralizing processing and intelligence)
 - **Frequency analysis**: form of cryptanalysis that uses frequency of occurrence of letters, words or symbols in the ciphertext as a way of reducing the search space
-- **Hybrid encryption system**: a method that combines the speed and efficiency of symmetric-key cryptography with the secure key exchange capabilities of asymmetric (public-key) cryptography; all practical implementations of public-key cryptography today use this hybrid approach
+- **Hybrid encryption system**: a method that combines the speed and efficiency of symmetric-key cryptography with the secure key exchange capabilities of asymmetric (public-key) cryptography; most practical implementations of public-key cryptography today use this hybrid approach
 - **International Data Encryption Algorithm (IDEA)**: IDEA is a form of symmetric key block cipher encryption that uses a 128-bit key and operates on 64-bit blocks; it encrypts a 64-bit block of plaintext into a 64-bit block of ciphertext, and the input plaintext block is divided into four sub-blocks of 16 bits each
 - **Initialization Vector (IV)**: a random string of bits (aka a nonce) that is XORed with a message, reducing predictability and repeatability; size of the IV varies by algorithm but normally is the same length as the block size of the cipher (or as large as the encryption key); IV is the cryptographic version of a random number
 - **Key**: the input that controls the operation of the cryptographic algorithm, determining the behavior of the algorithm and permits the reliable encryption and decryption of the message
@@ -40,7 +39,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Key generation**: the process of creating a new encryption/decryption key
 - **Key pair**: matching set of one public and one private key
 - **Key recovery**: process of reconstructing an encryption key from the ciphertext alone; if there is a workable key recovery system, it means the algorithm is not secure
-- **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password; keyspace = 2 to the power of the number of bits, so 4 bits = 16 keys, 8 bits = 256 keys
+- **Key space**: represents the total number of possible values of keys in a cryptographic algorithm or password; keyspace = 2^n (where n = number of bits), so 4 bits = 16 keys, 8 bits = 256 keys
 - **Lattice-based Cryptography**: Lattice-based cryptography leverages complex grids or constructions known as lattices for the purpose of encryption and decryption; involves mathematical problems that remain hard to solve even with the enhanced computational power of quantum computing
 - **Microcontroller**: similar to system on a chip (SoC), consists of a CPU, memory, IO devices, and non-volatile storage (e.g. flash or ROM/PROM/EEPROM); think Raspberry Pi or Arduino
 - **Mobile device deployment models**: that cover allowing or providing mobile devices for employees include: BYOD (Bring Your Own Device), COPE (Company Owned/Personally Enabled), CYOD (Choose Your Own Device), and COBO (Company Owned/Business Only); also consider VDI and VMI options
@@ -54,7 +53,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Plaintext**: message or data in its readable form, not turned into a secret
 - **Post-Quantum Cryptography**: development of new types of cryptographic approaches that can be implemented using conventional computing, and is resistant to quantum computing attacks; note that Lattice-based cryptography is resistant to most, but not all, quantum attacks (also see my [article on quantum computing threats and opportunities](https://blog.balancedsec.com/p/quantum-computing-heros))
 - **Remote attestation**: feature of the TPM (Trusted Platform Module) that creates a hash value from the system configuration to confirm the integrity of the configuration
-- **RTOS**: real-time operating system (RTOS) is an operating system specifically designed to manage hardware resources and run applications with precise timing and high reliability; they are designed to process data with minimum latency; an RTOS is often stored on ROM; they use deterministic timing, meaning tasks are completed within a defined time frame and is designed to operate in a hard (i.e. missing a deadline can cause system failure) or soft (missing a deadline degrades performance but is not catastrophic) real-tme condition
+- **RTOS**: real-time operating system (RTOS) is an operating system specifically designed to manage hardware resources and run applications with precise timing and high reliability; they are designed to process data with minimum latency; an RTOS is often stored on ROM; they use deterministic timing, meaning tasks are completed within a defined time frame and is designed to operate in a hard (i.e. missing a deadline can cause system failure) or soft (missing a deadline degrades performance but is not catastrophic) real-time condition
 - **Salting**: adds additional bits to a password before hashing it, and helps thwart rainbow attacks; algorithms like Argon2, bcrypt, and PBKDF2 add salt and repeat the hashing function many times; salts are stored in the same database as the hashed password
 - **Salting vs key stretching**: salting adds randomness and uniqueness to each password before hashing, which reduces the effectiveness of rainbow table attacks; key stretching makes the hashing process deliberately slow, making it much more challenging for attackers to crack passwords using brute-force or precomputed tables; common password hashing algorithms that use key stretching include PBKDF2, bcrypt, and scrypt
 - **SDx**: software-defined everything refers to replacing hardware with software using virtualization; includes virtualization, virtualized software, virtual networking, containerization, serverless architecture, IaC, SDN, VSAN, software-defined storage (SDS), VDI, VMI SDV, and software-defined data center (SDDC)
@@ -66,14 +65,14 @@ You may find this domain to be more technical than others, and if you have exper
 - **Substitution cipher**: uses an encryption algorithm to replace each character or bit of the plaintext message with a different character; one of the earliest substitution ciphers was developed by Julius Caesar, known as the "Caesar cipher"
 - **Symmetric encryption**: process that uses the same key (or a simple transformation of it) for both encryption/decryption
 - **The Open Group Architecture Framework (TOGAF)**: Enterprise Security Architecture that provides for rapid and iterative development, defining business goals and aligning them with architecture objectives
-- **Transposition cypher**: encryption/decryption process using transposition
+- **Transposition cipher**: encryption/decryption process using transposition
 - **Trust and Assurance**: trust is the presence of a security mechanism or capability; assurance is how reliable the security mechanism(s) are at providing security
 - **VESDA**: very early smoke detection process (air sensing device brand name)
 - **Work factor**: (AKA Work function) is a way to measure the strength of a cryptography system, measuring the effort in terms of cost/time to decrypt messages; amount of effort necessary to break a cryptographic system using a brute-force attack, measured in elapsed time
 - **Zachman**: Enterprise Security Architecture based on 2-d table of what, how, when who, where, why; and identification, definition, representation, specification, configuration, and installation
 - **Zero-knowledge proof**: one person demonstrates to another that they can achieve a result that requires sensitive info without actually disclosing the sensitive info
 
-## [3.1](#31--research-implement-and-manage-engineering-processes-using-secure-design-principles-osg-10-chpts-18916)  Research, implement, and manage engineering processes using secure design principles (OSG-10 Chpts 1,8,9,16)
+## [3.1](#31--research-implement-and-manage-engineering-processes-using-secure-design-principles-osg-10-chpts-18916) Research, implement, and manage engineering processes using secure design principles (OSG-10 Chpts 1,8,9,16)
 
 - Standard **secure design principles** are:
   - Threat modeling
@@ -98,7 +97,7 @@ You may find this domain to be more technical than others, and if you have exper
     - Limiting and controlling privileges based on this concept protects confidentiality and data integrity
 
 - 3.1.3 Defense in Depth
-  - **Defense in Depth**: AKA layering, is the use of multiple controls in a series, where a single failed control should not result in exposure of systems or data; layers should be used in a series (one after the other), NOT in parallel
+  - **Defense in Depth**: AKA layering, is the use of multiple controls in a series, where a single failed control should not result in exposure of systems or data; layers should be used in a series (one after the other), NOT in parallel (note that layered security does also involve parallel controls (e.g., both a firewall and IDS monitoring the same traffic); here the "series" concept refers multiple sequential barriers an attacker must overcome, not that controls cannot operate concurrently)
     - When you see the terms like levels, multilevel, layers, classifications, zones, realms, compartments, protection rings etc think about Defense in Depth
 
 - 3.1.4 Secure defaults
@@ -193,7 +192,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Biba**: Released in 1977, this model was created to supplement Bell-LaPadula
   - Focus is on *integrity*
   - **Simple Integrity Property**: "No read down" (for example, users with a Top Secret clearance can’t read data classified as Secret)
-  - **Star (*) Integrity Property**: "No write up" (for example, a user with a Secret clearance can’t write data to files classified as Top Secret)
+  - **Star (*) Integrity Property**: "No write up" (for example, a user with a high integrity clearance can’t write data to files classified as low integrity)
   - **Invocation Property**: prohibits subject at one level of integrity from invoking a subject at a higher level of integrity
   - **Lipner implementation**: by combining Biba and Bell-LaPadula, you get both confidentiality and integrity
   - Biba uses a lattice to control access and is a form of mandatory access control (MAC) model
@@ -274,7 +273,7 @@ You may find this domain to be more technical than others, and if you have exper
   - **Hardware segmentation**: forces separation via physical hardware controls rather than logical processes; in this type of segmentation, the operating system maps processes to dedicated memory locations
 - **Virtualization**: technology used to host one or more operating systems within the memory of a single host, or to run applications that are not compatible with the host OS; the goal is to protect the hypervisor and ensure that compromising one VM doesn't affect others on that host
 - **Virtual Software**: software that is deployed in a way that acts as if it is interacting with a full host OS; a virtualized app is isolated from the host OS so it can't make direct/permanent changes to the host OS
-- **Reference Monitor Concept (RMC)**: theoretical concept that provides a way to check and control every subject to object access attempt; four properties (NEAT): Non by-passable, Evaluable, Always invoked, Tamper-proof
+- **Reference Monitor Concept (RMC)**: theoretical concept that provides a way to check and control every subject to object access attempt; four properties (**NEAT**): **N**on-bypassable, **E**valuable, **A**lways invoked, **T**amper-proof
 - **Security Kernel** is simply an implementation of the reference monitor concept
 - **Trusted Platform Module (TPM)**: a cryptographic chip that is sometimes included with a client computer or server; a TPM enhances the capabilities of a computer by offering hardware-based cryptographic operations
   - TPM is a tamper-resistant integrated circuit built into some motherboards that can perform cryptographic operations (including key gen) and protect small amounts of sensitive info, like passwords and cryptographic keys
@@ -322,9 +321,9 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - **Column**: (AKA an attribute or field) represents a specific property or characteristic of the entity defined by the table
   - **Cardinality**: refers to the number of rows in a table
   - **Candidate Key**: an attribute, or a minimal set of attributes, that can uniquely identify every row in a table
-  - **Primary Key**: the candidate key chosen by that the database designer to be the principal unique identifier for the table
+  - **Primary Key**: the candidate key chosen by the database designer to be the principal unique identifier for the table
   - **Foreign Key**: an attribute or a set of attributes in one table (the referencing or ‘child’ table) that refers to the primary key of another table (the referenced or ‘parent’ table)
-  - **Referencial integrity**: ensures that values in the foreign key column of the child table must already exist in the primary key column of the parent table
+  - **Referential integrity**: ensures that values in the foreign key column of the child table must already exist in the primary key column of the parent table
   - **Degree**: refers to the number of columns in a table
   - **ACID model**: set of properties that guarantee the validity of database transactions:
     - **Atomicity**: transactions are all-or-nothing; a transaction must be an atomic unit of work, i.e., all of its data modifications are performed, or none are performed
@@ -355,7 +354,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 - 3.5.5 Industrial Control Systems (ICS)
   - **Industrial control systems (ICS)**: a form of computer-management device that controls industrial processes and machines, also known as operational technology (OT); there are several forms of ICS including distributed control systems (DCS), programmable logic controllers (PLC), and supervisory control and data acquisition (SCADA)
-    - recognize that DSC, PLC, and SCADA are types of ICS; and know about how to secure ICS
+    - recognize that DCS, PLC, and SCADA are types of ICS; and know about how to secure ICS
   - **Supervisory control and data acquisition (SCADA)**: systems used to control physical devices like those in an electrical power plant or factory; SCADA systems are well suited for distributed environments, such as those spanning continents
     - some SCADA systems still rely on legacy or proprietary communications, putting them at risk, especially as attackers gain knowledge of such systems and their vulnerabilities
   - ICS risk mitigations:
@@ -425,19 +424,19 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 - 3.5.9 Microservices (e.g., application programming interface (API))
   - **Service-oriented Architecture (SOA)**: constructs new apps or functions out of existing but separate and distinct software services, and the resulting app is often new; therefore its security issues are unknown, untested, and unprotected; a derivative of SOA is microservices
-  - **Microservices**: a feature of web-based solutions and derivative of SOA, microservices app is put together as a collection of loosely-couples small and independent services;A microservice is simply one element, feature, capability, business logic, or function of a web app that can be called upon or used by other web apps
+  - **Microservices**: a feature of web-based solutions and derivative of SOA, microservices app is put together as a collection of loosely-couples small and independent services; A microservice is simply one element, feature, capability, business logic, or function of a web app that can be called upon or used by other web apps
     - Microservices are usually small and focused on a single operation, engineered with few dependencies, and based on fast, short-term development cycles (similar to Agile)
     - Each microservice exposes an Application Programming Interface (API) providing communication and interaction with other services; these APIs allow for a modular, flexible, and scalable architecture
     - Securing microservices:
       - use HTTPS only
       - encrypt everything possible and use routine scanning
       - closely aligned with microservices is the concept of shifting left, or addressing security earlier in the SDLC; also integrating it into the CI/CD pipeline
-      - consider the software supplychain or dependencies of libraries used, when addressing updates and patching
+      - consider the software supply chain or dependencies of libraries used, when addressing updates and patching
       - ensure APIs are secure by using appropriate authentication, authorization, and encryption for data exchanges
       - if deployed via containers, ensure appropriate access control, secure images and configurations; ensure the software is updated and patched regularly
 
 - 3.5.10 Containerization
-  - **Containerization**: AKA OS virtualization, is based on the concept of eliminating the duplication of OS elements in a virtual machine; instead each app is placed into a container that includes only the actual resources needed to support the app, and the common or shared OS elements are used from the hypervisor
+  - **Containerization**: AKA OS virtualization, is based on the concept of eliminating the duplication of OS elements in a virtual machine; instead each app is placed into a container that includes only the actual resources needed to support the app, and the common or shared OS elements are used from the host operating system
     - Containerization is able to provide 10 to 100 x more application density per physical server compared to traditional virtualization
     - Vendors often have security benchmarks and hardening guidelines to follow to enhance container security
     - Securing containers:
@@ -476,7 +475,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - "fingerprint" HPC systems to understand use, and detect anomalous behavior
 
 - 3.5.14 Edge computing systems
-  - **Edge computing**: philosophy of network design where data and compute resources are located as close as possible, at or near the network edge, to optimize bandwidth use while minimizing latency; intelligence and processing are contained within each device, and each device can process it's own data locally
+  - **Edge computing**: philosophy of network design where data and compute resources are located as close as possible, at or near the network edge, to optimize bandwidth use while minimizing latency; intelligence and processing are contained within each device, and each device can process its own data locally
   - **Fog Computing**: a larger, more distributed extension of cloud computing that sits as an intermediate layer between the edge and the central Cloud
   - One of the primary benefits of edge and fog computing from a security perspective is that they reduce the amount of data flowing to the cloud, which improves data privacy and reduces the risk of data breaches
   - Edge and Fog security recommendations:
@@ -501,7 +500,6 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - virtualized systems should be security tested via vuln assessment and penetration testing
       - virtualization doesn't lessen the security management requirements of an OS, patch management is still required
       - be aware of VM Sprawl and Shadow IT
-      - **VM escape**: occurs when software within a guest OS is able to breach the isolation protection provided by the hypervisor
       - VM escape minimization:
         - keep highly sensitive systems and data on separate physical machines
         - keep all hypervisor software current with vendor-released patches
@@ -511,7 +509,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 - 3.6.1 Cryptographic lifecycle (e.g., keys management, algorithm selection)
   - **Cryptographic Life Cycle**: the complete process of managing cryptographic keys, algorithms, and components from initial system creation to final destruction
-  - Keep **Moore’s Law** in mind (processing capabilities of state-of-the-art microprocessors double about every 2 years), and have appropriate governance controls in place to ensure that algorithms, protocols, and key lengths selected are sufficient to preserve the integrity of the cryptosystems for as long as necessary -- to keep secret information safe
+  - Keep **Moore’s Law** in mind (processing capabilities of state-of-the-art microprocessors double approximately every 18 to 24 months), and have appropriate governance controls in place to ensure that algorithms, protocols, and key lengths selected are sufficient to preserve the integrity of the cryptosystems for as long as necessary -- to keep secret information safe
   - Specify the cryptographic algorithms (such as AES, 3DES, and RSA) acceptable for use in an organization
   - Identify the acceptable key lengths for use with each algorithm based on the sensitivity of the info transmitted
   - Enumerate the secure transaction protocols (e.g. TLS) that may be used
@@ -528,7 +526,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 - 3.6.2 Cryptographic methods (e.g., symmetric, asymmetric, elliptic curves, quantum)
   - **Confusion**: the principle of making the relationship between the key and the ciphertext as complex as possible
-  - **Diffusion***: the principle of spreading the influence of a single plaintext bit over as much of the ciphertext as possible
+  - **Diffusion**: the principle of spreading the influence of a single plaintext bit over as much of the ciphertext as possible
   - **Symmetric** encryption: uses the same key for encryption and decryption
     - symmetric encryption uses a shared secret key available to all users of the cryptosystem
     - symmetric encryption is faster than asymmetric encryption because smaller keys can be used for the same level of protection
@@ -562,6 +560,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
         - advantages: no error propagation, provides authentication and integrity
         - disadvantages: cannot be run in parallel
       - Examples of symmetric algorithms: Twofish, Serpent, AES (Rijndael), Camellia, Salsa20, ChaCha20, Blowfish, CAST5, Kuznyechik, RC4/5/6, DES, 3DES, Skipjack, Safer, and IDEA
+      (remember that DES has been considered insecure for decades, and NIST formally deprecated 3DES in 2023)
   - **Asymmetric** encryption: process that uses different keys for encryption and decryption, and in which the decryption key is computationally not possible to determine given the encryption key itself
     - Asymmetric (AKA public key, since one key of a pair is available to anybody) algorithms provide convenient key exchange mechanisms and are scalable to very large numbers of users (addressing the two most significant challenges for users of symmetric cryptosystems)
     - Asymmetric cryptosystems avoid the challenge of sharing the same secret key between users, by using pairs of public and private keys to allow secure communication without the overhead of complex key distribution
@@ -577,7 +576,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
       - Rivest-Shamir-Adleman (RSA): depends on factoring the product of prime numbers
       - Diffie-Hellman: depends on modular arithmetic
       - ElGamal: extension of Diffie-Hellman that depends on modular arithmetic
-      - Elliptical Curve Cryptography (EEC): elliptic curve algorithm depends on the elliptic curve discrete logarithm problem and provides more security than other algorithms when both are used with keys of the same length
+      - Elliptic Curve Cryptography (ECC): elliptic curve algorithm depends on the elliptic curve discrete logarithm problem and provides more security than other algorithms when both are used with keys of the same length
   - **Hash function**: a one-way mathematical function that takes an input (or message) of any size and produces a fixed-size string of characters called a hash value, hash code, or digest
   - **Quantum cryptography**: quantum computing is a newer and advanced type of technology with the promise of future power to enhance fields like AI, encryption, medicine, and science; classical computing uses electrical or optical on/off impulses representing 0s and 1s, and quantum computing's power lies in harnessing quantum mechanical principles allowing qubits (quantum bits) to represent both 0 and 1 simultaneously and multidimensionally
     - **Quantum supremacy**: the potential for quantum computing to easily resolve hard problems (e.g. factoring large integers and solving discrete logarithms) rendering algorithms like RSA and Diffie-Hellman insecure
@@ -682,7 +681,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - **Known plaintext**: in this attack, the attacker has a copy of the encrypted message along with the plaintext message used to generate the ciphertext (the copy); this knowledge greatly assists the attacker in breaking weaker codes; the goal is to use the plaintext and associated ciphertext to deduce the encryption key
   - **Linear cryptanalysis**: a known plaintext attack, in which the attacker studies probabilistic linear relations referred to as linear approximations among parity bits of the plaintext, the Ciphertext and the hidden key; considered most effective technique in exploiting statistical properties of ciphertext to find correlations between plaintext and ciphertext
   - **Meet-in-the-middle** typically a known-plaintext attack that works by performing two simultaneous, smaller brute-force searches with different keys: both encryption of the plaintext and decryption of the ciphertext simultaneously to identify the encryption key; 2DES is vulnerable to this attack
-  - **Chosen plaintext**: a powerful attack model where the attacker can choose specific plaintexts to be encrypted and obtain the corresponding ciphertexts.
+  - **Chosen-plaintext attack (CPA)**: an attack model for cryptanalysis which presumes that the attacker can obtain the ciphertexts for arbitrary plaintexts, with the goal to gain information that reduces the security of the encryption scheme; a CPA is more powerful than a known plaintext attack; however a chosen-plaintext is less powerful than a chosen ciphertext
 
 - 3.7.4 Frequency analysis
   - **Frequency analysis**: an attack where the characteristics of a language are used to defeat substitution ciphers
@@ -692,7 +691,6 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
 
 - 3.7.5 Chosen ciphertext
   - **Chosen ciphertext**: in a chosen ciphertext attack, the attacker has access to one or more plaintexts of arbitrary ciphertexts; i.e. the attacker has the ability to decrypt chosen portions of the ciphertext message, and use the decrypted portion to discover the key
-  - **Chosen-plaintext attack (CPA)**: an attack model for cryptanalysis which presumes that the attacker can obtain the ciphertexts for arbitrary plaintexts, with the goal to gain information that reduces the security of the encryption scheme; a CPA is more powerful than a known plaintext attack; however a chosen-plaintext is less powerful than a chosen ciphertext
   - **Differential cryptanalysis**: a type of chosen plaintext attack, and a general form of cryptanalysis applicable primarily to block ciphers, but also to stream ciphers and cryptographic hash functions; it is the study of how differences in information input can affect the resultant difference at the output; advanced methods such as differential cryptanalysis are types of chosen plaintext attacks
     - as an example, an attacker may try to get the receiver to decrypt modified ciphertext, looking for that modification to cause a predictable change to the plaintext
   - Countermeasures: use authenticated encryption modes such as GCM (Galois/Counter Mode), or CCM (Counter with Cipher Block Chaining-Message Authentication Code)
@@ -748,12 +746,11 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - **ASREPRoast**: ASREPRoast identifies users that don’t have Kerberos preauthentication enabled
   - **Kerberoasting**: kerberoasting collects encrypted ticket-granting service (TGS) tickets
 
-- 3.7.13 Ransomeware
+- 3.7.13 Ransomware
   - **Ransomware**: a type of malware that weaponizes cryptography
-    - using many of the same techniques as other types of malware, ransomware gens an encryption key, and encrypts critical files
+    - using many of the same techniques as other types of malware, ransomware generates an encryption key, and encrypts critical files
     - this encryption renders the data inaccessible to the authorized user or anyone else other than the malware author
-    - often threatening to publicly release sensitive data if ransome is not paid
-    - 2020 study, 56% of orgs suffered a ransomware attack, 27% of orgs who reported an attack chose to pay, on average ~$1.1m
+    - often threatening to publicly release sensitive data if ransom is not paid
     - seek legal advice prior to engaging with ransomware authors
   - Countermeasures:
     - regular, offline backups
@@ -859,7 +856,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - line-interactive: has a surge protector, battery charger/inverter and voltage regulator positioned between the grid power source and the equipment (battery is not in line under normal conditions)
   - Commercial power problem types:
     - **fault**: momentary loss of power
-    - **blackout**: usually stained and complete loss of power
+    - **blackout**: usually sustained and complete loss of power
     - **sag**: (AKA dip) momentary low voltage
     - **brownout**: prolonged low voltage
     - **spike**: momentary high voltage
@@ -871,6 +868,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
     - rooms containing primarily computers should have:
       - temps kept at 59 to 89.6 deg Fahrenheit (15 to 32 deg Celsius)
       - humidity should be maintained between 20 and 80 percent
+      - note ASHRAE (American Society of Heating, Refrigerating and Air-Conditioning Engineers) provides guidelines, which are the industry standard for data center environmental conditions
     - note that even on nonstatic carpeting, if the env has low humidity, a 20k-volt static discharge is possible; and even minimal levels of static electricity can destroy electronic equipment
   - Datacenter:
     - should be on different power circuits from occupied areas
@@ -888,7 +886,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - Protecting personnel from harm should always be the most important goal of any security or protection system!
   - In addition to protecting people, fire detection and suppression is designed to keep asset damage caused by fire, smoke, heat, and suppression materials to a minimum
   - **Fire triangle**: three triangle corners represent fuel, heat, and oxygen; the center of the triangle represents the chemical reaction among these three elements
-    - if you can remove any one of the four items from the fire triangle, the fire can be extinguished
+    - if you can remove any one of the three items from the fire triangle, the fire can be extinguished
   - Fire suppression mediums:
     - water suppresses temperature
     - soda acid and other dry powders suppress the fuel supply
@@ -931,6 +929,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - Testing (note verification and validation are part of testing)
   - Release/Deployment
   - Operations/Maintenance
+  - Retirement/disposal
 
 - 3.10.1 Stakeholders needs and requirements
   - Focused on understanding stakeholder needs and expectations, this initial phase is about ensuring the new system will meet the needs of the people that use it, and that there is a communicated and agreed upon understanding of those requirements
@@ -948,7 +947,7 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - This phase includes integration testing of the components in the system, as well as testing integration with external systems as part of the development process
 
 - 3.10.6 Verification and validation
-  - The system is undergoes system testing, including verification and validation of functionality and components, preparing for go-live
+  - The system undergoes system testing, including verification and validation of functionality and components, preparing for go-live
 
 - 3.10.7 Transition/deployment
   - Once the system has passed unit and system testing, the system is deployed for in-production use; this phase includes migration of dev to prod environments, and may also include migration from legacy to the new system
@@ -957,6 +956,6 @@ This objective relates to identifying vulnerabilities and corresponding mitigati
   - The system is in operational, day-to-day use in this phase, which includes on-going typical system monitoring, maintenance and patching, change management, configuration management, system backups, and disaster-recovery testing for the system in production
 
 - 3.10.9 Retirement/disposal
-  - At some point, the system will be retired once it has completed it's useful purpose and the lifecycle will be completed
+  - At some point, the system will be retired once it has completed its useful purpose and the lifecycle will be completed
 
 Also see Understanding CISSP Domain 3: Security Architecture and Engineering - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security), [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security-ace), and [part 3](https://blog.balancedsec.com/p/understanding-cissp-domain-3-security-e4e) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

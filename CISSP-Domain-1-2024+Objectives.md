@@ -2,14 +2,9 @@
 
 - This domain is one of the largest with a weighting of 16%; it is also very much foundational for most of the other domains, so give it the associated time in preparation
 
-- **Glass-Steagall Act**: passed in 1933 and separated investment and commercial banking activities and created the Federal Deposit Insurance Corporation (FDIC)
-  - The Gramm-Leach-Bliley Act eliminated the Glass-Steagall Act's restrictions against affiliations between commercial and investment banks in 1999
-  - **Security Control Assessment (SCA)**: an evaluation that tests if an organization's security controls (technical, administrative, and physical) are implemented correctly, functioning as intended and meeting security requirements
-    - basically a formal evaluation of a defined set of controls against a baseline or reliability expectation; may be conducted with the Security Test and Evaluation (ST&E); [NIST Special Publication 800-53A Security and Privacy Controls for Federal Information Systems and Organizations](https://www.nist.gov/privacy-framework/nist-sp-800-53a) ensure the security requirements and enforcement of appropriate security controls
-    - goals of SCA:
-      - ensure the effectiveness of the security mechanisms
-      - evaluate the quality and thoroughness of the risk management processes
-      - produce a report of the relative strengths and weaknesses of the deployed security infrastructure
+
+- The Gramm-Leach-Bliley Act eliminated the Glass-Steagall Act's restrictions against affiliations between commercial and investment banks in 1999
+
 - [RFC 1087](https://datatracker.ietf.org/doc/html/rfc1087): activity that is unethical and unacceptable:
   - (a) seeks to gain unauthorized access to the resources of the Internet
   - (b) disrupts the intended use of the Internet
@@ -125,9 +120,9 @@
           - **ISO 27001:2022**: provides best practice recommendations for an Information Security Management System (ISMS)
           - **ISO 27002:2022**: provides detailed implementation guidance for controls in ISO 27001
           - **ISO 27017:2015**: provides guidelines for information security controls applicable to the provision and use of cloud services
-          - **ISO 27018:2019**: commonly accepted controls and guidelines for protecting PII in the cloud (concent, control, transparency, communication, independent, yearly audit)
+          - **ISO 27018:2019**: commonly accepted controls and guidelines for protecting PII in the cloud (consent, control, transparency, communication, independent, yearly audit)
     - **[NIST Cybersecurity Framework (CSF)](https://www.nist.gov/cyberframework)**: built around six core functions providing guidance to industry, government agencies, and other orgs to improve their ability to prevent, detect, and respond to cyber attacks, and manage cybersecurity risks
-      - CFS was designed for commercial orgs and critical infrastructure and CSF 2.0 consists of these six functions:
+      - CSF was designed for commercial orgs and critical infrastructure and CSF 2.0 consists of these six functions:
         - govern
         - identify
         - protect
@@ -159,7 +154,7 @@
         - Building and maintaining network security: including firewalls, at rest and in-transit encryption, and secure network configurations
         - Protecting cardholder data: including stored payment data, encrypting data transmissions, and ensuring data security measures are in place
         - Maintaining vulnerability management: developing secure systems and apps, and identification and remediation of vulnerabilities
-        - Implementing strong access control: restricting physical and logical access to cardholder data to only required business functions, and assigning unique IDS to users
+        - Implementing strong access control: restricting physical and logical access to cardholder data to only required business functions, and assigning unique IDs to users
         - Regular monitoring and testing: testing security systems and process, and maintaining an incident response plan
         - Maintaining Information Security policies: establishing policies that address information security for all personnel and outline proper cardholder data handling, and maintaining compliance audits
     - **[Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/)**: a government-wide program that standardizes the security assessment, authorization, and monitoring of cloud services and products; the program was established in 2011 to help the federal government use cloud technologies while protecting federal information
@@ -170,8 +165,9 @@
         - Impact levels: categorizes services into three impact levels (low, moderate, and high) based on sensitivity of handled data; each level has specific controls
         - Agency benefits: FedRAMP provides benefits such as reduced costs and time by eliminating redundant assessments since other federal agencies can reuse an auth once a CSP obtains FedRAMP authorization, improved visibility and risk management and accelerated cloud adoption
     - **[CIS Critical Security Controls](https://www.cisecurity.org/controls)**: the CIS (Center for Internet Security) Critical Security Controls provides a prioritize set of actions to defend against threats; it focuses on practical steps to reduce the attack surface, like implementing secure configurations, managing admin privileges, and monitoring logs
-    - **[Information Technology Infrastructure Library (ITIL))](https://www.axelos.com/certifications/itil-service-management/)**: ITIL is a set of practices for IT service management (ITSM) that focuses on aligning IT services with business needs; it includes elements of security governance, particularly in managing security incidents, changes, and service continuity, and is often integrated with other frameworks like ISO 27001
-    - Committee of Sponsoring Organizations of the Treadway Commission (COSO)**: framework that helps orgs reduce financial fraud by establishing, assessing, and enhancing their internal controls
+    - **[Information Technology Infrastructure Library (ITIL)](https://www.axelos.com/certifications/itil-service-management/)**: ITIL is a set of practices for IT service management (ITSM) that focuses on aligning IT services with business needs; it includes elements of security governance, particularly in managing security incidents, changes, and service continuity, and is often integrated with other frameworks like ISO 27001
+    - **Committee of Sponsoring Organizations of the Treadway Commission (COSO)**: framework that helps orgs reduce financial fraud by establishing, assessing, and enhancing their internal controls
+      - COSO's five components: Control Environment, Risk Assessment, Control Activities, Information & Communication, and Monitoring Activities.
 
 - 1.3.5 Due care/due diligence
   - **Due diligence**: establishing a plan, policy, and process to protect the interests of the organization; due diligence is knowing what should be done and planning for it; understanding your security governance principles (policies and procedures) and the risks to your organization; actions taken by a vendor to demonstrate or provide due care
@@ -209,6 +205,7 @@
     - Laws about data breaches, including notification requirements
     - In the US, the **Health Information Technology for Economic and Clinical Health (HITECH)** Act expanded HIPAA's breach reporting requiring notification of a data breach in some cases, such as when the personal health information was not protected as required by HIPAA
       - Under the HITECH Breach Notification Rule, HIPAA-covered entities that experience a data breach must notify affected individuals, the Secretary of Health and Human Services (HHS) and the media of the breach within 60 days of discovery, when more than 500 individuals are affected
+    - **Glass-Steagall Act**: passed in 1933 and separated investment and commercial banking activities and created the Federal Deposit Insurance Corporation (FDIC)
     - GLBA (Gramm-Leach-Bliley Act) applies to insurance and financial orgs, requiring notification to federal regulators, law enforcement agencies and customers when a data breach occurs
     - Certain states also impose their own requirements concerning data breaches
     - the EU and other countries have their own requirements, for instance, the GDPR has very strict data breach notification requirements: A data breach must be reported to the competent supervisory authority within 72 hours of its discovery
@@ -287,12 +284,13 @@
   - **Personal Information Protection and Electronic Documents Act (PIPEDA)**: Canadian law that governs the use of personal information
   - **Personal Information Protection Law (PIPL)**: comprehensive Chinese data privacy law, with similarities to GDPR
     - Key aspects of PIPL:
-      - Concent and purpose: explicit consent is required for data aggregation and processing, and individuals can withdraw consent
-      - Minimum Data Collection: PIPL requires orgs only collect only relevant and necessary personal data
+      - Consent and purpose: explicit consent is required for data aggregation and processing, and individuals can withdraw consent
+      - Minimum Data Collection: PIPL requires orgs to collect only relevant and necessary personal data
       - Data Subject Rights: provides people with rights to access, correction, deletion, and to be informed of data breaches
       - Cross-Border Data Transfer: imposes restrictions on transferring personal data outside of China
   - **Privacy Shield**: (formerly the EU-US Safe Harbor agreement): controls data flow from the EU to the United States; the EU has more stringent privacy protections and without the Privacy Shield, personal data flow from the EU to the United States would not be allowed
-  - **Protection of Personal Information Act (POPIA)**: South Africa's comprehensive data protection law designed to protection personal information processed by public and private entities, and promote the right to privacy
+    - note that the EU-US Privacy Shield was invalidated by the Court of Justice of the European Union (CJEU) in the "Schrems II" ruling (July 2020) and has been replaced by the EU-US Data Privacy Framework (DPF) adopted in July 2023
+  - **Protection of Personal Information Act (POPIA)**: South Africa's comprehensive data protection law designed to protect personal information processed by public and private entities, and promote the right to privacy
     - Key provisions of POPIA:
       - Applies to any organization processing PII of natural or juristic persons in SA
       - Eight conditions for lawful processing
@@ -304,9 +302,9 @@
         - security safeguards
         - data subject participation
         - limitation on further processing
-      - Consent required from data subject to process data, or from a parent or guardian is the subject is a child
+      - Consent required from data subject to process data, or from a parent or guardian if the subject is a child
       - Strict conditions on special personal information (race, religion, trade union membership, political affiliation etc)
-      - Restricts cross-boarder information transfers unless recipient country has similar privacy protections
+      - Restricts cross-border information transfers unless recipient country has similar privacy protections
       - Penalties for POPIA violation can be severe, enforced by the Information Regulator
   - **US Patriot Act of 2001**: enacted following the September 11 attacks with the stated goal of tightening U.S. national security, particularly as it related to foreign terrorism
     - The act included three main provisions:
@@ -358,7 +356,7 @@
   - **Policies**: these are high-level documents, usually written by the management team; policies are mandatory, and a policy might provide requirements, but not the steps for implementation
   - **Standards**: specific mandates explicitly stating expectations of performance/conformance; more descriptive than policies, standards define compulsory requirements for the homogeneous use of hardware, software, technology, and security controls, uniformly implemented throughout the org
   - **Baselines**: defines a minimum level of security that every system throughout the organization must meet; baselines are usually system specific and refer to industry / government standards
-    - e.g. a baseline for  server builds would be a list of configuration areas that should be applied to every server that is built
+    - e.g. a baseline for server builds would be a list of configuration areas that should be applied to every server that is built
     - A Group Policy Object (GPO) in a Windows network is sometimes used to comply with standards; configuration management solutions can also help you establish baselines and spot configurations that are not in alignment
   - **Guidelines**: offers recommendations on how standards and baselines should be implemented & serves as an operational guide for security professionals and users
     - Guidelines are flexible, and can be customized for unique systems or conditions; they state which security mechanism should be deployed instead of prescribing a specific product or control; they are not compulsory, but are suggested practices and expectations of activity to best accomplish tasks and goals
@@ -378,6 +376,8 @@
       - **recovery time objectives (RTO)**: how long it takes to recover; maximum tolerable time to recover systems to a defined service level
       - **recovery point objectives (RPO)**: the maximum tolerable data loss measured in time
       - **maximum tolerable downtime (MTD) or maximum allowable downtime (MAD)**: the length of time an org can suffer the loss of its critical path or critical functions before ceasing to be a viable enterprise; how long an org can survive an interruption of critical functions
+      - **MTTR**: mean time to repair is the average length of time required to perform a repair on the device (also see Domain 7)
+      - **MTBF**: mean time between failure is an estimation of time between the first and any subsequent failures (also see Domain 7)
       - along with the costs of downtime and recovery
     - **Continuity planning**: The first two phases of the BCP process (project scope and planning and the business impact analysis) focus on determining how the BCP process will work and prioritizing the business assets that need to be protected against interruption
       - The next phase of BCP development, continuity planning, focuses on the development and implementation of a continuity strategy to minimize the impact realized risks might have on protected assets
@@ -415,7 +415,7 @@
 
 - 1.7.2 External dependencies
   - It's important to explore external party and vendor roles and responsibilities as part of the BCP process to understand and plan for how these organizations/services will impact your organization's contingency plans
-    - Eternal party contingency review includes (but is not limited to) vendors supplying critical hardware and software, cloud services, legal/regulatory concerns etc
+    - External party contingency review includes (but is not limited to) vendors supplying critical hardware and software, cloud services, legal/regulatory concerns etc
 - The top priority of BCP and DRP is people: **Always prioritize people's safety**; get people out of harm's way, and then address IT recovery and restoration issues
 
 ## [1.8](#18-contribute-to-and-enforce-personnel-security-policies-and-procedures-osg-10-chpt-2) Contribute to and enforce personnel security policies and procedures (OSG-10 Chpt 2)
@@ -466,7 +466,7 @@
 
 - 1.9.1 Threat and vulnerability identification
   - **Risk Management**: process of identifying factors that could damage or disclose data, evaluating those factors in light of data value and countermeasure cost, and implementing cost-effective solutions for mitigating or reducing risk
-  - **Threat**: any potential occurrence that many cause an undesirable or unwanted outcome for a specific asset; they can be intentional or accidental; loosely think of a threat as a weapon that could cause harm to a target
+  - **Threat**: any potential occurrence that may cause an undesirable or unwanted outcome for a specific asset; they can be intentional or accidental; loosely think of a threat as a weapon that could cause harm to a target
   - **Vulnerability**: the weakness in an asset, or weakness (or absence) of a safeguard or countermeasure; a flaw, limitation, error, frailty, or susceptibility to harm
   - Threats and vulnerabilities are related: a threat is possible when a vulnerability is present
     - Threats exploit vulnerabilities, which results in exposure
@@ -487,7 +487,11 @@
     - **Safeguard evaluation**: ALE for an asset if a safeguard is implemented
       - ALE before safeguard - ALE with safeguard - annual cost of safeguard
       - or (ALE1 - ALE2) - ACS
-    - **Risk**: the possibility or likelihood that a threat will exploit a vulnerability to cause harm to an asset and the severity of damage that could result; the > the potential harm, the > the risk
+    - **Risk**: the possibility or likelihood that a threat will exploit a vulnerability to cause harm to an asset and the severity of damage that could result; the the greater the potential harm, the greater the risk
+    - **risk appetite** vs. **risk tolerance** vs. **risk capacity** are commonly tested concepts:
+    - **Risk appetite**: the total amount of risk an organization is willing to accept
+    - **Risk tolerance**: the acceptable level of variation in outcomes relative to a specific objective
+    - **Risk capacity**: the maximum amount of risk an organization can support or absorb
 
 - 1.9.2 Risk analysis, assessment, and scope
   - **Risk Assessment**: used to identify the risks and set criticality priorities, and then risk response is used to determine the best defense for each identified risk
@@ -548,7 +552,12 @@
       - they can be a means to improve the effectiveness of a primary control or as the alternative or failover option in the event of a primary control failure
 
 - 1.9.5 Control assessments (e.g. security and privacy)
-  - **Security control assessment (SCA)**: formal evaluation and review of individual controls against a baseline
+  - **Security Control Assessment (SCA)**: formal evaluation and review of individual controls against a baseline; tests if an organization's security controls (technical, administrative, and physical) are implemented correctly, functioning as intended and meeting security requirements
+  - basically a formal evaluation of a defined set of controls against a baseline or reliability expectation; may be conducted with the Security Test and Evaluation (ST&E); [NIST Special Publication 800-53A Security and Privacy Controls for Federal Information Systems and Organizations](https://www.nist.gov/privacy-framework/nist-sp-800-53a) ensure the security requirements and enforcement of appropriate security controls
+  - goals of SCA:
+    - ensure the effectiveness of the security mechanisms
+    - evaluate the quality and thoroughness of the risk management processes
+    - produce a report of the relative strengths and weaknesses of the deployed security infrastructure
   - An SCA goal is to ensure security mechanism effectiveness; periodically assess security and privacy controls to determine what’s working, what isn’t
     - As part of this assessment, the existing documents should be thoroughly reviewed, and some of the controls tested randomly
     - A report is typically produced to show the outcomes and enable the org to remediate deficiencies
@@ -634,7 +643,6 @@
   - Tampering: any action resulting in unauthorized changes or manipulation of data, whether in transit or in storage
   - Repudiation: the ability of a user or attacker to deny having performed an action or activity by maintaining plausible deniability
   - Information Disclosure: the revelation or distribution of private, confidential, or controlled information to external or unauthorized entities
-  - Elevation of privilege
   - **Denial of Service (DoS)**: an attack that attempts to prevent authorized use of a resource; this can be done through flaw exploitation, connection overloading, or traffic flooding; for example, a SYN flood is a DoS attack that disrupts the TCP three-way handshake
   - Elevation of privilege: an attack where a limited user account is transformed into an account with greater privileges, powers, and access
   - STRIDE is threat categorization model; threat categorization is an important part of app threat modeling
@@ -664,6 +672,7 @@
   - D: Discoverability
 - Note that STRIDE and DREAD are used together: STRIDE to identify the threats, DREAD to prioritize them
 - **Trike**: an open source risk-based threat modeling methodology; provides a method of performing a reliable and repeatable security audit, and a framework for collaboration and communication
+- Also see Cyber Kill Chain in Domain 7
 - Threat intelligence feed standards include:
   - **CAPEC (Common Attack Pattern Enumeration and Classification)**: a dictionary of known attack patterns
   - **STIX (Structured Threat Information eXpression language)**: used to describe threats in a standardized way
@@ -732,10 +741,10 @@ Also see [Understanding CISSP Domain 1: Security and Risk Management](https://bl
 
 Articles on risk management:
 
-- [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1) - introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
-- Since the primary goal of risk management is to identify potential threats against an organization's assets, and bring those risks into alignment with an organization's risk appetite, in [Part2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2), we cover the threat assessment -- a process of examining and evaluating cyber threat sources with potential system vulnerabilities
+- [Part 1](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-1) introduces risk and risk terminology from the lens of the (ISC)² Official Study Guide
+- Since the primary goal of risk management is to identify potential threats against an organization's assets, and bring those risks into alignment with an organization's risk appetite, in [Part 2](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-2), we cover the threat assessment -- a process of examining and evaluating cyber threat sources with potential system vulnerabilities
   - we look at how a risk assessment helps drive our understanding of risk by pairing assets and their associated potential threats, ranking them by criticality
   - we also discuss quantitative analytic tools to help provide specific numbers for various potential risks, losses, and costs
-- In the [third installment](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-3), we review the outcome of the risk assessment process, looking at total risk, allowing us to determine our response to each risk/threat pair and perform a cost/benefit review of a particular safeguard or control
+- In the [Part 3](https://blog.balancedsec.com/p/risk-concepts-from-the-cissp-part-3), we review the outcome of the risk assessment process, looking at total risk, allowing us to determine our response to each risk/threat pair and perform a cost/benefit review of a particular safeguard or control
   - we look at the categories and types of controls and the idea of layering them to provide several different types of protection mechanisms
   - we also review the important step of reporting out our risk analysis and recommended responses, noting differences in requirements for messaging by group

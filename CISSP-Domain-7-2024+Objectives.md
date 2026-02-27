@@ -20,7 +20,7 @@ Security operations is about safeguarding assets and includes core concepts like
 - **Disruption**: unplanned event that causes a system to be inoperable for a length of time
 - **DPI (Deep Packet Inspection)**: a method used by firewalls and other network security devices to examine the data portion (or payload) of packets as they pass through the firewall; DPI goes beyond traditional packet filtering by not only inspecting the header information (such as source/destination IP addresses and port numbers) but also analyzing the content within the packet to identify and respond to security threats
 - **Egress monitoring**: monitoring the flow of info out of an org's boundaries
-- **Entitlement**:refers to the privilege granted to users when an account is first provisioned
+- **Entitlement**: refers to the privilege granted to users when an account is first provisioned
 - **Entity**: any form of a user including hardware device, software daemon, task, processing thread or human, which is attempting to use or access system resources; e.g. endpoint devices are entities that human (or non-human) users use to access a system; should be subject to access control and accounting
 - **Event**: observable occurrence in a network or system
 - **Hackback**: actions taken by a victim of hacking to compromise the systems of the alleged attacker
@@ -31,7 +31,7 @@ Security operations is about safeguarding assets and includes core concepts like
 - **Information Security Continuous Monitoring (ICSM)**: maintaining ongoing awareness of information security, vulnerabilities and threats to support organizational risk management decisions; ongoing monitoring sufficient to ensure and assure effectiveness of security controls
 - **Information Sharing and Analysis Center (ISAC)**: entity or collab created for the purposes of analyzing critical cyber and related info to better understand security problems and interdependencies to ensure CIA
 - **Log**: record of actions/events that have taken place on a system
-- **Motion detector types**: wave pattern motion detectors transmit ultrasonic or microwave signals into the monitored area watching for changes in the returned signals bouncing off objects; infrared heat-based detectors watch for unusual heat patters; capacitance detectors work based on electromagnetic fields
+- **Motion detector types**: wave pattern motion detectors transmit ultrasonic or microwave signals into the monitored area watching for changes in the returned signals bouncing off objects; infrared heat-based detectors watch for unusual heat patterns; capacitance detectors work based on electromagnetic fields
 - **MTBF**: mean time between failure is an estimation of time between the first and any subsequent failures
 - **MTTF**: mean time to failure is the expected typical functional lifetime of the device given a specific operating environment
 - **MTTR**: mean time to repair is the average length of time required to perform a repair on the device
@@ -137,7 +137,7 @@ Security operations is about safeguarding assets and includes core concepts like
     - a subpoena is used to compel the subject to surrender the evidence
     - a law enforcement officer while performing a legally permissible duty, and with probable cause to believe is associated with criminal activity seizes visible evidence
     - a search warrant is used to confiscate evidence without giving the subject an opportunity to alter it
-    - a law enforcement officer collects evidence when exigent circumstances exists
+    - a law enforcement officer collects evidence when exigent circumstances exist
   - Five rules of evidence: five evidence characteristics providing the best chance of surviving legal and other scrutiny:
     - **authentic**: evidence is not fabricated or planted, and can be proven through crime scene photos, or bit-for-bit copies of storage
     - **accurate**: evidence that has integrity (not been modified)
@@ -166,7 +166,7 @@ Security operations is about safeguarding assets and includes core concepts like
     - visual/audio: visual and audio evidence pertinent to a security investigation could include photographs, video, taped recordings, and surveillance footage from security cameras
   - Several investigative techniques can be used when conducting analysis:
     - media analysis: examining the bits on a hard drive that are intact despite not having an index
-    - software analysis: focuses on an applications and malware, determining how it works and what it's trying to do, with a goal of attribution
+    - software analysis: focuses on an application and malware, determining how it works and what it's trying to do, with a goal of attribution
 
 - 7.1.4 Digital forensics tools, tactics, and procedures
   - Digital forensics: the scientific examination and analysis of data from storage media so that the information can be used as part of an investigation to identify the culprit or the root cause of an incident
@@ -177,7 +177,7 @@ Security operations is about safeguarding assets and includes core concepts like
   - **eDiscovery(E-Discovery)**: the process of identifying, collecting, and producing electronically stored information for legal proceedings; the E-Discovery reference model (EDRM) has 9 steps:
     1) Information Governance - ensuring information is well-organized, and balancing value, risk and cost
     2) Identification - locating potential sources of electronically stored information covered by a discovery request, and determining its scope, breadth, and depth
-    3) Preservation - ensuring data is protected and alteration or destruction
+    3) Preservation - ensuring data is protected against alteration or destruction
     4) Collection - gathering data for further use in the process
     5) Processing - screening and reducing the volume of data, and converting as appropriate to forms suitable for review and analysis
     6) Review - evaluating data for relevance; what information needs to be provided, and what may need to be protected
@@ -187,7 +187,7 @@ Security operations is about safeguarding assets and includes core concepts like
     - orgs that believe they will be the target of a lawsuit have a duty to preserve digital evidence
 
 - 7.1.5 Artifacts (e.g., data, computer, network, mobile device)
-  - Forensic artifacts: remnants of a system or network breach/attempted breach, which and may or may not be relevant to an investigation or response
+  - Forensic artifacts: remnants of a system or network breach/attempted breach, which may or may not be relevant to an investigation or response
   - Artifacts can be found in numerous places, including:
     - computer systems
     - web browsers
@@ -201,7 +201,7 @@ Security operations is about safeguarding assets and includes core concepts like
   - **Intrusion detection**: a specific form of monitoring events, usually in real time, to detect abnormal activity indicating a potential incident or intrusion
   - **Intrusion Detection System (IDS)**: (AKA burglar alarms) is a security service that monitors and analyzes network or system events for the purpose of finding/providing realtime/neartime warnings of unauthorized attempts to access system resources; automates the inspection of logs and real-time system events to detect intrusion attempts and system failures
     - an IDS is intended as part of a defense-in-depth security plan
-  - **Intrusion Prevention Systems (IPS)**: an IPS is a security service that uses available info to determine if an attack is underway, alerting and also blocking attacks from reaching intended target; includes detection capabilities, you’ll also see them referred to as intrusion detection and prevention systems (IDPSs);
+  - **Intrusion Prevention Systems (IPS)**: an IPS is a security service that uses available info to determine if an attack is underway, alerting and also blocking attacks from reaching intended target; includes detection capabilities, you’ll also see them referred to as intrusion detection and prevention systems (IDPSs)
     - an IPS can be a signature-based detection system which matches traffic patterns against a database of known attack signatures; it can be anomaly or behavior-based detection, that starts with a baseline, comparing activity to the baseline to detect abnormal activity; IPS can also be policy-based, comparing activity to predefined security policies, or hybrid of these
   - [NIST SP 800-94](https://csrc.nist.gov/pubs/sp/800/94/final) Guide to Intrusion Detection and Prevention Systems provides comprehensive (albeit outdated) coverage of both IDS and IPS
 
@@ -347,6 +347,7 @@ Security operations is about safeguarding assets and includes core concepts like
   - **Job rotation**: (AKA rotation of duties) means that employees rotate through jobs or rotate job responsibilities with other employees
     - using job rotation as a security control provides peer review, reduces fraud, and enables cross-training
     - job rotation policy can act as both a deterrent and a detection mechanism
+
 - 7.4.5 Service Level Agreements (SLA)
   - **Service Level Agreement (SLA)**: an agreement between an organization and an outside entity, such as a vendor, where the SLA stipulates performance expectations and often includes penalties if the vendor doesn’t meet these expectations
   - **Memorandum of Understanding (MOU)**: documents the intention of two entities to work together toward a common goal
@@ -372,7 +373,7 @@ Security operations is about safeguarding assets and includes core concepts like
 - 7.5.1 Media management
   - **Media management**: refers to the steps taken to protect media (i.e. anything that can hold data) and the data stored on that media; includes most portable devices (e.g. smart phones, memory/flash cards etc)
     - media is protected throughout its lifetime and destroyed when no longer needed
-  - As above, OSG-9 also refers to tape media, as well as “hard-copy data”
+  - As above, OSG-10 also refers to tape media, as well as “hard-copy data”
 
 - 7.5.2 Media protection techniques
   - If media includes sensitive info, it should be stored in a secure location with strict access controls to prevent loss due to unauthorized access
@@ -429,7 +430,7 @@ Security operations is about safeguarding assets and includes core concepts like
   - An IR team is AKA computer incident response team (CIRT) or computer security incident response team (CSIRT)
   - Among the first steps taken by the IR Team will be an impact assessment to determine the scale of the incident, how long the impact might be experienced, who else might need to be involved etc.
   - The IR team typical investigate the incident, assess the damage, collect evidence, report the incident, perform recovery procedures, and participate in the remediation and lessons learned stages, helping with root cause analysis
-    - its important to protect all data as evidence during an investigation, and computers should not be turned off
+    - it's important to protect all data as evidence during an investigation, and computers should not be turned off
 
 - 7.6.3 Mitigation
   - **Mitigation**: attempt to contain an incident; in addition to conducting an impact assessment, the IR Team will attempt to minimize or contain the damage or impact from the incident
@@ -447,7 +448,7 @@ Security operations is about safeguarding assets and includes core concepts like
   - **Recovery:** Restoring systems and data to their normal state (e.g., by restoring from backups, rebuilding systems, and re-enabling compromised accounts); at this point, the goal is to start returning to normal
   - The most secure method of restoring a system after an incident is completely rebuilding the system from scratch, including restoring all data from the most recent backup
     - effective configuration and change management will provide the necessary documentation to ensure the rebuilt systems are configured properly
-  - According to the OGS, you should check these areas as part of recovery:
+  - According to the OSG, you should check these areas as part of recovery:
     - access control lists (ACLs), including firewall or router rules
     - services and protocols, ensuring the unneeded services and protocols are disabled or removed
     - patches
@@ -515,8 +516,8 @@ Security operations is about safeguarding assets and includes core concepts like
     - **Application-Level**: functions at the application layer (OSI:Layer 7), acts as an intermediary or proxy, inspecting traffic between the user and the service; can perform deep packet inspection, meaning it can analyze the contents of data packets to identify malicious content or enforce rules for specific applications (e.g., web, email); example: a web application firewall (WAF) inspects traffic going to a web server and can block malicious traffic such as SQL injection attacks and cross-site scripting (XSS) attacks
     - **Circuit-Level Gateway Firewall**: works at the session layer (OSI:Layer 5), and monitors TCP handshakes (i.e., the connection establishment process) to ensure the validity of the session; once the session is validated, it allows the traffic to pass without further inspection of the content; circuit-level gateway firewalls have lower processing overhead, but lacks deep packet inspection
     - **Stateful Inspection Firewall**: operates at the network and transport layers (Layers 3 and 4) but maintains a record of active connections (i.e., it tracks the state of traffic streams across the network); checks whether a packet belongs to an active, legitimate connection before allowing it through; offers better security than static packet filtering; lacks the ability to inspect data at the application layer
-    - **Next-Generation Firewall (NGFW)**: functions as a unified threat management (UTM) device and combines the features of traditional firewalls (like stateful inspection) with additional features such as deep packet inspection, intrusion prevention systems (IPS), and the ability to detect and block threats at the application layer; often incorporates advanced threat detection using techniques such as sandboxing and behavioral analysis; an NFGW inspects traffic at both the application and network layers, providing comprehensive security, including the ability to identify and block sophisticated threats, but is more expensive and resource-intensive
-    - **Internal Segmentation Firewall (ISFW)**: used within a network to segment internal traffic and control access between different parts of an org; an ISFW monitors and filters traffic between network segments (such as between the finance department and HR), preventing lateral movement of threats within the network; provides internal protection by monitoring east-west traffic, reduces the risk of an insider threat or lateral movement, can enforce micro-segmentation, but can be complex to configure and management
+    - **Next-Generation Firewall (NGFW)**: functions as a unified threat management (UTM) device and combines the features of traditional firewalls (like stateful inspection) with additional features such as deep packet inspection, intrusion prevention systems (IPS), and the ability to detect and block threats at the application layer; often incorporates advanced threat detection using techniques such as sandboxing and behavioral analysis; an NGFW inspects traffic at both the application and network layers, providing comprehensive security, including the ability to identify and block sophisticated threats, but is more expensive and resource-intensive
+    - **Internal Segmentation Firewall (ISFW)**: used within a network to segment internal traffic and control access between different parts of an org; an ISFW monitors and filters traffic between network segments (such as between the finance department and HR), preventing lateral movement of threats within the network; provides internal protection by monitoring east-west traffic, reduces the risk of an insider threat or lateral movement, can enforce micro-segmentation, but can be complex to configure and manage
 
     | **Firewall Type**         | **OSI Layers**           | **Key Features**                                       | **Strengths**                                        | **Weaknesses**                                      |
     |---------------------------|--------------------------|-------------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------|
@@ -567,10 +568,20 @@ Security operations is about safeguarding assets and includes core concepts like
   - In addition to keeping the attacker away from a production environment, the honeypot allows administrators to observe an attacker’s activity without compromising the live environment
 
 - 7.7.7 Anti-malware
-  - **Malware**: program inserted into a system with the intent of compromising the CIA of the victim's data, applications, or  OS; malicious software that negatively impacts a system
+  - **adware**: software that displays unwanted advertisements, sometimes bundled with spyware
+  - **bot**: a compromised computer that is remotely controlled by an attacker via a command-and-control (C2) channel; also called a zombie
+  - **bot herder**: someone who controls a botnet, using a command-and-control server to remotely control the zombies to launch attacks on other systems or send spam/phishing emails; bot herders can also rent botnet access out to other criminals
+  - **botnet**: a collection of compromised computing devices (called bots or zombies), organized in a network controlled by a criminal known as a bot herder;  these many infected systems that have been harnessed together and act in unison
+  - **boot sector infectors**: pieces of malware that can install themselves in the boot sector of a drive
+  - **companion**: helper software that is not malicious on its own; it could be something like a wrapper that accompanies the actual malware
+  - **fileless malware**: leaves no trace of its presence nor saves itself to a storage device, but is still able to stay resident and active on a computer
+  - **hoaxes/pranks**: not actually software, they're usually part of social engineering—via email or other means—that intends harm (hoaxes) or a joke (pranks)
+  - **logic bomb**: malware inserted into a program which will activate and perform functions suiting the attacker when some later date/conditions are met; code that will execute based on some triggering event
+  - **macro**: associated with Microsoft Office products, and is created using a straightforward programming language to automate tasks; macros can be programmed to be malicious and harmful
+  - **Malware**: program inserted into a system with the intent of compromising the CIA of the victim's data, applications, or OS; malicious software that negatively impacts a system
   - The most important protection against malicious code is the use of antimalware software with up-to-date signature files and heuristic capabilities
     - multi-pronged approach with antimalware software on each system in addition to filtering internet content helps protect systems from infections
-    - following the principle of least privilege, ensuring users do not have admin permissions on systems won’t be able to install apps that may be malicious
+    - following the principle of least privilege, ensuring users do not have admin permissions on systems so they won't be able to install apps that may be malicious
   - These are the characteristics of each malware type:
     - **virus**: software written with the intent/capability to copy and disperse itself without direct owner knowledge/cooperation; the *defining characteristic is that it's a piece of malware that has to be triggered in some way by the user*; program that modifies other programs to contain a possibly altered version of itself
       - viruses use four main propagation techniques:
@@ -578,30 +589,22 @@ Security operations is about safeguarding assets and includes core concepts like
         - service injection
         - boot sector infection
         - macro infection
-    - **worm**: software written with the intent/capability to copy and disperse without owner knowledge/cooperation, but without needing to modify other programs to contain copies of itself; malware that can self-propagate and spread through a network or a series of systems on its own by exploiting a vulnerability in those systems
-    - **companion**: helper software that is not malicious on its own; it could be something like a wrapper that accompanies the actual malware
-    - **macro**: associated with Microsoft Office products, and is created using a straightforward programming language to automate tasks; macros can be programmed to be malicious and harmful
     - **multipartite**: means the malware spreads in different ways (e.g. Stuxnet)
     - **polymorphic**: malware that can change aspects of itself as it replicates to evade detection (e.g. file name, file size, code structure etc)
-    - **trojan**: a Trojan horse is malware that looks harmless or desirable but contains malicious code; trojans are often found in easily downloadable software; a trojan inserts backdoors or trapdoors into other programs or systems
-    - **bot**: an emerging class of mobile code; employing limited machine learning capabilities to assist with user requests for help or assistance, automation of or assistance with workflows, data input quality validation etc
-    - **bot herder**: someone who controls a botnet, using a command-and-control server to remotely control the zombies to launch attacks on other systems or send spam/phishing emails; bot herders can also rent botnet access out to other criminals
-    - **botnet**: a collection of compromised computing devices (called bots or zombies), organized in a network controlled by a criminal known as a bot herder;  these many infected systems that have been harnessed together and act in unison;
-    - **boot sector infectors**: pieces of malware that can install themselves in the boot sector of a drive
-    - **fileless malware**: leaves no trace of its presence nor saves itself to a storage device, but is still able to stay resident and active on a computer
-    - **hoaxes/pranks**: not actually software, they're usually part of social engineering—via email or other means—that intends harm (hoaxes) or a joke (pranks)
-    - **logic bomb**: malware inserted into a program which will activate and perform functions suiting the attacker when some later date/conditions are met; code that will execute based on some triggering event
-    - **stealth**: malware that uses various active techniques to avoid detection
-    - **ransome attack**: any form of attack which threatens the destruction, denial or unauthorized public release/remarketing of private information assets; usually involves encrypting assets and withholding the decryption key until a ransom is paid
+    - **ransom attack**: any form of attack which threatens the destruction, denial or unauthorized public release/remarketing of private information assets; usually involves encrypting assets and withholding the decryption key until a ransom is paid
     - **ransomware**: type of malware that typically encrypts a system or a network of systems, effectively locking users out, and then demands a ransom payment (usually in the form of a digital currency) to gain access to the decryption key
     - **rootkit**: Similar to stealth malware, a rootkit attempts to mask its presence on a system; malware that embeds itself deeply in an OS; term is derived from the concept of rooting and a utility kit of hacking tools; rooting is gaining total or full control over a system; typically includes a collection of malware tools that an attacker can utilize according to specific goals
+    - **spyware**: software that secretly monitors and collects user information
+    - **stealth**: malware that uses various active techniques to avoid detection
+    - **trojan**: a Trojan horse is malware that looks harmless or desirable but contains malicious code; trojans are often found in easily downloadable software; a trojan inserts backdoors or trapdoors into other programs or systems
+    - **worm**: software written with the intent/capability to copy and disperse without owner knowledge/cooperation, but without needing to modify other programs to contain copies of itself; malware that can self-propagate and spread through a network or a series of systems on its own by exploiting a vulnerability in those systems
     - **zero-day**: is any type of malware that's never been seen in the wild before, and the vendor of the impacted product is unaware (or hasn't issued a patch), as are security companies that create anti-malware software intended to protect systems; previously unreported vuln which can be potentially exploited without risk of detection or prevention until system owner/developer detects and corrects vuln; gets name from the "zero time" being the time at which the exploit or vuln is first identified by the systems' owners or builders; AKA zero-hour exploit, zero-day attack; mitigations include basic security practices including disabling unneeded protocols/services, using appropriate firewalls, IDS/IPS, and honeypots
 
 - 7.7.8 Machine learning and Artificial Intelligence (AI) based tools
   - **AI**: gives machines the ability to do things that a human can do better or allows a machine to perform tasks that we previously thought required human intelligence
   - **Machine Learning**: a subset of AI and refers to a system that can improve automatically through experience
     - an ML system starts with a set of rules or guidelines; ML techniques attempt to algorithmically discover knowledge from datasets
-    - an AI system starts with nothing and progressively learns the rules, creating its own algorithms as it learns the rules and applies ML techniques based on these rules
+    - both ML and AI require training data, but the level of human-defined structure differs
   - Behavior-based detection is one way ML and AI can apply to cybersecurity
     - an admin relates a baseline of normal activities and traffic on a network; the baseline in this case is similar to a set of rules given to a ML system
     - during normal operations, it detects anomalies and reports them; if the detection is a false positive (incorrectly classifying a benign activity, system state, or configuration as malicious or vulnerable), the ML system learns
@@ -609,7 +612,7 @@ Security operations is about safeguarding assets and includes core concepts like
     - as it creates the baseline it also looks for anomalies
     - an AI system also relies on feedback from admins to learn if alarms are valid or false positives
   - **Neural networks**: try to simulate the functioning of the human brain by arranging a series of layered calculations to solve problems; neural networks require extensive training on a particular problem before they are able to offer solutions
-  - **Expert systems**: a branch of AI that uses knowledge-based systems to emulate the decision-making ability of human experts; expert systems have two main components: a knowlege base that uses a series of if/then rules, and an inference engine that harnesses that info to draw conclusions about other data
+  - **Expert systems**: a branch of AI that uses knowledge-based systems to emulate the decision-making ability of human experts; expert systems have two main components: a knowledge base that uses a series of if/then rules, and an inference engine that harnesses that info to draw conclusions about other data
 
 ## [7.8](#78-implement-and-support-patch-and-vulnerability-management-osg-10-chpt-16) Implement and support patch and vulnerability management (OSG-10 Chpt 16)
 
@@ -675,13 +678,13 @@ Security operations is about safeguarding assets and includes core concepts like
   - Cloud backup: storing backup data in the cloud, with the advantages of storage scalability, high availability, and you pay only for what you use
 
   - **Archive bit**: technical detail (metadata) that indicates the status of a backup relative to a given backup strategy
-    - 0 = no changes to the file or no backup required
-    - 1 = file has been modified or backup required
+    - 0 = file has been backed up (no new changes)
+    - 1 = file has been modified since last backup (needs to be backed up)
   - Different backup strategies deal with the archive bit differently; Incremental and differential backup strategies don't treat the archive bit in the same manner
     - once a full backup is complete, the archive bit on every file is reset, turned off, or set to 0
   - Three types of backups:
     - **Full backup**: store a complete copy of the data contained on the protected device or backup media; full backups duplicate every file on the system regardless of the setting of the archive bit
-    - **Incremental backup**: changes since the last incremental backup
+    - **Incremental backup**: backs up only data that has changed since the last backup (whether full or incremental)
       - only files that have the archive bit turned on, enabled, or set to 1 are duplicated
       - once an incremental backup is complete, the archive bit on all duplicated files is reset, turned off, or set to 0
     - **Differential backup**: changes since the last full backup
@@ -733,7 +736,7 @@ Security operations is about safeguarding assets and includes core concepts like
     - When designing a disaster recovery plan, it’s important to keep your goal in mind — the restoration of workgroups to the point that they can resume their activities in their usual work locations
       - sometimes it's best to develop separate recovery facilities for different work groups
     - To recover your business operations with the greatest possible efficiency, you should engineer the disaster recovery plan so that those business units with the highest priority are recovered first
-  - **Mutual Assistance Agreements (MAA)**: provide an inexpensive alternative to disaster recovery sites; not commonly used because they are difficult to enforce; orgs participating in an MAA may also be shut down by the same disaster, and MAAs raise confidentiality concerns
+  - **Mutual Assistance Agreements (MAA)**: provide an inexpensive alternative to disaster recovery sites; *not commonly used* because they are difficult to enforce; orgs participating in an MAA may also be shut down by the same disaster, and MAAs raise confidentiality concerns
   - **Resource Capacity Agreements**: pre-arranged vendor agreements to secure the necessary resources required after a disruptive event; the goal is to ensure an org has access to resources at a recovery site
 
 - 7.10.3 Multiple processing sites
@@ -764,7 +767,7 @@ Security operations is about safeguarding assets and includes core concepts like
         - some companies that maintain their own datacenters may choose to use these IaaS options as backup service providers
       - Note: A hot site is a subscription service, while a redundant site, in contrast, is a site owned and maintained by the org (and a redundant site may be "hot" in terms of capabilities)
         - the exam differentiates between a hot site (a subscription service) and a redundant site (owned by the organization)
-    - Cloud computing: organizations increasingly are turning to cloud computer (often via Iaas) as their preferred disaster recovery option
+    - Cloud computing: organizations increasingly are turning to cloud computing (often via IaaS) as their preferred disaster recovery option
 
 - 7.10.4 System resilience, High Availability (HA), Quality of Service (QoS), and fault tolerance
   - **System resilience**: the ability of a system to maintain an acceptable level of service during an adverse event
@@ -783,8 +786,9 @@ Security operations is about safeguarding assets and includes core concepts like
     - **Redundant array of independent disks (RAID)**: refers to multiple drives being used in unison in a system to achieve greater speed or availability; the most well-known RAID levels are:
       - RAID 0—Striping: provides significant speed, writing and reading advantages
       - RAID 1—Mirroring: uses redundancy to provide reliable availability of data
-      - RAID 10—Mirroring and Striping: requires a minimum of four drives and provides the benefits of striping (speed) and mirroring (availability) in one solution; this type of RAID is typically one of the most expensive
       - RAID 5—Parity Protection: requires a minimum of three drives and provides a cost-effective balance between RAID 0 and RAID 1; RAID 5 utilizes a parity bit, computed from an XOR operation, for purposes of storing and restoring data
+      - RAID 6—Double Parity: similar to RAID 5 but uses two parity blocks, allowing two drives to fail simultaneously without data loss; requires a minimum of four drives
+      - RAID 10—Mirroring and Striping: requires a minimum of four drives and provides the benefits of striping (speed) and mirroring (availability) in one solution; this type of RAID is typically one of the most expensive
 
     | Backup Method | Cost Implications                                                          | Time Implications for RPO                      |
     |---------------|----------------------------------------------------------------------------|-----------------------------------------------|
@@ -839,12 +843,10 @@ Security operations is about safeguarding assets and includes core concepts like
 - 7.11.3 Communications (e.g., methods)
   - Ensure that response checklists provide first responders with a clear plan to protect life and property and ensure the continuity of operations
     - the notification checklist should be supplied to all personnel who might respond to a disaster
-    - the information provided should include alternate means of content (e.g. mobile or alternate, pagers etc) as well as backup contacts for each role
+    - the information provided should include alternate means of contact (e.g. mobile or alternate, pagers etc) as well as backup contacts for each role
 
 - 7.11.4 Assessment
-  - When the DR team arrives on site, one of their first tasks is to assess the situation
-    - this normally occurs in a rolling fashion, with the first responders performing a simple assessment to triage the situation and get the disaster response under way
-    - as the incident progresses more detailed assessments will take place to gauge effectiveness, and prioritize the assignment of resources
+  - When the disaster recovery team arrives, one of their first priorities is to assess the situation; initial responders perform a quick assessment to triage the incident and begin the response, followed by more detailed evaluations to measure effectiveness and prioritize resources as the situation evolves
 
 - 7.11.5 Restoration
   - Note that recovery and restoration are separate concepts
@@ -863,7 +865,7 @@ Security operations is about safeguarding assets and includes core concepts like
 
 - 7.11.7 Lessons learned
   - A lessons learned session should be conducted at the conclusion of any disaster recovery operation or other security incident
-  - The lessons learned process is designed to provide everyone involved with the incident response effort an opportunity to reflect on their individual roles and the teams overall response
+  - The lessons learned process is designed to provide everyone involved with the incident response effort an opportunity to reflect on their individual roles and the team's overall response
   - Time is of the essence in conducting a lesson learned, before memories fade
   - Usually a lessons learned session is led by trained facilitators
   - NIST SP 800-61 offers a series of questions to use in the lessons learned process:
@@ -891,16 +893,17 @@ Security operations is about safeguarding assets and includes core concepts like
 
 - 7.12.1 Read-through/tabletop
   - **Read-through test**: one of the simplest to conduct, but also one of the most critical; copies of a DR plan are distributed to the members of the DR team for review, accomplishing three goals:
-    - ensure that key personnel are aware of their responsibilities and have that knowledge refreshed periodically
-    - provide individuals with an opportunity to review and update plans, removing obsolete info
-    - helps identify situations in which key personnel have left the company and the DR responsibility needs to be re-assigned (note that DR responsibilities should be included in job descriptions)
+    1) ensure that key personnel are aware of their responsibilities and have that knowledge refreshed periodically
+    2) provide individuals with an opportunity to review and update plans, removing obsolete info
+    3) helps identify situations in which key personnel have left the company and the DR responsibility needs to be re-assigned (note that DR responsibilities should be included in job descriptions)
+
+  - **Tabletop**: an exercise where disaster recovery team members and key stakeholders gather together and talk through how they would respond to a disaster scenario, without actually disrupting systems or operation
 
 - 7.12.2 Walkthrough
-  - **Structured walk-through**: AKA tabletop exercise, takes testing one step further, where members of the DR team gather in a large conference room and role-play a disaster scenario
-    - the team refers to their copies of the DR plan and discuss the appropriate responses to that particular type of disaster
+  - **Walk-through**: can vary in scope, but in general, a walkthrough is a disaster recovery exercise that is more hands-on; it is a procedural test where participants follow the disaster recovery plan to verify that the process and tasks are accurate, complete, and workable
 
 - 7.12.3 Simulation
-  - **Simulation tests**: similar to the structured walk-throughs, where team members are presented with a scenario and asked to develop an appropriate response
+  - **Simulation tests**: similar to the walk-throughs, where team members are presented with a scenario and asked to develop an appropriate response
     - unlike a read-through and walk-through, some of these response measures are then tested
     - this may involve the interruption of noncritical business activities and the use of some operational personnel
 
@@ -911,25 +914,26 @@ Security operations is about safeguarding assets and includes core concepts like
 
 - 7.12.5 Full interruption
   - **Full-interruption tests**: operate like parallel tests, but involve actually shutting down operations at the primary site and shifting them to the recovery site
-    - these tests involve a significant risk (shutting down the primary site, transfer recovery ops, followed by the reverse) and therefore are extremely difficult to arrange (management resistance to these tests are likely)
+    - these tests involve a significant risk (shutting down the primary site, transfer recovery ops, followed by the reverse) and therefore are extremely difficult to arrange (management resistance to these tests is likely)
+    - the full interruption test proves that the disaster recovery plan actually works
 
 - 7.12.6 Communications (e.g., stakeholders, test status, regulators)
   - Before starting DRP testing, it's important to inform all stakeholders on what to expect, including scheduled timing, potential impacts, the goals of testing
   - During testing it's important to provide regular updates, especially for larger full-interruption testing, ensuring that stakeholders are aware of progress, challenges, and end-time changes
   - Post-test debriefing sessions can be used to review outcomes, looking at successes and areas that need improvement
-  - Many industries with stringent regulations require specific DR testing plans, and keeping keeping regulators informed is important for compliance as well as governance
+  - Many industries with stringent regulations require specific DR testing plans, and keeping regulators informed is important for compliance as well as governance
 
 ## [7.13](#713-participate-in-business-continuity-bc-planning-and-exercises-osg-10-chpt-3) Participate in Business Continuity (BC) planning and exercises (OSG-10 Chpt 3)
 
 - Business continuity planning addresses how to keep an org in business after a major disruption takes place
   - It's important to note that the scope is much broader than that of DR
   - A security leader will likely be involved, but not necessarily lead the BCP effort
-- The BCP life cycle includes:
-  - Developing the BC concept
-  - Assessing the current environment
-  - Implementing continuity strategies, plans, and solutions
-  - Training the staff
-  - Testing, exercising, and maintaining the plans and solutions
+- The four primary BCP steps are:
+  - Project scope and planning
+  - Business Impact Analysis (BIA)
+  - Continuity planning
+  - Plan approval and implementation
+  
 
 ## [7.14](#714-implement-and-manage-physical-security-osg-10-chpt-10) Implement and manage physical security (OSG-10 Chpt 10)
 
@@ -976,7 +980,7 @@ Security operations is about safeguarding assets and includes core concepts like
   - Training programs should stress the importance of protecting people
   - Insider threats: employees should be educated on the risks of access or misuse of company data by employees, contractors or business partners, highlighting signs of potential insider threats and methods for reporting suspicious behavior
   - Social media impacts: educate employees on risks of oversharing on social platforms e.g. potential for social engineering attacks that use publicly available info
-  - 2FA fatigue: emphasizing the importance of 2FA in protecting personal and org data, ways to make 2FA easier and more user-friendly, and consequences of not using this type of security
+  - 2FA/MFA fatigue: educate employees about MFA fatigue attacks, where attackers send repeated push notifications hoping the user will approve one; employees should be trained to never approve MFA prompts they did not initiate, and to report unexpected prompts immediately
 
 - 7.15.3 Emergency management
   - Emergency management plans and practices help an organization address personnel safety and security after a disaster
@@ -988,4 +992,4 @@ Security operations is about safeguarding assets and includes core concepts like
   - Duress systems are useful when personnel are working alone
   - If a duress system is activated accidentally, code word(s) can be used to assure responding personnel it was an accident, or omit the word(s) keying an actual response
 
-Also see Understanding CISSP Domain 7, Security Operations - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-7-security), and [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-7-security-79d) (others coming soon) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)
+Also see Understanding CISSP Domain 7, Security Operations - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-7-security), and [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-7-security-79d) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

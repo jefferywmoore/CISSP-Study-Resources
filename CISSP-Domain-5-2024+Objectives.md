@@ -8,11 +8,11 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **Access control services**: (AKA AAA services) identification, authentication, authorization, and accountability
 - **Authentication**: verifies the subject’s identity by comparing one or more authentication factors against a database holding authentication info for users; subjects prove their identity by providing authentication credentials
 - **Authenticator Assurance Levels (AAL)**:  a measure of the robustness of the authentication process; AAL levels are ranked from AAL1 (least robust) to AAL3 (most robust), and described in [NIST 800-63-3b](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf)
-  - AAL1 (some assurance that the user controls an authenticator about to their account): allows single-factor or multi-factor auth, with less stringent requirements on authenticator types
+  - AAL1 (some assurance that the user controls an authenticator bound to their account): allows single-factor or multi-factor auth, with less stringent requirements on authenticator types
   - AAL2 (high confidence): requires MFA, and must be resistant to replay attacks
-  - AAL3 (very high confidence): requires hardware-based MFA mandates verifier impersonation and phishing resistance
+  - AAL3 (very high confidence): requires hardware-based MFA, and mandates verifier impersonation and phishing resistance
 - **Accountability**: after authenticating subjects, systems authorize access to objects based on their proven identity; auditing logs and audit trails record events, including the identity of the subject performing the action; the combination of effective identification, authentication, and auditing provides accountability; note that the **principle of access control** is accountability
-- The three primary authentication factors are authentication by knowledge (something you know), authentication by ownership (something you have), and authentication by characteristic (something you are)
+- The three primary authentication factors are authentication by knowledge (something you know), authentication by ownership (something you have), and authentication by characteristic (something you are); types 4 and 5 are often considered supplementary or contextual factors rather than primary authentication types
   - Something you know: Type 1 authentication (passwords, pass phrase, PIN etc)
   - Something you have: Type 2 authentication (ID, passport, smart card, token, cookie on PC etc)
   - Something you are: Type 3 authentication, includes biometrics (fingerprint, iris or retinal scan, facial geometry etc.)
@@ -30,9 +30,11 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **Content-dependent control**: Content-dependent access control adds additional criteria beyond identification and authentication: the actual content the subject is attempting to access; all employees of an org may have access to the HR database to view their accrued sick time and vacation time, but should an employee attempt to access the content of the CIO's HR record, access is denied
 - **Context-dependent access control**: applies additional context before granting access, with time as a commonly used context
 - **Crossover Error Rate (CER)**: identifies the accuracy of a biometric method, and is the point at which false acceptance rate (FAR or Type 2) equals the false rejection rate (FRR or Type 1) for a given sensor, in a given system and context; it is the optimal point of operation if the potential impacts of both types of errors are equivalent
+  - a **lower CER indicates a more accurate biometric system**
 - **Cross-Site Request Forgery (CSRF)**: (AKA XSRF) an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated; in CSRF attack the intended target is the web app itself; the attack exploits the trust that the web app has in the user's browser, and by tricking the auth'd user into submitting a forged request, the attacker can cause the web app to perform actions as if it were initiated by the legit user
 - **FRR**: False Rejection Rate (Type 1) is the probability of incorrectly denying authentication to a legit identity and therefore denying access; expressed as a percentage
 - **FAR**: False Acceptance Rate (Type 2) is the probability of incorrectly authenticating a claimed identity as legit, recognizing and granting access on that basis; expressed as a percentage
+  - Remember: A Type 1 error is like being rejected at your own front door; Type 2 error is like letting a stranger in
 - **Ethical Wall**: the use of administrative, physical/logical controls to establish/enforce separation of information, assets or job functions for need-to-know boundaries or prevent conflict of interest situations; AKA compartmentalization
 - **Granularity of controls**: level of abstraction or detail which in a security function can be configured or tuned for performance and sensitivity
 - **IDaaS**: cloud-based service that brokers IAM functions to target systems on customers' premise and/or in the cloud; refers to implementation/integration of identity services in a cloud-based environment; services include provisioning, administration, SSO, MFA, directory services, on-prem and in the cloud
@@ -42,14 +44,14 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **Memory card**: authentication by ownership factor typically uses a magnetic strip as memory, where the same data is read from the strip with every transaction
 - **Objects**: things a subject accesses, such as files; a user is a subject who accesses objects while performing some action or accomplishing a task
 - **Passwords authentication**: the weakest form of authentication, but password policies help increase security by enforcing complexity and history requirements
-- **Policy Enforcement Point (PEP)**: app component that receives auth requests, functioning as a gatekeeper, sending the reuqest on to the PDP; once a decision is provided by the PDP, the PEP enforces it (grant/deny)
-- **Policy Decision Point (PDP)**: make decisions on auth requests sent from PEP, based on pre-defined rules
+- **Policy Enforcement Point (PEP)**: app component that receives auth requests, functioning as a gatekeeper, sending the request on to the PDP; once a decision is provided by the PDP, the PEP enforces it (grant/deny)
+- **Policy Decision Point (PDP)**: make decisions on authorization requests sent from PEP, based on pre-defined rules
 - **Self-service identity management**: elements of the identity management lifecycle which the end-user (identity in question) can initiate or perform on their own (e.g. password reset, changes to challenge questions etc)
 - **Server-Side Request Forgery (SSRF)**: if an API fetches a remote resource without validating the user-supplied URI, this vuln lets the attacker exploit the application to send a crafted request to an unexpected destination (regardless of firewall/VPN protection)
 - **SESAME**: Secure European System for Applications in a Multi-Vendor Environment an improved version of Kerberos; a protocol for SSO (like Kerberos), but has the advantage of supporting both symmetric and asymmetric cryptography (and therefore solves Kerberos' problem of key distro); it also issues multiple tickets mitigating attacks like TOCTOU
 - **Session**: what is created as a result of a successful user identification, authentication, and authorization process; represents the connection and interaction between a user and a system
 - [**Seven Laws of Identity**](https://www.ipc.on.ca/en/media/1525/download?attachment):
-  - 1: User control and consent: identity systems should only reveal user-identifying info with the user's concent
+  - 1: User control and consent: identity systems should only reveal user-identifying info with the user's consent
   - 2: Minimal disclosure for a constrained use: the identity system should disclose the least identifying info possible
   - 3: Justifiable parties: systems should only disclose information to parties that have a justified need
   - 4: Directed identity: highlights the need for both public and private identifiers, giving individuals control of their identities and how they establish trust
@@ -60,7 +62,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - **Split-response attack**: attack that causes the client to download content that was not an intended element of a requested web page, storing it in browser cache
 - **Subject**: entities, such as users, that access passive objects
 - **Synchronous token** (authentication by ownership hard/soft token): both the token generator and auth server generate the same token or one-time password every 30-60 seconds (see asynchronous token)
-- **Template**: a digital representation of someone's unique biometric features (i.e. a one-way math function representing biometric data); templates can be used as "1:N" for identification (where user's template is used to search for the identity of the user) , or "1:1" for authentication (where the user is identified and the template is used as a factor to authenticate the user)
+- **Template**: a digital representation of someone's unique biometric features (i.e. a one-way math function representing biometric data); templates can be used as "1:N" for identification (where user's template is used to search for the identity of the user), or "1:1" for authentication (where the user is identified and the template is used as a factor to authenticate the user)
 - **Whaling attack**: phishing attack targeting highly-placed officials/private individuals with sizeable assets authorizing large-fund wire transfers
 - **XSS**: Cross-Site Scripting (XSS) essentially uses reflected input to trick a user's browser into executing untrusted code from a trusted site; these attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites; XSS attacks occur when an attacker uses a web app to send malicious code, generally in the form of a browser side script, to a different end user; flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it
 - **XST**: Cross-Site Tracing (XST) attack involves the use of Cross-site Scripting (XSS) and the TRACE or TRACK HTTP methods; this could potentially allow the attacker to steal a user's cookies
@@ -69,10 +71,11 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 - Controlling access to assets (assets are anything of value to the organization); tangible assets are things you can touch, and non-tangible assets are things like info and data; controlling access to assets is a central theme of security
 - Understand that there is no security without physical security: admin, technical and logical access controls aren't effective without control over the physical env
+- Understand that identity is the new perimeter
 - Understand what assets you have, and how to protect them
   - **physical security controls**: such as perimeter security and environmental controls
     - control access and the environment
-  - **logical access controls**: automated systems that auth or deny access based on verification that identify presented matches that which was previously approved; technical controls used to protect access to information, systems, devices, and applications
+  - **logical access controls**: automated systems that auth or deny access based on verification that identity presented matches that which was previously approved; technical controls used to protect access to information, systems, devices, and applications
     - includes authentication, authorization, and permissions
     - permissions help ensure only authorized entities can access data
     - logical controls restrict access to config settings on systems/networks to only authed individuals
@@ -106,12 +109,12 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - users identify themselves with usernames and authenticate (or prove their identity) with passwords
 
 - 5.2.1 Groups and Roles
-  - **Roles**: set of permissions that correspond to a job function within an org, rather than a group of users; a user is assigned a role, and granted the permissions associated with that role;s
+  - **Roles**: set of permissions that correspond to a job function within an org, rather than a group of users; a user is assigned a role, and granted the permissions associated with that role
     - another way of saying this is that roles are function-centric, for instance say a helpdesk analyst, level-1, is a specific role that defines the specific permission available
-    - roll-based access means that a role with specific permissions is created and then assigned to someone in that role or job
+    - role-based access means that a role with specific permissions is created and then assigned to someone in that role or job
   - **Groups**: a group is a collection of users, and admins can assign permissions to the group instead of assigning permissions to individual users; this makes it easier to manage larger numbers of users
     - groups are user-centric, focusing on the collective identity of that group of users
-  - Identity and access management is a collection of processes and technologies that are used to control access to critical assets; it's purpose is the management of access to information, systems, devices, and facilities
+  - Identity and access management is a collection of processes and technologies that are used to control access to critical assets; its purpose is the management of access to information, systems, devices, and facilities
   - Identity Management (IdM) implementation techniques generally fall into two categories:
     - **centralized access control**: implies a single entity within a system performs all authorization verification
       - potentially creates a single point of failure
@@ -131,6 +134,9 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - **Accountability AKA Principle of Access Control**: proper identification, authentication, and authorization that is logged and monitored; users and other subjects can be held accountable for their actions when auditing is implemented; accountability is maintained for individual subjects through the use of auditing; logs record user activities and users can be held accountable for their logged actions; this encourages good user behavior and compliance with the org's security policy; also see definitions/interpolations in Domain 2, and above
   - **Auditing**: tracks subjects and records when they access objects, creating an audit trail in one or more audit logs
   - Auditing provides accountability
+  - FIDO2 and WebAuthn are related technical standards that enable phishing-resistant, passwordless authentication across the internet
+    - **FIDO2 (Fast IDentity Online 2)**: an overarching project and set of specifications developed by the FIDO Alliance designed to replace passwords with cryptographic keys
+    - **WebAuthn (Web Authentication)**: a specific web API standard developed by the World Wide Web Consortium (W3C) in collaboration with FIDO that allows websites (known as "Relying Parties") to communicate directly with a user’s browser to perform secure authentication
   - **Single-factor authentication**: any authentication using only one proof of identity
   - **Two-factor authentication (2FA)**: requires two different proofs of identity
   - **Multifactor authentication (MFA)**: any authentication using two or more factors
@@ -162,7 +168,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - time-outs: session expires after a set amount of inactivity
     - screensavers: activated after a period of inactivity, requiring re-authentication
   - Session termination and re-authentication helps to prevent or mitigate session hijacking
-  - The Open Web Application Security Project (OWASP) publishes “cheat sheets” that provide app developer’s specific recommendations
+  - The Open Web Application Security Project (OWASP) publishes “cheat sheets” that provide app developers with specific recommendations
 
 - 5.2.4 Registration, proofing, and establishment of identity
   - Within an organization, new employees prove their identity with appropriate documentation during the hiring process
@@ -204,7 +210,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - reduces the number of passwords that users need to remember, and they are less likely to write them down
     - eases administration by reducing the number of accounts
   - Disadvantages:
-    - once an account is compromised, an attacker gains unrestricted access to all of the authorized resources
+    - SSO creates a **single point of compromise** — if the SSO credential is compromised, all linked resources are exposed (which is why requiring MFA for SSO credential is important)
   - Within an organization, a central access control system, such as a directory service, is often used for SSO
     - **directory service**: a centralized database that includes information about subjects and objects, including authentication data
     - many directory services are based on the Lightweight Directory Access Protocol (LDAP)
@@ -218,19 +224,26 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 ## [5.3](#53-federated-identity-with-a-third-party-service-osg-10-chpt-13) Federated Identity with a third-party service (OSG-10 Chpt 13)
 
 - 5.3.1 On-premise
-  - Federated identity management can be hosted on-premise, and typically provides an organization with the most control
+  - In a purely on-premise scenario, all infra is managed internally
+    - IdP: typically an internal directory service (e.g., AD)  
+    - Federated identity management can be hosted on-premise, and typically provides an organization with the most control
+  - Requires in-house expertise and capital investments
 
 - 5.3.2 Cloud
-  - Cloud-based apps use federated identify management (FIM) systems, which are a form of SSO
-  - Cloud-based federation typically uses a third-party service to share federated identities (e.g. training sites use federated SSO systems) commonly matching the user's internal login ID with a federated identify
+  - Cloud-based apps use federated identity management (FIM) systems, which are a form of SSO
+    - IdP: In a cloud-only scenario, identity management is delivered via third-party (IDaaS)
+    - Cloud-based federation typically uses a third-party service to share federated identities (e.g. training sites use federated SSO systems) commonly matching the user's internal login ID with a federated identify
+  - Requires relinquishing some direct control and relying on third-party uptime and security
 
 - 5.3.3 Hybrid
   - A hybrid federation is a combination of a cloud-based solution and an on-premise solution
+    - IdP: identity typically originates on-prem (e.g., AD) with a cloud service acting as the central IdP
+  - Requires careful integration, and is the most complex scenario to manage
 
 ## [5.4](#54-implement-and-manage-authorization-mechanisms-osg-10-chpt-14) Implement and manage authorization mechanisms (OSG-10 Chpt 14)
 
 - Authorization ensures that the requested activity or object access is possible, given the authenticated identity's privileges
-  - e.g. ensuring that users with appropriate can access resources
+  - e.g. ensuring that users with appropriate privileges can access resources
   - common authorization mechanisms include:
     - implicit deny
     - access control lists
@@ -276,7 +289,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - this allows it to be much more flexible than a rule-based access control model that applies the rules to all subjects equally
     - many software-defined networks (SDNs) use the ABAC model
   - ABAC allows administrators to create rules within a policy using plain language statements such as "Allow Managers to access the WAN using a mobile device"
-  - ABAC uses XACML (eXtensible Access Control Markup Language) which defines attribute-based  access control policy language, architecture, and a processing model
+  - ABAC uses XACML (eXtensible Access Control Markup Language) which defines attribute-based access control policy language, architecture, and a processing model
 
 - 5.4.6 Risk based access control
   - **Risk-based access control**: evaluates the environment and the situation, and makes decisions based on software security policies
@@ -302,6 +315,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 - 5.5.2 Provisioning and deprovisioning (e.g., on/off boarding and transfers)
   - Identity and access provisioning lifecycle refers to the creation, management, and deletion of accounts
     - this lifecycle is important because without properly defined and maintained user accounts, a system is unable to establish accurate identity, perform authentication, provide authorization, and track accountability
+  - **Privileged Access Management (PAM)**: a critical component of the identity and access provisioning lifecycle; PAM solutions manage, monitor, and audit privileged account access and include features like session recording, credential vaulting, and just-in-time privileged access
   - Provisioning/Onboarding
     - provisioning ensures that accounts have appropriate privileges based on task requirements and employees receive needed hardware; said another way, includes the creation, maintenance, and removal of user objects from apps, systems, and directories
     - proper user account creation, or provisioning, ensures that personnel follow specific procedures when creating accounts
@@ -352,7 +366,7 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
 
 ## [5.6](#56-implement-authentication-systems-osg-10-chpt-14) Implement authentication systems (OSG-10 Chpt 14)
 
-- **Federated Identity Management (FIM)**: (AKA federated access) one-time authentication to gain access to multiple systems, including those associated with other organizations; FIM systems link user identities in one system with other systems to implement SSO; FIM systems are implemented on-premise (providing the most control), via third-party cloud services, or as hybrid systems; using your Microsoft account to authenticate to a third-party SaaS is an example of FIM
+- Federated Identity Management (FIM): (AKA federated access), also see definition in 5.2.5;  one-time authentication to gain access to multiple systems, including those associated with other organizations; FIM systems link user identities in one system with other systems to implement SSO; FIM systems are implemented on-premise (providing the most control), via third-party cloud services, or as hybrid systems; using your Microsoft account to authenticate to a third-party SaaS is an example of FIM
   - FIM trust relationships include: principal/user, identity provider (entity that owns the identity and performs the auth), and relying party (AKA service provider)
   - FIM protocols include SAML, WS-Federation, OpenID (authentication), and OAuth (authorization)
   - Compare FIM with SSO: user authenticates one time using SSO to access multiple systems in one org; a user authenticates one time using FIM to access multiple systems inside and outside an org because of multiple-entity trust relationships
@@ -362,10 +376,10 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - **Security Assertion Markup Language (SAML)**: an open XML-based standard commonly used to exchange authentication and authorization (AA) information between federated orgs
   - Frequently used to integrate cloud services and provides the ability to make authentication and authorization assertions
   - SAML provides SSO capabilities for browser access
-  - Organization for the Advancement of Structure Information Standards (OASIS) maintains it
+  - Organization for the Advancement of Structured Information Standards (OASIS) maintains it
   - SAML 2.0 is an open XML-based standard
   - SAML 2.0 spec utilizes three entities:
-    - **Principal or User Agent**: the principle is the user attempting to use the service
+    - **Principal or User Agent**: the principal is the user attempting to use the service
     - **Service Provider (SP) (or relying party)**: providing a service for the user
     - **Identity Provider (IdP)**: a third-party that holds the user authentication and authorization info
   - IdP can send three types of XML messages known as assertions:
@@ -394,11 +408,13 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
   - **Kerberos uses port 88 for auth communications**, clients communicate with KDC servers over the port so that users can effectively access privileged network resources
   - Kerberos is a network authentication protocol widely used in corporate and private networks and found in many LDAP and directory services solutions such as Microsoft Active Directory
   - It provides single sign-on and uses cryptography to strengthen the authentication process and protect logon credentials
-  - Ticket authentication is a mechanism that employs a third-party entity to prove identification and provide authentication - Kerberos is a well-known ticket system
+  - Ticket authentication is a mechanism that employs a third-party entity to prove identification and provide authentication
+  - Kerberos is a well-known ticket system
   - After users authenticate and prove their identity, Kerberos uses their proven identity to issue tickets, and user accounts present these tickets when accessing resources
   - Kerberos version 5 relies on symmetric-key cryptography (AKA secret-key cryptography) using the Advanced Encryption Standard (AES) symmetric encryption protocol
   - Kerberos provides confidentiality and integrity for authentication traffic using end-to-end security and helps protect against eavesdropping and replay attacks
-  - Kerberos uses UDP port 88 by default
+  - Kerberos uses port 88, typically UDP but also TCP for larger tickets
+  - See section 3.7.12 for an overview of Kerberos attacks
   - Kerberos elements:
     - **Key Distribution Center (KDC)**: the trusted third party that provides authentication services
     - **Kerberos Authentication Server**: hosts the functions of the KDC:
@@ -450,5 +466,6 @@ The identity and Access Management (IAM) domain focuses on issues related to gra
     - TACACS+ uses TCP port 49, providing a higher level of reliability for the packet transmissions
   - **Diameter AAA protocol**: an advanced system designed to address the limitations of the older RADIUS protocol (diameter is twice the radius!); Diameter improves on RADIUS by providing enhanced security (uses IPsec or TLS instead of MD5 hashing), supports more extensive attribute sets (suitable for large, complex networks), and can handle complex sessions
     - Diameter is based on RADIUS and improves many of its weaknesses, but Diameter is not compatible with RADIUS
+    - Diameter is designed to use TCP and Stream Control Transmission Protocol (SCTP) at the transport layer, specifically to address the reliability issues found in RADIUS
 
 Also see Understanding CISSP Domain 5: Identity and Access Management (IAM) - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-5-identity), and [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-5-identity-3f0) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

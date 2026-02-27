@@ -7,15 +7,9 @@
 
 - In this domain you'll learn the basic principles behind securely designing, building, testing, operating and even decommissioning enterprise apps
 - Security should be part of the design, and incorporated into the architecture, with the level of protection based on requirements and operating environment
-- The Software Development LifeCycle consists of the following steps:
-  - Requirements gathering: why create the software, what it will do, and for whom it will be created
-  - Design: encapsulating how the software will meet requirements
-  - Development: creating/coding the software to meet spec, and integrating with other systems as required
-  - Testing: verifying/validating software meets requirements
-  - Operations and Maintenance: deploying, and ensuring it's appropriately configured, patched, and monitored
 
 - **Acceptance**: formal, structured hand-off of the completed software system to the customer org; usually involves test, analysis and assessment activities
-- **Accreditation**: AKA Security Accreditation a formal declaration by a designated accrediting authority (DAA) that an information system is approved to operate at an acceptable level of risk, based on the implementation an approved set of technical, managerial, and procedural safeguards
+- **Accreditation**: AKA Security Accreditation a formal declaration by a designated accrediting authority (DAA) that an information system is approved to operate at an acceptable level of risk, based on the implementation of an approved set of technical, managerial, and procedural safeguards
 - **ACID Test**: data integrity provided by means of enforcing atomicity, consistency, isolation, and durability policies
 - **Aggregation**: ability to combine non-sensitive data from separate sources to create sensitive info; note that aggregation is a "security issue", where as inference is an attack (where an attacker can pull together pieces of less sensitive info to derive info of greater sensitivity)
 - **Arbitrary code**: alternate set of instructions and data that an attacker attempts to trick a processor into executing
@@ -25,16 +19,15 @@
 - **CAB**: Change Advisory Board purpose is to review and approve/reject proposed code changes
 - **Citizen programmers**: organizational members who codify work-related knowledge, insights, and ideas into (varying degrees of) usable software; the process and result is ad hoc, difficult to manage, and usually bereft of security considerations
 - **Code protection/logic hiding**: prevents one software unit from reading/altering the source/intermediate/executable code of another software unit
-- **Code reuse**: reuse of code, rather than re-invented code means units of software (procedures/objects) means higher productivity toward development requirements using correct, complete, safe code
+- **Code reuse**: reuse of code rather than re-inventing it means units of software (procedures/objects) provide higher productivity toward development requirements using correct, complete, safe code
 - **Complete coverage**: testing all of the functions of software
-- **Concurrency**: using a lock to allow an authorized user to make changes, then unlock the data element after changes are complete
+- **Concurrency**: the ability of a system to handle multiple simultaneous operations; managed through locking mechanisms that allow an authorized user to make changes and unlock the data element after changes are complete, preventing conflicts
 - **Object/Memory reuse**: systems allocate/release and reuse memory/resources as objects to requesting processes; data remaining in the object when it is reused is a potential security violation (i.e. data remanence)
 - **CORBA**: Common Object Request Broker Architecture is a set of standards addressing interoperability between software and hardware products, residing on different machines across a network; providing object location and use across a network
 - **Configuration Control**: process of controlling modifications to hardware, firmware, software, and documentation to protect the information system against improper modifications prior to, during, and after system implementation
-- **Configuration Management (CM)**: collection of activities focused on establishing and maintaining integrity of IT products and information systems, through the control of processes for initialization, changing and monitoring the configurations of those products and systems throughout the system development lifecycle
 - **Covert Channels/Paths**: a method used to pass information over a path that is not normally used for communication; communication pathways that violate security policy or requirement (deliberately or unwittingly); basic types are timing and storage
 - **Data Contamination**: attackers attempt to use malformed inputs, at the field, record, transaction, or file level, in an attempt to disrupt the proper functioning of the system
-- **Data Lake**: a data warehouse incorporating multiple types of streams of unstructured or semi-structured data
+- **Data Lake**: a centralized repository that stores large volumes of raw data in its native format, including structured, semi-structured, and unstructured data; unlike a data warehouse, data in a data lake is not processed or structured at the time of storage
 - **Data Mining**: analysis and decision-making technique that relies on extracting deeper meanings from many different instances and types of data; often applied to data warehouse content
 - **Data Modeling**: design process that identifies all data elements that the system will need to input, create, store, modify, output, and destroy during operational use; should be one of the first steps in analysis and design
 - **Data Protection and Data Hiding**: restricts or prevents one software unit from reading or altering the private data of another software unit or in preventing data from being discovered or accessed by a subject
@@ -43,49 +36,53 @@
 - **Data-centric Threat Modeling**: methodology and framework focusing on the authorized movements and data input/output into and from a system; corresponds with protecting data in transit, at rest, and in use when classifying organizational data
 - **Defensive Programming**: design/coding allowing acceptable but sanitized data inputs to a system; lack of defensive programming measures can result in arbitrary code execution, misdirection of the program to other resources/locations, or reveal info useful to an attacker
 - **Design Reviews**: should take place after the development of functional and control specifications but before the creation of code
-- **Dirty read**: occurs when one transaction reads a value from a database that was written by another transaction that didn't commit
-- **Emerging Properties**: an alternate/more powerful way of looking at systems-level behavior characteristics such as safety and security; helps provide a more testable, measurable answer to questions such as "how secure is our system?"
-- **Encapsulation**: note see network Encapsulation in [Domain 4](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-4-20204+Objectives) (disambiguation); enforcement of data/code hiding during all phases of software development and operational use; bundling together data and methods is the process of encapsulation (opposite of unpacking/revealing)
+- **Dirty read**: occurs when one transaction reads a value from a database that was written by another transaction that didn't commit; this is a concurrency control issue that violates the **Isolation** property of ACID
+- **Emergent Properties**: an alternate/more powerful way of looking at systems-level behavior characteristics such as safety and security; helps provide a more testable, measurable answer to questions such as "how secure is our system?"
+- **Encapsulation**: note see network Encapsulation in [Domain 4](https://github.com/jefferywmoore/CISSP-Study-Resources/blob/main/CISSP-Domain-4-2024+Objectives) (disambiguation); enforcement of data/code hiding during all phases of software development and operational use; bundling together data and methods is the process of encapsulation (opposite of unpacking/revealing)
 - **Executable/Object Code**: binary representation of the machine language instruction set that the CPU and other hardware of the target computer can directly execute
 - **XML**: Extensible Markup Language is a set of HTML extensions providing for data storage and transport in networked environments; frequently used to integrate web pages with databases; XML is often embedded in the HTML files making up elements of a web page
 - **Functional requirements**: describes a finite task or process the system must perform; often directly traceable to specific elements in the final system's design and construction
 - **Hierarchical database model**: data elements and records are arranged in tree-like parent-child structures
 - **Instance**: in object-oriented programming, an "instance of a class" refers to a specific object created from that class, which is a blueprint or template defining the characteristics and behaviors of objects
 - **Integrated Product and Process Development (IPPD)**: management technique that simultaneously integrates essential acquisition activities through the use of multidisciplinary teams to optimize the design, manufacturing, and supportability processes
-- **Integrated Product Team**: team of stakeholders and individuals that possess different skills and who work together to achieve a defined process or product
 - **Infrastructure as Code (IaC)**: instead of viewing hardware config as a manual, direct hands-on, one-on-one admin hassle, it is viewed as just another collection of elements to be managed in the same way that software and code are managed under DevSecOps
-- **Interactive Application Security Testing (IAST)**: testing that combines or integrates SAST and DAST to improve testing and provide behavioral analysis capabilities to pinpoint the source of vulnerabilities
 - **Knowledge Discovery in Database (KDD)**: mathematical, statistical, and visualization method of identifying valid and useful patterns in data
 - **Knowledge Management**: efficient/effective management of info and associated resources in an enterprise to drive business intelligence and decision-making; may include workflow management, business process modeling, doc management, db and info systems and knowledge-based systems
 - **Level of abstraction**: how closely a source-code/design doc represents the details of the underlying object/system/component; lower-level abstractions generally have more detail than high-level ones
 - **Living off the land** (non-malware based ransom attack): system attack where the system/resources compromised are used in pursuit of additional attacks (i.e. the attacker's agenda); anti-malware defense doesn't detect/prevent the attack given the attacker's methodology
-- **Malformed input attack**: not currently handling input data is a common source of code errors that can result in arbitrary code exec, or misdirection of the program to other resources/locations
-- **Markup Language**: non-programming language used to express formatting or arrangement of data on a page/screen; usually extensible, allowing users to define additional/other operations to be performed; they extend the language into a programming language (e.g. in the same way JavaScript extends HTML)
+- **Malformed input attack**: incorrectly handling input data is a common source of code errors that can result in arbitrary code exec, or misdirection of the program to other resources/locations
+- **Markup Language**: non-programming language used to express formatting or arrangement of data on a page/screen; usually extensible, allowing users to define additional/other operations to be performed
 - **Metadata**: info that describes the format or meaning of other data, which can be used to provide a systematic method for describing resources and improving info retrieval
 - **Mobile code (executable content)**: file(s) sent by a system to others, that will either control the execution of systems/applications on that client or be directly executed
 - **Modified prototype model**: approach to system design/build that starts with a simplified version of the application; feedback from stakeholders is used to improve design of a second version; this is repeated until owners/stakeholders are satisfied with the final product
-- **Network database model**: database model in which data elements and records are arranged in arbitrary linked fashion (.e.g lists, clusters, or other network forms)
-- **Nonfunctional requirements**: broad characteristics that do not clearly align with system elements; many safety, security, privacy, and resiliency can be deemed nonfunctional
+- **Network database model**: database model in which data elements and records are arranged in arbitrary linked fashion (e.g. lists, clusters, or other network forms)
+- **Nonfunctional requirements**: broad characteristics that do not clearly align with system elements; many safety, security, privacy, and resiliency requirements can be deemed nonfunctional
 - **Object**: encapsulation of a set of data and methods that can be used to manipulate that data
 - **Object-oriented database model**: database model that uses object-oriented programming concepts like classes, instances, and objects to organize, structure, and store data and methods; schemas define the structure of the data, views specify table, rows, and columns that meet user/security requirements
-- **Object-oriented security**: systems security designs that make sue of object-oriented programming characteristics such as encapsulation, inheritance, polymorphism, and polyinstantiation
+- **Object-oriented security**: systems security designs that make use of object-oriented programming characteristics such as encapsulation, inheritance, polymorphism, and polyinstantiation
 - **Open-source software**: source code and design info is made public, and often using licenses that allow modification and refactoring
 - **Pair programming**: requires two devs to work together, one writing code, and the other reviewing and tracking progress
 - **Pass-around reviews**: often done via email or code review system, allows devs to review code asynchronously
-- **PERT**: chart that uses nodes to represent milestones or deliverables, showing the estimated to to move between milestones
-- **Polyinstantiation**: creates a new instance (copy) of a data item, with the same identifier or key, allowing each process to have its own version of that data; useful for enforcing and protecting different security levels for a shared resource; polyinstantiation also allows the storage of multiple different pieces of info in a database at different classification levels to prevent attackers from inferring anything about the absence of info
+- **PERT**: chart that uses nodes to represent milestones or deliverables, showing the estimated time to move between milestones
+- **Polyinstantiation**: (literally "many versions") creates a new instance (copy) of a data item, with the same identifier or key, allowing each process to have its own version of that data; allows a system to store multiple versions of the same data item at different security levels to prevent unauthorized users from "inferring" the existence of sensitive information; by showing users only the version that matches their clearance, it ensures that a low-level user can’t detect the presence of higher-level data through system errors or duplicate conflicts
 - **Procedural programming**: emphasizes the logical sequence of steps to be performed, where a procedure is a set of software that performs a particular function, requiring specific input data, producing a specific set of outputs, and procedures can invoke other procedures
 - **Query attack**: use of query tools to access data not normally allowed by the trusted front end, including the views controlled by the query application; could also result from malformed queries using SQL to bypass security controls; improper/incomplete checks on queries can be used in a similar way to bypass access controls
 - **Ransom attack**: form of attack that threatens destruction, denial, or unauthorized public release/remarketing of private information assets; usually involves encrypting assets and withhold the decryption key until a ransom is paid by the victim
 - **Refactoring**: partial or complete rewrite of a set of software to perform the same functions, but in a more straightforward, more efficient, or more maintainable form
-- **Regression testing**: test a system to ascertain whether recently approved modifications have changed performance of other approved functions or introduced other unauthorized behavior;testing that runs a set of known inputs against an app and compares to results previously produced (by an earlier version of the software)
+- **Regression testing**: test a system to understand whether recently approved modifications have changed performance of other approved functions or introduced other unauthorized behavior; testing that runs a set of known inputs against an app and compares to results previously produced (by an earlier version of the software)
 - **Relational database model**: AKA relational database management system (RDBMS), data elements and records arranged in tables which are related or linked to each other to implement business logic, where data records of different structures or types are needed together in the same activity
 - **Representational State Transfer (REST)**: software architectural style for synchronizing the activities of two or more apps running on different systems on a network; REST facilitates these processes exchanging state information, usually via HTTP/S
 - **Reputation monitoring**: defensive tactic that uses the trust reputation of a website or IP address as a means of blocking an org's users, processes or systems from connecting to a possible source of malware or exploitations; possibly the only real defense against zero-day exploits; involves monitoring URLs, domains, IP addresses or other similar info to separate untrustworthy traffic
 - **Runtime Application Security Protection (RASP)**: security agents comprised of small code units built into an app which can detect set of security violations; upon detection, the RASP agent can cause the app to terminate, or take other protective actions
 - **Security Assessment**: testing, inspection, and analysis to determine the degree to which a system meets or exceeds the required security posture; may assess whether an as-built system meets the requirements in its specs, or whether an in-use system meets the current perception of the real-world security threats
 - **Software Quality Assurance**: variety of formal and informal processes that attempt to determine whether a software app or system meets all of its intended functions, doesn't perform unwanted functions, is free from known security vulns, and is free from insertion or other errors in design and function
-- **SDLC**: Software Development LifeCycle is a framework and systematic associated with tasks that are performed in a series of steps for building, deploying, and supporting software apps; begins with planning and requirements gathering, and ends with decommissioning and sunsetting; there are many different SDLCs, such as agile, DevSecOps, rapid prototyping, offering different approaches to defining and managing the software lifecycle
+- **SDLC**: Software Development LifeCycle is a framework and systematic associated with tasks that are performed in a series of steps for building, deploying, and supporting software apps; begins with planning and requirements gathering, and ends with decommissioning and sunsetting; there are many different SDLCs, such as agile, DevSecOps, rapid prototyping, offering different approaches to defining and managing the software lifecycle;  
+  - the SDLC consists of the following steps:
+    - Requirements gathering: why create the software, what it will do, and for whom it will be created
+    - Design: encapsulating how the software will meet requirements
+    - Development: creating/coding the software to meet spec, and integrating with other systems as required
+    - Testing: verifying/validating software meets requirements
+    - Operations and Maintenance: deploying, and ensuring it's appropriately configured, patched, and monitored
 - **Source code**: program statements in human-readable form using a formal programming language's rules for syntax and semantics
 - **Spyware/Adware**: software that performs a variety of monitoring and data gathering functions; AKA potentially unwanted programs/applications (PUP/PUA), may be used in monitoring employee activities/use of resources (spyware), or advertising efforts (adware); both may be legit/authorized by system owners or unwanted intruders
 - **Strong data typing**: feature of a programming language preventing data type mismatch errors; strongly typed languages will generate errors at compile time
@@ -97,7 +94,7 @@
 ## [8.1](#81-understand-and-integrate-security-in-the-software-development-life-cycle-sdlc-osg-10-chpt-20) Understand and integrate security in the Software Development Life Cycle (SDLC) (OSG-10 Chpt 20)
 
 - 8.1.1 Development methodologies (e.g., Agile, Waterfall, DevOps, DevSecOps, Scaled Agile Framework)
-  - **Agile methodology**: a project management approach to development that involves breaking the project into phases and emphasizes continuous collaboration and improvement; teams follow a cycle of planning, executing, and evaluating; focus is on iterative development and frequent feedback, collab between small self-organizing cross-functional teams; in a very simplified sense, you can say agile is waterfall done in sprints
+  - **Agile methodology**: a project management approach to development that involves breaking the project into phases and emphasizes continuous collaboration and improvement; teams follow a cycle of planning, executing, and evaluating; focus is on iterative development and frequent feedback, collab between small self-organizing cross-functional teams
     - Agile development emphasizes:
       - the delivery of working software in short iterations, helping to get the software to market faster
       - reduced risk by frequently testing and providing feedback, helping to identify and resolve issues earlier in the development process
@@ -114,11 +111,11 @@
       - build projects around motivated individuals; give them the environment, support, and tools and trust them to build
       - emphasizing face-to-face conversation
       - working software is the primary measure of progress
-      - agile processes promote sustainable development; the them should be able to maintain a constant pace indefinitely
+      - agile processes promote sustainable development; the team should be able to maintain a constant pace indefinitely
       - continuous attention to technical excellence and good design enhances agility
       - simplicity, or the art of maximizing the amount of work not done, is essential
       - the best architectures, requirements, and designs emerge from self-organizing teams
-      - at regular intervals, the team reviews their effective and adjusts for improvement
+      - at regular intervals, the team reviews their effectiveness and adjusts for improvement
     - Several methodologies have emerged that take these Agile principles and define specific processes around them:
       - **Scrum**: a management framework that teams use to self-organize and work towards a common goal; it describes a set of meetings, tools, and roles for efficient project delivery, allowing teams to self-manage, learn from experience, and adapt to change; named from the daily team meetings, called scrums; development focuses on short sprints that deliver finished products; integrated product teams (IPTs) were an early effort of this approach
       - **Kanban**: a visual system used to manage and keep track of work as it moves through a process; the word kanban is Japanese for "card you can see"; Kanban teams focus on reducing the time a project (or user story) takes from start to finish, using a kanban board and continuously improving their flow of work
@@ -135,7 +132,7 @@
         - deliver on time: work should be time-boxed and predictable, to build confidence in the development team
       - **Extreme Programming (XP)**: an Agile project management methodology that targets speed and simplicity with short development cycles, [using five guiding values, and five rules](http://www.extremeprogramming.org); the goal of the rigid structure, focused sprints and continuous integrations is higher quality product
       - **Scaled Agile Framework® (SAFe)**: a set of org and workflow patterns for implementing agile practices at an enterprise scale; the framework is a body of knowledge that includes structured guidance on roles and responsibilities, how to plan and manage the work, and values to uphold
-  - **Scaled Agile Framework**: agile methodology applied to large orgs; allows large organizations with multiple teams to coordinate, collaborate, and deliver products
+  
   - **Waterfall**:
     - A linear approach to development, where each phase needs to be completed fully before the next one begins (e.g. water only flows downhill or in one direction); developed by Winston Royce in 1970, the waterfall model uses a linear sequential life-cycle approach; all project requirements are gathered up front, and there is no formal way to integrate changes as more information becomes available
     - Traditional model has 7 stages, as each stage is completed, the project moves into the next phase; the iterative waterfall model does allow development to return to the previous phase to correct defects
@@ -147,9 +144,10 @@
       - Testing
       - Operations and maintenance
     - A major criticism of this model is that it's very rigid, and not ideal for most complex projects which often contain many variables that affect the scope throughout the project's lifecycle
-  - **Spiral model**: improved waterfall dev process providing for a cycle of Plan, Do, Check, Act (PDCA) sub-stages at each phase of the SDLC; a risk-driven development process that follows an iterative model while also including waterfall elements
+  - **Spiral model**: improved waterfall, (developed by Barry Boehm) that has its own phases: (1) determine objectives, (2) identify and resolve risks, (3) develop and test, (4) plan the next iteration; it is a risk-driven development process that follows an iterative model while also including waterfall elements
     - following defined phases to completion and then repeats the process, resembling a spiral
     - the spiral model provides a solution to the major criticism of the waterfall model in that it allows devs to return to planning stages as technical demands and customer requirements iterate
+  - **V-Model** (Verification and Validation model), which extends the waterfall model by pairing each development phase with a corresponding testing phase; the V-Model illustrates the parallel relationship between development and verification activities
   - **DevOps (Development and Operations)**: an approach to software development, quality assurance, and technology operations that unites siloed staff, and bring the three functions together in a single operational model; DevOps goal is to shorten the systems development lifecycle and provide continuous delivery
     - closely aligned with lean and the Agile development approach, DevOps aims to dramatically decrease the time required to develop, test, and deploy software changes
     - using the DevOps model, and continuous integration/continuous delivery (CI/CD), orgs strive to roll out code dozens or even hundreds of times per day
@@ -161,7 +159,7 @@
     - DevSecOps supports the concept of software-defined security, where security controls are actively managed into the CI/CD pipeline
 
 - 8.1.2 Maturity models (e.g., Capability Maturity Model (CMM), Software Assurance Maturity Model (SAMM))
-  - Maturity models help software organizations improve the maturity and quality of their software processes by implementing an evolutionary path from ad hoc, chaotic processes to mature, disciplined processes
+  - Maturity models help organizations move from inconsistent, unstructured software processes to more reliable and well-managed ones
   - NOTE: be able to describe the SW-CMM, IDEAL, and SAMM models
   - Software Engineering Institute (SEI) (Carnegie Mellon University) created the Capability Maturity Model for Software (AKA Software Capability Maturity Model, abbreviated SW-CMM, CMM, or SCMM)
     - **SW-CMM**: a management process to foster the ongoing and continuous improvement of an org's processes and workflows for developing, maintaining and using software
@@ -236,7 +234,7 @@
     - Acting: in this phase, the org develops solutions and then tests, refines, and implements them
     - Learning: continuously analyze efforts to achieve these goals, and propose new actions as required
 
-  - IDEAL vs SW-CMM:
+  - IDEAL vs SW-CMM: remember that IDEAL is a process improvement model (how to improve), while SW-CMM is a maturity assessment model (where you currently are); the table below shows approximate conceptual alignment
 
     | IDEAL | SW-CMM |
     |----------------|---------------|
@@ -276,12 +274,12 @@
   - Third-generation programming languages, such as C/C++, Java, and Python, are known as high-level languages
     - high-level languages allow developers to write instructions that better approximate human communication
   - **Compiled language**: converts source code into machine-executable format
-    - compiled code is generally less prone to manipulation by a third party, however easier to embed backdoors or other security flaws without detection
+    - compiled code is generally less prone to manipulation by a third party; however, because the source code is not visible in compiled form, it is also harder for reviewers to detect embedded backdoors or other security flaws
   - **Decompilers**: convert binary executable back into source code
   - **Disassemblers**: convert back into machine-readable assembly language (an intermediate step during the compilation process)
   - **Interpreted language**: uses an interpreter to execute; sourcecode is viewable; e.g. Python, R, JavaScript, VBScript
   - **Object-oriented programming (OOP)**: defines an object to be set of a software that offers one or more methods, internal to the object, that software external to that object can request to access; each method may require specific inputs and resources and may produce a specified set of outputs; focuses on the objects involved in an interaction
-    - OOP languages include C++, Java, and .NET
+    - OOP languages include C++, Java, and C#
     - think of OOP as a group of objects that can be requested to perform certain operations or exhibit certain behaviors, working together to provide a system’s functionality or capabilities
     - OOP has the potential to be more reliable and to reduce the propagation of program change errors, and is better suited to modeling or mimicking the real world
     - each object in the OOP model has methods that correspond to specific actions that can be taken on the object
@@ -305,7 +303,7 @@
 
 - 8.2.2 Libraries
   - **Software library**: a pre-written collection of components (classes, procedures, scripts etc) that do specific tasks, useful to other components (e.g. software libraries for encryption algorithms, managing network connections, or displaying graphics)
-  - Shared software libraries contain reusable code, improving developer's efficiency, and reducing the need to write well-known algorithms from scratch; often available as open source
+  - Shared software libraries contain reusable code, improving developers efficiency, and reducing the need to write well-known algorithms from scratch; often available as open source
     - shared libraries can also include many security issues (e.g. Heartbleed), and devs should be aware of the origins of the shared code that they use, and keep informed about any security vulns that might be discovered in these libraries
 
 - 8.2.3 Tool sets
@@ -317,17 +315,20 @@
   - **Integrated Development Environment (IDE)**: software applications, their control procedures, supporting databases, libraries and toolsets that provide a programmer or team what they need to specify, code, compile, test, and integrate code; IDEs provide developers with a single environment where they can write their code, test and debug, and compile it
 
 - 8.2.5 Runtime
-  - **RunTime Environments (RTE)**: allows the portable execution of code across different operating systems or platforms without recompiling (e.g. Java Virtual Manager (JVM))
+  - **RunTime Environments (RTE)**: allows the portable execution of code across different operating systems or platforms without recompiling (e.g. Java Virtual Machine (JVM))
     - this is known as portable code, which needs translation between each environment, the role of the RTE
 
 - 8.2.6 Continuous Integration and Continuous Delivery (CI/CD)
-  - **Continuous Integration and Continuous Delivery**: workflow automation processes and tools that attempt to reduce, if not eliminate, the need for manual communication and coordination between the steps of a software development process
+  - **Continuous Integration and Continuous Delivery**: workflow automation processes and tools that help reduce, if not eliminate, the need for manual communication and coordination between the steps of a software development process
   - **Continuous integration (CI)**: all new code is integrated into the rest of the system as soon as the developer writes it, merging it into a shared repo
     - this merge triggers a batch of unit tests
     - if it merges without error, it's subjected to integration tests
     - CI improves software development efficiency by identifying errors early and often
     - CI also allows the practice of continuous delivery (CD)
   - **Continuous Delivery (CD)**: incrementally building a software product that can be released at any time; because all processes and tests are automated, code can be released to production daily or more often
+    - Note that continuous delivery and continuous deployment are both automation-heavy DevOps practices that build on CI; the key difference is in the final step of the release process: human intervention
+    - Continuous Delivery: code is always in a deployable state, but deployment to production requires a manual approval step
+    - Continuous Deployment: every change that passes automated testing is automatically deployed to production with no manual intervention
   - CI/CD relies on automation and often third-party tools which can have vulnerabilities or be compromised
   - Secure practices such as threat modeling, least privilege, defense in depth, and zero trust can help reduce possible threats to these tools and systems
 
@@ -344,7 +345,7 @@
 - 8.2.8 Code repositories
   - Software development is a collaborative effort, and larger projects require teams of devs working simultaneously on different parts
   - Code repositories support collaborations, acting as a central storage point for source code
-    - github, bitbucket, and sourceforge are examples of systems that provide version control, bug tracking, web hosting, release management, and communications functionality
+    - GitHub, Bitbucket, and SourceForge are examples of systems that provide version control, bug tracking, web hosting, release management, and communications functionality
 
 - 8.2.9 Application security testing (e.g., static application security testing (SAST), dynamic application security testing (DAST), software composition analysis, Interactive Application Security Test (IAST))
   - **Static Application Security Testing (SAST)**: AKA static analysis, tools and technique to help identify software defects (e.g. data type errors, loop/structure bounds violations, unreachable code) or security policy violations and is carried out by examining the code without executing the program (or before the program is compiled)
@@ -355,6 +356,7 @@
     - DAST is usually performed once a program has cleared SAST and basic code flaws have been fixed
     - DAST enables devs to trace subtle logical errors that are likely to cause security problems, without the need to create artificial error-inducing scenarios
     - dynamic analysis is also effective for compatibility testing, detecting memory leakages, identifying dependencies, and analyzing software without accessing the software’s actual source code
+  - **Software Composition Analysis (SCA)**: tools and techniques that identify open-source and third-party components in a codebase, catalog their versions and licenses, and flag known vulnerabilities; SCA is critical for managing software supply chain risk
   - **Interactive Application Security Testing (IAST)**: the combination of SAST and DAST such application testing is done on the running system (DAST), with access to source code (SAST)
 
 ## [8.3](#83-assess-the-effectiveness-of-software-security-osg-10-chpts-2021) Assess the effectiveness of software security (OSG-10 Chpts 20,21)
@@ -362,7 +364,7 @@
 - 8.3.1 Auditing and logging of changes
   - Applications should be configured to log details of errors and other security events to a centralized log repository
   - The Open Web Application Security Project (OWASP) Secure Coding Practices suggest logging the following events:
-    - input validation failures
+    - input/output validation failures
     - authentication attempts, especially failures
     - access control failures
     - tampering attempts
@@ -371,6 +373,7 @@
     - use of admin privileges
     - Transport Layer Security (TLS) failures
     - cryptographic errors
+    - high-risk functionality (admin actions or use of admin privileges, access to sensitive data, creation/deletion of system-level objects, data import/export etc.)
 
 - 8.3.2 Risk analysis and mitigation
   - Risk management is at the center of secure software development, in particular regarding the mapping of identified risks and implemented controls
@@ -381,9 +384,10 @@
 
 ## [8.4](#84-assess-security-impact-of-acquired-software-osg-10-chpts-1620) Assess security impact of acquired software (OSG-10 Chpts 16,20)
 
+- Note that an SBOM has become increasingly important for assessing the security impact of acquired software; recall from Domain 1 that an SBOM provides a formal record of all components, libraries, and dependencies within a software product, enabling organizations to quickly identify affected systems when new vulnerabilities are disclosed
 - 8.4.1 Commercial-off-the-shelf (COTS)
   - **Commercial Off-the-Shelf (COTS)**: software elements, usually apps, that are provided as finished products (not intended for alteration by or for the end-user)
-  - Most widely used commercial-off-the-shelf (COTS) software products have been security researcher (both benign and malicious) tested
+  - Most widely used COTS software products have been tested by security researchers (both benign and malicious)
     - researching discovered vulnerabilities and exploits can help us understand how seriously the vendor takes security
     - for niche products, you should research vendor certifications, such as ISO/IEC 27034 Application Security
     - other than secure coding certification, you can look for overall information security management system (ISMS) certifications such as ISO/IEC 27001 and FedRAMP (which are difficult to obtain, and show that the vendor is serious about security)
@@ -408,7 +412,7 @@
   
 - 8.4.5 Cloud services (e.g., Software as a Service (SaaS), Infrastructure as a Service (IaaS), Platform as a Service (PaaS))
   - As orgs continue to migrate to the cloud (SaaS, IaaS, PaaS), they should increase the security assessment of those services
-  - The top reasons for cloud breaches continues to be misconfigurations, lack of visibility into access settings, and poor access controls
+  - The top reasons for cloud breaches continue to be misconfigurations, lack of visibility into access settings, and poor access controls
     - cloud service providers have tools to help mitigate these issues, and orgs should consider bringing in third-party experts to help if they don't have the internal expertise
   - **Anything as a Service (XaaS)**: catchall term referring to any type of computing service that provides value to customers via a cloud solution
 
@@ -421,22 +425,22 @@
     - source code vulns are caused by design or implementation flaws
     - **design flaw**: if dev did everything correctly, there would still be a vulnerability
     - **implementation flaw**: dev incorrectly implemented part of a good design
-  - the OWASP top 10 vulnerabilities for 2024:
+  - the OWASP top 10 vulnerabilities ([2025 edition](https://owasp.org/Top10/2025/)):
     - Broken access control
+    - Security misconfiguration
+    - Software supply chain failures
     - Cryptographic failures
     - Injection
     - Insecure design
-    - Security misconfiguration
-    - Vulnerable and outdated components
-    - Identification and authentication failures
-    - Software and data integrity failures
-    - Security logging and monitoring failures
-    - Server Side Request Forgery (SSRF)
+    - Authentication failures
+    - Software or data integrity failures
+    - Security logging and alerting failures
+    - Mishandling of exceptional conditions
 
 - 8.5.2 Security of Application Programming Interfaces (APIs)
   - **Application Programming Interface (API)**: specifies the manner in which a software component interacts with other components
-    - API's reduce the effort of providing secure component interactions by providing easy implementation for security controls
-    - API's reduce code maintenance by encouraging software reuse, and keeping the location of changes in one place
+    - APIs reduce the effort of providing secure component interactions by providing easy implementation for security controls
+    - APIs reduce code maintenance by encouraging software reuse, and keeping the location of changes in one place
     - **Parameter validation**: ensuring that any API parameter is checked against being malformed, invalid, or malicious helps ensure API secure use; validation confirms that the parameter values being received by an app are within defined limits before they are processed by the system
 
 - 8.5.3 Security coding practices
@@ -448,7 +452,7 @@
     - reduces the risk of a particular type of vuln
     - enforceable across all of an org's software development efforts
     - verifiably implemented
-  - Note: secure coding standards, rigorously applied, is the best way to reduce source code vulns; coding standards ensures devs always do certain things in a certain way, while avoiding others
+  - Note: secure coding standards, rigorously applied, is the best way to reduce source code vulns; coding standards ensure devs always do certain things in a certain way, while avoiding others
   - Secure coding guidelines are recommended practices that tend to be less specific than standards
     - e.g. consistently formatted code comments, or keeping code functions short/tight
 
@@ -457,3 +461,5 @@
     - one of the advantages of this approach is that sensors (for systems like IDS/IPS) can be dynamically repositioned depending on the threat
     - SDS provides a decoupling from physical devices, because it abstracts security functions into software that can run on any compatible physical or virtual infrastructure, critical for supporting cloud services dynamic scaling and virtualized data centers
   - DevSecOps supports the concept of software-defined security, where security controls are actively managed into the CI/CD pipeline
+
+Also see Understanding CISSP Domain 8, Software Development Security - [part 1](https://blog.balancedsec.com/p/understanding-cissp-domain-8-software?r=1k08iw), and [part 2](https://blog.balancedsec.com/p/understanding-cissp-domain-8-software-597?r=1k08iw) on my blog, [The Cyber Leader](https://blog.balancedsec.com/) (note that some articles require a subscription)

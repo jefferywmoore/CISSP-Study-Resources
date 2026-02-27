@@ -6,7 +6,7 @@
 - **Anonymization**: replaces privacy data with useful but inaccurate data; the dataset can be shared, but anonymization removes individual identities; anonymization is permanent
 - **Asset**: anything of value owned by the organization
 - **Asset lifecycle**: phases an asset goes through, from creation (or collection) to destruction
-- **EPROM / UVEPROM**: erasable programmable read-only memory, is a type of programmable read-only memory (PROM) chip that retains its data when its power supply is switched off; chips my be erased with ultraviolet light
+- **EPROM / UVEPROM**: erasable programmable read-only memory, is a type of programmable read-only memory (PROM) chip that retains its data when its power supply is switched off; chips may be erased with ultraviolet light
 - **EEPROM**: Electrically Erasable Programmable Read-Only Memory; chips may be erased with electrical current
 - **PROM**: programmable read-only memory, a form of digital memory where the contents can be changed once after manufacture of the device
 - **RAM**: Random Access Memory - volatile memory that loses contents when the computer is powered off
@@ -29,6 +29,7 @@
   - Organizations classify data using labels
     - government classification labels include:
       - **Top Secret**: if disclosed, could cause massive damage to national security, such as the disclosure of spy satellite information
+      - **Confidential**: applied to information that if disclosed would likely cause damage to the national security
       - **Secret**: if disclosed, can adversely affect national security
       - **Unclassified**: not sensitive
     - non-government organizations use labels such as:
@@ -43,7 +44,8 @@
 - 2.1.2 Asset classification
   - It's important to identify and classify assets, such as systems, mobile devices etc.
   - Owners are accountable for an asset and protecting its value
-  - **Asset Classification**: assigning assets the level of protection required based on their value to the org; assets require an identified owner to be classified and protected adequately; derived from compliance mandates, the process of recognizing organizational impacts if information suffers any security compromise (whether to confidentiality, integrity, availability, non-repudiation, authenticity, privacy, or safety)
+  - **Asset Classification**: assigning assets the level of protection required based on their value to the org; assets require an identified owner to be classified and protected adequately
+    - derived from compliance mandates, the process of recognizing organizational impacts if information suffers any security compromise (whether to confidentiality, integrity, availability, non-repudiation, authenticity, privacy, or safety)
   - Asset classifications should match data classification, i.e. if a computer is processing top secret data, the computer should be classified as a top secret asset
   - **Clearance**: relates to access of certain classification of data or equipment, and who has access to that level or classification
   - A **formal access approval process** should be used to change user access; the process should involve approval from the data/asset owner, and the user should be informed about rules and limits
@@ -58,24 +60,13 @@
 - The data and asset handling key goal is to prevent data breaches, by using:
   - **Data Maintenance**: on-going efforts to organize and care for data through its life cycle
   - **Data collection limitations**: only store data that has a clear business purpose
-  - **Data Loss Prevention (DLP)**: systems that detect and block data exfiltration attempts; three primary types:
-    - **network-based DLP**: placed on the edge of a network, scans all outgoing network data
-    - **endpoint-based DLP**: scans stored files and can be used to prevent printing or copying sensitive data to removable storage
-    - **cloud-based DLP**: similar to network DLP but designed specifically for cloud-native environments
+  - DLP: see section 2.6.4 below
 - **Labeling**: the association of security attributes with subjects and objects represented by internal data structures; *labels are system-readable* and enable system-based enforcement of security policies; labeling often uses things like: metadata, barcodes, QR codes, RFID or GPS tags
 - **Marking**: association of security attributes in a *human-readable form*, enabling process-based enforcement of security policies; sensitive information/assets ensures proper handling (both physically and electronically)
 - **Data Collection Limitation**: prevent loss by not collecting unnecessary sensitive data; a best practice when collecting customer data, for instance, is to limit the amount of data collected to only what is needed
-- **Data Location**: keep dup copies of backups, on- and off-site
+- **Data Location**: keep duplicate copies of backups, on- and off-site
 - **Storage**: data storage and associated media are based on the classification of the data; define storage locations and procedures by storage type; use physical locks for paper-based media, and encrypt electronic data
-- **Destruction**: retention and destruction of data should be based on data classification and archiving policies; destroy data no longer needed by the organization; policy should define acceptable destruction methods by type and classification ([see NIST SP-800-88 for details](https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final))
-  - **Erasing**: usually refers to a delete operation on media, leaving data remanence
-  - **Clearing**: removal of sensitive data from a storage device such that there is assurance data may not be reconstructed using *normal functions* of software recovery or software recovery utilities; over-writing existing data with a pattern; note that with this method, there's a chance that the data could be brought back by using advanced techniques
-  - **Purging**: removal of sensitive data from a system or device with *the intent* that data cannot be reconstructed by any known technique; purging is a more vigorous version of clearing; usually refers to multiple clearing passes combined with other tools (writing a series of 1s and 0s over media multiple times is a purging technique); often means getting rid of data in more reliable ways, like using a strong magnetic field (degaussing) to destroy data on storage devices (see below) -- although not considered acceptable for top secret data, and not guaranteed to be secure against advanced techniques
-  - **Destruction**: includes physically destroying media through shredding, burning, pulverizing, or incinerating; physical destruction is used for SSD/electronic components, or in combination with other less-secure methods; destruction methods include incineration, crushing, shredding, and disintegration and also includes the use of strong encryption to logically destroy data; a surer way than even purging
-  - **Data Remanence**: data remaining on media after typical erasure; to ensure all remanence is removed, the following tools can help:
-    - **Degaussing**: used on magnetic media, removes data from tapes and magnetic hard drives; no affect on optical media or SSDs
-    - **Cryptographic Erasure** (AKA **crypto shredding**): using strong encryption to encrypt data, and then basically destroying encryption key; crypto shredding is the best method for dealing with cloud data remanence
-  - **File carving**: computer forensics technique that recovers files from a storage device's raw data based on their structure and content, often used to recover files that are not indexed by the file system, such as those that are deleted, formatted, or encrypted; file carving is also a good method for recovering files if an entire directory is missing or corrupt
+- Data destruction: see 2.4.7 below
 
 ## [2.3](#23-provision-information-and-assets-securely-osg-10-chpt-16) Provision information and assets securely (OSG-10 Chpt 16)
 
@@ -113,7 +104,7 @@
   - Classify & Store: ensure the data is classified and stored according to classification, and with appropriate data at rest security controls
   - Use: data is protected during transmission/motion, and against improper exfiltration or sharing during use
   - Archived: data is placed in long-term storage with appropriate data-at-rest protection
-  - Destroyed: data is permanently destroyed based on it's classificaiton, using the method (see above) required to ensure it can't be recovered
+  - Destroyed: data is permanently destroyed based on its classification, using the method (see above) required to ensure it can't be recovered
 - 2.4.1 Data roles (i.e., owners, controllers, custodians, processors, users/subjects)
   - **System owner**: controls the computer storing the data; usually includes software and hardware configurations and support services (e.g. cloud implementation)
     - system owners are responsible for the systems that process the data
@@ -135,6 +126,7 @@
     - note GDPR definition: "a natural or legal person, public authority, agency, or other body, which processes personal data solely on behalf of the data controller"
       - GDPR also restricts data transfers to countries outside EU, with fines for violations
       - many orgs have created dedicated roles to oversee GDPR data laws are followed
+  - **Data Protection Officer (DPO)**: an independent security leadership role responsible for overseeing an org's data privacy strategy and ensuring compliance with legal requirements, such as the GDPR
   - **Data custodian**: a custodian is delegated, from the system owner, day-to-day responsibilities for properly storing and protecting data; responsible for the protection of data through maintenance activities, backing up and archiving, and preventing the loss or corruption and recovering data
   - **Data steward**: a data steward has business responsibility for data (e.g. data quality, governance, compliance, metadata definition etc)
   - **Security administrator**: responsible for ensuring the overall security of entire infrastructure; they perform tasks that lead to the discovery of vulnerabilities, monitor network traffic and configure tools to protect the network (like firewalls and antivirus software)
@@ -151,7 +143,7 @@
   - The **data collection guideline**: if the data doesn't have a clear purpose for use, don't collect it, and don't store it; this is why many privacy regulations mention limiting data collection
 - 2.4.3 Data location
   - **Data location**: in this context, refers to the location of data backups or data copies
-  - If a company's system is on-prem, keeps data on-site, but regularly backups up data; best practice is to keep a backup copy on-site and off-site
+  - If a company's system is on-prem, keeps data on-site, but regularly backs up data, best practice is to keep a backup copy on-site and off-site
   - Consider distance between data/storage locations to mitigate potential mutual (primary and backup) damage risk
 
 - 2.4.4 Data maintenance
@@ -162,7 +154,7 @@
 
 - 2.4.5 Data retention
   - Retention requirements apply to data or records, media holding sensitive data, systems that process sensitive data, and personnel who have access to sensitive data
-    - **record retention**: retaining and maintaining info as long as it is needed, and destroying it when its no longer needed
+    - **record retention**: retaining and maintaining info as long as it is needed, and destroying it when it's no longer needed
       - note: a current trend in many orgs is to reduce legal liabilities by implementing short retention policies with email
   - Three fundamental retention policy questions:
     - **how to retain**: data should be kept in a manner that makes it accessible whenever required; take taxonomy (or the scheme for data classification) into account
@@ -171,17 +163,28 @@
 
 - 2.4.6 Data remanence
   - **Data remanence**: the data remaining on media after the data is supposedly erased
-    - typically refers to data on a hard drive as residual magnetic flux or slack space (unused space within a disk cluster)
-      - note that many OSs store files in clusters, which are groups of sectors (the smallest storage unit on a hard disk drive)
+    - typically refers to data on a hard drive as residual magnetic flux or **slack space** (unused space within a disk cluster)
+      - note that many OSs store files in **clusters**, which are groups of **sectors** (the smallest storage unit on a hard disk drive)
     - if media includes any type of private and sensitive data, it is important to eliminate data remanence
     - note that some OSs fill slack space with data from memory, which is why personnel should never process classified data on unclassified systems
 
 - 2.4.7 Data destruction
-  - Destroy sensitive data when it is no longer needed
+  
+  - **Destruction**: retention and destruction of data should be based on data classification and archiving policies; destroy data no longer needed by the organization; policy should define acceptable destruction methods by type and classification ([see NIST SP-800-88 for details](https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final))
+  - **Erasing**: usually refers to a delete operation on media, leaving data remanence
+  - **Clearing**: removal of sensitive data from a storage device such that there is assurance data may not be reconstructed using *normal functions* of software recovery or software recovery utilities; over-writing existing data with a pattern; note that with this method, there's a chance that the data could be brought back by using advanced techniques
+  - **Purging**: removal of sensitive data from a system or device with *the intent* that data cannot be reconstructed by any known technique; purging aims to make data unrecoverable even with laboratory techniques, while clearing only protects against standard software recovery
+    - purging is not considered acceptable for top secret data, and is not guaranteed to be secure against advanced techniques
+  - **Destruction**: includes physically destroying media through shredding, burning, pulverizing, or incinerating; physical destruction is used for SSD/electronic components, or in combination with other less-secure methods; destruction methods include incineration, crushing, shredding, and disintegration and also includes the use of strong encryption to logically destroy data; a surer way than even purging
+  - **Data Remanence**: data remaining on media after typical erasure; to ensure all remanence is removed, the following tools can help:
+    - **Degaussing**: used on magnetic media, removes data from tapes and magnetic hard drives; no effect on optical media or SSDs
+    - **Cryptographic Erasure** (AKA **crypto shredding**): using strong encryption to encrypt data, and then destroying encryption key; crypto shredding is the best method for dealing with cloud data remanence
+  - **File carving**: computer forensics technique that recovers files from a storage device's raw data based on their structure and content, often used to recover files that are not indexed by the file system, such as those that are deleted, formatted, or encrypted; file carving is also a good method for recovering files if an entire directory is missing or corrupt
+- Destroy sensitive data when it is no longer needed
   - An org's security or data policy should define the acceptable methods of destroying data based on the data's classification
-  - a degausser can be used on a hard disk drives/magnetic media
-  - the best SSD wiping method is destruction -- even when using manufacturers SSD wiping tools, data can remain
+  
   - **Defensible destruction**: eliminating data using a controlled, legally defensible and regulatory-compliant way
+
 
 ## [2.5](#25-ensure-appropriate-asset-retention-eg-end-of-life-eol-end-of-support-osg-10-chpt-5) Ensure appropriate asset retention (e.g. End-of-Life (EOL), End-of-Support) (OSG-10 Chpt 5)
 
@@ -190,7 +193,7 @@
 
 - **End-Of-Life (EOL)**: often identified by vendors as the time when they stop offering a product for sale
 - **End-Of-Support (EOS)/End-Of-Service-Life (EOSL)**: often used to identify when support ends for a product
-- EOL,EOS/EOSL can apply to either software or hardware
+- EOL, EOS/EOSL can apply to either software or hardware
 
 ## [2.6](#26-determine-data-security-controls-and-compliance-requirements-osg-10-chpt-5) Determine data security controls and compliance requirements (OSG-10 Chpt 5)
 
@@ -230,7 +233,10 @@
 - 2.6.4 Data protection methods (e.g., Digital Rights Management (DRM), Data Loss Prevention (DLP), Cloud Access Security Broker (CASB))
   - **Data protection methods** include:
     - **digital rights management (DRM)**: methods used in attempt to protect copyrighted materials; purpose is to prevent the unauthorized use, modification, and distribution of copyrighted works
-    - **Data Loss Prevention (DLP)**: 
+    - **Data Loss Prevention (DLP)**: systems that detect and block data exfiltration attempts by monitoring data in motion, at rest, and in use; three primary types:
+      - **network-based DLP**: placed on the edge of a network, scans all outgoing network data
+      - **endpoint-based DLP**: scans stored files and can be used to prevent printing or copying sensitive data to removable storage
+      - **cloud-based DLP**: similar to network DLP but designed specifically for cloud-native environments
     - **Cloud Access Security Brokers (CASBs)**: software placed logically between users and cloud-based resources ensuring that cloud resources have the same protections as resources within a network
       - CASB is a solution for security policy enforcement, ensuring security policies and compliance are met when accessing cloud apps and data; it can be used on-premise or in the cloud
       - the four cornerstones of CASBs are visibility, data security, threat detection, and compliance
