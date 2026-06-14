@@ -4,9 +4,9 @@ Material and Resources pursing CISSP Certification!
 
 **CISSP Study Resources** is a collection of study and reference materials and my notes gathered as I worked towards certification. I passed the exam at 100 questions in April 2025, but I want to continue to improve and add value to this resource to make your certification process easier.
 
-Because there is so much material available, it can be a bit daunting to know where to begin, and what really merits your time and effort. No compilation is exhaustive, but my goal is to gather information that will be useful and encouraging to you as you undertake this effort. At the least, it provides a list of resources, tests, and reference material to review.
+Because there is so much material available, it can be a bit daunting to know where to begin, and what really merits your time and effort. No compilation is exhaustive, but my goal is to gather information that will be useful and encouraging to you as you undertake this effort. At the least, it provides a list of resources and practice tests to review.
 
-The study guides below have been updated for 2025, and now follow the (ISC)² updated objectives and the 10th edition of the Official Study Guide.
+The study guides below have been updated for 2026, and now follow the (ISC)² updated objectives and the 10th edition of the Official Study Guide.
 
 Feel free to share this repo or any of the resources if you find them useful. Tell me about mistakes or improvements you think should be made!
 Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/).
@@ -14,6 +14,7 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/).
 ## Table of contents
 
 - [Overview](#overview) of CISSP exam and content.
+- [BalancedSec Academy](#-balancedsec-academy-my-cissp-prep-platform--founding-beta)
 - [Reference Material](#reference-material) including books, articles, courses, videos, and test banks.
 - [Study Guides By Domain](#study-guides-by-domain) built as I studied for the exam.
 
@@ -43,12 +44,24 @@ There is a lot of information on the CISSP exam available, including from (ISC)�
 - My Approach: in preparing for the exam, I drew from a variety of sources to get a balanced viewpoint. I've used the Sybex Official Study Guide as my baseline, incorporating other material (such as the All-in-One guide by Maymi, Harris et al. -- see below) to supplement with alternative explanations. Pete Zerger's Exam Cram, and Destination Certification's Mindmap YT videos are good resources that can help you keep perspective on what's important. For testing, I used the OSG practice tests to start, then incorporated Learnzapp, and finally QuantumExams to gauge weak areas.
 - Memorization approach: my memorization techniques include using acronyms to remember items in a list, and creating visualizations and picmonics to aid recall. Don't discount mindmaps and diagrams to help in keeping track of how areas or components fit together. Verbalizing answers via flashcards or studying with a friend (instead of just passively reading) can provide an additional channel to help your brain synthesize the material.
 
+## 🎓 BalancedSec Academy (my CISSP prep platform — founding beta)
+
+  Full disclosure: this one's mine. These notes started as my own study material; I built
+  **[BalancedSec Academy](https://academy.balancedsec.com)** to turn the same approach into an
+  interactive platform. It's AI-powered — it simulates the real adaptive (CAT) exam, sharpens
+  the security-leader judgment the exam rewards, and adapts to where you should focus next,
+  anchored to the full book *CISSP: A Balanced Approach*, in-app.
+
+  It's free to try (Starter plan, no card, first two domains), and it's in **founding beta now —
+  early members get full access, the book included, free.**
+
+  → **[Try the founding beta](https://academy.balancedsec.com)**
+
 ## Reference Material
 
 - Books:
   - As mentioned above, the Certified Information Systems Security Professional, [Official Study Guide (10th edition) and Practice Tests](https://amzn.to/3WpNWKM) is a great study baseline, with 100 questions for each of the 8 domains & more than 1300 questions total.
   - [CISSP All-in-One Exam Guide](https://amzn.to/3AraOCd) (currently Ninth Edition is available, from May, 2023) - I've found the book valuable, as it reinforces core concepts, and provides additional clear explanations to supplement the OSG.
-  - [11th Hour CISSP:Study Guide, 3rd Edition](https://amzn.to/3Bkz4Xf) this book is a bit older, but it's compact, and prep'd "for ease of last-minute studying."
 - Courses/videos:
   - Thor Teaches:
     - [Thor Teaches CISSP Study Bundles](https://thorteaches.com/cissp/)
@@ -61,14 +74,11 @@ There is a lot of information on the CISSP exam available, including from (ISC)�
   - OSG and All-in-One Exam Guide practice tests: once you've traversed the OSG material, these tests are a good baseline.
   - [CISSP Exam Prep](https://cissprep.net/) users have commented on the "tricky questions" in this test bank; that might be a distraction or conversely force you to pay closer attention, depending on your POV; note that you'll need a subscription ($24.99 for 6 months).
   - [CertPreps](https://certpreps.com/cissp/) user comments range from "very realistic" to "will make you worry unnecessarily." Many questions focus on identifying the "most" significant/effective strategy/benefit, or "highest" priority.
-  - [CCCure](https://cccure.education/certification/certificate-detail/isc2-cissp-latest-cbk-2024) freepracticetests.org redirects to CCCure, which requires a subscription (from single-user 1 month @ $59.99 to 12 months @ $149.99). I took a practice test and found it underwhelming, but YMMV.
   - [QuantumExams](https://exams.quantumexams.com/) helps to identify where you need work on understanding concepts holistically. The questions are challenging, but scenarios and descriptions are more like the exam than other tests.
 - General & Communities:
   - [Understand Bloom's Taxonomy](https://asc.dso.iastate.edu/files/documents/Exam%20prep-%20how%20to%20study%20with%20Bloom%26%23039%3Bs%20taxonomy.pdf): a framework used by educators and exam creators to guide learning or exam objectives. Cross-reference words used in the exam objectives with the framework to understand the specific meaning, and to guide the level of study required to master.
   - [CISSP Study Group](https://www.skool.com/cissp): this is a great place to share resources, get advice, and connect with peers studying cybersecurity.
   - Head over to the [Certstation](https://discord.gg/certstation#cissp) for support and communion with fellow travelers.
-
-Note: You are advised to do your own analysis to determine what will be helpful to you in your study. The author disclaims all warranties, express or implied, regarding the accuracy, adequacy, or completeness of the contents of this material and explicitly disclaims any implied warranties of merchantability or fitness for a particular purpose. The publisher/author shall not be held liable for any damages, whether direct, indirect, incidental, special, consequential, or punitive.
 
 ## Study Guides By Domain
 
