@@ -55,7 +55,7 @@ There is a lot of information on the CISSP exam available, including from (ISC)�
   It's free to try (Starter plan, no card, first two domains), and it's in **founding beta now —
   early members get full access, the book included, free.**
 
-  → **[Try the founding beta]([https://academy.balancedsec.com](https://academy.balancedsec.com/?utm_source=github&utm_medium=readme&utm_campaign=beta_waitlist))**
+  → **[Try the founding beta](https://academy.balancedsec.com/?utm_source=github&utm_medium=readme&utm_campaign=beta_waitlist)**
 
 ## Reference Material
 
