@@ -1,6 +1,6 @@
 # CISSP Study Resources
 
-Material and Resources pursing CISSP Certification!
+Material and Resources pursuing CISSP Certification!
 
 **CISSP Study Resources** is a collection of study and reference materials and my notes gathered as I worked towards certification. I passed the exam at 100 questions in April 2025, but I want to continue to improve and add value to this resource to make your certification process easier.
 
@@ -14,7 +14,7 @@ Connect with me on [LinkedIn](https://www.linkedin.com/in/jefferywmoore/).
 ## Table of contents
 
 - [Overview](#overview) of CISSP exam and content.
-- [BalancedSec Academy](#-balancedsec-academy-my-cissp-prep-platform--founding-beta)
+- [BalancedSec Academy](#balancedsec-academy-my-cissp-prep-platform--founding-beta)
 - [Reference Material](#reference-material) including books, articles, courses, videos, and test banks.
 - [Study Guides By Domain](#study-guides-by-domain) built as I studied for the exam.
 
@@ -44,10 +44,10 @@ There is a lot of information on the CISSP exam available, including from (ISC)�
 - My Approach: in preparing for the exam, I drew from a variety of sources to get a balanced viewpoint. I've used the Sybex Official Study Guide as my baseline, incorporating other material (such as the All-in-One guide by Maymi, Harris et al. -- see below) to supplement with alternative explanations. Pete Zerger's Exam Cram, and Destination Certification's Mindmap YT videos are good resources that can help you keep perspective on what's important. For testing, I used the OSG practice tests to start, then incorporated Learnzapp, and finally QuantumExams to gauge weak areas.
 - Memorization approach: my memorization techniques include using acronyms to remember items in a list, and creating visualizations and picmonics to aid recall. Don't discount mindmaps and diagrams to help in keeping track of how areas or components fit together. Verbalizing answers via flashcards or studying with a friend (instead of just passively reading) can provide an additional channel to help your brain synthesize the material.
 
-## 🎓 BalancedSec Academy (my CISSP prep platform — founding beta)
+## BalancedSec Academy (my CISSP prep platform — founding beta)
 
   Full disclosure: this one's mine. These notes started as my own study material; I built
-  **[BalancedSec Academy](https://academy.balancedsec.com)** to turn the same approach into an
+  **[BalancedSec Academy](https://academy.balancedsec.com/?utm_source=github&utm_medium=readme&utm_campaign=beta_waitlist)** to turn the same approach into an
   interactive platform. It's AI-powered — it simulates the real adaptive (CAT) exam, sharpens
   the security-leader judgment the exam rewards, and adapts to where you should focus next,
   anchored to the full book *CISSP: A Balanced Approach*, in-app.
