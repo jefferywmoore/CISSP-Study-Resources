@@ -1,5 +1,7 @@
 # CISSP Study Resources
 
+> 🎓 **New: [BalancedSec Academy](https://academy.balancedsec.com/?utm_source=github&utm_medium=readme&utm_campaign=banner) is in founding beta.** Adaptive CAT-style practice built on the approach in these notes, with the full book *CISSP: A Balanced Approach* in-app. Free to try, no card required. → **[Try the founding beta](https://academy.balancedsec.com/?utm_source=github&utm_medium=readme&utm_campaign=banner)** · [More details](#balancedsec-academy-my-cissp-prep-platform--founding-beta)
+
 Material and Resources pursuing CISSP Certification!
 
 **CISSP Study Resources** is a collection of study and reference materials and my notes gathered as I worked towards certification. I passed the exam at 100 questions in April 2025, but I want to continue to improve and add value to this resource to make your certification process easier.
