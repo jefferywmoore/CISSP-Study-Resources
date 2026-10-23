@@ -4,6 +4,8 @@
 
 Material and Resources pursuing CISSP Certification!
 
+_Last updated: October 2026_
+
 **CISSP Study Resources** is a collection of study and reference materials and my notes gathered as I worked towards certification. I passed the exam at 100 questions in April 2025, but I want to continue to improve and add value to this resource to make your certification process easier.
 
 Because there is so much material available, it can be a bit daunting to know where to begin, and what really merits your time and effort. No compilation is exhaustive, but my goal is to gather information that will be useful and encouraging to you as you undertake this effort. At the least, it provides a list of resources and practice tests to review.
@@ -93,3 +95,5 @@ There is a lot of information on the CISSP exam available, including from (ISC)Â
 - [Domain 7 - Security Operations](CISSP-Domain-7-2024+Objectives.md)
 - [Domain 8 - Software Development Security](CISSP-Domain-8-2024+Objectives.md)
 - [Domain Objectives Combined PDF Download](https://balancedsec.kit.com/f2fdda47cc)
+
+Older study guides based on the pre-2024 exam outline are kept in [obj-archive](obj-archive/) for reference.
