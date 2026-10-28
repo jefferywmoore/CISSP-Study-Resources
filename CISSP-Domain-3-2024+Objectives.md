@@ -72,7 +72,7 @@ You may find this domain to be more technical than others, and if you have exper
 - **Zachman**: Enterprise Security Architecture based on 2-d table of what, how, when who, where, why; and identification, definition, representation, specification, configuration, and installation
 - **Zero-knowledge proof**: one person demonstrates to another that they can achieve a result that requires sensitive info without actually disclosing the sensitive info
 
-## [3.1](#31--research-implement-and-manage-engineering-processes-using-secure-design-principles-osg-10-chpts-18916) Research, implement, and manage engineering processes using secure design principles (OSG-10 Chpts 1,8,9,16)
+## [3.1](#31-research-implement-and-manage-engineering-processes-using-secure-design-principles-osg-10-chpts-18916) Research, implement, and manage engineering processes using secure design principles (OSG-10 Chpts 1,8,9,16)
 
 - Standard **secure design principles** are:
   - Threat modeling
